@@ -1,0 +1,8 @@
+# MSET — Kifarkis Nätsäkerhet
+# robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mset.se/sitemap.xml

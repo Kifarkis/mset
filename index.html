@@ -1,0 +1,2535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A1628'/><path d='M16 7 L24 11.5 L24 20.5 L16 25 L8 20.5 L8 11.5 Z' fill='none' stroke='%237EC389' stroke-width='1.8' stroke-linejoin='round'/><circle cx='16' cy='17' r='1.4' fill='%237EC389'/><rect x='15.3' y='17.6' width='1.4' height='2.8' rx='.4' fill='%237EC389'/></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+<link rel="alternate icon" href="favicon.ico">
+<title>MSET — Säkerhet som en tjänst · Life Science IT &amp; AI Consulting</title>
+<meta name="description" content="Independent IT consulting for pharma, biotech and medtech — GxP validation, AI governance, cybersecurity, and IT leadership. Based in Skåne, working across the Nordics.">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://mset.se/">
+
+<!-- Open Graph / Facebook / LinkedIn / Slack social preview -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mset.se/">
+<meta property="og:title" content="MSET — Säkerhet som en tjänst">
+<meta property="og:description" content="Independent IT consulting for pharma, biotech and medtech. GxP validation, AI governance, cybersecurity, and IT leadership — based in Skåne, working across the Nordics.">
+<meta property="og:image" content="https://mset.se/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MSET — Säkerhet som en tjänst. Life Science IT & AI Consulting.">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="MSET">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MSET — Life Science IT & AI Consulting">
+<meta name="twitter:description" content="Independent IT consulting for pharma, biotech and medtech. GxP-validated, AI-governance-ready. Skåne → Nordics.">
+<meta name="twitter:image" content="https://mset.se/og-image.png">
+<meta name="twitter:image:alt" content="MSET — Säkerhet som en tjänst">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════════════════════ */
+:root{
+  --ink:#0A1628; --ink-2:#0F2338; --ink-3:#16304A; --ink-4:#1E3A55; --ink-5:#2A4A6A;
+  --sage-50:#F5F3ED; --sage-100:#ECE8DB; --sage-200:#D9D3BF;
+  --forest:#1B4A22; --forest-2:#0F3414; --forest-light:#2E6E38;
+  --emerald:#5BA364; --emerald-bright:#7EC389; --emerald-glow:#9BD7A4; --emerald-deep:#3B7D44;
+  --seal:#B8934A;
+  --danger:#C04040; --warn:#D97B2B;
+  --muted:#6B7F94; --muted-soft:#9AA7B6;
+  --line:rgba(10,22,40,.08); --line-strong:rgba(10,22,40,.14);
+  --line-dark:rgba(255,255,255,.08); --line-dark-2:rgba(255,255,255,.14);
+  --f-display:'Fraunces',Georgia,serif;
+  --f-body:'Plus Jakarta Sans',system-ui,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,monospace;
+  --r-sm:8px; --r-md:14px; --r-lg:20px; --r-xl:28px; --r-full:999px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--f-body);background:var(--sage-50);color:var(--ink);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+svg{display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+input,textarea,select{font-family:inherit;font-size:inherit;color:inherit}
+
+.container{max-width:1080px;margin:0 auto;padding:0 2rem}
+.wide{max-width:1280px;margin:0 auto;padding:0 2rem}
+
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--forest);
+  margin-bottom:1rem;display:inline-flex;align-items:center;gap:.5rem;
+}
+.eyebrow::before{content:'';display:inline-block;width:16px;height:1px;background:var(--forest)}
+.eyebrow.dark{color:var(--emerald-bright)}
+.eyebrow.dark::before{background:var(--emerald-bright)}
+.eyebrow.num{color:var(--muted)}
+.eyebrow.num::before{background:var(--muted)}
+
+.section-title{
+  font-family:var(--f-display);font-weight:500;
+  font-size:clamp(1.9rem,3.4vw,2.75rem);
+  line-height:1.07;letter-spacing:-.025em;
+  margin-bottom:1.25rem;color:var(--ink);
+}
+.section-title em{font-style:italic;font-weight:500;color:var(--forest)}
+.dark .section-title{color:#fff}
+.dark .section-title em{color:var(--emerald-bright)}
+
+.section-lede{
+  font-size:1.08rem;line-height:1.65;color:#445870;
+  max-width:640px;margin-bottom:3rem;
+}
+.section-lede + .section-lede{margin-top:-2rem}
+.dark .section-lede{color:rgba(255,255,255,.62)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.85rem 1.5rem;border-radius:var(--r-full);
+  font-weight:600;font-size:.9rem;letter-spacing:-.002em;
+  transition:all .2s var(--ease);cursor:pointer;
+  border:1px solid transparent;font-family:var(--f-body);
+}
+.btn-primary{background:var(--emerald);color:var(--ink)}
+.btn-primary:hover{
+  background:var(--emerald-bright);transform:translateY(-1px);
+  box-shadow:0 12px 24px -8px rgba(91,163,100,.4);
+}
+.btn-ghost{color:var(--ink);border-color:var(--line-strong);background:transparent}
+.btn-ghost:hover{border-color:var(--forest);color:var(--forest)}
+.dark .btn-ghost{color:#fff;border-color:rgba(255,255,255,.22)}
+.dark .btn-ghost:hover{border-color:var(--emerald-bright);color:var(--emerald-bright)}
+.btn-arrow{transition:transform .2s}
+.btn:hover .btn-arrow{transform:translateX(3px)}
+
+/* ═══════════════════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════════════════ */
+nav.site-nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:#0A1628;
+  border-bottom:1px solid var(--line-dark);
+  transition:background .2s;
+}
+nav.site-nav.scrolled{background:#0A1628}
+.nav-inner{
+  max-width:1280px;margin:0 auto;padding:.85rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.nav-logo{display:flex;align-items:center;gap:.75rem}
+.nav-logo .mark{width:44px;height:38px}
+.nav-logo .wordmark{
+  font-family:var(--f-display);font-style:italic;font-weight:500;
+  font-size:1.45rem;line-height:.9;letter-spacing:-.01em;color:var(--sage-50);
+}
+.nav-logo .dot{
+  display:inline-block;width:.22em;height:.22em;
+  background:var(--emerald-bright);border-radius:50%;
+  vertical-align:.14em;margin-left:.08em;
+}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{
+  font-size:.8rem;font-weight:500;
+  color:rgba(255,255,255,.68);letter-spacing:.005em;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--emerald-bright)}
+.nav-cta{
+  padding:.55rem 1.15rem;background:var(--emerald);
+  color:var(--ink)!important;border-radius:var(--r-full);
+  font-weight:600!important;transition:all .2s;
+}
+.nav-cta:hover{background:var(--emerald-bright);transform:translateY(-1px)}
+
+.nav-hamburger{
+  display:none;width:40px;height:40px;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  background:transparent;
+}
+.nav-hamburger span{
+  width:22px;height:2px;background:#fff;border-radius:2px;
+  transition:all .3s ease;
+}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{
+  display:none;position:fixed;top:62px;left:0;right:0;
+  background:rgba(10,22,40,.98);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line-dark);
+  z-index:99;padding:1.25rem 1.5rem;
+  flex-direction:column;
+  opacity:0;transform:translateY(-8px);
+  transition:all .25s ease;
+}
+.mobile-menu.open{display:flex;opacity:1;transform:translateY(0)}
+.mobile-menu a{
+  color:rgba(255,255,255,.8);font-size:1rem;font-weight:500;
+  padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);
+}
+.mobile-menu a:last-child{border-bottom:none;margin-top:.5rem}
+.mobile-menu .nav-cta{text-align:center;margin-top:.75rem}
+
+/* ═══════════════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════════════ */
+.hero{
+  position:relative;padding:9rem 0 6rem;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(91,163,100,.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 90%, rgba(27,74,34,.14) 0%, transparent 55%),
+    linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+  color:#fff;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size:64px 64px;pointer-events:none;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.hero-inner{max-width:1280px;margin:0 auto;padding:0 2rem;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4.5rem;align-items:center}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.72rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--emerald-bright);
+  padding:.4rem 1rem .4rem .85rem;
+  border:1px solid rgba(126,195,137,.28);
+  background:rgba(126,195,137,.06);
+  border-radius:var(--r-full);margin-bottom:2rem;
+}
+.hero-eyebrow::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--emerald-bright);
+  box-shadow:0 0 0 4px rgba(126,195,137,.16);
+  animation:pulse 2.6s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+
+.hero h1{
+  font-family:var(--f-display);font-weight:500;
+  font-size:clamp(2.2rem,4.6vw,3.9rem);
+  line-height:1.02;letter-spacing:-.028em;
+  color:#fff;margin-bottom:1.25rem;max-width:640px;
+}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--emerald-bright)}
+.hero-promise{
+  font-family:var(--f-display);
+  font-size:clamp(1rem,1.4vw,1.2rem);
+  font-weight:400;color:rgba(255,255,255,.92);
+  margin-bottom:1.5rem;letter-spacing:-.005em;line-height:1.4;
+}
+.hero-promise strong{color:var(--emerald-bright);font-weight:500}
+.hero-lede{
+  font-size:1rem;line-height:1.65;
+  color:rgba(255,255,255,.6);max-width:480px;
+  margin-bottom:2.25rem;font-weight:350;
+}
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-strip{
+  display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
+  padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.08);
+  font-size:.72rem;font-family:var(--f-mono);
+  letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);
+}
+.hero-strip span{display:inline-flex;align-items:center;gap:.5rem}
+.hero-strip span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--emerald-bright)}
+
+.visual{
+  position:relative;width:100%;aspect-ratio:1/1;max-width:520px;margin-left:auto;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(91,163,100,.08) 0%, transparent 70%),
+    rgba(255,255,255,.015);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:var(--r-xl);overflow:hidden;
+  backdrop-filter:blur(10px);
+}
+.visual-label{
+  position:absolute;top:1.25rem;left:1.5rem;
+  display:flex;align-items:center;gap:.55rem;
+  font-family:var(--f-mono);font-size:.68rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.55);z-index:3;
+}
+.visual-label::before{
+  content:'';width:7px;height:7px;border-radius:50%;
+  background:var(--emerald-bright);
+  box-shadow:0 0 10px rgba(126,195,137,.7);
+  animation:pulse 2s ease-in-out infinite;
+}
+.visual-title{
+  position:absolute;top:1.25rem;right:1.5rem;
+  font-family:var(--f-mono);font-size:.66rem;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.35);z-index:3;
+}
+.visual-caption{
+  position:absolute;bottom:1.35rem;left:1.5rem;right:1.5rem;
+  font-size:.78rem;color:rgba(255,255,255,.5);
+  line-height:1.45;z-index:3;
+}
+.visual-caption strong{color:var(--emerald-bright);font-weight:500}
+
+.audit-stream{
+  position:absolute;inset:0;
+  padding:3.75rem 1.5rem 4rem;overflow:hidden;
+  mask-image:linear-gradient(180deg, transparent 0%, black 15%, black 82%, transparent 98%);
+  -webkit-mask-image:linear-gradient(180deg, transparent 0%, black 15%, black 82%, transparent 98%);
+}
+.audit-stream-inner{animation:streamScroll 28s linear infinite;will-change:transform}
+@keyframes streamScroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.audit-row{
+  display:grid;grid-template-columns:54px 1fr auto;gap:.8rem;
+  padding:.55rem 0;font-family:var(--f-mono);
+  font-size:.68rem;line-height:1.3;
+  border-bottom:1px solid rgba(255,255,255,.04);align-items:center;
+}
+.audit-row .time{color:rgba(255,255,255,.32);font-weight:500;letter-spacing:.02em}
+.audit-row .action{
+  color:rgba(255,255,255,.75);font-family:var(--f-body);
+  font-size:.78rem;font-weight:400;
+  display:flex;flex-direction:column;gap:.1rem;min-width:0;
+}
+.audit-row .action .actor{color:var(--emerald-bright);font-family:var(--f-mono);font-size:.66rem;letter-spacing:.01em}
+.audit-row .action .act{color:rgba(255,255,255,.78);text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.audit-row .check{
+  display:inline-flex;align-items:center;gap:.3rem;
+  padding:.12rem .45rem;border-radius:4px;
+  font-size:.58rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  background:rgba(126,195,137,.1);color:var(--emerald-bright);
+  border:1px solid rgba(126,195,137,.2);
+}
+.audit-row .check.warn{background:rgba(229,179,92,.1);color:#E5B35C;border-color:rgba(229,179,92,.25)}
+.audit-row .check.sys{background:rgba(255,255,255,.04);color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.08)}
+.audit-row .check::before{content:'';width:4px;height:4px;border-radius:50%;background:currentColor}
+
+/* ═══════════════════════════════════════════════════════════
+   PILLARS
+═══════════════════════════════════════════════════════════ */
+.pillars{padding:7rem 0 6rem;background:var(--sage-50)}
+.pillars-inner{max-width:1080px;margin:0 auto;padding:0 2rem}
+.pillars-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);
+  margin-top:1rem;
+}
+.pillar{
+  padding:2rem 1.5rem;border-right:1px solid var(--line);position:relative;
+  transition:background .2s;cursor:pointer;
+  display:flex;flex-direction:column;
+}
+.pillar:hover{background:var(--sage-100)}
+.pillar:last-child{border-right:none}
+.pillar-num{
+  font-family:var(--f-mono);font-size:.7rem;font-weight:500;
+  color:var(--muted);letter-spacing:.12em;
+  margin-bottom:1.25rem;display:block;
+}
+.pillar-icon{width:44px;height:44px;margin-bottom:1.25rem}
+.pillar-title{
+  font-family:var(--f-display);font-size:1.15rem;font-weight:600;
+  line-height:1.2;margin-bottom:.5rem;
+  letter-spacing:-.01em;color:var(--ink);
+}
+.pillar-body{font-size:.88rem;color:#556a82;line-height:1.55;flex-grow:1}
+.pillar-link{
+  margin-top:1rem;font-size:.78rem;font-weight:600;
+  color:var(--forest);display:inline-flex;align-items:center;gap:.3rem;
+  font-family:var(--f-mono);letter-spacing:.04em;text-transform:uppercase;
+  align-self:flex-start;
+}
+.pillar-link svg{width:11px;height:11px;transition:transform .2s}
+.pillar:hover .pillar-link svg{transform:translateX(3px)}
+
+/* ═══════════════════════════════════════════════════════════
+   SERVICE SECTIONS
+═══════════════════════════════════════════════════════════ */
+.service-section{padding:7rem 0;position:relative;overflow:hidden}
+.service-section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.service-section.dark{background:var(--ink);color:#fff}
+.service-section.dark::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(91,163,100,.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 80%, rgba(27,74,34,.1) 0%, transparent 55%);
+  pointer-events:none;
+}
+.service-inner{max-width:1080px;margin:0 auto;padding:0 2rem;position:relative}
+.service-header{
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;
+  align-items:end;margin-bottom:3rem;
+}
+.service-header > div:first-child{max-width:520px}
+.service-header > div:last-child{align-self:end;text-align:right}
+.service-cta{
+  font-family:var(--f-mono);font-size:.72rem;
+  color:var(--muted);letter-spacing:.1em;text-transform:uppercase;
+  padding-bottom:.75rem;border-bottom:1px solid var(--line);
+  display:inline-block;
+}
+.service-section.dark .service-cta{color:rgba(255,255,255,.45);border-bottom-color:var(--line-dark)}
+
+.service-items{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--line);
+  border:1px solid var(--line-strong);
+  border-radius:var(--r-md);overflow:hidden;
+}
+.service-section.dark .service-items{background:var(--line-dark);border-color:var(--line-dark-2)}
+.service-item{
+  padding:2rem 1.75rem;background:var(--sage-50);
+  display:flex;flex-direction:column;gap:1rem;
+  transition:background .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s;
+  position:relative;border:1px solid transparent;
+}
+.service-section.alt .service-item{background:#fff}
+.service-section.dark .service-item{background:var(--ink-2)}
+.service-item:not(.featured):hover{
+  background:var(--sage-100);
+  transform:translateY(-3px);
+  box-shadow:0 10px 24px rgba(10,22,40,.06), 0 1px 3px rgba(10,22,40,.04);
+  border-color:rgba(27,74,34,.12);
+}
+.service-section.alt .service-item:not(.featured):hover{
+  background:var(--sage-50);border-color:rgba(27,74,34,.12);
+}
+.service-section.dark .service-item:not(.featured):hover{
+  background:var(--ink-3);
+  border-color:rgba(126,195,137,.25);
+  box-shadow:0 10px 24px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.service-item.featured{
+  grid-column:span 2;background:var(--ink);color:#fff;
+  padding:2.5rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;
+}
+.service-section.dark .service-item.featured{
+  background:linear-gradient(135deg, var(--forest) 0%, var(--ink-3) 100%);
+}
+.service-item-icon{
+  width:48px;height:48px;border-radius:12px;
+  background:var(--sage-100);
+  color:var(--ink);
+  display:inline-flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-bottom:.5rem;
+  transition:transform .25s var(--ease-spring), background .25s;
+}
+.service-item-icon svg{width:26px;height:26px}
+.service-item:hover .service-item-icon{transform:scale(1.06) rotate(-3deg)}
+
+/* Featured cards (Interim IT Director, Phishing Simulation) — larger titles
+   need more breathing room between the icon tile and the title. */
+.service-item.featured .service-item-icon,
+.security-card.featured .service-item-icon{margin-bottom:1rem}
+
+/* Light alt section (GxP) — keep the sage cream, icons dark ink */
+.service-section.alt .service-item-icon{background:var(--sage-100);color:var(--ink)}
+
+/* Dark section (AI, Strategy) — sage cream tile pops off the dark card,
+   icons render dark because color is set to ink via currentColor */
+.service-section.dark .service-item-icon{
+  background:var(--sage-50);color:var(--ink);
+}
+
+/* Featured card on dark section (Interim IT Director) — same cream tile */
+.service-item.featured .service-item-icon{
+  background:var(--sage-50);color:var(--ink);
+}
+
+/* Featured dark card in Security (Phishing) — sage cream tile, dark icons */
+.security-card.featured .service-item-icon{
+  background:var(--sage-50);color:var(--ink);
+}
+.security-card:not(.featured) .service-item-icon{
+  background:var(--sage-100);color:var(--ink);
+}
+.security-card:hover .service-item-icon{transform:scale(1.06) rotate(-3deg)}
+
+/* Acronis partner card — icon has its own red tile, so make wrapper transparent */
+.security-card:has(.partner-badge) .service-item-icon{
+  background:transparent;padding:0;
+  width:48px;height:48px;overflow:hidden;border-radius:12px;
+}
+.security-card:has(.partner-badge) .service-item-icon svg{
+  width:48px;height:48px;
+}
+
+.service-item-title{
+  font-family:var(--f-display);font-size:1.15rem;font-weight:600;
+  letter-spacing:-.01em;line-height:1.2;color:var(--ink);
+}
+.service-section.dark .service-item-title,
+.service-item.featured .service-item-title{color:#fff}
+.service-item-body{font-size:.88rem;line-height:1.55;color:#556a82}
+.service-section.dark .service-item-body,
+.service-item.featured .service-item-body{color:rgba(255,255,255,.65)}
+.service-item-body + .service-item-body{margin-top:-.25rem}
+.service-item-list{list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-top:.5rem}
+.service-item-list li{
+  font-size:.82rem;color:#5a7088;padding-left:1rem;position:relative;
+}
+.service-item-list li::before{content:'→';position:absolute;left:0;color:var(--forest);font-size:.75rem}
+.service-section.dark .service-item-list li{color:rgba(255,255,255,.7)}
+.service-section.dark .service-item-list li::before{color:var(--emerald-bright)}
+.service-item.featured .service-item-list li{color:rgba(255,255,255,.75)}
+.service-item.featured .service-item-list li::before{color:var(--emerald-bright)}
+
+/* Expandable-card link — SAT card linking to sub-page */
+.expand-link{
+  margin-top:.9rem;display:inline-flex;align-items:center;gap:.45rem;
+  font-family:var(--f-mono);font-size:.68rem;font-weight:600;
+  color:var(--forest);letter-spacing:.08em;text-transform:uppercase;
+  padding-top:1rem;border-top:1px solid var(--line);
+  align-self:flex-start;transition:color .2s;
+}
+.expand-link svg{width:11px;height:11px;transition:transform .2s}
+.expand-link:hover{color:var(--emerald-deep)}
+.expand-link:hover svg{transform:translateX(3px)}
+
+/* Partner badge (Acronis) — top-left validation seal */
+.partner-badge{
+  position:absolute;top:-10px;left:16px;z-index:2;
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--f-mono);font-size:.62rem;
+  letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+  padding:.38rem .75rem;border-radius:var(--r-full);
+  background:#fff;color:#ED1C24;
+  border:1.5px solid #ED1C24;
+  box-shadow:0 4px 12px rgba(237,28,36,.18), 0 1px 3px rgba(10,22,40,.06);
+  transition:transform .25s var(--ease-spring), box-shadow .25s;
+}
+.partner-badge::before{
+  content:'✓';font-weight:800;font-size:.72rem;
+  width:13px;height:13px;border-radius:50%;
+  background:#ED1C24;color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;
+  line-height:1;
+}
+.security-card:has(.partner-badge):hover .partner-badge{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 8px 20px rgba(237,28,36,.28), 0 2px 6px rgba(10,22,40,.08);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   INTERIM IT DIRECTOR VISUAL
+═══════════════════════════════════════════════════════════ */
+.interim-visual{
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--r-md);padding:1.5rem;
+  display:flex;flex-direction:column;gap:.25rem;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+}
+.interim-visual-title{
+  font-family:var(--f-mono);font-size:.66rem;
+  color:rgba(255,255,255,.6);letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:.75rem;
+}
+.interim-row{
+  display:grid;grid-template-columns:40px 1fr 82px;
+  gap:.9rem;align-items:center;
+  padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.08);
+  transition:padding-left .25s var(--ease);
+}
+.interim-row:hover{padding-left:.4rem}
+.interim-row:last-child{border-bottom:none;padding-bottom:.5rem}
+.interim-avatar{
+  width:40px;height:40px;border-radius:10px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:rgba(126,195,137,.22);color:#BEEBC8;
+  font-family:var(--f-mono);font-size:.72rem;font-weight:700;
+  letter-spacing:.05em;
+  border:1px solid rgba(126,195,137,.3);
+}
+.interim-role{
+  font-family:var(--f-display);font-size:.95rem;font-weight:600;
+  color:#fff;letter-spacing:-.005em;line-height:1.2;margin-bottom:.15rem;
+}
+.interim-dept{font-size:.76rem;color:rgba(255,255,255,.55)}
+.interim-badge{
+  font-family:var(--f-mono);font-size:.58rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.26rem .6rem;border-radius:4px;
+  display:inline-flex;align-items:center;gap:.3rem;
+  justify-self:end;white-space:nowrap;
+}
+.interim-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor}
+.interim-badge.active{background:rgba(126,195,137,.2);color:#BEEBC8;border:1px solid rgba(126,195,137,.3)}
+.interim-badge.pending{background:rgba(229,179,92,.18);color:#F5CF8A;border:1px solid rgba(229,179,92,.3)}
+
+.roadmap-visual{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.12)}
+.roadmap-phase{display:flex;align-items:center;gap:.9rem;margin-top:.6rem}
+.roadmap-phase-label{
+  font-family:var(--f-mono);font-size:.62rem;font-weight:600;
+  color:rgba(255,255,255,.65);letter-spacing:.08em;text-transform:uppercase;
+  flex-shrink:0;width:64px;
+}
+.roadmap-bar-outer{
+  flex:1;height:22px;background:rgba(255,255,255,.06);
+  border-radius:5px;overflow:hidden;position:relative;
+  border:1px solid rgba(255,255,255,.04);
+}
+.roadmap-bar-inner{
+  height:100%;border-radius:5px;
+  display:flex;align-items:center;padding:0 .7rem;
+  width:0;transition:width 1.2s var(--ease);
+}
+.roadmap-bar-text{
+  font-size:.72rem;font-weight:500;color:rgba(255,255,255,.9);
+  white-space:nowrap;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECURITY SECTION — human-risk angle
+═══════════════════════════════════════════════════════════ */
+.security{
+  padding:7rem 0;position:relative;overflow:hidden;
+  background:var(--sage-50);
+}
+.security-inner{max-width:1080px;margin:0 auto;padding:0 2rem;position:relative}
+.security-header{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:start;
+  margin-bottom:4rem;
+}
+.security-header > div:first-child{max-width:560px}
+.security-header .section-lede{font-size:1.02rem;margin-bottom:1.5rem}
+/* Override the global .section-lede + .section-lede{margin-top:-2rem} rule
+   inside the security header. The shrunk margin-bottom (1.5rem) combined with
+   the global -2rem pull was producing a negative gap, collapsing the two
+   paragraphs onto each other. Reset to a clean 1.5rem gap. */
+.security-header .section-lede + .section-lede{margin-top:0}
+.security-deep-link{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.7rem 1.2rem;margin-top:.5rem;
+  background:var(--forest);color:#fff;
+  border-radius:var(--r-full);font-size:.88rem;font-weight:600;
+  transition:all .25s var(--ease-spring);
+  box-shadow:0 4px 14px rgba(27,74,34,.2);
+}
+.security-deep-link:hover{
+  background:var(--forest-light);transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(27,74,34,.3);
+}
+.security-deep-link svg{transition:transform .25s}
+.security-deep-link:hover svg{transform:translateX(3px)}
+
+/* Threat meter */
+.threat-meter{
+  background:var(--ink);color:#fff;
+  border-radius:var(--r-lg);padding:1.75rem;
+  position:relative;overflow:hidden;
+}
+.threat-meter::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 20%, rgba(192,64,64,.1) 0%, transparent 60%);
+  pointer-events:none;
+}
+.threat-meter > *{position:relative}
+.threat-meter-title{
+  font-family:var(--f-mono);font-size:.66rem;
+  color:rgba(255,255,255,.55);letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:1.15rem;
+  display:flex;align-items:center;gap:.55rem;
+}
+.threat-meter-title::before{
+  content:'';width:7px;height:7px;border-radius:50%;
+  background:var(--danger);
+  box-shadow:0 0 10px rgba(192,64,64,.5);
+  animation:pulse 2s ease-in-out infinite;
+}
+.threat-row{
+  display:grid;grid-template-columns:100px 1fr 34px;
+  gap:.8rem;align-items:center;
+  padding:.55rem 0;
+}
+.threat-label{font-size:.78rem;color:rgba(255,255,255,.78);font-weight:500}
+.threat-bar-wrap{
+  height:7px;background:rgba(255,255,255,.06);
+  border-radius:4px;overflow:hidden;position:relative;
+}
+.threat-bar{
+  height:100%;background:var(--emerald);border-radius:4px;
+  width:0;transition:width 1.4s var(--ease);
+}
+.threat-bar.high{background:linear-gradient(90deg, var(--danger), #D95959)}
+.threat-bar.mid{background:linear-gradient(90deg, var(--warn), #E8A765)}
+.threat-pct{
+  font-family:var(--f-mono);font-size:.72rem;font-weight:600;
+  color:rgba(255,255,255,.85);text-align:right;
+}
+.threat-note{
+  font-size:.72rem;color:rgba(255,255,255,.45);
+  line-height:1.5;margin-top:1.15rem;
+  padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* Security cards */
+.security-cards{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--line);
+  border:1px solid var(--line-strong);
+  border-radius:var(--r-md);overflow:hidden;
+}
+.security-card{
+  padding:2rem 1.75rem;background:#fff;
+  display:flex;flex-direction:column;gap:1rem;
+  transition:background .2s, transform .25s var(--ease), box-shadow .25s var(--ease);
+  position:relative;
+}
+.security-card:not(.featured):hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(10,22,40,.08), 0 2px 6px rgba(10,22,40,.04);
+}
+.security-card:hover{background:var(--sage-50)}
+.security-card-title{
+  font-family:var(--f-display);font-size:1.15rem;font-weight:600;
+  letter-spacing:-.01em;line-height:1.2;color:var(--ink);
+}
+.security-card-body{font-size:.88rem;line-height:1.55;color:#556a82}
+.security-card-list{list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-top:.5rem}
+.security-card-list li{font-size:.82rem;color:#5a7088;padding-left:1rem;position:relative}
+.security-card-list li::before{content:'→';position:absolute;left:0;color:var(--forest);font-size:.75rem}
+
+/* Featured phishing card with demo visual */
+.security-card.featured{
+  grid-column:span 2;background:var(--ink);color:#fff;
+  padding:2.5rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;
+  position:relative;overflow:hidden;
+}
+.security-card.featured::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 75% 30%, rgba(192,64,64,.08), transparent 60%);
+  pointer-events:none;
+}
+.security-card.featured > *{position:relative}
+.security-card.featured .security-card-title{color:#fff}
+.security-card.featured .security-card-body{color:rgba(255,255,255,.65)}
+.security-card.featured .security-card-list li{color:rgba(255,255,255,.75)}
+.security-card.featured .security-card-list li::before{color:var(--emerald-bright)}
+
+/* Phishing demo visual */
+.phishing-demo{
+  background:#fff;border-radius:var(--r-md);
+  overflow:hidden;position:relative;
+  box-shadow:0 24px 48px -12px rgba(0,0,0,.4);
+}
+.phish-bar{
+  background:#F2F2F4;padding:.65rem .85rem;
+  display:flex;align-items:center;gap:.4rem;
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+.phish-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.phish-url{
+  margin-left:.75rem;flex:1;
+  font-family:var(--f-mono);font-size:.68rem;
+  color:#1A1A1A;background:#fff;
+  padding:.3rem .6rem;border-radius:4px;
+  border:1px solid rgba(0,0,0,.1);
+  display:inline-flex;align-items:center;gap:.35rem;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.phish-url .warn{color:var(--danger);font-weight:700}
+.phish-body{padding:1.1rem 1rem;background:#fff;min-height:170px;display:flex;flex-direction:column;gap:.4rem}
+.phish-warning{
+  display:flex;align-items:center;gap:.55rem;
+  background:rgba(192,64,64,.08);
+  border:1px solid rgba(192,64,64,.2);
+  color:var(--danger);
+  padding:.5rem .7rem;border-radius:6px;
+  font-size:.72rem;font-weight:500;line-height:1.4;
+  margin-bottom:.4rem;
+}
+.phish-warning .w-icon{font-weight:700;flex-shrink:0}
+.phish-email-line{height:8px;background:#E8E8EC;border-radius:3px}
+.badge-caught{
+  margin-top:.75rem;display:inline-flex;align-items:center;gap:.3rem;
+  font-family:var(--f-mono);font-size:.62rem;font-weight:700;
+  color:var(--emerald-deep);background:rgba(91,163,100,.12);
+  border:1px solid rgba(91,163,100,.3);
+  padding:.25rem .55rem;border-radius:4px;
+  letter-spacing:.08em;text-transform:uppercase;
+  align-self:flex-start;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════════════════════ */
+.about{padding:7rem 0;background:#fff;border-top:1px solid var(--line)}
+.about-inner{max-width:1080px;margin:0 auto;padding:0 2rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-quote{
+  background:var(--ink);color:#fff;border-radius:var(--r-lg);
+  padding:2.5rem;position:sticky;top:6rem;overflow:hidden;
+  transition:transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.about-quote:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 44px rgba(10,22,40,.22), 0 4px 12px rgba(10,22,40,.1);
+}
+.about-quote::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 20%, rgba(91,163,100,.15), transparent 60%);
+  pointer-events:none;
+  transition:opacity .4s;
+}
+.about-quote:hover::before{opacity:1.3}
+.about-quote > *{position:relative}
+.quote-mark{
+  font-family:var(--f-display);font-size:4.5rem;line-height:.8;
+  color:var(--emerald-bright);margin-bottom:1rem;display:block;
+  animation:quote-pulse 4.5s ease-in-out infinite;
+}
+@keyframes quote-pulse{
+  0%,100%{opacity:1;transform:translateY(0)}
+  50%{opacity:.7;transform:translateY(-4px)}
+}
+.quote-text{
+  font-family:var(--f-display);font-size:1.2rem;font-style:italic;
+  color:rgba(255,255,255,.92);line-height:1.5;margin-bottom:2rem;
+}
+.quote-meta{
+  font-size:.82rem;color:rgba(255,255,255,.5);
+  padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.12);
+}
+.quote-meta strong{color:var(--emerald-bright);display:block;font-size:.92rem;margin-bottom:.2rem}
+.credentials{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:3.5rem}
+.credential{
+  padding:1.1rem 1.25rem;background:var(--sage-50);
+  border-radius:var(--r-md);border-left:3px solid var(--forest);
+  transition:transform .28s var(--ease-spring), box-shadow .28s, border-left-color .28s, background .28s;
+  cursor:default;
+}
+.credential:hover{
+  transform:translateX(5px);
+  box-shadow:0 6px 18px rgba(10,22,40,.06), 0 1px 3px rgba(10,22,40,.04);
+  border-left-color:var(--emerald);
+  background:#fff;
+}
+.credential-title{
+  font-family:var(--f-display);font-size:1rem;font-weight:600;
+  letter-spacing:-.01em;margin-bottom:.3rem;color:var(--ink);
+}
+.credential-body{font-size:.85rem;color:#556a82;line-height:1.55}
+.industries{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
+.industries-label{
+  font-family:var(--f-mono);font-size:.7rem;
+  color:var(--muted);letter-spacing:.12em;text-transform:uppercase;
+  display:block;margin-bottom:.9rem;
+}
+.industries-intro{
+  font-size:.98rem;color:#445870;line-height:1.65;
+  max-width:880px;margin:0 0 1.75rem;
+}
+.industries-subhead{
+  font-family:var(--f-mono);font-size:.68rem;
+  color:var(--emerald-deep);letter-spacing:.14em;text-transform:uppercase;font-weight:500;
+  display:block;margin-bottom:.9rem;
+}
+.industry-chips{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.industry-chip{
+  font-size:.78rem;font-weight:500;
+  padding:.35rem .9rem;border-radius:var(--r-full);
+  background:var(--sage-50);color:var(--forest);
+  border:1px solid rgba(27,74,34,.2);
+  transition:all .25s var(--ease-spring);cursor:default;
+  flex:1 1 auto;text-align:center;
+}
+.industry-chip:hover{background:var(--forest);color:#fff;border-color:var(--forest);transform:translateY(-2px)}
+
+/* By-the-numbers strip */
+.about-numbers{
+  margin-top:5rem;padding-top:3.5rem;
+  border-top:1px solid var(--line-strong);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;
+  position:relative;
+}
+.about-numbers::before{
+  content:'By the numbers';
+  position:absolute;top:-.65rem;left:50%;transform:translateX(-50%);
+  background:#fff;padding:0 1rem;
+  font-family:var(--f-mono);font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--forest);font-weight:600;
+}
+.num-card{
+  transition:transform .3s var(--ease-spring);
+  padding:.5rem .2rem;
+  cursor:default;
+}
+.num-card:hover{transform:translateY(-4px)}
+.num-label{
+  font-family:var(--f-mono);font-size:.66rem;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;margin-bottom:.7rem;
+}
+.num-val{
+  font-family:var(--f-display);font-style:italic;font-weight:500;
+  font-size:3.2rem;line-height:.95;letter-spacing:-.025em;
+  color:var(--ink);margin-bottom:.7rem;
+}
+.num-val em{color:var(--forest);font-style:italic;font-weight:500}
+.num-val .plus{color:var(--emerald);font-size:.55em;vertical-align:.25em;margin-left:.03em}
+.num-caption{font-size:.82rem;color:#556a82;line-height:1.5;margin:0}
+
+/* ═══════════════════════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════════════════════ */
+.contact{
+  padding:7rem 0;background:var(--ink);color:#fff;
+  position:relative;overflow:hidden;
+}
+.contact::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(91,163,100,.1) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 85%, rgba(27,74,34,.14) 0%, transparent 60%);
+  pointer-events:none;
+}
+.contact-inner{
+  max-width:1080px;margin:0 auto;padding:0 2rem;
+  position:relative;
+  display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start;
+}
+.contact-info .section-lede{color:rgba(255,255,255,.7)}
+.contact-info .section-title{color:#fff}
+.contact-info .section-title em{color:var(--emerald-bright)}
+.contact-detail{
+  display:flex;align-items:flex-start;gap:1rem;margin-top:1.5rem;
+  transition:transform .25s var(--ease);
+}
+.contact-detail:hover{transform:translateX(3px)}
+.contact-detail-icon{
+  width:42px;height:42px;border-radius:10px;flex-shrink:0;
+  background:rgba(126,195,137,.14);color:var(--emerald-bright);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .3s var(--ease-spring),background .25s;
+}
+.contact-detail:hover .contact-detail-icon{transform:scale(1.08) rotate(-4deg);background:rgba(126,195,137,.26)}
+.contact-detail-label{
+  font-family:var(--f-mono);font-size:.66rem;
+  color:rgba(255,255,255,.5);letter-spacing:.12em;
+  text-transform:uppercase;margin-bottom:.2rem;
+}
+.contact-detail-value{font-size:.95rem;font-weight:500;color:#fff}
+
+/* Form card — lifted onto light sage for legibility */
+.contact-form{
+  background:var(--sage-50);
+  border:1px solid var(--sage-200);
+  border-radius:var(--r-lg);padding:2.25rem;
+  box-shadow:0 20px 50px rgba(0,0,0,.3), 0 4px 12px rgba(0,0,0,.15);
+  position:relative;
+}
+.contact-form::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg, rgba(126,195,137,.05) 0%, transparent 50%);
+  border-radius:var(--r-lg);pointer-events:none;
+}
+.contact-form > *{position:relative}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1rem}
+.form-group label{
+  font-family:var(--f-mono);font-size:.66rem;
+  color:var(--forest);letter-spacing:.1em;
+  text-transform:uppercase;font-weight:600;
+}
+.form-group input,.form-group textarea,.form-group select{
+  padding:.85rem 1rem;border-radius:var(--r-sm);
+  background:#fff;
+  border:1px solid var(--sage-200);
+  color:var(--ink);font-size:.92rem;outline:none;
+  transition:border-color .2s, background .2s, box-shadow .2s;
+  font-family:var(--f-body);appearance:none;
+}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#8a9bad}
+.form-group input:hover,.form-group textarea:hover,.form-group select:hover{
+  border-color:var(--emerald);
+}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{
+  border-color:var(--forest);background:#fff;
+  box-shadow:0 0 0 3px rgba(91,163,100,.15);
+}
+.form-group select{
+  cursor:pointer;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5l3 3 3-3' stroke='%237EC389' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1rem center;background-size:12px;
+  padding-right:2.5rem;
+}
+.form-group select option{background:#fff;color:var(--ink)}
+.form-group textarea{min-height:120px;resize:vertical;font-family:var(--f-body)}
+.form-submit{
+  width:100%;padding:1rem;margin-top:.75rem;
+  background:var(--forest);color:#fff;
+  border-radius:var(--r-full);
+  font-weight:600;font-size:.95rem;
+  transition:all .25s var(--ease);cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  box-shadow:0 4px 12px rgba(27,74,34,.2);
+}
+.form-submit:hover{
+  background:var(--forest-light);
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(27,74,34,.3);
+}
+.form-note{font-size:.75rem;color:var(--muted);margin-top:1rem;line-height:1.5}
+
+/* Async-submission states */
+.form-submit:disabled{opacity:.7;cursor:wait;transform:none}
+.form-submit.error-state{background:var(--danger)}
+.form-error{
+  margin-top:.9rem;padding:.75rem 1rem;border-radius:var(--r-md);
+  background:rgba(192,64,64,.08);border:1px solid rgba(192,64,64,.25);
+  color:var(--danger);font-size:.85rem;line-height:1.5;
+}
+.form-success{
+  background:linear-gradient(180deg, rgba(126,195,137,.12), rgba(126,195,137,.04));
+  border:1px solid rgba(126,195,137,.4);
+  border-radius:var(--r-lg);
+  padding:2.5rem 2rem;text-align:center;
+  animation:fadeUp .5s var(--ease);
+}
+.form-success svg{margin:0 auto 1rem}
+.form-success h3{
+  font-family:var(--f-display);font-size:1.5rem;font-weight:500;
+  color:var(--sage-50);margin:0 0 .5rem;letter-spacing:-.015em;
+}
+.form-success p{font-size:.95rem;color:rgba(255,255,255,.75);line-height:1.6;margin:0;max-width:380px;margin-inline:auto}
+.form-success a{color:var(--emerald-bright);font-weight:500;border-bottom:1px solid currentColor}
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════════ */
+footer{
+  background:var(--ink-2);color:rgba(255,255,255,.55);
+  padding:2.25rem 0 1.5rem;border-top:1px solid var(--line-dark);
+}
+.footer-inner{max-width:1280px;margin:0 auto;padding:0 2rem}
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.5rem;
+  padding-bottom:1.75rem;border-bottom:1px solid var(--line-dark);margin-bottom:1.25rem;
+}
+.footer-brand .nav-logo{margin-bottom:.9rem}
+.footer-brand p{font-size:.82rem;line-height:1.55;color:rgba(255,255,255,.5);max-width:340px;margin:0}
+.footer-brand .tag{
+  font-family:var(--f-mono);font-size:.65rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;margin-top:.6rem;display:block;
+}
+.footer-col h4{
+  font-family:var(--f-mono);font-size:.64rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin:0 0 .75rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin:0;padding:0}
+.footer-col a{font-size:.82rem;color:rgba(255,255,255,.55);transition:color .2s}
+.footer-col a:hover{color:var(--emerald-bright)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;
+  font-size:.72rem;color:rgba(255,255,255,.4);
+}
+.footer-bottom a{color:rgba(255,255,255,.55);transition:color .2s}
+.footer-bottom a:hover{color:var(--emerald-bright)}
+
+/* Floating footer — slim persistent bar that slides in from bottom after scroll */
+.floating-footer{
+  position:fixed;bottom:0;left:0;right:0;z-index:90;
+  background:#0A1628;
+  border-top:1px solid rgba(255,255,255,.08);
+  transform:translateY(100%);
+  transition:transform .35s var(--ease);
+  pointer-events:none;
+}
+.floating-footer.visible{transform:translateY(0);pointer-events:auto}
+.floating-footer.hidden{transform:translateY(100%);pointer-events:none}
+.ff-inner{
+  max-width:1280px;margin:0 auto;padding:.55rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+}
+.ff-brand{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:rgba(255,255,255,.85);transition:color .2s;
+}
+.ff-brand:hover{color:var(--emerald-bright)}
+.ff-brand svg{width:26px;height:22px}
+.ff-brand .wordmark{
+  font-family:var(--f-display);font-style:italic;font-weight:500;
+  font-size:1.05rem;line-height:1;letter-spacing:-.005em;color:inherit;
+}
+.ff-brand .wordmark .dot{
+  display:inline-block;width:.22em;height:.22em;
+  background:var(--emerald-bright);border-radius:50%;
+  vertical-align:.14em;margin-left:.08em;
+}
+.ff-action{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:rgba(255,255,255,.7);font-size:.78rem;font-weight:500;
+  padding:.4rem .8rem;border-radius:var(--r-full);
+  transition:color .2s, background .2s;
+}
+.ff-action:hover{color:var(--emerald-bright);background:rgba(255,255,255,.04)}
+.ff-action svg{width:12px;height:12px}
+
+/* Privacy notice — small one-time notice, dismissible, localStorage-persisted */
+.privacy-notice{
+  position:fixed;bottom:1rem;left:1rem;right:1rem;z-index:95;
+  max-width:480px;margin-left:auto;
+  background:#0A1628;color:rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.1);border-radius:var(--r-md);
+  padding:1rem 1.15rem;box-shadow:0 10px 40px rgba(0,0,0,.4);
+  font-size:.82rem;line-height:1.55;
+  opacity:0;transform:translateY(20px);pointer-events:none;
+  transition:opacity .35s var(--ease), transform .35s var(--ease);
+}
+.privacy-notice.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.privacy-notice p{margin:0 0 .75rem;color:rgba(255,255,255,.82)}
+.privacy-notice a{color:var(--emerald-bright);border-bottom:1px solid rgba(126,195,137,.4);transition:color .2s}
+.privacy-notice a:hover{color:#fff}
+.privacy-notice-actions{display:flex;gap:.5rem;align-items:center;justify-content:flex-end}
+.privacy-notice-dismiss{
+  padding:.4rem .9rem;background:var(--emerald);color:var(--ink);
+  border-radius:var(--r-full);font-size:.78rem;font-weight:600;
+  cursor:pointer;transition:background .2s;
+}
+.privacy-notice-dismiss:hover{background:var(--emerald-bright)}
+@media (max-width:560px){
+  .privacy-notice{left:.75rem;right:.75rem;bottom:.75rem;padding:.85rem 1rem;font-size:.78rem}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SCROLL REVEALS
+═══════════════════════════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-24px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(24px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.stagger > *{opacity:0;transform:translateY(16px);transition:opacity .5s var(--ease), transform .5s var(--ease)}
+.stagger.visible > *{opacity:1;transform:translateY(0)}
+.stagger.visible > *:nth-child(1){transition-delay:.05s}
+.stagger.visible > *:nth-child(2){transition-delay:.15s}
+.stagger.visible > *:nth-child(3){transition-delay:.25s}
+.stagger.visible > *:nth-child(4){transition-delay:.35s}
+.stagger.visible > *:nth-child(5){transition-delay:.45s}
+.stagger.visible > *:nth-child(6){transition-delay:.55s}
+
+/* Hero content initial animation */
+.hero-eyebrow{animation:fadeUp .7s var(--ease) .2s both}
+.hero h1{animation:fadeUp .7s var(--ease) .35s both}
+.hero-promise{animation:fadeUp .7s var(--ease) .5s both}
+.hero-lede{animation:fadeUp .7s var(--ease) .65s both}
+.hero-actions{animation:fadeUp .7s var(--ease) .8s both}
+.hero-strip{animation:fadeUp .7s var(--ease) .95s both}
+.visual{animation:fadeUp .9s var(--ease) .5s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════ */
+@media (max-width:960px){
+  .nav-hamburger{display:flex}
+  .nav-links{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:3.5rem}
+  .visual{margin:0 auto;max-width:440px}
+  .hero{padding:7rem 0 5rem}
+  .pillars-grid{grid-template-columns:repeat(2,1fr)}
+  .pillar:nth-child(2){border-right:none}
+  .pillar:nth-child(1),.pillar:nth-child(2){border-bottom:1px solid var(--line)}
+  .service-header{grid-template-columns:1fr;gap:1.5rem}
+  .service-header > div:last-child{text-align:left}
+  .service-items{grid-template-columns:1fr}
+  .service-item.featured{grid-column:span 1;grid-template-columns:1fr}
+  .security-header{grid-template-columns:1fr;gap:2rem}
+  .security-cards{grid-template-columns:1fr}
+  .security-card.featured{grid-column:span 1;grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .about-quote{position:static}
+  .contact-inner{grid-template-columns:1fr;gap:2.5rem}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}
+  .footer-brand{grid-column:1 / -1}
+}
+@media (max-width:560px){
+  .nav-inner{padding:.75rem 1.25rem}
+  .hero-inner,.pillars-inner,.service-inner,.security-inner,.about-inner,.contact-inner,.footer-inner{padding:0 1.25rem}
+  .hero{padding:6rem 0 4rem}
+  .pillars-grid{grid-template-columns:1fr}
+  .pillar{border-right:none;border-bottom:1px solid var(--line)}
+  .pillar:last-child{border-bottom:none}
+  .form-row{grid-template-columns:1fr}
+  .contact-form{padding:1.5rem}
+  .credentials{grid-template-columns:1fr}
+  .threat-row{grid-template-columns:88px 1fr 30px;gap:.6rem}
+  .threat-label{font-size:.72rem}
+  .form-success{padding:2rem 1.25rem}
+  .form-success h3{font-size:1.3rem}
+}
+@media (max-width:420px){
+  .footer-grid{grid-template-columns:1fr;gap:1.75rem}
+  .footer-brand{grid-column:auto}
+  .footer-bottom{font-size:.7rem;gap:.35rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SVG DEFINITIONS — Vault logo + Style C v2 icon system
+═══════════════════════════════════════════════════════════ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+
+    <!-- ═════════ VAULT LOGO ═════════ -->
+    <symbol id="logo-vault" viewBox="0 0 72 62">
+      <g stroke="#0A1628" stroke-width=".5" stroke-dasharray="1.2 1.4" fill="none" opacity=".3">
+        <line x1="34" y1="2" x2="34" y2="30"/>
+        <line x1="58" y1="44" x2="34" y2="30"/>
+        <line x1="10" y1="44" x2="34" y2="30"/>
+      </g>
+      <g stroke="#0A1628" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M34,2 L58,16 L34,30 L10,16 Z"/>
+        <path d="M34,30 L58,16 L58,44 L34,58 Z"/>
+        <path d="M34,30 L10,16 L10,44 L34,58 Z"/>
+      </g>
+      <path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#2A4A6A"/>
+      <path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#16304A"/>
+      <path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#0A1628"/>
+      <circle cx="40" cy="29" r="1.2" fill="#7EC389"/>
+      <rect x="39.5" y="29.5" width="1" height="2.5" rx=".3" fill="#7EC389"/>
+      <path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"/>
+      <path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"/>
+      <path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"/>
+      <line x1="58.7" y1="12" x2="58" y2="16" stroke="#7EC389" stroke-width=".6" stroke-dasharray=".8 .8" opacity=".6"/>
+    </symbol>
+    <symbol id="logo-vault-dark" viewBox="0 0 72 62">
+      <g stroke="#F5F3ED" stroke-width=".5" stroke-dasharray="1.2 1.4" fill="none" opacity=".25">
+        <line x1="34" y1="2" x2="34" y2="30"/>
+        <line x1="58" y1="44" x2="34" y2="30"/>
+        <line x1="10" y1="44" x2="34" y2="30"/>
+      </g>
+      <g stroke="#F5F3ED" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M34,2 L58,16 L34,30 L10,16 Z"/>
+        <path d="M34,30 L58,16 L58,44 L34,58 Z"/>
+        <path d="M34,30 L10,16 L10,44 L34,58 Z"/>
+      </g>
+      <path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#F5F3ED"/>
+      <path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#C9C3B1"/>
+      <path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#A8A290"/>
+      <circle cx="40" cy="29" r="1.2" fill="#1B4A22"/>
+      <rect x="39.5" y="29.5" width="1" height="2.5" rx=".3" fill="#1B4A22"/>
+      <path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"/>
+      <path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"/>
+      <path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"/>
+      <line x1="58.7" y1="12" x2="58" y2="16" stroke="#9BD7A4" stroke-width=".6" stroke-dasharray=".8 .8" opacity=".7"/>
+    </symbol>
+
+    <!-- ═════════ BIG PILLAR ICONS ═════════ -->
+
+    <symbol id="icon-gxp" viewBox="0 0 48 48">
+      <path d="M7 9h26l6 6v22a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V9z" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6"/>
+      <path d="M33 9v6h6" stroke="#0A1628" stroke-width="1.6" stroke-linejoin="round" fill="none"/>
+      <path d="M11 18 C 13 16, 15 20, 17 18 S 21 16, 23 19 S 27 18, 29 17" stroke="#0A1628" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+      <g transform="translate(11 25)">
+        <rect x="0" y="0" width="9" height="4.5" rx="1" fill="#1B4A22"/>
+        <text x="4.5" y="3.5" font-family="'JetBrains Mono',monospace" font-size="3.2" fill="#7EC389" text-anchor="middle" font-weight="700">IQ</text>
+      </g>
+      <g transform="translate(22 25)">
+        <rect x="0" y="0" width="9" height="4.5" rx="1" fill="#1B4A22"/>
+        <text x="4.5" y="3.5" font-family="'JetBrains Mono',monospace" font-size="3.2" fill="#7EC389" text-anchor="middle" font-weight="700">OQ</text>
+      </g>
+      <g transform="translate(11 32)">
+        <rect x="0" y="0" width="9" height="4.5" rx="1" fill="#1B4A22"/>
+        <text x="4.5" y="3.5" font-family="'JetBrains Mono',monospace" font-size="3.2" fill="#7EC389" text-anchor="middle" font-weight="700">PQ</text>
+      </g>
+      <g transform="translate(33 34) rotate(-14)">
+        <circle r="8.5" fill="#1B4A22" stroke="#7EC389" stroke-width="1.2"/>
+        <circle r="6.3" fill="none" stroke="#7EC389" stroke-width=".6" stroke-dasharray="1.2 1"/>
+        <path d="M-3.2 -.2 L-1 2.2 L3.2 -3" stroke="#7EC389" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+    </symbol>
+
+    <symbol id="icon-ai" viewBox="0 0 48 48">
+      <circle cx="7" cy="12" r="2.5" fill="none" stroke="#0A1628" stroke-width="1.4"/>
+      <circle cx="7" cy="24" r="2.5" fill="none" stroke="#0A1628" stroke-width="1.4"/>
+      <circle cx="7" cy="36" r="2.5" fill="none" stroke="#0A1628" stroke-width="1.4"/>
+      <circle cx="20" cy="17" r="3" fill="#0A1628"/>
+      <circle cx="20" cy="31" r="3" fill="#0A1628"/>
+      <path d="M9 12 L17 17 M9 24 L17 17 M9 24 L17 31 M9 36 L17 31" stroke="#0A1628" stroke-width="1" opacity=".4"/>
+      <path d="M22 17 L30 22 M22 31 L30 26" stroke="#0A1628" stroke-width="1" opacity=".6"/>
+      <g transform="translate(32 24)">
+        <rect x="-3" y="-8" width="6" height="16" rx="1" fill="none" stroke="#1B4A22" stroke-width="1.6"/>
+        <line x1="-1.5" y1="-5" x2="1.5" y2="-5" stroke="#1B4A22" stroke-width="1.3" stroke-linecap="round"/>
+        <line x1="-1.5" y1="-1" x2="1.5" y2="-1" stroke="#7EC389" stroke-width="1.3" stroke-linecap="round"/>
+        <line x1="-1.5" y1="3" x2="1.5" y2="3" stroke="#1B4A22" stroke-width="1.3" stroke-linecap="round"/>
+        <path d="M-2 -10 Q 0 -12, 2 -10 L 2 -8 L -2 -8 Z" fill="#1B4A22"/>
+      </g>
+      <path d="M38 24 L43 24 M41 22 L43 24 L41 26" stroke="#1B4A22" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="41" cy="12" r="4.5" fill="#1B4A22"/>
+      <path d="M39 12 l1.4 1.4 L43 10.5" stroke="#7EC389" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-sec" viewBox="0 0 48 48">
+      <path d="M24 5l15 5v11c0 10-6 17-15 20-9-3-15-10-15-20V10l15-5z" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M24 9l11 4v9c0 7-4 12-11 14-7-2-11-7-11-14v-9l11-4z" fill="none" stroke="#0A1628" stroke-width=".9" opacity=".35"/>
+      <circle cx="24" cy="22" r="8.5" fill="none" stroke="#0A1628" stroke-width=".9" opacity=".55"/>
+      <circle cx="24" cy="22" r="5.5" fill="none" stroke="#1B4A22" stroke-width="1" stroke-dasharray="1.5 1.4"/>
+      <g transform="translate(24 22)">
+        <rect x="-3" y="-2.5" width="6" height="5" rx=".8" fill="#1B4A22"/>
+        <line x1="-2" y1="-1" x2="2" y2="-1" stroke="#7EC389" stroke-width=".5"/>
+        <line x1="-2" y1="0" x2="2" y2="0" stroke="#7EC389" stroke-width=".5"/>
+        <line x1="-2" y1="1" x2="2" y2="1" stroke="#7EC389" stroke-width=".5"/>
+      </g>
+      <g transform="translate(36 11)">
+        <circle r="4.5" fill="#1B4A22"/>
+        <path d="M-2 0 L-.7 1.3 L2 -1.5" stroke="#7EC389" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </symbol>
+
+    <symbol id="icon-strat" viewBox="0 0 48 48">
+      <rect x="5" y="7" width="38" height="34" rx="3" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6"/>
+      <path d="M7 30 Q 15 24, 24 27 T 41 25" stroke="#0A1628" stroke-width=".7" fill="none" opacity=".4"/>
+      <path d="M7 24 Q 16 18, 24 21 T 41 19" stroke="#0A1628" stroke-width=".7" fill="none" opacity=".4"/>
+      <path d="M9 18 Q 18 13, 26 15 T 40 13" stroke="#0A1628" stroke-width=".7" fill="none" opacity=".35"/>
+      <path d="M13 12 Q 22 10, 28 12" stroke="#0A1628" stroke-width=".7" fill="none" opacity=".3"/>
+      <path d="M10 37 Q 16 28, 22 30 Q 28 32, 30 26 Q 32 20, 37 14" stroke="#1B4A22" stroke-width="1.7" fill="none" stroke-dasharray="2 2" stroke-linecap="round"/>
+      <circle cx="10" cy="37" r="2.2" fill="#0A1628"/>
+      <circle cx="22" cy="30" r="1.8" fill="#0A1628"/>
+      <circle cx="30" cy="26" r="1.8" fill="#0A1628"/>
+      <g transform="translate(37 14)">
+        <circle r="2.3" fill="#1B4A22"/>
+        <line x1="0" y1="-2" x2="0" y2="-12" stroke="#1B4A22" stroke-width="1.4"/>
+        <path d="M0 -12 L 8 -10 L 0 -8 Z" fill="#7EC389"/>
+      </g>
+      <g transform="translate(40 38)">
+        <circle r="3" fill="none" stroke="#0A1628" stroke-width=".8"/>
+        <path d="M0 -2.3 L.8 0 L0 2.3 L-.8 0 Z" fill="#0A1628"/>
+        <text x="0" y=".7" font-family="'JetBrains Mono',monospace" font-size="2.6" fill="#0A1628" text-anchor="middle" font-weight="700">N</text>
+      </g>
+    </symbol>
+
+    <!-- ═════════ STYLE C V2 — IN-CARD ICONS (24x24) ═════════ -->
+
+    <!-- GxP: CSV — document with IQ chip -->
+    <symbol id="sc-csv" viewBox="0 0 24 24">
+      <path d="M5 3h9l4 4v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M14 3v4h4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+      <path d="M6 10.5c.8-.6 1.6.6 2.4 0s1.6-.6 2.4 0 1.6.6 2.4 0" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" opacity=".6"/>
+      <rect x="5.5" y="14" width="5.5" height="3" rx=".6" fill="#1B4A22"/>
+      <text x="8.25" y="16.3" font-family="'JetBrains Mono',monospace" font-size="2.2" fill="#7EC389" text-anchor="middle" font-weight="700">IQ</text>
+      <rect x="5.5" y="18" width="5.5" height="3" rx=".6" fill="#1B4A22"/>
+      <text x="8.25" y="20.3" font-family="'JetBrains Mono',monospace" font-size="2.2" fill="#7EC389" text-anchor="middle" font-weight="700">PQ</text>
+      <circle cx="16" cy="17" r="2.8" fill="#7EC389"/>
+      <path d="M14.8 17l.8.8 1.7-2" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- GxP: Part 11 — doc + signature + timestamp -->
+    <symbol id="sc-part11" viewBox="0 0 24 24">
+      <path d="M4 3h10l4 4v13a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M14 3v4h4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+      <path d="M5 11.5c1-.8 2 .8 3 0s2-.8 3 0 2 .8 3 0" stroke="#1B4A22" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M5 14.5 L12 14.5" stroke="currentColor" stroke-width=".9" opacity=".4" stroke-linecap="round"/>
+      <path d="M5 16.5 L10 16.5" stroke="currentColor" stroke-width=".9" opacity=".4" stroke-linecap="round"/>
+      <circle cx="17" cy="18" r="4" fill="#1B4A22"/>
+      <circle cx="17" cy="18" r="2.8" fill="none" stroke="#7EC389" stroke-width=".5"/>
+      <line x1="17" y1="18" x2="17" y2="16.2" stroke="#7EC389" stroke-width=".9" stroke-linecap="round"/>
+      <line x1="17" y1="18" x2="18.4" y2="18" stroke="#7EC389" stroke-width=".9" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- GxP: eQMS — stacked plates + check -->
+    <symbol id="sc-eqms" viewBox="0 0 24 24">
+      <path d="M12 3l8 4-8 4-8-4 8-4z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M4 11l8 4 8-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" opacity=".65"/>
+      <path d="M4 15l8 4 8-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" opacity=".35"/>
+      <circle cx="17.5" cy="6.5" r="3" fill="#1B4A22"/>
+      <path d="M16 6.5l1 1 2-2.3" stroke="#7EC389" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- GxP: Lifecycle — circular flow + version tag -->
+    <symbol id="sc-lifecycle" viewBox="0 0 24 24">
+      <path d="M20 12a8 8 0 0 1-13.5 5.7M4 12a8 8 0 0 1 13.5-5.7" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      <path d="M20 6v4h-4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4 18v-4h4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="9" y="10" width="6" height="4" rx=".6" fill="#1B4A22"/>
+      <text x="12" y="13" font-family="'JetBrains Mono',monospace" font-size="2.6" fill="#7EC389" text-anchor="middle" font-weight="700">v2</text>
+    </symbol>
+
+    <!-- AI: Strategy — compass + node -->
+    <symbol id="sc-ai-strategy" viewBox="0 0 24 24">
+      <circle cx="11" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M11 5.5l2.2 5.3L18.5 13 13.2 14.8 11 19.5 8.8 14.8 3.5 13 8.8 10.8 11 5.5z" fill="currentColor" opacity=".15"/>
+      <path d="M11 7l2 5-5-2z" fill="currentColor"/>
+      <circle cx="11" cy="12" r="1.3" fill="#F5F3ED" stroke="currentColor" stroke-width=".8"/>
+      <circle cx="19.5" cy="5" r="2.5" fill="#1B4A22"/>
+      <circle cx="19.5" cy="5" r="1" fill="#7EC389"/>
+    </symbol>
+
+    <!-- AI: Validated implementation — nodes through gate -->
+    <symbol id="sc-ai-validated" viewBox="0 0 24 24">
+      <circle cx="4" cy="7" r="1.8" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="4" cy="17" r="1.8" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M5.8 7.5 L10 11 M5.8 16.5 L10 13" stroke="currentColor" stroke-width="1" opacity=".5"/>
+      <rect x="9.5" y="9" width="6" height="6" rx="1" fill="currentColor"/>
+      <path d="M15.5 12 L19 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="20.5" cy="12" r="3" fill="#1B4A22"/>
+      <path d="M19 12l1.1 1.2 2-2.2" stroke="#7EC389" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- AI: Use cases — doc + AI badge -->
+    <symbol id="sc-ai-usecase" viewBox="0 0 24 24">
+      <path d="M5 3h9l4 4v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M14 3v4h4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+      <path d="M6 12h8M6 14.5h6M6 17h7" stroke="currentColor" stroke-width="1" opacity=".45" stroke-linecap="round"/>
+      <rect x="13" y="9.5" width="7" height="4.5" rx="1" fill="#1B4A22"/>
+      <text x="16.5" y="12.9" font-family="'JetBrains Mono',monospace" font-size="2.8" fill="#7EC389" text-anchor="middle" font-weight="700">AI</text>
+      <circle cx="19.5" cy="8" r="1.2" fill="#7EC389"/>
+      <path d="M19.5 6.5v3M18 8h3" stroke="#1B4A22" stroke-width=".7" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- AI: Governance — gate + arrows -->
+    <symbol id="sc-ai-governance" viewBox="0 0 24 24">
+      <rect x="8" y="5" width="8" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <line x1="9.5" y1="8" x2="14.5" y2="8" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".5"/>
+      <line x1="9.5" y1="11" x2="14.5" y2="11" stroke="#1B4A22" stroke-width="1.1" stroke-linecap="round"/>
+      <line x1="9.5" y1="14" x2="14.5" y2="14" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".5"/>
+      <line x1="9.5" y1="17" x2="14.5" y2="17" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".5"/>
+      <path d="M9 3.5 Q 12 2, 15 3.5 L15 5 L9 5 Z" fill="#1B4A22"/>
+      <path d="M2 12h5m-2-2l2 2-2 2" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M17 12h5m-2-2l2 2-2 2" stroke="#1B4A22" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="20.5" cy="5.5" r="2.2" fill="#1B4A22"/>
+      <path d="M19.5 5.5l.7.8 1.4-1.6" stroke="#7EC389" stroke-width=".9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Leadership: Interim — person in frame -->
+    <symbol id="sc-interim" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="12" cy="10.5" r="2.3" fill="currentColor"/>
+      <path d="M7.5 18c.5-2.5 2.3-4 4.5-4s4 1.5 4.5 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      <circle cx="18.5" cy="6" r="2.5" fill="#1B4A22"/>
+      <path d="M17 6l1 1 2-2.2" stroke="#7EC389" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Leadership: Assessment — mag glass over stack -->
+    <symbol id="sc-assessment" viewBox="0 0 24 24">
+      <path d="M4 9l6-3 6 3-6 3-6-3z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M4 13l6 3 6-3" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round" opacity=".5"/>
+      <circle cx="15.5" cy="14" r="4.5" fill="none" stroke="#1B4A22" stroke-width="1.5"/>
+      <line x1="18.7" y1="17.2" x2="21" y2="19.5" stroke="#1B4A22" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="15.5" cy="14" r="2.2" fill="#7EC389" opacity=".8"/>
+    </symbol>
+
+    <!-- Leadership: Roadmap — topo + flag -->
+    <symbol id="sc-roadmap" viewBox="0 0 24 24">
+      <path d="M3 14 Q 7 11, 11 13 T 19 11" stroke="currentColor" stroke-width="1" fill="none" opacity=".4"/>
+      <path d="M3 18 Q 7 15, 11 17 T 19 15" stroke="currentColor" stroke-width="1" fill="none" opacity=".4"/>
+      <path d="M5 21 Q 9 14, 13 17 Q 17 20, 19 6" stroke="#1B4A22" stroke-width="1.5" fill="none" stroke-dasharray="2 1.6" stroke-linecap="round"/>
+      <circle cx="5" cy="21" r="1.5" fill="currentColor"/>
+      <circle cx="13" cy="17" r="1.3" fill="currentColor"/>
+      <g transform="translate(19 6)">
+        <circle r="1.8" fill="#1B4A22"/>
+        <line x1="0" y1="-1.5" x2="0" y2="-7" stroke="#1B4A22" stroke-width="1.2"/>
+        <path d="M0 -7 L 5 -5.5 L 0 -4 Z" fill="#7EC389"/>
+      </g>
+    </symbol>
+
+    <!-- Security: Phishing — hook + envelope -->
+    <symbol id="sc-phishing" viewBox="0 0 24 24">
+      <rect x="3" y="9" width="14" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M3 10l7 5 7-5" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+      <path d="M16 3 L16 8 Q 16 11, 13 11 Q 10 11, 10 8" stroke="#C04040" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <circle cx="16" cy="3" r="1.1" fill="#C04040"/>
+      <circle cx="18" cy="17" r="2.5" fill="#C04040"/>
+      <text x="18" y="18.2" font-family="'JetBrains Mono',monospace" font-size="3" fill="#fff" text-anchor="middle" font-weight="700">!</text>
+    </symbol>
+
+    <!-- Security: SAT — graduation cap + shield -->
+    <symbol id="sc-sat" viewBox="0 0 24 24">
+      <path d="M12 4 L21 8 L12 12 L3 8 Z" fill="currentColor"/>
+      <path d="M6 9.8 L6 13 Q 6 15.5, 12 15.5 Q 18 15.5, 18 13 L 18 9.8" stroke="currentColor" stroke-width="1.4" fill="none"/>
+      <line x1="21" y1="8" x2="21" y2="12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="21" cy="12.5" r="1" fill="currentColor"/>
+      <path d="M12 17l6 2v1c0 2-2.5 3.5-6 4-3.5-.5-6-2-6-4v-1l6-2z" fill="#1B4A22"/>
+      <path d="M10 20.5l1.3 1.3 2.7-3" stroke="#7EC389" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Security: Policy — clipboard + ISO badge -->
+    <symbol id="sc-policy" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="14" height="17" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <rect x="8" y="2.5" width="6" height="3.5" rx=".8" fill="currentColor"/>
+      <path d="M7 10l1.2 1.2L10.5 9" stroke="#1B4A22" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="12" y1="10.5" x2="16" y2="10.5" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".5"/>
+      <path d="M7 14l1.2 1.2L10.5 13" stroke="#1B4A22" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="12" y1="14.5" x2="16" y2="14.5" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".5"/>
+      <rect x="14" y="17" width="7" height="4.5" rx="1" fill="#1B4A22"/>
+      <text x="17.5" y="20.3" font-family="'JetBrains Mono',monospace" font-size="2.6" fill="#7EC389" text-anchor="middle" font-weight="700">ISO</text>
+    </symbol>
+
+    <!-- Security: Access — key + ID card -->
+    <symbol id="sc-access" viewBox="0 0 24 24">
+      <rect x="3" y="7" width="13" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="6.5" cy="10.5" r="1.3" fill="currentColor"/>
+      <path d="M4.5 14.5c.3-1 1-1.5 2-1.5s1.7.5 2 1.5" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <line x1="10" y1="10" x2="14.5" y2="10" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".5"/>
+      <line x1="10" y1="12" x2="13" y2="12" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".5"/>
+      <circle cx="18.5" cy="14" r="3" fill="none" stroke="#1B4A22" stroke-width="1.5"/>
+      <path d="M20.5 15.5 L23 18 L21.5 19.5 L19.5 17.5" stroke="#1B4A22" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="18.5" cy="14" r="1" fill="#7EC389"/>
+    </symbol>
+
+    <!-- Security: Acronis — shield + backup cloud -->
+    <!-- Acronis partner mark — custom shield in Acronis red.
+         NOTE: Stylized for partner-context use. Replace with the
+         official Acronis partner asset from your partner portal
+         at deployment time. -->
+    <symbol id="sc-acronis" viewBox="0 0 24 24">
+      <path d="M12 2 L 20 5 L 20 12 C 20 17.5, 16.5 20.8, 12 22 C 7.5 20.8, 4 17.5, 4 12 L 4 5 Z" fill="#ED1C24"/>
+      <path d="M12 3 L 19 5.7 L 19 12 C 19 16.9, 16 19.9, 12 21 C 8 19.9, 5 16.9, 5 12 L 5 5.7 Z" fill="none" stroke="#fff" stroke-width=".6" opacity=".4"/>
+      <path d="M8.5 17 L 12 7.5 L 15.5 17" stroke="#fff" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10.3 13.8 L 13.7 13.8" stroke="#fff" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Arrow -->
+    <symbol id="arrow" viewBox="0 0 14 14">
+      <path d="M3 7h8m0 0L7.5 3.5M11 7 7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════════════════════ -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="MSET — Kifarkis Nätsäkerhet, back to top">
+      <svg class="mark" aria-hidden="true"><use href="#logo-vault-dark"/></svg>
+      <span class="wordmark">MSET<span class="dot"></span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">GxP</a></li>
+      <li><a href="#ai">AI</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#strategy">Strategy</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Book a call</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services">GxP</a>
+  <a href="#ai">AI</a>
+  <a href="#security">Security</a>
+  <a href="#strategy">Strategy</a>
+  <a href="#about">About</a>
+  <a href="#contact" class="nav-cta">Book a call</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow">Life Science · GxP · AI</div>
+        <h1>We speak both<br><em>GxP and GPT.</em></h1>
+        <p class="hero-promise"><strong>Validated systems.</strong> <strong>Deployed AI.</strong> <strong>Fewer audit findings.</strong></p>
+        <p class="hero-lede">
+          Independent IT consulting for pharma, biotech and medtech — based in Skåne, working across the Nordics.
+        </p>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">
+            See our services
+            <svg width="14" height="14" class="btn-arrow"><use href="#arrow"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.22)">Book a 30-min intro</a>
+        </div>
+        <div class="hero-strip">
+          <span>21 CFR Part 11</span>
+          <span>EU Annex 11</span>
+          <span>GAMP 5</span>
+          <span>ISO 13485</span>
+        </div>
+      </div>
+      <div class="visual">
+        <div class="visual-label">Live system</div>
+        <div class="visual-title">audit trail · gxp-prod-01</div>
+        <div class="audit-stream">
+          <div class="audit-stream-inner">
+            <div class="audit-row"><span class="time">09:47:21</span><span class="action"><span class="actor">@anna.lindqvist</span><span class="act">Batch record BR-2389 created</span></span><span class="check">Part 11</span></div>
+            <div class="audit-row"><span class="time">09:47:28</span><span class="action"><span class="actor">system</span><span class="act">E-signature captured</span></span><span class="check sys">signed</span></div>
+            <div class="audit-row"><span class="time">09:48:14</span><span class="action"><span class="actor">@peter.svensson</span><span class="act">IQ protocol approved</span></span><span class="check">GAMP 5</span></div>
+            <div class="audit-row"><span class="time">09:49:02</span><span class="action"><span class="actor">ml-model v2.1</span><span class="act">Prediction · conf. 0.973</span></span><span class="check">logged</span></div>
+            <div class="audit-row"><span class="time">09:49:47</span><span class="action"><span class="actor">system</span><span class="act">Access review — 12 users</span></span><span class="check">verified</span></div>
+            <div class="audit-row"><span class="time">09:50:33</span><span class="action"><span class="actor">@anna.lindqvist</span><span class="act">Deviation DV-0047 raised</span></span><span class="check warn">review</span></div>
+            <div class="audit-row"><span class="time">09:51:18</span><span class="action"><span class="actor">@qa.reviewer</span><span class="act">DV-0047 · root cause logged</span></span><span class="check">closed</span></div>
+            <div class="audit-row"><span class="time">09:52:02</span><span class="action"><span class="actor">system</span><span class="act">Backup complete · 241 GB</span></span><span class="check">Acronis</span></div>
+            <div class="audit-row"><span class="time">09:53:15</span><span class="action"><span class="actor">@maria.berg</span><span class="act">PQ run 03 · pass</span></span><span class="check">PQ</span></div>
+            <div class="audit-row"><span class="time">09:47:21</span><span class="action"><span class="actor">@anna.lindqvist</span><span class="act">Batch record BR-2389 created</span></span><span class="check">Part 11</span></div>
+            <div class="audit-row"><span class="time">09:47:28</span><span class="action"><span class="actor">system</span><span class="act">E-signature captured</span></span><span class="check sys">signed</span></div>
+            <div class="audit-row"><span class="time">09:48:14</span><span class="action"><span class="actor">@peter.svensson</span><span class="act">IQ protocol approved</span></span><span class="check">GAMP 5</span></div>
+            <div class="audit-row"><span class="time">09:49:02</span><span class="action"><span class="actor">ml-model v2.1</span><span class="act">Prediction · conf. 0.973</span></span><span class="check">logged</span></div>
+            <div class="audit-row"><span class="time">09:49:47</span><span class="action"><span class="actor">system</span><span class="act">Access review — 12 users</span></span><span class="check">verified</span></div>
+            <div class="audit-row"><span class="time">09:50:33</span><span class="action"><span class="actor">@anna.lindqvist</span><span class="act">Deviation DV-0047 raised</span></span><span class="check warn">review</span></div>
+            <div class="audit-row"><span class="time">09:51:18</span><span class="action"><span class="actor">@qa.reviewer</span><span class="act">DV-0047 · root cause logged</span></span><span class="check">closed</span></div>
+            <div class="audit-row"><span class="time">09:52:02</span><span class="action"><span class="actor">system</span><span class="act">Backup complete · 241 GB</span></span><span class="check">Acronis</span></div>
+            <div class="audit-row"><span class="time">09:53:15</span><span class="action"><span class="actor">@maria.berg</span><span class="act">PQ run 03 · pass</span></span><span class="check">PQ</span></div>
+          </div>
+        </div>
+        <div class="visual-caption">Every action. <strong>Timestamped. Signed. Traceable.</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PILLARS
+═══════════════════════════════════════════════════════════ -->
+<section class="pillars">
+  <div class="pillars-inner">
+    <span class="eyebrow reveal">What we do</span>
+    <h2 class="section-title reveal">The IT partner for life-science teams that <em>can't afford to get it wrong.</em></h2>
+    <p class="section-lede reveal">
+      MSET sits at the intersection of regulated IT and emerging technology. We validate systems.
+      We deploy AI with the audit trail regulators expect. We run IT through inspections.
+      We don't sell software — we design what you need and help you run it.
+    </p>
+
+    <div class="pillars-grid stagger">
+      <a href="#services" class="pillar">
+        <span class="pillar-num">01 / Validation</span>
+        <svg class="pillar-icon"><use href="#icon-gxp"/></svg>
+        <h3 class="pillar-title">GxP Systems</h3>
+        <p class="pillar-body">Computer system validation, qualification, eQMS rollouts, and ongoing compliance. Built on GAMP 5.</p>
+        <span class="pillar-link">See services <svg><use href="#arrow"/></svg></span>
+      </a>
+      <a href="#ai" class="pillar">
+        <span class="pillar-num">02 / AI</span>
+        <svg class="pillar-icon"><use href="#icon-ai"/></svg>
+        <h3 class="pillar-title">AI in Regulated Life Science</h3>
+        <p class="pillar-body">Strategy, validation and governance for AI and ML — built to hold up under inspection.</p>
+        <span class="pillar-link">See services <svg><use href="#arrow"/></svg></span>
+      </a>
+      <a href="#security" class="pillar">
+        <span class="pillar-num">03 / Security</span>
+        <svg class="pillar-icon"><use href="#icon-sec"/></svg>
+        <h3 class="pillar-title">IT Security &amp; Awareness</h3>
+        <p class="pillar-body">Security awareness training, phishing simulation, access control, and backup — the human and technical layers together.</p>
+        <span class="pillar-link">See services <svg><use href="#arrow"/></svg></span>
+      </a>
+      <a href="#strategy" class="pillar">
+        <span class="pillar-num">04 / Leadership</span>
+        <svg class="pillar-icon"><use href="#icon-strat"/></svg>
+        <h3 class="pillar-title">IT Strategy &amp; Leadership</h3>
+        <p class="pillar-body">Interim IT Director, independent assessments, and multi-year IT roadmaps for regulated environments.</p>
+        <span class="pillar-link">See services <svg><use href="#arrow"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 01 — GxP SYSTEMS
+═══════════════════════════════════════════════════════════ -->
+<section id="services" class="service-section alt">
+  <div class="service-inner">
+    <div class="service-header">
+      <div class="reveal-left">
+        <span class="eyebrow num">01 / GxP Systems</span>
+        <h2 class="section-title">Validated systems that <em>pass inspection.</em></h2>
+        <p class="section-lede">
+          Every regulated IT system you run eventually meets an auditor. We design, implement, and document
+          systems so that meeting is uneventful — with rigorous computer system validation built on
+          GAMP 5, 21 CFR Part 11, and EU Annex 11.
+        </p>
+      </div>
+      <div class="reveal-right">
+        <a href="#contact" class="service-cta">Discuss a validation project →</a>
+      </div>
+    </div>
+
+    <div class="service-items stagger">
+      <div class="service-item">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-csv"/></svg></div>
+        <h3 class="service-item-title">Computer System Validation (CSV / CSA)</h3>
+        <p class="service-item-body">End-to-end validation for GxP systems — user requirements through to performance qualification, using risk-based approaches that satisfy regulators without over-engineering.</p>
+        <ul class="service-item-list">
+          <li>URS · FS · DS · IQ · OQ · PQ</li>
+          <li>Risk assessments (ICH Q9)</li>
+          <li>Traceability matrix management</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-part11"/></svg></div>
+        <h3 class="service-item-title">21 CFR Part 11 &amp; Annex 11</h3>
+        <p class="service-item-body">Electronic records and electronic signatures, done properly. Audit trails, access controls, and data integrity across the ALCOA+ framework.</p>
+        <ul class="service-item-list">
+          <li>E-signature implementation</li>
+          <li>Audit trail review procedures</li>
+          <li>Data integrity controls (ALCOA+)</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-eqms"/></svg></div>
+        <h3 class="service-item-title">Quality Management Systems (eQMS)</h3>
+        <p class="service-item-body">Selection, configuration, and rollout of electronic quality systems — deviations, CAPAs, change control, training, and document lifecycle in one validated platform.</p>
+        <ul class="service-item-list">
+          <li>Vendor selection &amp; evaluation</li>
+          <li>Migration from paper / legacy systems</li>
+          <li>eQMS validation &amp; go-live</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-lifecycle"/></svg></div>
+        <h3 class="service-item-title">System Lifecycle Management</h3>
+        <p class="service-item-body">Periodic review, change control, and decommissioning. Validated systems don't stay validated by themselves — they need maintenance built into operational reality.</p>
+        <ul class="service-item-list">
+          <li>Periodic review procedures</li>
+          <li>Change control frameworks</li>
+          <li>Decommissioning &amp; data archival</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 02 — AI CONSULTING (4 equal items)
+═══════════════════════════════════════════════════════════ -->
+<section id="ai" class="service-section dark">
+  <div class="service-inner">
+    <div class="service-header">
+      <div class="reveal-left">
+        <span class="eyebrow dark">02 / AI Consulting</span>
+        <h2 class="section-title">AI that works in <em>regulated</em> environments.</h2>
+        <p class="section-lede">
+          Deploying AI in a life-science company is fundamentally different from any other industry.
+          We understand the validation requirements, the data governance expectations, and the regulatory
+          scrutiny that comes with it — and we help you navigate all of it.
+        </p>
+      </div>
+      <div class="reveal-right">
+        <a href="#contact" class="service-cta">Start an AI conversation →</a>
+      </div>
+    </div>
+
+    <div class="service-items stagger">
+      <div class="service-item">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-ai-strategy"/></svg></div>
+        <h3 class="service-item-title">AI Strategy &amp; Roadmapping</h3>
+        <p class="service-item-body">Pragmatic AI strategies tailored to your regulatory context, data maturity, and organisational readiness.</p>
+        <ul class="service-item-list">
+          <li>Use-case discovery &amp; prioritisation</li>
+          <li>Data &amp; readiness assessment</li>
+          <li>Phased, regulator-aware roadmap</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-ai-validated"/></svg></div>
+        <h3 class="service-item-title">Validated AI Implementation</h3>
+        <p class="service-item-body">AI and ML systems implemented with the rigour of GxP — covering model validation, explainability, and audit readiness.</p>
+        <ul class="service-item-list">
+          <li>Model validation protocols (IQ / OQ / PQ adapted for ML)</li>
+          <li>Model lineage &amp; audit trail design</li>
+          <li>Performance monitoring &amp; drift detection</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-ai-usecase"/></svg></div>
+        <h3 class="service-item-title">Regulatory &amp; Quality AI Use Cases</h3>
+        <p class="service-item-body">From AI-assisted document review and deviation analysis to intelligent batch release — practical applications with compliance built in.</p>
+        <ul class="service-item-list">
+          <li>AI-assisted deviation analysis</li>
+          <li>Batch record review automation</li>
+          <li>Regulatory document intelligence</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-ai-governance"/></svg></div>
+        <h3 class="service-item-title">AI Governance &amp; Change Management</h3>
+        <p class="service-item-body">Frameworks for responsible AI adoption — ensuring your teams, processes, and regulators are all aligned.</p>
+        <ul class="service-item-list">
+          <li>AI governance policy &amp; committee setup</li>
+          <li>Change management for AI-enabled workflows</li>
+          <li>Continuous-learning system controls</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 03 — SECURITY (human-risk angle, 5 cards, SAT expandable)
+═══════════════════════════════════════════════════════════ -->
+<section id="security" class="security">
+  <div class="security-inner">
+
+    <div class="security-header">
+      <div class="reveal-left">
+        <span class="eyebrow num">03 / IT Security &amp; Awareness</span>
+        <h2 class="section-title">Your biggest security risk is <em>human.</em></h2>
+        <p class="section-lede">
+          Over 90% of successful cyberattacks begin with a phishing email. Firewalls and antivirus software
+          cannot protect against an employee who clicks the wrong link — but <strong>training and testing can</strong>.
+        </p>
+        <p class="section-lede">
+          MSET helps life-science and regulated organisations build a culture of security awareness —
+          combining hands-on phishing simulations with structured Security Awareness Training that
+          actually changes behaviour.
+        </p>
+        <a href="sat.html" class="security-deep-link">
+          Deep dive: Security Awareness Training programme
+          <svg width="14" height="14"><use href="#arrow"/></svg>
+        </a>
+      </div>
+
+      <div class="threat-meter reveal-right" id="threatMeter">
+        <div class="threat-meter-title">Top attack vectors — regulated industries</div>
+        <div class="threat-row"><span class="threat-label">Phishing email</span><div class="threat-bar-wrap"><div class="threat-bar high" data-pct="91"></div></div><span class="threat-pct">91%</span></div>
+        <div class="threat-row"><span class="threat-label">Credential theft</span><div class="threat-bar-wrap"><div class="threat-bar high" data-pct="74"></div></div><span class="threat-pct">74%</span></div>
+        <div class="threat-row"><span class="threat-label">Social engineering</span><div class="threat-bar-wrap"><div class="threat-bar mid" data-pct="62"></div></div><span class="threat-pct">62%</span></div>
+        <div class="threat-row"><span class="threat-label">Insider threat</span><div class="threat-bar-wrap"><div class="threat-bar mid" data-pct="38"></div></div><span class="threat-pct">38%</span></div>
+        <div class="threat-row"><span class="threat-label">Ransomware</span><div class="threat-bar-wrap"><div class="threat-bar" data-pct="27"></div></div><span class="threat-pct">27%</span></div>
+        <p class="threat-note">Regulated sectors including pharma and medtech are among the most targeted globally — high-value IP and patient data are prime targets. <span style="display:block;margin-top:.5rem;opacity:.75">Sources: Verizon DBIR 2024 · IBM X-Force Threat Intelligence Index · ENISA Threat Landscape</span></p>
+      </div>
+    </div>
+
+    <div class="security-cards stagger">
+
+      <!-- FEATURED: Phishing Simulation -->
+      <div class="security-card featured">
+        <div>
+          <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-phishing"/></svg></div>
+          <h3 class="security-card-title">Phishing Simulation &amp; Testing</h3>
+          <p class="security-card-body">
+            We run realistic, controlled phishing campaigns against your organisation — measuring who clicks,
+            who reports, and who is most at risk. Results feed directly into targeted training.
+          </p>
+          <ul class="security-card-list">
+            <li>Realistic phishing templates (industry-tailored)</li>
+            <li>Spear-phishing scenarios targeting specific roles</li>
+            <li>SMS / vishing (voice phishing) simulations</li>
+            <li>Click-through and credential-entry tracking</li>
+            <li>Instant teachable moment for users who click</li>
+            <li>Per-user and per-department reporting</li>
+            <li>Repeat-testing cadence to measure improvement</li>
+          </ul>
+        </div>
+        <div class="phishing-demo">
+          <div class="phish-bar">
+            <div class="phish-dot" style="background:#FF5F57"></div>
+            <div class="phish-dot" style="background:#FEBC2E"></div>
+            <div class="phish-dot" style="background:#28C840"></div>
+            <div class="phish-url">
+              <span class="warn">⚠</span>
+              secur1ty-update.pharma-it-portal.com
+            </div>
+          </div>
+          <div class="phish-body">
+            <div class="phish-warning">
+              <span class="w-icon">⚠</span>
+              <span>This link was part of a controlled MSET phishing test. Your click has been logged.</span>
+            </div>
+            <div class="phish-email-line" style="width:100%"></div>
+            <div class="phish-email-line" style="width:85%"></div>
+            <div class="phish-email-line" style="width:60%"></div>
+            <div class="phish-email-line" style="width:40%;margin-top:.75rem"></div>
+            <span class="badge-caught">✓ Simulation complete</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAT — expandable to sub-page -->
+      <div class="security-card">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-sat"/></svg></div>
+        <h3 class="security-card-title">Security Awareness Training</h3>
+        <p class="security-card-body">
+          Your people are your perimeter. Our role-based SAT programme turns employees from the weakest link
+          into your first line of defence — with curriculum tailored to life-science and regulated work,
+          and evidence your auditors will actually accept.
+        </p>
+        <ul class="security-card-list">
+          <li>Role-based e-learning (quality, IT, lab, exec)</li>
+          <li>GxP-specific modules — data integrity, CSV, Annex 11</li>
+          <li>Framework-aligned evidence (ISO 27001, NIS2)</li>
+          <li>Quarterly reporting &amp; compliance trail</li>
+          <li>Annual refresh &amp; attestation programme</li>
+        </ul>
+        <a href="sat.html" class="expand-link">
+          Explore the full programme <svg><use href="#arrow"/></svg>
+        </a>
+      </div>
+
+      <!-- Policy & Risk -->
+      <div class="security-card">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-policy"/></svg></div>
+        <h3 class="security-card-title">Security Policy &amp; Risk Assessment</h3>
+        <p class="security-card-body">
+          Develop and maintain IT security policies that satisfy both regulatory requirements and practical
+          operational needs — aligned with ISO 27001, NIS2, and sector-specific expectations.
+        </p>
+        <ul class="security-card-list">
+          <li>IT security policy development</li>
+          <li>Risk assessment &amp; gap analysis</li>
+          <li>NIS2 &amp; ISO 27001 readiness</li>
+          <li>Incident response planning</li>
+          <li>Supplier &amp; third-party risk review</li>
+        </ul>
+      </div>
+
+      <!-- Access Control -->
+      <div class="security-card">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-access"/></svg></div>
+        <h3 class="security-card-title">Access Control &amp; Identity Management</h3>
+        <p class="security-card-body">
+          The right people in the right systems — and no-one else. Especially critical in GxP environments
+          where access to validated systems must be documented and controlled.
+        </p>
+        <ul class="security-card-list">
+          <li>Role-based access control (RBAC)</li>
+          <li>MFA implementation &amp; management</li>
+          <li>Privileged access reviews</li>
+          <li>21 CFR Part 11 access audit trails</li>
+          <li>Joiners / movers / leavers process</li>
+        </ul>
+      </div>
+
+      <!-- Acronis -->
+      <div class="security-card">
+        <span class="partner-badge">Acronis Official Partner</span>
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-acronis"/></svg></div>
+        <h3 class="security-card-title">Acronis Cyber Protect</h3>
+        <p class="security-card-body">
+          We deploy and manage Acronis Cyber Protect — an integrated solution combining backup,
+          ransomware protection, and endpoint security. Your data stays safe even when attackers get through.
+        </p>
+        <ul class="security-card-list">
+          <li>Automated backup — servers &amp; workstations</li>
+          <li>AI-powered ransomware detection &amp; rollback</li>
+          <li>Instant recovery · minimal operational downtime</li>
+          <li>Offsite &amp; cloud backup (geographically redundant)</li>
+          <li>Backup integrity verification &amp; audit trail</li>
+          <li>Aligned with GxP data-integrity requirements</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 04 — IT LEADERSHIP (with full Interim visual)
+═══════════════════════════════════════════════════════════ -->
+<section id="strategy" class="service-section dark">
+  <div class="service-inner">
+    <div class="service-header">
+      <div class="reveal-left">
+        <span class="eyebrow dark">04 / IT Strategy &amp; Leadership</span>
+        <h2 class="section-title">From where you are to <em>where you need to be.</em></h2>
+        <p class="section-lede">
+          Many organisations know their IT needs work — but lack the internal resource or independent
+          perspective to define what good looks like. MSET provides that outside eye: honest assessment,
+          clear priorities, and a practical roadmap to get you there.
+        </p>
+      </div>
+      <div class="reveal-right">
+        <a href="#contact" class="service-cta">Book an intro call →</a>
+      </div>
+    </div>
+
+    <div class="service-items stagger">
+
+      <!-- Interim IT Director — featured with active engagements + roadmap visual -->
+      <div class="service-item featured">
+        <div>
+          <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-interim"/></svg></div>
+          <h3 class="service-item-title">Interim IT Director</h3>
+          <p class="service-item-body">When you need senior IT leadership now — during a transition, a growth phase, a restructuring, or simply a gap between permanent hires — MSET steps in as your Interim IT Director. Experienced, vendor-neutral, and immediately effective.</p>
+          <p class="service-item-body">Available part-time or full-time, embedded with your leadership team, accountable for outcomes.</p>
+          <ul class="service-item-list">
+            <li>Strategic IT leadership during transitions &amp; gaps</li>
+            <li>IT budget ownership &amp; vendor negotiations</li>
+            <li>Board-level reporting &amp; stakeholder management</li>
+            <li>Team leadership &amp; capability building</li>
+            <li>Regulatory &amp; compliance accountability</li>
+            <li>Handover to permanent hire when ready</li>
+          </ul>
+        </div>
+        <div class="interim-visual" id="interimVisual">
+          <p class="interim-visual-title">Active engagements</p>
+          <div class="interim-row">
+            <div class="interim-avatar">IT</div>
+            <div>
+              <p class="interim-role">Interim IT Director</p>
+              <p class="interim-dept">Life Science — Nordic</p>
+            </div>
+            <span class="interim-badge active">Active</span>
+          </div>
+          <div class="interim-row">
+            <div class="interim-avatar">QT</div>
+            <div>
+              <p class="interim-role">IT Steering — Quality &amp; Tech</p>
+              <p class="interim-dept">Medtech Group — Sweden</p>
+            </div>
+            <span class="interim-badge active">Active</span>
+          </div>
+          <div class="interim-row">
+            <div class="interim-avatar">IT</div>
+            <div>
+              <p class="interim-role">Interim IT Director</p>
+              <p class="interim-dept">CRO Partner — Europe</p>
+            </div>
+            <span class="interim-badge pending">Upcoming</span>
+          </div>
+          <div class="roadmap-visual">
+            <p class="interim-visual-title" style="margin-top:0;margin-bottom:.5rem">Typical engagement structure</p>
+            <div class="roadmap-phase">
+              <span class="roadmap-phase-label">Week 1–2</span>
+              <div class="roadmap-bar-outer">
+                <div class="roadmap-bar-inner" data-w="100" style="background:#1D4B7A;">
+                  <span class="roadmap-bar-text" style="color:rgba(255,255,255,.85)">Discovery &amp; assessment</span>
+                </div>
+              </div>
+            </div>
+            <div class="roadmap-phase">
+              <span class="roadmap-phase-label">Month 1</span>
+              <div class="roadmap-bar-outer">
+                <div class="roadmap-bar-inner" data-w="100" style="background:#3A7A42;">
+                  <span class="roadmap-bar-text">Quick wins &amp; stabilisation</span>
+                </div>
+              </div>
+            </div>
+            <div class="roadmap-phase">
+              <span class="roadmap-phase-label">Ongoing</span>
+              <div class="roadmap-bar-outer">
+                <div class="roadmap-bar-inner" data-w="100" style="background:#5BA364;">
+                  <span class="roadmap-bar-text">Strategic delivery</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Independent IT Assessment — full 7 bullets -->
+      <div class="service-item">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-assessment"/></svg></div>
+        <h3 class="service-item-title">Independent IT Assessment</h3>
+        <p class="service-item-body">An objective, outside-in review of your entire IT landscape — infrastructure, security posture, systems, processes, and team. No vendor agenda. No internal politics. Just an honest picture of where you stand and what needs attention.</p>
+        <ul class="service-item-list">
+          <li>Current-state IT inventory &amp; audit</li>
+          <li>Security &amp; compliance gap analysis</li>
+          <li>System landscape review (fit-for-purpose?)</li>
+          <li>Vendor &amp; contract review</li>
+          <li>Risk identification &amp; prioritisation</li>
+          <li>Peer benchmarking against industry standards</li>
+          <li>Executive-ready findings report</li>
+        </ul>
+      </div>
+
+      <!-- IT Strategy & Roadmap — full 7 bullets -->
+      <div class="service-item">
+        <div class="service-item-icon"><svg width="26" height="26"><use href="#sc-roadmap"/></svg></div>
+        <h3 class="service-item-title">IT Strategy &amp; Roadmap</h3>
+        <p class="service-item-body">Translate your business goals into a concrete, prioritised IT strategy with a multi-year roadmap — covering systems, infrastructure, security, compliance, and capabilities. Built to survive contact with reality.</p>
+        <ul class="service-item-list">
+          <li>Business &amp; IT goal alignment workshops</li>
+          <li>Multi-year IT investment roadmap</li>
+          <li>Build vs buy vs outsource analysis</li>
+          <li>Cloud &amp; infrastructure strategy</li>
+          <li>Digital maturity assessment &amp; targets</li>
+          <li>Regulatory &amp; GxP compliance trajectory</li>
+          <li>Board-level presentation &amp; business case support</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════════════════════ -->
+<section id="about" class="about">
+  <div class="about-inner">
+    <div class="about-grid">
+      <div class="reveal-left">
+        <span class="eyebrow">About MSET</span>
+        <h2 class="section-title">Independent expertise. <em>Real-world results.</em></h2>
+        <p class="section-lede">
+          MSET (Mjukvara som en tjänst) is an independent consultancy based in Skåne, Sweden,
+          operating as Kifarkis Nätsäkerhet. We combine hands-on technical experience with a pragmatic
+          understanding of what it takes to work inside a regulated industry.
+        </p>
+        <p style="color:#445870;line-height:1.65;margin-bottom:0">
+          We work directly with quality, IT, and operations teams to deliver solutions that hold up
+          under regulatory scrutiny — and serve the people using them every day.
+        </p>
+      </div>
+
+      <div class="reveal-right">
+        <div class="about-quote">
+          <span class="quote-mark">"</span>
+          <p class="quote-text">Technology in life science should enable better science — faster, safer, and fully compliant. That's the standard we hold ourselves to on every engagement.</p>
+          <div class="quote-meta">
+            <strong>MSET</strong>
+            Life Science IT &amp; AI<br>
+            Kifarkis Nätsäkerhet · Skåne, Sweden
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full-width credentials row — spans the whole section including under the quote box -->
+    <div class="credentials stagger">
+      <div class="credential">
+        <h4 class="credential-title">GxP &amp; Regulated Environments</h4>
+        <p class="credential-body">Deep, practical experience with GMP, GCP, and GLP environments across pharmaceutical, biotech, and medtech organisations.</p>
+      </div>
+      <div class="credential">
+        <h4 class="credential-title">AI &amp; Emerging Technology</h4>
+        <p class="credential-body">Hands-on expertise deploying AI and ML tools in organisations where compliance is non-negotiable.</p>
+      </div>
+      <div class="credential">
+        <h4 class="credential-title">Independent &amp; Vendor-Neutral</h4>
+        <p class="credential-body">We recommend what's right for your situation — not what earns a commission. Honest advice, practical solutions.</p>
+      </div>
+      <div class="credential">
+        <h4 class="credential-title">Local Presence, Nordic Reach</h4>
+        <p class="credential-body">Headquartered in southern Sweden, working with clients across the Nordics and wider Europe.</p>
+      </div>
+    </div>
+
+    <!-- Full-width "Who we work with" — life-science anchor + situation-based chips -->
+    <div class="industries">
+      <span class="industries-label">Who we work with</span>
+      <p class="industries-intro">Life-science IT is our home — pharma, biotech, medtech, CRO/CMO, diagnostics, gene therapy. The same principles apply wherever compliance, audit trails, and system validation matter.</p>
+      <span class="industries-subhead">We're at our best when you're</span>
+      <div class="industry-chips">
+        <span class="industry-chip">Deploying AI under GxP</span>
+        <span class="industry-chip">Scaling without a CIO</span>
+        <span class="industry-chip">Audit prep &amp; readiness</span>
+        <span class="industry-chip">Legacy system modernisation</span>
+        <span class="industry-chip">M&amp;A IT integration</span>
+        <span class="industry-chip">Building a security culture</span>
+        <span class="industry-chip">NIS2 &amp; ISO 27001 readiness</span>
+        <span class="industry-chip">Validating a new GxP system</span>
+        <span class="industry-chip">Cloud migration with compliance</span>
+        <span class="industry-chip">Phishing programme rollout</span>
+      </div>
+    </div>
+
+    <!-- By the numbers — replace "15+" with your actual years of experience -->
+    <div class="about-numbers stagger">
+      <div class="num-card">
+        <p class="num-label">Experience</p>
+        <p class="num-val"><em>15<span class="plus">+</span></em></p>
+        <p class="num-caption">Years in regulated IT &amp; life-science consulting.</p>
+      </div>
+      <div class="num-card">
+        <p class="num-label">Industries</p>
+        <p class="num-val"><em>6</em></p>
+        <p class="num-caption">Pharma, biotech, medtech, CRO/CMO, diagnostics, gene therapy.</p>
+      </div>
+      <div class="num-card">
+        <p class="num-label">Frameworks</p>
+        <p class="num-val"><em>8<span class="plus">+</span></em></p>
+        <p class="num-caption">GAMP 5 · Part 11 · Annex 11 · ISO 27001 · NIS2 · ISO 14971 · GMP · GCP.</p>
+      </div>
+      <div class="num-card">
+        <p class="num-label">Independence</p>
+        <p class="num-val"><em>100<span class="plus">%</span></em></p>
+        <p class="num-caption">Vendor-neutral advice. We partner where it serves you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════════════════════ -->
+<section id="contact" class="contact">
+  <div class="contact-inner">
+
+    <div class="contact-info reveal-left">
+      <span class="eyebrow dark">Get in touch</span>
+      <h2 class="section-title">Let's talk about your <em>next project.</em></h2>
+      <p class="section-lede">
+        Whether you're planning a system validation, exploring AI possibilities, need an interim IT leader,
+        or want an expert second opinion — we'd love to hear from you.
+      </p>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg width="20" height="20" fill="none"><path d="M10 2a6 6 0 0 0-6 6c0 5 6 10 6 10s6-5 6-10a6 6 0 0 0-6-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="8" r="2" fill="currentColor"/></svg>
+        </div>
+        <div>
+          <p class="contact-detail-label">Location</p>
+          <p class="contact-detail-value">Skåne, Sweden</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg width="20" height="20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 6l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div>
+          <p class="contact-detail-label">Email</p>
+          <p class="contact-detail-value">info@mset.se</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg width="20" height="20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h16M10 2a12 12 0 0 1 0 16M10 2a12 12 0 0 0 0 16" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+        </div>
+        <div>
+          <p class="contact-detail-label">Web</p>
+          <p class="contact-detail-value">www.mset.se</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formspree endpoint — MSET contact form -->
+    <form class="contact-form reveal-right" id="contactForm" action="https://formspree.io/f/xwvalvkj" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First name</label>
+          <input type="text" id="fname" name="first_name" placeholder="Anna" required>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last name</label>
+          <input type="text" id="lname" name="last_name" placeholder="Lindqvist" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="anna@company.com" required>
+      </div>
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" placeholder="Pharma">
+      </div>
+      <div class="form-group">
+        <label for="topic">I'm interested in</label>
+        <select id="topic" name="interest" required>
+          <option value="">Select a service area...</option>
+          <option value="GxP Systems &amp; Validation">GxP Systems &amp; Validation</option>
+          <option value="AI Strategy &amp; Implementation">AI Strategy &amp; Implementation</option>
+          <option value="IT Security">IT Security</option>
+          <option value="Security Awareness Training">Security Awareness Training</option>
+          <option value="Network &amp; WiFi">Network &amp; WiFi</option>
+          <option value="IT Strategy &amp; Leadership">IT Strategy &amp; Leadership</option>
+          <option value="Interim IT Director">Interim IT Director</option>
+          <option value="Independent IT Assessment">Independent IT Assessment</option>
+          <option value="Something else">Something else</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" placeholder="Tell us a little about your project or challenge..." required></textarea>
+      </div>
+      <button type="submit" class="form-submit">
+        Send message
+        <svg width="14" height="14"><use href="#arrow"/></svg>
+      </button>
+      <p class="form-note">
+        We reply within one business day. Your details are used only to respond to your enquiry.
+      </p>
+    </form>
+    <div class="form-success" id="formSuccess" hidden>
+      <svg viewBox="0 0 32 32" width="48" height="48" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="#7EC389" stroke-width="2"/>
+        <path d="M10 16.5 L14 20.5 L22 12" fill="none" stroke="#7EC389" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Message received.</h3>
+      <p>Thanks — we'll reply within one business day. If it's urgent, email <a href="mailto:info@mset.se">info@mset.se</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" role="img" aria-label="MSET — Kifarkis Nätsäkerhet">
+          <svg class="mark" aria-hidden="true"><use href="#logo-vault-dark"/></svg>
+          <span class="wordmark">MSET<span class="dot"></span></span>
+        </div>
+        <p>Life-science IT &amp; AI consulting. Independent, regulated-industry-native, based in Skåne.</p>
+        <span class="tag">Säkerhet som en tjänst</span>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">GxP Systems</a></li>
+          <li><a href="#ai">AI Consulting</a></li>
+          <li><a href="#security">IT Security</a></li>
+          <li><a href="sat.html">Security Awareness Training</a></li>
+          <li><a href="#strategy">IT Strategy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About MSET</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="mailto:info@mset.se">info@mset.se</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
+      <span>All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating footer — slim persistent bar, slides in after scrolling 300px -->
+<div class="floating-footer" id="floatingFooter" aria-hidden="true">
+  <div class="ff-inner">
+    <a href="#" class="ff-brand" aria-label="Back to top">
+      <svg aria-hidden="true"><use href="#logo-vault-dark"/></svg>
+      <span class="wordmark">MSET<span class="dot"></span></span>
+    </a>
+    <a href="#" class="ff-action" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+      Back to top
+    </a>
+  </div>
+</div>
+
+<!-- Privacy notice — shown once until dismissed, stored in localStorage -->
+<div class="privacy-notice" id="privacyNotice" role="status" aria-live="polite">
+  <p>
+    We store and handle your contact-form details only to reply to you. No tracking cookies, no analytics profiling.
+    See our <a href="privacy.html">privacy policy</a> for the full picture.
+  </p>
+  <div class="privacy-notice-actions">
+    <button class="privacy-notice-dismiss" id="privacyNoticeDismiss" type="button">Got it</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════════════════ -->
+<script>
+(function(){
+  // Nav scroll effect
+  var nav = document.getElementById('siteNav');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive:true });
+
+  // Mobile menu
+  var burger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if(burger && mobileMenu){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var href = this.getAttribute('href');
+      if(href === '#' || href === '') return;
+      var target = document.querySelector(href);
+      if(target){
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Scroll reveals
+  var opts = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, opts);
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger').forEach(function(el){
+    obs.observe(el);
+  });
+
+  // Animated threat meter bars
+  var threatMeter = document.getElementById('threatMeter');
+  if(threatMeter){
+    var threatObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.querySelectorAll('.threat-bar').forEach(function(bar){
+            var pct = bar.getAttribute('data-pct');
+            setTimeout(function(){ bar.style.width = pct + '%'; }, 150);
+          });
+          threatObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    threatObs.observe(threatMeter);
+  }
+
+  // Animated interim roadmap bars
+  var interim = document.getElementById('interimVisual');
+  if(interim){
+    var interimObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.querySelectorAll('.roadmap-bar-inner').forEach(function(bar, i){
+            var w = bar.getAttribute('data-w');
+            setTimeout(function(){ bar.style.width = w + '%'; }, 150 + (i * 200));
+          });
+          interimObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    interimObs.observe(interim);
+  }
+
+  // Floating footer — slim bar that slides in after 300px scroll and hides when the real footer is in view
+  var floatingFooter = document.getElementById('floatingFooter');
+  var realFooter = document.querySelector('footer');
+  if(floatingFooter){
+    var footerInView = false;
+    if(realFooter && 'IntersectionObserver' in window){
+      var ffIo = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ footerInView = e.isIntersecting; updateFloatingFooter(); });
+      }, { rootMargin: '0px 0px 0px 0px', threshold: 0 });
+      ffIo.observe(realFooter);
+    }
+    function updateFloatingFooter(){
+      var scrolledEnough = window.scrollY > 300;
+      if(scrolledEnough && !footerInView){
+        floatingFooter.classList.add('visible');
+        floatingFooter.classList.remove('hidden');
+        floatingFooter.setAttribute('aria-hidden','false');
+      } else {
+        floatingFooter.classList.remove('visible');
+        floatingFooter.classList.add('hidden');
+        floatingFooter.setAttribute('aria-hidden','true');
+      }
+    }
+    window.addEventListener('scroll', updateFloatingFooter, { passive:true });
+    updateFloatingFooter();
+  }
+
+  // Contact form — async submission to Formspree with inline success message.
+  // If JS fails or is disabled, the native HTML POST still works as fallback.
+  var form = document.getElementById('contactForm');
+  var successEl = document.getElementById('formSuccess');
+  if(form && successEl && window.fetch){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var submitBtn = form.querySelector('.form-submit');
+      var originalLabel = submitBtn.innerHTML;
+
+      // Remove any previous error message
+      var prevError = form.querySelector('.form-error');
+      if(prevError) prevError.remove();
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending…';
+      submitBtn.classList.remove('error-state');
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if(res.ok){
+          form.hidden = true;
+          successEl.hidden = false;
+          successEl.scrollIntoView({ behavior:'smooth', block:'center' });
+        } else {
+          res.json().then(function(data){
+            var msg = (data && data.errors && data.errors.map(function(e){return e.message}).join(', ')) ||
+                      'Something went wrong. Please try again, or email info@mset.se directly.';
+            showError(msg);
+          }).catch(function(){
+            showError('Something went wrong. Please try again, or email info@mset.se directly.');
+          });
+        }
+      }).catch(function(){
+        showError('Network error. Please try again, or email info@mset.se directly.');
+      });
+
+      function showError(msg){
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalLabel;
+        submitBtn.classList.add('error-state');
+        var err = document.createElement('div');
+        err.className = 'form-error';
+        err.textContent = msg;
+        form.appendChild(err);
+      }
+    });
+  }
+  // Privacy notice — shows once, remembers dismissal via localStorage
+  var privacyNotice = document.getElementById('privacyNotice');
+  var privacyDismiss = document.getElementById('privacyNoticeDismiss');
+  if(privacyNotice && privacyDismiss){
+    var DISMISS_KEY = 'mset_privacy_notice_dismissed';
+    try {
+      if(!localStorage.getItem(DISMISS_KEY)){
+        setTimeout(function(){ privacyNotice.classList.add('visible'); }, 1500);
+      }
+    } catch(e){
+      // localStorage may be blocked (private mode) — show notice anyway
+      setTimeout(function(){ privacyNotice.classList.add('visible'); }, 1500);
+    }
+    privacyDismiss.addEventListener('click', function(){
+      privacyNotice.classList.remove('visible');
+      try { localStorage.setItem(DISMISS_KEY, '1'); } catch(e){}
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

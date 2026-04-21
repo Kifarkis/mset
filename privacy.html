@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A1628'/><path d='M16 7 L24 11.5 L24 20.5 L16 25 L8 20.5 L8 11.5 Z' fill='none' stroke='%237EC389' stroke-width='1.8' stroke-linejoin='round'/><circle cx='16' cy='17' r='1.4' fill='%237EC389'/><rect x='15.3' y='17.6' width='1.4' height='2.8' rx='.4' fill='%237EC389'/></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+<link rel="alternate icon" href="favicon.ico">
+<title>Privacy Policy — MSET</title>
+<meta name="description" content="How MSET (Kifarkis Nätsäkerhet) collects, uses and protects your personal data. GDPR-compliant privacy policy for our website and client engagements.">
+<link rel="canonical" href="https://mset.se/privacy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   PRIVACY — base + nav + footer CSS copied verbatim from SAT
+   page (sat.html) for pixel parity.
+═══════════════════════════════════════════════════════════ */
+
+:root{
+  --ink:#0A1628; --ink-2:#0F2338; --ink-3:#16304A; --ink-4:#1E3A55; --ink-5:#2A4A6A;
+  --sage-50:#F5F3ED; --sage-100:#ECE8DB; --sage-200:#D9D3BF;
+  --forest:#1B4A22; --forest-2:#0F3414; --forest-light:#2E6E38;
+  --emerald:#5BA364; --emerald-bright:#7EC389; --emerald-glow:#9BD7A4; --emerald-deep:#3B7D44;
+  --muted:#556a82; --muted-2:#6a7f96;
+  --danger:#C04040; --warn:#D97B2B;
+  --border:rgba(10,22,40,.09); --border-2:rgba(10,22,40,.14);
+  --shadow-sm:0 1px 2px rgba(10,22,40,.04), 0 2px 8px rgba(10,22,40,.04);
+  --shadow-md:0 4px 16px rgba(10,22,40,.06), 0 12px 32px rgba(10,22,40,.05);
+  --shadow-lg:0 10px 40px rgba(10,22,40,.10), 0 30px 60px rgba(10,22,40,.08);
+  --font-display:"Fraunces", Georgia, serif;
+  --font-body:"Plus Jakarta Sans", -apple-system, system-ui, sans-serif;
+  --font-mono:"JetBrains Mono", ui-monospace, monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:var(--sage-50);
+  color:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none}
+
+.wordmark{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.45rem;line-height:.9;letter-spacing:-.01em;color:var(--sage-50);
+}
+
+/* ═════════════════════════════════════ NAV — exact SAT copy ═════════════════════════════════════ */
+.site-nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:#0A1628;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  transition:background .2s;
+}
+.site-nav.scrolled{background:#0A1628}
+.nav-inner{
+  max-width:1280px;margin:0 auto;padding:.85rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.nav-logo{display:flex;align-items:center;gap:.75rem}
+.nav-logo .mark{width:44px;height:38px}
+.nav-logo .wordmark{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.45rem;line-height:.9;letter-spacing:-.01em;color:var(--sage-50);
+}
+.nav-logo .dot{
+  display:inline-block;width:.22em;height:.22em;
+  background:var(--emerald-bright);border-radius:50%;
+  vertical-align:.14em;margin-left:.08em;
+}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
+.nav-links a{
+  font-size:.8rem;font-weight:500;
+  color:rgba(255,255,255,.68);letter-spacing:.005em;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--emerald-bright)}
+.nav-cta{
+  padding:.55rem 1.15rem;background:var(--emerald);
+  color:var(--ink)!important;border-radius:999px;
+  font-weight:600!important;transition:all .2s;
+  font-size:.85rem;
+}
+.nav-cta:hover{background:var(--emerald-bright);transform:translateY(-1px)}
+
+.nav-hamburger{
+  display:none;width:40px;height:40px;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  background:transparent;
+}
+.nav-hamburger span{
+  width:22px;height:2px;background:#fff;border-radius:2px;
+  transition:all .3s ease;
+}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{
+  display:none;position:fixed;top:62px;left:0;right:0;
+  background:rgba(10,22,40,.98);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  z-index:99;padding:1.25rem 1.5rem;
+  flex-direction:column;
+  opacity:0;transform:translateY(-8px);
+  transition:all .25s ease;
+}
+.mobile-menu.open{display:flex;opacity:1;transform:translateY(0)}
+.mobile-menu a{
+  color:rgba(255,255,255,.8);font-size:1rem;font-weight:500;
+  padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);
+}
+.mobile-menu a:last-child{border-bottom:none;margin-top:.5rem}
+.mobile-menu .nav-cta{text-align:center;margin-top:.75rem}
+
+/* ═════════════════════════════════════ POLICY CONTENT ═════════════════════════════════════ */
+.policy{
+  max-width:780px;margin:0 auto;padding:7rem 2rem 6rem;
+}
+.policy a{color:var(--forest);border-bottom:1px solid rgba(27,74,34,.25);transition:color .2s,border-color .2s}
+.policy a:hover{color:var(--emerald);border-bottom-color:var(--emerald)}
+.eyebrow{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--forest);font-weight:500;
+  margin:0 0 1rem;display:block;
+}
+.policy h1{
+  font-family:var(--font-display);font-weight:500;font-size:clamp(2.2rem,4.5vw,3.4rem);
+  line-height:1.05;letter-spacing:-.025em;color:var(--ink);margin:0 0 1rem;
+}
+.policy h1 em{font-style:italic;color:var(--forest)}
+.updated{
+  color:var(--muted);font-size:.88rem;margin:0 0 3rem;
+  padding-bottom:1.5rem;border-bottom:1px solid var(--border);
+}
+.policy h2{
+  font-family:var(--font-display);font-weight:500;font-size:1.55rem;
+  letter-spacing:-.015em;color:var(--ink);margin:2.75rem 0 .75rem;
+}
+.policy h3{
+  font-family:var(--font-body);font-weight:600;font-size:1.05rem;
+  color:var(--ink);margin:1.5rem 0 .5rem;
+}
+.policy p{color:#2d3d52;margin:0 0 1rem;font-size:1rem}
+.policy ul{padding-left:1.2rem;margin:0 0 1rem}
+.policy li{margin-bottom:.4rem;color:#2d3d52}
+.policy strong{color:var(--ink);font-weight:600}
+.lede{font-size:1.08rem;color:#445870;margin-bottom:2rem}
+.callout{
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  padding:1.25rem 1.4rem;margin:1.5rem 0;
+}
+.callout p:last-child{margin-bottom:0}
+.contact-box{
+  background:var(--ink);color:var(--sage-50);padding:2rem;border-radius:14px;margin:2.5rem 0;
+}
+.contact-box h2{color:var(--sage-50);margin-top:0}
+.contact-box p{color:rgba(245,243,237,.8)}
+.contact-box a{color:var(--emerald-bright);border-bottom:1px solid rgba(126,195,137,.4)}
+.contact-box a:hover{color:#fff;border-color:#fff}
+
+/* ═════════════════════════════════════ FOOTER — exact SAT copy ═════════════════════════════════════ */
+footer{
+  background:var(--ink-2);color:rgba(255,255,255,.55);
+  padding:2.25rem 0 1.5rem;border-top:1px solid rgba(255,255,255,.06);
+}
+.footer-inner{max-width:1280px;margin:0 auto;padding:0 2rem}
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.5rem;
+  padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:1.25rem;
+}
+.footer-brand .nav-logo{margin-bottom:.9rem}
+.footer-brand p{font-size:.82rem;line-height:1.55;color:rgba(255,255,255,.5);max-width:340px;margin:0}
+.footer-brand .tag{
+  font-family:var(--font-mono);font-size:.65rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;margin-top:.6rem;display:block;
+}
+.footer-col h4{
+  font-family:var(--font-mono);font-size:.64rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin:0 0 .75rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin:0;padding:0}
+.footer-col a{font-size:.82rem;color:rgba(255,255,255,.55);transition:color .2s}
+.footer-col a:hover{color:var(--emerald-bright)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;
+  font-size:.72rem;color:rgba(255,255,255,.4);
+}
+.footer-bottom a{color:rgba(255,255,255,.55);transition:color .2s}
+.footer-bottom a:hover{color:var(--emerald-bright)}
+.footer-bottom .back-link{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:rgba(255,255,255,.65);font-weight:500;
+}
+.footer-bottom .back-link:hover{color:var(--emerald-bright)}
+.footer-bottom .back-link svg{width:11px;height:11px}
+
+/* Responsive breakpoints — same as SAT */
+@media (max-width:980px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}
+  .footer-brand{grid-column:1 / -1}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:.75rem}
+  .nav-hamburger{display:flex}
+  .nav-links{display:none}
+  .nav-inner{padding:.75rem 1.25rem}
+}
+@media (max-width:600px){
+  .policy{padding:6rem 1.25rem 4rem}
+  .footer-grid{grid-template-columns:1fr;gap:1.75rem}
+  .footer-brand{grid-column:auto}
+  .footer-bottom{font-size:.7rem}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo-vault-dark" viewBox="0 0 72 62">
+      <g stroke="#F5F3ED" stroke-width=".5" stroke-dasharray="1.2 1.4" fill="none" opacity=".25">
+        <line x1="34" y1="2" x2="34" y2="30"/>
+        <line x1="58" y1="44" x2="34" y2="30"/>
+        <line x1="10" y1="44" x2="34" y2="30"/>
+      </g>
+      <g stroke="#F5F3ED" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M34,2 L58,16 L34,30 L10,16 Z"/>
+        <path d="M34,30 L58,16 L58,44 L34,58 Z"/>
+        <path d="M34,30 L10,16 L10,44 L34,58 Z"/>
+      </g>
+      <path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#F5F3ED"/>
+      <path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#C9C3B1"/>
+      <path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#A8A290"/>
+      <circle cx="40" cy="29" r="1.2" fill="#1B4A22"/>
+      <rect x="39.5" y="29.5" width="1" height="2.5" rx=".3" fill="#1B4A22"/>
+      <path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"/>
+      <path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"/>
+      <path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"/>
+      <line x1="58.7" y1="12" x2="58" y2="16" stroke="#9BD7A4" stroke-width=".6" stroke-dasharray=".8 .8" opacity=".7"/>
+    </symbol>
+  </defs>
+</svg>
+
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="MSET — back to main site">
+      <svg class="mark" aria-hidden="true"><use href="#logo-vault-dark"/></svg>
+      <span class="wordmark">MSET<span class="dot"></span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">GxP</a></li>
+      <li><a href="index.html#ai">AI</a></li>
+      <li><a href="index.html#security">Security</a></li>
+      <li><a href="index.html#strategy">Strategy</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Book a call</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#services">GxP</a>
+  <a href="index.html#ai">AI</a>
+  <a href="index.html#security">Security</a>
+  <a href="index.html#strategy">Strategy</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#contact" class="nav-cta">Book a call</a>
+</div>
+
+<main class="policy">
+  <span class="eyebrow">Legal</span>
+  <h1>Privacy <em>Policy</em></h1>
+  <p class="updated">Last updated: 21 April 2026</p>
+
+  <p class="lede">
+    This policy explains how MSET (operating as Kifarkis Nätsäkerhet) collects, uses, and protects
+    personal data. It applies to our website <strong>mset.se</strong>, our client engagements, and any
+    other interaction where we process personal information.
+  </p>
+
+  <p>
+    We take data protection seriously — as a consultancy whose work centres on IT security and
+    regulated-industry compliance, we hold ourselves to the same standards we advise our clients on.
+    This policy is written to be readable; if anything is unclear, contact us and we will explain.
+  </p>
+
+  <h2>1. Who we are</h2>
+  <p>
+    <strong>Data controller:</strong><br>
+    Kifarkis Nätsäkerhet<br>
+    Skåne, Sweden<br>
+    Email: <a href="mailto:info@mset.se">info@mset.se</a>
+  </p>
+  <p>
+    We trade under the name <strong>MSET</strong>. Kifarkis Nätsäkerhet is the legal entity responsible
+    for the processing of your personal data under the EU General Data Protection Regulation (GDPR) and
+    the Swedish Data Protection Act.
+  </p>
+
+  <h2>2. What personal data we collect</h2>
+
+  <h3>2.1 Contact form submissions</h3>
+  <p>When you submit the contact form on our website, we collect:</p>
+  <ul>
+    <li>Your first name and last name</li>
+    <li>Your email address</li>
+    <li>Your company name (optional)</li>
+    <li>The service area you are interested in</li>
+    <li>The content of your message</li>
+  </ul>
+  <p>
+    We do not collect any other data through the contact form. We do not require you to create an
+    account, and we do not ask for information beyond what is needed to reply to your enquiry.
+  </p>
+
+  <h3>2.2 Client engagements</h3>
+  <p>
+    During consulting engagements, we may process personal data belonging to you, your employees, or
+    your clients — depending on the nature of the work. For most engagements, this processing is
+    governed by a separate <strong>Data Processing Agreement</strong> (DPA) that we sign with you, in
+    which we act as a <strong>data processor</strong> on your behalf. We only process such data for
+    the purposes defined in that agreement.
+  </p>
+
+  <h3>2.3 Website analytics</h3>
+  <p>
+    We use Google Search Console to understand how our site performs in search. Search Console
+    does not place cookies on your browser and does not track individual visitors. It reports
+    aggregated search performance to us only.
+  </p>
+  <p>
+    We do <strong>not</strong> use Google Analytics, Facebook Pixel, or any other behavioural tracking
+    on this website. No cookies are set for analytics or advertising.
+  </p>
+
+  <h3>2.4 Technical data</h3>
+  <p>
+    Our web host automatically records standard server logs for security and operational purposes
+    (IP address, browser type, pages visited, timestamp). These logs are retained for a maximum of
+    30 days and are not used to profile visitors.
+  </p>
+
+  <h2>3. Legal basis for processing</h2>
+  <p>Under Article 6 of the GDPR, our processing relies on one of the following legal bases:</p>
+  <ul>
+    <li><strong>Your consent</strong> (Art. 6(1)(a)) — when you voluntarily submit the contact form.</li>
+    <li><strong>Performance of a contract</strong> (Art. 6(1)(b)) — when processing is necessary to deliver a consulting engagement you have commissioned.</li>
+    <li><strong>Legitimate interest</strong> (Art. 6(1)(f)) — for server security logs, fraud prevention, and protection of our systems.</li>
+    <li><strong>Legal obligation</strong> (Art. 6(1)(c)) — where required by Swedish or EU law (for example, accounting and tax records).</li>
+  </ul>
+
+  <h2>4. How we use your data</h2>
+  <p>We use personal data only for the purposes for which it was collected. Specifically:</p>
+  <ul>
+    <li>To respond to enquiries submitted through our contact form</li>
+    <li>To deliver consulting services we have agreed to provide</li>
+    <li>To invoice clients and meet accounting obligations</li>
+    <li>To comply with regulatory and legal requirements applicable to us</li>
+  </ul>
+  <p>
+    We do <strong>not</strong> sell personal data. We do <strong>not</strong> use personal data for
+    marketing purposes unrelated to your original enquiry. We do <strong>not</strong> enrich your
+    data from third-party sources.
+  </p>
+
+  <h2>5. Third-party processors</h2>
+  <p>We share personal data only with the following processors, and only to the extent strictly necessary:</p>
+
+  <div class="callout">
+    <h3 style="margin-top:0">Formspree (contact form handling)</h3>
+    <p>
+      Contact form submissions are processed by Formspree Inc. (USA). Formspree stores submissions
+      and forwards them to our email address. Formspree is contractually bound as a data processor
+      under the EU Standard Contractual Clauses. Retention on the Formspree platform is governed by
+      their own policy; we routinely delete submissions from Formspree after we have actioned them.
+    </p>
+  </div>
+
+  <div class="callout">
+    <h3 style="margin-top:0">Email provider</h3>
+    <p>
+      Replies to enquiries are sent from our Swedish email provider. Copies of correspondence are
+      stored in our mailbox for as long as the business relationship is active, plus any retention
+      period required by applicable accounting law.
+    </p>
+  </div>
+
+  <div class="callout">
+    <h3 style="margin-top:0">Google Search Console</h3>
+    <p>
+      Google LLC (USA) provides aggregated search-performance data to us via Search Console. No
+      identifiable personal data about individual site visitors is transferred to us through this
+      service.
+    </p>
+  </div>
+
+  <h2>6. International transfers</h2>
+  <p>
+    Where personal data is transferred outside the European Economic Area (for example, to US-based
+    providers such as Formspree or Google), we rely on the EU Standard Contractual Clauses, adequacy
+    decisions where available, and additional safeguards as required by Chapter V of the GDPR.
+  </p>
+
+  <h2>7. How long we keep data</h2>
+  <ul>
+    <li><strong>Contact form submissions:</strong> up to 12 months after last contact, unless a client relationship has started.</li>
+    <li><strong>Client engagement data:</strong> for the duration of the engagement plus 7 years (to comply with Swedish accounting legislation), or as specified in the Data Processing Agreement.</li>
+    <li><strong>Server logs:</strong> 30 days.</li>
+    <li><strong>Newsletter or marketing lists:</strong> not applicable — we do not operate any.</li>
+  </ul>
+
+  <h2>8. Your rights under GDPR</h2>
+  <p>You have the following rights regarding your personal data:</p>
+  <ul>
+    <li><strong>Right of access</strong> — request a copy of the personal data we hold about you.</li>
+    <li><strong>Right to rectification</strong> — ask us to correct inaccurate or incomplete data.</li>
+    <li><strong>Right to erasure</strong> ("right to be forgotten") — ask us to delete your data, subject to legal retention obligations.</li>
+    <li><strong>Right to restrict processing</strong> — ask us to limit how we use your data.</li>
+    <li><strong>Right to data portability</strong> — receive your data in a structured, machine-readable format.</li>
+    <li><strong>Right to object</strong> — object to processing based on legitimate interest.</li>
+    <li><strong>Right to withdraw consent</strong> — withdraw any consent you have previously given.</li>
+    <li><strong>Right to lodge a complaint</strong> — complain to the Swedish data protection authority (<a href="https://www.imy.se" rel="noopener">Integritetsskyddsmyndigheten</a>) if you believe your rights have been violated.</li>
+  </ul>
+  <p>
+    To exercise any of these rights, email us at <a href="mailto:info@mset.se">info@mset.se</a>. We
+    will respond within 30 days. There is no charge for a first request.
+  </p>
+
+  <h2>9. Data security</h2>
+  <p>
+    We take appropriate technical and organisational measures to protect personal data against
+    unauthorised access, accidental loss, alteration, or disclosure. These include encryption in
+    transit (HTTPS), access controls on systems holding personal data, and staff awareness training.
+    Our approach aligns with ISO/IEC 27001 principles.
+  </p>
+  <p>
+    If a data breach affects your personal data and presents a risk to your rights, we will notify
+    the Swedish data protection authority within 72 hours, and notify affected individuals
+    without undue delay where the risk is high.
+  </p>
+
+  <h2>10. Cookies</h2>
+  <p>
+    This website does not set tracking cookies. No cookies are used for analytics, advertising, or
+    behavioural profiling. Your browser may retain a small preference value if you use our language
+    switcher or dismiss the privacy notice banner — these are strictly functional and do not
+    identify you.
+  </p>
+
+  <h2>11. Children's data</h2>
+  <p>
+    Our services and website are intended for business use. We do not knowingly collect personal
+    data from children under 16. If you believe a child has submitted data through our website,
+    please contact us and we will delete it.
+  </p>
+
+  <h2>12. Changes to this policy</h2>
+  <p>
+    We may update this policy from time to time. The "Last updated" date at the top reflects the
+    most recent substantive change. For material changes affecting how we process your data, we
+    will notify active clients by email.
+  </p>
+
+  <div class="contact-box">
+    <h2>Questions about your data?</h2>
+    <p>
+      We are happy to explain anything in this policy or help you exercise your rights. Email us at
+      <a href="mailto:info@mset.se">info@mset.se</a> with "Privacy enquiry" in the subject line and
+      we will respond within one business day.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" role="img" aria-label="MSET — Kifarkis Nätsäkerhet">
+          <svg class="mark" aria-hidden="true"><use href="#logo-vault-dark"/></svg>
+          <span class="wordmark">MSET<span class="dot"></span></span>
+        </div>
+        <p>Life-science IT &amp; AI consulting. Independent, regulated-industry-native, based in Skåne.</p>
+        <span class="tag">Säkerhet som en tjänst</span>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">GxP Systems</a></li>
+          <li><a href="index.html#ai">AI Consulting</a></li>
+          <li><a href="index.html#security">IT Security</a></li>
+          <li><a href="sat.html">Security Awareness Training</a></li>
+          <li><a href="index.html#strategy">IT Strategy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About MSET</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="mailto:info@mset.se">info@mset.se</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
+      <span>All rights reserved.</span>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to MSET
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.getElementById('siteNav');
+  if(nav){
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 60) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    }, { passive:true });
+  }
+  var burger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if(burger && mobileMenu){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

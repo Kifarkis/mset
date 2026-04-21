@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A1628'/><path d='M16 7 L24 11.5 L24 20.5 L16 25 L8 20.5 L8 11.5 Z' fill='none' stroke='%237EC389' stroke-width='1.8' stroke-linejoin='round'/><circle cx='16' cy='17' r='1.4' fill='%237EC389'/><rect x='15.3' y='17.6' width='1.4' height='2.8' rx='.4' fill='%237EC389'/></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+<link rel="alternate icon" href="favicon.ico">
+<title>Security Awareness Training — MSET</title>
+<meta name="description" content="Security Awareness Training for pharma, biotech and medtech. Phishing simulations, role-based e-learning, GxP-specific modules, compliance reporting. Built by MSET in Skåne.">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://mset.se/sat">
+
+<!-- Open Graph / Facebook / LinkedIn / Slack social preview -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mset.se/sat">
+<meta property="og:title" content="Security Awareness Training — MSET">
+<meta property="og:description" content="Your people are your perimeter. Role-based SAT programme for regulated industries — phishing simulations, GxP-specific modules, framework-aligned evidence.">
+<meta property="og:image" content="https://mset.se/og-image-sat.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Security Awareness Training by MSET — Your people are your perimeter.">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="MSET">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Security Awareness Training — MSET">
+<meta name="twitter:description" content="Role-based SAT programme for regulated industries. Phishing simulations, GxP modules, framework-aligned evidence.">
+<meta name="twitter:image" content="https://mset.se/og-image-sat.png">
+<meta name="twitter:image:alt" content="Security Awareness Training by MSET">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ═════════════════════════════════════════════════════
+   DESIGN TOKENS — shared with main site
+   ═════════════════════════════════════════════════════ */
+:root{
+  --ink:#0A1628; --ink-2:#0F2338; --ink-3:#16304A; --ink-4:#1E3A55; --ink-5:#2A4A6A;
+  --sage-50:#F5F3ED; --sage-100:#ECE8DB; --sage-200:#D9D3BF;
+  --forest:#1B4A22; --forest-2:#0F3414; --forest-light:#2E6E38;
+  --emerald:#5BA364; --emerald-bright:#7EC389; --emerald-glow:#9BD7A4; --emerald-deep:#3B7D44;
+  --muted:#556a82; --muted-2:#6a7f96;
+  --danger:#C04040; --warn:#D97B2B;
+  --border:rgba(10,22,40,.09); --border-2:rgba(10,22,40,.14);
+  --shadow-sm:0 1px 2px rgba(10,22,40,.04), 0 2px 8px rgba(10,22,40,.04);
+  --shadow-md:0 4px 16px rgba(10,22,40,.06), 0 12px 32px rgba(10,22,40,.05);
+  --shadow-lg:0 10px 40px rgba(10,22,40,.10), 0 30px 60px rgba(10,22,40,.08);
+  --font-display:"Fraunces", Georgia, serif;
+  --font-body:"Plus Jakarta Sans", -apple-system, system-ui, sans-serif;
+  --font-mono:"JetBrains Mono", ui-monospace, monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:var(--sage-50);
+  color:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none}
+
+/* Typography */
+.display{font-family:var(--font-display);font-weight:500;letter-spacing:-.02em;line-height:1.05}
+.display em{font-style:italic;color:var(--forest)}
+.mono{font-family:var(--font-mono)}
+.eyebrow{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--forest);font-weight:500;
+}
+
+/* Wordmark + logo — identical to main site */
+.nav-logo{display:flex;align-items:center;gap:.75rem}
+.nav-logo .mark{width:44px;height:38px}
+.nav-logo .wordmark{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.45rem;line-height:.9;letter-spacing:-.01em;color:var(--sage-50);
+}
+.nav-logo .dot{
+  display:inline-block;width:.22em;height:.22em;
+  background:var(--emerald-bright);border-radius:50%;
+  vertical-align:.14em;margin-left:.08em;
+}
+
+/* ═════════════════════════════════════════════════════
+   NAV — identical spec to main site
+   ═════════════════════════════════════════════════════ */
+.site-nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:#0A1628;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  transition:background .2s;
+}
+.site-nav.scrolled{background:#0A1628}
+.nav-inner{
+  max-width:1280px;margin:0 auto;padding:.85rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
+.nav-links a{
+  font-size:.8rem;font-weight:500;
+  color:rgba(255,255,255,.68);letter-spacing:.005em;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--emerald-bright)}
+.nav-cta{
+  padding:.55rem 1.15rem;background:var(--emerald);
+  color:var(--ink)!important;border-radius:999px;
+  font-weight:600!important;transition:all .2s;
+  font-size:.85rem;
+}
+.nav-cta:hover{background:var(--emerald-bright);transform:translateY(-1px)}
+
+.nav-hamburger{
+  display:none;width:40px;height:40px;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  background:transparent;
+}
+.nav-hamburger span{
+  width:22px;height:2px;background:#fff;border-radius:2px;
+  transition:all .3s ease;
+}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{
+  display:none;position:fixed;top:62px;left:0;right:0;
+  background:rgba(10,22,40,.98);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  z-index:99;padding:1.25rem 1.5rem;
+  flex-direction:column;
+  opacity:0;transform:translateY(-8px);
+  transition:all .25s ease;
+}
+.mobile-menu.open{display:flex;opacity:1;transform:translateY(0)}
+.mobile-menu a{
+  color:rgba(255,255,255,.8);font-size:1rem;font-weight:500;
+  padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);
+}
+.mobile-menu a:last-child{border-bottom:none;margin-top:.5rem}
+.mobile-menu .nav-cta{text-align:center;margin-top:.75rem}
+/* ═════════════════════════════════════════════════════
+   HERO
+   ═════════════════════════════════════════════════════ */
+.hero{
+  background:linear-gradient(180deg, var(--sage-50) 0%, var(--sage-100) 100%);
+  padding:8rem 2rem 6rem;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(91,163,100,.06), transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(27,74,34,.05), transparent 45%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1240px;margin:0 auto;position:relative;
+  display:grid;grid-template-columns:1.3fr 1fr;gap:4rem;align-items:center;
+}
+.hero-eyebrow{display:flex;align-items:center;gap:.6rem;margin-bottom:1.2rem}
+.hero-eyebrow::before{
+  content:"";width:28px;height:1px;background:var(--emerald);
+}
+.hero h1{
+  font-size:clamp(2.4rem, 5vw, 4.2rem);
+  margin:0 0 1.4rem;font-weight:500;
+}
+.hero-lede{
+  font-size:1.15rem;color:var(--ink-4);line-height:1.55;
+  max-width:560px;margin:0 0 2rem;
+}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--ink);color:var(--sage-50);
+  padding:.95rem 1.6rem;border-radius:10px;font-weight:600;font-size:.95rem;
+  transition:transform .2s, box-shadow .2s;
+}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(10,22,40,.18)}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:var(--ink);padding:.95rem 1.6rem;border-radius:10px;
+  font-weight:600;font-size:.95rem;
+  border:1.5px solid var(--border-2);background:rgba(255,255,255,.3);
+  transition:border-color .2s, background .2s;
+}
+.btn-secondary:hover{border-color:var(--ink);background:rgba(255,255,255,.6)}
+
+/* Hero visual — perimeter graphic */
+.hero-visual{
+  position:relative;aspect-ratio:1;max-width:440px;justify-self:end;width:100%;
+}
+/* ─── Hero visual: animated "The Catch" mail scene ─── */
+.mail-scene{
+  width:100%;height:100%;position:relative;
+  display:flex;flex-direction:column;justify-content:center;gap:1.1rem;
+}
+.mail-window{
+  background:#fff;
+  border:1px solid var(--border-2);
+  border-radius:14px;
+  box-shadow:0 20px 50px rgba(10,22,40,.15), 0 4px 14px rgba(10,22,40,.06);
+  position:relative;
+}
+.mail-bar{
+  background:var(--sage-100);
+  padding:.7rem 1rem;
+  display:flex;align-items:center;gap:.9rem;
+  border-bottom:1px solid var(--border);
+  border-radius:14px 14px 0 0;
+}
+.mail-dots{display:flex;gap:.35rem}
+.md-dot{width:10px;height:10px;border-radius:50%;display:block}
+.mail-title{
+  font-family:var(--font-mono);font-size:.7rem;color:var(--muted);
+  letter-spacing:.04em;
+}
+.mail-body{padding:.15rem 0;border-radius:0 0 14px 14px;overflow:hidden}
+.mail-row{
+  display:grid;grid-template-columns:38px 1fr auto;
+  gap:.85rem;align-items:center;
+  padding:.75rem 1rem;
+  border-bottom:1px solid var(--border);
+  position:relative;
+  border-left:3px solid transparent;
+  padding-left:calc(1rem - 3px);
+}
+.mail-row:last-child{border-bottom:none}
+.mr-avatar{
+  width:38px;height:38px;border-radius:9px;
+  background:var(--sage-100);color:var(--muted);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-mono);font-size:.72rem;font-weight:600;
+}
+.mr-from{font-size:.72rem;color:var(--muted);font-weight:500;margin-bottom:.15rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mr-subject{font-size:.84rem;color:var(--ink);font-weight:600;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mr-time{font-family:var(--font-mono);font-size:.68rem;color:var(--muted-2)}
+
+/* Phish row — animated states over 8s loop */
+.m-row-phish{animation:m-row-cycle 8s ease-in-out infinite}
+.m-avatar-phish{animation:m-avatar-cycle 8s ease-in-out infinite}
+.m-spoofed{padding:0 3px;border-radius:3px;animation:m-spoof-cycle 8s ease-in-out infinite}
+
+@keyframes m-row-cycle{
+  0%,12%{background:#fff;border-left-color:transparent}
+  17%,37%{background:rgba(192,64,64,.05);border-left-color:var(--danger)}
+  47%,82%{background:rgba(91,163,100,.07);border-left-color:var(--emerald)}
+  90%,100%{background:#fff;border-left-color:transparent}
+}
+@keyframes m-avatar-cycle{
+  0%,12%{background:var(--sage-100);color:var(--ink-4)}
+  17%,37%{background:var(--danger);color:#fff}
+  47%,82%{background:var(--emerald);color:#fff}
+  90%,100%{background:var(--sage-100);color:var(--ink-4)}
+}
+@keyframes m-spoof-cycle{
+  0%,12%{background:transparent;color:inherit}
+  17%,37%{background:rgba(192,64,64,.14);color:var(--danger)}
+  47%,100%{background:transparent;color:inherit}
+}
+
+/* Report button — appears during alert, fades at click */
+.mr-report-btn{
+  position:absolute;right:56px;top:50%;
+  transform:translateY(-50%) scale(.85);
+  background:var(--ink);color:#fff;
+  border:none;border-radius:6px;
+  padding:.34rem .7rem;
+  font-family:var(--font-body);font-size:.68rem;font-weight:600;
+  letter-spacing:.02em;cursor:default;
+  opacity:0;
+  box-shadow:0 2px 10px rgba(10,22,40,.22);
+  animation:m-report-btn 8s ease-in-out infinite;
+}
+@keyframes m-report-btn{
+  0%,22%{opacity:0;transform:translateY(-50%) scale(.85)}
+  27%,41%{opacity:1;transform:translateY(-50%) scale(1)}
+  43%{opacity:1;transform:translateY(-50%) scale(.82)}
+  45%{opacity:1;transform:translateY(-50%) scale(1)}
+  48%{opacity:0;transform:translateY(-50%) scale(.85)}
+  100%{opacity:0}
+}
+
+/* "Caught" pill — appears after click, holds, fades */
+.mr-caught{
+  position:absolute;right:56px;top:50%;
+  transform:translateY(-50%) scale(.85);
+  display:inline-flex;align-items:center;gap:.3rem;
+  background:var(--emerald);color:#fff;
+  padding:.32rem .65rem;border-radius:20px;
+  font-family:var(--font-mono);font-size:.62rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  opacity:0;white-space:nowrap;
+  box-shadow:0 2px 10px rgba(91,163,100,.4);
+  animation:m-caught 8s ease-in-out infinite;
+}
+@keyframes m-caught{
+  0%,48%{opacity:0;transform:translateY(-50%) scale(.85)}
+  51%{opacity:1;transform:translateY(-50%) scale(1.12)}
+  55%{opacity:1;transform:translateY(-50%) scale(1)}
+  82%{opacity:1;transform:translateY(-50%) scale(1)}
+  90%,100%{opacity:0;transform:translateY(-50%) scale(.85)}
+}
+
+/* Cursor — glides in from outside, clicks, glides out */
+.m-cursor{
+  position:absolute;
+  width:22px;height:22px;
+  right:-14px;bottom:-24px;
+  pointer-events:none;z-index:5;
+  opacity:0;
+  filter:drop-shadow(0 2px 4px rgba(10,22,40,.35));
+  animation:m-cursor-cycle 8s ease-in-out infinite;
+}
+@keyframes m-cursor-cycle{
+  0%,22%{opacity:0;right:-14px;bottom:-24px}
+  26%{opacity:1;right:-14px;bottom:-24px;transform:scale(1)}
+  40%{opacity:1;right:66px;bottom:50%;transform:scale(1)}
+  43%{opacity:1;right:66px;bottom:50%;transform:scale(.82)}
+  46%{opacity:1;right:66px;bottom:50%;transform:scale(1)}
+  62%{opacity:1;right:66px;bottom:50%;transform:scale(1)}
+  70%{opacity:0;right:-14px;bottom:-24px;transform:scale(1)}
+  100%{opacity:0}
+}
+
+/* Stat ticker below — appears after catch, shows before/after drop */
+.m-stat{
+  background:#fff;
+  border:1px solid var(--border-2);
+  border-radius:12px;
+  padding:.85rem 1.1rem;
+  display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;
+  box-shadow:0 6px 20px rgba(10,22,40,.06);
+  font-family:var(--font-body);font-size:.85rem;
+  opacity:0;
+  animation:m-stat-appear 8s ease-in-out infinite;
+}
+@keyframes m-stat-appear{
+  0%,52%{opacity:0;transform:translateY(10px)}
+  58%{opacity:1;transform:translateY(0)}
+  82%{opacity:1;transform:translateY(0)}
+  90%,100%{opacity:0;transform:translateY(-4px)}
+}
+.m-stat-label{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;
+}
+.m-stat-before{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.2rem;color:var(--muted-2);
+  text-decoration:line-through;text-decoration-color:rgba(192,64,64,.55);
+  text-decoration-thickness:2px;
+}
+.m-stat-before .m-pct{font-size:.75em;margin-left:.05em}
+.m-stat-arrow{color:var(--emerald);font-weight:700;font-size:1rem}
+.m-stat-after{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.55rem;color:var(--forest);letter-spacing:-.02em;
+  opacity:0;
+  animation:m-stat-after 8s ease-in-out infinite;
+}
+.m-stat-after .m-pct{font-size:.72em;margin-left:.05em}
+@keyframes m-stat-after{
+  0%,57%{opacity:0;transform:translateY(4px)}
+  65%{opacity:1;transform:translateY(0)}
+  82%{opacity:1}
+  90%,100%{opacity:0}
+}
+.m-stat-caption{
+  font-size:.7rem;color:var(--muted);flex-basis:100%;margin-top:.15rem;
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce){
+  .m-row-phish,.m-avatar-phish,.m-spoofed,
+  .mr-report-btn,.mr-caught,.m-cursor,
+  .m-stat,.m-stat-after{animation:none}
+  .m-row-phish{background:rgba(91,163,100,.07);border-left-color:var(--emerald)}
+  .m-avatar-phish{background:var(--emerald);color:#fff}
+  .mr-caught{opacity:1;transform:translateY(-50%) scale(1)}
+  .m-stat,.m-stat-after{opacity:1;transform:none}
+}
+
+/* ═════════════════════════════════════════════════════
+   SECTIONS (shared rhythm)
+   ═════════════════════════════════════════════════════ */
+section{padding:6rem 2rem;position:relative}
+.section-inner{max-width:1240px;margin:0 auto}
+.section-head{max-width:780px;margin-bottom:3.5rem}
+.section-head h2{
+  font-family:var(--font-display);font-weight:500;font-size:clamp(1.8rem, 3.2vw, 2.8rem);
+  margin:.8rem 0 1rem;letter-spacing:-.02em;line-height:1.15;
+}
+.section-head h2 em{font-style:italic;color:var(--forest)}
+.section-head p{color:var(--muted);font-size:1.05rem;margin:0;max-width:640px}
+
+/* ═════════════════════════════════════════════════════
+   PROBLEM — stat tiles
+   ═════════════════════════════════════════════════════ */
+.problem{background:var(--sage-50)}
+.stat-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:3rem;
+}
+.stat-tile{
+  background:#fff;border:1px solid var(--border);border-radius:16px;
+  padding:2rem 1.8rem;position:relative;overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:transform .3s, box-shadow .3s;
+}
+.stat-tile:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.stat-tile::before{
+  content:"";position:absolute;top:0;left:0;width:40%;height:3px;
+  background:linear-gradient(90deg, var(--emerald), var(--emerald-bright));
+  border-radius:0 2px 0 0;
+}
+.stat-num{
+  font-family:var(--font-display);font-weight:500;letter-spacing:-.03em;
+  font-size:3.2rem;line-height:1;color:var(--ink);margin-bottom:.6rem;
+}
+.stat-num em{font-style:italic;color:var(--forest)}
+.stat-num .unit{font-size:1.6rem;color:var(--muted);margin-left:.15em}
+.stat-label{
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--forest);font-weight:500;margin-bottom:.5rem;
+}
+.stat-body{color:var(--muted);font-size:.92rem;line-height:1.55;margin:0}
+
+.problem-copy{
+  background:var(--ink);color:var(--sage-50);border-radius:20px;
+  padding:3rem 3rem;display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;
+  position:relative;overflow:hidden;
+}
+.problem-copy::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 90% 50%, rgba(91,163,100,.12), transparent 55%);
+  pointer-events:none;
+}
+.problem-copy .qmark{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:6rem;line-height:.7;color:var(--emerald-bright);opacity:.5;
+  position:relative;
+}
+.problem-copy p{
+  margin:0;font-family:var(--font-display);font-style:italic;font-weight:400;
+  font-size:1.4rem;line-height:1.4;letter-spacing:-.01em;position:relative;
+}
+.problem-copy p em{color:var(--emerald-bright);font-style:italic;font-weight:500}
+
+/* ═════════════════════════════════════════════════════
+   WHY GENERIC SAT FAILS
+   ═════════════════════════════════════════════════════ */
+.why-fail{background:var(--sage-100)}
+.fail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.fail-card{
+  background:#fff;border:1px solid var(--border);border-radius:14px;
+  padding:1.8rem;padding-top:3.4rem;position:relative;
+  transition:transform .3s, box-shadow .3s;
+}
+.fail-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.fail-card .fail-icon{width:44px;height:44px;margin-bottom:1.1rem}
+.fail-card h3{
+  font-family:var(--font-display);font-weight:500;font-size:1.2rem;
+  margin:0 0 .6rem;letter-spacing:-.01em;
+}
+.fail-card p{color:var(--muted);font-size:.92rem;line-height:1.55;margin:0}
+.fail-card .card-badge{
+  position:absolute;top:1.2rem;right:1.2rem;
+  display:inline-flex;align-items:center;gap:.35rem;
+  padding:.3rem .65rem;border-radius:20px;
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:600;
+}
+.fail-card .card-badge.included{
+  background:rgba(91,163,100,.12);color:var(--forest-light);
+}
+.fail-card .card-badge.addon{
+  background:rgba(27,74,34,.06);color:var(--forest-light);
+  border:1px dashed rgba(91,163,100,.5);
+}
+.fail-card .card-badge svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:2.5}
+
+/* ═════════════════════════════════════════════════════
+   PROGRAMME — 5 components
+   ═════════════════════════════════════════════════════ */
+.programme{background:var(--sage-50)}
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.comp{
+  background:#fff;border:1px solid var(--border);border-radius:16px;
+  padding:2rem;display:grid;grid-template-columns:56px 1fr;gap:1.4rem;
+  transition:transform .3s, box-shadow .3s, border-color .3s;
+}
+.comp:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--border-2)}
+.comp.full{grid-column:1 / -1}
+.comp .comp-icon{width:56px;height:56px}
+.comp h3{
+  font-family:var(--font-display);font-weight:500;font-size:1.35rem;
+  margin:0 0 .5rem;letter-spacing:-.01em;
+}
+.comp-body{color:var(--muted);font-size:.95rem;line-height:1.55;margin:0 0 1rem}
+.comp-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:.5rem .9rem}
+.comp.full .comp-list{grid-template-columns:1fr 1fr 1fr}
+.comp-list li{
+  font-size:.86rem;color:var(--ink-4);padding-left:1.3rem;position:relative;line-height:1.45;
+}
+.comp-list li::before{
+  content:"";position:absolute;left:0;top:.45rem;
+  width:10px;height:6px;border-left:1.5px solid var(--emerald);
+  border-bottom:1.5px solid var(--emerald);transform:rotate(-45deg);
+}
+
+/* ═════════════════════════════════════════════════════
+   ROLLOUT — 4 phases
+   ═════════════════════════════════════════════════════ */
+.rollout{background:var(--ink);color:var(--sage-50);position:relative}
+.rollout::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(var(--ink-2) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ink-2) 1px, transparent 1px);
+  background-size:40px 40px;opacity:.3;pointer-events:none;
+}
+.rollout .section-head h2{color:var(--sage-50)}
+.rollout .section-head h2 em{color:var(--emerald-bright)}
+.rollout .section-head p{color:rgba(245,243,237,.6)}
+.rollout .eyebrow{color:var(--emerald-bright)}
+.phase-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;
+  position:relative;
+}
+.phase{
+  background:var(--ink-2);border:1px solid var(--ink-4);border-radius:14px;
+  padding:1.8rem 1.6rem;position:relative;
+  display:flex;flex-direction:column;
+}
+.phase p{
+  font-size:.88rem;color:rgba(245,243,237,.65);line-height:1.55;margin:0 0 1rem;
+  flex-grow:1;
+}
+.phase-num{
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.18em;
+  color:var(--emerald-bright);font-weight:500;margin-bottom:.8rem;
+}
+.phase-num-row{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:.6rem;margin-bottom:.8rem;flex-wrap:wrap;
+}
+.phase-num-row .phase-num{margin-bottom:0}
+.phase-custom-pill{
+  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:500;color:var(--emerald-glow);
+  padding:.28rem .55rem;border-radius:4px;
+  background:rgba(91,163,100,.1);border:1px solid rgba(91,163,100,.3);
+  white-space:nowrap;
+}
+.phase h3{
+  font-family:var(--font-display);font-weight:500;font-size:1.2rem;
+  margin:0 0 .6rem;color:var(--sage-50);
+}
+.phase-dur{
+  font-family:var(--font-mono);font-size:.72rem;color:var(--emerald-glow);
+  padding-top:.9rem;border-top:1px solid var(--ink-4);display:flex;justify-content:space-between;
+}
+.phase-dur .dur-label{color:rgba(245,243,237,.4)}
+
+.phase-bars{
+  margin-top:3rem;background:var(--ink-2);border:1px solid var(--ink-4);
+  border-radius:14px;padding:2rem;
+}
+.phase-bars-title{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;
+  color:var(--emerald-bright);font-weight:500;margin:0 0 1.5rem;
+}
+.bar-row{
+  display:grid;grid-template-columns:110px 1fr;gap:1rem;align-items:center;
+  margin-bottom:.8rem;
+}
+.bar-row:last-child{margin-bottom:0}
+.bar-label{
+  font-family:var(--font-mono);font-size:.75rem;color:rgba(245,243,237,.7);
+}
+.bar-outer{
+  height:28px;background:var(--ink);border-radius:6px;position:relative;
+}
+.bar-inner{
+  height:100%;display:flex;align-items:center;padding:0 .9rem;
+  font-size:.78rem;color:#fff;font-weight:500;
+  width:0;transition:width 1s cubic-bezier(.2,.6,.3,1);
+  border-radius:6px;white-space:nowrap;overflow:visible;
+}
+.bar-inner.b1,.bar-inner.b2{
+  /* Narrow bars — label may extend beyond colored fill */
+  color:rgba(245,243,237,.92);
+}
+.bar-inner.b1{background:linear-gradient(90deg, #1D4B7A 0%, #2A5A8A 100%)}
+.bar-inner.b2{background:linear-gradient(90deg, #1B4A22 0%, #2E6E38 100%)}
+.bar-inner.b3{background:linear-gradient(90deg, #3B7D44 0%, #5BA364 100%)}
+.bar-inner.b4{background:linear-gradient(90deg, #5BA364 0%, #7EC389 100%);color:var(--ink)}
+
+/* ═════════════════════════════════════════════════════
+   REPORTING DEMO
+   ═════════════════════════════════════════════════════ */
+.reporting{background:var(--sage-50)}
+.report-card{
+  background:#fff;border:1px solid var(--border);border-radius:18px;
+  box-shadow:var(--shadow-md);overflow:hidden;
+  display:grid;grid-template-columns:1fr 1.3fr;
+}
+.report-meta{padding:2.5rem;background:var(--sage-100);display:flex;flex-direction:column;gap:1.4rem}
+.report-meta h3{
+  font-family:var(--font-display);font-weight:500;font-size:1.4rem;
+  margin:0;letter-spacing:-.01em;
+}
+.report-meta p{color:var(--muted);font-size:.92rem;margin:0;line-height:1.55}
+.report-meta ul{list-style:none;padding:0;margin:0}
+.report-meta li{
+  font-size:.86rem;color:var(--ink-4);padding-left:1.3rem;position:relative;
+  line-height:1.5;margin-bottom:.5rem;
+}
+.report-meta li::before{
+  content:"";position:absolute;left:0;top:.42rem;
+  width:10px;height:6px;border-left:1.5px solid var(--emerald);
+  border-bottom:1.5px solid var(--emerald);transform:rotate(-45deg);
+}
+.report-demo{padding:2rem;background:#fff}
+.report-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:1rem;border-bottom:1px solid var(--border);margin-bottom:1.5rem;
+}
+.report-head h4{
+  font-family:var(--font-display);font-weight:500;font-size:1.15rem;margin:0;
+}
+.report-head .filter-pill{
+  font-family:var(--font-mono);font-size:.7rem;
+  padding:.3rem .7rem;background:var(--sage-100);border-radius:20px;color:var(--muted);
+}
+
+.dept-row{
+  display:grid;grid-template-columns:130px 1fr 60px 50px;
+  gap:1rem;align-items:center;padding:.7rem 0;
+  border-bottom:1px dashed var(--border);font-size:.82rem;
+}
+.dept-row:last-of-type{border-bottom:none}
+.dept-name{font-weight:500}
+.dept-bar{height:8px;background:var(--sage-100);border-radius:4px;overflow:hidden;position:relative}
+.dept-bar-fill{
+  height:100%;border-radius:4px;
+  width:0;transition:width 1.2s cubic-bezier(.2,.6,.3,1);
+}
+.dept-bar-fill.low{background:var(--emerald)}
+.dept-bar-fill.mid{background:var(--warn)}
+.dept-bar-fill.high{background:var(--danger)}
+.dept-pct{font-family:var(--font-mono);color:var(--muted);font-size:.78rem;text-align:right}
+.dept-trend{font-family:var(--font-mono);font-size:.75rem;text-align:right}
+.dept-trend.up{color:var(--emerald-deep)}
+.dept-trend.down{color:var(--danger)}
+
+.report-footer{
+  margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--border);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
+}
+.kpi{text-align:center}
+.kpi-num{
+  font-family:var(--font-display);font-weight:500;font-size:1.6rem;
+  color:var(--ink);letter-spacing:-.02em;line-height:1;margin-bottom:.3rem;
+}
+.kpi-num em{font-style:italic;color:var(--forest)}
+.kpi-label{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);
+}
+
+/* ═════════════════════════════════════════════════════
+   FAQ
+   ═════════════════════════════════════════════════════ */
+.faq{background:var(--sage-100)}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  margin-bottom:.8rem;overflow:hidden;
+  transition:border-color .2s;
+}
+.faq-item[open]{border-color:var(--border-2);box-shadow:var(--shadow-sm)}
+.faq-item summary{
+  padding:1.2rem 1.5rem;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  font-weight:600;font-size:.98rem;color:var(--ink);
+  list-style:none;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"";width:10px;height:10px;
+  border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
+  transform:rotate(45deg);flex-shrink:0;margin-top:-4px;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after{transform:rotate(-135deg);margin-top:2px}
+.faq-body{
+  padding:0 1.5rem 1.3rem;color:var(--muted);font-size:.93rem;line-height:1.6;
+}
+.faq-body p{margin:0 0 .7rem}
+.faq-body p:last-child{margin-bottom:0}
+
+/* ═════════════════════════════════════════════════════
+   FINAL CTA
+   ═════════════════════════════════════════════════════ */
+.final-cta{
+  background:var(--ink);color:var(--sage-50);padding:5rem 2rem;
+  position:relative;overflow:hidden;
+}
+.final-cta::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(91,163,100,.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(27,74,34,.12), transparent 45%);
+  pointer-events:none;
+}
+.final-cta-inner{
+  max-width:900px;margin:0 auto;text-align:center;position:relative;
+}
+.final-cta h2{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(2rem, 4vw, 3.2rem);margin:0 0 1.2rem;letter-spacing:-.02em;
+}
+.final-cta h2 em{font-style:italic;color:var(--emerald-bright)}
+.final-cta p{
+  font-size:1.1rem;color:rgba(245,243,237,.75);margin:0 0 2rem;
+  max-width:600px;margin-left:auto;margin-right:auto;
+}
+.final-cta .btn-primary{
+  background:var(--emerald);color:var(--ink);border:1px solid var(--emerald-bright);
+}
+.final-cta .btn-primary:hover{background:var(--emerald-bright)}
+.final-cta .btn-secondary{
+  color:var(--sage-50);border-color:rgba(245,243,237,.3);background:transparent;
+}
+.final-cta .btn-secondary:hover{border-color:var(--sage-50);background:rgba(245,243,237,.08)}
+
+/* ═════════════════════════════════════════════════════
+   FOOTER
+   ═════════════════════════════════════════════════════ */
+footer{
+  background:var(--ink-2);color:rgba(255,255,255,.55);
+  padding:2.25rem 0 1.5rem;border-top:1px solid rgba(255,255,255,.06);
+}
+.footer-inner{max-width:1280px;margin:0 auto;padding:0 2rem}
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.5rem;
+  padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:1.25rem;
+}
+.footer-brand .nav-logo{margin-bottom:.9rem}
+.footer-brand p{font-size:.82rem;line-height:1.55;color:rgba(255,255,255,.5);max-width:340px;margin:0}
+.footer-brand .tag{
+  font-family:var(--font-mono);font-size:.65rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;margin-top:.6rem;display:block;
+}
+.footer-col h4{
+  font-family:var(--font-mono);font-size:.64rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin:0 0 .75rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin:0;padding:0}
+.footer-col a{font-size:.82rem;color:rgba(255,255,255,.55);transition:color .2s}
+.footer-col a:hover{color:var(--emerald-bright)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;
+  font-size:.72rem;color:rgba(255,255,255,.4);
+}
+.footer-bottom a{color:rgba(255,255,255,.55);transition:color .2s}
+.footer-bottom a:hover{color:var(--emerald-bright)}
+.footer-bottom .back-link{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:rgba(255,255,255,.65);font-weight:500;
+}
+.footer-bottom .back-link:hover{color:var(--emerald-bright)}
+.footer-bottom .back-link svg{width:11px;height:11px}
+
+/* Floating footer — slim persistent bar that slides in from bottom after scroll */
+.floating-footer{
+  position:fixed;bottom:0;left:0;right:0;z-index:90;
+  background:#0A1628;
+  border-top:1px solid rgba(255,255,255,.08);
+  transform:translateY(100%);
+  transition:transform .35s ease;
+  pointer-events:none;
+}
+.floating-footer.visible{transform:translateY(0);pointer-events:auto}
+.floating-footer.hidden{transform:translateY(100%);pointer-events:none}
+.ff-inner{
+  max-width:1280px;margin:0 auto;padding:.55rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+}
+.ff-brand{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:rgba(255,255,255,.85);transition:color .2s;
+}
+.ff-brand:hover{color:var(--emerald-bright)}
+.ff-brand svg.mark{width:26px;height:22px}
+.ff-brand .wordmark{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.05rem;line-height:1;letter-spacing:-.005em;color:inherit;
+}
+.ff-brand .wordmark .dot{
+  display:inline-block;width:.22em;height:.22em;
+  background:var(--emerald-bright);border-radius:50%;
+  vertical-align:.14em;margin-left:.08em;
+}
+.ff-action{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:rgba(255,255,255,.7);font-size:.78rem;font-weight:500;
+  padding:.4rem .8rem;border-radius:999px;
+  transition:color .2s, background .2s;
+}
+.ff-action:hover{color:var(--emerald-bright);background:rgba(255,255,255,.04)}
+.ff-action svg{width:12px;height:12px}
+
+/* Privacy notice — small one-time notice, dismissible */
+.privacy-notice{
+  position:fixed;bottom:1rem;left:1rem;right:1rem;z-index:95;
+  max-width:480px;margin-left:auto;
+  background:#0A1628;color:rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.1);border-radius:12px;
+  padding:1rem 1.15rem;box-shadow:0 10px 40px rgba(0,0,0,.4);
+  font-size:.82rem;line-height:1.55;
+  opacity:0;transform:translateY(20px);pointer-events:none;
+  transition:opacity .35s ease, transform .35s ease;
+}
+.privacy-notice.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.privacy-notice p{margin:0 0 .75rem;color:rgba(255,255,255,.82)}
+.privacy-notice a{color:var(--emerald-bright)}
+.privacy-notice-actions{display:flex;gap:.5rem;align-items:center;justify-content:flex-end}
+.privacy-notice-dismiss{
+  padding:.4rem .9rem;background:var(--emerald);color:var(--ink);
+  border-radius:999px;font-size:.78rem;font-weight:600;
+  cursor:pointer;transition:background .2s;border:none;
+}
+.privacy-notice-dismiss:hover{background:var(--emerald-bright)}
+@media (max-width:560px){
+  .privacy-notice{left:.75rem;right:.75rem;bottom:.75rem;padding:.85rem 1rem;font-size:.78rem}
+}
+
+/* ═════════════════════════════════════════════════════
+   REVEAL ANIMATIONS
+   ═════════════════════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s, transform .7s}
+.reveal.in{opacity:1;transform:translateY(0)}
+.stagger > *{opacity:0;transform:translateY(20px);transition:opacity .6s, transform .6s}
+.stagger.in > *{opacity:1;transform:translateY(0)}
+.stagger.in > *:nth-child(1){transition-delay:0s}
+.stagger.in > *:nth-child(2){transition-delay:.08s}
+.stagger.in > *:nth-child(3){transition-delay:.16s}
+.stagger.in > *:nth-child(4){transition-delay:.24s}
+.stagger.in > *:nth-child(5){transition-delay:.32s}
+
+/* ═════════════════════════════════════════════════════
+   RESPONSIVE
+   ═════════════════════════════════════════════════════ */
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .hero-visual{max-width:340px;justify-self:start}
+  .stat-grid,.fail-grid,.phase-grid{grid-template-columns:1fr}
+  .comp-grid{grid-template-columns:1fr}
+  .comp.full .comp-list{grid-template-columns:1fr 1fr}
+  .report-card{grid-template-columns:1fr}
+  .report-meta{padding:2rem}
+  .problem-copy{grid-template-columns:1fr;padding:2.2rem;gap:1rem}
+  .problem-copy .qmark{font-size:4rem}
+  .problem-copy p{font-size:1.15rem}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}
+  .footer-brand{grid-column:1 / -1}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:.75rem}
+  section{padding:4.5rem 1.5rem}
+  .hero{padding:7rem 1.5rem 4.5rem}
+  .dept-row{grid-template-columns:110px 1fr 50px;gap:.8rem}
+  .dept-trend{display:none}
+  .report-footer{grid-template-columns:repeat(3,1fr);gap:.8rem}
+  .kpi-num{font-size:1.35rem}
+  .bar-row{grid-template-columns:90px 1fr;gap:.8rem}
+  /* Hamburger menu behaviour — identical to main site at same breakpoint */
+  .nav-hamburger{display:flex}
+  .nav-links{display:none}
+  .nav-inner{padding:.75rem 1.25rem}
+}
+@media (max-width:600px){
+  .hero h1{font-size:2.1rem}
+  .section-head h2{font-size:1.75rem}
+  .comp{grid-template-columns:1fr;gap:1rem}
+  .comp-list{grid-template-columns:1fr !important}
+  .hero{padding:6rem 1.25rem 4rem}
+  .footer-grid{grid-template-columns:1fr;gap:1.75rem}
+  .footer-brand{grid-column:auto}
+  .footer-bottom{font-size:.7rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ═════════ SVG SYMBOLS ═════════ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+
+    <!-- Vault logo (dark on light) -->
+    <symbol id="logo-vault" viewBox="0 0 72 62">
+      <g stroke="#0A1628" stroke-width=".5" stroke-dasharray="1.2 1.4" fill="none" opacity=".3">
+        <line x1="34" y1="2" x2="34" y2="30"/>
+        <line x1="58" y1="44" x2="34" y2="30"/>
+        <line x1="10" y1="44" x2="34" y2="30"/>
+      </g>
+      <g stroke="#0A1628" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M34,2 L58,16 L34,30 L10,16 Z"/>
+        <path d="M34,30 L58,16 L58,44 L34,58 Z"/>
+        <path d="M34,30 L10,16 L10,44 L34,58 Z"/>
+      </g>
+      <path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#2A4A6A"/>
+      <path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#16304A"/>
+      <path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#0A1628"/>
+      <circle cx="40" cy="29" r="1.2" fill="#7EC389"/>
+      <rect x="39.5" y="29.5" width="1" height="2.5" rx=".3" fill="#7EC389"/>
+      <path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"/>
+      <path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"/>
+      <path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"/>
+      <line x1="58.7" y1="12" x2="58" y2="16" stroke="#7EC389" stroke-width=".6" stroke-dasharray=".8 .8" opacity=".6"/>
+    </symbol>
+
+    <!-- Vault logo (light on dark) -->
+    <symbol id="logo-vault-dark" viewBox="0 0 72 62">
+      <g stroke="#F5F3ED" stroke-width=".5" stroke-dasharray="1.2 1.4" fill="none" opacity=".25">
+        <line x1="34" y1="2" x2="34" y2="30"/>
+        <line x1="58" y1="44" x2="34" y2="30"/>
+        <line x1="10" y1="44" x2="34" y2="30"/>
+      </g>
+      <g stroke="#F5F3ED" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M34,2 L58,16 L34,30 L10,16 Z"/>
+        <path d="M34,30 L58,16 L58,44 L34,58 Z"/>
+        <path d="M34,30 L10,16 L10,44 L34,58 Z"/>
+      </g>
+      <path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#F5F3ED"/>
+      <path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#C9C3B1"/>
+      <path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#A8A290"/>
+      <circle cx="40" cy="29" r="1.2" fill="#1B4A22"/>
+      <rect x="39.5" y="29.5" width="1" height="2.5" rx=".3" fill="#1B4A22"/>
+      <path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"/>
+      <path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"/>
+      <path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"/>
+      <line x1="58.7" y1="12" x2="58" y2="16" stroke="#9BD7A4" stroke-width=".6" stroke-dasharray=".8 .8" opacity=".7"/>
+    </symbol>
+
+    <!-- Layered-programme section icons -->
+    <symbol id="fail-gxp" viewBox="0 0 48 48">
+      <rect x="6" y="10" width="28" height="32" rx="2" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6"/>
+      <line x1="11" y1="18" x2="29" y2="18" stroke="#0A1628" stroke-width="1.2"/>
+      <line x1="11" y1="23" x2="24" y2="23" stroke="#0A1628" stroke-width="1.2"/>
+      <line x1="11" y1="28" x2="26" y2="28" stroke="#0A1628" stroke-width="1.2"/>
+      <rect x="28" y="28" width="14" height="8" rx="1.5" fill="#5BA364" stroke="#1B4A22" stroke-width="1.4"/>
+      <text x="35" y="34" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="5.5" font-weight="600" fill="#0A1628">GxP</text>
+    </symbol>
+
+    <symbol id="fail-audit" viewBox="0 0 48 48">
+      <rect x="7" y="7" width="28" height="34" rx="2" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6"/>
+      <path d="M11 15 L 15 15 M 11 21 L 19 21 M 11 27 L 17 27 M 11 33 L 21 33" stroke="#0A1628" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="35" cy="35" r="8" fill="#fff" stroke="#C04040" stroke-width="1.6"/>
+      <line x1="35" y1="30.5" x2="35" y2="35" stroke="#C04040" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="35" cy="38.2" r="1" fill="#C04040"/>
+    </symbol>
+
+    <symbol id="fail-regs" viewBox="0 0 48 48">
+      <rect x="8" y="10" width="32" height="22" rx="2" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6"/>
+      <line x1="14" y1="17" x2="28" y2="17" stroke="#0A1628" stroke-width="1.2"/>
+      <line x1="14" y1="22" x2="34" y2="22" stroke="#0A1628" stroke-width="1.2"/>
+      <line x1="14" y1="27" x2="24" y2="27" stroke="#0A1628" stroke-width="1.2"/>
+      <rect x="6" y="35" width="11" height="5" rx="1" fill="#5BA364"/>
+      <text x="11.5" y="39" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="4" font-weight="700" fill="#fff">NIS2</text>
+      <rect x="18" y="35" width="10" height="5" rx="1" fill="#1B4A22"/>
+      <text x="23" y="39" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="4" font-weight="700" fill="#fff">ISO</text>
+      <rect x="29" y="35" width="12" height="5" rx="1" fill="#0A1628"/>
+      <text x="35" y="39" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="3.8" font-weight="700" fill="#7EC389">Part 11</text>
+    </symbol>
+
+    <!-- Programme component icons -->
+    <symbol id="comp-phish" viewBox="0 0 56 56">
+      <rect x="7" y="15" width="32" height="22" rx="2" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6"/>
+      <path d="M7 17 L 23 29 L 39 17" stroke="#0A1628" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+      <path d="M38 10 Q 46 10 46 20 Q 46 30 38 32" stroke="#C04040" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M38 32 L 36 30 M 38 32 L 40 30" stroke="#C04040" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <circle cx="38" cy="10" r="2.5" fill="#C04040"/>
+      <circle cx="46" cy="44" r="5" fill="#5BA364"/>
+      <path d="M44 44 L 45.5 45.5 L 48 43" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="comp-elearning" viewBox="0 0 56 56">
+      <path d="M6 20 L 28 10 L 50 20 L 28 30 Z" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M14 24 L 14 36 Q 28 42 42 36 L 42 24" fill="none" stroke="#0A1628" stroke-width="1.4" stroke-linejoin="round"/>
+      <line x1="50" y1="20" x2="50" y2="32" stroke="#1B4A22" stroke-width="1.4" stroke-linecap="round"/>
+      <circle cx="50" cy="34" r="1.4" fill="#1B4A22"/>
+      <circle cx="28" cy="20" r="6" fill="#5BA364"/>
+      <path d="M25 20 L 27 22 L 31 18" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="comp-gxp-mod" viewBox="0 0 56 56">
+      <rect x="9" y="8" width="30" height="38" rx="2" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6"/>
+      <rect x="13" y="14" width="12" height="4" rx="1" fill="#5BA364"/>
+      <text x="19" y="17.3" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="3.3" font-weight="700" fill="#fff">IQ</text>
+      <rect x="27" y="14" width="12" height="4" rx="1" fill="#5BA364"/>
+      <text x="33" y="17.3" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="3.3" font-weight="700" fill="#fff">OQ</text>
+      <rect x="13" y="20" width="12" height="4" rx="1" fill="#5BA364"/>
+      <text x="19" y="23.3" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="3.3" font-weight="700" fill="#fff">PQ</text>
+      <rect x="27" y="20" width="12" height="4" rx="1" fill="#1B4A22"/>
+      <text x="33" y="23.3" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="3.3" font-weight="700" fill="#fff">CSV</text>
+      <line x1="13" y1="29" x2="35" y2="29" stroke="#0A1628" stroke-width="1.1"/>
+      <line x1="13" y1="33" x2="31" y2="33" stroke="#0A1628" stroke-width="1.1"/>
+      <line x1="13" y1="37" x2="33" y2="37" stroke="#0A1628" stroke-width="1.1"/>
+      <circle cx="42" cy="42" r="7" fill="#5BA364" stroke="#1B4A22" stroke-width="1.4"/>
+      <path d="M39 42 L 41 44 L 45 40" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="comp-report" viewBox="0 0 56 56">
+      <rect x="7" y="10" width="42" height="28" rx="2" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6"/>
+      <line x1="7" y1="16" x2="49" y2="16" stroke="#0A1628" stroke-width="1.2"/>
+      <circle cx="11" cy="13" r=".9" fill="#0A1628"/>
+      <circle cx="14" cy="13" r=".9" fill="#0A1628"/>
+      <rect x="12" y="22" width="5" height="11" fill="#5BA364"/>
+      <rect x="20" y="26" width="5" height="7" fill="#5BA364"/>
+      <rect x="28" y="20" width="5" height="13" fill="#1B4A22"/>
+      <rect x="36" y="24" width="5" height="9" fill="#5BA364"/>
+      <path d="M12 28 L 20 25 L 28 23 L 36 27 L 44 22" stroke="#C04040" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="28" r="1.3" fill="#C04040"/>
+      <circle cx="20" cy="25" r="1.3" fill="#C04040"/>
+      <circle cx="28" cy="23" r="1.3" fill="#C04040"/>
+      <circle cx="36" cy="27" r="1.3" fill="#C04040"/>
+      <circle cx="44" cy="22" r="1.3" fill="#C04040"/>
+      <rect x="10" y="42" width="36" height="8" rx="1" fill="none" stroke="#0A1628" stroke-width="1.3" stroke-dasharray="2 1.5"/>
+      <text x="28" y="47.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="3.6" font-weight="600" fill="#1B4A22">AUDIT-READY</text>
+    </symbol>
+
+    <symbol id="comp-refresh" viewBox="0 0 56 56">
+      <circle cx="28" cy="28" r="18" fill="none" stroke="#0A1628" stroke-width="1.6" stroke-dasharray="2.5 2"/>
+      <circle cx="28" cy="28" r="11" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.4"/>
+      <path d="M28 21 L 28 28 L 33 31" stroke="#1B4A22" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M44 12 L 46 8 L 50 10" stroke="#5BA364" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M46 8 Q 42 4 36 4" stroke="#5BA364" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M12 44 L 10 48 L 6 46" stroke="#5BA364" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10 48 Q 14 52 20 52" stroke="#5BA364" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <circle cx="46" cy="42" r="3.5" fill="#5BA364"/>
+      <path d="M44.5 42 L 46 43.5 L 48 41" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<!-- ═════════ NAV — identical to main site ═════════ -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="MSET — back to main site">
+      <svg class="mark" aria-hidden="true"><use href="#logo-vault-dark"/></svg>
+      <span class="wordmark">MSET<span class="dot"></span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">GxP</a></li>
+      <li><a href="index.html#ai">AI</a></li>
+      <li><a href="index.html#security">Security</a></li>
+      <li><a href="index.html#strategy">Strategy</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Book a call</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#services">GxP</a>
+  <a href="index.html#ai">AI</a>
+  <a href="index.html#security">Security</a>
+  <a href="index.html#strategy">Strategy</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#contact" class="nav-cta">Book a call</a>
+</div>
+
+<!-- ═════════ HERO ═════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="reveal">
+      <div class="hero-eyebrow">
+        <span class="eyebrow">Security Awareness Training</span>
+      </div>
+      <h1 class="display">Your people are <em>your perimeter.</em></h1>
+      <p class="hero-lede">Realistic phishing simulations, role-based e-learning and audit-ready reporting — standard for every company, with optional GxP-specific modules for regulated industries.</p>
+      <div class="hero-ctas">
+        <a href="index.html#contact?topic=sat" class="btn-primary">Start a pilot
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#programme" class="btn-secondary">See the programme</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="mail-scene">
+        <div class="mail-window">
+          <div class="mail-bar">
+            <div class="mail-dots">
+              <span class="md-dot" style="background:#FF5F57"></span>
+              <span class="md-dot" style="background:#FEBC2E"></span>
+              <span class="md-dot" style="background:#28C840"></span>
+            </div>
+            <div class="mail-title">Inbox · 3 new</div>
+          </div>
+          <div class="mail-body">
+            <div class="mail-row">
+              <div class="mr-avatar" style="background:#E6EFE8;color:#1B4A22">QA</div>
+              <div>
+                <div class="mr-from">QA Director</div>
+                <div class="mr-subject">Q2 Compliance update — agenda</div>
+              </div>
+              <div class="mr-time">09:42</div>
+            </div>
+            <div class="mail-row m-row-phish">
+              <div class="mr-avatar m-avatar-phish">!</div>
+              <div>
+                <div class="mr-from">system@<span class="m-spoofed">it-portal</span>.com</div>
+                <div class="mr-subject">Urgent: Validate your eQMS access</div>
+              </div>
+              <div class="mr-time">10:03</div>
+              <button class="mr-report-btn" type="button" tabindex="-1" aria-hidden="true">Report</button>
+              <span class="mr-caught" aria-hidden="true">✓ Caught</span>
+            </div>
+            <div class="mail-row">
+              <div class="mr-avatar" style="background:#F3EADB;color:#8B5A2B">OP</div>
+              <div>
+                <div class="mr-from">ops@your-company</div>
+                <div class="mr-subject">Monthly team report</div>
+              </div>
+              <div class="mr-time">10:28</div>
+            </div>
+          </div>
+          <svg class="m-cursor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 2 L4 20 L9 15 L12 22 L15 21 L12 13 L19 13 Z" fill="#0A1628" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="m-stat" aria-hidden="true">
+          <span class="m-stat-label">Dept risk</span>
+          <span class="m-stat-before">52<span class="m-pct">%</span></span>
+          <span class="m-stat-arrow">→</span>
+          <span class="m-stat-after">46<span class="m-pct">%</span></span>
+          <span class="m-stat-caption">after this week's catches</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ PROBLEM ═════════ -->
+<section class="problem">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow">The problem</span>
+      <h2>Firewalls can't stop <em>a curious click.</em></h2>
+      <p>The data is consistent across every industry report: attackers aren't breaking in — they're being invited in, one convincing email at a time.</p>
+    </div>
+    <div class="stat-grid stagger">
+      <div class="stat-tile">
+        <div class="stat-label">Phishing</div>
+        <div class="stat-num"><em>91<span class="unit">%</span></em></div>
+        <p class="stat-body">of successful cyberattacks start with a phishing email.</p>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Baseline click-rate</div>
+        <div class="stat-num"><em>~30<span class="unit">%</span></em></div>
+        <p class="stat-body">Untrained employees click simulated phishing emails about one in three times.</p>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Avg. breach cost</div>
+        <div class="stat-num"><em>$5.06<span class="unit">M</span></em></div>
+        <p class="stat-body">Average cost of a data breach in the pharmaceutical sector.</p>
+      </div>
+    </div>
+    <div class="problem-copy reveal">
+      <div class="qmark">"</div>
+      <p>You can spend <em>millions</em> on firewalls, EDR and zero-trust architecture — and still lose the whole stack when someone in QA clicks the wrong link on a Tuesday afternoon.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ WHY GENERIC SAT FAILS ═════════ -->
+<section class="why-fail">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow">Layered programme</span>
+      <h2>Standard for every company. <em>Specialised when you need it.</em></h2>
+      <p>Our core programme — phishing simulation, role-based e-learning and audit-ready reporting — works for any organisation. For clients in regulated industries, we layer on GxP-specific modules that a generic platform can't offer.</p>
+    </div>
+    <div class="fail-grid stagger">
+      <div class="fail-card">
+        <div class="card-badge included">
+          <svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 8"/></svg>
+          Included
+        </div>
+        <svg class="fail-icon"><use href="#comp-elearning"/></svg>
+        <h3>Standard programme</h3>
+        <p>Every engagement includes the core: realistic phishing simulation, role-based e-learning, and audit-ready reporting. It works for any company — IT, manufacturing, services, professional firms. This is what most clients need.</p>
+      </div>
+      <div class="fail-card">
+        <div class="card-badge addon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Optional add-on
+        </div>
+        <svg class="fail-icon"><use href="#fail-gxp"/></svg>
+        <h3>GxP-Specific Modules</h3>
+        <p>For pharma, biotech and medtech, we layer on modules most platforms don't have: 21 CFR Part 11 in daily work, ALCOA+ data integrity, validated-system login hygiene, and eQMS / LIMS / MES phishing scenarios. Added during curriculum design.</p>
+      </div>
+      <div class="fail-card">
+        <div class="card-badge included">
+          <svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 8"/></svg>
+          Included
+        </div>
+        <svg class="fail-icon"><use href="#fail-regs"/></svg>
+        <h3>Framework-aligned evidence</h3>
+        <p>The quarterly evidence pack maps your programme to ISO/IEC 27001, NIS2, 21 CFR Part 11 and EU Annex 11 — explicitly referenced, not inferred. This is standard for every engagement; critical if you're regulated, still useful if you're not.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ THE PROGRAMME ═════════ -->
+<section class="programme" id="programme">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow">The programme</span>
+      <h2>Five components. <em>One coherent programme.</em></h2>
+      <p>Built and delivered by MSET as a single managed service — not a pile of disconnected tools. One point of accountability, one quarterly report, one audit-ready evidence pack.</p>
+    </div>
+
+    <div class="comp-grid stagger">
+
+      <!-- Full-width: Phishing simulation -->
+      <div class="comp full">
+        <svg class="comp-icon"><use href="#comp-phish"/></svg>
+        <div>
+          <h3>Phishing Simulation Platform</h3>
+          <p class="comp-body">Realistic, controlled phishing campaigns running on our platform — industry-tailored templates, targeted scenarios, and instant teachable moments when users click. We run the campaigns; you see the results.</p>
+          <ul class="comp-list">
+            <li>Life-science-tailored email templates</li>
+            <li>Spear-phishing scenarios by role</li>
+            <li>SMS / vishing simulation options</li>
+            <li>Click &amp; credential-entry tracking</li>
+            <li>Just-in-time teachable moment page</li>
+            <li>Per-user and per-department breakdown</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Role-based e-learning -->
+      <div class="comp">
+        <svg class="comp-icon"><use href="#comp-elearning"/></svg>
+        <div>
+          <h3>Role-Based E-Learning</h3>
+          <p class="comp-body">A modular curriculum delivered through our learning platform, with content and length calibrated to the role — lab, quality, IT, finance, executive.</p>
+          <ul class="comp-list">
+            <li>Quality &amp; QA-specific modules</li>
+            <li>Lab / manufacturing scenarios</li>
+            <li>Executive &amp; finance (wire-fraud, BEC)</li>
+            <li>IT &amp; privileged-access modules</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- GxP-specific modules -->
+      <div class="comp">
+        <svg class="comp-icon"><use href="#comp-gxp-mod"/></svg>
+        <div>
+          <h3>GxP-Specific Modules</h3>
+          <p class="comp-body">The modules generic platforms don't have. Mapped to validated-system workflows and data-integrity expectations in pharma, biotech and medtech.</p>
+          <ul class="comp-list">
+            <li>21 CFR Part 11 in daily work</li>
+            <li>ALCOA+ data integrity</li>
+            <li>Validated-system login hygiene</li>
+            <li>eQMS, LIMS &amp; MES scenarios</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Reporting & audit trail -->
+      <div class="comp">
+        <svg class="comp-icon"><use href="#comp-report"/></svg>
+        <div>
+          <h3>Reporting &amp; Audit Trail</h3>
+          <p class="comp-body">Board-ready and regulator-ready. Exportable evidence packs with per-user history, risk scores over time, and attestation records.</p>
+          <ul class="comp-list">
+            <li>Department &amp; role risk scores</li>
+            <li>Per-user attestation log</li>
+            <li>Trend lines quarter-over-quarter</li>
+            <li>Audit-ready PDF / CSV export</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Annual refresh -->
+      <div class="comp">
+        <svg class="comp-icon"><use href="#comp-refresh"/></svg>
+        <div>
+          <h3>Annual Refresh &amp; Attestation</h3>
+          <p class="comp-body">Content is updated continuously to track the evolving threat landscape. Annual attestation cycles are built in to keep your compliance position current.</p>
+          <ul class="comp-list">
+            <li>Rolling content refresh cadence</li>
+            <li>Annual policy attestation flow</li>
+            <li>Joiner / mover / leaver tracking</li>
+            <li>Remedial content for repeat clickers</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ ROLLOUT ═════════ -->
+<section class="rollout">
+  <div class="section-inner" style="position:relative">
+    <div class="section-head reveal">
+      <span class="eyebrow">How we roll it out</span>
+      <h2>Four phases. <em>Outcomes at every one.</em></h2>
+      <p>A typical rollout runs 8–12 weeks from kickoff to measured improvement. Pilot first; expand when the numbers move.</p>
+    </div>
+    <div class="phase-grid stagger">
+      <div class="phase">
+        <div class="phase-num">PHASE 01</div>
+        <h3>Baseline</h3>
+        <p>Unannounced phishing campaign across the organisation to establish click-rate, report-rate and risk hotspots. No training yet — pure measurement.</p>
+        <div class="phase-dur"><span class="dur-label">Duration</span><span>Week 1–2</span></div>
+      </div>
+      <div class="phase">
+        <div class="phase-num-row">
+          <div class="phase-num">PHASE 02</div>
+          <span class="phase-custom-pill">Customisation happens here</span>
+        </div>
+        <h3>Design</h3>
+        <p>We design the curriculum against your roles, baseline findings and — if you're in a regulated industry — your frameworks. This is where optional GxP-specific modules are added.</p>
+        <div class="phase-dur"><span class="dur-label">Duration</span><span>Week 2–4</span></div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">PHASE 03</div>
+        <h3>Launch</h3>
+        <p>Role-based e-learning rolls out with a communications plan from leadership. Phishing simulations continue on a monthly cadence. Repeat clickers receive targeted remediation.</p>
+        <div class="phase-dur"><span class="dur-label">Duration</span><span>Week 4–10</span></div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">PHASE 04</div>
+        <h3>Measure</h3>
+        <p>Quarterly reporting to leadership with risk-score trends, attestation status and audit-ready evidence. Programme calibrated against the numbers.</p>
+        <div class="phase-dur"><span class="dur-label">Duration</span><span>Ongoing</span></div>
+      </div>
+    </div>
+
+    <div class="phase-bars reveal" id="phaseBars">
+      <p class="phase-bars-title">Typical engagement — 12-month view</p>
+      <div class="bar-row">
+        <span class="bar-label">Baseline</span>
+        <div class="bar-outer"><div class="bar-inner b1" data-w="14%">Unannounced phish</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Design</span>
+        <div class="bar-outer"><div class="bar-inner b2" data-w="22%">Curriculum &amp; framework map</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Launch</span>
+        <div class="bar-outer"><div class="bar-inner b3" data-w="58%">E-learning + monthly simulations</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Measure</span>
+        <div class="bar-outer"><div class="bar-inner b4" data-w="100%">Quarterly reporting · ongoing remediation · annual attestation</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ REPORTING DEMO ═════════ -->
+<section class="reporting">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow">What your board sees</span>
+      <h2>Evidence. <em>Not completion certificates.</em></h2>
+      <p>A quarterly dashboard your CISO, QA director and auditors all read the same way.</p>
+    </div>
+    <div class="report-card reveal">
+      <div class="report-meta">
+        <div>
+          <h3>Quarterly risk report</h3>
+          <p>Every engagement includes a quarterly, board-ready risk report. Department-level scores, trend lines, attestation status, and an audit-ready evidence pack.</p>
+        </div>
+        <ul>
+          <li>Per-department risk score with trend</li>
+          <li>Individual attestation log (exportable)</li>
+          <li>Phishing click &amp; report rates over time</li>
+          <li>Module completion mapped to roles</li>
+          <li>Framework mapping (Part 11 / ISO / NIS2)</li>
+          <li>Remediation actions for repeat clickers</li>
+        </ul>
+      </div>
+      <div class="report-demo">
+        <div class="report-head">
+          <h4>Department risk — Q2</h4>
+          <span class="filter-pill">Demo · sample data</span>
+        </div>
+        <div class="dept-row">
+          <span class="dept-name">Manufacturing</span>
+          <div class="dept-bar"><div class="dept-bar-fill high" data-w="78%"></div></div>
+          <span class="dept-pct">78</span>
+          <span class="dept-trend down">▼ 12</span>
+        </div>
+        <div class="dept-row">
+          <span class="dept-name">Quality / QA</span>
+          <div class="dept-bar"><div class="dept-bar-fill mid" data-w="52%"></div></div>
+          <span class="dept-pct">52</span>
+          <span class="dept-trend down">▼ 18</span>
+        </div>
+        <div class="dept-row">
+          <span class="dept-name">R&amp;D / Lab</span>
+          <div class="dept-bar"><div class="dept-bar-fill mid" data-w="46%"></div></div>
+          <span class="dept-pct">46</span>
+          <span class="dept-trend down">▼ 9</span>
+        </div>
+        <div class="dept-row">
+          <span class="dept-name">Executive</span>
+          <div class="dept-bar"><div class="dept-bar-fill low" data-w="28%"></div></div>
+          <span class="dept-pct">28</span>
+          <span class="dept-trend down">▼ 22</span>
+        </div>
+        <div class="dept-row">
+          <span class="dept-name">IT</span>
+          <div class="dept-bar"><div class="dept-bar-fill low" data-w="18%"></div></div>
+          <span class="dept-pct">18</span>
+          <span class="dept-trend down">▼ 6</span>
+        </div>
+        <div class="dept-row">
+          <span class="dept-name">Finance</span>
+          <div class="dept-bar"><div class="dept-bar-fill mid" data-w="41%"></div></div>
+          <span class="dept-pct">41</span>
+          <span class="dept-trend up">▲ 4</span>
+        </div>
+
+        <div class="report-footer">
+          <div class="kpi">
+            <div class="kpi-num"><em>−38<span style="font-size:1rem">%</span></em></div>
+            <div class="kpi-label">Click-rate YoY</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-num">+42<span style="font-size:1rem;color:var(--muted)">%</span></div>
+            <div class="kpi-label">Report-rate</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-num"><em>96<span style="font-size:1rem">%</span></em></div>
+            <div class="kpi-label">Attestation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ FAQ ═════════ -->
+<section class="faq">
+  <div class="section-inner">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="eyebrow" style="display:inline-block">Frequently asked</span>
+      <h2>Things you'll <em>want to know.</em></h2>
+      <p style="margin-left:auto;margin-right:auto">Short answers to the questions we get most often before a pilot.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>How long does a pilot take?</summary>
+        <div class="faq-body">
+          <p>A standard pilot runs 8–12 weeks: two weeks to establish a baseline, two to design the curriculum against your roles and frameworks, and then six to eight weeks of active training and simulation. At the end of the pilot you get your first quarterly risk report.</p>
+          <p>Smaller organisations (under ~100 users) can run a condensed pilot in six weeks.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>How is the programme delivered — where does the data live?</summary>
+        <div class="faq-body">
+          <p>The programme runs on infrastructure we operate on your behalf. Phishing simulations, e-learning and reporting are delivered through our platforms; MSET manages campaign design, content localisation, remediation and reporting.</p>
+          <p>Data residency and processing details are documented in the DPA you sign with us before the pilot starts — this matters for pharma and we don't hand-wave it.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>What languages is the content available in?</summary>
+        <div class="faq-body">
+          <p>Content, phishing templates and reporting are delivered in English as standard, with Nordic and other languages available on request. We localise to the language your teams actually work in — not a compromise list limited to one region.</p>
+          <p>GxP-specific modules are reviewed with your QA team before rollout to ensure terminology matches your internal SOPs.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Which regulatory frameworks is this mapped to?</summary>
+        <div class="faq-body">
+          <p>The programme content, cadence and reporting are explicitly mapped to 21 CFR Part 11, EU Annex 11, ISO/IEC 27001, and NIS2. The quarterly evidence pack references these frameworks directly, so your auditors see the mapping rather than inferring it.</p>
+          <p>For medical-device clients, we also map to the cybersecurity expectations in ISO 14971 and the EU MDR.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>How is it priced?</summary>
+        <div class="faq-body">
+          <p>Pricing is per-user per-year with a minimum pilot size. Pilots are priced separately from the annual engagement so you can validate the programme before committing. We'll quote after a short scoping call — there's no standard price list because the curriculum design is calibrated to your roles and frameworks.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>What happens to users who keep clicking?</summary>
+        <div class="faq-body">
+          <p>Repeat clickers receive targeted remediation: shorter, more frequent micro-modules on the specific scenarios they fell for, and we escalate visibility to line managers after the third failed simulation. We don't publicly shame users — that backfires — but we do make sure managers have the data they need.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ FINAL CTA ═════════ -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2 class="display">Run a pilot. <em>Watch the numbers move.</em></h2>
+    <p>A baseline in two weeks. A measurable drop in click-rate in eight. An audit-ready evidence pack in twelve.</p>
+    <div class="hero-ctas" style="justify-content:center">
+      <a href="index.html#contact?topic=sat" class="btn-primary">Start a pilot
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="index.html#security" class="btn-secondary">Back to Security overview</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" role="img" aria-label="MSET — Kifarkis Nätsäkerhet">
+          <svg class="mark" aria-hidden="true"><use href="#logo-vault-dark"/></svg>
+          <span class="wordmark">MSET<span class="dot"></span></span>
+        </div>
+        <p>Life-science IT &amp; AI consulting. Independent, regulated-industry-native, based in Skåne.</p>
+        <span class="tag">Säkerhet som en tjänst</span>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">GxP Systems</a></li>
+          <li><a href="index.html#ai">AI Consulting</a></li>
+          <li><a href="index.html#security">IT Security</a></li>
+          <li><a href="#top">Security Awareness Training</a></li>
+          <li><a href="index.html#strategy">IT Strategy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About MSET</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="mailto:info@mset.se">info@mset.se</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
+      <span>All rights reserved.</span>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to MSET
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating footer — slim persistent bar, slides in after scrolling 300px -->
+<div class="floating-footer" id="floatingFooter" aria-hidden="true">
+  <div class="ff-inner">
+    <a href="index.html" class="ff-brand" aria-label="Back to MSET home">
+      <svg class="mark" aria-hidden="true"><use href="#logo-vault-dark"/></svg>
+      <span class="wordmark">MSET<span class="dot"></span></span>
+    </a>
+    <a href="index.html" class="ff-action" aria-label="Back to MSET">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to MSET
+    </a>
+  </div>
+</div>
+
+<!-- Privacy notice — shown once until dismissed -->
+<div class="privacy-notice" id="privacyNotice" role="status" aria-live="polite">
+  <p>We store and handle your contact-form details only to reply to you. No tracking cookies, no analytics profiling. See our <a href="privacy.html">privacy policy</a> for the full picture.</p>
+  <div class="privacy-notice-actions">
+    <button class="privacy-notice-dismiss" id="privacyNoticeDismiss" type="button">Got it</button>
+  </div>
+</div>
+
+<script>
+/* ════════════════ NAV — scroll darken (matches main site) ════════════════ */
+(function(){
+  var nav = document.getElementById('siteNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive:true });
+})();
+
+/* ════════════════ MOBILE MENU ════════════════ */
+(function(){
+  var burger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if(!burger || !mobileMenu) return;
+  burger.addEventListener('click', function(){
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      burger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+})();
+
+/* ════════════════ FLOATING FOOTER — slides in after scroll ════════════════ */
+(function(){
+  var floatingFooter = document.getElementById('floatingFooter');
+  var realFooter = document.querySelector('footer');
+  if(!floatingFooter) return;
+  var footerInView = false;
+  if(realFooter && 'IntersectionObserver' in window){
+    var ffIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ footerInView = e.isIntersecting; update(); });
+    }, { rootMargin: '0px 0px 0px 0px', threshold: 0 });
+    ffIo.observe(realFooter);
+  }
+  function update(){
+    var scrolledEnough = window.scrollY > 300;
+    if(scrolledEnough && !footerInView){
+      floatingFooter.classList.add('visible');
+      floatingFooter.classList.remove('hidden');
+      floatingFooter.setAttribute('aria-hidden','false');
+    } else {
+      floatingFooter.classList.remove('visible');
+      floatingFooter.classList.add('hidden');
+      floatingFooter.setAttribute('aria-hidden','true');
+    }
+  }
+  window.addEventListener('scroll', update, { passive:true });
+  update();
+})();
+
+/* ════════════════ REVEAL ON SCROLL ════════════════ */
+(function(){
+  const els = document.querySelectorAll('.reveal, .stagger');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(e => e.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(e => io.observe(e));
+})();
+
+/* ════════════════ ANIMATE PHASE BARS & DEPT BARS ════════════════ */
+(function(){
+  const bars = document.querySelectorAll('[data-w]');
+  if(!('IntersectionObserver' in window)){
+    bars.forEach(b => b.style.width = b.dataset.w);
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const b = entry.target;
+        requestAnimationFrame(() => { b.style.width = b.dataset.w; });
+        io.unobserve(b);
+      }
+    });
+  }, { threshold: 0.3 });
+  bars.forEach(b => io.observe(b));
+})();
+/* ════════════════ PRIVACY NOTICE ════════════════ */
+(function(){
+  var el = document.getElementById('privacyNotice');
+  var btn = document.getElementById('privacyNoticeDismiss');
+  if(!el || !btn) return;
+  var KEY = 'mset_privacy_notice_dismissed';
+  try { if(!localStorage.getItem(KEY)) setTimeout(function(){ el.classList.add('visible'); }, 1500); }
+  catch(e){ setTimeout(function(){ el.classList.add('visible'); }, 1500); }
+  btn.addEventListener('click', function(){
+    el.classList.remove('visible');
+    try { localStorage.setItem(KEY, '1'); } catch(e){}
+  });
+})();</script>
+
+</body>
+</html>
