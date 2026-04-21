@@ -1,21 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A1628'/><path d='M16 7 L24 11.5 L24 20.5 L16 25 L8 20.5 L8 11.5 Z' fill='none' stroke='%237EC389' stroke-width='1.8' stroke-linejoin='round'/><circle cx='16' cy='17' r='1.4' fill='%237EC389'/><rect x='15.3' y='17.6' width='1.4' height='2.8' rx='.4' fill='%237EC389'/></svg>">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
-<link rel="alternate icon" href="favicon.ico">
-<title>Privacy Policy — MSET</title>
-<meta name="description" content="How MSET (Kifarkis Nätsäkerhet) collects, uses and protects your personal data. GDPR-compliant privacy policy for our website and client engagements.">
-<link rel="canonical" href="https://mset.se/privacy">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+<meta charset="utf-8"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%230A1628'/&gt;&lt;path d='M16 7 L24 11.5 L24 20.5 L16 25 L8 20.5 L8 11.5 Z' fill='none' stroke='%237EC389' stroke-width='1.8' stroke-linejoin='round'/&gt;&lt;circle cx='16' cy='17' r='1.4' fill='%237EC389'/&gt;&lt;rect x='15.3' y='17.6' width='1.4' height='2.8' rx='.4' fill='%237EC389'/&gt;&lt;/svg&gt;" rel="icon" type="image/svg+xml"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/>
+<link href="favicon.ico" rel="alternate icon"/>
+<title data-i18n="privacy.title">Privacy Policy — MSET</title>
+<meta content="How MSET (Kifarkis Nätsäkerhet) collects, uses and protects your personal data. GDPR-compliant privacy policy for our website and client engagements." name="description"/>
+<link href="https://mset.se/privacy" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <style>
 /* ═══════════════════════════════════════════════════════════
    PRIVACY — base + nav + footer CSS copied verbatim from SAT
@@ -223,311 +223,341 @@ footer{
   .footer-brand{grid-column:auto}
   .footer-bottom{font-size:.7rem}
 }
+
+/* ═══════════════════════════════════════════════════════════
+   i18n — language switcher infrastructure
+═══════════════════════════════════════════════════════════ */
+.i18n > [lang]{display:none}
+body[data-lang="en"] .i18n > [lang="en"],
+body[data-lang="sv"] .i18n > [lang="sv"],
+body[data-lang="da"] .i18n > [lang="da"]{display:inline}
+/* block-level i18n for paragraphs/headings */
+.i18n-block > [lang]{display:none}
+body[data-lang="en"] .i18n-block > [lang="en"],
+body[data-lang="sv"] .i18n-block > [lang="sv"],
+body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
+
+/* Language switcher pill group */
+.lang-switch{
+  display:inline-flex;align-items:center;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;padding:.18rem;gap:.08rem;
+  margin-right:.5rem;
+}
+.lang-switch button{
+  font:inherit;font-size:.68rem;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);
+  padding:.32rem .62rem;border-radius:999px;
+  border:none;background:transparent;cursor:pointer;
+  transition:all .2s;
+}
+.lang-switch button:hover{color:rgba(255,255,255,.9)}
+.lang-switch button[aria-pressed="true"]{
+  background:var(--emerald);color:var(--ink);
+}
+@media (max-width:980px){
+  .lang-switch{display:none}
+  .mobile-menu .lang-switch{display:inline-flex;margin:1rem 0 0}
+}
+
+
+/* Courtesy-translation legal banner — only shown when lang != en */
+.courtesy-banner{
+  display:none;
+  margin:1.5rem 0 2rem;
+  padding:1rem 1.25rem;
+  background:rgba(217,123,43,.08);
+  border-left:3px solid var(--warn);
+  border-radius:6px;
+  font-size:.85rem;line-height:1.55;
+  color:var(--muted);
+}
+body[data-lang="sv"] .courtesy-banner,
+body[data-lang="da"] .courtesy-banner{display:block}
+
 </style>
 </head>
-<body>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="logo-vault-dark" viewBox="0 0 72 62">
-      <g stroke="#F5F3ED" stroke-width=".5" stroke-dasharray="1.2 1.4" fill="none" opacity=".25">
-        <line x1="34" y1="2" x2="34" y2="30"/>
-        <line x1="58" y1="44" x2="34" y2="30"/>
-        <line x1="10" y1="44" x2="34" y2="30"/>
-      </g>
-      <g stroke="#F5F3ED" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round">
-        <path d="M34,2 L58,16 L34,30 L10,16 Z"/>
-        <path d="M34,30 L58,16 L58,44 L34,58 Z"/>
-        <path d="M34,30 L10,16 L10,44 L34,58 Z"/>
-      </g>
-      <path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#F5F3ED"/>
-      <path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#C9C3B1"/>
-      <path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#A8A290"/>
-      <circle cx="40" cy="29" r="1.2" fill="#1B4A22"/>
-      <rect x="39.5" y="29.5" width="1" height="2.5" rx=".3" fill="#1B4A22"/>
-      <path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"/>
-      <path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"/>
-      <path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"/>
-      <line x1="58.7" y1="12" x2="58" y2="16" stroke="#9BD7A4" stroke-width=".6" stroke-dasharray=".8 .8" opacity=".7"/>
-    </symbol>
-  </defs>
+<body data-lang="en">
+<svg aria-hidden="true" height="0" style="position:absolute" width="0">
+<defs>
+<symbol id="logo-vault-dark" viewbox="0 0 72 62">
+<g fill="none" opacity=".25" stroke="#F5F3ED" stroke-dasharray="1.2 1.4" stroke-width=".5">
+<line x1="34" x2="34" y1="2" y2="30"></line>
+<line x1="58" x2="34" y1="44" y2="30"></line>
+<line x1="10" x2="34" y1="44" y2="30"></line>
+</g>
+<g fill="none" stroke="#F5F3ED" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+<path d="M34,2 L58,16 L34,30 L10,16 Z"></path>
+<path d="M34,30 L58,16 L58,44 L34,58 Z"></path>
+<path d="M34,30 L10,16 L10,44 L34,58 Z"></path>
+</g>
+<path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#F5F3ED"></path>
+<path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#C9C3B1"></path>
+<path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#A8A290"></path>
+<circle cx="40" cy="29" fill="#1B4A22" r="1.2"></circle>
+<rect fill="#1B4A22" height="2.5" rx=".3" width="1" x="39.5" y="29.5"></rect>
+<path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"></path>
+<path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"></path>
+<path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"></path>
+<line opacity=".7" stroke="#9BD7A4" stroke-dasharray=".8 .8" stroke-width=".6" x1="58.7" x2="58" y1="12" y2="16"></line>
+</symbol>
+</defs>
 </svg>
-
 <nav class="site-nav" id="siteNav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="MSET — back to main site">
-      <svg class="mark" aria-hidden="true"><use href="#logo-vault-dark"/></svg>
-      <span class="wordmark">MSET<span class="dot"></span></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html#services">GxP</a></li>
-      <li><a href="index.html#ai">AI</a></li>
-      <li><a href="index.html#security">Security</a></li>
-      <li><a href="index.html#strategy">Strategy</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#contact" class="nav-cta">Book a call</a></li>
-    </ul>
-    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<div class="nav-inner">
+<a aria-label="MSET — back to main site" class="nav-logo" href="index.html">
+<svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
+<span class="wordmark">MSET<span class="dot"></span></span>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav.gxp" href="index.html#services">GxP</a></li>
+<li><a data-i18n="nav.ai" href="index.html#ai">AI</a></li>
+<li><a data-i18n="nav.security" href="index.html#security">Security</a></li>
+<li><a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a></li>
+<li><a data-i18n="nav.about" href="index.html#about">About</a></li>
+<li><a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a></li>
+</ul>
+<button aria-label="Menu" class="nav-hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html#services">GxP</a>
-  <a href="index.html#ai">AI</a>
-  <a href="index.html#security">Security</a>
-  <a href="index.html#strategy">Strategy</a>
-  <a href="index.html#about">About</a>
-  <a href="index.html#contact" class="nav-cta">Book a call</a>
+<a data-i18n="nav.gxp" href="index.html#services">GxP</a>
+<a data-i18n="nav.ai" href="index.html#ai">AI</a>
+<a data-i18n="nav.security" href="index.html#security">Security</a>
+<a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a>
+<a data-i18n="nav.about" href="index.html#about">About</a>
+<a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a>
+
+  <div class="lang-switch" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="sv" aria-pressed="false">SV</button><button type="button" data-lang="da" aria-pressed="false">DA</button></div>
 </div>
-
 <main class="policy">
-  <span class="eyebrow">Legal</span>
-  <h1>Privacy <em>Policy</em></h1>
-  <p class="updated">Last updated: 21 April 2026</p>
+  <div class="courtesy-banner" role="note"><strong data-i18n="privacy.courtesy-banner">Note: The English version of this privacy policy is the binding legal document. The Swedish and Danish translations are provided only as a reader service. In case of any conflicting interpretation, the English text prevails.</strong></div>
 
-  <p class="lede">
+<span class="eyebrow" data-i18n="privacy.eyebrow">Legal</span>
+<h1><span data-i18n="privacy.h1.1">Privacy</span> <em data-i18n="privacy.h1.2">Policy</em></h1>
+<p class="updated" data-i18n="privacy.updated">Last updated: 21 April 2026</p>
+<p class="lede" data-i18n="privacy.lede">
     This policy explains how MSET (operating as Kifarkis Nätsäkerhet) collects, uses, and protects
     personal data. It applies to our website <strong>mset.se</strong>, our client engagements, and any
     other interaction where we process personal information.
   </p>
-
-  <p>
+<p data-i18n="privacy.intro">
     We take data protection seriously — as a consultancy whose work centres on IT security and
     regulated-industry compliance, we hold ourselves to the same standards we advise our clients on.
     This policy is written to be readable; if anything is unclear, contact us and we will explain.
   </p>
-
-  <h2>1. Who we are</h2>
-  <p>
-    <strong>Data controller:</strong><br>
-    Kifarkis Nätsäkerhet<br>
-    Skåne, Sweden<br>
+<h2 data-i18n="privacy.s1.h2">1. Who we are</h2>
+<p>
+<strong>Data controller:</strong><br/>
+    Kifarkis Nätsäkerhet<br/>
+    Skåne, Sweden<br/>
     Email: <a href="mailto:info@mset.se">info@mset.se</a>
-  </p>
-  <p>
+</p>
+<p data-i18n="privacy.s1.trading">
     We trade under the name <strong>MSET</strong>. Kifarkis Nätsäkerhet is the legal entity responsible
     for the processing of your personal data under the EU General Data Protection Regulation (GDPR) and
     the Swedish Data Protection Act.
   </p>
-
-  <h2>2. What personal data we collect</h2>
-
-  <h3>2.1 Contact form submissions</h3>
-  <p>When you submit the contact form on our website, we collect:</p>
-  <ul>
-    <li>Your first name and last name</li>
-    <li>Your email address</li>
-    <li>Your company name (optional)</li>
-    <li>The service area you are interested in</li>
-    <li>The content of your message</li>
-  </ul>
-  <p>
+<h2 data-i18n="privacy.s2.h2">2. What personal data we collect</h2>
+<h3 data-i18n="privacy.s2.1.h3">2.1 Contact form submissions</h3>
+<p data-i18n="privacy.s2.1.p1">When you submit the contact form on our website, we collect:</p>
+<ul>
+<li data-i18n="privacy.s2.1.b1">Your first name and last name</li>
+<li data-i18n="privacy.s2.1.b2">Your email address</li>
+<li data-i18n="privacy.s2.1.b3">Your company name (optional)</li>
+<li data-i18n="privacy.s2.1.b4">The service area you are interested in</li>
+<li data-i18n="privacy.s2.1.b5">The content of your message</li>
+</ul>
+<p data-i18n="privacy.s2.1.p2">
     We do not collect any other data through the contact form. We do not require you to create an
     account, and we do not ask for information beyond what is needed to reply to your enquiry.
   </p>
-
-  <h3>2.2 Client engagements</h3>
-  <p>
+<h3 data-i18n="privacy.s2.2.h3">2.2 Client engagements</h3>
+<p data-i18n="privacy.s2.2.p1">
     During consulting engagements, we may process personal data belonging to you, your employees, or
     your clients — depending on the nature of the work. For most engagements, this processing is
     governed by a separate <strong>Data Processing Agreement</strong> (DPA) that we sign with you, in
     which we act as a <strong>data processor</strong> on your behalf. We only process such data for
     the purposes defined in that agreement.
   </p>
-
-  <h3>2.3 Website analytics</h3>
-  <p>
+<h3 data-i18n="privacy.s2.3.h3">2.3 Website analytics</h3>
+<p data-i18n="privacy.s2.3.p1">
     We use Google Search Console to understand how our site performs in search. Search Console
     does not place cookies on your browser and does not track individual visitors. It reports
     aggregated search performance to us only.
   </p>
-  <p>
+<p data-i18n="privacy.s2.3.p2">
     We do <strong>not</strong> use Google Analytics, Facebook Pixel, or any other behavioural tracking
     on this website. No cookies are set for analytics or advertising.
   </p>
-
-  <h3>2.4 Technical data</h3>
-  <p>
+<h3 data-i18n="privacy.s2.4.h3">2.4 Technical data</h3>
+<p data-i18n="privacy.s2.4.p1">
     Our web host automatically records standard server logs for security and operational purposes
     (IP address, browser type, pages visited, timestamp). These logs are retained for a maximum of
     30 days and are not used to profile visitors.
   </p>
-
-  <h2>3. Legal basis for processing</h2>
-  <p>Under Article 6 of the GDPR, our processing relies on one of the following legal bases:</p>
-  <ul>
-    <li><strong>Your consent</strong> (Art. 6(1)(a)) — when you voluntarily submit the contact form.</li>
-    <li><strong>Performance of a contract</strong> (Art. 6(1)(b)) — when processing is necessary to deliver a consulting engagement you have commissioned.</li>
-    <li><strong>Legitimate interest</strong> (Art. 6(1)(f)) — for server security logs, fraud prevention, and protection of our systems.</li>
-    <li><strong>Legal obligation</strong> (Art. 6(1)(c)) — where required by Swedish or EU law (for example, accounting and tax records).</li>
-  </ul>
-
-  <h2>4. How we use your data</h2>
-  <p>We use personal data only for the purposes for which it was collected. Specifically:</p>
-  <ul>
-    <li>To respond to enquiries submitted through our contact form</li>
-    <li>To deliver consulting services we have agreed to provide</li>
-    <li>To invoice clients and meet accounting obligations</li>
-    <li>To comply with regulatory and legal requirements applicable to us</li>
-  </ul>
-  <p>
+<h2 data-i18n="privacy.s3.h2">3. Legal basis for processing</h2>
+<p data-i18n="privacy.s3.p1">Under Article 6 of the GDPR, our processing relies on one of the following legal bases:</p>
+<ul>
+<li data-i18n="privacy.s3.b1"><strong>Your consent</strong> (Art. 6(1)(a)) — when you voluntarily submit the contact form.</li>
+<li data-i18n="privacy.s3.b2"><strong>Performance of a contract</strong> (Art. 6(1)(b)) — when processing is necessary to deliver a consulting engagement you have commissioned.</li>
+<li data-i18n="privacy.s3.b3"><strong>Legitimate interest</strong> (Art. 6(1)(f)) — for server security logs, fraud prevention, and protection of our systems.</li>
+<li data-i18n="privacy.s3.b4"><strong>Legal obligation</strong> (Art. 6(1)(c)) — where required by Swedish or EU law (for example, accounting and tax records).</li>
+</ul>
+<h2 data-i18n="privacy.s4.h2">4. How we use your data</h2>
+<p data-i18n="privacy.s4.p1">We use personal data only for the purposes for which it was collected. Specifically:</p>
+<ul>
+<li data-i18n="privacy.s4.b1">To respond to enquiries submitted through our contact form</li>
+<li data-i18n="privacy.s4.b2">To deliver consulting services we have agreed to provide</li>
+<li data-i18n="privacy.s4.b3">To invoice clients and meet accounting obligations</li>
+<li data-i18n="privacy.s4.b4">To comply with regulatory and legal requirements applicable to us</li>
+</ul>
+<p data-i18n="privacy.s4.p2">
     We do <strong>not</strong> sell personal data. We do <strong>not</strong> use personal data for
     marketing purposes unrelated to your original enquiry. We do <strong>not</strong> enrich your
     data from third-party sources.
   </p>
-
-  <h2>5. Third-party processors</h2>
-  <p>We share personal data only with the following processors, and only to the extent strictly necessary:</p>
-
-  <div class="callout">
-    <h3 style="margin-top:0">Formspree (contact form handling)</h3>
-    <p>
+<h2 data-i18n="privacy.s5.h2">5. Third-party processors</h2>
+<p data-i18n="privacy.s5.p1">We share personal data only with the following processors, and only to the extent strictly necessary:</p>
+<div class="callout">
+<h3 data-i18n="privacy.s5.formspree.h3" style="margin-top:0">Formspree (contact form handling)</h3>
+<p data-i18n="privacy.s5.formspree.p">
       Contact form submissions are processed by Formspree Inc. (USA). Formspree stores submissions
       and forwards them to our email address. Formspree is contractually bound as a data processor
       under the EU Standard Contractual Clauses. Retention on the Formspree platform is governed by
       their own policy; we routinely delete submissions from Formspree after we have actioned them.
     </p>
-  </div>
-
-  <div class="callout">
-    <h3 style="margin-top:0">Email provider</h3>
-    <p>
+</div>
+<div class="callout">
+<h3 data-i18n="privacy.s5.email.h3" style="margin-top:0">Email provider</h3>
+<p data-i18n="privacy.s5.email.p">
       Replies to enquiries are sent from our Swedish email provider. Copies of correspondence are
       stored in our mailbox for as long as the business relationship is active, plus any retention
       period required by applicable accounting law.
     </p>
-  </div>
-
-  <div class="callout">
-    <h3 style="margin-top:0">Google Search Console</h3>
-    <p>
+</div>
+<div class="callout">
+<h3 data-i18n="privacy.s5.gsc.h3" style="margin-top:0">Google Search Console</h3>
+<p data-i18n="privacy.s5.gsc.p">
       Google LLC (USA) provides aggregated search-performance data to us via Search Console. No
       identifiable personal data about individual site visitors is transferred to us through this
       service.
     </p>
-  </div>
-
-  <h2>6. International transfers</h2>
-  <p>
+</div>
+<h2 data-i18n="privacy.s6.h2">6. International transfers</h2>
+<p data-i18n="privacy.s6.p1">
     Where personal data is transferred outside the European Economic Area (for example, to US-based
     providers such as Formspree or Google), we rely on the EU Standard Contractual Clauses, adequacy
     decisions where available, and additional safeguards as required by Chapter V of the GDPR.
   </p>
-
-  <h2>7. How long we keep data</h2>
-  <ul>
-    <li><strong>Contact form submissions:</strong> up to 12 months after last contact, unless a client relationship has started.</li>
-    <li><strong>Client engagement data:</strong> for the duration of the engagement plus 7 years (to comply with Swedish accounting legislation), or as specified in the Data Processing Agreement.</li>
-    <li><strong>Server logs:</strong> 30 days.</li>
-    <li><strong>Newsletter or marketing lists:</strong> not applicable — we do not operate any.</li>
-  </ul>
-
-  <h2>8. Your rights under GDPR</h2>
-  <p>You have the following rights regarding your personal data:</p>
-  <ul>
-    <li><strong>Right of access</strong> — request a copy of the personal data we hold about you.</li>
-    <li><strong>Right to rectification</strong> — ask us to correct inaccurate or incomplete data.</li>
-    <li><strong>Right to erasure</strong> ("right to be forgotten") — ask us to delete your data, subject to legal retention obligations.</li>
-    <li><strong>Right to restrict processing</strong> — ask us to limit how we use your data.</li>
-    <li><strong>Right to data portability</strong> — receive your data in a structured, machine-readable format.</li>
-    <li><strong>Right to object</strong> — object to processing based on legitimate interest.</li>
-    <li><strong>Right to withdraw consent</strong> — withdraw any consent you have previously given.</li>
-    <li><strong>Right to lodge a complaint</strong> — complain to the Swedish data protection authority (<a href="https://www.imy.se" rel="noopener">Integritetsskyddsmyndigheten</a>) if you believe your rights have been violated.</li>
-  </ul>
-  <p>
+<h2 data-i18n="privacy.s7.h2">7. How long we keep data</h2>
+<ul>
+<li data-i18n="privacy.s7.b1"><strong>Contact form submissions:</strong> up to 12 months after last contact, unless a client relationship has started.</li>
+<li data-i18n="privacy.s7.b2"><strong>Client engagement data:</strong> for the duration of the engagement plus 7 years (to comply with Swedish accounting legislation), or as specified in the Data Processing Agreement.</li>
+<li data-i18n="privacy.s7.b3"><strong>Server logs:</strong> 30 days.</li>
+<li data-i18n="privacy.s7.b4"><strong>Newsletter or marketing lists:</strong> not applicable — we do not operate any.</li>
+</ul>
+<h2 data-i18n="privacy.s8.h2">8. Your rights under GDPR</h2>
+<p data-i18n="privacy.s8.p1">You have the following rights regarding your personal data:</p>
+<ul>
+<li data-i18n="privacy.s8.b1"><strong>Right of access</strong> — request a copy of the personal data we hold about you.</li>
+<li data-i18n="privacy.s8.b2"><strong>Right to rectification</strong> — ask us to correct inaccurate or incomplete data.</li>
+<li data-i18n="privacy.s8.b3"><strong>Right to erasure</strong> ("right to be forgotten") — ask us to delete your data, subject to legal retention obligations.</li>
+<li data-i18n="privacy.s8.b4"><strong>Right to restrict processing</strong> — ask us to limit how we use your data.</li>
+<li data-i18n="privacy.s8.b5"><strong>Right to data portability</strong> — receive your data in a structured, machine-readable format.</li>
+<li data-i18n="privacy.s8.b6"><strong>Right to object</strong> — object to processing based on legitimate interest.</li>
+<li data-i18n="privacy.s8.b7"><strong>Right to withdraw consent</strong> — withdraw any consent you have previously given.</li>
+<li data-i18n="privacy.s8.b8"><strong>Right to lodge a complaint</strong> — complain to the Swedish data protection authority (<a href="https://www.imy.se" rel="noopener">Integritetsskyddsmyndigheten</a>) if you believe your rights have been violated.</li>
+</ul>
+<p data-i18n="privacy.s8.p2">
     To exercise any of these rights, email us at <a href="mailto:info@mset.se">info@mset.se</a>. We
     will respond within 30 days. There is no charge for a first request.
   </p>
-
-  <h2>9. Data security</h2>
-  <p>
+<h2 data-i18n="privacy.s9.h2">9. Data security</h2>
+<p data-i18n="privacy.s9.p1">
     We take appropriate technical and organisational measures to protect personal data against
     unauthorised access, accidental loss, alteration, or disclosure. These include encryption in
     transit (HTTPS), access controls on systems holding personal data, and staff awareness training.
     Our approach aligns with ISO/IEC 27001 principles.
   </p>
-  <p>
+<p data-i18n="privacy.s9.p2">
     If a data breach affects your personal data and presents a risk to your rights, we will notify
     the Swedish data protection authority within 72 hours, and notify affected individuals
     without undue delay where the risk is high.
   </p>
-
-  <h2>10. Cookies</h2>
-  <p>
+<h2 data-i18n="privacy.s10.h2">10. Cookies</h2>
+<p data-i18n="privacy.s10.p1">
     This website does not set tracking cookies. No cookies are used for analytics, advertising, or
     behavioural profiling. Your browser may retain a small preference value if you use our language
     switcher or dismiss the privacy notice banner — these are strictly functional and do not
     identify you.
   </p>
-
-  <h2>11. Children's data</h2>
-  <p>
+<h2 data-i18n="privacy.s11.h2">11. Children's data</h2>
+<p data-i18n="privacy.s11.p1">
     Our services and website are intended for business use. We do not knowingly collect personal
     data from children under 16. If you believe a child has submitted data through our website,
     please contact us and we will delete it.
   </p>
-
-  <h2>12. Changes to this policy</h2>
-  <p>
+<h2 data-i18n="privacy.s12.h2">12. Changes to this policy</h2>
+<p data-i18n="privacy.s12.p1">
     We may update this policy from time to time. The "Last updated" date at the top reflects the
     most recent substantive change. For material changes affecting how we process your data, we
     will notify active clients by email.
   </p>
-
-  <div class="contact-box">
-    <h2>Questions about your data?</h2>
-    <p>
+<div class="contact-box">
+<h2 data-i18n="privacy.contact.h2">Questions about your data?</h2>
+<p data-i18n="privacy.contact.p">
       We are happy to explain anything in this policy or help you exercise your rights. Email us at
       <a href="mailto:info@mset.se">info@mset.se</a> with "Privacy enquiry" in the subject line and
       we will respond within one business day.
     </p>
-  </div>
-
+</div>
 </main>
-
 <footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="nav-logo" role="img" aria-label="MSET — Kifarkis Nätsäkerhet">
-          <svg class="mark" aria-hidden="true"><use href="#logo-vault-dark"/></svg>
-          <span class="wordmark">MSET<span class="dot"></span></span>
-        </div>
-        <p>Life-science IT &amp; AI consulting. Independent, regulated-industry-native, based in Skåne.</p>
-        <span class="tag">Säkerhet som en tjänst</span>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="index.html#services">GxP Systems</a></li>
-          <li><a href="index.html#ai">AI Consulting</a></li>
-          <li><a href="index.html#security">IT Security</a></li>
-          <li><a href="sat.html">Security Awareness Training</a></li>
-          <li><a href="index.html#strategy">IT Strategy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="index.html#about">About MSET</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-          <li><a href="mailto:info@mset.se">info@mset.se</a></li>
-          <li><a href="privacy.html">Privacy policy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
-      <span>All rights reserved.</span>
-      <a href="index.html" class="back-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand">
+<div aria-label="MSET — Kifarkis Nätsäkerhet" class="nav-logo" role="img">
+<svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
+<span class="wordmark">MSET<span class="dot"></span></span>
+</div>
+<p data-i18n="footer.brand.body">Life-science IT &amp; AI consulting. Independent, regulated-industry-native, based in Skåne.</p>
+<span class="tag" data-i18n="footer.tag">Säkerhet som en tjänst</span>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.col1">Services</h4>
+<ul>
+<li><a data-i18n="footer.services.gxp" href="index.html#services">GxP Systems</a></li>
+<li><a data-i18n="footer.services.ai" href="index.html#ai">AI Consulting</a></li>
+<li><a data-i18n="footer.services.sec" href="index.html#security">IT Security</a></li>
+<li><a data-i18n="footer.services.sat" href="sat.html">Security Awareness Training</a></li>
+<li><a data-i18n="footer.services.strat" href="index.html#strategy">IT Strategy</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.col2">Company</h4>
+<ul>
+<li><a data-i18n="footer.about" href="index.html#about">About MSET</a></li>
+<li><a data-i18n="footer.contact" href="index.html#contact">Contact</a></li>
+<li><a href="mailto:info@mset.se">info@mset.se</a></li>
+<li><a data-i18n="footer.privacy" href="privacy.html">Privacy policy</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span data-i18n="footer.copyright">© 2026 Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
+<span data-i18n="footer.rights">All rights reserved.</span>
+<a class="back-link" data-i18n="footer.back-top" href="index.html">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="19" x2="5" y1="12" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         Back to MSET
       </a>
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-
 <script>
 (function(){
   var nav = document.getElementById('siteNav');
@@ -548,5 +578,123 @@ footer{
 })();
 </script>
 
+<script src="translations.js"></script>
+<script>
+(function(){
+  function getDict(){ return window.MSET_TRANSLATIONS || {}; }
+  function apply(){
+    var dict = getDict();
+    var lang = document.body.getAttribute('data-lang') || 'en';
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if (!el.hasAttribute('data-i18n-en')){
+        var orig = Array.prototype.filter.call(el.childNodes, function(n){
+          return n.nodeType === 3;
+        }).map(function(n){ return n.nodeValue; }).join('').trim();
+        if (!orig) orig = el.textContent.trim();
+        el.setAttribute('data-i18n-en', orig);
+      }
+      if (lang === 'en'){
+        var target = el.getAttribute('data-i18n-en');
+        var replaced = false;
+        for (var i=0; i<el.childNodes.length; i++){
+          var n = el.childNodes[i];
+          if (n.nodeType === 3 && n.nodeValue.trim()){
+            n.nodeValue = (replaced ? '' : target);
+            replaced = true;
+          }
+        }
+        if (!replaced){ el.textContent = target; }
+        return;
+      }
+      var entry = dict[key];
+      if (!entry || !entry[lang]) return;
+      var replaced = false;
+      for (var i=0; i<el.childNodes.length; i++){
+        var n = el.childNodes[i];
+        if (n.nodeType === 3 && n.nodeValue.trim()){
+          n.nodeValue = (replaced ? '' : entry[lang]);
+          replaced = true;
+        }
+      }
+      if (!replaced){ el.textContent = entry[lang]; }
+    });
+  }
+  var mo = new MutationObserver(function(muts){
+    muts.forEach(function(m){ if (m.attributeName === 'data-lang') apply(); });
+  });
+  mo.observe(document.body, { attributes: true });
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', apply);
+  } else { apply(); }
+})();
+</script>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   i18n — language switcher logic
+═══════════════════════════════════════════════════════════ */
+(function(){
+  var SUPPORTED = ['en','sv','da'];
+  var STORAGE_KEY = 'mset_lang';
+
+  function getInitialLang(){
+    // 1. URL hash (?lang=sv or #lang=sv)
+    try {
+      var hash = window.location.hash.replace('#','');
+      if (SUPPORTED.indexOf(hash) !== -1) return hash;
+      var params = new URLSearchParams(window.location.search);
+      var q = params.get('lang');
+      if (q && SUPPORTED.indexOf(q) !== -1) return q;
+    } catch(e){}
+    // 2. localStorage
+    try {
+      var stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
+    } catch(e){}
+    // 3. Browser preference
+    try {
+      var nav = (navigator.language || 'en').slice(0,2).toLowerCase();
+      if (SUPPORTED.indexOf(nav) !== -1) return nav;
+    } catch(e){}
+    return 'en';
+  }
+
+  function setLang(lang){
+    if (SUPPORTED.indexOf(lang) === -1) lang = 'en';
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch(e){}
+    // Update all switcher buttons
+    var btns = document.querySelectorAll('.lang-switch button');
+    btns.forEach(function(b){
+      b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false');
+    });
+  }
+
+  function initSwitchers(){
+    var groups = document.querySelectorAll('.lang-switch');
+    groups.forEach(function(group){
+      group.addEventListener('click', function(e){
+        var btn = e.target.closest('button[data-lang]');
+        if (!btn) return;
+        setLang(btn.dataset.lang);
+      });
+    });
+  }
+
+  // Run on DOM ready
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', function(){
+      setLang(getInitialLang());
+      initSwitchers();
+    });
+  } else {
+    setLang(getInitialLang());
+    initSwitchers();
+  }
+})();
+
+</script>
 </body>
 </html>
