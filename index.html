@@ -1631,9 +1631,21 @@ section:has(.field-note:last-child) {
 .scare-strip .field-note-body {
   color: rgba(245,243,237,.85);
 }
+/* Turnstile CAPTCHA widget spacing on contact form */
+.form-captcha {
+  display: flex;
+  justify-content: center;
+  margin: .5rem 0 .25rem;
+}
+.form-captcha .cf-turnstile {
+  min-height: 65px;
+}
+
 /* ═══ END SESSION 2 ═══ */
 
 </style>
+<!-- Cloudflare Turnstile (CAPTCHA on contact form) -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body data-lang="en">
 <!-- ═══════════════════════════════════════════════════════════
@@ -2707,6 +2719,9 @@ section:has(.field-note:last-child) {
 <div class="form-group">
 <label data-i18n="form.message" for="message">Your message</label>
 <textarea data-i18n-placeholder="form.ph.message" id="message" name="message" placeholder="Tell us a little about your project or challenge..." required=""></textarea>
+</div>
+<div class="form-group form-captcha">
+<div class="cf-turnstile" data-sitekey="0x4AAAAAADBQTHFU0eyVtaga" data-theme="light" data-size="flexible"></div>
 </div>
 <button class="form-submit" data-i18n="form.send" type="submit">
         Send message
