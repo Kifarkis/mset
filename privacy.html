@@ -497,19 +497,21 @@ abbr {
   align-items: center;
   justify-content: center;
   gap: .9rem;
-  padding: .5rem 1.2rem;
+  padding: .45rem 1.2rem;
   background: rgba(245,243,237,.92);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 999px;
-  box-shadow: 0 1px 3px rgba(10,22,40,.08), 0 0 0 1px rgba(10,22,40,.04);
+  /* Symmetric shadow — same weight above and below so pill looks centered */
+  box-shadow: 0 0 6px rgba(10,22,40,.1), 0 0 0 1px rgba(10,22,40,.04);
   position: relative;
   z-index: 2;
 }
 .section-mark-wrap {
   position: relative;
-  margin-top: -1.5rem;
-  margin-bottom: -1.5rem;
+  /* Exact negative margins — pulls wrapper so the pill's middle sits on the boundary */
+  margin-top: -1.6rem;
+  margin-bottom: -1.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
