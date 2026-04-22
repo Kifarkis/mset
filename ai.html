@@ -2242,19 +2242,24 @@ abbr {
   z-index: 2;
 }
 .section-mark-wrap {
+  /* Wrapper takes ZERO space in flow, so section B starts directly after section A.
+     The pill is absolutely positioned, centered on the boundary via translateY(-50%). */
   position: relative;
-  /* Exact negative margins — pulls wrapper so the pill's middle sits on the boundary */
-  margin-top: -1.6rem;
-  margin-bottom: -1.6rem;
+  height: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
   pointer-events: none;
   z-index: 3;
 }
 .section-mark-wrap .section-mark {
+  /* Absolutely positioned so it floats exactly on the boundary */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
   pointer-events: auto;
 }
+
 .section-mark::before,
 .section-mark::after {
   content: "";
