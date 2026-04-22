@@ -2227,23 +2227,28 @@ abbr {
 
 /* ─── Between-section rule (job B, structural) ─── */
 .section-mark {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: .6rem 1.2rem;
-  max-width: 960px;
-  margin: 0 auto;
-  background: transparent;
+  gap: .9rem;
+  padding: .5rem 1.2rem;
+  background: rgba(245,243,237,.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 999px;
+  box-shadow: 0 1px 3px rgba(10,22,40,.08), 0 0 0 1px rgba(10,22,40,.04);
   position: relative;
   z-index: 2;
 }
 .section-mark-wrap {
   position: relative;
-  margin-top: -2.5rem;
-  margin-bottom: -2.5rem;
+  margin-top: -1.5rem;
+  margin-bottom: -1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
 }
 .section-mark-wrap .section-mark {
   pointer-events: auto;
@@ -2251,13 +2256,14 @@ abbr {
 .section-mark::before,
 .section-mark::after {
   content: "";
-  flex: 1;
-  max-width: 120px;
+  width: 56px;
+  max-width: 56px;
+  flex: 0 0 56px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(10,22,40,.12), rgba(10,22,40,.18));
+  background: linear-gradient(90deg, transparent, rgba(27,74,34,.3), rgba(27,74,34,.42));
 }
 .section-mark::after {
-  background: linear-gradient(90deg, rgba(10,22,40,.18), rgba(10,22,40,.12), transparent);
+  background: linear-gradient(90deg, rgba(27,74,34,.42), rgba(27,74,34,.3), transparent);
 }
 .section-mark .mark {
   width: 13px;
