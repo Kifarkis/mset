@@ -2349,6 +2349,71 @@ abbr {
 }
 /* ═══ END SESSION 1 ═══ */
 
+
+/* ═══════════════════════════════════════════════════════════
+   SESSION 2 — FIELD NOTE ANNOTATIONS
+═══════════════════════════════════════════════════════════ */
+.field-note {
+  margin: 1.6rem 0 0;
+  padding: 0 0 0 1.2rem;
+  border-left: 1.5px solid var(--emerald);
+  max-width: 680px;
+}
+.field-note-label {
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-right: .35rem;
+  display: inline;
+}
+.field-note-dash {
+  color: var(--emerald);
+  font-weight: 500;
+  margin: 0 .25rem 0 .1rem;
+  display: inline;
+}
+.field-note-body {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .97rem;
+  line-height: 1.55;
+  color: var(--ink);
+  display: inline;
+}
+/* Dark-background variant — auto-applies on dark sections (hero, problem, rollout, final-cta) */
+.hero .field-note,
+.problem .field-note,
+.rollout .field-note,
+.final-cta .field-note,
+.scare-strip .field-note {
+  border-left-color: var(--emerald-bright);
+}
+.hero .field-note-label,
+.problem .field-note-label,
+.rollout .field-note-label,
+.final-cta .field-note-label,
+.scare-strip .field-note-label {
+  color: var(--emerald-bright);
+}
+.hero .field-note-dash,
+.problem .field-note-dash,
+.rollout .field-note-dash,
+.final-cta .field-note-dash,
+.scare-strip .field-note-dash {
+  color: var(--emerald-bright);
+}
+.hero .field-note-body,
+.problem .field-note-body,
+.rollout .field-note-body,
+.final-cta .field-note-body,
+.scare-strip .field-note-body {
+  color: rgba(245,243,237,.85);
+}
+/* ═══ END SESSION 2 ═══ */
+
 </style>
 </head>
 <body data-lang="en">
@@ -2578,6 +2643,7 @@ abbr {
 </div>
 <h1 class="display"><span data-i18n="aip.hero.h1.1">Your data.</span><br/><em data-i18n="aip.hero.h1.2">Your AI.</em></h1>
 <p class="hero-lede" data-i18n="aip.hero.lede">Private RAG, validated ML, BI analytics and governance for regulated life science. Your R&amp;D spend and SOPs get analysed where they live — not in a vendor's logs. Your prompts don't train someone else's model. Your auditors get evidence they can point to, not vibes.</p>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">Every enterprise AI policy we've seen starts with "don't paste confidential data into ChatGPT." That's not a policy; that's a hope. A policy tells someone what they <em>should</em> do instead.</span></div>
 <div class="hero-ctas">
 <a class="btn-primary" data-i18n="aip.hero.cta1" href="index.html#contact?topic=ai">Start an AI assessment
           <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="14"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -2662,9 +2728,9 @@ abbr {
 <span class="perimeter-footnote" data-i18n="aip.hero.dash.footnote">analysed on-prem · zero egress</span>
 </div>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">Most pharma clients start with Use Case 01 (document RAG) because the ROI is immediate and the risk is contained. The hard one is Use Case 04 — validated AI in production — because your QA team needs to sign something off that the FDA will recognize. We do them in that order for a reason.</span></div>
 </div>
-</section>
-<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+</section><div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ §2 PROBLEM ═════════ -->
 <section class="problem">
 <div class="section-inner">
@@ -2709,6 +2775,8 @@ abbr {
 </div>
 </div>
 
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">Samsung's 2023 incident is the one everyone cites, but the London pharma IP breach last year was arguably worse. It just didn't get the press.</span></div>
+
 <!-- Three structural failure modes -->
 <div class="threat-grid stagger">
 <div class="threat-card">
@@ -2727,9 +2795,9 @@ abbr {
 <p data-i18n="aip.prob.t3.body">Your clinical data must stay in the EU under GDPR. Your IP is governed by the contracts you signed. Consumer AI sends prompts to US servers, often with unclear subprocessor chains. For pharma, that isn't a compliance gap — it's a notifiable breach waiting to happen.</p>
 </div>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">A 2×H100 server retails around €80K. That's three months of one senior data scientist. If your GPUs are sitting idle 60% of the time — which they will, in a single-workload deployment — hybrid inference is cheaper per query. Pattern A is the right choice when sovereignty is non-negotiable, not when economics are.</span></div>
 </div>
-</section>
-<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+</section><div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ §3 USE CASES ═════════ -->
 <section class="use-cases" id="use-cases">
 <div class="section-inner">
@@ -2848,9 +2916,9 @@ abbr {
 </ul>
 </div>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">Phase 03 is where clients usually underestimate the internal effort. We build; your team also has to review, test, and approve. Rule of thumb: budget 30% of our time, again, on your side for the first use case. That number halves by the third.</span></div>
 </div>
-</section>
-<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+</section><div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ §4 ARCHITECTURE ═════════ -->
 <section class="architecture">
 <div class="section-inner">
@@ -2936,6 +3004,7 @@ abbr {
 </ul>
 <p class="arch-tradeoff"><strong data-i18n="aip.arch.tradeoff-label3">Trade-off</strong> <span data-i18n="aip.arch.c.tradeoff">Most practical for most pharma. Requires careful prompt-scrubbing &amp; query-audit design.</span></p>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">We've deployed Pattern C in four pharma engagements. Every time, the objection isn't technical — it's convincing QA that zero-retention means what the vendor says it means. The answer is a signed data processing agreement that says it, followed by audit logs that prove it.</span></div>
 </div>
 </div>
 </section>
@@ -3008,9 +3077,9 @@ abbr {
 </li>
 </ol>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">These seven documents take two to four weeks to draft from our templates. They take two to six months to get signed. The difference is change management, not paperwork.</span></div>
 </div>
-</section>
-<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+</section><div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ §6 HOW WE ENGAGE ═════════ -->
 <section class="engage">
 <div class="section-inner">
@@ -3132,6 +3201,7 @@ abbr {
 <p data-i18n="aip.faq.q4.p2">We benchmark 3–5 candidates against your actual use case before committing — and re-benchmark quarterly, because the leaderboard moves.</p>
 </div>
 </details>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">We keep a private benchmark of 40+ model-task pairs across pharma use cases. The leaderboard shifts monthly. We re-benchmark quarterly, not because it's trendy, but because last quarter's best model is often this quarter's second-best.</span></div>
 
 <details class="faq-item">
 <summary data-i18n="aip.faq.q5.q">Do we need a GPU cluster?</summary>
@@ -3156,6 +3226,7 @@ abbr {
 <p data-i18n="aip.faq.q7.p2">No hourly billing games — you know the number before we begin. We quote after a short scoping call.</p>
 </div>
 </details>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">A Phase 01 assessment is typically fixed-price in the low five figures. Phase 02 is similar. Phase 03 ranges from five to low six figures depending on scope. We'll quote specifically after a 30-minute scoping call, not before.</span></div>
 </div>
 </div>
 </section>
@@ -3165,6 +3236,7 @@ abbr {
 <div class="final-cta-inner">
 <h2 class="display"><span data-i18n="aip.final.h2.1">Less hand-waving.</span> <em data-i18n="aip.final.h2.2">More working AI.</em></h2>
 <p data-i18n="aip.final.lede">A 30-minute intake call, a two-week assessment, a defensible strategy by week six, working systems by week ten. No "AI transformation" slideshows.</p>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">The fastest way to stop worrying about AI risk is to book the intake call. The second fastest is to read our governance template first and then book the call.</span></div>
 <div class="hero-ctas" style="justify-content:center">
 <a class="btn-primary" data-i18n="aip.final.cta1" href="index.html#contact?topic=ai">Book an intro call
         <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="14"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>

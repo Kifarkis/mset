@@ -1277,6 +1277,71 @@ abbr {
 }
 /* ═══ END SESSION 1 ═══ */
 
+
+/* ═══════════════════════════════════════════════════════════
+   SESSION 2 — FIELD NOTE ANNOTATIONS
+═══════════════════════════════════════════════════════════ */
+.field-note {
+  margin: 1.6rem 0 0;
+  padding: 0 0 0 1.2rem;
+  border-left: 1.5px solid var(--emerald);
+  max-width: 680px;
+}
+.field-note-label {
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-right: .35rem;
+  display: inline;
+}
+.field-note-dash {
+  color: var(--emerald);
+  font-weight: 500;
+  margin: 0 .25rem 0 .1rem;
+  display: inline;
+}
+.field-note-body {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .97rem;
+  line-height: 1.55;
+  color: var(--ink);
+  display: inline;
+}
+/* Dark-background variant — auto-applies on dark sections (hero, problem, rollout, final-cta) */
+.hero .field-note,
+.problem .field-note,
+.rollout .field-note,
+.final-cta .field-note,
+.scare-strip .field-note {
+  border-left-color: var(--emerald-bright);
+}
+.hero .field-note-label,
+.problem .field-note-label,
+.rollout .field-note-label,
+.final-cta .field-note-label,
+.scare-strip .field-note-label {
+  color: var(--emerald-bright);
+}
+.hero .field-note-dash,
+.problem .field-note-dash,
+.rollout .field-note-dash,
+.final-cta .field-note-dash,
+.scare-strip .field-note-dash {
+  color: var(--emerald-bright);
+}
+.hero .field-note-body,
+.problem .field-note-body,
+.rollout .field-note-body,
+.final-cta .field-note-body,
+.scare-strip .field-note-body {
+  color: rgba(245,243,237,.85);
+}
+/* ═══ END SESSION 2 ═══ */
+
 </style>
 </head>
 <body data-lang="en">
@@ -1519,6 +1584,7 @@ Security Awareness Training
 </div>
 <h1 class="display"><span data-i18n="sat.h1.line1">Your people are</span> <em data-i18n="sat.h1.line2">your perimeter.</em></h1>
 <p class="hero-lede" data-i18n="sat.lede">Realistic phishing simulations, role-based e-learning and audit-ready reporting — standard for every company, with optional GxP-specific modules for regulated industries.</p>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">Every training vendor promises "behaviour change." What that usually means is completion certificates and a phishing simulation dashboard. Behaviour change is measurable. Certificates are not.</span></div>
 <div class="hero-ctas">
 <a class="btn-primary" data-i18n="sat.cta.pilot" href="index.html#contact?topic=sat">Start a pilot
           <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="14"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1611,6 +1677,7 @@ Security Awareness Training
 <p><span data-i18n="sat.problem.quote.1">You can spend</span> <em data-i18n="sat.problem.quote.2">millions</em> <span data-i18n="sat.problem.quote.3">on firewalls, EDR and zero-trust architecture — and still lose the whole stack when someone in QA clicks the wrong link on a Tuesday afternoon.</span></p>
 </div>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">Your MDM, EDR, and email gateway all have budgets. Training typically has a line item like "Q4 compliance." That ratio is why 91% of breaches still start with a human click.</span></div>
 </section>
 <div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ WHY GENERIC SAT FAILS ═════════ -->
@@ -1651,6 +1718,7 @@ Security Awareness Training
 </div>
 </div>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">The "specialised" modules exist because GxP companies have regulatory obligations their finance-firm peers don't. An operator in a GMP facility needs to understand data integrity differently than an accounts-payable clerk needs to understand wire fraud.</span></div>
 </section>
 <div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ THE PROGRAMME ═════════ -->
@@ -1736,6 +1804,7 @@ Security Awareness Training
 </div>
 </div>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">Component 4 (simulated phishing campaigns) is the one clients push back on hardest. "We don't want to trick our people." We tell them: your adversary will, and the real phish won't come with a training debrief afterwards.</span></div>
 </section>
 <div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ ROLLOUT ═════════ -->
@@ -1795,6 +1864,7 @@ Security Awareness Training
 </div>
 </div>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">Phase 02 of rollout is usually when a client realises their existing Active Directory groups don't map cleanly onto risk roles. Half of IT knows this already. Finding out during training rollout is cheap; finding out during an audit is not.</span></div>
 </section>
 <div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ REPORTING DEMO ═════════ -->
@@ -1878,6 +1948,7 @@ Security Awareness Training
 </div>
 </div>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">Your board doesn't want to see a phishing click-rate graph. They want to see that (a) you know what the rate is, (b) it's trending down, and (c) when it spikes, you investigate. Three data points, well-captioned, beats a 40-page dashboard every time.</span></div>
 </section>
 <div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ FAQ ═════════ -->
@@ -1931,6 +2002,7 @@ Security Awareness Training
 </details>
 </div>
 </div>
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body">The fastest deployment we've done was 11 days from first call to first simulated phishing email landing in inboxes. The longest was 5 months — because procurement needed to re-tender. Both got the same end state. Your internal process is the variable.</span></div>
 </section>
 <div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ FINAL CTA ═════════ -->

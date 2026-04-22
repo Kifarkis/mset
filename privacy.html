@@ -615,6 +615,71 @@ abbr {
 }
 /* ═══ END SESSION 1 ═══ */
 
+
+/* ═══════════════════════════════════════════════════════════
+   SESSION 2 — FIELD NOTE ANNOTATIONS
+═══════════════════════════════════════════════════════════ */
+.field-note {
+  margin: 1.6rem 0 0;
+  padding: 0 0 0 1.2rem;
+  border-left: 1.5px solid var(--emerald);
+  max-width: 680px;
+}
+.field-note-label {
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-right: .35rem;
+  display: inline;
+}
+.field-note-dash {
+  color: var(--emerald);
+  font-weight: 500;
+  margin: 0 .25rem 0 .1rem;
+  display: inline;
+}
+.field-note-body {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .97rem;
+  line-height: 1.55;
+  color: var(--ink);
+  display: inline;
+}
+/* Dark-background variant — auto-applies on dark sections (hero, problem, rollout, final-cta) */
+.hero .field-note,
+.problem .field-note,
+.rollout .field-note,
+.final-cta .field-note,
+.scare-strip .field-note {
+  border-left-color: var(--emerald-bright);
+}
+.hero .field-note-label,
+.problem .field-note-label,
+.rollout .field-note-label,
+.final-cta .field-note-label,
+.scare-strip .field-note-label {
+  color: var(--emerald-bright);
+}
+.hero .field-note-dash,
+.problem .field-note-dash,
+.rollout .field-note-dash,
+.final-cta .field-note-dash,
+.scare-strip .field-note-dash {
+  color: var(--emerald-bright);
+}
+.hero .field-note-body,
+.problem .field-note-body,
+.rollout .field-note-body,
+.final-cta .field-note-body,
+.scare-strip .field-note-body {
+  color: rgba(245,243,237,.85);
+}
+/* ═══ END SESSION 2 ═══ */
+
 </style>
 </head>
 <body data-lang="en">
