@@ -534,13 +534,6 @@ abbr {
   background-repeat: no-repeat;
 }
 /* Wrapper variants: when .section-mark-wrap has dark or sage bg */
-.section-mark-wrap {
-  padding: 0;
-  margin: 0;
-}
-.section-mark-wrap.dark {
-  background: var(--ink);
-}
 .section-mark-wrap.dark .section-mark::before,
 .section-mark-wrap.dark .section-mark::after {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), rgba(255,255,255,.14));
@@ -551,8 +544,6 @@ abbr {
 .section-mark-wrap.dark .section-mark .mark {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364' opacity='.55'/></svg>");
 }
-.section-mark-wrap.sage-100 { background: var(--sage-100); }
-.section-mark-wrap.sage-50 { background: var(--sage-50); }
 
 /* ─── Em-dash list overrides ─── */
 /* Overrides existing tick-style ::before on use-list, eng-deliverables, etc. */
