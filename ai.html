@@ -2354,10 +2354,21 @@ abbr {
    SESSION 2 — FIELD NOTE ANNOTATIONS
 ═══════════════════════════════════════════════════════════ */
 .field-note {
-  margin: 1.6rem 0 0;
+  margin: 1.8rem 0;
   padding: 0 0 0 1.2rem;
   border-left: 1.5px solid var(--emerald);
   max-width: 680px;
+}
+/* Extra breathing room when a field note is immediately followed by a button group */
+.field-note + .hero-ctas {
+  margin-top: 2.4rem;
+}
+/* When a field note is the LAST element of its section, reduce section's bottom padding
+   to avoid doubled-space before the next section-mark */
+section:has(> .section-inner > .field-note:last-child),
+section:has(> .hero-inner > .field-note:last-child),
+section:has(> .final-cta-inner > .field-note:last-child) {
+  padding-bottom: 3rem;
 }
 .field-note-label {
   font-family: var(--font-mono);
