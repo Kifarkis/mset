@@ -685,6 +685,9 @@ window.MSET_TRANSLATIONS = {
   /* ═══ PRIVACY NOTICE BANNER ═══ */
   "privacy-notice.body": { sv: "Vi lagrar och hanterar era kontaktformulärdetaljer endast för att svara er. Inga spårningscookies, ingen analysprofilering.",
                            da: "Vi opbevarer og behandler oplysninger fra kontaktformularen udelukkende for at svare jer. Ingen tracking-cookies, ingen analyseprofilering." },
+  "privacy-notice.see":     { sv: "Se vår", da: "Se vores" },
+  "privacy-notice.link":    { sv: "integritetspolicy", da: "privatlivspolitik" },
+  "privacy-notice.for-full":{ sv: "för hela bilden.", da: "for det fulde billede." },
   "privacy-notice.see":  { sv: "Se vår",                  da: "Se vores" },
   "privacy-notice.policy": { sv: "integritetspolicy",     da: "privatlivspolitik" },
   "privacy-notice.full": { sv: "för hela bilden.",        da: "for hele billedet." },
@@ -1112,6 +1115,12 @@ window.MSET_TRANSLATIONS = {
   "privacy.contact.h2":  { sv: "Frågor om era uppgifter?", da: "Spørgsmål om jeres data?" },
   "privacy.contact.p":   { sv: "Vi förklarar gärna vad som helst i denna policy eller hjälper er att utöva era rättigheter. Mejla oss på info@mset.se med \"Integritetsfråga\" i ämnesraden så svarar vi inom en arbetsdag.",
                            da: "Vi forklarer gerne noget i denne politik eller hjælper jer med at udøve jeres rettigheder. Send os en e-mail på info@mset.se med \"Privatlivsforespørgsel\" i emnefeltet, så svarer vi inden for en hverdag." },
+  "privacy.s8.b8.prefix":      { sv: "Rätt att lämna in klagomål — klaga hos den svenska dataskyddsmyndigheten (", da: "Ret til at indgive klage — klag til den svenske databeskyttelsesmyndighed (" },
+  "privacy.s8.b8.suffix":      { sv: ") om ni anser att era rättigheter har kränkts.", da: "), hvis I mener, at jeres rettigheder er blevet krænket." },
+  "privacy.s8.p2.prefix":      { sv: "För att utöva någon av dessa rättigheter, mejla oss på", da: "For at udøve nogen af disse rettigheder, send os en e-mail på" },
+  "privacy.s8.p2.suffix":      { sv: "Vi svarar inom 30 dagar. Det kostar ingenting för en första begäran.", da: "Vi svarer inden for 30 dage. Der er ingen gebyr for en første anmodning." },
+  "privacy.contact.p.prefix":  { sv: "Vi förklarar gärna vad som helst i denna policy eller hjälper er att utöva era rättigheter. Mejla oss på", da: "Vi forklarer gerne noget i denne politik eller hjælper jer med at udøve jeres rettigheder. Send os en e-mail på" },
+  "privacy.contact.p.suffix":  { sv: "med \"Integritetsfråga\" i ämnesraden så svarar vi inom en arbetsdag.", da: "med \"Privatlivsforespørgsel\" i emnefeltet, så svarer vi inden for en hverdag." },
   /* ═══ FORM PLACEHOLDERS (index.html only) ═══ */
   "form.ph.first":       { sv: "Anna",                    da: "Anna" },
   "form.ph.last":        { sv: "Lindqvist",               da: "Lindqvist" },
