@@ -914,29 +914,180 @@ body[data-lang="en"] .i18n-block > [lang="en"],
 body[data-lang="sv"] .i18n-block > [lang="sv"],
 body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 
-/* Language switcher pill group */
-.lang-switch{
-  display:inline-flex;align-items:center;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:999px;padding:.18rem;gap:.08rem;
-  margin-right:.5rem;
+/* ═══════════════════════════════════════════════════════════
+   NAV: hybrid dropdown (AI + Security) + editorial lang switcher
+═══════════════════════════════════════════════════════════ */
+.nav-links{position:relative}
+.nav-links > li{position:relative}
+
+/* Hover hotspot for items that have a dedicated deep page */
+.nav-links .has-deep{
+  display:inline-flex;align-items:center;gap:.25rem;
+  padding:.35rem 0;margin:-.35rem 0;
+  cursor:default;
 }
-.lang-switch button{
-  font:inherit;font-size:.68rem;font-weight:600;
-  letter-spacing:.06em;text-transform:uppercase;
-  color:rgba(255,255,255,.6);
-  padding:.32rem .62rem;border-radius:999px;
-  border:none;background:transparent;cursor:pointer;
-  transition:all .2s;
+.nav-links .has-deep > a{padding:.1rem 0}
+.deep-toggle{
+  width:18px;height:18px;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.5);border-radius:3px;padding:0;
+  margin-left:-.1rem;background:transparent;border:none;cursor:pointer;
+  transition:color .2s var(--ease,cubic-bezier(.16,1,.3,1)),transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
 }
-.lang-switch button:hover{color:rgba(255,255,255,.9)}
-.lang-switch button[aria-pressed="true"]{
-  background:var(--emerald);color:var(--ink);
+.deep-toggle:hover,.deep-toggle:focus-visible{color:var(--emerald-bright);outline:none}
+.deep-toggle svg{
+  width:10px;height:10px;
+  transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
 }
+.has-deep.open .deep-toggle{color:var(--emerald-bright)}
+.has-deep.open .deep-toggle svg{transform:rotate(180deg)}
+
+/* Floating dropdown card */
+.deep-card{
+  position:absolute;top:calc(100% + .85rem);left:50%;
+  transform:translateX(-50%) translateY(-8px);
+  width:340px;background:#fff;
+  border:1px solid rgba(10,22,40,.1);border-radius:12px;
+  box-shadow:0 10px 24px rgba(10,22,40,.12),0 2px 6px rgba(10,22,40,.06);
+  padding:.5rem;opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .22s var(--ease,cubic-bezier(.16,1,.3,1)),transform .28s var(--ease,cubic-bezier(.16,1,.3,1)),visibility .22s;
+  z-index:101;
+}
+.deep-card::before{
+  content:"";position:absolute;top:0;left:24px;right:24px;height:2px;
+  background:linear-gradient(90deg,transparent 0%,var(--emerald) 20%,var(--emerald-bright) 50%,var(--emerald) 80%,transparent 100%);
+  border-radius:0 0 2px 2px;
+}
+.deep-card::after{
+  content:"";position:absolute;top:-7px;left:50%;
+  transform:translateX(-50%) rotate(45deg);
+  width:12px;height:12px;background:#fff;
+  border-left:1px solid rgba(10,22,40,.1);border-top:1px solid rgba(10,22,40,.1);
+}
+.has-deep.open .deep-card{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateX(-50%) translateY(0);
+}
+
+.deep-row{
+  display:block;padding:.85rem 1rem;border-radius:8px;
+  transition:background .18s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-row + .deep-row{margin-top:.2rem}
+.deep-row:hover,.deep-row:focus-visible{background:var(--sage-50);outline:none}
+.deep-row-label{
+  font-family:var(--f-display,'Fraunces',Georgia,serif);font-style:italic;
+  font-size:1rem;font-weight:500;color:var(--ink);
+  display:flex;align-items:center;gap:.4rem;margin-bottom:.18rem;
+}
+.deep-row-label .arrow{
+  display:inline-block;font-size:.85em;color:var(--emerald);
+  transition:transform .2s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-row:hover .deep-row-label .arrow{transform:translateX(3px)}
+.deep-row-desc{
+  font-family:var(--f-body,'Plus Jakarta Sans',sans-serif);
+  font-size:.76rem;line-height:1.45;color:var(--muted);font-style:normal;
+}
+.deep-row.primary .deep-row-label::before{
+  content:"";width:5px;height:5px;border-radius:50%;
+  background:var(--emerald);display:inline-block;flex-shrink:0;
+}
+
+/* Compact language pill + editorial popover */
+.lang-switch{position:relative;margin-left:.5rem;display:inline-flex;align-items:center}
+.lang-pill{
+  display:inline-flex;align-items:center;gap:.35rem;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:999px;padding:.35rem .72rem .35rem .8rem;
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.85);cursor:pointer;
+  transition:all .2s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-pill:hover,.lang-pill:focus-visible{
+  background:rgba(255,255,255,.1);border-color:rgba(126,195,137,.3);
+  color:#fff;outline:none;
+}
+.lang-pill .chevron{
+  width:8px;height:8px;opacity:.7;
+  transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-switch.open .lang-pill .chevron{transform:rotate(180deg)}
+.lang-pill .dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--emerald-bright);display:inline-block;
+}
+
+.lang-pop{
+  position:absolute;top:calc(100% + .75rem);right:0;
+  min-width:220px;background:#fff;
+  border:1px solid rgba(10,22,40,.1);border-radius:12px;
+  box-shadow:0 10px 24px rgba(10,22,40,.12),0 2px 6px rgba(10,22,40,.06);
+  padding:1.2rem 1.3rem 1.1rem;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateY(-6px) scale(.97);transform-origin:top right;
+  transition:opacity .22s var(--ease,cubic-bezier(.16,1,.3,1)),transform .28s var(--ease,cubic-bezier(.16,1,.3,1)),visibility .22s;
+  z-index:101;
+}
+.lang-pop::after{
+  content:"";position:absolute;top:-7px;right:18px;
+  width:12px;height:12px;background:#fff;transform:rotate(45deg);
+  border-left:1px solid rgba(10,22,40,.1);border-top:1px solid rgba(10,22,40,.1);
+}
+.lang-switch.open .lang-pop{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateY(0) scale(1);
+}
+.lang-pop-label{
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.55rem;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;
+}
+.lang-pop ul{display:flex;flex-direction:column;gap:.1rem;list-style:none;padding:0;margin:0}
+.lang-pop button{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  width:100%;padding:.55rem .6rem;border-radius:6px;text-align:left;
+  background:transparent;border:none;cursor:pointer;font:inherit;
+  transition:background .18s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-pop button:hover,.lang-pop button:focus-visible{background:var(--sage-50);outline:none}
+.lang-pop .native{
+  font-family:var(--f-display,'Fraunces',Georgia,serif);font-style:italic;
+  font-size:1.15rem;font-weight:400;color:var(--ink);letter-spacing:-.005em;
+}
+.lang-pop .code{
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.62rem;font-weight:600;letter-spacing:.14em;
+  color:var(--muted);text-transform:uppercase;
+}
+.lang-pop button[aria-pressed="true"] .native{color:var(--forest)}
+.lang-pop button[aria-pressed="true"] .native::after{
+  content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--emerald);margin-left:.5rem;vertical-align:middle;
+}
+.lang-pop button[aria-pressed="true"] .code{color:var(--forest)}
+
 @media (max-width:980px){
   .lang-switch{display:none}
-  .mobile-menu .lang-switch{display:inline-flex;margin:1rem 0 0}
+  .mobile-menu .lang-switch{display:block;margin-top:1rem;position:static}
+  .mobile-menu .lang-pop{
+    position:static;opacity:1;visibility:visible;pointer-events:auto;
+    transform:none;box-shadow:none;padding:1rem 0 0;
+    background:transparent;border:none;border-top:1px solid rgba(255,255,255,.08);
+  }
+  .mobile-menu .lang-pop::after{display:none}
+  .mobile-menu .lang-pop .native{color:rgba(255,255,255,.85)}
+  .mobile-menu .lang-pop .code{color:rgba(255,255,255,.5)}
+  .mobile-menu .lang-pop-label{color:rgba(255,255,255,.45)}
+  .mobile-menu .lang-pop button:hover{background:rgba(255,255,255,.05)}
+  .mobile-menu .lang-pop button[aria-pressed="true"] .native{color:var(--emerald-glow)}
+  .mobile-menu .lang-pop button[aria-pressed="true"] .code{color:var(--emerald-bright)}
+  .mobile-menu .deep-child{
+    padding-left:1.2rem;font-size:.88rem;color:rgba(255,255,255,.6);
+    border-bottom:1px solid rgba(255,255,255,.04)!important;
+  }
+  .mobile-menu .deep-child::before{content:"→ ";color:var(--emerald-bright)}
 }
 
 </style>
@@ -1080,6 +1231,9 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <circle cx="46" cy="42" fill="#5BA364" r="3.5"></circle>
 <path d="M44.5 42 L 46 43.5 L 48 41" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"></path>
 </symbol>
+<symbol id="chevron-down" viewBox="0 0 10 10">
+<path d="M1.5 3.5 L5 7 L8.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
 </defs>
 </svg>
 <!-- ═════════ NAV — identical to main site ═════════ -->
@@ -1091,12 +1245,57 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </a>
 <ul class="nav-links">
 <li><a data-i18n="nav.gxp" href="index.html#services">GxP</a></li>
-<li><a data-i18n="nav.ai" href="index.html#ai">AI</a></li>
-<li><a data-i18n="nav.security" href="index.html#security">Security</a></li>
+<li class="has-deep" data-deep="ai">
+<a data-i18n="nav.ai" href="index.html#ai">AI</a>
+<button class="deep-toggle" type="button" aria-label="AI — show more" aria-expanded="false" aria-controls="deep-ai">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-ai" role="menu">
+<a class="deep-row" href="index.html#ai" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.ai.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.ai.desc">The 4 service cards on the homepage.</div>
+</a>
+<a class="deep-row primary" href="ai.html" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.ai.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.ai.deep-desc">Full AI Consulting page — 9 use cases, 3 architecture patterns, 7 governance docs.</div>
+</a>
+</div>
+</li>
+<li class="has-deep" data-deep="security">
+<a data-i18n="nav.security" href="index.html#security">Security</a>
+<button class="deep-toggle" type="button" aria-label="Security — show more" aria-expanded="false" aria-controls="deep-security">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-security" role="menu"><a class="deep-row" href="index.html#security" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.security.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.security.desc">The IT security service cards on the homepage.</div>
+</a>
+<a class="deep-row primary" href="sat.html" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.security.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.security.deep-desc">Full Security Awareness Training page — phishing simulations, training programmes.</div>
+</a>
+</div>
+</li>
 <li><a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a></li>
 <li><a data-i18n="nav.about" href="index.html#about">About</a></li>
 <li><a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a></li>
-<li><div class="lang-switch" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="sv" aria-pressed="false">SV</button><button type="button" data-lang="da" aria-pressed="false">DA</button></div></li>
+<li>
+<div class="lang-switch" id="langSwitch">
+<button class="lang-pill" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langPop">
+<span class="dot" aria-hidden="true"></span>
+<span class="current-code">EN</span>
+<svg class="chevron" aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="lang-pop" id="langPop" role="menu">
+<div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
+<ul>
+<li><button type="button" data-lang="en" aria-pressed="true" role="menuitemradio"><span class="native">English</span><span class="code">EN</span></button></li>
+<li><button type="button" data-lang="sv" aria-pressed="false" role="menuitemradio"><span class="native">Svenska</span><span class="code">SV</span></button></li>
+<li><button type="button" data-lang="da" aria-pressed="false" role="menuitemradio"><span class="native">Dansk</span><span class="code">DA</span></button></li>
+</ul>
+</div>
+</div>
+</li>
 </ul>
 <button aria-label="Menu" class="nav-hamburger" id="hamburger">
 <span></span><span></span><span></span>
@@ -1106,12 +1305,23 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="mobile-menu" id="mobileMenu">
 <a data-i18n="nav.gxp" href="index.html#services">GxP</a>
 <a data-i18n="nav.ai" href="index.html#ai">AI</a>
+<a data-i18n="nav.ai.deep" class="deep-child" href="ai.html">Deep dive: AI Consulting</a>
 <a data-i18n="nav.security" href="index.html#security">Security</a>
+<a data-i18n="nav.security.deep" class="deep-child" href="sat.html">Deep dive: Security Awareness Training</a>
 <a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a>
 <a data-i18n="nav.about" href="index.html#about">About</a>
 <a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a>
 
-  <div class="lang-switch" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="sv" aria-pressed="false">SV</button><button type="button" data-lang="da" aria-pressed="false">DA</button></div>
+<div class="lang-switch" role="group" aria-label="Language">
+<div class="lang-pop" id="langPopMobile">
+<div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
+<ul>
+<li><button type="button" data-lang="en" aria-pressed="true"><span class="native">English</span><span class="code">EN</span></button></li>
+<li><button type="button" data-lang="sv" aria-pressed="false"><span class="native">Svenska</span><span class="code">SV</span></button></li>
+<li><button type="button" data-lang="da" aria-pressed="false"><span class="native">Dansk</span><span class="code">DA</span></button></li>
+</ul>
+</div>
+</div>
 </div>
 <!-- ═════════ HERO ═════════ -->
 <section class="hero">
@@ -1764,14 +1974,16 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 
 <script>
 /* ═══════════════════════════════════════════════════════════
-   i18n — language switcher logic
+   i18n language selection + hybrid nav dropdowns
 ═══════════════════════════════════════════════════════════ */
 (function(){
   var SUPPORTED = ['en','sv','da'];
   var STORAGE_KEY = 'mset_lang';
+  var OPEN_DELAY = 140;
+  var CLOSE_DELAY = 320;
+  var supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   function getInitialLang(){
-    // 1. URL hash (?lang=sv or #lang=sv)
     try {
       var hash = window.location.hash.replace('#','');
       if (SUPPORTED.indexOf(hash) !== -1) return hash;
@@ -1779,12 +1991,10 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
       var q = params.get('lang');
       if (q && SUPPORTED.indexOf(q) !== -1) return q;
     } catch(e){}
-    // 2. localStorage
     try {
       var stored = localStorage.getItem(STORAGE_KEY);
       if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
     } catch(e){}
-    // 3. Browser preference
     try {
       var nav = (navigator.language || 'en').slice(0,2).toLowerCase();
       if (SUPPORTED.indexOf(nav) !== -1) return nav;
@@ -1797,36 +2007,126 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
     document.body.setAttribute('data-lang', lang);
     document.documentElement.setAttribute('lang', lang);
     try { localStorage.setItem(STORAGE_KEY, lang); } catch(e){}
-    // Update all switcher buttons
-    var btns = document.querySelectorAll('.lang-switch button');
-    btns.forEach(function(b){
+    document.querySelectorAll('.lang-pop button[data-lang]').forEach(function(b){
       b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false');
     });
+    document.querySelectorAll('.current-code').forEach(function(el){
+      el.textContent = lang.toUpperCase();
+    });
+    // Re-run i18n applier if available
+    if (typeof window.__msetApplyI18n === 'function') window.__msetApplyI18n();
   }
 
-  function initSwitchers(){
-    var groups = document.querySelectorAll('.lang-switch');
-    groups.forEach(function(group){
-      group.addEventListener('click', function(e){
-        var btn = e.target.closest('button[data-lang]');
-        if (!btn) return;
-        setLang(btn.dataset.lang);
+  // ═══ Nav dropdown setup ═══
+  var deepItems = document.querySelectorAll('.nav-links .has-deep');
+  var openTimers = new WeakMap();
+  var closeTimers = new WeakMap();
+
+  function openDeep(item){
+    clearTimeout(closeTimers.get(item));
+    deepItems.forEach(function(other){
+      if (other !== item && other.classList.contains('open')) closeDeep(other);
+    });
+    closeLangPop();
+    item.classList.add('open');
+    var btn = item.querySelector('.deep-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  }
+  function closeDeep(item){
+    clearTimeout(openTimers.get(item));
+    item.classList.remove('open');
+    var btn = item.querySelector('.deep-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  }
+  function closeAllDeeps(){ deepItems.forEach(closeDeep); }
+
+  deepItems.forEach(function(item){
+    var toggle = item.querySelector('.deep-toggle');
+    if (supportsHover){
+      item.addEventListener('mouseenter', function(){
+        clearTimeout(closeTimers.get(item));
+        openTimers.set(item, setTimeout(function(){ openDeep(item); }, OPEN_DELAY));
       });
+      item.addEventListener('mouseleave', function(){
+        clearTimeout(openTimers.get(item));
+        closeTimers.set(item, setTimeout(function(){ closeDeep(item); }, CLOSE_DELAY));
+      });
+    }
+    if (toggle){
+      toggle.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        if (item.classList.contains('open')) closeDeep(item);
+        else openDeep(item);
+      });
+    }
+  });
+
+  // ═══ Lang switcher setup ═══
+  var langSwitchDesktop = document.querySelector('.nav-links .lang-switch');
+  var langPill = langSwitchDesktop ? langSwitchDesktop.querySelector('.lang-pill') : null;
+  var langOpenTimer, langCloseTimer;
+
+  function openLangPop(){
+    clearTimeout(langCloseTimer);
+    if (!langSwitchDesktop) return;
+    closeAllDeeps();
+    langSwitchDesktop.classList.add('open');
+    if (langPill) langPill.setAttribute('aria-expanded', 'true');
+  }
+  function closeLangPop(){
+    clearTimeout(langOpenTimer);
+    document.querySelectorAll('.nav-links .lang-switch').forEach(function(ls){
+      ls.classList.remove('open');
+    });
+    if (langPill) langPill.setAttribute('aria-expanded', 'false');
+  }
+
+  if (supportsHover && langSwitchDesktop){
+    langSwitchDesktop.addEventListener('mouseenter', function(){
+      clearTimeout(langCloseTimer);
+      langOpenTimer = setTimeout(openLangPop, OPEN_DELAY);
+    });
+    langSwitchDesktop.addEventListener('mouseleave', function(){
+      clearTimeout(langOpenTimer);
+      langCloseTimer = setTimeout(closeLangPop, CLOSE_DELAY);
     });
   }
+  if (langPill){
+    langPill.addEventListener('click', function(e){
+      e.stopPropagation();
+      if (langSwitchDesktop.classList.contains('open')) closeLangPop();
+      else openLangPop();
+    });
+  }
+
+  document.querySelectorAll('.lang-pop button[data-lang]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      setLang(btn.dataset.lang);
+      closeLangPop();
+    });
+  });
+
+  // ═══ Outside click / Esc ═══
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.has-deep') && !e.target.closest('.lang-switch')){
+      closeAllDeeps();
+      closeLangPop();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ closeAllDeeps(); closeLangPop(); }
+  });
 
   // Run on DOM ready
+  function init(){ setLang(getInitialLang()); }
   if (document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', function(){
-      setLang(getInitialLang());
-      initSwitchers();
-    });
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    setLang(getInitialLang());
-    initSwitchers();
+    init();
   }
 })();
-
 </script>
 </body>
 </html>

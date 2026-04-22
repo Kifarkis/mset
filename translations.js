@@ -132,6 +132,17 @@ window.MSET_TRANSLATIONS = {
                            da: "At implementere AI i et life science-firma er fundamentalt anderledes end i nogen anden branche. Vi forstår valideringskravene, forventningerne til data governance og den regulatoriske granskning, der følger med — og vi hjælper jer med at navigere det hele." },
   "ai.cta":              { sv: "Starta ett AI-samtal →", da: "Start en AI-samtale →" },
   "ai.deep-dive":        { sv: "Djupdyk: AI-konsulttjänster →", da: "Dybdegående: AI-konsulenttjenester →" },
+  // New nav dropdowns (AI + Security) + lang-switcher label
+  "nav.ai.overview":      { sv: "Översikt", da: "Oversigt" },
+  "nav.ai.deep":          { sv: "Djupdyk", da: "Dybdegående" },
+  "nav.ai.desc":          { sv: "De 4 tjänstekorten på startsidan.", da: "De 4 service-kort på hjemmesiden." },
+  "nav.ai.deep-desc":     { sv: "Hela AI-konsultsidan — 9 användningsfall, 3 arkitekturmönster, 7 styrningsdokument.", da: "Hele AI-konsulent-siden — 9 brugsscenarier, 3 arkitekturmønstre, 7 governance-dokumenter." },
+  "nav.security.overview":{ sv: "Översikt", da: "Oversigt" },
+  "nav.security.deep":    { sv: "Djupdyk", da: "Dybdegående" },
+  "nav.security.desc":    { sv: "Säkerhetstjänstekorten på startsidan.", da: "IT-sikkerhedskortene på hjemmesiden." },
+  "nav.security.deep-desc":{ sv: "Hela Security Awareness Training-sidan — phishing-simuleringar, utbildningsprogram.", da: "Hele Security Awareness Training-siden — phishing-simuleringer, uddannelsesprogrammer." },
+  "nav.lang-label":       { sv: "Språk", da: "Sprog" },
+
   // ═══════════════ ai.html deep page (aip.*) ═══════════════
   // Hero
   "aip.hero.eyebrow":     { sv: "AI-konsultation", da: "AI-konsulentydelser" },
