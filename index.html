@@ -1741,6 +1741,10 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
           We understand the validation requirements, the data governance expectations, and the regulatory
           scrutiny that comes with it — and we help you navigate all of it.
         </p>
+<a class="security-deep-link" data-i18n="ai.deep-dive" href="ai.html">
+          Deep dive: AI Consulting services
+          <svg height="14" width="14"><use href="#arrow"></use></svg>
+</a>
 </div>
 <div class="reveal-right">
 <a class="service-cta" data-i18n="ai.cta" href="#contact">Start an AI conversation →</a>
@@ -2198,6 +2202,8 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 <!-- Formspree endpoint — MSET contact form -->
 <form action="https://formspree.io/f/xwvalvkj" class="contact-form reveal-right" id="contactForm" method="POST">
+<!-- Honeypot: bots fill this, humans don't see it. Formspree flags submissions with any value as spam. -->
+<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none">
 <div class="form-row">
 <div class="form-group">
 <label data-i18n="form.first-name" for="fname">First name</label>
