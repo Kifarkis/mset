@@ -1159,10 +1159,17 @@ abbr {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 2rem 2rem;
+  padding: .8rem 2rem;
   max-width: 960px;
   margin: 0 auto;
   background: transparent;
+}
+/* Tighten section padding when a mark is adjacent */
+section:has(+ .section-mark-wrap) {
+  padding-bottom: 2.5rem;
+}
+.section-mark-wrap + section {
+  padding-top: 2.5rem;
 }
 .section-mark::before,
 .section-mark::after {
