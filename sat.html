@@ -1094,6 +1094,173 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
   .mobile-menu .deep-child::before{content:"→ ";color:var(--emerald-bright)}
 }
 
+
+/* ═══════════════════════════════════════════════════════════
+   SESSION 1 — MONOGRAM + TYPOGRAPHY SYSTEM
+═══════════════════════════════════════════════════════════ */
+/* Body-wide: old-style figures + ligatures. Override on headings. */
+body {
+  font-feature-settings: "onum" 1, "liga" 1, "kern" 1;
+}
+h1, h2, h3, h4,
+.stat, .stat-num, .big-number,
+.kpi-value, .reel, .scare-num,
+.threat-pct, .threat-bar,
+.phase-dur, .eng-duration, .eng-num, .gov-num,
+.m-stat-num {
+  font-feature-settings: "lnum" 1, "liga" 1, "kern" 1;
+}
+/* Monospace labels: also lining */
+.eyebrow, .mono, .scare-label, .scare-meta,
+.nav-links .lang-pill, .lang-pop .code,
+.dash-title, .chart-title, .kpi-label,
+.eng-duration, .arch-label {
+  font-feature-settings: "lnum" 1;
+}
+
+/* Selective <abbr> — 4+ letter acronyms only, small-caps + tracking. */
+abbr {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+  letter-spacing: .05em;
+  text-decoration: none;
+}
+
+/* ─── Vault diamond monogram (eyebrow prefix, job B) ─── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Dark-background variants (sections on --ink) */
+.hero .eyebrow::before,
+.rollout .eyebrow::before,
+.scare-strip .eyebrow::before,
+.dark-section .eyebrow::before,
+.problem .eyebrow::before,
+.final-cta .eyebrow::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364'/></svg>");
+}
+
+/* ─── Between-section rule (job B, structural) ─── */
+.section-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  background: transparent;
+}
+.section-mark::before,
+.section-mark::after {
+  content: "";
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(10,22,40,.12), rgba(10,22,40,.18));
+}
+.section-mark::after {
+  background: linear-gradient(90deg, rgba(10,22,40,.18), rgba(10,22,40,.12), transparent);
+}
+.section-mark .mark {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22' opacity='.55'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Wrapper variants: when .section-mark-wrap has dark or sage bg */
+.section-mark-wrap {
+  padding: 0;
+  margin: 0;
+}
+.section-mark-wrap.dark {
+  background: var(--ink);
+}
+.section-mark-wrap.dark .section-mark::before,
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), rgba(255,255,255,.14));
+}
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, rgba(255,255,255,.14), rgba(255,255,255,.08), transparent);
+}
+.section-mark-wrap.dark .section-mark .mark {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364' opacity='.55'/></svg>");
+}
+.section-mark-wrap.sage-100 { background: var(--sage-100); }
+.section-mark-wrap.sage-50 { background: var(--sage-50); }
+
+/* ─── Em-dash list overrides ─── */
+/* Overrides existing tick-style ::before on use-list, eng-deliverables, etc. */
+.use-list li::before,
+.eng-deliverables li::before,
+.comp-list li::before,
+.report-meta li::before {
+  content: "—" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1rem !important;
+  height: auto !important;
+  color: var(--emerald) !important;
+  font-weight: 500 !important;
+  font-family: var(--font-body, inherit) !important;
+  border: none !important;
+  background: transparent !important;
+  transform: none !important;
+}
+.use-list li,
+.eng-deliverables li,
+.comp-list li,
+.report-meta li {
+  padding-left: 1.3rem !important;
+}
+
+/* ─── Final-CTA vault watermark (job D) ─── */
+.final-cta::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 300px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 62'><g fill='none' stroke='%23F5F3ED' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'><path d='M34,2 L58,16 L34,30 L10,16 Z'/><path d='M34,30 L58,16 L58,44 L34,58 Z'/><path d='M34,30 L10,16 L10,44 L34,58 Z'/></g><path d='M34,16 L46,23 L34,30 L22,23 Z' fill='%23F5F3ED'/><path d='M34,30 L22,23 L22,37 L34,44 Z' fill='%23C9C3B1'/><path d='M34,30 L46,23 L46,37 L34,44 Z' fill='%23A8A290'/><circle cx='40' cy='29' fill='%231B4A22' r='1.2'/><path d='M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z' fill='%239BD7A4'/><path d='M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z' fill='%237EC389'/><path d='M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z' fill='%233B7D44'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .05;
+  pointer-events: none;
+  z-index: 1;
+}
+.final-cta-inner {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 760px) {
+  .final-cta::after {
+    width: 240px;
+    height: 210px;
+    right: -80px;
+    opacity: .04;
+  }
+}
+/* ═══ END SESSION 1 ═══ */
+
 </style>
 </head>
 <body data-lang="en">
@@ -1248,7 +1415,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <span class="wordmark">MSET<span class="dot"></span></span>
 </a>
 <ul class="nav-links">
-<li><a data-i18n="nav.gxp" href="index.html#services">GxP</a></li>
+<li><a data-i18n="nav.gxp" href="index.html#services"><abbr>GxP</abbr></a></li>
 <li class="has-deep" data-deep="ai">
 <a data-i18n="nav.ai" href="index.html#ai">AI</a>
 <button class="deep-toggle" type="button" aria-label="AI — show more" aria-expanded="false" aria-controls="deep-ai">
@@ -1307,7 +1474,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-<a data-i18n="nav.gxp" href="index.html#services">GxP</a>
+<a data-i18n="nav.gxp" href="index.html#services"><abbr>GxP</abbr></a>
 <a data-i18n="nav.ai" href="index.html#ai">AI</a>
 <a data-i18n="nav.ai.deep" class="deep-child" href="ai.html">Deep dive: AI Consulting</a>
 <a data-i18n="nav.security" href="index.html#security">Security</a>
@@ -1335,7 +1502,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <span class="eyebrow">Security Awareness Training</span>
 </div>
 <h1 class="display"><span data-i18n="sat.h1.line1">Your people are</span> <em data-i18n="sat.h1.line2">your perimeter.</em></h1>
-<p class="hero-lede" data-i18n="sat.lede">Realistic phishing simulations, role-based e-learning and audit-ready reporting — standard for every company, with optional GxP-specific modules for regulated industries.</p>
+<p class="hero-lede" data-i18n="sat.lede">Realistic phishing simulations, role-based e-learning and audit-ready reporting — standard for every company, with optional <abbr>GxP</abbr>-specific modules for regulated industries.</p>
 <div class="hero-ctas">
 <a class="btn-primary" data-i18n="sat.cta.pilot" href="index.html#contact?topic=sat">Start a pilot
           <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="14"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1367,7 +1534,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="mr-avatar m-avatar-phish">!</div>
 <div>
 <div class="mr-from">system@<span class="m-spoofed">it-portal</span>.com</div>
-<div class="mr-subject" data-i18n="sat.inbox.urgent">Urgent: Validate your eQMS access</div>
+<div class="mr-subject" data-i18n="sat.inbox.urgent">Urgent: Validate your <abbr>eQMS</abbr> access</div>
 </div>
 <div class="mr-time">10:03</div>
 <button aria-hidden="true" class="mr-report-btn" data-i18n="sat.inbox.report" tabindex="-1" type="button">Report</button>
@@ -1397,6 +1564,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ PROBLEM ═════════ -->
 <section class="problem">
 <div class="section-inner">
@@ -1428,13 +1596,14 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ WHY GENERIC SAT FAILS ═════════ -->
 <section class="why-fail">
 <div class="section-inner">
 <div class="section-head reveal">
 <span class="eyebrow" data-i18n="sat.layer.eyebrow">Layered programme</span>
 <h2><span data-i18n="sat.layer.title.1">Standard for every company.</span> <em data-i18n="sat.layer.title.2">Specialised when you need it.</em></h2>
-<p data-i18n="sat.layer.intro">Our core programme — phishing simulation, role-based e-learning and audit-ready reporting — works for any organisation. For clients in regulated industries, we layer on GxP-specific modules that a generic platform can't offer.</p>
+<p data-i18n="sat.layer.intro">Our core programme — phishing simulation, role-based e-learning and audit-ready reporting — works for any organisation. For clients in regulated industries, we layer on <abbr>GxP</abbr>-specific modules that a generic platform can't offer.</p>
 </div>
 <div class="fail-grid stagger">
 <div class="fail-card">
@@ -1452,8 +1621,8 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
           Optional add-on
         </div>
 <svg class="fail-icon"><use href="#fail-gxp"></use></svg>
-<h3 data-i18n="sat.layer.opt-title">GxP-Specific Modules</h3>
-<p data-i18n="sat.layer.opt-body">For pharma, biotech and medtech, we layer on modules most platforms don't have: 21 CFR Part 11 in daily work, ALCOA+ data integrity, validated-system login hygiene, and eQMS / LIMS / MES phishing scenarios. Added during curriculum design.</p>
+<h3 data-i18n="sat.layer.opt-title"><abbr>GxP</abbr>-Specific Modules</h3>
+<p data-i18n="sat.layer.opt-body">For pharma, biotech and medtech, we layer on modules most platforms don't have: 21 <abbr>CFR</abbr> Part 11 in daily work, <abbr>ALCOA+</abbr> data integrity, validated-system login hygiene, and <abbr>eQMS</abbr> / LIMS / MES phishing scenarios. Added during curriculum design.</p>
 </div>
 <div class="fail-card">
 <div class="card-badge included">
@@ -1462,11 +1631,12 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
         </div>
 <svg class="fail-icon"><use href="#fail-regs"></use></svg>
 <h3 data-i18n="sat.framework.title">Framework-aligned evidence</h3>
-<p data-i18n="sat.framework.body">The quarterly evidence pack maps your programme to ISO/IEC 27001, NIS2, 21 CFR Part 11 and EU Annex 11 — explicitly referenced, not inferred. This is standard for every engagement; critical if you're regulated, still useful if you're not.</p>
+<p data-i18n="sat.framework.body">The quarterly evidence pack maps your programme to ISO/IEC 27001, NIS2, 21 <abbr>CFR</abbr> Part 11 and EU Annex 11 — explicitly referenced, not inferred. This is standard for every engagement; critical if you're regulated, still useful if you're not.</p>
 </div>
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ THE PROGRAMME ═════════ -->
 <section class="programme" id="programme">
 <div class="section-inner">
@@ -1510,13 +1680,13 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="comp">
 <svg class="comp-icon"><use href="#comp-gxp-mod"></use></svg>
 <div>
-<h3>GxP-Specific Modules</h3>
+<h3><abbr>GxP</abbr>-Specific Modules</h3>
 <p class="comp-body" data-i18n="sat.comp3.body">The modules generic platforms don't have. Mapped to validated-system workflows and data-integrity expectations in pharma, biotech and medtech.</p>
 <ul class="comp-list">
-<li data-i18n="sat.comp3.b1">21 CFR Part 11 in daily work</li>
-<li data-i18n="sat.comp3.b2">ALCOA+ data integrity</li>
+<li data-i18n="sat.comp3.b1">21 <abbr>CFR</abbr> Part 11 in daily work</li>
+<li data-i18n="sat.comp3.b2"><abbr>ALCOA+</abbr> data integrity</li>
 <li data-i18n="sat.comp3.b3">Validated-system login hygiene</li>
-<li data-i18n="sat.comp3.b4">eQMS, LIMS &amp; MES scenarios</li>
+<li data-i18n="sat.comp3.b4"><abbr>eQMS</abbr>, LIMS &amp; MES scenarios</li>
 </ul>
 </div>
 </div>
@@ -1551,6 +1721,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ ROLLOUT ═════════ -->
 <section class="rollout">
 <div class="section-inner" style="position:relative">
@@ -1572,7 +1743,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <span class="phase-custom-pill" data-i18n="sat.phase2.tag">Customisation happens here</span>
 </div>
 <h3 data-i18n="sat.phase2.title">Design</h3>
-<p data-i18n="sat.phase2.body">We design the curriculum against your roles, baseline findings and — if you're in a regulated industry — your frameworks. This is where optional GxP-specific modules are added.</p>
+<p data-i18n="sat.phase2.body">We design the curriculum against your roles, baseline findings and — if you're in a regulated industry — your frameworks. This is where optional <abbr>GxP</abbr>-specific modules are added.</p>
 <div class="phase-dur"><span class="dur-label">Duration</span><span data-i18n="sat.phase2.dur">Week 2–4</span></div>
 </div>
 <div class="phase">
@@ -1609,6 +1780,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ REPORTING DEMO ═════════ -->
 <section class="reporting">
 <div class="section-inner">
@@ -1691,6 +1863,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ FAQ ═════════ -->
 <section class="faq">
 <div class="section-inner">
@@ -1711,20 +1884,20 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <summary data-i18n="sat.faq2.q">How is the programme delivered — where does the data live?</summary>
 <div class="faq-body">
 <p data-i18n="sat.faq2.a1">The programme runs on infrastructure we operate on your behalf. Phishing simulations, e-learning and reporting are delivered through our platforms; MSET manages campaign design, content localisation, remediation and reporting.</p>
-<p data-i18n="sat.faq2.a2">Data residency and processing details are documented in the DPA you sign with us before the pilot starts — this matters for pharma and we don't hand-wave it.</p>
+<p data-i18n="sat.faq2.a2">Data residency and processing details are documented in the <abbr>DPA</abbr> you sign with us before the pilot starts — this matters for pharma and we don't hand-wave it.</p>
 </div>
 </details>
 <details class="faq-item">
 <summary data-i18n="sat.faq3.q">What languages is the content available in?</summary>
 <div class="faq-body">
 <p data-i18n="sat.faq3.a1">Content, phishing templates and reporting are delivered in English as standard, with Nordic and other languages available on request. We localise to the language your teams actually work in — not a compromise list limited to one region.</p>
-<p data-i18n="sat.faq3.a2">GxP-specific modules are reviewed with your QA team before rollout to ensure terminology matches your internal SOPs.</p>
+<p data-i18n="sat.faq3.a2"><abbr>GxP</abbr>-specific modules are reviewed with your QA team before rollout to ensure terminology matches your internal <abbr>SOPs</abbr>.</p>
 </div>
 </details>
 <details class="faq-item">
 <summary data-i18n="sat.faq4.q">Which regulatory frameworks is this mapped to?</summary>
 <div class="faq-body">
-<p data-i18n="sat.faq4.a1">The programme content, cadence and reporting are explicitly mapped to 21 CFR Part 11, EU Annex 11, ISO/IEC 27001, and NIS2. The quarterly evidence pack references these frameworks directly, so your auditors see the mapping rather than inferring it.</p>
+<p data-i18n="sat.faq4.a1">The programme content, cadence and reporting are explicitly mapped to 21 <abbr>CFR</abbr> Part 11, EU Annex 11, ISO/IEC 27001, and NIS2. The quarterly evidence pack references these frameworks directly, so your auditors see the mapping rather than inferring it.</p>
 <p data-i18n="sat.faq4.a2">For medical-device clients, we also map to the cybersecurity expectations in ISO 14971 and the EU MDR.</p>
 </div>
 </details>
@@ -1743,6 +1916,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═════════ FINAL CTA ═════════ -->
 <section class="final-cta">
 <div class="final-cta-inner">
@@ -1771,7 +1945,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="footer-col">
 <h4 data-i18n="footer.col1">Services</h4>
 <ul>
-<li><a data-i18n="footer.services.gxp" href="index.html#services">GxP Systems</a></li>
+<li><a data-i18n="footer.services.gxp" href="index.html#services"><abbr>GxP</abbr> Systems</a></li>
 <li><a data-i18n="footer.services.ai" href="ai.html">AI Consulting</a></li>
 <li><a data-i18n="footer.services.sec" href="index.html#security">IT Security</a></li>
 <li><a data-i18n="footer.services.sat" href="#top">Security Awareness Training</a></li>

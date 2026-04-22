@@ -1386,6 +1386,173 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
   .mobile-menu .deep-child::before{content:"→ ";color:var(--emerald-bright)}
 }
 
+
+/* ═══════════════════════════════════════════════════════════
+   SESSION 1 — MONOGRAM + TYPOGRAPHY SYSTEM
+═══════════════════════════════════════════════════════════ */
+/* Body-wide: old-style figures + ligatures. Override on headings. */
+body {
+  font-feature-settings: "onum" 1, "liga" 1, "kern" 1;
+}
+h1, h2, h3, h4,
+.stat, .stat-num, .big-number,
+.kpi-value, .reel, .scare-num,
+.threat-pct, .threat-bar,
+.phase-dur, .eng-duration, .eng-num, .gov-num,
+.m-stat-num {
+  font-feature-settings: "lnum" 1, "liga" 1, "kern" 1;
+}
+/* Monospace labels: also lining */
+.eyebrow, .mono, .scare-label, .scare-meta,
+.nav-links .lang-pill, .lang-pop .code,
+.dash-title, .chart-title, .kpi-label,
+.eng-duration, .arch-label {
+  font-feature-settings: "lnum" 1;
+}
+
+/* Selective <abbr> — 4+ letter acronyms only, small-caps + tracking. */
+abbr {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+  letter-spacing: .05em;
+  text-decoration: none;
+}
+
+/* ─── Vault diamond monogram (eyebrow prefix, job B) ─── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Dark-background variants (sections on --ink) */
+.hero .eyebrow::before,
+.rollout .eyebrow::before,
+.scare-strip .eyebrow::before,
+.dark-section .eyebrow::before,
+.problem .eyebrow::before,
+.final-cta .eyebrow::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364'/></svg>");
+}
+
+/* ─── Between-section rule (job B, structural) ─── */
+.section-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  background: transparent;
+}
+.section-mark::before,
+.section-mark::after {
+  content: "";
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(10,22,40,.12), rgba(10,22,40,.18));
+}
+.section-mark::after {
+  background: linear-gradient(90deg, rgba(10,22,40,.18), rgba(10,22,40,.12), transparent);
+}
+.section-mark .mark {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22' opacity='.55'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Wrapper variants: when .section-mark-wrap has dark or sage bg */
+.section-mark-wrap {
+  padding: 0;
+  margin: 0;
+}
+.section-mark-wrap.dark {
+  background: var(--ink);
+}
+.section-mark-wrap.dark .section-mark::before,
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), rgba(255,255,255,.14));
+}
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, rgba(255,255,255,.14), rgba(255,255,255,.08), transparent);
+}
+.section-mark-wrap.dark .section-mark .mark {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364' opacity='.55'/></svg>");
+}
+.section-mark-wrap.sage-100 { background: var(--sage-100); }
+.section-mark-wrap.sage-50 { background: var(--sage-50); }
+
+/* ─── Em-dash list overrides ─── */
+/* Overrides existing tick-style ::before on use-list, eng-deliverables, etc. */
+.use-list li::before,
+.eng-deliverables li::before,
+.comp-list li::before,
+.report-meta li::before {
+  content: "—" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1rem !important;
+  height: auto !important;
+  color: var(--emerald) !important;
+  font-weight: 500 !important;
+  font-family: var(--font-body, inherit) !important;
+  border: none !important;
+  background: transparent !important;
+  transform: none !important;
+}
+.use-list li,
+.eng-deliverables li,
+.comp-list li,
+.report-meta li {
+  padding-left: 1.3rem !important;
+}
+
+/* ─── Final-CTA vault watermark (job D) ─── */
+.final-cta::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 300px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 62'><g fill='none' stroke='%23F5F3ED' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'><path d='M34,2 L58,16 L34,30 L10,16 Z'/><path d='M34,30 L58,16 L58,44 L34,58 Z'/><path d='M34,30 L10,16 L10,44 L34,58 Z'/></g><path d='M34,16 L46,23 L34,30 L22,23 Z' fill='%23F5F3ED'/><path d='M34,30 L22,23 L22,37 L34,44 Z' fill='%23C9C3B1'/><path d='M34,30 L46,23 L46,37 L34,44 Z' fill='%23A8A290'/><circle cx='40' cy='29' fill='%231B4A22' r='1.2'/><path d='M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z' fill='%239BD7A4'/><path d='M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z' fill='%237EC389'/><path d='M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z' fill='%233B7D44'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .05;
+  pointer-events: none;
+  z-index: 1;
+}
+.final-cta-inner {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 760px) {
+  .final-cta::after {
+    width: 240px;
+    height: 210px;
+    right: -80px;
+    opacity: .04;
+  }
+}
+/* ═══ END SESSION 1 ═══ */
+
 </style>
 </head>
 <body data-lang="en">
@@ -1698,7 +1865,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <span class="wordmark">MSET<span class="dot"></span></span>
 </a>
 <ul class="nav-links">
-<li><a data-i18n="nav.gxp" href="#services">GxP</a></li>
+<li><a data-i18n="nav.gxp" href="#services"><abbr>GxP</abbr></a></li>
 <li class="has-deep" data-deep="ai">
 <a data-i18n="nav.ai" href="#ai">AI</a>
 <button class="deep-toggle" type="button" aria-label="AI — show more" aria-expanded="false" aria-controls="deep-ai">
@@ -1757,7 +1924,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-<a data-i18n="nav.gxp" href="#services">GxP</a>
+<a data-i18n="nav.gxp" href="#services"><abbr>GxP</abbr></a>
 <a data-i18n="nav.ai" href="#ai">AI</a>
 <a data-i18n="nav.ai.deep" class="deep-child" href="ai.html">Deep dive: AI Consulting</a>
 <a data-i18n="nav.security" href="#security">Security</a>
@@ -1784,8 +1951,8 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="hero-inner">
 <div class="hero-grid">
 <div>
-<div class="hero-eyebrow" data-i18n="hero.eyebrow">Life Science · GxP · AI</div>
-<h1><span data-i18n="hero.h1.line1">We speak both</span><br/><em data-i18n="hero.h1.line2">GxP and GPT.</em></h1>
+<div class="hero-eyebrow" data-i18n="hero.eyebrow">Life Science · <abbr>GxP</abbr> · AI</div>
+<h1><span data-i18n="hero.h1.line1">We speak both</span><br/><em data-i18n="hero.h1.line2"><abbr>GxP</abbr> and GPT.</em></h1>
 <p class="hero-promise"><strong data-i18n="hero.promise.1">Validated systems.</strong> <strong data-i18n="hero.promise.2">Deployed AI.</strong> <strong data-i18n="hero.promise.3">Fewer audit findings.</strong></p>
 <p class="hero-lede" data-i18n="hero.lede">
           Independent IT consulting for pharma, biotech and medtech — based in Skåne, working across the Nordics.
@@ -1798,7 +1965,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <a class="btn btn-ghost" data-i18n="hero.cta.intro" href="#contact" style="color:#fff;border-color:rgba(255,255,255,.22)">Book a 30-min intro</a>
 </div>
 <div class="hero-strip">
-<span>21 CFR Part 11</span>
+<span>21 <abbr>CFR</abbr> Part 11</span>
 <span>EU Annex 11</span>
 <span>GAMP 5</span>
 <span>ISO 13485</span>
@@ -1834,6 +2001,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═══════════════════════════════════════════════════════════
      PILLARS
 ═══════════════════════════════════════════════════════════ -->
@@ -1850,8 +2018,8 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <a class="pillar" href="#services">
 <span class="pillar-num" data-i18n="pillar.gxp.num">01 / Validation</span>
 <svg class="pillar-icon"><use href="#icon-gxp"></use></svg>
-<h3 class="pillar-title" data-i18n="pillar.gxp.title">GxP Systems</h3>
-<p class="pillar-body" data-i18n="pillar.gxp.body">Computer system validation, qualification, eQMS rollouts, and ongoing compliance. Built on GAMP 5.</p>
+<h3 class="pillar-title" data-i18n="pillar.gxp.title"><abbr>GxP</abbr> Systems</h3>
+<p class="pillar-body" data-i18n="pillar.gxp.body">Computer system validation, qualification, <abbr>eQMS</abbr> rollouts, and ongoing compliance. Built on GAMP 5.</p>
 <span class="pillar-link">See services <svg><use href="#arrow"></use></svg></span>
 </a>
 <a class="pillar" href="#ai">
@@ -1878,6 +2046,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═══════════════════════════════════════════════════════════
      SECTION 01 — GxP SYSTEMS
 ═══════════════════════════════════════════════════════════ -->
@@ -1885,12 +2054,12 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="service-inner">
 <div class="service-header">
 <div class="reveal-left">
-<span class="eyebrow num" data-i18n="gxp.eyebrow">01 / GxP Systems</span>
+<span class="eyebrow num" data-i18n="gxp.eyebrow">01 / <abbr>GxP</abbr> Systems</span>
 <h2 class="section-title"><span data-i18n="gxp.title.1">Validated systems that</span> <em data-i18n="gxp.title.2">pass inspection.</em></h2>
 <p class="section-lede" data-i18n="gxp.intro">
           Every regulated IT system you run eventually meets an auditor. We design, implement, and document
           systems so that meeting is uneventful — with rigorous computer system validation built on
-          GAMP 5, 21 CFR Part 11, and EU Annex 11.
+          GAMP 5, 21 <abbr>CFR</abbr> Part 11, and EU Annex 11.
         </p>
 </div>
 <div class="reveal-right">
@@ -1901,7 +2070,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="service-item">
 <div class="service-item-icon"><svg height="26" width="26"><use href="#sc-csv"></use></svg></div>
 <h3 class="service-item-title" data-i18n="gxp.card1.title">Computer System Validation (CSV / CSA)</h3>
-<p class="service-item-body" data-i18n="gxp.card1.body">End-to-end validation for GxP systems — user requirements through to performance qualification, using risk-based approaches that satisfy regulators without over-engineering.</p>
+<p class="service-item-body" data-i18n="gxp.card1.body">End-to-end validation for <abbr>GxP</abbr> systems — user requirements through to performance qualification, using risk-based approaches that satisfy regulators without over-engineering.</p>
 <ul class="service-item-list">
 <li data-i18n="gxp.card1.b1">URS · FS · DS · IQ · OQ · PQ</li>
 <li data-i18n="gxp.card1.b2">Risk assessments (ICH Q9)</li>
@@ -1910,22 +2079,22 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 <div class="service-item">
 <div class="service-item-icon"><svg height="26" width="26"><use href="#sc-part11"></use></svg></div>
-<h3 class="service-item-title" data-i18n="gxp.card2.title">21 CFR Part 11 &amp; Annex 11</h3>
-<p class="service-item-body" data-i18n="gxp.card2.body">Electronic records and electronic signatures, done properly. Audit trails, access controls, and data integrity across the ALCOA+ framework.</p>
+<h3 class="service-item-title" data-i18n="gxp.card2.title">21 <abbr>CFR</abbr> Part 11 &amp; Annex 11</h3>
+<p class="service-item-body" data-i18n="gxp.card2.body">Electronic records and electronic signatures, done properly. Audit trails, access controls, and data integrity across the <abbr>ALCOA+</abbr> framework.</p>
 <ul class="service-item-list">
 <li data-i18n="gxp.card2.b1">E-signature implementation</li>
 <li data-i18n="gxp.card2.b2">Audit trail review procedures</li>
-<li data-i18n="gxp.card2.b3">Data integrity controls (ALCOA+)</li>
+<li data-i18n="gxp.card2.b3">Data integrity controls (<abbr>ALCOA+</abbr>)</li>
 </ul>
 </div>
 <div class="service-item">
 <div class="service-item-icon"><svg height="26" width="26"><use href="#sc-eqms"></use></svg></div>
-<h3 class="service-item-title" data-i18n="gxp.card3.title">Quality Management Systems (eQMS)</h3>
+<h3 class="service-item-title" data-i18n="gxp.card3.title">Quality Management Systems (<abbr>eQMS</abbr>)</h3>
 <p class="service-item-body" data-i18n="gxp.card3.body">Selection, configuration, and rollout of electronic quality systems — deviations, CAPAs, change control, training, and document lifecycle in one validated platform.</p>
 <ul class="service-item-list">
 <li data-i18n="gxp.card3.b1">Vendor selection &amp; evaluation</li>
 <li data-i18n="gxp.card3.b2">Migration from paper / legacy systems</li>
-<li data-i18n="gxp.card3.b3">eQMS validation &amp; go-live</li>
+<li data-i18n="gxp.card3.b3"><abbr>eQMS</abbr> validation &amp; go-live</li>
 </ul>
 </div>
 <div class="service-item">
@@ -1941,6 +2110,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═══════════════════════════════════════════════════════════
      SECTION 02 — AI CONSULTING (4 equal items)
 ═══════════════════════════════════════════════════════════ -->
@@ -1978,7 +2148,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="service-item">
 <div class="service-item-icon"><svg height="26" width="26"><use href="#sc-ai-validated"></use></svg></div>
 <h3 class="service-item-title" data-i18n="ai.card2.title">Validated AI Implementation</h3>
-<p class="service-item-body" data-i18n="ai.card2.body">AI and ML systems implemented with the rigour of GxP — covering model validation, explainability, and audit readiness.</p>
+<p class="service-item-body" data-i18n="ai.card2.body">AI and ML systems implemented with the rigour of <abbr>GxP</abbr> — covering model validation, explainability, and audit readiness.</p>
 <ul class="service-item-list">
 <li data-i18n="ai.card2.b1">Model validation protocols (IQ / OQ / PQ adapted for ML)</li>
 <li data-i18n="ai.card2.b2">Model lineage &amp; audit trail design</li>
@@ -2008,6 +2178,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═══════════════════════════════════════════════════════════
      SECTION 03 — SECURITY (human-risk angle, 5 cards, SAT expandable)
 ═══════════════════════════════════════════════════════════ -->
@@ -2095,7 +2266,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
         </p>
 <ul class="security-card-list">
 <li data-i18n="sec.card2.b1">Role-based e-learning (quality, IT, lab, exec)</li>
-<li data-i18n="sec.card2.b2">GxP-specific modules — data integrity, CSV, Annex 11</li>
+<li data-i18n="sec.card2.b2"><abbr>GxP</abbr>-specific modules — data integrity, CSV, Annex 11</li>
 <li data-i18n="sec.card2.b3">Framework-aligned evidence (ISO 27001, NIS2)</li>
 <li data-i18n="sec.card2.b4">Quarterly reporting &amp; compliance trail</li>
 <li data-i18n="sec.card2.b5">Annual refresh &amp; attestation programme</li>
@@ -2125,14 +2296,14 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="service-item-icon"><svg height="26" width="26"><use href="#sc-access"></use></svg></div>
 <h3 class="security-card-title" data-i18n="sec.card4.title">Access Control &amp; Identity Management</h3>
 <p class="security-card-body" data-i18n="sec.card4.body">
-          The right people in the right systems — and no-one else. Especially critical in GxP environments
+          The right people in the right systems — and no-one else. Especially critical in <abbr>GxP</abbr> environments
           where access to validated systems must be documented and controlled.
         </p>
 <ul class="security-card-list">
 <li data-i18n="sec.card4.b1">Role-based access control (RBAC)</li>
 <li data-i18n="sec.card4.b2">MFA implementation &amp; management</li>
 <li data-i18n="sec.card4.b3">Privileged access reviews</li>
-<li data-i18n="sec.card4.b4">21 CFR Part 11 access audit trails</li>
+<li data-i18n="sec.card4.b4">21 <abbr>CFR</abbr> Part 11 access audit trails</li>
 <li data-i18n="sec.card4.b5">Joiners / movers / leavers process</li>
 </ul>
 </div>
@@ -2151,12 +2322,13 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <li data-i18n="sec.acronis.b3">Instant recovery · minimal operational downtime</li>
 <li data-i18n="sec.acronis.b4">Offsite &amp; cloud backup (geographically redundant)</li>
 <li data-i18n="sec.acronis.b5">Backup integrity verification &amp; audit trail</li>
-<li data-i18n="sec.acronis.b6">Aligned with GxP data-integrity requirements</li>
+<li data-i18n="sec.acronis.b6">Aligned with <abbr>GxP</abbr> data-integrity requirements</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═══════════════════════════════════════════════════════════
      SECTION 04 — IT LEADERSHIP (with full Interim visual)
 ═══════════════════════════════════════════════════════════ -->
@@ -2274,13 +2446,14 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <li data-i18n="strat.card3.b3">Build vs buy vs outsource analysis</li>
 <li data-i18n="strat.card3.b4">Cloud &amp; infrastructure strategy</li>
 <li data-i18n="strat.card3.b5">Digital maturity assessment &amp; targets</li>
-<li data-i18n="strat.card3.b6">Regulatory &amp; GxP compliance trajectory</li>
+<li data-i18n="strat.card3.b6">Regulatory &amp; <abbr>GxP</abbr> compliance trajectory</li>
 <li data-i18n="strat.card3.b7">Board-level presentation &amp; business case support</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═══════════════════════════════════════════════════════════
      ABOUT
 ═══════════════════════════════════════════════════════════ -->
@@ -2315,8 +2488,8 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <!-- Full-width credentials row — spans the whole section including under the quote box -->
 <div class="credentials stagger">
 <div class="credential">
-<h4 class="credential-title" data-i18n="about.cred1.title">GxP &amp; Regulated Environments</h4>
-<p class="credential-body" data-i18n="about.cred1.body">Deep, practical experience with GMP, GCP, and GLP environments across pharmaceutical, biotech, and medtech organisations.</p>
+<h4 class="credential-title" data-i18n="about.cred1.title"><abbr>GxP</abbr> &amp; Regulated Environments</h4>
+<p class="credential-body" data-i18n="about.cred1.body">Deep, practical experience with <abbr>GMP</abbr>, GCP, and GLP environments across pharmaceutical, biotech, and medtech organisations.</p>
 </div>
 <div class="credential">
 <h4 class="credential-title" data-i18n="about.cred2.title">AI &amp; Emerging Technology</h4>
@@ -2337,14 +2510,14 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <p class="industries-intro" data-i18n="about.work-with.body">Life-science IT is our home — pharma, biotech, medtech, CRO/CMO, diagnostics, gene therapy. The same principles apply wherever compliance, audit trails, and system validation matter.</p>
 <span class="industries-subhead">We're at our best when you're</span>
 <div class="industry-chips">
-<span class="industry-chip" data-i18n="about.chip.1">Deploying AI under GxP</span>
+<span class="industry-chip" data-i18n="about.chip.1">Deploying AI under <abbr>GxP</abbr></span>
 <span class="industry-chip" data-i18n="about.chip.2">Scaling without a CIO</span>
 <span class="industry-chip" data-i18n="about.chip.3">Audit prep &amp; readiness</span>
 <span class="industry-chip" data-i18n="about.chip.4">Legacy system modernisation</span>
 <span class="industry-chip" data-i18n="about.chip.5">M&amp;A IT integration</span>
 <span class="industry-chip" data-i18n="about.chip.6">Building a security culture</span>
 <span class="industry-chip">NIS2 &amp; ISO 27001 readiness</span>
-<span class="industry-chip" data-i18n="about.chip.7">Validating a new GxP system</span>
+<span class="industry-chip" data-i18n="about.chip.7">Validating a new <abbr>GxP</abbr> system</span>
 <span class="industry-chip" data-i18n="about.chip.8">Cloud migration with compliance</span>
 <span class="industry-chip" data-i18n="about.chip.9">Phishing programme rollout</span>
 </div>
@@ -2364,7 +2537,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="num-card">
 <p class="num-label" data-i18n="about.stat3.label">Frameworks</p>
 <p class="num-val"><em>8<span class="plus">+</span></em></p>
-<p class="num-caption" data-i18n="about.stat3.body">GAMP 5 · Part 11 · Annex 11 · ISO 27001 · NIS2 · ISO 14971 · GMP · GCP.</p>
+<p class="num-caption" data-i18n="about.stat3.body">GAMP 5 · Part 11 · Annex 11 · ISO 27001 · NIS2 · ISO 14971 · <abbr>GMP</abbr> · GCP.</p>
 </div>
 <div class="num-card">
 <p class="num-label" data-i18n="about.stat4.label">Independence</p>
@@ -2374,6 +2547,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 </div>
 </div>
 </section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
 <!-- ═══════════════════════════════════════════════════════════
      CONTACT
 ═══════════════════════════════════════════════════════════ -->
@@ -2440,7 +2614,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <label data-i18n="form.interest" for="topic">I'm interested in</label>
 <select id="topic" name="interest" required="">
 <option data-i18n="form.select" value="">Select a service area...</option>
-<option data-i18n="form.opt.gxp" value="GxP Systems &amp; Validation">GxP Systems &amp; Validation</option>
+<option data-i18n="form.opt.gxp" value="GxP Systems &amp; Validation"><abbr>GxP</abbr> Systems &amp; Validation</option>
 <option data-i18n="form.opt.ai" value="AI Strategy &amp; Implementation">AI Strategy &amp; Implementation</option>
 <option data-i18n="form.opt.sec" value="IT Security">IT Security</option>
 <option value="Security Awareness Training">Security Awareness Training</option>
@@ -2490,7 +2664,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 <div class="footer-col">
 <h4 data-i18n="footer.col1">Services</h4>
 <ul>
-<li><a data-i18n="footer.services.gxp" href="#services">GxP Systems</a></li>
+<li><a data-i18n="footer.services.gxp" href="#services"><abbr>GxP</abbr> Systems</a></li>
 <li><a data-i18n="footer.services.ai" href="#ai">AI Consulting</a></li>
 <li><a data-i18n="footer.services.sec" href="#security">IT Security</a></li>
 <li><a data-i18n="footer.services.sat" href="sat.html">Security Awareness Training</a></li>

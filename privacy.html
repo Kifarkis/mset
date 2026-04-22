@@ -432,6 +432,173 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
 body[data-lang="sv"] .courtesy-banner,
 body[data-lang="da"] .courtesy-banner{display:block}
 
+
+/* ═══════════════════════════════════════════════════════════
+   SESSION 1 — MONOGRAM + TYPOGRAPHY SYSTEM
+═══════════════════════════════════════════════════════════ */
+/* Body-wide: old-style figures + ligatures. Override on headings. */
+body {
+  font-feature-settings: "onum" 1, "liga" 1, "kern" 1;
+}
+h1, h2, h3, h4,
+.stat, .stat-num, .big-number,
+.kpi-value, .reel, .scare-num,
+.threat-pct, .threat-bar,
+.phase-dur, .eng-duration, .eng-num, .gov-num,
+.m-stat-num {
+  font-feature-settings: "lnum" 1, "liga" 1, "kern" 1;
+}
+/* Monospace labels: also lining */
+.eyebrow, .mono, .scare-label, .scare-meta,
+.nav-links .lang-pill, .lang-pop .code,
+.dash-title, .chart-title, .kpi-label,
+.eng-duration, .arch-label {
+  font-feature-settings: "lnum" 1;
+}
+
+/* Selective <abbr> — 4+ letter acronyms only, small-caps + tracking. */
+abbr {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+  letter-spacing: .05em;
+  text-decoration: none;
+}
+
+/* ─── Vault diamond monogram (eyebrow prefix, job B) ─── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Dark-background variants (sections on --ink) */
+.hero .eyebrow::before,
+.rollout .eyebrow::before,
+.scare-strip .eyebrow::before,
+.dark-section .eyebrow::before,
+.problem .eyebrow::before,
+.final-cta .eyebrow::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364'/></svg>");
+}
+
+/* ─── Between-section rule (job B, structural) ─── */
+.section-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  background: transparent;
+}
+.section-mark::before,
+.section-mark::after {
+  content: "";
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(10,22,40,.12), rgba(10,22,40,.18));
+}
+.section-mark::after {
+  background: linear-gradient(90deg, rgba(10,22,40,.18), rgba(10,22,40,.12), transparent);
+}
+.section-mark .mark {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22' opacity='.55'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Wrapper variants: when .section-mark-wrap has dark or sage bg */
+.section-mark-wrap {
+  padding: 0;
+  margin: 0;
+}
+.section-mark-wrap.dark {
+  background: var(--ink);
+}
+.section-mark-wrap.dark .section-mark::before,
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), rgba(255,255,255,.14));
+}
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, rgba(255,255,255,.14), rgba(255,255,255,.08), transparent);
+}
+.section-mark-wrap.dark .section-mark .mark {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364' opacity='.55'/></svg>");
+}
+.section-mark-wrap.sage-100 { background: var(--sage-100); }
+.section-mark-wrap.sage-50 { background: var(--sage-50); }
+
+/* ─── Em-dash list overrides ─── */
+/* Overrides existing tick-style ::before on use-list, eng-deliverables, etc. */
+.use-list li::before,
+.eng-deliverables li::before,
+.comp-list li::before,
+.report-meta li::before {
+  content: "—" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1rem !important;
+  height: auto !important;
+  color: var(--emerald) !important;
+  font-weight: 500 !important;
+  font-family: var(--font-body, inherit) !important;
+  border: none !important;
+  background: transparent !important;
+  transform: none !important;
+}
+.use-list li,
+.eng-deliverables li,
+.comp-list li,
+.report-meta li {
+  padding-left: 1.3rem !important;
+}
+
+/* ─── Final-CTA vault watermark (job D) ─── */
+.final-cta::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 300px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 62'><g fill='none' stroke='%23F5F3ED' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'><path d='M34,2 L58,16 L34,30 L10,16 Z'/><path d='M34,30 L58,16 L58,44 L34,58 Z'/><path d='M34,30 L10,16 L10,44 L34,58 Z'/></g><path d='M34,16 L46,23 L34,30 L22,23 Z' fill='%23F5F3ED'/><path d='M34,30 L22,23 L22,37 L34,44 Z' fill='%23C9C3B1'/><path d='M34,30 L46,23 L46,37 L34,44 Z' fill='%23A8A290'/><circle cx='40' cy='29' fill='%231B4A22' r='1.2'/><path d='M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z' fill='%239BD7A4'/><path d='M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z' fill='%237EC389'/><path d='M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z' fill='%233B7D44'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .05;
+  pointer-events: none;
+  z-index: 1;
+}
+.final-cta-inner {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 760px) {
+  .final-cta::after {
+    width: 240px;
+    height: 210px;
+    right: -80px;
+    opacity: .04;
+  }
+}
+/* ═══ END SESSION 1 ═══ */
+
 </style>
 </head>
 <body data-lang="en">
@@ -470,7 +637,7 @@ body[data-lang="da"] .courtesy-banner{display:block}
 <span class="wordmark">MSET<span class="dot"></span></span>
 </a>
 <ul class="nav-links">
-<li><a data-i18n="nav.gxp" href="index.html#services">GxP</a></li>
+<li><a data-i18n="nav.gxp" href="index.html#services"><abbr>GxP</abbr></a></li>
 <li class="has-deep" data-deep="ai">
 <a data-i18n="nav.ai" href="index.html#ai">AI</a>
 <button class="deep-toggle" type="button" aria-label="AI — show more" aria-expanded="false" aria-controls="deep-ai">
@@ -529,7 +696,7 @@ body[data-lang="da"] .courtesy-banner{display:block}
 </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-<a data-i18n="nav.gxp" href="index.html#services">GxP</a>
+<a data-i18n="nav.gxp" href="index.html#services"><abbr>GxP</abbr></a>
 <a data-i18n="nav.ai" href="index.html#ai">AI</a>
 <a data-i18n="nav.ai.deep" class="deep-child" href="ai.html">Deep dive: AI Consulting</a>
 <a data-i18n="nav.security" href="index.html#security">Security</a>
@@ -574,7 +741,7 @@ body[data-lang="da"] .courtesy-banner{display:block}
 </p>
 <p data-i18n="privacy.s1.trading">
     We trade under the name <strong>MSET</strong>. Kifarkis Nätsäkerhet is the legal entity responsible
-    for the processing of your personal data under the EU General Data Protection Regulation (GDPR) and
+    for the processing of your personal data under the EU General Data Protection Regulation (<abbr>GDPR</abbr>) and
     the Swedish Data Protection Act.
   </p>
 <h2 data-i18n="privacy.s2.h2">2. What personal data we collect</h2>
@@ -595,7 +762,7 @@ body[data-lang="da"] .courtesy-banner{display:block}
 <p data-i18n="privacy.s2.2.p1">
     During consulting engagements, we may process personal data belonging to you, your employees, or
     your clients — depending on the nature of the work. For most engagements, this processing is
-    governed by a separate <strong>Data Processing Agreement</strong> (DPA) that we sign with you, in
+    governed by a separate <strong>Data Processing Agreement</strong> (<abbr>DPA</abbr>) that we sign with you, in
     which we act as a <strong>data processor</strong> on your behalf. We only process such data for
     the purposes defined in that agreement.
   </p>
@@ -616,7 +783,7 @@ body[data-lang="da"] .courtesy-banner{display:block}
     30 days and are not used to profile visitors.
   </p>
 <h2 data-i18n="privacy.s3.h2">3. Legal basis for processing</h2>
-<p data-i18n="privacy.s3.p1">Under Article 6 of the GDPR, our processing relies on one of the following legal bases:</p>
+<p data-i18n="privacy.s3.p1">Under Article 6 of the <abbr>GDPR</abbr>, our processing relies on one of the following legal bases:</p>
 <ul>
 <li data-i18n="privacy.s3.b1"><strong>Your consent</strong> (Art. 6(1)(a)) — when you voluntarily submit the contact form.</li>
 <li data-i18n="privacy.s3.b2"><strong>Performance of a contract</strong> (Art. 6(1)(b)) — when processing is necessary to deliver a consulting engagement you have commissioned.</li>
@@ -667,7 +834,7 @@ body[data-lang="da"] .courtesy-banner{display:block}
 <p data-i18n="privacy.s6.p1">
     Where personal data is transferred outside the European Economic Area (for example, to US-based
     providers such as Formspree or Google), we rely on the EU Standard Contractual Clauses, adequacy
-    decisions where available, and additional safeguards as required by Chapter V of the GDPR.
+    decisions where available, and additional safeguards as required by Chapter V of the <abbr>GDPR</abbr>.
   </p>
 <h2 data-i18n="privacy.s7.h2">7. How long we keep data</h2>
 <ul>
@@ -676,7 +843,7 @@ body[data-lang="da"] .courtesy-banner{display:block}
 <li data-i18n="privacy.s7.b3"><strong>Server logs:</strong> 30 days.</li>
 <li data-i18n="privacy.s7.b4"><strong>Newsletter or marketing lists:</strong> not applicable — we do not operate any.</li>
 </ul>
-<h2 data-i18n="privacy.s8.h2">8. Your rights under GDPR</h2>
+<h2 data-i18n="privacy.s8.h2">8. Your rights under <abbr>GDPR</abbr></h2>
 <p data-i18n="privacy.s8.p1">You have the following rights regarding your personal data:</p>
 <ul>
 <li data-i18n="privacy.s8.b1"><strong>Right of access</strong> — request a copy of the personal data we hold about you.</li>
@@ -746,7 +913,7 @@ body[data-lang="da"] .courtesy-banner{display:block}
 <div class="footer-col">
 <h4 data-i18n="footer.col1">Services</h4>
 <ul>
-<li><a data-i18n="footer.services.gxp" href="index.html#services">GxP Systems</a></li>
+<li><a data-i18n="footer.services.gxp" href="index.html#services"><abbr>GxP</abbr> Systems</a></li>
 <li><a data-i18n="footer.services.ai" href="ai.html">AI Consulting</a></li>
 <li><a data-i18n="footer.services.sec" href="index.html#security">IT Security</a></li>
 <li><a data-i18n="footer.services.sat" href="sat.html">Security Awareness Training</a></li>
