@@ -182,8 +182,12 @@ nav.site-nav.scrolled{background:#0A1628}
   border-bottom:1px solid var(--line-dark);
   z-index:99;padding:1.25rem 1.5rem;
   flex-direction:column;
+  max-height:calc(100vh - 62px);
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
   opacity:0;transform:translateY(-8px);
-  transition:all .25s ease;
+  transition:opacity .25s ease, transform .25s ease;
 }
 .mobile-menu.open{display:flex;opacity:1;transform:translateY(0)}
 .mobile-menu a{
