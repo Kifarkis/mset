@@ -631,9 +631,8 @@ abbr {
 }
 /* When a field note is the LAST element of its section, reduce section's bottom padding
    to avoid doubled-space before the next section-mark */
-section:has(> .section-inner > .field-note:last-child),
-section:has(> .hero-inner > .field-note:last-child),
-section:has(> .final-cta-inner > .field-note:last-child) {
+/* Reduce section bottom padding when it ends with a field note anywhere in its tree */
+section:has(.field-note:last-child) {
   padding-bottom: 3rem;
 }
 .field-note-label {
