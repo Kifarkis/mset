@@ -1,0 +1,4428 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%230A1628'/&gt;&lt;path d='M16 7 L24 11.5 L24 20.5 L16 25 L8 20.5 L8 11.5 Z' fill='none' stroke='%237EC389' stroke-width='1.8' stroke-linejoin='round'/&gt;&lt;circle cx='16' cy='17' r='1.4' fill='%237EC389'/&gt;&lt;rect x='15.3' y='17.6' width='1.4' height='2.8' rx='.4' fill='%237EC389'/&gt;&lt;/svg&gt;" rel="icon" type="image/svg+xml"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/>
+<link href="favicon.ico" rel="alternate icon"/>
+<title>IT Strategy &amp; Leadership — MSET</title>
+<meta content="Independent IT Assessment, Strategy &amp; Roadmap, and Interim IT Director services for growing companies — with deep experience in regulated industries." name="description"/>
+<!-- Canonical URL -->
+<link href="https://mset.se/strategy" rel="canonical"/>
+<!-- Open Graph / Facebook / LinkedIn / Slack social preview -->
+<meta content="article" property="og:type"/>
+<meta content="https://mset.se/strategy" property="og:url"/>
+<meta content="IT Strategy &amp; Leadership — MSET" property="og:title"/>
+<meta content="From where you are, to where you need to be. Assessment, Strategy, and Interim IT leadership for growing companies." property="og:description"/>
+<meta content="https://mset.se/og-image-ai.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="AI Consulting by MSET — Your data. Your AI." property="og:image:alt"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="MSET" property="og:site_name"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="IT Strategy &amp; Leadership — MSET" name="twitter:title"/>
+<meta content="Private RAG, validated ML and BI analytics for regulated life science. Your R&amp;D spend and SOPs analysed inside your tenant — not in vendor logs. Audit-ready." name="twitter:description"/>
+<meta content="https://mset.se/og-image-ai.png" name="twitter:image"/>
+<meta content="AI Consulting by MSET" name="twitter:image:alt"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+/* ═════════════════════════════════════════════════════
+   DESIGN TOKENS — shared with main site
+   ═════════════════════════════════════════════════════ */
+:root{
+  --ink:#0A1628; --ink-2:#0F2338; --ink-3:#16304A; --ink-4:#1E3A55; --ink-5:#2A4A6A;
+  --sage-50:#F5F3ED; --sage-100:#ECE8DB; --sage-200:#D9D3BF;
+  --forest:#1B4A22; --forest-2:#0F3414; --forest-light:#2E6E38;
+  --emerald:#5BA364; --emerald-bright:#7EC389; --emerald-glow:#9BD7A4; --emerald-deep:#3B7D44;
+  --muted:#556a82; --muted-2:#6a7f96;
+  --danger:#C04040; --warn:#D97B2B;
+  --border:rgba(10,22,40,.09); --border-2:rgba(10,22,40,.14);
+  --shadow-sm:0 1px 2px rgba(10,22,40,.04), 0 2px 8px rgba(10,22,40,.04);
+  --shadow-md:0 4px 16px rgba(10,22,40,.06), 0 12px 32px rgba(10,22,40,.05);
+  --shadow-lg:0 10px 40px rgba(10,22,40,.10), 0 30px 60px rgba(10,22,40,.08);
+  --font-display:"Fraunces", Georgia, serif;
+  --font-body:"Plus Jakarta Sans", -apple-system, system-ui, sans-serif;
+  --font-mono:"JetBrains Mono", ui-monospace, monospace;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:var(--sage-50);
+  color:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none}
+
+/* Typography */
+.display{font-family:var(--font-display);font-weight:500;letter-spacing:-.02em;line-height:1.05}
+.display em{font-style:italic;color:var(--forest)}
+.mono{font-family:var(--font-mono)}
+.eyebrow{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--forest);font-weight:500;
+}
+
+/* Wordmark + logo — identical to main site */
+.nav-logo{display:flex;align-items:center;gap:.75rem}
+.nav-logo .mark{width:44px;height:38px}
+.nav-logo .wordmark{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.45rem;line-height:.9;letter-spacing:-.01em;color:var(--sage-50);
+}
+.nav-logo .dot{
+  display:inline-block;width:.22em;height:.22em;
+  background:var(--emerald-bright);border-radius:50%;
+  vertical-align:.14em;margin-left:.08em;
+}
+
+/* ═════════════════════════════════════════════════════
+   NAV — identical spec to main site
+   ═════════════════════════════════════════════════════ */
+.site-nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:#0A1628;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  transition:background .2s;
+}
+.site-nav.scrolled{background:#0A1628}
+.nav-inner{
+  max-width:1280px;margin:0 auto;padding:.85rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
+.nav-links a{
+  font-size:.8rem;font-weight:500;
+  color:rgba(255,255,255,.68);letter-spacing:.005em;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--emerald-bright)}
+.nav-cta{
+  padding:.55rem 1.15rem;background:var(--emerald);
+  color:var(--ink)!important;border-radius:999px;
+  font-weight:600!important;transition:all .2s;
+  font-size:.85rem;
+}
+.nav-cta:hover{background:var(--emerald-bright);transform:translateY(-1px)}
+
+.nav-hamburger{
+  display:none;width:40px;height:40px;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  background:transparent;
+}
+.nav-hamburger span{
+  width:22px;height:2px;background:#fff;border-radius:2px;
+  transition:all .3s ease;
+}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{
+  display:none;position:fixed;top:62px;left:0;right:0;
+  background:rgba(10,22,40,.98);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  z-index:99;padding:1.25rem 1.5rem;
+  flex-direction:column;
+  max-height:calc(100vh - 62px);
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+  opacity:0;transform:translateY(-8px);
+  transition:opacity .25s ease, transform .25s ease;
+}
+.mobile-menu.open{display:flex;opacity:1;transform:translateY(0)}
+.mobile-menu a{
+  color:rgba(255,255,255,.8);font-size:1rem;font-weight:500;
+  padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);
+}
+.mobile-menu a:last-child{border-bottom:none;margin-top:.5rem}
+.mobile-menu .nav-cta{text-align:center;margin-top:.75rem}
+/* ═════════════════════════════════════════════════════
+   HERO
+   ═════════════════════════════════════════════════════ */
+.hero{
+  background:linear-gradient(180deg, var(--sage-50) 0%, var(--sage-100) 100%);
+  padding:8rem 2rem 6rem;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(91,163,100,.06), transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(27,74,34,.05), transparent 45%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1240px;margin:0 auto;position:relative;
+  display:grid;grid-template-columns:1.3fr 1fr;gap:4rem;align-items:center;
+}
+.hero-eyebrow{display:flex;align-items:center;gap:.6rem;margin-bottom:1.2rem}
+.hero-eyebrow::before{
+  content:"";width:28px;height:1px;background:var(--emerald);
+}
+.hero h1{
+  font-size:clamp(2.4rem, 5vw, 4.2rem);
+  margin:0 0 1.4rem;font-weight:500;
+}
+.hero-lede{
+  font-size:1.15rem;color:var(--ink-4);line-height:1.55;
+  max-width:560px;margin:0 0 2rem;
+}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--ink);color:var(--sage-50);
+  padding:.95rem 1.6rem;border-radius:10px;font-weight:600;font-size:.95rem;
+  transition:transform .2s, box-shadow .2s;
+}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(10,22,40,.18)}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:var(--ink);padding:.95rem 1.6rem;border-radius:10px;
+  font-weight:600;font-size:.95rem;
+  border:1.5px solid var(--border-2);background:rgba(255,255,255,.3);
+  transition:border-color .2s, background .2s;
+}
+.btn-secondary:hover{border-color:var(--ink);background:rgba(255,255,255,.6)}
+
+/* Hero visual — perimeter graphic */
+.hero-visual{
+  position:relative;aspect-ratio:1;max-width:440px;justify-self:end;width:100%;
+}
+/* ─── Hero visual: animated "The Catch" mail scene ─── */
+.mail-scene{
+  width:100%;height:100%;position:relative;
+  display:flex;flex-direction:column;justify-content:center;gap:1.1rem;
+}
+.mail-window{
+  background:#fff;
+  border:1px solid var(--border-2);
+  border-radius:14px;
+  box-shadow:0 20px 50px rgba(10,22,40,.15), 0 4px 14px rgba(10,22,40,.06);
+  position:relative;
+}
+.mail-bar{
+  background:var(--sage-100);
+  padding:.7rem 1rem;
+  display:flex;align-items:center;gap:.9rem;
+  border-bottom:1px solid var(--border);
+  border-radius:14px 14px 0 0;
+}
+.mail-dots{display:flex;gap:.35rem}
+.md-dot{width:10px;height:10px;border-radius:50%;display:block}
+.mail-title{
+  font-family:var(--font-mono);font-size:.7rem;color:var(--muted);
+  letter-spacing:.04em;
+}
+.mail-body{padding:.15rem 0;border-radius:0 0 14px 14px;overflow:hidden}
+.mail-row{
+  display:grid;grid-template-columns:38px 1fr auto;
+  gap:.85rem;align-items:center;
+  padding:.75rem 1rem;
+  border-bottom:1px solid var(--border);
+  position:relative;
+  border-left:3px solid transparent;
+  padding-left:calc(1rem - 3px);
+}
+.mail-row:last-child{border-bottom:none}
+.mr-avatar{
+  width:38px;height:38px;border-radius:9px;
+  background:var(--sage-100);color:var(--muted);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-mono);font-size:.72rem;font-weight:600;
+}
+.mr-from{font-size:.72rem;color:var(--muted);font-weight:500;margin-bottom:.15rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mr-subject{font-size:.84rem;color:var(--ink);font-weight:600;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mr-time{font-family:var(--font-mono);font-size:.68rem;color:var(--muted-2)}
+
+/* Phish row — animated states over 8s loop */
+.m-row-phish{animation:m-row-cycle 8s ease-in-out infinite}
+.m-avatar-phish{animation:m-avatar-cycle 8s ease-in-out infinite}
+.m-spoofed{padding:0 3px;border-radius:3px;animation:m-spoof-cycle 8s ease-in-out infinite}
+
+@keyframes m-row-cycle{
+  0%,12%{background:#fff;border-left-color:transparent}
+  17%,37%{background:rgba(192,64,64,.05);border-left-color:var(--danger)}
+  47%,82%{background:rgba(91,163,100,.07);border-left-color:var(--emerald)}
+  90%,100%{background:#fff;border-left-color:transparent}
+}
+@keyframes m-avatar-cycle{
+  0%,12%{background:var(--sage-100);color:var(--ink-4)}
+  17%,37%{background:var(--danger);color:#fff}
+  47%,82%{background:var(--emerald);color:#fff}
+  90%,100%{background:var(--sage-100);color:var(--ink-4)}
+}
+@keyframes m-spoof-cycle{
+  0%,12%{background:transparent;color:inherit}
+  17%,37%{background:rgba(192,64,64,.14);color:var(--danger)}
+  47%,100%{background:transparent;color:inherit}
+}
+
+/* Report button — appears during alert, fades at click */
+.mr-report-btn{
+  position:absolute;right:56px;top:50%;
+  transform:translateY(-50%) scale(.85);
+  background:var(--ink);color:#fff;
+  border:none;border-radius:6px;
+  padding:.34rem .7rem;
+  font-family:var(--font-body);font-size:.68rem;font-weight:600;
+  letter-spacing:.02em;cursor:default;
+  opacity:0;
+  box-shadow:0 2px 10px rgba(10,22,40,.22);
+  animation:m-report-btn 8s ease-in-out infinite;
+}
+@keyframes m-report-btn{
+  0%,22%{opacity:0;transform:translateY(-50%) scale(.85)}
+  27%,41%{opacity:1;transform:translateY(-50%) scale(1)}
+  43%{opacity:1;transform:translateY(-50%) scale(.82)}
+  45%{opacity:1;transform:translateY(-50%) scale(1)}
+  48%{opacity:0;transform:translateY(-50%) scale(.85)}
+  100%{opacity:0}
+}
+
+/* "Caught" pill — appears after click, holds, fades */
+.mr-caught{
+  position:absolute;right:56px;top:50%;
+  transform:translateY(-50%) scale(.85);
+  display:inline-flex;align-items:center;gap:.3rem;
+  background:var(--emerald);color:#fff;
+  padding:.32rem .65rem;border-radius:20px;
+  font-family:var(--font-mono);font-size:.62rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  opacity:0;white-space:nowrap;
+  box-shadow:0 2px 10px rgba(91,163,100,.4);
+  animation:m-caught 8s ease-in-out infinite;
+}
+@keyframes m-caught{
+  0%,48%{opacity:0;transform:translateY(-50%) scale(.85)}
+  51%{opacity:1;transform:translateY(-50%) scale(1.12)}
+  55%{opacity:1;transform:translateY(-50%) scale(1)}
+  82%{opacity:1;transform:translateY(-50%) scale(1)}
+  90%,100%{opacity:0;transform:translateY(-50%) scale(.85)}
+}
+
+/* Cursor — glides in from outside, clicks, glides out */
+.m-cursor{
+  position:absolute;
+  width:22px;height:22px;
+  right:-14px;bottom:-24px;
+  pointer-events:none;z-index:5;
+  opacity:0;
+  filter:drop-shadow(0 2px 4px rgba(10,22,40,.35));
+  animation:m-cursor-cycle 8s ease-in-out infinite;
+}
+@keyframes m-cursor-cycle{
+  0%,22%{opacity:0;right:-14px;bottom:-24px}
+  26%{opacity:1;right:-14px;bottom:-24px;transform:scale(1)}
+  40%{opacity:1;right:66px;bottom:50%;transform:scale(1)}
+  43%{opacity:1;right:66px;bottom:50%;transform:scale(.82)}
+  46%{opacity:1;right:66px;bottom:50%;transform:scale(1)}
+  62%{opacity:1;right:66px;bottom:50%;transform:scale(1)}
+  70%{opacity:0;right:-14px;bottom:-24px;transform:scale(1)}
+  100%{opacity:0}
+}
+
+/* Stat ticker below — appears after catch, shows before/after drop */
+.m-stat{
+  background:#fff;
+  border:1px solid var(--border-2);
+  border-radius:12px;
+  padding:.85rem 1.1rem;
+  display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;
+  box-shadow:0 6px 20px rgba(10,22,40,.06);
+  font-family:var(--font-body);font-size:.85rem;
+  opacity:0;
+  animation:m-stat-appear 8s ease-in-out infinite;
+}
+@keyframes m-stat-appear{
+  0%,52%{opacity:0;transform:translateY(10px)}
+  58%{opacity:1;transform:translateY(0)}
+  82%{opacity:1;transform:translateY(0)}
+  90%,100%{opacity:0;transform:translateY(-4px)}
+}
+.m-stat-label{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;
+}
+.m-stat-before{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.2rem;color:var(--muted-2);
+  text-decoration:line-through;text-decoration-color:rgba(192,64,64,.55);
+  text-decoration-thickness:2px;
+}
+.m-stat-before .m-pct{font-size:.75em;margin-left:.05em}
+.m-stat-arrow{color:var(--emerald);font-weight:700;font-size:1rem}
+.m-stat-after{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.55rem;color:var(--forest);letter-spacing:-.02em;
+  opacity:0;
+  animation:m-stat-after 8s ease-in-out infinite;
+}
+.m-stat-after .m-pct{font-size:.72em;margin-left:.05em}
+@keyframes m-stat-after{
+  0%,57%{opacity:0;transform:translateY(4px)}
+  65%{opacity:1;transform:translateY(0)}
+  82%{opacity:1}
+  90%,100%{opacity:0}
+}
+.m-stat-caption{
+  font-size:.7rem;color:var(--muted);flex-basis:100%;margin-top:.15rem;
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce){
+  .m-row-phish,.m-avatar-phish,.m-spoofed,
+  .mr-report-btn,.mr-caught,.m-cursor,
+  .m-stat,.m-stat-after{animation:none}
+  .m-row-phish{background:rgba(91,163,100,.07);border-left-color:var(--emerald)}
+  .m-avatar-phish{background:var(--emerald);color:#fff}
+  .mr-caught{opacity:1;transform:translateY(-50%) scale(1)}
+  .m-stat,.m-stat-after{opacity:1;transform:none}
+}
+
+/* ═════════════════════════════════════════════════════
+   SECTIONS (shared rhythm)
+   ═════════════════════════════════════════════════════ */
+section{padding:6rem 2rem;position:relative}
+.section-inner{max-width:1240px;margin:0 auto}
+.section-head{max-width:780px;margin-bottom:3.5rem}
+.section-head h2{
+  font-family:var(--font-display);font-weight:500;font-size:clamp(1.8rem, 3.2vw, 2.8rem);
+  margin:.8rem 0 1rem;letter-spacing:-.02em;line-height:1.15;
+}
+.section-head h2 em{font-style:italic;color:var(--forest)}
+.section-head p{color:var(--muted);font-size:1.05rem;margin:0;max-width:640px}
+
+/* ═════════════════════════════════════════════════════
+   PROBLEM — stat tiles
+   ═════════════════════════════════════════════════════ */
+.problem{background:var(--sage-50)}
+.stat-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:3rem;
+}
+.stat-tile{
+  background:#fff;border:1px solid var(--border);border-radius:16px;
+  padding:2rem 1.8rem;position:relative;overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:transform .3s, box-shadow .3s;
+}
+.stat-tile:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.stat-tile::before{
+  content:"";position:absolute;top:0;left:0;width:40%;height:3px;
+  background:linear-gradient(90deg, var(--emerald), var(--emerald-bright));
+  border-radius:0 2px 0 0;
+}
+.stat-num{
+  font-family:var(--font-display);font-weight:500;letter-spacing:-.03em;
+  font-size:3.2rem;line-height:1;color:var(--ink);margin-bottom:.6rem;
+}
+.stat-num em{font-style:italic;color:var(--forest)}
+.stat-num .unit{font-size:1.6rem;color:var(--muted);margin-left:.15em}
+.stat-label{
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--forest);font-weight:500;margin-bottom:.5rem;
+}
+.stat-body{color:var(--muted);font-size:.92rem;line-height:1.55;margin:0}
+
+.problem-copy{
+  background:var(--ink);color:var(--sage-50);border-radius:20px;
+  padding:3rem 3rem;display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;
+  position:relative;overflow:hidden;
+}
+.problem-copy::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 90% 50%, rgba(91,163,100,.12), transparent 55%);
+  pointer-events:none;
+}
+.problem-copy .qmark{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:6rem;line-height:.7;color:var(--emerald-bright);opacity:.5;
+  position:relative;
+}
+.problem-copy p{
+  margin:0;font-family:var(--font-display);font-style:italic;font-weight:400;
+  font-size:1.4rem;line-height:1.4;letter-spacing:-.01em;position:relative;
+}
+.problem-copy p em{color:var(--emerald-bright);font-style:italic;font-weight:500}
+
+/* ═════════════════════════════════════════════════════
+   WHY GENERIC SAT FAILS
+   ═════════════════════════════════════════════════════ */
+.why-fail{background:var(--sage-100)}
+.fail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.fail-card{
+  background:#fff;border:1px solid var(--border);border-radius:14px;
+  padding:1.8rem;padding-top:3.4rem;position:relative;
+  transition:transform .3s, box-shadow .3s;
+}
+.fail-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.fail-card .fail-icon{width:44px;height:44px;margin-bottom:1.1rem}
+.fail-card h3{
+  font-family:var(--font-display);font-weight:500;font-size:1.2rem;
+  margin:0 0 .6rem;letter-spacing:-.01em;
+}
+.fail-card p{color:var(--muted);font-size:.92rem;line-height:1.55;margin:0}
+.fail-card .card-badge{
+  position:absolute;top:1.2rem;right:1.2rem;
+  display:inline-flex;align-items:center;gap:.35rem;
+  padding:.3rem .65rem;border-radius:20px;
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:600;
+}
+.fail-card .card-badge.included{
+  background:rgba(91,163,100,.12);color:var(--forest-light);
+}
+.fail-card .card-badge.addon{
+  background:rgba(27,74,34,.06);color:var(--forest-light);
+  border:1px dashed rgba(91,163,100,.5);
+}
+.fail-card .card-badge svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:2.5}
+
+/* ═════════════════════════════════════════════════════
+   PROGRAMME — 5 components
+   ═════════════════════════════════════════════════════ */
+.programme{background:var(--sage-50)}
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.comp{
+  background:#fff;border:1px solid var(--border);border-radius:16px;
+  padding:2rem;display:grid;grid-template-columns:56px 1fr;gap:1.4rem;
+  transition:transform .3s, box-shadow .3s, border-color .3s;
+}
+.comp:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--border-2)}
+.comp.full{grid-column:1 / -1}
+.comp .comp-icon{width:56px;height:56px}
+.comp h3{
+  font-family:var(--font-display);font-weight:500;font-size:1.35rem;
+  margin:0 0 .5rem;letter-spacing:-.01em;
+}
+.comp-body{color:var(--muted);font-size:.95rem;line-height:1.55;margin:0 0 1rem}
+.comp-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:.5rem .9rem}
+.comp.full .comp-list{grid-template-columns:1fr 1fr 1fr}
+.comp-list li{
+  font-size:.86rem;color:var(--ink-4);padding-left:1.3rem;position:relative;line-height:1.45;
+}
+.comp-list li::before{
+  content:"";position:absolute;left:0;top:.45rem;
+  width:10px;height:6px;border-left:1.5px solid var(--emerald);
+  border-bottom:1.5px solid var(--emerald);transform:rotate(-45deg);
+}
+
+/* ═════════════════════════════════════════════════════
+   ROLLOUT — 4 phases
+   ═════════════════════════════════════════════════════ */
+.rollout{background:var(--ink);color:var(--sage-50);position:relative}
+.rollout::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(var(--ink-2) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ink-2) 1px, transparent 1px);
+  background-size:40px 40px;opacity:.3;pointer-events:none;
+}
+.rollout .section-head h2{color:var(--sage-50)}
+.rollout .section-head h2 em{color:var(--emerald-bright)}
+.rollout .section-head p{color:rgba(245,243,237,.6)}
+.rollout .eyebrow{color:var(--emerald-bright)}
+.final-cta .eyebrow{color:var(--emerald-bright)}
+.phase-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;
+  position:relative;
+}
+.phase{
+  background:var(--ink-2);border:1px solid var(--ink-4);border-radius:14px;
+  padding:1.8rem 1.6rem;position:relative;
+  display:flex;flex-direction:column;
+}
+.phase p{
+  font-size:.88rem;color:rgba(245,243,237,.65);line-height:1.55;margin:0 0 1rem;
+  flex-grow:1;
+}
+.phase-num{
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.18em;
+  color:var(--emerald-bright);font-weight:500;margin-bottom:.8rem;
+}
+.phase-num-row{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:.6rem;margin-bottom:.8rem;flex-wrap:wrap;
+}
+.phase-num-row .phase-num{margin-bottom:0}
+.phase-custom-pill{
+  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:500;color:var(--emerald-glow);
+  padding:.28rem .55rem;border-radius:4px;
+  background:rgba(91,163,100,.1);border:1px solid rgba(91,163,100,.3);
+  white-space:nowrap;
+}
+.phase h3{
+  font-family:var(--font-display);font-weight:500;font-size:1.2rem;
+  margin:0 0 .6rem;color:var(--sage-50);
+}
+.phase-dur{
+  font-family:var(--font-mono);font-size:.72rem;color:var(--emerald-glow);
+  padding-top:.9rem;border-top:1px solid var(--ink-4);display:flex;justify-content:space-between;
+}
+.phase-dur .dur-label{color:rgba(245,243,237,.4)}
+
+.phase-bars{
+  margin-top:3rem;background:var(--ink-2);border:1px solid var(--ink-4);
+  border-radius:14px;padding:2rem;
+}
+.phase-bars-title{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;
+  color:var(--emerald-bright);font-weight:500;margin:0 0 1.5rem;
+}
+.bar-row{
+  display:grid;grid-template-columns:110px 1fr;gap:1rem;align-items:center;
+  margin-bottom:.8rem;
+}
+.bar-row:last-child{margin-bottom:0}
+.bar-label{
+  font-family:var(--font-mono);font-size:.75rem;color:rgba(245,243,237,.7);
+}
+.bar-outer{
+  height:28px;background:var(--ink);border-radius:6px;position:relative;
+}
+.bar-inner{
+  height:100%;display:flex;align-items:center;padding:0 .9rem;
+  font-size:.78rem;color:#fff;font-weight:500;
+  width:0;transition:width 1s cubic-bezier(.2,.6,.3,1);
+  border-radius:6px;white-space:nowrap;overflow:visible;
+}
+.bar-inner.b1,.bar-inner.b2{
+  /* Narrow bars — label may extend beyond colored fill */
+  color:rgba(245,243,237,.92);
+}
+.bar-inner.b1{background:linear-gradient(90deg, #1D4B7A 0%, #2A5A8A 100%)}
+.bar-inner.b2{background:linear-gradient(90deg, #1B4A22 0%, #2E6E38 100%)}
+.bar-inner.b3{background:linear-gradient(90deg, #3B7D44 0%, #5BA364 100%)}
+.bar-inner.b4{background:linear-gradient(90deg, #5BA364 0%, #7EC389 100%);color:var(--ink)}
+
+/* ═════════════════════════════════════════════════════
+   REPORTING DEMO
+   ═════════════════════════════════════════════════════ */
+.reporting{background:var(--sage-50)}
+.report-card{
+  background:#fff;border:1px solid var(--border);border-radius:18px;
+  box-shadow:var(--shadow-md);overflow:hidden;
+  display:grid;grid-template-columns:1fr 1.3fr;
+}
+.report-meta{padding:2.5rem;background:var(--sage-100);display:flex;flex-direction:column;gap:1.4rem}
+.report-meta h3{
+  font-family:var(--font-display);font-weight:500;font-size:1.4rem;
+  margin:0;letter-spacing:-.01em;
+}
+.report-meta p{color:var(--muted);font-size:.92rem;margin:0;line-height:1.55}
+.report-meta ul{list-style:none;padding:0;margin:0}
+.report-meta li{
+  font-size:.86rem;color:var(--ink-4);padding-left:1.3rem;position:relative;
+  line-height:1.5;margin-bottom:.5rem;
+}
+.report-meta li::before{
+  content:"";position:absolute;left:0;top:.42rem;
+  width:10px;height:6px;border-left:1.5px solid var(--emerald);
+  border-bottom:1.5px solid var(--emerald);transform:rotate(-45deg);
+}
+.report-demo{padding:2rem;background:#fff}
+.report-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:1rem;border-bottom:1px solid var(--border);margin-bottom:1.5rem;
+}
+.report-head h4{
+  font-family:var(--font-display);font-weight:500;font-size:1.15rem;margin:0;
+}
+.report-head .filter-pill{
+  font-family:var(--font-mono);font-size:.7rem;
+  padding:.3rem .7rem;background:var(--sage-100);border-radius:20px;color:var(--muted);
+}
+
+.dept-row{
+  display:grid;grid-template-columns:130px 1fr 60px 50px;
+  gap:1rem;align-items:center;padding:.7rem 0;
+  border-bottom:1px dashed var(--border);font-size:.82rem;
+}
+.dept-row:last-of-type{border-bottom:none}
+.dept-name{font-weight:500}
+.dept-bar{height:8px;background:var(--sage-100);border-radius:4px;overflow:hidden;position:relative}
+.dept-bar-fill{
+  height:100%;border-radius:4px;
+  width:0;transition:width 1.2s cubic-bezier(.2,.6,.3,1);
+}
+.dept-bar-fill.low{background:var(--emerald)}
+.dept-bar-fill.mid{background:var(--warn)}
+.dept-bar-fill.high{background:var(--danger)}
+.dept-pct{font-family:var(--font-mono);color:var(--muted);font-size:.78rem;text-align:right}
+.dept-trend{font-family:var(--font-mono);font-size:.75rem;text-align:right}
+.dept-trend.up{color:var(--emerald-deep)}
+.dept-trend.down{color:var(--danger)}
+
+.report-footer{
+  margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--border);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
+}
+.kpi{text-align:center}
+.kpi-num{
+  font-family:var(--font-display);font-weight:500;font-size:1.6rem;
+  color:var(--ink);letter-spacing:-.02em;line-height:1;margin-bottom:.3rem;
+}
+.kpi-num em{font-style:italic;color:var(--forest)}
+.kpi-label{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);
+}
+
+/* ═════════════════════════════════════════════════════
+   FAQ
+   ═════════════════════════════════════════════════════ */
+.faq{background:var(--sage-100)}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  margin-bottom:.8rem;overflow:hidden;
+  transition:border-color .2s;
+}
+.faq-item[open]{border-color:var(--border-2);box-shadow:var(--shadow-sm)}
+.faq-item summary{
+  padding:1.2rem 1.5rem;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  font-weight:600;font-size:.98rem;color:var(--ink);
+  list-style:none;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"";width:10px;height:10px;
+  border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
+  transform:rotate(45deg);flex-shrink:0;margin-top:-4px;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after{transform:rotate(-135deg);margin-top:2px}
+.faq-body{
+  padding:0 1.5rem 1.3rem;color:var(--muted);font-size:.93rem;line-height:1.6;
+}
+.faq-body p{margin:0 0 .7rem}
+.faq-body p:last-child{margin-bottom:0}
+
+/* ═════════════════════════════════════════════════════
+   FINAL CTA
+   ═════════════════════════════════════════════════════ */
+.final-cta{
+  background:var(--ink);color:var(--sage-50);padding:5rem 2rem;
+  position:relative;overflow:hidden;
+}
+.final-cta::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(91,163,100,.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(27,74,34,.12), transparent 45%);
+  pointer-events:none;
+}
+.final-cta-inner{
+  max-width:900px;margin:0 auto;text-align:center;position:relative;
+}
+.final-cta h2{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(2rem, 4vw, 3.2rem);margin:0 0 1.2rem;letter-spacing:-.02em;
+}
+.final-cta h2 em{font-style:italic;color:var(--emerald-bright)}
+.final-cta p{
+  font-size:1.1rem;color:rgba(245,243,237,.75);margin:0 0 2rem;
+  max-width:600px;margin-left:auto;margin-right:auto;
+}
+.final-cta .btn-primary{
+  background:var(--emerald);color:var(--ink);border:1px solid var(--emerald-bright);
+}
+.final-cta .btn-primary:hover{background:var(--emerald-bright)}
+.final-cta .btn-secondary{
+  color:var(--sage-50);border-color:rgba(245,243,237,.3);background:transparent;
+}
+.final-cta .btn-secondary:hover{border-color:var(--sage-50);background:rgba(245,243,237,.08)}
+
+/* ═════════════════════════════════════════════════════
+   FOOTER
+   ═════════════════════════════════════════════════════ */
+footer{
+  background:var(--ink-2);color:rgba(255,255,255,.55);
+  padding:2.25rem 0 1.5rem;border-top:1px solid rgba(255,255,255,.06);
+}
+.footer-inner{max-width:1280px;margin:0 auto;padding:0 2rem}
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.5rem;
+  padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:1.25rem;
+}
+.footer-brand .nav-logo{margin-bottom:.9rem}
+.footer-brand p{font-size:.82rem;line-height:1.55;color:rgba(255,255,255,.5);max-width:340px;margin:0}
+.footer-brand .tag{
+  font-family:var(--font-mono);font-size:.65rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;margin-top:.6rem;display:block;
+}
+.footer-col h4{
+  font-family:var(--font-mono);font-size:.64rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin:0 0 .75rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin:0;padding:0}
+.footer-col a{font-size:.82rem;color:rgba(255,255,255,.55);transition:color .2s}
+.footer-col a:hover{color:var(--emerald-bright)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;
+  font-size:.72rem;color:rgba(255,255,255,.4);
+}
+.footer-bottom a{color:rgba(255,255,255,.55);transition:color .2s}
+.footer-bottom a:hover{color:var(--emerald-bright)}
+.footer-bottom .back-link{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:rgba(255,255,255,.65);font-weight:500;
+}
+.footer-bottom .back-link:hover{color:var(--emerald-bright)}
+.footer-bottom .back-link svg{width:11px;height:11px}
+
+/* Floating footer — slim persistent bar that slides in from bottom after scroll */
+.floating-footer{
+  position:fixed;bottom:0;left:0;right:0;z-index:90;
+  background:#0A1628;
+  border-top:1px solid rgba(255,255,255,.08);
+  transform:translateY(100%);
+  transition:transform .35s ease;
+  pointer-events:none;
+}
+.floating-footer.visible{transform:translateY(0);pointer-events:auto}
+.floating-footer.hidden{transform:translateY(100%);pointer-events:none}
+.ff-inner{
+  max-width:1280px;margin:0 auto;padding:.55rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+}
+.ff-brand{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:rgba(255,255,255,.85);transition:color .2s;
+}
+.ff-brand:hover{color:var(--emerald-bright)}
+.ff-brand svg.mark{width:26px;height:22px}
+.ff-brand .wordmark{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.05rem;line-height:1;letter-spacing:-.005em;color:inherit;
+}
+.ff-brand .wordmark .dot{
+  display:inline-block;width:.22em;height:.22em;
+  background:var(--emerald-bright);border-radius:50%;
+  vertical-align:.14em;margin-left:.08em;
+}
+.ff-action{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:rgba(255,255,255,.7);font-size:.78rem;font-weight:500;
+  padding:.4rem .8rem;border-radius:999px;
+  transition:color .2s, background .2s;
+}
+.ff-action:hover{color:var(--emerald-bright);background:rgba(255,255,255,.04)}
+.ff-action svg{width:12px;height:12px}
+
+/* Privacy notice — small one-time notice, dismissible */
+.privacy-notice{
+  position:fixed;bottom:1rem;left:1rem;right:1rem;z-index:95;
+  max-width:480px;margin-left:auto;
+  background:#0A1628;color:rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.1);border-radius:12px;
+  padding:1rem 1.15rem;box-shadow:0 10px 40px rgba(0,0,0,.4);
+  font-size:.82rem;line-height:1.55;
+  opacity:0;transform:translateY(20px);pointer-events:none;
+  transition:opacity .35s ease, transform .35s ease;
+}
+.privacy-notice.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.privacy-notice p{margin:0 0 .75rem;color:rgba(255,255,255,.82)}
+.privacy-notice a{color:var(--emerald-bright)}
+.privacy-notice-actions{display:flex;gap:.5rem;align-items:center;justify-content:flex-end}
+.privacy-notice-dismiss{
+  padding:.4rem .9rem;background:var(--emerald);color:var(--ink);
+  border-radius:999px;font-size:.78rem;font-weight:600;
+  cursor:pointer;transition:background .2s;border:none;
+}
+.privacy-notice-dismiss:hover{background:var(--emerald-bright)}
+@media (max-width:560px){
+  .privacy-notice{left:.75rem;right:.75rem;bottom:.75rem;padding:.85rem 1rem;font-size:.78rem}
+}
+
+/* ═════════════════════════════════════════════════════
+   REVEAL ANIMATIONS
+   ═════════════════════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s, transform .7s}
+.reveal.in{opacity:1;transform:translateY(0)}
+.stagger > *{opacity:0;transform:translateY(20px);transition:opacity .6s, transform .6s}
+.stagger.in > *{opacity:1;transform:translateY(0)}
+.stagger.in > *:nth-child(1){transition-delay:0s}
+.stagger.in > *:nth-child(2){transition-delay:.08s}
+.stagger.in > *:nth-child(3){transition-delay:.16s}
+.stagger.in > *:nth-child(4){transition-delay:.24s}
+.stagger.in > *:nth-child(5){transition-delay:.32s}
+
+/* ═════════════════════════════════════════════════════
+   RESPONSIVE
+   ═════════════════════════════════════════════════════ */
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .hero-visual{max-width:340px;justify-self:start}
+  .stat-grid,.fail-grid,.phase-grid{grid-template-columns:1fr}
+  .comp-grid{grid-template-columns:1fr}
+  .comp.full .comp-list{grid-template-columns:1fr 1fr}
+  .report-card{grid-template-columns:1fr}
+  .report-meta{padding:2rem}
+  .problem-copy{grid-template-columns:1fr;padding:2.2rem;gap:1rem}
+  .problem-copy .qmark{font-size:4rem}
+  .problem-copy p{font-size:1.15rem}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}
+  .footer-brand{grid-column:1 / -1}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:.75rem}
+  section{padding:4.5rem 1.5rem}
+  .hero{padding:7rem 1.5rem 4.5rem}
+  .dept-row{grid-template-columns:110px 1fr 50px;gap:.8rem}
+  .dept-trend{display:none}
+  .report-footer{grid-template-columns:repeat(3,1fr);gap:.8rem}
+  .kpi-num{font-size:1.35rem}
+  .bar-row{grid-template-columns:90px 1fr;gap:.8rem}
+  /* Hamburger menu behaviour — identical to main site at same breakpoint */
+  .nav-hamburger{display:flex}
+  .nav-links{display:none}
+  .nav-inner{padding:.75rem 1.25rem}
+}
+@media (max-width:600px){
+  .hero h1{font-size:2.1rem}
+  .section-head h2{font-size:1.75rem}
+  .comp{grid-template-columns:1fr;gap:1rem}
+  .comp-list{grid-template-columns:1fr !important}
+  .hero{padding:6rem 1.25rem 4rem}
+  .footer-grid{grid-template-columns:1fr;gap:1.75rem}
+  .footer-brand{grid-column:auto}
+  .footer-bottom{font-size:.7rem}
+}
+/* ═══════════════════════════════════════════════════════════
+   HERO — animated BI dashboard visual (.ai-bi)
+   All rules scoped under .ai-bi to avoid collisions with
+   existing .kpi / .bar / etc. classes used elsewhere in the site.
+═══════════════════════════════════════════════════════════ */
+/* Parent override: drop forced square aspect when dashboard is inside */
+.hero-visual.has-dashboard{aspect-ratio:auto;max-width:400px}
+
+.ai-bi{
+  width:100%;position:relative;
+  padding:1.4rem 1.2rem 1.2rem;
+  border:1.5px dashed var(--emerald);
+  border-radius:14px;
+  background:linear-gradient(180deg, rgba(155,215,164,.05), rgba(155,215,164,.02));
+  animation:ai-bi-breathe 8s infinite;
+  font-family:var(--font-body);
+  color:var(--ink);
+}
+@keyframes ai-bi-breathe{
+  0%,100%{border-color:rgba(91,163,100,.85)}
+  50%{border-color:rgba(91,163,100,1)}
+}
+
+.ai-bi .perimeter-tag{
+  position:absolute;top:-.55rem;left:.9rem;
+  background:var(--sage-50);padding:0 .45rem;
+  font-family:var(--font-mono);font-size:.58rem;font-weight:700;
+  letter-spacing:.12em;color:var(--forest);
+}
+.ai-bi .perimeter-footnote{
+  position:absolute;bottom:-.55rem;right:.9rem;
+  background:var(--sage-50);padding:0 .45rem;
+  font-family:var(--font-mono);font-size:.54rem;font-weight:600;
+  letter-spacing:.08em;color:var(--muted);
+}
+
+.ai-bi .dash-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:.85rem;gap:.5rem;
+}
+.ai-bi .dash-title{
+  font-family:var(--font-display);font-size:.85rem;font-weight:500;
+  letter-spacing:-.005em;color:var(--ink);margin:0;
+}
+
+/* AI status badge (state cycles) */
+.ai-bi .ai-status{
+  display:inline-flex;align-items:center;gap:.3rem;
+  padding:.2rem .45rem;border-radius:12px;
+  font-family:var(--font-mono);font-size:.52rem;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;
+  background:rgba(42,74,106,.1);color:var(--ink-5);
+  animation:ai-bi-status-swap 8s infinite;
+}
+@keyframes ai-bi-status-swap{
+  0%,78%{background:rgba(42,74,106,.1);color:var(--ink-5)}
+  82%,100%{background:rgba(27,74,34,.12);color:var(--forest)}
+}
+.ai-bi .ai-status .dot{
+  width:5px;height:5px;border-radius:50%;background:var(--ink-5);
+  animation:ai-bi-status-dot 8s infinite;
+}
+@keyframes ai-bi-status-dot{
+  0%,10%{background:var(--ink-5);opacity:.3}
+  15%,25%{background:var(--ink-5);opacity:1}
+  30%,40%{background:var(--ink-5);opacity:.3}
+  45%,55%{background:var(--ink-5);opacity:1}
+  60%,77%{background:var(--ink-5);opacity:.3}
+  82%,100%{background:var(--forest);opacity:1}
+}
+.ai-bi .ai-label-wrap{position:relative;display:inline-block}
+.ai-bi .ai-label-analyzing{animation:ai-bi-fade-out-late 8s infinite}
+.ai-bi .ai-label-ready{
+  position:absolute;left:0;top:0;opacity:0;
+  animation:ai-bi-fade-in-late 8s infinite;
+}
+@keyframes ai-bi-fade-out-late{
+  0%,78%{opacity:1}
+  82%,100%{opacity:0}
+}
+@keyframes ai-bi-fade-in-late{
+  0%,78%{opacity:0}
+  82%,100%{opacity:1}
+}
+
+/* KPIs */
+.ai-bi .kpi-strip{
+  display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:.5rem;
+  margin-bottom:.75rem;
+}
+.ai-bi .kpi{
+  background:#fff;border:1px solid var(--border);border-radius:6px;
+  padding:.4rem .5rem .45rem;position:relative;overflow:hidden;
+  text-align:left; /* override sat.html .kpi center-align */
+}
+.ai-bi .kpi-label{
+  font-family:var(--font-mono);font-size:.5rem;font-weight:600;
+  letter-spacing:.08em;color:var(--muted);text-transform:uppercase;
+  margin-bottom:.15rem;text-align:left;
+}
+.ai-bi .kpi-value{
+  font-family:var(--font-display);font-size:.95rem;font-weight:500;
+  letter-spacing:-.01em;color:var(--ink);line-height:1;
+}
+.ai-bi .reel{
+  display:inline-block;height:1em;overflow:hidden;line-height:1;
+  vertical-align:bottom;
+}
+.ai-bi .reel-track{
+  display:flex;flex-direction:column;
+  animation:ai-bi-reel 1.3s cubic-bezier(.2,.9,.3,1) both;
+}
+.ai-bi .reel.d1 .reel-track{animation-delay:.3s}
+.ai-bi .reel.d2 .reel-track{animation-delay:.45s}
+.ai-bi .reel.d3 .reel-track{animation-delay:.6s}
+@keyframes ai-bi-reel{
+  from{transform:translateY(0)}
+  to{transform:translateY(-50%)}
+}
+.ai-bi .kpi-delta{
+  font-family:var(--font-mono);font-size:.52rem;font-weight:700;
+  letter-spacing:.04em;margin-top:.15rem;opacity:0;
+  animation:ai-bi-delta-in 1s 1.5s both;
+}
+@keyframes ai-bi-delta-in{
+  from{opacity:0;transform:translateY(3px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.ai-bi .kpi-delta.up{color:var(--danger)}
+.ai-bi .kpi-delta.down{color:var(--forest)}
+
+/* Sparkline */
+.ai-bi .spark{
+  position:absolute;right:6px;top:6px;width:48px;height:18px;
+  overflow:visible;
+}
+.ai-bi .spark path{
+  fill:none;stroke:var(--emerald);stroke-width:1.4;
+  stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:120;stroke-dashoffset:120;
+  animation:ai-bi-spark-draw 1.8s 1s cubic-bezier(.35,.8,.3,1) forwards;
+}
+.ai-bi .spark circle{
+  fill:var(--emerald);opacity:0;
+  animation:ai-bi-spark-dot .4s 2.6s forwards;
+}
+@keyframes ai-bi-spark-draw{to{stroke-dashoffset:0}}
+@keyframes ai-bi-spark-dot{to{opacity:1}}
+
+/* Chart */
+.ai-bi .chart-card{
+  background:#fff;border:1px solid var(--border);border-radius:7px;
+  padding:.7rem .75rem .65rem;position:relative;
+}
+.ai-bi .chart-title-row{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:.5rem;
+}
+.ai-bi .chart-title{
+  font-family:var(--font-mono);font-size:.58rem;font-weight:700;
+  letter-spacing:.06em;color:var(--ink-5);text-transform:uppercase;margin:0;
+}
+.ai-bi .chart-legend{
+  display:flex;align-items:center;gap:.35rem;
+  font-family:var(--font-mono);font-size:.5rem;color:var(--muted);
+  letter-spacing:.04em;
+}
+.ai-bi .legend-swatch{
+  width:12px;height:2px;background:var(--muted);border-radius:1px;
+}
+.ai-bi .legend-swatch.dashed{
+  background:repeating-linear-gradient(90deg, var(--muted) 0 3px, transparent 3px 6px);
+}
+.ai-bi .chart{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  height:72px;gap:3px;position:relative;
+}
+.ai-bi .bar{
+  flex:1;background:var(--emerald);border-radius:2px 2px 0 0;
+  position:relative;transform-origin:bottom;
+  animation:ai-bi-bar-grow 1.2s cubic-bezier(.3,.7,.3,1) forwards;
+  opacity:0;
+}
+.ai-bi .bar:nth-child(1){height:35%;animation-delay:.7s}
+.ai-bi .bar:nth-child(2){height:42%;animation-delay:.78s}
+.ai-bi .bar:nth-child(3){height:38%;animation-delay:.86s}
+.ai-bi .bar:nth-child(4){height:48%;animation-delay:.94s}
+.ai-bi .bar:nth-child(5){height:52%;animation-delay:1.02s}
+.ai-bi .bar:nth-child(6){height:56%;animation-delay:1.1s}
+.ai-bi .bar:nth-child(7){height:94%;animation-delay:1.18s;background:var(--danger)}
+.ai-bi .bar:nth-child(7).flagged{
+  animation:ai-bi-bar-grow 1.2s 1.18s cubic-bezier(.3,.7,.3,1) forwards,
+           ai-bi-anomaly-pulse 1.8s 3.5s infinite;
+}
+.ai-bi .bar:nth-child(8){height:50%;animation-delay:1.26s}
+
+/* Forecast ghost bars */
+.ai-bi .ghost{
+  flex:1;height:60%;
+  border:1.5px dashed var(--muted);border-bottom:none;
+  border-radius:2px 2px 0 0;
+  background:repeating-linear-gradient(135deg, rgba(100,116,139,.08) 0 4px, transparent 4px 8px);
+  opacity:0;animation:ai-bi-ghost-in .8s 5.8s forwards;
+}
+.ai-bi .ghost:nth-child(10){height:55%;animation-delay:6.0s}
+@keyframes ai-bi-ghost-in{
+  from{opacity:0;transform:translateY(6px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Budget threshold line */
+.ai-bi .budget-line{
+  position:absolute;left:0;right:0;top:38%;height:1.5px;
+  background:repeating-linear-gradient(90deg, var(--muted) 0 4px, transparent 4px 8px);
+  transform-origin:left;transform:scaleX(0);
+  animation:ai-bi-line-sweep 1s 2.4s cubic-bezier(.3,.8,.3,1) forwards;
+}
+.ai-bi .budget-label{
+  position:absolute;right:2px;top:-9px;
+  font-family:var(--font-mono);font-size:.5rem;font-weight:700;
+  color:var(--muted);letter-spacing:.04em;
+  background:#fff;padding:0 3px;opacity:0;
+  animation:ai-bi-fade-in-at-3 .5s 3s forwards;
+}
+@keyframes ai-bi-line-sweep{to{transform:scaleX(1)}}
+@keyframes ai-bi-fade-in-at-3{to{opacity:1}}
+
+.ai-bi .bar-labels{
+  display:flex;justify-content:space-between;margin-top:.3rem;
+  font-family:var(--font-mono);font-size:.48rem;font-weight:600;
+  color:var(--muted);letter-spacing:.04em;
+}
+.ai-bi .bar-labels span{flex:1;text-align:center}
+.ai-bi .bar-labels .future{
+  color:var(--muted);opacity:0;
+  animation:ai-bi-fade-in-at-3 .5s 6s forwards;
+}
+
+/* AI cursor scan */
+.ai-bi .ai-cursor{
+  position:absolute;top:-4px;left:0;width:18px;height:80px;
+  pointer-events:none;opacity:0;
+  animation:ai-bi-scan 8s 2.6s infinite;
+}
+.ai-bi .ai-cursor::before{
+  content:"";position:absolute;left:50%;top:0;bottom:0;width:1.5px;
+  background:linear-gradient(180deg, transparent, var(--forest) 20%, var(--forest) 80%, transparent);
+  transform:translateX(-50%);opacity:.6;
+}
+.ai-bi .ai-cursor::after{
+  content:"";position:absolute;left:50%;top:-4px;width:6px;height:6px;
+  border-radius:50%;background:var(--forest);transform:translateX(-50%);
+  box-shadow:0 0 10px var(--emerald-bright), 0 0 4px var(--forest);
+}
+@keyframes ai-bi-scan{
+  0%{left:2%;opacity:0}
+  5%{opacity:1}
+  22%{left:60%;opacity:1}
+  30%{left:60%;opacity:1}
+  55%{left:60%;opacity:.7}
+  80%{opacity:0}
+  100%{left:2%;opacity:0}
+}
+
+/* Anomaly annotation */
+.ai-bi .anomaly-note{
+  position:absolute;top:-18px;right:22%;
+  background:var(--danger);color:#fff;padding:.15rem .35rem;
+  border-radius:3px;font-family:var(--font-mono);font-size:.5rem;
+  font-weight:700;letter-spacing:.04em;opacity:0;
+  animation:ai-bi-note-pop .6s 4.5s forwards;
+  box-shadow:0 2px 4px rgba(192,64,64,.25);
+}
+.ai-bi .anomaly-note::after{
+  content:"";position:absolute;bottom:-3px;left:60%;
+  width:0;height:0;
+  border-left:3px solid transparent;border-right:3px solid transparent;
+  border-top:3px solid var(--danger);
+}
+@keyframes ai-bi-note-pop{
+  from{opacity:0;transform:translateY(4px) scale(.8)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes ai-bi-anomaly-pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(192,64,64,0)}
+  40%{box-shadow:0 0 0 4px rgba(192,64,64,.28)}
+  70%{box-shadow:0 0 0 8px rgba(192,64,64,0)}
+}
+@keyframes ai-bi-bar-grow{
+  from{opacity:0;transform:scaleY(0)}
+  to{opacity:1;transform:scaleY(1)}
+}
+
+/* AI insight callout */
+.ai-bi .insight{
+  margin-top:.65rem;
+  background:linear-gradient(90deg, rgba(27,74,34,.06), rgba(27,74,34,.02));
+  border:1px solid rgba(27,74,34,.18);border-left:2.5px solid var(--forest);
+  border-radius:4px;padding:.5rem .6rem;
+  font-size:.66rem;line-height:1.45;color:var(--ink);
+  opacity:0;animation:ai-bi-insight-fade 8s 5s infinite;
+  min-height:2.2rem;
+}
+.ai-bi .insight-badge{
+  display:inline-flex;align-items:center;gap:.25rem;
+  font-family:var(--font-mono);font-size:.5rem;font-weight:700;
+  letter-spacing:.08em;color:var(--forest);margin-right:.35rem;
+  text-transform:uppercase;
+}
+.ai-bi .insight-badge::before{
+  content:"";width:5px;height:5px;border-radius:50%;background:var(--forest);
+  animation:ai-bi-pulse-dot 1.4s infinite;
+}
+.ai-bi .insight-text{color:var(--ink)}
+.ai-bi .insight-cursor{
+  display:inline-block;width:1px;height:.9em;background:var(--forest);
+  margin-left:1px;vertical-align:text-bottom;
+  animation:ai-bi-blink 1s infinite;
+}
+@keyframes ai-bi-insight-fade{
+  0%,60%{opacity:0;transform:translateY(3px)}
+  68%{opacity:1;transform:translateY(0)}
+  95%{opacity:1}
+  100%{opacity:0}
+}
+@keyframes ai-bi-pulse-dot{
+  0%,100%{opacity:1}
+  50%{opacity:.3}
+}
+@keyframes ai-bi-blink{
+  0%,50%{opacity:1}
+  51%,100%{opacity:0}
+}
+
+/* Respect prefers-reduced-motion — scope only to .ai-bi */
+@media (prefers-reduced-motion: reduce){
+  .ai-bi,.ai-bi *,.ai-bi *::before,.ai-bi *::after{
+    animation:none !important;transition:none !important;
+  }
+  .ai-bi .bar{opacity:1;transform:scaleY(1)}
+  .ai-bi .ghost{opacity:1}
+  .ai-bi .reel-track{transform:translateY(-50%)}
+  .ai-bi .spark path{stroke-dashoffset:0}
+  .ai-bi .spark circle{opacity:1}
+  .ai-bi .budget-line{transform:scaleX(1)}
+  .ai-bi .budget-label,.ai-bi .bar-labels .future,.ai-bi .kpi-delta{opacity:1}
+  .ai-bi .anomaly-note,.ai-bi .insight{opacity:1}
+  .ai-bi .ai-cursor{opacity:1;left:60%}
+  .ai-bi .insight-cursor{opacity:0}
+  .ai-bi .ai-label-analyzing{opacity:0}
+  .ai-bi .ai-label-ready{opacity:1}
+}
+
+/* Large screens: let the hero breathe — bigger visual, wider container, more padding */
+@media (min-width:1200px){
+  .hero{padding:10rem 2rem 8rem}
+  .hero-inner{max-width:1360px;gap:5.5rem;grid-template-columns:1.25fr 1fr}
+  .hero h1{font-size:clamp(3rem, 4.4vw, 5rem)}
+  .hero-lede{max-width:620px;font-size:1.2rem}
+  .hero-visual.has-dashboard{max-width:520px}
+  .ai-bi{padding:1.7rem 1.5rem 1.5rem}
+  .ai-bi .dash-title{font-size:1rem}
+  .ai-bi .kpi-value{font-size:1.15rem}
+  .ai-bi .chart{height:90px}
+  .ai-bi .insight{font-size:.74rem;padding:.65rem .75rem;min-height:2.6rem}
+  .ai-bi .perimeter-tag{font-size:.64rem}
+  .ai-bi .perimeter-footnote{font-size:.6rem}
+  .ai-bi .bar-labels{font-size:.54rem}
+  .ai-bi .chart-title{font-size:.64rem}
+  .ai-bi .kpi-label{font-size:.56rem}
+  .ai-bi .ai-status{font-size:.58rem;padding:.26rem .55rem}
+  .ai-bi .ai-cursor{height:100px}
+}
+
+/* Mobile: keep dashboard readable */
+@media (max-width:980px){
+  .hero-visual.has-dashboard{max-width:360px;justify-self:start}
+}
+@media (max-width:600px){
+  .hero-visual.has-dashboard{max-width:100%}
+  .ai-bi{padding:1.2rem 1rem 1rem}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   §2 PROBLEM — scare-strip (dark receipts panel) + threat cards
+═══════════════════════════════════════════════════════════ */
+.scare-strip{
+  background:var(--ink);
+  color:var(--sage-50);
+  border-radius:16px;
+  padding:2rem 1.8rem;
+  margin-bottom:3.5rem;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(10,22,40,.12);
+}
+.scare-strip::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg, var(--danger) 0%, var(--danger) 18%, transparent 100%);
+}
+.scare-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:1.5rem;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.scare-label{
+  font-family:var(--font-mono);
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--danger);
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+}
+.scare-label::before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--danger);
+  animation:scare-pulse 2s infinite;
+}
+@keyframes scare-pulse{
+  0%,100%{opacity:1}
+  50%{opacity:.3}
+}
+.scare-meta{
+  font-family:var(--font-mono);
+  font-size:.62rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:rgba(245,243,237,.5);
+}
+.scare-grid{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  gap:.8rem;
+}
+.scare-card{
+  background:rgba(192,64,64,.08);
+  border:1px solid rgba(192,64,64,.22);
+  border-radius:10px;
+  padding:1rem .9rem;
+  display:flex;
+  flex-direction:column;
+  gap:.45rem;
+  transition:border-color .3s, background .3s, transform .3s;
+}
+.scare-card:hover{
+  border-color:rgba(192,64,64,.5);
+  background:rgba(192,64,64,.12);
+  transform:translateY(-2px);
+}
+.scare-num{
+  font-family:var(--font-display);
+  font-size:2rem;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:-.02em;
+  color:#E88070;
+}
+.scare-cap{
+  font-size:.82rem;
+  line-height:1.35;
+  color:var(--sage-50);
+}
+.scare-src{
+  font-family:var(--font-mono);
+  font-size:.58rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:rgba(245,243,237,.45);
+  margin-top:auto;
+  padding-top:.4rem;
+  border-top:1px solid rgba(245,243,237,.08);
+}
+
+.threat-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1.4rem;
+}
+.threat-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:3.4rem 1.8rem 2rem;
+  position:relative;
+  transition:transform .3s, box-shadow .3s, border-color .3s;
+}
+.threat-card:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--border-2);
+}
+.threat-num{
+  position:absolute;
+  top:1.3rem;
+  left:1.8rem;
+  font-family:var(--font-mono);
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.16em;
+  color:var(--danger);
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+}
+.threat-num::after{
+  content:"";
+  width:24px;
+  height:1px;
+  background:var(--danger);
+}
+.threat-card h3{
+  font-family:var(--font-display);
+  font-weight:500;
+  font-size:1.25rem;
+  margin:0 0 .8rem;
+  letter-spacing:-.01em;
+  line-height:1.25;
+}
+.threat-card p{
+  color:var(--muted);
+  font-size:.95rem;
+  line-height:1.55;
+  margin:0;
+}
+.threat-card p em{
+  color:var(--forest);
+  font-style:italic;
+  font-weight:500;
+}
+
+@media (max-width:1100px){
+  .scare-grid{grid-template-columns:repeat(3, 1fr)}
+}
+@media (max-width:860px){
+  .scare-grid{grid-template-columns:repeat(2, 1fr)}
+  .threat-grid{grid-template-columns:1fr}
+  .scare-card:nth-child(5){grid-column:1 / -1}
+}
+@media (max-width:600px){
+  .scare-strip{padding:1.5rem 1.2rem}
+  .scare-grid{grid-template-columns:1fr;gap:.6rem}
+  .scare-card:nth-child(5){grid-column:auto}
+  .threat-card{padding:3rem 1.4rem 1.5rem}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   §3 USE CASES — 3×3 capability grid
+═══════════════════════════════════════════════════════════ */
+.use-cases{background:var(--sage-100)}
+
+.uses-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1.4rem;
+}
+.use-card{
+  background:#fff;
+  border:1px solid transparent;
+  border-radius:14px;
+  padding:1.6rem 1.5rem 1.4rem;
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  transition:background .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s;
+  position:relative;
+}
+.use-card:hover{
+  background:var(--sage-50);
+  transform:translateY(-3px);
+  box-shadow:0 10px 24px rgba(10,22,40,.06), 0 1px 3px rgba(10,22,40,.04);
+  border-color:rgba(27,74,34,.12);
+}
+.use-icon{
+  width:48px;
+  height:48px;
+  background:var(--sage-100);
+  color:var(--ink);
+  border-radius:12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  margin-bottom:.3rem;
+  transition:transform .25s var(--ease-spring), background .25s;
+}
+.use-icon svg{
+  width:26px;
+  height:26px;
+}
+.use-card:hover .use-icon{
+  transform:scale(1.06) rotate(-3deg);
+}
+.use-title{
+  font-family:var(--font-display);
+  font-weight:500;
+  font-size:1.15rem;
+  letter-spacing:-.01em;
+  line-height:1.3;
+  margin:0;
+}
+.use-body{
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.55;
+  margin:0;
+}
+.use-body em{color:var(--forest);font-style:italic;font-weight:500}
+.use-list{
+  list-style:none;
+  padding:0;
+  margin:.4rem 0 0;
+  display:grid;
+  gap:.4rem;
+}
+.use-list li{
+  position:relative;
+  padding-left:1.1rem;
+  font-size:.8rem;
+  line-height:1.5;
+  color:var(--ink);
+  font-weight:500;
+}
+.use-list li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.45rem;
+  width:8px;
+  height:4px;
+  border-left:1.5px solid var(--emerald);
+  border-bottom:1.5px solid var(--emerald);
+  transform:rotate(-45deg);
+}
+
+@media (max-width:980px){
+  .uses-grid{grid-template-columns:repeat(2, 1fr)}
+}
+@media (max-width:600px){
+  .uses-grid{grid-template-columns:1fr;gap:1rem}
+  .use-card{padding:1.4rem 1.2rem 1.2rem}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   §4 ARCHITECTURE — 3 deployment pattern cards with schematics
+═══════════════════════════════════════════════════════════ */
+.architecture{background:var(--sage-50)}
+
+.arch-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1.4rem;
+}
+.arch-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:1.8rem 1.6rem;
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  position:relative;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s;
+}
+.arch-card:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+  border-color:rgba(27,74,34,.14);
+}
+.arch-label{
+  font-family:var(--font-mono);
+  font-size:.62rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--forest);
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+}
+.arch-label::before{
+  content:"";
+  width:20px;
+  height:1px;
+  background:var(--emerald);
+}
+.arch-title{
+  font-family:var(--font-display);
+  font-weight:500;
+  font-size:1.2rem;
+  margin:0;
+  letter-spacing:-.01em;
+}
+
+/* "Recommended" badge on Pattern C */
+.arch-rec{
+  position:absolute;
+  top:1.4rem;
+  right:1.4rem;
+  background:var(--forest);
+  color:#fff;
+  padding:.25rem .55rem;
+  border-radius:4px;
+  font-family:var(--font-mono);
+  font-size:.52rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+/* Schematic diagram */
+.arch-diagram{
+  background:var(--sage-50);
+  border-radius:10px;
+  padding:1rem .8rem;
+  min-height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.arch-zone{
+  border:1.5px dashed var(--emerald);
+  border-radius:8px;
+  padding:.95rem .5rem .5rem;
+  position:relative;
+  background:rgba(155,215,164,.06);
+  flex:1;
+}
+.zone-label{
+  position:absolute;
+  top:-.42rem;
+  left:.5rem;
+  background:var(--sage-50);
+  padding:0 .35rem;
+  font-family:var(--font-mono);
+  font-size:.5rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--forest);
+  white-space:nowrap;
+}
+.arch-flow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.15rem;
+  flex-wrap:nowrap;
+}
+.arch-flow .node{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:.18rem .32rem;
+  font-family:var(--font-mono);
+  font-size:.54rem;
+  font-weight:600;
+  color:var(--ink);
+  letter-spacing:.02em;
+  white-space:nowrap;
+}
+.arch-flow .node.hl{
+  background:var(--forest);
+  color:#fff;
+  border-color:var(--forest);
+}
+.arch-flow .arrow{
+  color:var(--muted);
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  padding:0 1px;
+}
+
+/* Hybrid split pattern */
+.arch-diagram.split{
+  padding:1rem .5rem;
+  gap:.35rem;
+}
+.arch-diagram.split .arch-zone{flex:1 1 auto}
+.arch-bridge{
+  flex:0 0 auto;
+  color:var(--forest);
+  font-size:1rem;
+  font-weight:600;
+  padding:0 .1rem;
+}
+.arch-zone.external{
+  border-color:var(--muted);
+  background:rgba(100,116,139,.04);
+}
+.arch-zone.external .zone-label{color:var(--muted)}
+
+.arch-body{
+  color:var(--muted);
+  font-size:.88rem;
+  line-height:1.55;
+  margin:0;
+}
+.arch-tech{
+  list-style:none;
+  padding:.9rem 0 0;
+  margin:0;
+  display:grid;
+  gap:.35rem;
+  border-top:1px solid var(--border);
+}
+.arch-tech li{
+  font-size:.8rem;
+  line-height:1.5;
+  color:var(--ink);
+}
+.arch-tech li .label{
+  font-family:var(--font-mono);
+  font-size:.56rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-right:.45rem;
+}
+.arch-tradeoff{
+  background:rgba(27,74,34,.05);
+  border-left:2.5px solid var(--forest);
+  border-radius:0 6px 6px 0;
+  padding:.6rem .75rem;
+  margin:0;
+  font-size:.8rem;
+  line-height:1.5;
+  color:var(--ink);
+}
+.arch-tradeoff strong{
+  font-family:var(--font-mono);
+  font-size:.58rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--forest);
+  display:inline-block;
+  margin-right:.35rem;
+}
+
+@media (max-width:980px){
+  .arch-grid{grid-template-columns:1fr;gap:1.2rem}
+  .arch-card{padding:1.6rem 1.4rem}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   §5 GOVERNANCE — framework document list
+═══════════════════════════════════════════════════════════ */
+.governance{background:var(--sage-100)}
+
+.gov-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+}
+.gov-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.gov-row{
+  display:grid;
+  grid-template-columns: 56px 1.1fr 1.7fr;
+  gap: 1.6rem;
+  align-items:center;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background .2s var(--ease);
+}
+.gov-row:last-child{border-bottom:none}
+.gov-row:hover{background: rgba(91,163,100,.03)}
+.gov-num{
+  font-family:var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing:.04em;
+  color: var(--forest);
+  line-height: 1.1;
+}
+.gov-meta{
+  display:flex;
+  flex-direction:column;
+  gap:.4rem;
+  align-items:flex-start;
+}
+.gov-title{
+  font-family:var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing:-.005em;
+  line-height: 1.3;
+  margin: 0;
+}
+.gov-tag{
+  font-family:var(--font-mono);
+  font-size: .56rem;
+  font-weight: 700;
+  letter-spacing:.12em;
+  text-transform: uppercase;
+  color: var(--forest);
+  padding:.2rem .5rem;
+  background: rgba(91,163,100,.08);
+  border:1px solid rgba(91,163,100,.2);
+  border-radius: 3px;
+}
+.gov-desc{
+  font-size: .9rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width:860px){
+  .gov-card{padding: .3rem 1.5rem}
+  .gov-row{
+    grid-template-columns: 42px 1fr;
+    gap: .8rem 1rem;
+    padding: 1.2rem 0;
+  }
+  .gov-desc{
+    grid-column: 2;
+    margin-top: .1rem;
+  }
+}
+@media (max-width:600px){
+  .gov-card{padding: .3rem 1.2rem}
+  .gov-num{font-size: 1rem}
+  .gov-title{font-size: .98rem}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   §6 HOW WE ENGAGE — 4-phase roadmap with animated bars
+═══════════════════════════════════════════════════════════ */
+.engage{background:var(--sage-50)}
+
+.eng-list{
+  display:grid;
+  gap:1.2rem;
+}
+.eng-row{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:1.6rem 1.8rem;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s;
+}
+.eng-row:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+  border-color:rgba(27,74,34,.14);
+}
+.eng-header{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:.9rem;
+  flex-wrap:wrap;
+}
+.eng-num{
+  font-family:var(--font-mono);
+  font-size:.62rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--forest);
+  padding:.22rem .55rem;
+  background:rgba(91,163,100,.08);
+  border:1px solid rgba(91,163,100,.2);
+  border-radius:4px;
+}
+.eng-title{
+  font-family:var(--font-display);
+  font-weight:500;
+  font-size:1.25rem;
+  letter-spacing:-.01em;
+  margin:0;
+  flex-grow:1;
+}
+.eng-duration{
+  font-family:var(--font-mono);
+  font-size:.68rem;
+  font-weight:600;
+  letter-spacing:.06em;
+  color:var(--muted);
+  padding:.25rem .55rem;
+  background:var(--sage-100);
+  border-radius:4px;
+  white-space:nowrap;
+}
+
+.eng-bar-outer{
+  height:6px;
+  background:var(--sage-100);
+  border-radius:3px;
+  overflow:hidden;
+  margin-bottom:1rem;
+  position:relative;
+}
+.eng-bar-inner{
+  height:100%;
+  background:linear-gradient(90deg, var(--forest) 0%, var(--emerald) 100%);
+  border-radius:3px;
+  width:0;
+  transition:width 1.2s cubic-bezier(.25,1,.3,1);
+}
+.eng-bar-inner.variable{
+  background:repeating-linear-gradient(90deg,
+    var(--forest) 0 8px,
+    var(--emerald) 8px 16px);
+}
+.eng-bar-inner.ongoing{
+  background:linear-gradient(90deg,
+    var(--forest) 0%,
+    var(--emerald) 60%,
+    rgba(126,195,137,.3) 100%);
+}
+
+.eng-desc{
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.55;
+  margin:0 0 .8rem;
+}
+.eng-deliverables{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:.35rem;
+}
+.eng-deliverables li{
+  position:relative;
+  padding-left:1.1rem;
+  font-size:.82rem;
+  line-height:1.5;
+  color:var(--ink);
+}
+.eng-deliverables li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.5rem;
+  width:8px;
+  height:4px;
+  border-left:1.5px solid var(--emerald);
+  border-bottom:1.5px solid var(--emerald);
+  transform:rotate(-45deg);
+}
+
+@media (max-width:600px){
+  .eng-row{padding:1.3rem 1.3rem}
+  .eng-title{font-size:1.1rem}
+  .eng-header{flex-wrap:wrap;gap:.5rem .75rem}
+  .eng-num{flex:0 0 auto}
+  .eng-title{flex:1 1 100%;order:3}
+  .eng-duration{order:2;margin-left:auto}
+}
+
+
+.i18n > [lang]{display:none}
+body[data-lang="en"] .i18n > [lang="en"],
+body[data-lang="sv"] .i18n > [lang="sv"],
+body[data-lang="da"] .i18n > [lang="da"]{display:inline}
+/* block-level i18n for paragraphs/headings */
+.i18n-block > [lang]{display:none}
+body[data-lang="en"] .i18n-block > [lang="en"],
+body[data-lang="sv"] .i18n-block > [lang="sv"],
+body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
+
+/* ═══════════════════════════════════════════════════════════
+   NAV: hybrid dropdown (AI + Security) + editorial lang switcher
+═══════════════════════════════════════════════════════════ */
+.nav-links{position:relative}
+.nav-links > li{position:relative}
+
+/* Hover hotspot for items that have a dedicated deep page */
+.nav-links .has-deep{
+  display:inline-flex;align-items:center;gap:.25rem;
+  padding:.35rem 0;margin:-.35rem 0;
+  cursor:default;
+}
+.nav-links .has-deep > a{padding:.1rem 0}
+.deep-toggle{
+  width:18px;height:18px;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.5);border-radius:3px;padding:0;
+  margin-left:-.1rem;background:transparent;border:none;cursor:pointer;
+  transition:color .2s var(--ease,cubic-bezier(.16,1,.3,1)),transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-toggle:hover,.deep-toggle:focus-visible{color:var(--emerald-bright);outline:none}
+.deep-toggle svg{
+  width:10px;height:10px;
+  transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.has-deep.open .deep-toggle{color:var(--emerald-bright)}
+.has-deep.open .deep-toggle svg{transform:rotate(180deg)}
+
+/* Floating dropdown card */
+.deep-card{
+  position:absolute;top:calc(100% + .85rem);left:50%;
+  transform:translateX(-50%) translateY(-8px);
+  width:340px;background:#fff;
+  border:1px solid rgba(10,22,40,.1);border-radius:12px;
+  box-shadow:0 10px 24px rgba(10,22,40,.12),0 2px 6px rgba(10,22,40,.06);
+  padding:.5rem;opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .22s var(--ease,cubic-bezier(.16,1,.3,1)),transform .28s var(--ease,cubic-bezier(.16,1,.3,1)),visibility .22s;
+  z-index:101;
+}
+.deep-card::before{
+  content:"";position:absolute;top:0;left:24px;right:24px;height:2px;
+  background:linear-gradient(90deg,transparent 0%,var(--emerald) 20%,var(--emerald-bright) 50%,var(--emerald) 80%,transparent 100%);
+  border-radius:0 0 2px 2px;
+}
+.deep-card::after{
+  content:"";position:absolute;top:-7px;left:50%;
+  transform:translateX(-50%) rotate(45deg);
+  width:12px;height:12px;background:#fff;
+  border-left:1px solid rgba(10,22,40,.1);border-top:1px solid rgba(10,22,40,.1);
+}
+.has-deep.open .deep-card{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateX(-50%) translateY(0);
+}
+
+.deep-row{
+  display:block;padding:.85rem 1rem;border-radius:8px;
+  transition:background .18s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-row + .deep-row{margin-top:.2rem}
+.deep-row:hover,.deep-row:focus-visible{background:var(--sage-50);outline:none}
+.deep-row-label{
+  font-family:var(--f-display,'Fraunces',Georgia,serif);font-style:italic;
+  font-size:1rem;font-weight:500;color:var(--ink);
+  display:flex;align-items:center;gap:.4rem;margin-bottom:.18rem;
+}
+.deep-row-label .arrow{
+  display:inline-block;font-size:.85em;color:var(--emerald);
+  transition:transform .2s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-row:hover .deep-row-label .arrow{transform:translateX(3px)}
+.deep-row-desc{
+  font-family:var(--f-body,'Plus Jakarta Sans',sans-serif);
+  font-size:.76rem;line-height:1.45;color:var(--muted);font-style:normal;
+}
+.deep-row.primary .deep-row-label::before{
+  content:"";width:5px;height:5px;border-radius:50%;
+  background:var(--emerald);display:inline-block;flex-shrink:0;
+}
+
+/* Compact language pill + editorial popover */
+.lang-switch{position:relative;margin-left:.5rem;display:inline-flex;align-items:center}
+.lang-pill{
+  display:inline-flex;align-items:center;gap:.35rem;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:999px;padding:.35rem .72rem .35rem .8rem;
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.85);cursor:pointer;
+  transition:all .2s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-pill:hover,.lang-pill:focus-visible{
+  background:rgba(255,255,255,.1);border-color:rgba(126,195,137,.3);
+  color:#fff;outline:none;
+}
+.lang-pill .chevron{
+  width:8px;height:8px;opacity:.7;
+  transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-switch.open .lang-pill .chevron{transform:rotate(180deg)}
+.lang-pill .dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--emerald-bright);display:inline-block;
+}
+
+.lang-pop{
+  position:absolute;top:calc(100% + .75rem);right:0;
+  min-width:220px;background:#fff;
+  border:1px solid rgba(10,22,40,.1);border-radius:12px;
+  box-shadow:0 10px 24px rgba(10,22,40,.12),0 2px 6px rgba(10,22,40,.06);
+  padding:1.2rem 1.3rem 1.1rem;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateY(-6px) scale(.97);transform-origin:top right;
+  transition:opacity .22s var(--ease,cubic-bezier(.16,1,.3,1)),transform .28s var(--ease,cubic-bezier(.16,1,.3,1)),visibility .22s;
+  z-index:101;
+}
+.lang-pop::after{
+  content:"";position:absolute;top:-7px;right:18px;
+  width:12px;height:12px;background:#fff;transform:rotate(45deg);
+  border-left:1px solid rgba(10,22,40,.1);border-top:1px solid rgba(10,22,40,.1);
+}
+.lang-switch.open .lang-pop{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateY(0) scale(1);
+}
+.lang-pop-label{
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.55rem;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;
+}
+.lang-pop ul{display:flex;flex-direction:column;gap:.1rem;list-style:none;padding:0;margin:0}
+.lang-pop button{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  width:100%;padding:.55rem .6rem;border-radius:6px;text-align:left;
+  background:transparent;border:none;cursor:pointer;font:inherit;
+  transition:background .18s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-pop button:hover,.lang-pop button:focus-visible{background:var(--sage-50);outline:none}
+.lang-pop .native{
+  font-family:var(--f-display,'Fraunces',Georgia,serif);font-style:italic;
+  font-size:1.15rem;font-weight:400;color:var(--ink);letter-spacing:-.005em;
+}
+.lang-pop .code{
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.62rem;font-weight:600;letter-spacing:.14em;
+  color:var(--muted);text-transform:uppercase;
+}
+.lang-pop button[aria-pressed="true"] .native{color:var(--forest)}
+.lang-pop button[aria-pressed="true"] .native::after{
+  content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--emerald);margin-left:.5rem;vertical-align:middle;
+}
+.lang-pop button[aria-pressed="true"] .code{color:var(--forest)}
+
+@media (max-width:980px){
+  .lang-switch{display:none}
+  .mobile-menu .lang-switch{display:block;margin-top:1rem;position:static}
+  .mobile-menu .lang-pop{
+    position:static;opacity:1;visibility:visible;pointer-events:auto;
+    transform:none;box-shadow:none;padding:1rem 0 0;
+    background:transparent;border:none;border-top:1px solid rgba(255,255,255,.08);
+  }
+  .mobile-menu .lang-pop::after{display:none}
+  .mobile-menu .lang-pop .native{color:rgba(255,255,255,.85)}
+  .mobile-menu .lang-pop .code{color:rgba(255,255,255,.5)}
+  .mobile-menu .lang-pop-label{color:rgba(255,255,255,.45)}
+  .mobile-menu .lang-pop button:hover{background:rgba(255,255,255,.05)}
+  .mobile-menu .lang-pop button[aria-pressed="true"] .native{color:var(--emerald-glow)}
+  .mobile-menu .lang-pop button[aria-pressed="true"] .code{color:var(--emerald-bright)}
+  .mobile-menu .deep-child{
+    padding-left:1.2rem;font-size:.88rem;color:rgba(255,255,255,.6);
+    border-bottom:1px solid rgba(255,255,255,.04)!important;
+  }
+  .mobile-menu .deep-child::before{content:"→ ";color:var(--emerald-bright)}
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   SESSION 1 — MONOGRAM + TYPOGRAPHY SYSTEM
+═══════════════════════════════════════════════════════════ */
+/* Body-wide: old-style figures + ligatures. Override on headings. */
+body {
+  font-feature-settings: "onum" 1, "liga" 1, "kern" 1;
+}
+h1, h2, h3, h4,
+.stat, .stat-num, .big-number,
+.kpi-value, .reel, .scare-num,
+.threat-pct, .threat-bar,
+.phase-dur, .eng-duration, .eng-num, .gov-num,
+.m-stat-num {
+  font-feature-settings: "lnum" 1, "liga" 1, "kern" 1;
+}
+/* Monospace labels: also lining */
+.eyebrow, .mono, .scare-label, .scare-meta,
+.nav-links .lang-pill, .lang-pop .code,
+.dash-title, .chart-title, .kpi-label,
+.eng-duration, .arch-label {
+  font-feature-settings: "lnum" 1;
+}
+
+/* Selective <abbr> — 4+ letter acronyms only, small-caps + tracking. */
+abbr {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+  letter-spacing: .05em;
+  text-decoration: none;
+}
+
+/* ─── Vault diamond monogram (eyebrow prefix, job B) ─── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Dark-background variants (sections on --ink) */
+.hero .eyebrow::before,
+.rollout .eyebrow::before,
+.scare-strip .eyebrow::before,
+.dark-section .eyebrow::before,
+.problem .eyebrow::before,
+.final-cta .eyebrow::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364'/></svg>");
+}
+
+/* ─── Between-section rule (job B, structural) ─── */
+.section-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .9rem;
+  padding: .45rem 1.2rem;
+  background: rgba(245,243,237,.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 999px;
+  /* Symmetric shadow — same weight above and below so pill looks centered */
+  box-shadow: 0 0 6px rgba(10,22,40,.1), 0 0 0 1px rgba(10,22,40,.04);
+  position: relative;
+  z-index: 2;
+}
+.section-mark-wrap {
+  /* Wrapper takes ZERO space in flow, so section B starts directly after section A.
+     The pill is absolutely positioned, centered on the boundary via translateY(-50%). */
+  position: relative;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+}
+.section-mark-wrap .section-mark {
+  /* Absolutely positioned so it floats exactly on the boundary */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.section-mark::before,
+.section-mark::after {
+  content: "";
+  width: 56px;
+  max-width: 56px;
+  flex: 0 0 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(27,74,34,.3), rgba(27,74,34,.42));
+}
+.section-mark::after {
+  background: linear-gradient(90deg, rgba(27,74,34,.42), rgba(27,74,34,.3), transparent);
+}
+.section-mark .mark {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22' opacity='.55'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Wrapper variants: when .section-mark-wrap has dark or sage bg */
+.section-mark-wrap.dark .section-mark::before,
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), rgba(255,255,255,.14));
+}
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, rgba(255,255,255,.14), rgba(255,255,255,.08), transparent);
+}
+.section-mark-wrap.dark .section-mark .mark {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364' opacity='.55'/></svg>");
+}
+
+/* ─── Em-dash list overrides ─── */
+/* Overrides existing tick-style ::before on use-list, eng-deliverables, etc. */
+.use-list li::before,
+.eng-deliverables li::before,
+.comp-list li::before,
+.report-meta li::before {
+  content: "—" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1rem !important;
+  height: auto !important;
+  color: var(--emerald) !important;
+  font-weight: 500 !important;
+  font-family: var(--font-body, inherit) !important;
+  border: none !important;
+  background: transparent !important;
+  transform: none !important;
+}
+.use-list li,
+.eng-deliverables li,
+.comp-list li,
+.report-meta li {
+  padding-left: 1.3rem !important;
+}
+
+/* ─── Final-CTA vault watermark (job D) ─── */
+.final-cta::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 300px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 62'><g fill='none' stroke='%23F5F3ED' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'><path d='M34,2 L58,16 L34,30 L10,16 Z'/><path d='M34,30 L58,16 L58,44 L34,58 Z'/><path d='M34,30 L10,16 L10,44 L34,58 Z'/></g><path d='M34,16 L46,23 L34,30 L22,23 Z' fill='%23F5F3ED'/><path d='M34,30 L22,23 L22,37 L34,44 Z' fill='%23C9C3B1'/><path d='M34,30 L46,23 L46,37 L34,44 Z' fill='%23A8A290'/><circle cx='40' cy='29' fill='%231B4A22' r='1.2'/><path d='M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z' fill='%239BD7A4'/><path d='M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z' fill='%237EC389'/><path d='M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z' fill='%233B7D44'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .05;
+  pointer-events: none;
+  z-index: 1;
+}
+.final-cta-inner {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 760px) {
+  .final-cta::after {
+    width: 240px;
+    height: 210px;
+    right: -80px;
+    opacity: .04;
+  }
+}
+/* ═══ END SESSION 1 ═══ */
+
+
+/* ═══════════════════════════════════════════════════════════
+   SESSION 2 — FIELD NOTE ANNOTATIONS
+═══════════════════════════════════════════════════════════ */
+.field-note {
+  margin: 1.8rem 0;
+  padding: 0 0 0 1.2rem;
+  border-left: 1.5px solid var(--emerald);
+  max-width: 680px;
+}
+/* Extra breathing room when a field note is immediately followed by a button group */
+.field-note + .hero-ctas {
+  margin-top: 2.4rem;
+}
+/* When a field note is the LAST element of its section, reduce section's bottom padding
+   to avoid doubled-space before the next section-mark */
+/* Reduce section bottom padding when it ends with a field note anywhere in its tree */
+section:has(.field-note:last-child) {
+  padding-bottom: 3rem;
+}
+.field-note-label {
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-right: .35rem;
+  display: inline;
+}
+.field-note-dash {
+  color: var(--emerald);
+  font-weight: 500;
+  margin: 0 .25rem 0 .1rem;
+  display: inline;
+}
+.field-note-body {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .97rem;
+  line-height: 1.55;
+  color: var(--ink);
+  display: inline;
+}
+/* Dark-background variant — only applies on actually-dark sections (rollout, final-cta, scare-strip) */
+.rollout .field-note,
+.final-cta .field-note,
+.scare-strip .field-note {
+  border-left-color: var(--emerald-bright);
+}
+.rollout .field-note-label,
+.final-cta .field-note-label,
+.scare-strip .field-note-label {
+  color: var(--emerald-bright);
+}
+.rollout .field-note-dash,
+.final-cta .field-note-dash,
+.scare-strip .field-note-dash {
+  color: var(--emerald-bright);
+}
+.rollout .field-note-body,
+.final-cta .field-note-body,
+.scare-strip .field-note-body {
+  color: rgba(245,243,237,.85);
+}
+/* ═══ END SESSION 2 ═══ */
+
+
+/* ═══════════════════════════════════════════════════════════
+   STRATEGY PAGE — component styles (Phase 1)
+═══════════════════════════════════════════════════════════ */
+.sub-section-head {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-weight: 500;
+  font-size: 1.45rem;
+  letter-spacing: -.01em;
+  margin: 2.5rem 0 .6rem;
+  color: var(--ink);
+}
+.rollout .sub-section-head { color: var(--sage-50); }
+.sub-section-lede {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: .5rem;
+}
+.rollout .sub-section-lede { color: rgba(245,243,237,.75); }
+
+/* Use-card variants for strategy (dimensions, blocks, situations) */
+.use-num {
+  font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--forest);
+  padding: .22rem .55rem;
+  background: rgba(91,163,100,.08);
+  border: 1px solid rgba(91,163,100,.2);
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: .7rem;
+  width: fit-content;
+}
+.use-subtitle {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--forest);
+  margin: -.3rem 0 .8rem;
+  line-height: 1.4;
+}
+.use-typical {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-style: italic;
+  font-size: .9rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 1rem;
+  padding-top: .9rem;
+  border-top: 1px solid rgba(10,22,40,.08);
+}
+.use-note {
+  font-size: .8rem;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-top: .9rem;
+  padding: .6rem .8rem;
+  background: rgba(91,163,100,.05);
+  border-left: 2px solid var(--emerald);
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+}
+
+/* Target-grid — used for target-cards and engagement-shape cards */
+.target-card {
+  background: #fff;
+  border: 1px solid var(--border, rgba(10,22,40,.09));
+  border-radius: 12px;
+  padding: 1.4rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.rollout .target-card {
+  background: rgba(255,255,255,.03);
+  border-color: rgba(255,255,255,.08);
+}
+.target-num,
+.target-label {
+  font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--forest);
+}
+.rollout .target-label { color: var(--emerald-bright); }
+.target-title {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin: .1rem 0 .2rem;
+  line-height: 1.25;
+}
+.rollout .target-title { color: var(--sage-50); }
+.target-duration {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--forest);
+  margin: 0 0 .25rem;
+}
+.rollout .target-duration { color: var(--emerald-bright); }
+.target-body {
+  font-size: .88rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}
+.rollout .target-body { color: rgba(245,243,237,.75); }
+
+/* Threat-label variant used on strategy trigger cards */
+.threat-label {
+  font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--emerald-bright);
+  display: block;
+  margin-bottom: .5rem;
+}
+
+/* Mobile: collapse target-grid to single column */
+@media (max-width: 780px) {
+  .target-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .uses-grid[style*="grid-template-columns:repeat(2,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* ─── DARK SECTION OVERRIDES (strategy page) ─── */
+/* Only .rollout and .final-cta are truly dark on this page.
+   .problem, .hero, .uses, .faq are all LIGHT backgrounds. */
+
+.rollout .use-card {
+  background: rgba(255,255,255,.03);
+  border-color: rgba(255,255,255,.08);
+}
+.rollout .use-title {
+  color: var(--sage-50);
+}
+.rollout .use-subtitle {
+  color: var(--emerald-bright);
+}
+.rollout .use-body {
+  color: rgba(245,243,237,.75);
+}
+.rollout .use-list li {
+  color: rgba(245,243,237,.75);
+}
+.rollout .use-typical {
+  color: rgba(245,243,237,.6);
+  border-top-color: rgba(255,255,255,.1);
+}
+.rollout .use-note {
+  color: rgba(245,243,237,.7);
+  background: rgba(126,195,137,.08);
+  border-left-color: var(--emerald-bright);
+}
+.rollout .use-num {
+  color: var(--emerald-bright);
+  background: rgba(126,195,137,.1);
+  border-color: rgba(126,195,137,.25);
+}
+.rollout .section-lede {
+  color: rgba(245,243,237,.78);
+}
+
+/* Threat-label/threat-body in §2 (.problem is LIGHT bg) — default styles should work,
+   but let's set them explicitly to be safe */
+.problem .threat-label {
+  color: var(--forest);
+}
+.problem .threat-body {
+  color: var(--ink);
+}
+/* ─── END DARK OVERRIDES ─── */
+
+
+/* ─── EXPLICIT .uses SECTION STYLING (override any mystery dark bg) ─── */
+section.uses {
+  background: var(--sage-50) !important;
+  color: var(--ink) !important;
+}
+section.uses .section-inner,
+section.uses h2,
+section.uses h3,
+section.uses h4,
+section.uses p {
+  color: var(--ink);
+}
+section.uses h2,
+section.uses .display {
+  color: var(--ink) !important;
+}
+section.uses h2 em,
+section.uses .display em {
+  color: var(--forest) !important;
+}
+section.uses .section-lede,
+section.uses .sub-section-lede {
+  color: var(--muted) !important;
+}
+section.uses .sub-section-head {
+  color: var(--ink) !important;
+}
+section.uses .eyebrow {
+  color: var(--forest) !important;
+}
+section.uses .field-note-body {
+  color: var(--ink) !important;
+}
+/* ─── END .uses EXPLICIT STYLING ─── */
+
+/* ═══ END STRATEGY PAGE CSS ═══ */
+
+
+/* ═══════════════════════════════════════════════════════════
+   HERO JOURNEY MAP (Phase 2 — v8 square)
+   All classes prefixed with hm- to prevent CSS bleed.
+   Map is 1:1 square to match hero-visual container.
+═══════════════════════════════════════════════════════════ */
+
+/* Hero-map wrapper — fills the 1:1 hero-visual container */
+.hero-map-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.hm-journey-map { width: 100%; height: 100%; overflow: visible; }
+
+/* ─── BORDERS ─── */
+.hm-border-frame { fill: none; stroke: rgba(27, 74, 34, .35); stroke-width: 1.2; }
+.hm-border-frame-inner { fill: none; stroke: rgba(27, 74, 34, .18); stroke-width: .6; }
+.hm-corner-flourish { fill: none; stroke: rgba(27, 74, 34, .35); stroke-width: .8; stroke-linecap: round; }
+
+/* ─── TERRAIN ─── */
+.hm-contour { fill: none; stroke: rgba(10, 22, 40, .09); stroke-width: .7; stroke-linejoin: round; stroke-linecap: round; }
+.hm-contour.hm-heavier { stroke: rgba(10, 22, 40, .14); stroke-width: .9; }
+.hm-contour.hm-lightest { stroke: rgba(10, 22, 40, .055); stroke-width: .6; }
+.hm-cliff { fill: none; stroke: rgba(27, 74, 34, .3); stroke-width: .6; stroke-linecap: round; }
+.hm-river { fill: none; stroke: rgba(85, 106, 130, .32); stroke-width: 1.5; stroke-linecap: round; }
+.hm-river-glint { fill: none; stroke: rgba(91, 163, 100, .18); stroke-width: .8; stroke-linecap: round; }
+.hm-creek { fill: none; stroke: rgba(85, 106, 130, .22); stroke-width: 1; stroke-linecap: round; }
+.hm-water { fill: rgba(85, 106, 130, .1); stroke: rgba(85, 106, 130, .25); stroke-width: 1; }
+.hm-water-wave { fill: none; stroke: rgba(85, 106, 130, .22); stroke-width: .7; }
+.hm-lake { fill: rgba(85, 106, 130, .14); stroke: rgba(85, 106, 130, .3); stroke-width: .9; }
+.hm-mountain { fill: rgba(27, 74, 34, .08); stroke: rgba(27, 74, 34, .4); stroke-width: .9; stroke-linejoin: round; }
+.hm-mountain-hatch { stroke: rgba(27, 74, 34, .35); stroke-width: .5; }
+.hm-tree { fill: rgba(27, 74, 34, .35); }
+.hm-tree-alt { fill: rgba(27, 74, 34, .28); }
+.hm-grass { stroke: rgba(27, 74, 34, .35); stroke-width: .5; stroke-linecap: round; fill: none; }
+.hm-rock { fill: rgba(27, 74, 34, .18); stroke: rgba(27, 74, 34, .4); stroke-width: .5; }
+.hm-old-track { fill: none; stroke: rgba(85, 106, 130, .25); stroke-width: .8; stroke-linecap: round; stroke-dasharray: 1 4; }
+.hm-region { fill: rgba(91, 163, 100, .05); stroke: rgba(27, 74, 34, .14); stroke-width: 1; stroke-dasharray: 2 3; }
+.hm-region.hm-primary { fill: rgba(91, 163, 100, .1); stroke: rgba(27, 74, 34, .22); stroke-dasharray: none; stroke-width: 1; }
+
+/* Atmospheric elements */
+.hm-bird { fill: none; stroke: rgba(27, 74, 34, .45); stroke-width: .7; stroke-linecap: round; stroke-linejoin: round; }
+.hm-ship-hull { fill: rgba(27, 74, 34, .4); stroke: rgba(27, 74, 34, .6); stroke-width: .6; }
+.hm-ship-sail { fill: rgba(245, 243, 237, .7); stroke: rgba(27, 74, 34, .5); stroke-width: .5; }
+.hm-ship-mast { stroke: rgba(27, 74, 34, .6); stroke-width: .6; }
+.hm-stone { fill: rgba(27, 74, 34, .4); stroke: rgba(10, 22, 40, .3); stroke-width: .4; }
+.hm-bridge { stroke: rgba(94, 74, 44, .6); stroke-width: 1.4; stroke-linecap: round; }
+.hm-bridge-rail { stroke: rgba(94, 74, 44, .4); stroke-width: .5; }
+
+/* Cottage / watchtower */
+.hm-cottage { fill: rgba(245, 243, 237, .7); stroke: rgba(27, 74, 34, .5); stroke-width: .7; }
+.hm-cottage-roof { fill: rgba(107, 85, 53, .5); stroke: rgba(27, 74, 34, .5); stroke-width: .7; stroke-linejoin: round; }
+.hm-cottage-smoke { fill: none; stroke: rgba(85, 106, 130, .3); stroke-width: .8; stroke-linecap: round; }
+.hm-tower { fill: rgba(245, 243, 237, .6); stroke: rgba(27, 74, 34, .55); stroke-width: .7; stroke-linejoin: round; }
+
+/* ─── JOURNEY PATH ─── */
+.hm-journey-path { fill: none; stroke: var(--muted); stroke-width: 1.8; stroke-linecap: round; stroke-dasharray: 6 5; opacity: .6; }
+.hm-detour-path { fill: none; stroke: rgba(85, 106, 130, .3); stroke-width: 1.2; stroke-linecap: round; stroke-dasharray: 3 4; }
+
+.hm-journey-trail {
+  fill: none;
+  stroke: var(--emerald);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  opacity: .75;
+  /* pathLength normalized to 1000, so dasharray/offset of 1000 = full length */
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  /* LINEAR timing to match the diamond's constant-speed SMIL animation */
+  animation: hm-trail-draw 12s linear forwards;
+  animation-delay: 0.5s;
+}
+@keyframes hm-trail-draw { to { stroke-dashoffset: 0; } }
+
+/* ═══ STYLE A — Markers + connectors + labels ═══ */
+
+/* Markers (symbolic icons) */
+.hm-marker {
+  fill: none;
+  stroke: var(--forest);
+  stroke-width: 1.3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.hm-marker-fill {
+  fill: rgba(27, 74, 34, .12);
+  stroke: var(--forest);
+  stroke-width: 1.3;
+  stroke-linejoin: round;
+}
+.hm-marker-primary {
+  fill: none;
+  stroke: var(--forest);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.hm-marker-primary-fill {
+  fill: rgba(91, 163, 100, .15);
+  stroke: var(--forest);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+.hm-emerald-accent { fill: var(--emerald); }
+
+/* Connector lines (label→marker) */
+.hm-connector {
+  fill: none;
+  stroke: rgba(27, 74, 34, .5);
+  stroke-width: .7;
+  stroke-linecap: round;
+}
+.hm-connector-primary {
+  fill: none;
+  stroke: rgba(27, 74, 34, .65);
+  stroke-width: .9;
+  stroke-linecap: round;
+}
+/* Small dot on the marker end of the connector */
+.hm-connector-end { fill: var(--forest); }
+
+/* Labels */
+.hm-label-primary {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  fill: var(--forest);
+  letter-spacing: -.005em;
+}
+.hm-label-primary-sub {
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  fill: var(--forest);
+  opacity: .7;
+}
+.hm-label-waypoint {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 11.5px;
+  fill: var(--muted);
+  letter-spacing: -.005em;
+}
+
+/* ─── Miscellaneous labels ─── */
+.hm-label-road { font-family: var(--font-display); font-style: italic; font-size: 11.5px; fill: var(--muted); opacity: .75; letter-spacing: .04em; }
+.hm-label-decorative { font-family: var(--font-display); font-style: italic; font-size: 9.5px; fill: rgba(85, 106, 130, .45); letter-spacing: .06em; }
+.hm-label-region { font-family: var(--font-display); font-style: italic; font-size: 9.5px; fill: rgba(27, 74, 34, .4); letter-spacing: .22em; text-transform: uppercase; }
+
+/* Compass + scale */
+.hm-compass-ring { fill: rgba(245, 243, 237, .7); stroke: rgba(27, 74, 34, .4); stroke-width: .9; }
+.hm-compass-needle-n { fill: var(--forest); }
+.hm-compass-needle-s { fill: rgba(27, 74, 34, .3); }
+.hm-compass-letter { font-family: var(--font-mono); font-size: 9px; font-weight: 700; fill: var(--forest); }
+.hm-scale-bar { fill: none; stroke: var(--forest); stroke-width: 1; }
+.hm-scale-fill { fill: var(--forest); }
+.hm-scale-label { font-family: var(--font-mono); font-size: 8px; font-weight: 700; fill: var(--forest); letter-spacing: .08em; text-transform: uppercase; }
+
+/* Primary node pulses */
+.hm-primary-pulse { fill: none; stroke: var(--emerald-bright); stroke-width: 1.5; opacity: 0; transform-origin: center; }
+.hm-pulse-basecamp { animation: hm-pulse 1.4s ease-out forwards; animation-delay: 3.3s; }
+.hm-pulse-ridge    { animation: hm-pulse 1.4s ease-out forwards; animation-delay: 6.7s; }
+.hm-pulse-valley   { animation: hm-pulse 1.4s ease-out forwards; animation-delay: 10.1s; }
+@keyframes hm-pulse {
+  0% { opacity: 0; r: 8; }
+  20% { opacity: .9; r: 12; }
+  100% { opacity: 0; r: 28; }
+}
+
+/* Diamond traveler */
+.hm-diamond-group { opacity: 0; animation: hm-diamond-fadein 0.6s ease-out forwards; animation-delay: 0.3s; }
+@keyframes hm-diamond-fadein { to { opacity: 1; } }
+.hm-diamond-glow { fill: var(--emerald-glow); opacity: 0; animation: hm-glow-pulse 12.3s linear forwards; animation-delay: 0.5s; }
+@keyframes hm-glow-pulse {
+  0% { opacity: 0; }
+  5% { opacity: .55; }
+  95% { opacity: .55; }
+  100% { opacity: .8; }
+}
+/* Destination halo: stronger, longer continuous pulse at Sea of Relief */
+.hm-destination-halo { fill: var(--emerald-glow); opacity: 0; transform-origin: center; transform-box: fill-box; animation: hm-destination-pulse 3.8s ease-in-out infinite; animation-delay: 12.5s; }
+@keyframes hm-destination-pulse {
+  0%   { opacity: 0; transform: scale(.5); }
+  35%  { opacity: .8; transform: scale(1.25); }
+  100% { opacity: 0; transform: scale(2.0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-journey-trail, .hm-primary-pulse, .hm-destination-halo, .hm-diamond-group, .hm-diamond-glow {
+    animation: none !important;
+  }
+  .hm-journey-trail { stroke-dashoffset: 0 !important; }
+  .hm-diamond-group { opacity: 1 !important; }
+  .hm-diamond-glow { opacity: .6 !important; }
+  .hm-destination-halo { opacity: .3 !important; }
+  .hm-primary-pulse { opacity: 0 !important; }
+  .hm-diamond-motion { display: none; }
+  .hm-diamond-static { display: block !important; }
+}
+.hm-diamond-static { display: none; }
+
+@media (max-width: 540px) {
+  .map-wrap { max-width: 380px; }
+  .hm-label-primary { font-size: 11.5px; }
+  .hm-label-primary-sub { font-size: 6.5px; }
+  .hm-label-waypoint { font-size: 10px; }
+  .hm-label-road { font-size: 10px; }
+  .hm-label-decorative { font-size: 8px; }
+  .hm-label-region { font-size: 8px; }
+}
+/* ═══ END HERO JOURNEY MAP ═══ */
+
+
+</style>
+</head>
+<body data-lang="en">
+<!-- ═════════ SVG SYMBOLS ═════════ -->
+<svg aria-hidden="true" height="0" style="position:absolute" width="0">
+<defs>
+<!-- Vault logo (dark on light) -->
+<symbol id="logo-vault" viewbox="0 0 72 62">
+<g fill="none" opacity=".3" stroke="#0A1628" stroke-dasharray="1.2 1.4" stroke-width=".5">
+<line x1="34" x2="34" y1="2" y2="30"></line>
+<line x1="58" x2="34" y1="44" y2="30"></line>
+<line x1="10" x2="34" y1="44" y2="30"></line>
+</g>
+<g fill="none" stroke="#0A1628" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+<path d="M34,2 L58,16 L34,30 L10,16 Z"></path>
+<path d="M34,30 L58,16 L58,44 L34,58 Z"></path>
+<path d="M34,30 L10,16 L10,44 L34,58 Z"></path>
+</g>
+<path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#2A4A6A"></path>
+<path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#16304A"></path>
+<path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#0A1628"></path>
+<circle cx="40" cy="29" fill="#7EC389" r="1.2"></circle>
+<rect fill="#7EC389" height="2.5" rx=".3" width="1" x="39.5" y="29.5"></rect>
+<path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"></path>
+<path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"></path>
+<path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"></path>
+<line opacity=".6" stroke="#7EC389" stroke-dasharray=".8 .8" stroke-width=".6" x1="58.7" x2="58" y1="12" y2="16"></line>
+</symbol>
+<!-- Vault logo (light on dark) -->
+<symbol id="logo-vault-dark" viewbox="0 0 72 62">
+<g fill="none" opacity=".25" stroke="#F5F3ED" stroke-dasharray="1.2 1.4" stroke-width=".5">
+<line x1="34" x2="34" y1="2" y2="30"></line>
+<line x1="58" x2="34" y1="44" y2="30"></line>
+<line x1="10" x2="34" y1="44" y2="30"></line>
+</g>
+<g fill="none" stroke="#F5F3ED" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+<path d="M34,2 L58,16 L34,30 L10,16 Z"></path>
+<path d="M34,30 L58,16 L58,44 L34,58 Z"></path>
+<path d="M34,30 L10,16 L10,44 L34,58 Z"></path>
+</g>
+<path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#F5F3ED"></path>
+<path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#C9C3B1"></path>
+<path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#A8A290"></path>
+<circle cx="40" cy="29" fill="#1B4A22" r="1.2"></circle>
+<rect fill="#1B4A22" height="2.5" rx=".3" width="1" x="39.5" y="29.5"></rect>
+<path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"></path>
+<path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"></path>
+<path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"></path>
+<line opacity=".7" stroke="#9BD7A4" stroke-dasharray=".8 .8" stroke-width=".6" x1="58.7" x2="58" y1="12" y2="16"></line>
+</symbol>
+<!-- AI-specific section icons — to be added in Phase D (use-cases) onward -->
+<!-- ─── Phase D: 9 use-case icons (24×24, composite stroke + forest/emerald accent) ─── -->
+<symbol id="use-rag" viewbox="0 0 24 24">
+<rect x="4" y="3" width="14" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></rect>
+<line x1="7" y1="8" x2="15" y2="8" opacity=".45" stroke="currentColor" stroke-width="1" stroke-linecap="round"></line>
+<line x1="7" y1="11.5" x2="15" y2="11.5" opacity=".45" stroke="currentColor" stroke-width="1" stroke-linecap="round"></line>
+<line x1="7" y1="15" x2="12" y2="15" opacity=".45" stroke="currentColor" stroke-width="1" stroke-linecap="round"></line>
+<circle cx="18.5" cy="18.5" r="3" fill="#1B4A22"></circle>
+<circle cx="18.5" cy="18.5" r="1.1" fill="#7EC389"></circle>
+<line x1="20.6" y1="20.6" x2="22" y2="22" stroke="#1B4A22" stroke-width="1.5" stroke-linecap="round"></line>
+</symbol>
+<symbol id="use-capa" viewbox="0 0 24 24">
+<rect x="4" y="3" width="14" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></rect>
+<path d="M8 3 H14 V5 H8 Z" fill="currentColor" opacity=".15"></path>
+<line x1="7" y1="11" x2="15" y2="11" opacity=".45" stroke="currentColor" stroke-width="1" stroke-linecap="round"></line>
+<line x1="7" y1="14" x2="15" y2="14" opacity=".45" stroke="currentColor" stroke-width="1" stroke-linecap="round"></line>
+<line x1="7" y1="17" x2="12" y2="17" opacity=".45" stroke="currentColor" stroke-width="1" stroke-linecap="round"></line>
+<circle cx="17" cy="7" r="2.8" fill="#1B4A22"></circle>
+<path d="M15.7 7 L16.7 8 L18.4 6.2" fill="none" stroke="#7EC389" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol>
+<symbol id="use-regintel" viewbox="0 0 24 24">
+<circle cx="11" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M3 12 Q11 4 19 12" fill="none" opacity=".4" stroke="currentColor" stroke-width="1"></path>
+<path d="M3 12 Q11 20 19 12" fill="none" opacity=".4" stroke="currentColor" stroke-width="1"></path>
+<line x1="11" y1="4" x2="11" y2="20" opacity=".4" stroke="currentColor" stroke-width="1"></line>
+<circle cx="19.5" cy="6" r="2.5" fill="#1B4A22"></circle>
+<circle cx="19.5" cy="6" r="1" fill="#7EC389"></circle>
+</symbol>
+<symbol id="use-validated" viewbox="0 0 24 24">
+<path d="M12 3 L4 6 V11 C4 16 8 19 12 21 C16 19 20 16 20 11 V6 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path>
+<circle cx="12" cy="11" r="3.5" fill="#1B4A22"></circle>
+<path d="M10.3 11 L11.6 12.3 L13.9 9.8" fill="none" stroke="#7EC389" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol>
+<symbol id="use-finance" viewbox="0 0 24 24">
+<rect x="3" y="4" width="18" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></rect>
+<line x1="5.5" y1="15" x2="18.5" y2="15" opacity=".35" stroke="currentColor" stroke-width="1"></line>
+<rect x="6" y="12" width="2" height="3" fill="currentColor" opacity=".55"></rect>
+<rect x="9.5" y="10" width="2" height="5" fill="currentColor" opacity=".55"></rect>
+<rect x="13" y="11" width="2" height="4" fill="currentColor" opacity=".55"></rect>
+<rect x="16.5" y="7.5" width="2" height="7.5" fill="#1B4A22"></rect>
+<circle cx="19" cy="6" r="2" fill="#7EC389"></circle>
+</symbol>
+<symbol id="use-pv" viewbox="0 0 24 24">
+<rect x="4" y="3" width="14" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></rect>
+<path d="M11 7 V11 M9 9 H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+<line x1="7" y1="14" x2="15" y2="14" opacity=".45" stroke="currentColor" stroke-width="1" stroke-linecap="round"></line>
+<line x1="7" y1="17" x2="13" y2="17" opacity=".45" stroke="currentColor" stroke-width="1" stroke-linecap="round"></line>
+<circle cx="18.5" cy="18.5" r="2.8" fill="#1B4A22"></circle>
+<circle cx="18.5" cy="18.5" r="1" fill="#7EC389"></circle>
+</symbol>
+<symbol id="use-sop" viewbox="0 0 24 24">
+<path d="M5 4 H15 L19 8 V20 H5 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path>
+<path d="M15 4 V8 H19" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path>
+<line x1="8" y1="12" x2="16" y2="12" opacity=".4" stroke="currentColor" stroke-width="1"></line>
+<line x1="8" y1="15" x2="13" y2="15" opacity=".4" stroke="currentColor" stroke-width="1"></line>
+<path d="M10 19 L15 14 L17 16 L12 21 Z" fill="#1B4A22" stroke="#1B4A22" stroke-linejoin="round" stroke-width=".8"></path>
+<path d="M15 14 L17 16" stroke="#7EC389" stroke-width="1" stroke-linecap="round"></path>
+</symbol>
+<symbol id="use-supplier" viewbox="0 0 24 24">
+<circle cx="6" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+<circle cx="12" cy="17" r="2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+<circle cx="6" cy="17" r="1.6" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+<line x1="7.4" y1="8.4" x2="10.6" y2="15.6" opacity=".45" stroke="currentColor" stroke-width="1"></line>
+<line x1="7.6" y1="7.8" x2="16" y2="7.2" opacity=".45" stroke="currentColor" stroke-width="1"></line>
+<line x1="6" y1="9" x2="6" y2="15.4" opacity=".45" stroke="currentColor" stroke-width="1"></line>
+<circle cx="18" cy="7" r="2.8" fill="#1B4A22"></circle>
+<path d="M18 5.6 V8 M18 8.8 V9.4" stroke="#7EC389" stroke-width="1.4" stroke-linecap="round"></path>
+</symbol>
+<symbol id="use-clinops" viewbox="0 0 24 24">
+<circle cx="8" cy="8" r="2.6" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M3 19 C3 15.5 5 13.5 8 13.5 C11 13.5 13 15.5 13 19" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+<rect x="14" y="4" width="7" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></rect>
+<line x1="16" y1="7" x2="19" y2="7" opacity=".45" stroke="currentColor" stroke-width="1" stroke-linecap="round"></line>
+<line x1="16" y1="10" x2="19" y2="10" opacity=".45" stroke="currentColor" stroke-width="1" stroke-linecap="round"></line>
+<circle cx="17.5" cy="18" r="2.6" fill="#1B4A22"></circle>
+<path d="M16.3 18 L17.2 18.9 L18.8 17.1" fill="none" stroke="#7EC389" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol>
+
+<symbol id="chevron-down" viewBox="0 0 10 10">
+<path d="M1.5 3.5 L5 7 L8.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+</defs>
+</svg>
+<!-- ═════════ NAV — identical to main site ═════════ -->
+<nav class="site-nav" id="siteNav">
+<div class="nav-inner">
+<a aria-label="MSET — back to main site" class="nav-logo" href="index.html">
+<svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
+<span class="wordmark">MSET<span class="dot"></span></span>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav.gxp" href="index.html#services">GxP</a></li>
+<li class="has-deep" data-deep="ai">
+<a data-i18n="nav.ai" href="index.html#ai">AI</a>
+<button class="deep-toggle" type="button" aria-label="AI — show more" aria-expanded="false" aria-controls="deep-ai">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-ai" role="menu">
+<a class="deep-row" href="index.html#ai" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.ai.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.ai.desc">The 4 service cards on the homepage.</div>
+</a>
+<a class="deep-row primary" href="ai.html" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.ai.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.ai.deep-desc">Full AI Consulting page — 9 use cases, 3 architecture patterns, 7 governance docs.</div>
+</a>
+</div>
+</li>
+<li class="has-deep" data-deep="security">
+<a data-i18n="nav.security" href="index.html#security">Security</a>
+<button class="deep-toggle" type="button" aria-label="Security — show more" aria-expanded="false" aria-controls="deep-security">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-security" role="menu"><a class="deep-row" href="index.html#security" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.security.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.security.desc">The IT security service cards on the homepage.</div>
+</a>
+<a class="deep-row primary" href="sat.html" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.security.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.security.deep-desc">Full Security Awareness Training page — phishing simulations, training programmes.</div>
+</a>
+</div>
+</li>
+<li><a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a></li>
+<li><a data-i18n="nav.about" href="index.html#about">About</a></li>
+<li><a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a></li>
+<li>
+<div class="lang-switch" id="langSwitch">
+<button class="lang-pill" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langPop">
+<span class="dot" aria-hidden="true"></span>
+<span class="current-code">EN</span>
+<svg class="chevron" aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="lang-pop" id="langPop" role="menu">
+<div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
+<ul>
+<li><button type="button" data-lang="en" aria-pressed="true" role="menuitemradio"><span class="native">English</span><span class="code">EN</span></button></li>
+<li><button type="button" data-lang="sv" aria-pressed="false" role="menuitemradio"><span class="native">Svenska</span><span class="code">SV</span></button></li>
+<li><button type="button" data-lang="da" aria-pressed="false" role="menuitemradio"><span class="native">Dansk</span><span class="code">DA</span></button></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<button aria-label="Menu" class="nav-hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+<a data-i18n="nav.gxp" href="index.html#services">GxP</a>
+<a data-i18n="nav.ai" href="index.html#ai">AI</a>
+<a data-i18n="nav.ai.deep" class="deep-child" href="ai.html">Deep dive: AI Consulting</a>
+<a data-i18n="nav.security" href="index.html#security">Security</a>
+<a data-i18n="nav.security.deep" class="deep-child" href="sat.html">Deep dive: Security Awareness Training</a>
+<a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a>
+<a data-i18n="nav.about" href="index.html#about">About</a>
+<a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a>
+
+<div class="lang-switch" role="group" aria-label="Language">
+<div class="lang-pop" id="langPopMobile">
+<div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
+<ul>
+<li><button type="button" data-lang="en" aria-pressed="true"><span class="native">English</span><span class="code">EN</span></button></li>
+<li><button type="button" data-lang="sv" aria-pressed="false"><span class="native">Svenska</span><span class="code">SV</span></button></li>
+<li><button type="button" data-lang="da" aria-pressed="false"><span class="native">Dansk</span><span class="code">DA</span></button></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- ═════════ §1 HERO ═════════ -->
+<section class="hero" id="top">
+<div class="hero-inner">
+<div class="reveal">
+<div class="hero-eyebrow">
+<span class="eyebrow" data-i18n="str.hero.eyebrow">IT Strategy &amp; Leadership</span>
+</div>
+<h1 class="display"><span data-i18n="str.hero.h1.1">From where you are,</span><br/><em data-i18n="str.hero.h1.2">to where you need to be.</em></h1>
+<p class="hero-lede" data-i18n="str.hero.lede">IT evolves organically — systems get added, teams grow, data accumulates, decisions get deferred. After a few years, no one has the full picture. Start with an honest assessment of your technology, your data, and your team. Plan what needs to change. Bring in senior leadership to deliver it when you need it. You pick where you start.</p>
+<div class="hero-ctas">
+<a class="btn-primary" data-i18n="str.hero.cta1" href="index.html#contact?topic=strategy">Start with an assessment
+          <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="14"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+<a class="btn-secondary" data-i18n="str.hero.cta2" href="#how-used">See how we work</a>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-map-wrap" aria-label="Journey map animation">
+<svg class="hm-journey-map" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
+       aria-label="Journey map with MSET diamond traveling through symbolic destinations">
+
+    <rect x="0" y="0" width="500" height="500" fill="rgba(236, 232, 219, .25)"/>
+
+    <!-- Borders -->
+    <rect class="hm-border-frame" x="8" y="8" width="484" height="484" rx="4"/>
+    <rect class="hm-border-frame-inner" x="14" y="14" width="472" height="472" rx="2"/>
+    <g class="hm-corner-flourish">
+      <path d="M 18 30 Q 24 24 30 18"/>
+      <circle cx="24" cy="24" r="1.5" fill="rgba(27,74,34,.35)" stroke="none"/>
+      <path d="M 470 18 Q 476 24 482 30"/>
+      <circle cx="476" cy="24" r="1.5" fill="rgba(27,74,34,.35)" stroke="none"/>
+      <path d="M 18 470 Q 24 476 30 482"/>
+      <circle cx="24" cy="476" r="1.5" fill="rgba(27,74,34,.35)" stroke="none"/>
+      <path d="M 470 482 Q 476 476 482 470"/>
+      <circle cx="476" cy="476" r="1.5" fill="rgba(27,74,34,.35)" stroke="none"/>
+    </g>
+
+    <!-- ═══ CONTOURS ═══ -->
+    <!-- Plains (top-left flat) -->
+    <path class="hm-contour hm-lightest" d="M 20 75 Q 90 70 160 75 Q 230 80 290 77"/>
+    <path class="hm-contour hm-lightest" d="M 20 95 Q 100 90 170 92 Q 240 95 290 93"/>
+    <path class="hm-contour" d="M 20 115 Q 100 110 175 113 Q 250 117 300 113"/>
+    <path class="hm-contour hm-lightest" d="M 20 135 Q 100 130 180 132 Q 250 135 310 132"/>
+
+    <!-- Basecamp hill -->
+    <path class="hm-contour" d="M 95 215 Q 145 190 195 215 Q 175 242 145 247 Q 105 237 95 215 Z"/>
+    <path class="hm-contour hm-heavier" d="M 105 215 Q 145 198 185 215 Q 170 235 145 240 Q 115 232 105 215 Z"/>
+    <path class="hm-contour" d="M 115 215 Q 145 203 175 215 Q 165 230 145 233 Q 125 228 115 215 Z"/>
+
+    <!-- Rolling mid-terrain -->
+    <path class="hm-contour hm-lightest" d="M 175 260 Q 235 250 300 265 Q 340 275 365 290"/>
+    <path class="hm-contour hm-lightest" d="M 170 280 Q 230 270 295 285 Q 335 295 360 310"/>
+    <path class="hm-contour" d="M 165 300 Q 225 290 290 305 Q 330 315 355 325"/>
+
+    <!-- Mountain contours (Roadmap Ridge, right-center) -->
+    <path class="hm-contour hm-heavier" d="M 310 225 Q 375 200 440 225 Q 475 258 465 300 Q 430 325 385 320 Q 320 295 310 225 Z"/>
+    <path class="hm-contour" d="M 325 240 Q 380 220 430 243 Q 460 272 450 298 Q 420 315 385 310 Q 335 287 325 240 Z"/>
+    <path class="hm-contour" d="M 340 255 Q 385 240 425 258 Q 445 280 440 296 Q 415 308 385 303 Q 355 282 340 255 Z"/>
+    <path class="hm-contour hm-heavier" d="M 355 270 Q 390 260 420 272 Q 435 285 430 294 Q 410 303 390 298 Q 365 290 355 270 Z"/>
+
+    <!-- Swamp -->
+    <path class="hm-contour" d="M 240 375 Q 280 360 335 375 Q 360 390 350 418 Q 310 428 265 420 Q 245 405 240 375 Z"/>
+    <path class="hm-contour hm-lightest" d="M 250 380 Q 285 368 330 380 Q 350 392 345 412 Q 310 420 275 414 Q 255 402 250 380 Z"/>
+
+    <!-- Valley bowl -->
+    <path class="hm-contour hm-heavier" d="M 45 380 Q 115 365 185 380 Q 215 410 200 445 Q 135 458 80 448 Q 40 425 45 380 Z"/>
+    <path class="hm-contour" d="M 60 390 Q 120 378 175 390 Q 200 415 190 440 Q 135 452 90 444 Q 57 422 60 390 Z"/>
+
+    <!-- Sea waves -->
+    <path class="hm-water-wave" d="M 340 425 Q 360 423 380 425 Q 400 427 420 425"/>
+    <path class="hm-water-wave" d="M 335 445 Q 360 443 390 445 Q 420 447 440 445"/>
+    <path class="hm-water-wave" d="M 330 465 Q 360 463 395 465 Q 425 467 450 465"/>
+
+    <!-- Cliffs -->
+    <g class="hm-cliff">
+      <line x1="470" y1="245" x2="473" y2="241"/>
+      <line x1="472" y1="260" x2="477" y2="257"/>
+      <line x1="473" y1="275" x2="478" y2="272"/>
+      <line x1="471" y1="290" x2="477" y2="287"/>
+      <line x1="468" y1="305" x2="474" y2="303"/>
+    </g>
+
+    <!-- ═══ REGIONS ═══ -->
+    <ellipse class="hm-region" cx="55" cy="100" rx="55" ry="32"/>
+    <ellipse class="hm-region" cx="195" cy="60" rx="50" ry="22"/>
+    <circle class="hm-region hm-primary" cx="145" cy="215" r="35"/>
+    <path class="hm-region hm-primary" d="M 315 225 Q 380 205 435 228 Q 470 265 460 300 Q 425 325 385 320 Q 320 293 315 225 Z"/>
+    <path class="hm-water" d="M 240 370 Q 285 355 330 370 Q 355 395 345 415 Q 305 428 270 418 Q 238 405 240 370 Z"/>
+    <path class="hm-region hm-primary" d="M 55 385 Q 115 370 185 385 Q 210 415 195 445 Q 135 458 85 448 Q 53 422 55 385 Z"/>
+    <path class="hm-water" d="M 320 415 Q 385 400 455 413 Q 485 435 482 475 Q 410 487 360 482 Q 315 467 320 415 Z"/>
+
+    <!-- Lake (new) — between valley and sea, adds water detail -->
+    <ellipse class="hm-lake" cx="255" cy="450" rx="22" ry="10"/>
+    <path class="hm-water-wave" d="M 240 450 Q 250 449 262 450 Q 270 451 272 452"/>
+
+    
+
+    <!-- ═══ MOUNTAINS (expanded) ═══ -->
+    <g transform="translate(335 215)"><polygon class="hm-mountain" points="0,0 -7,11 7,11"/><line class="hm-mountain-hatch" x1="0" y1="2" x2="-3" y2="9"/></g>
+    <g transform="translate(355 223)"><polygon class="hm-mountain" points="0,0 -8,12 8,12"/><line class="hm-mountain-hatch" x1="0" y1="2" x2="-4" y2="10"/><line class="hm-mountain-hatch" x1="0" y1="4" x2="-2" y2="10"/></g>
+    <g transform="translate(375 213)"><polygon class="hm-mountain" points="0,0 -10,14 10,14"/><line class="hm-mountain-hatch" x1="0" y1="2" x2="-5" y2="12"/><line class="hm-mountain-hatch" x1="0" y1="5" x2="-2" y2="12"/><line class="hm-mountain-hatch" x1="0" y1="5" x2="2" y2="12"/></g>
+    <g transform="translate(395 220)"><polygon class="hm-mountain" points="0,0 -8,12 8,12"/><line class="hm-mountain-hatch" x1="0" y1="2" x2="-4" y2="10"/></g>
+    <g transform="translate(417 208)"><polygon class="hm-mountain" points="0,0 -9,13 9,13"/><line class="hm-mountain-hatch" x1="0" y1="2" x2="-4" y2="11"/><line class="hm-mountain-hatch" x1="0" y1="4" x2="2" y2="11"/></g>
+    <g transform="translate(437 220)"><polygon class="hm-mountain" points="0,0 -7,11 7,11"/><line class="hm-mountain-hatch" x1="0" y1="2" x2="-3" y2="9"/></g>
+    <g transform="translate(455 240)"><polygon class="hm-mountain" points="0,0 -8,12 8,12"/><line class="hm-mountain-hatch" x1="0" y1="2" x2="-4" y2="10"/></g>
+    <!-- Foothills -->
+    <g transform="translate(225 218)"><polygon class="hm-mountain" points="0,0 -5,8 5,8"/></g>
+    <g transform="translate(242 232)"><polygon class="hm-mountain" points="0,0 -6,9 6,9"/></g>
+    <g transform="translate(260 222)"><polygon class="hm-mountain" points="0,0 -5,8 5,8"/></g>
+    <g transform="translate(315 200)"><polygon class="hm-mountain" points="0,0 -6,9 6,9"/></g>
+
+    <!-- ═══ FORESTS ═══ -->
+    <g class="hm-tree">
+      <circle cx="225" cy="290" r="2"/><circle cx="235" cy="288" r="2"/><circle cx="233" cy="298" r="2"/>
+      <circle cx="245" cy="295" r="2"/><circle cx="223" cy="305" r="2"/><circle cx="240" cy="308" r="2"/>
+      <circle cx="255" cy="300" r="2"/>
+    </g>
+    <g class="hm-tree">
+      <circle cx="230" cy="395" r="2"/><circle cx="243" cy="393" r="2"/><circle cx="238" cy="405" r="2"/>
+      <circle cx="250" cy="407" r="2"/><circle cx="220" cy="405" r="2"/>
+    </g>
+    <g class="hm-tree-alt">
+      <circle cx="455" cy="145" r="1.8"/><circle cx="465" cy="150" r="1.8"/><circle cx="460" cy="158" r="1.8"/>
+      <circle cx="470" cy="162" r="1.8"/><circle cx="450" cy="162" r="1.8"/>
+      <circle cx="445" cy="150" r="1.8"/>
+    </g>
+    <g class="hm-tree-alt">
+      <circle cx="40" cy="275" r="1.8"/><circle cx="50" cy="270" r="1.8"/><circle cx="45" cy="285" r="1.8"/>
+      <circle cx="55" cy="287" r="1.8"/><circle cx="35" cy="295" r="1.8"/>
+    </g>
+    <!-- Additional small forest upper-right corner — moved higher still -->
+    <g class="hm-tree-alt">
+      <circle cx="408" cy="52" r="1.8"/><circle cx="420" cy="56" r="1.8"/><circle cx="413" cy="66" r="1.8"/>
+      <circle cx="428" cy="66" r="1.8"/>
+    </g>
+
+    <!-- ═══ ATMOSPHERIC DETAILS ═══ -->
+
+    <!-- Standing stones near Plains of Pain (adds character — place of ancient broken things) -->
+    <g transform="translate(30 115)">
+      <polygon class="hm-stone" points="-2,-6 2,-6 3,4 -3,4"/>
+      <polygon class="hm-stone" points="5,-4 8,-4 9,3 4,3" opacity=".75"/>
+      <polygon class="hm-stone" points="-6,-2 -3,-3 -2,3 -7,3" opacity=".6"/>
+    </g>
+
+    <!-- Birds over the mountains -->
+    <g class="hm-bird">
+      <path d="M 330 130 Q 333 127 336 130 Q 339 127 342 130"/>
+      <path d="M 345 140 Q 347 138 349 140 Q 351 138 353 140"/>
+      <path d="M 360 123 Q 362 121 364 123 Q 366 121 368 123"/>
+    </g>
+
+    <!-- Small ship in Sea of Relief -->
+    <g transform="translate(430 448)">
+      <!-- Hull -->
+      <path class="hm-ship-hull" d="M -8 0 L 8 0 L 6 4 L -6 4 Z"/>
+      <!-- Mast -->
+      <line class="hm-ship-mast" x1="0" y1="0" x2="0" y2="-10"/>
+      <!-- Sail -->
+      <path class="hm-ship-sail" d="M 0 -10 L 0 -2 L 6 -2 Z"/>
+      <!-- Tiny flag -->
+      <path stroke="var(--emerald)" stroke-width=".7" fill="var(--emerald)" d="M 0 -10 L 3 -9 L 0 -8"/>
+    </g>
+
+    <!-- Bridge where path crosses river -->
+    <g transform="translate(382 345)">
+      <line class="hm-bridge" x1="-7" y1="0" x2="7" y2="0"/>
+      <line class="hm-bridge-rail" x1="-7" y1="-2" x2="7" y2="-2"/>
+      <line class="hm-bridge-rail" x1="-7" y1="2" x2="7" y2="2"/>
+    </g>
+
+    <!-- Watchtower repositioned down, out of label area -->
+    <g transform="translate(270 260)">
+      <rect class="hm-tower" x="-3" y="-10" width="6" height="10"/>
+      <polygon class="hm-tower" points="-4,-10 4,-10 0,-14"/>
+      <rect x="-1" y="-6" width="2" height="2" fill="rgba(27,74,34,.6)"/>
+    </g>
+
+    <!-- Swamp grass tufts -->
+    <g class="hm-grass">
+      <path d="M 255 390 l 0 -4 M 258 390 l 1 -5 M 261 391 l 0 -4"/>
+      <path d="M 285 400 l 0 -4 M 288 400 l 1 -5 M 291 401 l 0 -4"/>
+      <path d="M 310 390 l 0 -4 M 313 390 l 1 -5"/>
+      <path d="M 325 408 l 0 -4 M 328 408 l 1 -5 M 331 409 l 0 -4"/>
+      <path d="M 270 410 l 0 -4 M 273 410 l 1 -5"/>
+    </g>
+
+    <!-- Rocks -->
+    <circle class="hm-rock" cx="305" cy="215" r="2"/>
+    <circle class="hm-rock" cx="312" cy="220" r="1.5"/>
+    <ellipse class="hm-rock" cx="435" cy="260" rx="2.2" ry="1.8"/>
+    <ellipse class="hm-rock" cx="225" cy="370" rx="2" ry="1.5"/>
+    <ellipse class="hm-rock" cx="370" cy="375" rx="1.8" ry="1.5"/>
+    <ellipse class="hm-rock" cx="200" cy="360" rx="2" ry="1.5"/>
+
+    <!-- Old tracks -->
+    <path class="hm-old-track" d="M 80 55 Q 140 40 220 45 Q 260 48 285 60"/>
+    <path class="hm-old-track" d="M 20 145 Q 70 160 130 165 Q 175 168 200 175"/>
+
+    <!-- River -->
+    <path class="hm-river" d="M 395 295 Q 385 330 375 360 Q 375 385 380 410 Q 395 430 415 438"/>
+    <path class="hm-river-glint" d="M 397 297 Q 387 332 377 362"/>
+    <!-- Creek -->
+    <path class="hm-creek" d="M 255 295 Q 280 315 310 340 Q 335 360 355 375"/>
+
+    <!-- Cottage near Delivery Valley -->
+    <g transform="translate(175 362)">
+      <rect class="hm-cottage" x="-5" y="-4" width="10" height="7"/>
+      <polygon class="hm-cottage-roof" points="-6,-4 6,-4 0,-10"/>
+      <rect x="-1" y="-1" width="2" height="4" fill="rgba(27,74,34,.5)"/>
+      <path class="hm-cottage-smoke" d="M 3 -10 Q 4 -14 2 -16 Q 0 -18 2 -21"/>
+    </g>
+
+    <!-- Second tiny cottage (hamlet feel) -->
+    <g transform="translate(155 370)">
+      <rect class="hm-cottage" x="-3" y="-2" width="6" height="5"/>
+      <polygon class="hm-cottage-roof" points="-4,-2 4,-2 0,-6"/>
+    </g>
+
+    <!-- ═══ ADDITIONAL DETAILS ═══ -->
+    
+    <!-- Hamlet near Basecamp (2 small cottages in the plains) -->
+    <g transform="translate(205 145)">
+      <rect class="hm-cottage" x="-4" y="-3" width="8" height="6"/>
+      <polygon class="hm-cottage-roof" points="-5,-3 5,-3 0,-8"/>
+      <rect x="-.8" y="-1" width="1.5" height="3" fill="rgba(27,74,34,.5)"/>
+      <path class="hm-cottage-smoke" d="M 2.5 -8 Q 3 -11 2 -13"/>
+    </g>
+    <g transform="translate(220 152)">
+      <rect class="hm-cottage" x="-3" y="-2" width="6" height="5"/>
+      <polygon class="hm-cottage-roof" points="-4,-2 4,-2 0,-6"/>
+    </g>
+
+    <!-- Small hamlet near the lake (mid-right lower area) -->
+    <g transform="translate(232 432)">
+      <rect class="hm-cottage" x="-4" y="-3" width="8" height="6"/>
+      <polygon class="hm-cottage-roof" points="-5,-3 5,-3 0,-8"/>
+      <rect x="-.8" y="-1" width="1.5" height="3" fill="rgba(27,74,34,.5)"/>
+      <path class="hm-cottage-smoke" d="M 2.5 -8 Q 3 -11 2 -13"/>
+    </g>
+    <g transform="translate(218 438)">
+      <rect class="hm-cottage" x="-3" y="-2" width="6" height="5"/>
+      <polygon class="hm-cottage-roof" points="-4,-2 4,-2 0,-6"/>
+    </g>
+
+    <!-- Seabirds over the sea -->
+    <g class="hm-bird">
+      <path d="M 388 425 Q 390 423 392 425 Q 394 423 396 425"/>
+      <path d="M 370 440 Q 372 438 374 440 Q 376 438 378 440"/>
+    </g>
+
+    <!-- Small rowboat in the sea -->
+    <g transform="translate(358 458)">
+      <path class="hm-ship-hull" d="M -5 0 L 5 0 L 4 2.5 L -4 2.5 Z"/>
+      <!-- Tiny stick oar -->
+      <line stroke="rgba(27, 74, 34, .55)" stroke-width=".5" x1="-2" y1="-1" x2="-6" y2="-3"/>
+    </g>
+
+    <!-- Cart track connecting hamlets -->
+    <path d="M 162 385 Q 195 400 218 430" fill="none" stroke="rgba(85, 106, 130, .22)" stroke-width=".6" stroke-linecap="round" stroke-dasharray="1 3"/>
+
+    <!-- Ruin (broken wall fragment) near Plains of Pain -->
+    <g transform="translate(90 135)">
+      <rect class="hm-stone" x="-4" y="-2" width="3" height="4"/>
+      <rect class="hm-stone" x="1" y="-1" width="4" height="3"/>
+      <!-- Crumbled top -->
+      <path class="hm-stone" d="M -2 -2 L -1 -3 L 0 -2 M 2 -1 L 3 -2 L 4 -1" opacity=".5" stroke-width=".3"/>
+    </g>
+
+    <!-- Lone tree in empty mid-terrain -->
+    <g transform="translate(155 290)">
+      <circle fill="rgba(27, 74, 34, .4)" r="2.5"/>
+      <line x1="0" y1="2.5" x2="0" y2="4.5" stroke="rgba(27, 74, 34, .5)" stroke-width=".5"/>
+    </g>
+    
+
+    <!-- Decorative phrases -->
+    <text class="hm-label-decorative" x="460" y="100" text-anchor="end" opacity=".45">— terra incognita —</text>
+    <text class="hm-label-decorative" x="40" y="460" opacity=".45">— hic sunt roadmaps —</text>
+
+    <!-- ═══ JOURNEY PATH ═══ -->
+    <path id="hm-journey-path-ref" class="hm-journey-path"
+          d="M 55 100
+             Q 100 140 145 215
+             Q 220 230 285 210
+             Q 345 240 405 275
+             Q 360 335 295 385
+             Q 210 410 125 410
+             Q 260 435 410 450"/>
+
+    <path class="hm-detour-path" d="M 110 90 Q 145 70 185 62"/>
+
+    <!-- Emerald trail (pathLength normalizes length to 1000 so dasharray works regardless of actual path length) -->
+    <path class="hm-journey-trail" pathLength="1000"
+          d="M 55 100
+             Q 100 140 145 215
+             Q 220 230 285 210
+             Q 345 240 405 275
+             Q 360 335 295 385
+             Q 210 410 125 410
+             Q 260 435 410 450"/>
+
+    <!-- Road label -->
+    <path id="hm-road-label-path" d="M 175 165 Q 265 175 360 195" fill="none"/>
+    <text class="hm-label-road">
+      <textPath href="#hm-road-label-path" startOffset="10%">The Road of Decisions</textPath>
+    </text>
+
+    <!-- ═══ PRIMARY NODE PULSES ═══ -->
+    <circle class="hm-primary-pulse hm-pulse-basecamp" cx="145" cy="215" r="8"/>
+    <circle class="hm-primary-pulse hm-pulse-ridge" cx="405" cy="275" r="8"/>
+    <circle class="hm-primary-pulse hm-pulse-valley" cx="125" cy="410" r="8"/>
+
+    <!-- Arrival glow -->
+    <circle class="hm-destination-halo" cx="410" cy="450" r="14"/>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         DESTINATIONS WITH MARKERS + CONNECTOR LINES + FLOATING LABELS
+         ═══════════════════════════════════════════════════════════
+         Pattern per destination:
+         1. Small symbolic marker AT the location
+         2. Thin connector line from marker to a "quiet zone"
+         3. Label in the quiet zone
+    -->
+
+    <!-- ══ PLAINS OF PAIN (waypoint) ══
+         Marker at (55, 100) — broken stake
+         Label parked above-right, along upper edge -->
+    <g>
+      <!-- Marker: broken stake/arrow -->
+      <g transform="translate(55 100)">
+        <line class="hm-marker" x1="0" y1="-10" x2="0" y2="2"/>
+        <line class="hm-marker" x1="-5" y1="-12" x2="3" y2="-7"/>
+        <line class="hm-marker" x1="-3" y1="-5" x2="4" y2="-2"/>
+        <circle class="hm-marker-fill" cx="0" cy="2" r="2"/>
+      </g>
+      <!-- Connector from marker to label -->
+      <path class="hm-connector" d="M 62 96 Q 80 50 115 42"/>
+      <circle class="hm-connector-end" cx="62" cy="96" r="1.2"/>
+      <!-- Label -->
+      <text class="hm-label-waypoint" x="118" y="45">Plains of Pain</text>
+    </g>
+
+    <!-- ══ DENIAL FLATS (waypoint, detour) ══
+         Marker at (195, 60) — small dead-end marker (a dot with circling motion)
+         Label to the right -->
+    <g>
+      <g transform="translate(195 60)">
+        <!-- A small circle suggesting "going in circles" -->
+        <circle class="hm-marker-fill" r="3.5"/>
+        <circle class="hm-marker" r="6"/>
+      </g>
+      <path class="hm-connector" d="M 203 58 L 230 42"/>
+      <circle class="hm-connector-end" cx="203" cy="58" r="1.2"/>
+      <text class="hm-label-waypoint" x="232" y="45">Denial Flats</text>
+    </g>
+
+    <!-- ══ BASECAMP OF FINDINGS (PRIMARY) ══
+         Marker at (145, 215) — tent with emerald flag
+         Label parked above-left, in empty plains area -->
+    <g>
+      <g transform="translate(145 215)">
+        <!-- Tent -->
+        <polygon class="hm-marker-primary-fill" points="-9,4 9,4 0,-8"/>
+        <line class="hm-marker-primary" x1="0" y1="-8" x2="0" y2="4"/>
+        <!-- Emerald flag at peak -->
+        <circle class="hm-emerald-accent" cx="0" cy="-10" r="2"/>
+      </g>
+      <!-- Connector -->
+      <path class="hm-connector-primary" d="M 140 210 Q 100 195 75 180"/>
+      <circle class="hm-connector-end" cx="140" cy="210" r="1.4"/>
+      <!-- Label (stage + name), right-aligned since label is on the left -->
+      <text class="hm-label-primary-sub" x="72" y="166" text-anchor="end">STAGE 01 · ASSESSMENT</text>
+      <text class="hm-label-primary" x="72" y="182" text-anchor="end">Basecamp of Findings</text>
+    </g>
+
+    <!-- ══ BUDGET PASS (waypoint) ══
+         Marker at (285, 210) — small gate/arch
+         Label below-left -->
+    <g>
+      <g transform="translate(285 210)">
+        <!-- Gate posts with arch -->
+        <line class="hm-marker" x1="-5" y1="4" x2="-5" y2="-4"/>
+        <line class="hm-marker" x1="5" y1="4" x2="5" y2="-4"/>
+        <path class="hm-marker" d="M -5 -4 Q 0 -8 5 -4"/>
+        <!-- Small "coin" on top -->
+        <circle class="hm-marker-fill" cx="0" cy="-8" r="2"/>
+      </g>
+      <path class="hm-connector" d="M 278 212 Q 255 240 220 255"/>
+      <circle class="hm-connector-end" cx="278" cy="212" r="1.2"/>
+      <text class="hm-label-waypoint" x="218" y="258" text-anchor="end">Budget Pass</text>
+    </g>
+
+    <!-- ══ ROADMAP RIDGE (PRIMARY) ══
+         Marker at (405, 275) — mountain peak with flag
+         Label parked in open space below-left, before the mountains -->
+    <g>
+      <g transform="translate(405 275)">
+        <!-- Peak (triangle) -->
+        <polygon class="hm-marker-primary-fill" points="-8,6 8,6 0,-10"/>
+        <!-- Flagpole -->
+        <line class="hm-marker-primary" x1="0" y1="-10" x2="0" y2="-18"/>
+        <!-- Emerald flag -->
+        <polygon class="hm-emerald-accent" points="0,-18 8,-16 0,-13"/>
+      </g>
+      <!-- Connector goes UP-RIGHT to empty space above mountains -->
+      <path class="hm-connector-primary" d="M 408 264 Q 430 230 455 190"/>
+      <circle class="hm-connector-end" cx="408" cy="264" r="1.4"/>
+      <!-- Label -->
+      <text class="hm-label-primary-sub" x="455" y="172" text-anchor="end">STAGE 02 · STRATEGY</text>
+      <text class="hm-label-primary" x="455" y="188" text-anchor="end">Roadmap Ridge</text>
+    </g>
+
+    <!-- ══ INTEGRATION SWAMP (waypoint) ══
+         Marker at (295, 385) — small swirl/vortex symbolizing getting stuck
+         Label above-right -->
+    <g>
+      <g transform="translate(295 385)">
+        <!-- Spiral/vortex -->
+        <path class="hm-marker-fill" d="M 0 0 Q 4 -4 0 -6 Q -5 -6 -5 0 Q -5 5 1 5 Q 7 5 7 -1"/>
+      </g>
+      <path class="hm-connector" d="M 288 382 Q 255 360 228 348"/>
+      <circle class="hm-connector-end" cx="288" cy="382" r="1.2"/>
+      <text class="hm-label-waypoint" x="225" y="345" text-anchor="end">Integration Swamp</text>
+    </g>
+
+    <!-- ══ DELIVERY VALLEY (PRIMARY) ══
+         Marker at (125, 410) — cottage with emerald smoke-flag
+         Label parked along left edge or above, in the margin -->
+    <g>
+      <g transform="translate(125 410)">
+        <!-- Tiny cottage -->
+        <rect class="hm-marker-primary-fill" x="-7" y="-3" width="14" height="8"/>
+        <polygon class="hm-marker-primary-fill" points="-8,-3 8,-3 0,-11"/>
+        <rect fill="var(--forest)" x="-1.5" y="-1" width="3" height="6"/>
+        <!-- Smoke -->
+        <path class="hm-marker-primary" d="M 5 -11 Q 6 -15 4 -17"/>
+        <!-- Emerald accent -->
+        <circle class="hm-emerald-accent" cx="0" cy="-14" r="1.5"/>
+      </g>
+      <!-- Connector goes up to label -->
+      <path class="hm-connector-primary" d="M 120 402 Q 95 380 90 348"/>
+      <circle class="hm-connector-end" cx="120" cy="402" r="1.4"/>
+      <!-- Label (left-aligned so it doesn't get cut off at viewBox edge) -->
+      <text class="hm-label-primary-sub" x="22" y="330" text-anchor="start">STAGE 03 · INTERIM</text>
+      <text class="hm-label-primary" x="22" y="346" text-anchor="start">Delivery Valley</text>
+    </g>
+
+    <!-- ══ SEA OF RELIEF (waypoint) ══
+         Marker at (410, 450) — anchor symbol
+         Label above the sea, in available space -->
+    <g>
+      <g transform="translate(410 450)">
+        <!-- Anchor -->
+        <line class="hm-marker" x1="0" y1="-7" x2="0" y2="7"/>
+        <path class="hm-marker" d="M -5 7 Q 0 9 5 7"/>
+        <line class="hm-marker" x1="-4" y1="-3" x2="4" y2="-3"/>
+        <circle class="hm-marker-fill" cx="0" cy="-8" r="1.8"/>
+      </g>
+      <path class="hm-connector" d="M 420 445 Q 420 420 415 400"/>
+      <circle class="hm-connector-end" cx="420" cy="445" r="1.2"/>
+      <text class="hm-label-waypoint" x="415" y="398" text-anchor="middle">Sea of Relief</text>
+    </g>
+
+    <!-- Compass -->
+    <g transform="translate(460 55)">
+      <circle class="hm-compass-ring" r="16"/>
+      <polygon class="hm-compass-needle-n" points="0,-13 -3,0 3,0"/>
+      <polygon class="hm-compass-needle-s" points="0,13 -3,0 3,0"/>
+      <line x1="-13" y1="0" x2="-10" y2="0" stroke="rgba(27,74,34,.3)" stroke-width="1"/>
+      <line x1="13" y1="0" x2="10" y2="0" stroke="rgba(27,74,34,.3)" stroke-width="1"/>
+      <text class="hm-compass-letter" x="0" y="-20" text-anchor="middle">N</text>
+    </g>
+
+    <!-- Scale bar -->
+    <g transform="translate(30 478)">
+      <rect class="hm-scale-fill" x="0" y="0" width="20" height="4"/>
+      <rect class="hm-scale-bar" x="20" y="0" width="20" height="4"/>
+      <rect class="hm-scale-fill" x="40" y="0" width="20" height="4"/>
+      <text class="hm-scale-label" x="0" y="-5">0</text>
+      <text class="hm-scale-label" x="56" y="-5">12 MONTHS</text>
+    </g>
+
+    <!-- ═══ DIAMOND (animated) ═══ -->
+    <g class="hm-diamond-group hm-diamond-motion">
+      <!-- Emerald glow halo -->
+      <circle class="hm-diamond-glow" cx="0" cy="0" r="10"/>
+      <!-- Subtle shadow beneath -->
+      <ellipse cx="0" cy="7" rx="4" ry="1" fill="rgba(10,22,40,.2)"/>
+      <!-- Equal-sided emerald diamond (12x12) -->
+      <polygon points="0,-6 6,0 0,6 -6,0" fill="var(--emerald)" stroke="var(--forest)" stroke-width="1" stroke-linejoin="round"/>
+      <!-- Tiny highlight for faceted gem feel -->
+      <polygon points="0,-4 2.5,0 0,1.5 -2.5,0" fill="var(--emerald-bright)" opacity=".7"/>
+      <animateMotion dur="12s" begin="0.5s" fill="freeze" rotate="0">
+        <mpath xlink:href="#hm-journey-path-ref" href="#hm-journey-path-ref"/>
+      </animateMotion>
+    </g>
+    <g class="hm-diamond-static" transform="translate(410 450)">
+      <circle fill="var(--emerald-glow)" cx="0" cy="0" r="10" opacity=".6"/>
+      <ellipse cx="0" cy="7" rx="4" ry="1" fill="rgba(10,22,40,.2)"/>
+      <polygon points="0,-6 6,0 0,6 -6,0" fill="var(--emerald)" stroke="var(--forest)" stroke-width="1" stroke-linejoin="round"/>
+      <polygon points="0,-4 2.5,0 0,1.5 -2.5,0" fill="var(--emerald-bright)" opacity=".7"/>
+    </g>
+
+  </svg>
+</div>
+</div>
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+
+<!-- ═════════ §2 WHY ═════════ -->
+<section class="problem">
+<div class="section-inner">
+<span class="eyebrow" data-i18n="str.why.eyebrow">When this conversation starts</span>
+<h2 class="display"><span data-i18n="str.why.h2.1">The trigger isn't usually a crisis.</span> <em data-i18n="str.why.h2.2">It's accumulated uncertainty.</em></h2>
+<p class="section-lede" data-i18n="str.why.lede">Most companies that engage us don't have their IT on fire. They have a quieter problem: IT grew to match the business as it was, and no one's stepped back to check if it still fits where the business is going.</p>
+
+<div class="threat-grid" style="margin-top:3rem">
+
+<div class="threat-card">
+<div class="threat-head">
+<span class="threat-label" data-i18n="str.why.t1.label">Trigger 01 · The board is asking</span>
+</div>
+<p class="threat-body" data-i18n="str.why.t1.body">You're being asked questions IT can't fully answer. "Are we secure enough?" "What's our cloud strategy?" "Why are we spending X?" — without an independent view, the answers sound defensive.</p>
+</div>
+
+<div class="threat-card">
+<div class="threat-head">
+<span class="threat-label" data-i18n="str.why.t2.label">Trigger 02 · Organic drift</span>
+</div>
+<p class="threat-body" data-i18n="str.why.t2.body">Systems got added over years, each for good reasons. Now no one has the full map. Integrations are patchy, ownership is unclear, and the team's running on institutional memory.</p>
+</div>
+
+<div class="threat-card">
+<div class="threat-head">
+<span class="threat-label" data-i18n="str.why.t3.label">Trigger 03 · Succession or gap</span>
+</div>
+<p class="threat-body" data-i18n="str.why.t3.body">Your IT Director is leaving, taking a sabbatical, moving to another role, or you've been running without one. Six months without senior IT leadership compounds quickly.</p>
+</div>
+
+<div class="threat-card">
+<div class="threat-head">
+<span class="threat-label" data-i18n="str.why.t4.label">Trigger 04 · Growth outpacing setup</span>
+</div>
+<p class="threat-body" data-i18n="str.why.t4.body">You've scaled past the IT you built for an earlier stage. What worked at 50 people doesn't work at 200. Systems, team, and governance all need to catch up.</p>
+</div>
+
+<div class="threat-card">
+<div class="threat-head">
+<span class="threat-label" data-i18n="str.why.t5.label">Trigger 05 · Audit or compliance event</span>
+</div>
+<p class="threat-body" data-i18n="str.why.t5.body">Something surfaced gaps. Or you're heading into an audit, certification, or investor diligence and realise the house isn't quite in order.</p>
+</div>
+
+</div>
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+
+<!-- ═════════ §3 ASSESSMENT ═════════ -->
+<section class="uses" id="assessment">
+<div class="section-inner">
+<span class="eyebrow" data-i18n="str.a.eyebrow">Stage 01 · Independent IT Assessment</span>
+<h2 class="display"><span data-i18n="str.a.h2.1">The honest starting point.</span> <em data-i18n="str.a.h2.2">A clear picture of where you are.</em></h2>
+<p class="section-lede" data-i18n="str.a.lede">Most IT assessments stop at technology. Ours looks at three dimensions at once — the systems you run, how your data and organisation are structured, and whether the team you have can run the future you need. The output isn't a scorecard. It's a map from where you are to where you need to be, with the gap between them made explicit.</p>
+
+<h3 class="sub-section-head" data-i18n="str.a.dim.head">The three dimensions</h3>
+<p class="sub-section-lede" data-i18n="str.a.dim.lede">Each dimension gets the same treatment: we establish the current state, define the target state based on your business trajectory, then identify the gap and what it would take to close it.</p>
+
+<div class="uses-grid stagger" style="margin-top:2rem">
+
+<!-- Dimension 01 -->
+<div class="use-card">
+<div class="use-num" data-i18n="str.a.d1.num">01</div>
+<h4 class="use-title" data-i18n="str.a.d1.title">Technology</h4>
+<p class="use-subtitle" data-i18n="str.a.d1.subtitle">What you run, and how well it's running.</p>
+<p class="use-body" data-i18n="str.a.d1.body">The systems, infrastructure, and security posture that run your business today. Including the parts no one talks about — end-of-life servers, integrations held together by scripts, vendor contracts no one's renegotiated in three years.</p>
+<ul class="use-list">
+<li data-i18n="str.a.d1.b1">Infrastructure and cloud posture — what's running where, and why</li>
+<li data-i18n="str.a.d1.b2">Application landscape and technical debt</li>
+<li data-i18n="str.a.d1.b3">Integration architecture and data flows between systems</li>
+<li data-i18n="str.a.d1.b4">Security posture and known vulnerabilities</li>
+<li data-i18n="str.a.d1.b5">Vendor stack, contracts, and renewal exposure</li>
+<li data-i18n="str.a.d1.b6">End-of-life systems and upgrade paths</li>
+<li data-i18n="str.a.d1.b7">Disaster recovery and business continuity readiness</li>
+</ul>
+<p class="use-typical" data-i18n="str.a.d1.typical">Typical findings: two to four systems nobody's audited in years, one vendor lock-in they'd forgotten about, and a security gap that's been on the "we should fix that" list since someone left three years ago.</p>
+</div>
+
+<!-- Dimension 02 -->
+<div class="use-card">
+<div class="use-num" data-i18n="str.a.d2.num">02</div>
+<h4 class="use-title" data-i18n="str.a.d2.title">Data &amp; Organisation</h4>
+<p class="use-subtitle" data-i18n="str.a.d2.subtitle">How information moves, and where it lives.</p>
+<p class="use-body" data-i18n="str.a.d2.body">Where your information actually lives, how it moves between systems, and whether that structure still fits how your business works today. The hardest dimension to see from the inside, because the people closest to it built it.</p>
+<ul class="use-list">
+<li data-i18n="str.a.d2.b1">Systems of record — is it clear where the canonical data lives?</li>
+<li data-i18n="str.a.d2.b2">Data flow and integration patterns between systems</li>
+<li data-i18n="str.a.d2.b3">Duplication, inconsistency, and manual reconciliation</li>
+<li data-i18n="str.a.d2.b4">Master data management and governance</li>
+<li data-i18n="str.a.d2.b5">Process-data alignment — does the structure match how work actually happens?</li>
+<li data-i18n="str.a.d2.b6">Reporting reliability and source-of-truth clarity</li>
+<li data-i18n="str.a.d2.b7">Data ownership, access, and compliance posture</li>
+</ul>
+<p class="use-typical" data-i18n="str.a.d2.typical">Typical findings: three copies of the customer list, two systems-of-record competing for the same data, and a reporting pipeline that breaks quietly when someone renames a field. The data usually isn't wrong. It's just not organised for the way the business works now.</p>
+</div>
+
+<!-- Dimension 03 -->
+<div class="use-card">
+<div class="use-num" data-i18n="str.a.d3.num">03</div>
+<h4 class="use-title" data-i18n="str.a.d3.title">Team &amp; Capabilities</h4>
+<p class="use-subtitle" data-i18n="str.a.d3.subtitle">Whether your team can run what you have, and what you need next.</p>
+<p class="use-body" data-i18n="str.a.d3.body">Roles and capabilities — not performance reviews. Can the team you have run the current setup well? More importantly: can it run where you're heading? Gaps here usually take longer to close than technology gaps, which is why we surface them early.</p>
+<ul class="use-list">
+<li data-i18n="str.a.d3.b1">Current roles, responsibilities, and reporting structure</li>
+<li data-i18n="str.a.d3.b2">Capability coverage against current-state demands</li>
+<li data-i18n="str.a.d3.b3">Capability coverage against future-state demands</li>
+<li data-i18n="str.a.d3.b4">Under-capacity, over-reliance on specific individuals, and key-person risk</li>
+<li data-i18n="str.a.d3.b5">Outsourcing balance — what's external that should be internal, and vice versa</li>
+<li data-i18n="str.a.d3.b6">Hiring needs and realistic time-to-fill</li>
+<li data-i18n="str.a.d3.b7">Training, upskilling, and leadership development opportunities</li>
+</ul>
+<p class="use-note" data-i18n="str.a.d3.note">We speak in roles and capabilities, never in individual performance. The assessment report names gaps in the org chart, not names in the team.</p>
+<p class="use-typical" data-i18n="str.a.d3.typical">Typical findings: two missing roles that should exist, one role that's over-scoped for one person, and a succession risk no one's planned for. The future-state usually needs one or two senior hires the company hasn't budgeted for yet.</p>
+</div>
+
+</div>
+
+<h3 class="sub-section-head" data-i18n="str.a.target.head">How we establish "where you need to be"</h3>
+<p class="sub-section-lede" data-i18n="str.a.target.lede">"Where you need to be" isn't a theoretical maturity model. It's derived from three specific inputs:</p>
+
+<div class="target-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem">
+<div class="target-card">
+<div class="target-num" data-i18n="str.a.t1.num">01</div>
+<h4 class="target-title" data-i18n="str.a.t1.title">Your business trajectory</h4>
+<p class="target-body" data-i18n="str.a.t1.body">Growth plans, regulatory obligations, M&amp;A activity, new market entry. What the business will demand of IT in 2–3 years.</p>
+</div>
+<div class="target-card">
+<div class="target-num" data-i18n="str.a.t2.num">02</div>
+<h4 class="target-title" data-i18n="str.a.t2.title">Industry benchmarks, selectively</h4>
+<p class="target-body" data-i18n="str.a.t2.body">What comparable companies at your stage have typically found necessary. Used where it's useful, ignored where it's not.</p>
+</div>
+<div class="target-card">
+<div class="target-num" data-i18n="str.a.t3.num">03</div>
+<h4 class="target-title" data-i18n="str.a.t3.title">What the assessment surfaces</h4>
+<p class="target-body" data-i18n="str.a.t3.body">Challenges and risks that only become visible during the engagement itself — the ones nobody flagged because nobody had stepped back to look.</p>
+</div>
+</div>
+
+<h3 class="sub-section-head" data-i18n="str.a.shape.head">Engagement shape</h3>
+<p class="sub-section-lede" data-i18n="str.a.shape.lede">Duration depends on complexity, not on a fixed template. We scope after a first call — below are typical ranges:</p>
+
+<div class="target-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem">
+<div class="target-card">
+<div class="target-label" data-i18n="str.a.s1.label">Shape 01 · Focused</div>
+<p class="target-duration" data-i18n="str.a.s1.duration">3–5 days</p>
+<p class="target-body" data-i18n="str.a.s1.body">Companies ~20–50 people, single-site, straightforward IT landscape. Output: condensed findings report, prioritised gap list, executive summary.</p>
+</div>
+<div class="target-card">
+<div class="target-label" data-i18n="str.a.s2.label">Shape 02 · Standard</div>
+<p class="target-duration" data-i18n="str.a.s2.duration">1–2 weeks</p>
+<p class="target-body" data-i18n="str.a.s2.body">Companies ~50–200 people, moderate complexity, some regulated processes. Output: full three-dimension report, target-state profile, prioritised roadmap, board-ready presentation.</p>
+</div>
+<div class="target-card">
+<div class="target-label" data-i18n="str.a.s3.label">Shape 03 · Complex</div>
+<p class="target-duration" data-i18n="str.a.s3.duration">3–4 weeks</p>
+<p class="target-body" data-i18n="str.a.s3.body">Companies 200+, multi-site, regulated or multi-entity environments. Output: full three-dimension report, detailed gap analysis, investment framing, executive and operational deliverables.</p>
+</div>
+</div>
+
+<h3 class="sub-section-head" data-i18n="str.a.deliv.head">What you take away</h3>
+<ul class="use-list" style="max-width:680px;margin-top:1rem">
+<li data-i18n="str.a.deliv.b1">Current-state picture across all three dimensions</li>
+<li data-i18n="str.a.deliv.b2">Target-state definition based on your business trajectory</li>
+<li data-i18n="str.a.deliv.b3">Gap analysis, prioritised by impact and feasibility</li>
+<li data-i18n="str.a.deliv.b4">Risk register — what's most exposed, what needs attention first</li>
+<li data-i18n="str.a.deliv.b5">Executive findings report — written for a board audience</li>
+<li data-i18n="str.a.deliv.b6">Optional: board presentation delivered by us, if useful</li>
+</ul>
+
+<h3 class="sub-section-head" data-i18n="str.a.next.head">What happens next</h3>
+<p class="section-lede" data-i18n="str.a.next.body">About half our assessment clients take the findings and execute internally. About a third continue into a Strategy &amp; Roadmap engagement to plan the changes in depth. A smaller group brings us in directly as Interim IT Director to deliver. There's no upsell pressure built into the process.</p>
+
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body" data-i18n="fn.str.assess">The hardest conversation in an assessment is almost always about the team, not the technology. Systems can be replaced; org charts can't be, at least not quickly. We surface capability gaps early in the engagement — not at the final read-out — so leadership has time to think before the report lands.</span></div>
+
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+
+<!-- ═════════ §4 STRATEGY ═════════ -->
+<section class="uses" id="strategy-roadmap">
+<div class="section-inner">
+<span class="eyebrow" data-i18n="str.s.eyebrow">Stage 02 · IT Strategy &amp; Roadmap</span>
+<h2 class="display"><span data-i18n="str.s.h2.1">The plan that survives</span> <em data-i18n="str.s.h2.2">contact with reality.</em></h2>
+<p class="section-lede" data-i18n="str.s.lede">Most IT strategy documents are slide decks that get nodded at once and shelved. A useful strategy is different: specific about what changes and when, honest about what it costs and who does it, and structured so a new CFO or IT Director can pick it up two years in and still execute against it. Built to outlast the person who commissioned it.</p>
+
+<h3 class="sub-section-head" data-i18n="str.s.blocks.head">What the strategy covers</h3>
+<p class="sub-section-lede" data-i18n="str.s.blocks.lede">Same discipline as the Assessment: three co-equal dimensions. The plan itself. The people who'll deliver it. The investment case that makes it viable.</p>
+
+<div class="uses-grid stagger" style="margin-top:2rem">
+
+<!-- Block 01 -->
+<div class="use-card">
+<div class="use-num" data-i18n="str.s.b1.num">01</div>
+<h4 class="use-title" data-i18n="str.s.b1.title">The Plan</h4>
+<p class="use-subtitle" data-i18n="str.s.b1.subtitle">What changes, in what order, and why.</p>
+<p class="use-body" data-i18n="str.s.b1.body">The technical and architectural direction, made concrete. Not "we should modernise our infrastructure" — specifically which systems change, which stay, what replaces what, and in what sequence.</p>
+<ul class="use-list">
+<li data-i18n="str.s.b1.l1">Target operating model for IT — how the function should be structured 2–3 years out</li>
+<li data-i18n="str.s.b1.l2">Systems and application strategy — what stays, what changes, what's replaced, and when</li>
+<li data-i18n="str.s.b1.l3">Data strategy — information architecture, master data, integration patterns</li>
+<li data-i18n="str.s.b1.l4">Infrastructure and cloud posture — data residency, disaster recovery, network approach</li>
+<li data-i18n="str.s.b1.l5">Security and compliance trajectory — where the posture needs to be, by when, against what framework</li>
+<li data-i18n="str.s.b1.l6">Sequencing and dependencies — which changes unlock others, which can't happen until another is done</li>
+</ul>
+<p class="use-typical" data-i18n="str.s.b1.typical">A real roadmap tells you what to do in Q1, Q2, Q3, and why. A useful one also tells you what to stop doing — the projects and contracts that were defensible five years ago and no longer are.</p>
+</div>
+
+<!-- Block 02 -->
+<div class="use-card">
+<div class="use-num" data-i18n="str.s.b2.num">02</div>
+<h4 class="use-title" data-i18n="str.s.b2.title">The People</h4>
+<p class="use-subtitle" data-i18n="str.s.b2.subtitle">Who delivers it, and how they're shaped to do so.</p>
+<p class="use-body" data-i18n="str.s.b2.body">Every strategy needs people to execute it. Most strategy documents wave at this. Ours is explicit: what capabilities you need, when, whether they're hired or trained or outsourced, and what the org chart looks like at each stage of the plan.</p>
+<ul class="use-list">
+<li data-i18n="str.s.b2.l1">Capability roadmap — what skills and roles are needed, and when</li>
+<li data-i18n="str.s.b2.l2">Hiring sequence — which roles to fill first, what seniority, realistic time-to-fill</li>
+<li data-i18n="str.s.b2.l3">Training and upskilling — where internal development closes gaps faster than hiring</li>
+<li data-i18n="str.s.b2.l4">Outsourcing strategy — what stays external, what comes in-house, and why</li>
+<li data-i18n="str.s.b2.l5">Organisational structure evolution — how the IT function reshapes over the multi-year plan</li>
+<li data-i18n="str.s.b2.l6">Leadership succession — continuity planning for critical roles</li>
+</ul>
+<p class="use-typical" data-i18n="str.s.b2.typical">A strategy that needs five senior hires in year one is either wrong or unfunded. We model the realistic hiring cadence and adjust the plan's sequencing accordingly.</p>
+</div>
+
+<!-- Block 03 -->
+<div class="use-card">
+<div class="use-num" data-i18n="str.s.b3.num">03</div>
+<h4 class="use-title" data-i18n="str.s.b3.title">The Investment</h4>
+<p class="use-subtitle" data-i18n="str.s.b3.subtitle">What it costs, over what timeline, and how to defend it.</p>
+<p class="use-body" data-i18n="str.s.b3.body">Strategy without a credible budget is aspiration. We build multi-year investment plans that translate the roadmap into annual spend, broken down into categories a CFO can actually work with — and packaged into a business case a board can approve.</p>
+<ul class="use-list">
+<li data-i18n="str.s.b3.l1">Multi-year investment plan — CapEx and OpEx modelling year by year</li>
+<li data-i18n="str.s.b3.l2">Categorised spend — infrastructure, licences, people, services, projects</li>
+<li data-i18n="str.s.b3.l3">Prioritisation framework — what gets funded first if the budget is cut 20%</li>
+<li data-i18n="str.s.b3.l4">Risk register — execution risks and mitigation approach</li>
+<li data-i18n="str.s.b3.l5">Business case artefacts — materials for board and executive approval</li>
+<li data-i18n="str.s.b3.l6">Governance model — how decisions get made as the plan executes</li>
+</ul>
+<p class="use-typical" data-i18n="str.s.b3.typical">The investment case has to work at two levels: the total multi-year commitment, and each annual slice on its own. Both should be defendable in a boardroom without the rest of the deck.</p>
+</div>
+
+</div>
+
+<h3 class="sub-section-head" data-i18n="str.s.seq.head">Standalone or sequenced</h3>
+<p class="section-lede" data-i18n="str.s.seq.body">If you've done our Assessment, the Strategy &amp; Roadmap is faster — typically 1–2 weeks — because the current-state picture is already built and agreed. If you're coming in cold, or your state is already well-understood internally, we can start directly with the strategy work in a 2–4 week engagement. Either path produces the same final deliverables.</p>
+
+<h3 class="sub-section-head" data-i18n="str.s.deliv.head">What you take away</h3>
+<ul class="use-list" style="max-width:680px;margin-top:1rem">
+<li data-i18n="str.s.deliv.b1">Multi-year IT roadmap, sequenced and dependency-mapped</li>
+<li data-i18n="str.s.deliv.b2">Target operating model and org evolution plan</li>
+<li data-i18n="str.s.deliv.b3">Data and systems architecture — current and target states</li>
+<li data-i18n="str.s.deliv.b4">Multi-year investment plan with CapEx/OpEx breakdown</li>
+<li data-i18n="str.s.deliv.b5">Prioritised risk register with mitigation approach</li>
+<li data-i18n="str.s.deliv.b6">Board-ready business case and presentation materials</li>
+</ul>
+
+<h3 class="sub-section-head" data-i18n="str.s.next.head">What happens next</h3>
+<p class="section-lede" data-i18n="str.s.next.body">Most clients execute the roadmap internally — that's the intent. Some ask us to stay on as Interim IT Director to deliver the first phases, particularly when the plan depends on senior leadership the company doesn't yet have. Either path works. The strategy is yours either way.</p>
+
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body" data-i18n="fn.str.strategy">A roadmap that names the things you should <em>stop doing</em> is worth more than one that only adds. Every IT strategy inherits five-year-old projects that survived because no one wanted the argument. We include the stop-list explicitly. Some clients tell us it's the most useful page in the document.</span></div>
+
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+
+<!-- ═════════ §5 INTERIM ═════════ -->
+<section class="rollout" id="interim">
+<div class="section-inner">
+<span class="eyebrow" data-i18n="str.i.eyebrow">Stage 03 · Interim IT Director</span>
+<h2 class="display"><span data-i18n="str.i.h2.1">When the plan needs</span> <em data-i18n="str.i.h2.2">someone to run it.</em></h2>
+<p class="section-lede" data-i18n="str.i.lede">Some engagements don't end at the strategy document. Sometimes the plan depends on senior IT leadership the company doesn't currently have — during a transition, a growth phase, or a period between permanent hires. When that's the case, we stay on as Interim IT Director: embedded in the leadership team, accountable for outcomes, and with a clear handover path to whoever takes over permanently.</p>
+
+<h3 class="sub-section-head" data-i18n="str.i.sit.head">Typical situations</h3>
+<p class="sub-section-lede" data-i18n="str.i.sit.lede">Interim engagements aren't theoretical. Below are the four situations that drive most of them — usually in combination, rarely in isolation.</p>
+
+<div class="uses-grid stagger" style="margin-top:2rem;grid-template-columns:repeat(2,1fr)">
+<div class="use-card">
+<div class="use-num" data-i18n="str.i.s1.num">01</div>
+<h4 class="use-title" data-i18n="str.i.s1.title">Succession gap</h4>
+<p class="use-body" data-i18n="str.i.s1.body">Your IT Director has left, is leaving, or has moved to another role. You need senior coverage while recruiting their permanent replacement — or while deciding whether the role should stay the same shape.</p>
+</div>
+<div class="use-card">
+<div class="use-num" data-i18n="str.i.s2.num">02</div>
+<h4 class="use-title" data-i18n="str.i.s2.title">Transition or restructuring</h4>
+<p class="use-body" data-i18n="str.i.s2.body">An acquisition, reorganisation, or system migration is underway. The current team needs leadership-level support during the transition, even if the long-term structure is already clear.</p>
+</div>
+<div class="use-card">
+<div class="use-num" data-i18n="str.i.s3.num">03</div>
+<h4 class="use-title" data-i18n="str.i.s3.title">Growth phase</h4>
+<p class="use-body" data-i18n="str.i.s3.body">The company has outgrown the IT leadership it had. You need someone operating at director level now, while you figure out what a permanent hire should look like — often a different role than the one that existed before.</p>
+</div>
+<div class="use-card">
+<div class="use-num" data-i18n="str.i.s4.num">04</div>
+<h4 class="use-title" data-i18n="str.i.s4.title">Roadmap execution</h4>
+<p class="use-body" data-i18n="str.i.s4.body">You've built a strategy (with us or internally) and the early phases need senior oversight that the current team can't provide. Interim engagement spans the first 6–12 months of execution.</p>
+</div>
+</div>
+
+<h3 class="sub-section-head" data-i18n="str.i.shape.head">How the engagement runs</h3>
+
+<div class="target-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem">
+<div class="target-card">
+<div class="target-label" data-i18n="str.i.sh1.label">Shape 01 · Part-time embedded</div>
+<p class="target-duration" data-i18n="str.i.sh1.duration">2–3 days per week, ongoing</p>
+<p class="target-body" data-i18n="str.i.sh1.body">For companies needing director-level presence without a full-time salary commitment.</p>
+</div>
+<div class="target-card">
+<div class="target-label" data-i18n="str.i.sh2.label">Shape 02 · Full-time embedded</div>
+<p class="target-duration" data-i18n="str.i.sh2.duration">6–18 months, handing over</p>
+<p class="target-body" data-i18n="str.i.sh2.body">For succession gaps, active transitions, or roadmap execution phases.</p>
+</div>
+<div class="target-card">
+<div class="target-label" data-i18n="str.i.sh3.label">Shape 03 · Advisory + steering</div>
+<p class="target-duration" data-i18n="str.i.sh3.duration">1–2 days per month</p>
+<p class="target-body" data-i18n="str.i.sh3.body">For companies with strong day-to-day IT management but needing senior independent oversight.</p>
+</div>
+</div>
+
+<h3 class="sub-section-head" data-i18n="str.i.arc.head">The arc of an engagement</h3>
+
+<div class="target-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem">
+<div class="target-card">
+<div class="target-label" data-i18n="str.i.a1.label">Week 1–2 · Discovery &amp; assessment</div>
+<p class="target-body" data-i18n="str.i.a1.body">Embed with the team. Understand current state, active issues, stakeholder dynamics. Identify the first three things worth fixing.</p>
+</div>
+<div class="target-card">
+<div class="target-label" data-i18n="str.i.a2.label">Month 1 · Quick wins &amp; stabilisation</div>
+<p class="target-body" data-i18n="str.i.a2.body">Clear the most visible operational issues. Establish cadence with leadership and governance. Build trust with the team before asking for bigger changes.</p>
+</div>
+<div class="target-card">
+<div class="target-label" data-i18n="str.i.a3.label">Ongoing · Strategic delivery</div>
+<p class="target-body" data-i18n="str.i.a3.body">Execute against the roadmap, adjust as reality demands. Prepare the organisation — and the role itself — for a permanent hire when the time is right.</p>
+</div>
+</div>
+
+<h3 class="sub-section-head" data-i18n="str.i.cur.head">Current engagements</h3>
+<p class="section-lede" data-i18n="str.i.cur.body">We've engaged as Interim IT Director three times. Two engagements are active — one with a Nordic life-science company, one with a Swedish medtech group — and a third starts shortly with a European clinical research organisation. We pick these engagements carefully: senior attention matters more than volume, and we'd rather turn work down than dilute it.</p>
+
+<h3 class="sub-section-head" data-i18n="str.i.not.head">What this isn't</h3>
+<p class="section-lede" data-i18n="str.i.not.body">We're not a staffing agency. We don't place IT contractors. An Interim IT Director engagement is a senior consulting relationship with an embedded presence — not body-shopping a resource into your org chart. That means longer scoping conversations up front, genuine fit checks both ways, and a real handover plan. It also means we don't take every engagement that's offered.</p>
+
+<h3 class="sub-section-head" data-i18n="str.i.end.head">End of engagement</h3>
+<p class="section-lede" data-i18n="str.i.end.body">Interim engagements end one of three ways: the permanent hire arrives and we hand over; the scope narrows to advisory as the new team stabilises; or the original plan evolves and we scope a new engagement shape together. The intent from day one is a clean handover — not an open-ended extension.</p>
+
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body" data-i18n="fn.str.interim">"Permanent" IT Director hires are taking 6–9 months on average in the Nordic market right now, sometimes longer. That's the gap Interim engagements exist to cover — not a month, not two. If you're planning succession, start the Interim conversation before the current director gives notice, not after.</span></div>
+
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+
+<!-- ═════════ §6 HOW USED ═════════ -->
+<section class="uses" id="how-used">
+<div class="section-inner">
+<span class="eyebrow" data-i18n="str.u.eyebrow">How clients actually use this</span>
+<h2 class="display"><span data-i18n="str.u.h2.1">Three stages.</span> <em data-i18n="str.u.h2.2">Pick where you start.</em></h2>
+<p class="section-lede" data-i18n="str.u.lede">The three stages are designed to sequence — Assessment surfaces what needs to change, Strategy plans the changes, Interim delivers them. In practice, most clients don't do all three. The structure exists to give you a clear entry point without committing you to a path you haven't chosen yet.</p>
+
+<div class="uses-grid stagger" style="margin-top:2rem">
+<div class="use-card">
+<div class="use-num" data-i18n="str.u.p1.num">Path 01</div>
+<h4 class="use-title" data-i18n="str.u.p1.title">Assessment only</h4>
+<p class="use-subtitle" data-i18n="str.u.p1.subtitle">Roughly half of clients.</p>
+<p class="use-body" data-i18n="str.u.p1.body">A clear, independent picture of where the IT function is, where it needs to be, and what it takes to close the gap. Some clients take the findings and execute internally with their existing team. Some share the report with their board and revisit in six months. Some shelve it deliberately because the assessment surfaced bigger questions first.</p>
+</div>
+<div class="use-card">
+<div class="use-num" data-i18n="str.u.p2.num">Path 02</div>
+<h4 class="use-title" data-i18n="str.u.p2.title">Assessment → Strategy</h4>
+<p class="use-subtitle" data-i18n="str.u.p2.subtitle">About a third.</p>
+<p class="use-body" data-i18n="str.u.p2.body">The assessment surfaces the shape of the problem; the strategy engagement turns it into a plan with sequencing, investment, and capability roadmap. Execution stays internal. We've sometimes reviewed the execution at 6-month intervals; that's optional and separate.</p>
+</div>
+<div class="use-card">
+<div class="use-num" data-i18n="str.u.p3.num">Path 03</div>
+<h4 class="use-title" data-i18n="str.u.p3.title">Full sequence, or direct to Interim</h4>
+<p class="use-subtitle" data-i18n="str.u.p3.subtitle">The remaining clients.</p>
+<p class="use-body" data-i18n="str.u.p3.body">Either the full journey — assessment, strategy, interim delivery — or a direct engagement because the company already knows what it needs. These are longer relationships, usually 12+ months total across stages.</p>
+</div>
+</div>
+
+<h3 class="sub-section-head" data-i18n="str.u.diff.head">How this is different</h3>
+<p class="section-lede" data-i18n="str.u.diff.body">Most consultancies' engagement models are upsell ladders. Ours isn't — we make more revenue per client when they engage across stages, but we make better engagements when clients only do the stages they actually need. Sometimes the best outcome of an Assessment is a clear report, a board conversation, and nothing else. That's a successful engagement.</p>
+
+<div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body" data-i18n="fn.str.usage">The consulting industry's favourite trick is to make the end of an engagement feel like the start of a conversation about the next one. We try to do the opposite: the end of an engagement should feel like a handover, not a handshake. Clients who come back a year later come back because something new surfaced, not because we planted the seed.</span></div>
+
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+
+<!-- ═════════ §7 FINAL CTA ═════════ -->
+<section class="final-cta">
+<div class="final-cta-inner">
+<span class="eyebrow" data-i18n="str.cta.eyebrow">Ready when you are</span>
+<h2 class="display"><span data-i18n="str.cta.h2.1">Start where you are.</span> <em data-i18n="str.cta.h2.2">We'll meet you there.</em></h2>
+<p data-i18n="str.cta.lede">Most engagements start with a 30-minute scoping call — no commitment, no pitch deck. You tell us what's prompting the conversation, we tell you which stage makes sense and what a realistic engagement would look like. Sometimes the answer is "you don't need us yet." That's also a useful outcome.</p>
+<div class="hero-ctas" style="justify-content:center">
+<a class="btn-primary" data-i18n="str.cta.cta1" href="index.html#contact?topic=strategy">Book a scoping call
+        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="14"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+<a class="btn-secondary" data-i18n="str.cta.cta2" href="mailto:info@mset.se">Email info@mset.se</a>
+</div>
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+<!-- ═════════ §8 FAQ ═════════ -->
+<section class="faq" id="faq">
+<div class="section-inner">
+<span class="eyebrow" data-i18n="str.f.eyebrow">Things you'll want to know</span>
+<h2 class="display"><span data-i18n="str.f.h2.1">Questions clients ask</span> <em data-i18n="str.f.h2.2">before committing.</em></h2>
+
+<div class="faq-list" style="margin-top:2.5rem">
+
+<details class="faq-item">
+<summary data-i18n="str.f.q1.q">How is your assessment different from a traditional consultancy review?</summary>
+<div class="faq-body"><p data-i18n="str.f.q1.a">Scope and independence. We assess technology, data, and team as three co-equal dimensions — most large-firm assessments stop at technology or run the team question as a separate and expensive workstream. We're also independent in the specific sense that we don't resell software, implement vendor products, or receive referral fees. Findings are unbiased because the commercial structure makes them unbiased.</p></div>
+</details>
+
+<details class="faq-item">
+<summary data-i18n="str.f.q2.q">Do you work outside life-science?</summary>
+<div class="faq-body"><p data-i18n="str.f.q2.a">Yes. The IT Strategy work is industry-agnostic — growth companies, regulated industries, professional services. Our deep expertise is in life-science and regulated sectors, and that experience translates well to companies with complex compliance, data-sensitivity, or multi-entity structures. But the assessment and strategy frameworks apply to any company that's scaling past its current IT setup.</p></div>
+</details>
+
+<details class="faq-item">
+<summary data-i18n="str.f.q3.q">How confidential are your engagements?</summary>
+<div class="faq-body"><p data-i18n="str.f.q3.a">Very. The team dimension of an assessment is genuinely sensitive — findings name capability gaps in an org chart, not individual people, but senior leadership still needs to handle them carefully. We operate under signed NDAs by default, and our deliverables are structured so that the raw team-capability analysis can be shared at CEO/Board level without circulating inside the IT function. Most clients keep the full report in a small circle.</p></div>
+</details>
+
+<details class="faq-item">
+<summary data-i18n="str.f.q4.q">Can we combine or stage the services differently?</summary>
+<div class="faq-body"><p data-i18n="str.f.q4.a">Yes. The stages are described sequentially but the engagements are independent. You can do a standalone strategy engagement without an assessment, an interim engagement without either, or an assessment followed by a six-month pause before strategy work. We scope each engagement individually — no retainers, no forced packages.</p></div>
+</details>
+
+<details class="faq-item">
+<summary data-i18n="str.f.q5.q">How quickly can you start?</summary>
+<div class="faq-body"><p data-i18n="str.f.q5.a">For Assessment: typically within 2–3 weeks of a signed scope, sometimes faster for focused engagements. For Strategy: 2–4 weeks lead time. For Interim IT Director: longer — Interim engagements need proper fit conversations on both sides, so expect 4–6 weeks from first call to embedded start. If you need interim coverage faster than that, we may not be the right fit.</p></div>
+</details>
+
+<details class="faq-item">
+<summary data-i18n="str.f.q6.q">What does pricing look like?</summary>
+<div class="faq-body"><p data-i18n="str.f.q6.a">Assessment and Strategy &amp; Roadmap engagements are fixed-price, typically five to six figures depending on scope. Interim IT Director runs on a monthly retainer based on engagement shape — part-time, full-time, or advisory. We quote specifically after a scoping call, not before.</p></div>
+</details>
+
+<details class="faq-item">
+<summary data-i18n="str.f.q7.q">Is there a conflict of interest if you do the assessment and then the strategy?</summary>
+<div class="faq-body"><p data-i18n="str.f.q7.a">We disclose this explicitly in every engagement. An assessment firm that benefits from "finding problems" has an incentive to find them. Our structural answer: assessment findings are costed independently, and we're equally happy if a client doesn't continue — roughly half don't. If that's not reassuring enough, some clients split: another firm does the assessment, we do the strategy. We support that explicitly.</p></div>
+</details>
+
+<details class="faq-item">
+<summary data-i18n="str.f.q8.q">What if we don't like what the assessment finds?</summary>
+<div class="faq-body"><p data-i18n="str.f.q8.a">Clients occasionally find the picture we return harder to look at than expected — usually on the team dimension. That's the point. We deliver findings in a format that supports a real conversation with the board and with the IT function itself, not as a blunt document that lands and causes problems. If findings are genuinely contested, we'll rework the analysis with the client's input before the report is finalised. The goal is accuracy, not confrontation.</p></div>
+</details>
+
+</div>
+</div>
+</section>
+
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand">
+<div aria-label="MSET — Kifarkis Nätsäkerhet" class="nav-logo" role="img">
+<svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
+<span class="wordmark">MSET<span class="dot"></span></span>
+</div>
+<p data-i18n="footer.brand.body">Life-science IT &amp; AI consulting. Independent, regulated-industry-native, based in Skåne.</p>
+<span class="tag" data-i18n="footer.tag">Säkerhet som en tjänst</span>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.col1">Services</h4>
+<ul>
+<li><a data-i18n="footer.services.gxp" href="index.html#services">GxP Systems</a></li>
+<li><a data-i18n="footer.services.ai" href="ai.html">AI Consulting</a></li>
+<li><a data-i18n="footer.services.sec" href="index.html#security">IT Security</a></li>
+<li><a data-i18n="footer.services.sat" href="sat.html">Security Awareness Training</a></li>
+<li><a data-i18n="footer.services.strat" href="#top">IT Strategy</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.col2">Company</h4>
+<ul>
+<li><a data-i18n="footer.about" href="index.html#about">About MSET</a></li>
+<li><a data-i18n="footer.contact" href="index.html#contact">Contact</a></li>
+<li><a href="mailto:info@mset.se">info@mset.se</a></li>
+<li><a data-i18n="footer.privacy" href="privacy.html">Privacy policy</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span data-i18n="footer.copyright">© 2026 Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
+<span data-i18n="footer.rights">All rights reserved.</span>
+<a class="back-link" data-i18n="footer.back-top" href="index.html">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="19" x2="5" y1="12" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to MSET
+      </a>
+</div>
+</div>
+</footer>
+<!-- Floating footer — slim persistent bar, slides in after scrolling 300px -->
+<div aria-hidden="true" class="floating-footer" id="floatingFooter">
+<div class="ff-inner">
+<a aria-label="Back to MSET home" class="ff-brand" href="index.html">
+<svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
+<span class="wordmark">MSET<span class="dot"></span></span>
+</a>
+<a aria-label="Back to MSET" class="ff-action" href="index.html">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="19" x2="5" y1="12" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Back to MSET
+    </a>
+</div>
+</div>
+<!-- Privacy notice — shown once until dismissed -->
+<div aria-live="polite" class="privacy-notice" id="privacyNotice" role="status">
+<p><span data-i18n="privacy-notice.body">We store and handle your contact-form details only to reply to you. No tracking cookies, no analytics profiling.</span> <span data-i18n="privacy-notice.see">See our</span> <a data-i18n="privacy-notice.link" href="privacy.html">privacy policy</a> <span data-i18n="privacy-notice.for-full">for the full picture.</span></p>
+<div class="privacy-notice-actions">
+<button class="privacy-notice-dismiss" data-i18n="privacy-notice.got-it" id="privacyNoticeDismiss" type="button">Got it</button>
+</div>
+</div>
+<script>
+/* ════════════════ NAV — scroll darken (matches main site) ════════════════ */
+(function(){
+  var nav = document.getElementById('siteNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive:true });
+})();
+
+/* ════════════════ MOBILE MENU ════════════════ */
+(function(){
+  var burger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if(!burger || !mobileMenu) return;
+  burger.addEventListener('click', function(){
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      burger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+})();
+
+/* ════════════════ FLOATING FOOTER — slides in after scroll ════════════════ */
+(function(){
+  var floatingFooter = document.getElementById('floatingFooter');
+  var realFooter = document.querySelector('footer');
+  if(!floatingFooter) return;
+  var footerInView = false;
+  if(realFooter && 'IntersectionObserver' in window){
+    var ffIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ footerInView = e.isIntersecting; update(); });
+    }, { rootMargin: '0px 0px 0px 0px', threshold: 0 });
+    ffIo.observe(realFooter);
+  }
+  function update(){
+    var scrolledEnough = window.scrollY > 300;
+    if(scrolledEnough && !footerInView){
+      floatingFooter.classList.add('visible');
+      floatingFooter.classList.remove('hidden');
+      floatingFooter.setAttribute('aria-hidden','false');
+    } else {
+      floatingFooter.classList.remove('visible');
+      floatingFooter.classList.add('hidden');
+      floatingFooter.setAttribute('aria-hidden','true');
+    }
+  }
+  window.addEventListener('scroll', update, { passive:true });
+  update();
+})();
+
+/* ════════════════ REVEAL ON SCROLL ════════════════ */
+(function(){
+  const els = document.querySelectorAll('.reveal, .stagger');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(e => e.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(e => io.observe(e));
+})();
+
+/* ════════════════ ANIMATE PHASE BARS & DEPT BARS ════════════════ */
+(function(){
+  const bars = document.querySelectorAll('[data-w]');
+  if(!('IntersectionObserver' in window)){
+    bars.forEach(b => b.style.width = b.dataset.w);
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const b = entry.target;
+        requestAnimationFrame(() => { b.style.width = b.dataset.w; });
+        io.unobserve(b);
+      }
+    });
+  }, { threshold: 0.3 });
+  bars.forEach(b => io.observe(b));
+})();
+/* ════════════════ PRIVACY NOTICE ════════════════ */
+(function(){
+  var el = document.getElementById('privacyNotice');
+  var btn = document.getElementById('privacyNoticeDismiss');
+  if(!el || !btn) return;
+  var KEY = 'mset_privacy_notice_dismissed';
+  try { if(!localStorage.getItem(KEY)) setTimeout(function(){ el.classList.add('visible'); }, 1500); }
+  catch(e){ setTimeout(function(){ el.classList.add('visible'); }, 1500); }
+  btn.addEventListener('click', function(){
+    el.classList.remove('visible');
+    try { localStorage.setItem(KEY, '1'); } catch(e){}
+  });
+})();</script>
+
+<script src="translations.js"></script>
+<script>
+(function(){
+  function getDict(){ return window.MSET_TRANSLATIONS || {}; }
+  function apply(){
+    var dict = getDict();
+    var lang = document.body.getAttribute('data-lang') || 'en';
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if (!el.hasAttribute('data-i18n-en')){
+        var orig = Array.prototype.filter.call(el.childNodes, function(n){
+          return n.nodeType === 3;
+        }).map(function(n){ return n.nodeValue; }).join('').trim();
+        if (!orig) orig = el.textContent.trim();
+        el.setAttribute('data-i18n-en', orig);
+      }
+      if (lang === 'en'){
+        var target = el.getAttribute('data-i18n-en');
+        var replaced = false;
+        for (var i=0; i<el.childNodes.length; i++){
+          var n = el.childNodes[i];
+          if (n.nodeType === 3 && n.nodeValue.trim()){
+            n.nodeValue = (replaced ? '' : target);
+            replaced = true;
+          }
+        }
+        if (!replaced){ el.textContent = target; }
+        return;
+      }
+      var entry = dict[key];
+      if (!entry || !entry[lang]) return;
+      var replaced = false;
+      for (var i=0; i<el.childNodes.length; i++){
+        var n = el.childNodes[i];
+        if (n.nodeType === 3 && n.nodeValue.trim()){
+          n.nodeValue = (replaced ? '' : entry[lang]);
+          replaced = true;
+        }
+      }
+      if (!replaced){ el.textContent = entry[lang]; }
+    });
+  }
+  var mo = new MutationObserver(function(muts){
+    muts.forEach(function(m){ if (m.attributeName === 'data-lang') apply(); });
+  });
+  mo.observe(document.body, { attributes: true });
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', apply);
+  } else { apply(); }
+})();
+</script>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   i18n language selection + hybrid nav dropdowns
+═══════════════════════════════════════════════════════════ */
+(function(){
+  var SUPPORTED = ['en','sv','da'];
+  var STORAGE_KEY = 'mset_lang';
+  var OPEN_DELAY = 140;
+  var CLOSE_DELAY = 320;
+  var supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  function getInitialLang(){
+    try {
+      var hash = window.location.hash.replace('#','');
+      if (SUPPORTED.indexOf(hash) !== -1) return hash;
+      var params = new URLSearchParams(window.location.search);
+      var q = params.get('lang');
+      if (q && SUPPORTED.indexOf(q) !== -1) return q;
+    } catch(e){}
+    try {
+      var stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
+    } catch(e){}
+    try {
+      var nav = (navigator.language || 'en').slice(0,2).toLowerCase();
+      if (SUPPORTED.indexOf(nav) !== -1) return nav;
+    } catch(e){}
+    return 'en';
+  }
+
+  function setLang(lang){
+    if (SUPPORTED.indexOf(lang) === -1) lang = 'en';
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch(e){}
+    document.querySelectorAll('.lang-pop button[data-lang]').forEach(function(b){
+      b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false');
+    });
+    document.querySelectorAll('.current-code').forEach(function(el){
+      el.textContent = lang.toUpperCase();
+    });
+    // Re-run i18n applier if available
+    if (typeof window.__msetApplyI18n === 'function') window.__msetApplyI18n();
+  }
+
+  // ═══ Nav dropdown setup ═══
+  var deepItems = document.querySelectorAll('.nav-links .has-deep');
+  var openTimers = new WeakMap();
+  var closeTimers = new WeakMap();
+
+  function openDeep(item){
+    clearTimeout(closeTimers.get(item));
+    deepItems.forEach(function(other){
+      if (other !== item && other.classList.contains('open')) closeDeep(other);
+    });
+    closeLangPop();
+    item.classList.add('open');
+    var btn = item.querySelector('.deep-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  }
+  function closeDeep(item){
+    clearTimeout(openTimers.get(item));
+    item.classList.remove('open');
+    var btn = item.querySelector('.deep-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  }
+  function closeAllDeeps(){ deepItems.forEach(closeDeep); }
+
+  deepItems.forEach(function(item){
+    var toggle = item.querySelector('.deep-toggle');
+    if (supportsHover){
+      item.addEventListener('mouseenter', function(){
+        clearTimeout(closeTimers.get(item));
+        openTimers.set(item, setTimeout(function(){ openDeep(item); }, OPEN_DELAY));
+      });
+      item.addEventListener('mouseleave', function(){
+        clearTimeout(openTimers.get(item));
+        closeTimers.set(item, setTimeout(function(){ closeDeep(item); }, CLOSE_DELAY));
+      });
+    }
+    if (toggle){
+      toggle.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        if (item.classList.contains('open')) closeDeep(item);
+        else openDeep(item);
+      });
+    }
+  });
+
+  // ═══ Lang switcher setup ═══
+  var langSwitchDesktop = document.querySelector('.nav-links .lang-switch');
+  var langPill = langSwitchDesktop ? langSwitchDesktop.querySelector('.lang-pill') : null;
+  var langOpenTimer, langCloseTimer;
+
+  function openLangPop(){
+    clearTimeout(langCloseTimer);
+    if (!langSwitchDesktop) return;
+    closeAllDeeps();
+    langSwitchDesktop.classList.add('open');
+    if (langPill) langPill.setAttribute('aria-expanded', 'true');
+  }
+  function closeLangPop(){
+    clearTimeout(langOpenTimer);
+    document.querySelectorAll('.nav-links .lang-switch').forEach(function(ls){
+      ls.classList.remove('open');
+    });
+    if (langPill) langPill.setAttribute('aria-expanded', 'false');
+  }
+
+  if (supportsHover && langSwitchDesktop){
+    langSwitchDesktop.addEventListener('mouseenter', function(){
+      clearTimeout(langCloseTimer);
+      langOpenTimer = setTimeout(openLangPop, OPEN_DELAY);
+    });
+    langSwitchDesktop.addEventListener('mouseleave', function(){
+      clearTimeout(langOpenTimer);
+      langCloseTimer = setTimeout(closeLangPop, CLOSE_DELAY);
+    });
+  }
+  if (langPill){
+    langPill.addEventListener('click', function(e){
+      e.stopPropagation();
+      if (langSwitchDesktop.classList.contains('open')) closeLangPop();
+      else openLangPop();
+    });
+  }
+
+  document.querySelectorAll('.lang-pop button[data-lang]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      setLang(btn.dataset.lang);
+      closeLangPop();
+    });
+  });
+
+  // ═══ Outside click / Esc ═══
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.has-deep') && !e.target.closest('.lang-switch')){
+      closeAllDeeps();
+      closeLangPop();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ closeAllDeeps(); closeLangPop(); }
+  });
+
+  // Run on DOM ready
+  function init(){ setLang(getInitialLang()); }
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>
