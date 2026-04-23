@@ -1295,13 +1295,13 @@ window.MSET_TRANSLATIONS = {
   /* ─── §3 ASSESSMENT — Engagement shape ─── */
   "str.a.shape.head":    { sv: "Uppdragets form", da: "Opgavens form" },
   "str.a.shape.lede":    { sv: "Längden beror på komplexitet, inte på en fast mall. Vi scopar efter ett första samtal — nedan är typiska intervall:", da: "Længden afhænger af kompleksitet, ikke af en fast skabelon. Vi scoper efter en første samtale — nedenfor er typiske intervaller:" },
-  "str.a.s1.label":      { sv: "Form 01 · Fokuserad", da: "Form 01 · Fokuseret" },
+  "str.a.s1.label":      { sv: "Fokuserad", da: "Form 01 · Fokuseret" },
   "str.a.s1.duration":   { sv: "3–5 dagar", da: "3–5 dage" },
   "str.a.s1.body":       { sv: "Företag ~20–50 personer, en enhet, enkelt IT-landskap. Leverans: komprimerad slutrapport, prioriterad lucklista, sammanfattning för ledning.", da: "Virksomheder ~20–50 personer, én lokation, enkelt IT-landskab. Levering: komprimeret konklusionsrapport, prioriteret hulliste, sammenfatning for ledelsen." },
-  "str.a.s2.label":      { sv: "Form 02 · Standard", da: "Form 02 · Standard" },
+  "str.a.s2.label":      { sv: "Standard", da: "Standard" },
   "str.a.s2.duration":   { sv: "1–2 veckor", da: "1–2 uger" },
   "str.a.s2.body":       { sv: "Företag ~50–200 personer, måttlig komplexitet, vissa reglerade processer. Leverans: full tredimensionsrapport, målbildsprofil, prioriterad Roadmap, presentation redo för styrelsen.", da: "Virksomheder ~50–200 personer, moderat kompleksitet, nogle regulerede processer. Levering: fuld tredimensionsrapport, måltilstandsprofil, prioriteret Roadmap, bestyrelsesklar præsentation." },
-  "str.a.s3.label":      { sv: "Form 03 · Komplex", da: "Form 03 · Kompleks" },
+  "str.a.s3.label":      { sv: "Komplex", da: "Form 03 · Kompleks" },
   "str.a.s3.duration":   { sv: "3–4 veckor", da: "3–4 uger" },
   "str.a.s3.body":       { sv: "Företag 200+, flera enheter, reglerade eller flerbolagsmiljöer. Leverans: full tredimensionsrapport, detaljerad gapanalys, investeringsram, ledningsmässiga och operativa leveranser.", da: "Virksomheder 200+, flere lokationer, regulerede eller koncernmiljøer. Levering: fuld tredimensionsrapport, detaljeret gabanalyse, investeringsramme, ledelses- og operationelle leverancer." },
 
@@ -1393,5 +1393,71 @@ window.MSET_TRANSLATIONS = {
 
   /* ─── FIELD NOTE — strategy ─── */
   "fn.str.strategy":     { sv: "En Roadmap som säger till om saker ni bör sluta göra är värd mer än en som bara lägger till. Varje IT-strategi ärver fem år gamla projekt som överlevt för att ingen ville ha argumentationen. Vi inkluderar slopa-listan uttryckligen. Vissa kunder säger att det är den mest användbara sidan i dokumentet.", da: "En Roadmap, der siger til om de ting I bør holde op med, er mere værd end en der kun lægger til. Enhver IT-strategi arver fem år gamle projekter, der overlevede fordi ingen ville have diskussionen. Vi inkluderer drop-listen eksplicit. Nogle kunder siger, det er den mest brugbare side i dokumentet." },
+
+  /* ═══════════════════════════════════════════════════════════
+     STRATEGY PAGE — Session 4: §5 Interim IT Director
+     ═══════════════════════════════════════════════════════════ */
+
+  /* ─── §5 INTERIM — header ─── */
+  "str.i.eyebrow":        { sv: "Steg 03 · Interim IT-chef", da: "Trin 03 · Interim IT-chef" },
+  "str.i.h2.1":           { sv: "När planen behöver", da: "Når planen har brug for" },
+  "str.i.h2.2":           { sv: "någon som kör den.", da: "nogen til at køre den." },
+  "str.i.lede":           { sv: "Vissa uppdrag slutar inte vid strategidokumentet. Ibland är planen beroende av seniort IT-ledarskap som företaget inte har just nu — under en övergång, en tillväxtfas eller en period mellan permanenta anställningar. När så är fallet stannar vi som Interim IT-chef: integrerade i ledningsgruppen, ansvariga för resultaten och med en tydlig överlämningsväg till den som tar över permanent.", da: "Nogle opgaver slutter ikke ved strategidokumentet. Nogle gange afhænger planen af senior IT-ledelse, virksomheden ikke har lige nu — under en overgang, en vækstfase eller en periode mellem permanente ansættelser. Når det er tilfældet, bliver vi som Interim IT-chef: integreret i ledelsesteamet, ansvarlige for resultaterne og med en tydelig overdragelsesvej til den, der overtager permanent." },
+
+  /* ─── §5 INTERIM — situations intro ─── */
+  "str.i.sit.head":       { sv: "Typiska situationer", da: "Typiske situationer" },
+  "str.i.sit.lede":       { sv: "Interimsuppdrag är inte teoretiska. Nedan är de fyra situationer som driver de flesta — oftast i kombination, sällan isolerade.", da: "Interim-opgaver er ikke teoretiske. Nedenfor er de fire situationer, der driver de fleste — typisk i kombination, sjældent isoleret." },
+
+  /* ─── §5 INTERIM — four typical situations ─── */
+  "str.i.s1.num":         { sv: "01", da: "01" },
+  "str.i.s1.title":       { sv: "Successionsglapp", da: "Successionshul" },
+  "str.i.s1.body":        { sv: "Er IT-chef har slutat, är på väg att sluta, eller har bytt roll. Ni behöver seniort stöd medan ni rekryterar en permanent ersättare — eller medan ni avgör om rollen ska behålla samma form.", da: "Jeres IT-chef er stoppet, er på vej til at stoppe, eller er skiftet til en anden rolle. I har brug for senior dækning, mens I rekrutterer en permanent afløser — eller mens I afgør, om rollen skal beholde samme form." },
+  "str.i.s2.num":         { sv: "02", da: "02" },
+  "str.i.s2.title":       { sv: "Övergång eller omstrukturering", da: "Overgang eller omstrukturering" },
+  "str.i.s2.body":        { sv: "Ett förvärv, en omorganisation eller en systemmigrering pågår. Det nuvarande teamet behöver ledningsmässigt stöd under övergången, även om den långsiktiga strukturen redan är tydlig.", da: "En opkøb, omorganisering eller systemmigrering er i gang. Det nuværende team har brug for ledelsesmæssig støtte under overgangen, selv hvis den langsigtede struktur allerede er klar." },
+  "str.i.s3.num":         { sv: "03", da: "03" },
+  "str.i.s3.title":       { sv: "Tillväxtfas", da: "Vækstfase" },
+  "str.i.s3.body":        { sv: "Företaget har växt ifrån det IT-ledarskap det hade. Ni behöver någon som arbetar på chefsnivå nu, medan ni räknar ut hur en permanent rekrytering ska se ut — ofta en annan roll än den som fanns tidigare.", da: "Virksomheden er vokset fra den IT-ledelse den havde. I har brug for en, der arbejder på direktørniveau nu, mens I finder ud af, hvordan en permanent ansættelse skal se ud — ofte en anden rolle end den, der fandtes før." },
+  "str.i.s4.num":         { sv: "04", da: "04" },
+  "str.i.s4.title":       { sv: "Roadmap-genomförande", da: "Roadmap-gennemførelse" },
+  "str.i.s4.body":        { sv: "Ni har byggt en strategi (med oss eller internt) och de tidiga faserna kräver seniort oversight som nuvarande team inte kan ge. Interimsuppdraget sträcker sig över de första 6–12 månaderna av genomförandet.", da: "I har bygget en strategi (med os eller internt) og de tidlige faser kræver senior oversight, som det nuværende team ikke kan give. Interim-opgaven spænder over de første 6–12 måneder af gennemførelsen." },
+
+  /* ─── §5 INTERIM — arc header ─── */
+  "str.i.arc.head":       { sv: "Uppdragets förlopp", da: "Opgavens forløb" },
+
+  /* ─── §5 INTERIM — engagement arc phases ─── */
+  "str.i.a1.label":       { sv: "Vecka 1–2 · Upptäckt & bedömning", da: "Uge 1–2 · Opdagelse & vurdering" },
+  "str.i.a1.body":        { sv: "Integrera med teamet. Förstå nuläget, aktiva frågor, intressentdynamik. Identifiera de första tre sakerna som är värda att åtgärda.", da: "Bliv integreret med teamet. Forstå nuværende tilstand, aktive problemer, interessentdynamik. Identificer de første tre ting, der er værd at fikse." },
+  "str.i.a2.label":       { sv: "Månad 1 · Quick wins & stabilisering", da: "Måned 1 · Quick wins & stabilisering" },
+  "str.i.a2.body":        { sv: "Röj undan de mest synliga driftsfrågorna. Etablera takt med ledning och styrning. Bygg förtroende med teamet innan större förändringar efterfrågas.", da: "Ryd de mest synlige driftsproblemer af vejen. Etablér takt med ledelse og governance. Opbyg tillid hos teamet, før der bedes om større ændringer." },
+  "str.i.a3.label":       { sv: "Löpande · Strategisk leverans", da: "Løbende · Strategisk levering" },
+  "str.i.a3.body":        { sv: "Genomför enligt Roadmappen, justera efter vad verkligheten kräver. Förbered organisationen — och själva rollen — för en permanent rekrytering när tiden är rätt.", da: "Gennemfør efter Roadmappen, juster som virkeligheden kræver. Forbered organisationen — og selve rollen — til en permanent ansættelse, når tiden er rigtig." },
+
+  /* ─── §5 INTERIM — engagement shapes ─── */
+  "str.i.shape.head":     { sv: "Hur uppdraget körs", da: "Hvordan opgaven kører" },
+  "str.i.sh1.label":      { sv: "Deltid", da: "Deltid" },
+  "str.i.sh1.duration":   { sv: "2–3 dagar per vecka, löpande", da: "2–3 dage per uge, løbende" },
+  "str.i.sh1.body":       { sv: "För företag som behöver chefsnivå-närvaro utan ett heltidsåtagande.", da: "For virksomheder der har brug for direktørniveau-tilstedeværelse uden en fuldtidslønforpligtelse." },
+  "str.i.sh2.label":      { sv: "Heltid", da: "Fuldtid" },
+  "str.i.sh2.duration":   { sv: "6–18 månader, med överlämning", da: "6–18 måneder, med overdragelse" },
+  "str.i.sh2.body":       { sv: "För successionsglapp, aktiva övergångar eller Roadmap-genomförandefaser.", da: "Til successionshuller, aktive overgange eller Roadmap-gennemførelsesfaser." },
+  "str.i.sh3.label":      { sv: "Rådgivande", da: "Rådgivende" },
+  "str.i.sh3.duration":   { sv: "1–2 dagar per månad", da: "1–2 dage per måned" },
+  "str.i.sh3.body":       { sv: "För företag med stark daglig IT-ledning men som behöver seniort oberoende oversight.", da: "For virksomheder med stærk daglig IT-ledelse men med behov for senior uafhængig oversight." },
+
+  /* ─── §5 INTERIM — current engagements ─── */
+  "str.i.cur.head":       { sv: "Aktuella uppdrag", da: "Aktuelle opgaver" },
+  "str.i.cur.body":       { sv: "Två uppdrag är aktiva — ett med ett nordiskt life science-bolag, ett med en svensk medtech-grupp — och ett tredje startar snart med en europeisk klinisk forskningsorganisation. Vi väljer dessa uppdrag noggrant: seniort fokus väger tyngre än volym, och vi tackar hellre nej än späder ut arbetet.", da: "To opgaver er aktive — én med et nordisk life science-selskab, én med en svensk medtech-gruppe — og en tredje starter snart med en europæisk klinisk forskningsorganisation. Vi vælger disse opgaver omhyggeligt: senior opmærksomhed vejer tungere end volumen, og vi siger hellere nej end at udvande arbejdet." },
+
+  /* ─── §5 INTERIM — end of engagement ─── */
+  "str.i.end.head":       { sv: "Uppdragets slut", da: "Opgavens slutning" },
+  "str.i.end.body":       { sv: "Interimsuppdrag slutar på ett av tre sätt: den permanenta anställningen kommer på plats och vi lämnar över; omfattningen smalnar till rådgivning när det nya teamet stabiliseras; eller så utvecklas den ursprungliga planen och vi scopar en ny uppdragsform tillsammans. Avsikten från dag ett är en ren överlämning — inte en öppen förlängning.", da: "Interim-opgaver slutter på én af tre måder: den permanente ansættelse kommer, og vi overdrager; omfanget indsnævres til rådgivning når det nye team stabiliseres; eller den oprindelige plan udvikler sig, og vi scoper en ny opgaveform sammen. Hensigten fra dag ét er en ren overdragelse — ikke en åben forlængelse." },
+
+  /* ─── §5 INTERIM — what this isn't ─── */
+  "str.i.not.head":       { sv: "Vad detta inte är", da: "Hvad dette ikke er" },
+  "str.i.not.body":       { sv: "Vi är inte ett bemanningsföretag. Vi placerar inte IT-konsulter. Ett Interim IT-chef-uppdrag är en senior konsultrelation med integrerad närvaro — inte personaluthyrning in i er organisationsstruktur. Det innebär längre scopingsamtal i förväg, genuina passningskontroller åt båda håll, och en riktig överlämningsplan. Det innebär också att vi inte tar varje uppdrag som erbjuds.", da: "Vi er ikke et vikarbureau. Vi placerer ikke IT-konsulenter. En Interim IT-chef-opgave er et senior konsulentforhold med integreret tilstedeværelse — ikke personaleudlejning ind i jeres organisationsstruktur. Det betyder længere scoping-samtaler i forvejen, ægte match-tjek begge veje, og en rigtig overdragelsesplan. Det betyder også, at vi ikke tager enhver opgave, der tilbydes." },
+
+  /* ─── FIELD NOTE — interim ─── */
+  "fn.str.interim":       { sv: "\"Permanenta\" IT-chefsrekryteringar tar 6–9 månader i snitt på den nordiska marknaden just nu, ibland längre. Det är det glapp som interimsuppdrag finns för att täcka — inte en månad, inte två. Om ni planerar succession, börja interimssamtalet innan nuvarande chef säger upp sig, inte efter.", da: "\"Permanente\" IT-chef-ansættelser tager 6–9 måneder i gennemsnit på det nordiske marked lige nu, nogle gange længere. Det er det hul, Interim-opgaver eksisterer for at dække — ikke en måned, ikke to. Hvis I planlægger succession, start Interim-samtalen før den nuværende chef siger op, ikke efter." },
 
 };
