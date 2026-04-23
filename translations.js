@@ -459,6 +459,7 @@ window.MSET_TRANSLATIONS = {
   "sec.intro.3":         { sv: "MSET hjälper life science- och reglerade organisationer att bygga en säkerhetsmedveten kultur — med praktiska phishing-simuleringar och strukturerad Security Awareness Training som verkligen förändrar beteende.",
                            da: "MSET hjælper life science- og regulerede organisationer med at opbygge en sikkerhedsbevidst kultur — med praktiske phishing-simuleringer og struktureret Security Awareness Training, der faktisk ændrer adfærd." },
   "sec.deep-dive":       { sv: "Djupdyk: Security Awareness Training-program →", da: "Dybdegående: Security Awareness Training-program →" },
+  "strat.deep-dive":     { sv: "Djupdyk: IT-strategitjänster →", da: "Dybdegående: IT-strategitjenester →" },
 
   "sec.attack-title":    { sv: "Vanligaste attackvägar — reglerade branscher", da: "Hyppigste angrebsveje — regulerede brancher" },
   "sec.attack.phishing": { sv: "Phishing-mejl",           da: "Phishing-e-mail" },
