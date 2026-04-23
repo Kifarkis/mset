@@ -141,6 +141,10 @@ window.MSET_TRANSLATIONS = {
   "nav.security.deep":    { sv: "Djupdyk", da: "Dybdegående" },
   "nav.security.desc":    { sv: "Säkerhetstjänstekorten på startsidan.", da: "IT-sikkerhedskortene på hjemmesiden." },
   "nav.security.deep-desc":{ sv: "Hela Security Awareness Training-sidan — phishing-simuleringar, utbildningsprogram.", da: "Hele Security Awareness Training-siden — phishing-simuleringer, uddannelsesprogrammer." },
+  "nav.strategy.overview":{ sv: "Översikt", da: "Oversigt" },
+  "nav.strategy.deep":    { sv: "Djupdyk", da: "Dybdegående" },
+  "nav.strategy.desc":    { sv: "IT-strategikortet på startsidan.", da: "IT-strategi-kortet på hjemmesiden." },
+  "nav.strategy.deep-desc":{ sv: "Hela strategisidan — tre steg (Bedömning, Strategi & Roadmap, Interim IT-chef).", da: "Hele strategi-siden — tre trin (Vurdering, Strategi & Roadmap, Interim IT-chef)." },
   "nav.lang-label":       { sv: "Språk", da: "Sprog" },
 
   // ═══════════════ ai.html deep page (aip.*) ═══════════════

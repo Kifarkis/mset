@@ -3034,7 +3034,22 @@ section.uses .field-note-body {
 </a>
 </div>
 </li>
-<li><a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a></li>
+<li class="has-deep" data-deep="strategy">
+<a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a>
+<button class="deep-toggle" type="button" aria-label="Strategy — show more" aria-expanded="false" aria-controls="deep-strategy">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-strategy" role="menu">
+<a class="deep-row" href="index.html#strategy" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.strategy.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.strategy.desc">The IT Strategy card on the homepage.</div>
+</a>
+<a class="deep-row primary" href="strategy.html" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.strategy.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.strategy.deep-desc">Full Strategy page — three stages (Assessment, Strategy &amp; Roadmap, Interim IT Director).</div>
+</a>
+</div>
+</li>
 <li><a data-i18n="nav.about" href="index.html#about">About</a></li>
 <li><a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a></li>
 <li>
@@ -3067,6 +3082,7 @@ section.uses .field-note-body {
 <a data-i18n="nav.security" href="index.html#security">Security</a>
 <a data-i18n="nav.security.deep" class="deep-child" href="sat.html">Deep dive: Security Awareness Training</a>
 <a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a>
+<a data-i18n="nav.strategy.deep" class="deep-child" href="strategy.html">Deep dive: Strategy</a>
 <a data-i18n="nav.about" href="index.html#about">About</a>
 <a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a>
 
