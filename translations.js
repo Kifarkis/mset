@@ -1135,7 +1135,7 @@ window.MSET_TRANSLATIONS = {
                   da: "Enhver virksomheds-AI-politik vi har set starter med \"indsæt ikke fortrolige data i ChatGPT.\" Det er ikke en politik; det er et håb. En politik fortæller i stedet, hvad man skal gøre." },
   "fn.ai.problem": { sv: "Samsung-incidenten 2023 är den alla hänvisar till, men London-pharmas IP-läcka förra året var om något värre. Den fick bara inte lika mycket uppmärksamhet.",
                      da: "Samsung-hændelsen i 2023 er den, alle henviser til, men London-pharmas IP-lækage sidste år var nok snarere værre. Den fik bare ikke lige så meget omtale." },
-  "fn.ai.uses": { sv: "De flesta pharma-kunder börjar med Use Case 01 (dokument-RAG) eftersom ROI:n är direkt och risken är avgränsad. Den svåra är Use Case 04 — validerad AI i produktion — för er QA-avdelning måste godkänna något som FDA faktiskt accepterar. Vi tar dem i den ordningen av en anledning.",
+  "fn.ai.uses": { sv: "De flesta pharma-kunder börjar med Use Case 01 (dokument-RAG) eftersom ROI:n är direkt och risken är scopad. Den svåra är Use Case 04 — validerad AI i produktion — för er QA-avdelning måste godkänna något som FDA faktiskt accepterar. Vi tar dem i den ordningen av en anledning.",
                   da: "De fleste pharma-kunder starter med Use Case 01 (dokument-RAG), fordi ROI'en er umiddelbar og risikoen er afgrænset. Den svære er Use Case 04 — valideret AI i produktion — fordi jeres QA-afdeling skal godkende noget, som FDA rent faktisk anerkender. Vi tager dem i den rækkefølge af en grund." },
   "fn.ai.arch": { sv: "Vi har implementerat Pattern C i fyra pharma-uppdrag. Varje gång är invändningen inte teknisk — det handlar om att övertyga QA om att zero-retention faktiskt betyder det leverantören säger. Svaret är ett signerat personuppgiftsbiträdesavtal som säger det, följt av granskningsloggar som bevisar det.",
                   da: "Vi har implementeret Pattern C i fire pharma-engagementer. Hver gang er indvendingen ikke teknisk — det handler om at overbevise QA om, at zero-retention rent faktisk betyder det, leverandøren siger. Svaret er en underskrevet databehandleraftale, der siger det, efterfulgt af audit-logs, der beviser det." },
@@ -1211,9 +1211,9 @@ window.MSET_TRANSLATIONS = {
   "str.f.q2.q":         { sv: "Arbetar ni utanför life science?", da: "Arbejder I uden for life science?" },
   "str.f.q3.a":         { sv: "Mycket. Teamdimensionen i en bedömning är genuint känslig — slutsatserna pekar ut förmågeluckor i en organisationsstruktur, inte enskilda personer, men senior ledning behöver ändå hantera dem varsamt. Vi arbetar under signerade sekretessavtal som standard, och våra leveranser är strukturerade så att den råa team-förmågeanalysen kan delas på VD- eller styrelsenivå utan att cirkulera inom IT-funktionen. De flesta kunder håller den fullständiga rapporten i en liten krets.", da: "Meget. Team-dimensionen i en vurdering er genuint følsom — konklusioner udpeger kompetencehuller i et organisationsdiagram, ikke enkeltpersoner, men senior ledelse skal stadig håndtere dem omhyggeligt. Vi arbejder under underskrevne fortrolighedsaftaler som standard, og vores leverancer er struktureret, så den rå team-kompetenceanalyse kan deles på direktør-/bestyrelsesniveau uden at cirkulere inden for IT-funktionen. De fleste kunder holder den fulde rapport i en lille kreds." },
   "str.f.q3.q":         { sv: "Hur konfidentiella är era uppdrag?", da: "Hvor fortrolige er jeres opgaver?" },
-  "str.f.q4.a":         { sv: "Ja. Stegen beskrivs sekventiellt men uppdragen är oberoende. Ni kan göra ett fristående strategiuppdrag utan en bedömning, ett interimsuppdrag utan någondera, eller en bedömning följd av en sex månaders paus innan strategiarbetet. Vi avgränsar varje uppdrag individuellt — inga retainers, inga fasta paket.", da: "Ja. Trinene beskrives sekventielt, men opgaverne er uafhængige. I kan lave en selvstændig strategiopgave uden en vurdering, en interim-opgave uden nogen af dem, eller en vurdering efterfulgt af en seks måneders pause før strategiarbejdet. Vi afgrænser hver opgave individuelt — ingen retainers, ingen faste pakker." },
+  "str.f.q4.a":         { sv: "Ja. Stegen beskrivs sekventiellt men uppdragen är oberoende. Ni kan göra ett fristående strategiuppdrag utan en bedömning, ett interimsuppdrag utan någondera, eller en bedömning följd av en sex månaders paus innan strategiarbetet. Vi scopar varje uppdrag individuellt — inga retainers, inga fasta paket.", da: "Ja. Trinene beskrives sekventielt, men opgaverne er uafhængige. I kan lave en selvstændig strategiopgave uden en vurdering, en interim-opgave uden nogen af dem, eller en vurdering efterfulgt af en seks måneders pause før strategiarbejdet. Vi afgrænser hver opgave individuelt — ingen retainers, ingen faste pakker." },
   "str.f.q4.q":         { sv: "Kan vi kombinera eller fasa tjänsterna annorlunda?", da: "Kan vi kombinere eller fase tjenesterne anderledes?" },
-  "str.f.q5.a":         { sv: "För Bedömning: vanligtvis inom 2–3 veckor från signerad avgränsning, ibland snabbare för fokuserade uppdrag. För Strategi: 2–4 veckors ledtid. För Interim IT-chef: längre — interimsuppdrag kräver ordentliga passningssamtal från bägge håll, så räkna med 4–6 veckor från första samtalet till inbäddad start. Om ni behöver interimsstöd snabbare än så är vi kanske inte rätt val.", da: "For Vurdering: typisk inden for 2–3 uger efter underskrevet afgrænsning, nogle gange hurtigere for fokuserede opgaver. For Strategi: 2–4 ugers leveringstid. For Interim IT-chef: længere — interim-opgaver kræver ordentlige fit-samtaler fra begge sider, så regn med 4–6 uger fra første samtale til indlejret start. Hvis I har brug for interim-dækning hurtigere end det, er vi måske ikke det rigtige valg." },
+  "str.f.q5.a":         { sv: "För Bedömning: vanligtvis inom 2–3 veckor från signerad scoping, ibland snabbare för fokuserade uppdrag. För Strategi: 2–4 veckors ledtid. För Interim IT-chef: längre — interimsuppdrag kräver ordentliga passningssamtal från bägge håll, så räkna med 4–6 veckor från första samtalet till inbäddad start. Om ni behöver interimsstöd snabbare än så är vi kanske inte rätt val.", da: "For Vurdering: typisk inden for 2–3 uger efter underskrevet afgrænsning, nogle gange hurtigere for fokuserede opgaver. For Strategi: 2–4 ugers leveringstid. For Interim IT-chef: længere — interim-opgaver kræver ordentlige fit-samtaler fra begge sider, så regn med 4–6 uger fra første samtale til indlejret start. Hvis I har brug for interim-dækning hurtigere end det, er vi måske ikke det rigtige valg." },
   "str.f.q5.q":         { sv: "Hur snabbt kan ni börja?", da: "Hvor hurtigt kan I starte?" },
   "str.f.q6.a":         { sv: "Bedömning och Strategi & Roadmap är fastpris, vanligtvis femsiffrigt till sexsiffrigt beroende på omfattning. Interim IT-chef går på månatlig retainer baserad på uppdragets form — deltid, heltid eller rådgivande. Vi lämnar specifik offert efter ett introduktionssamtal, inte innan.", da: "Vurdering og Strategi & Roadmap er fastpris, typisk fem- til sekscifret afhængigt af omfang. Interim IT-chef kører på en månedlig retainer baseret på opgavens form — deltid, fuldtid eller rådgivende. Vi afgiver konkret tilbud efter en indledende samtale, ikke før." },
   "str.f.q6.q":         { sv: "Hur ser prissättningen ut?", da: "Hvordan ser priserne ud?" },
@@ -1221,5 +1221,104 @@ window.MSET_TRANSLATIONS = {
   "str.f.q7.q":         { sv: "Finns det en intressekonflikt om ni både gör bedömningen och strategin?", da: "Er der en interessekonflikt, hvis I både laver vurderingen og strategien?" },
   "str.f.q8.a":         { sv: "Kunder tycker ibland att bilden vi lämnar tillbaka är svårare att se på än väntat — vanligtvis på teamdimensionen. Det är själva poängen. Vi levererar slutsatser i ett format som stöder ett riktigt samtal med styrelsen och med IT-funktionen själv, inte som ett burdust dokument som landar och skapar problem. Om slutsatser är genuint omtvistade omarbetar vi analysen med kundens input innan rapporten färdigställs. Målet är riktighet, inte konfrontation.", da: "Kunder synes af og til, at det billede vi leverer tilbage, er sværere at se på end forventet — typisk på team-dimensionen. Det er selve pointen. Vi leverer konklusioner i et format, der understøtter en rigtig samtale med bestyrelsen og med IT-funktionen selv, ikke som et brat dokument, der lander og skaber problemer. Hvis konklusioner reelt bestrides, omarbejder vi analysen med kundens input, før rapporten afsluttes. Målet er præcision, ikke konfrontation." },
   "str.f.q8.q":         { sv: "Tänk om vi inte gillar det bedömningen kommer fram till?", da: "Hvad hvis vi ikke kan lide det, vurderingen finder?" },
+
+  /* ═══════════════════════════════════════════════════════════
+     STRATEGY PAGE — Session 2: §3 Assessment
+     ═══════════════════════════════════════════════════════════ */
+
+  /* ─── §3 ASSESSMENT — header ─── */
+  "str.a.eyebrow":       { sv: "Steg 01 · Oberoende IT-bedömning", da: "Trin 01 · Uafhængig IT-vurdering" },
+  "str.a.h2.1":          { sv: "En ärlig utgångspunkt.", da: "Et ærligt udgangspunkt." },
+  "str.a.h2.2":          { sv: "En tydlig bild av var ni står.", da: "Et klart billede af, hvor I står." },
+  "str.a.lede":          { sv: "De flesta IT-bedömningar stannar vid tekniken. Vår tittar på tre dimensioner samtidigt — systemen ni driver, hur er data och organisation är strukturerad, och om teamet ni har kan driva den framtid ni behöver. Utfallet är inget protokoll. Det är en karta från där ni är till där ni behöver vara, med gapet mellan dem tydligt uttalat.", da: "De fleste IT-vurderinger stopper ved teknologien. Vores ser på tre dimensioner samtidig — systemerne I kører, hvordan jeres data og organisation er struktureret, og om det team I har kan køre den fremtid I har brug for. Resultatet er ikke en protokol. Det er et kort fra hvor I er til hvor I skal være, med gabet mellem dem gjort tydeligt." },
+
+  /* ─── §3 ASSESSMENT — three dimensions intro ─── */
+  "str.a.dim.head":      { sv: "De tre dimensionerna", da: "De tre dimensioner" },
+  "str.a.dim.lede":      { sv: "Varje dimension får samma behandling: vi fastställer nuläget, definierar målbilden baserat på er affärstrajektoria, och identifierar sedan gapet och vad som krävs för att stänga det.", da: "Hver dimension får samme behandling: vi fastslår nuværende tilstand, definerer måltilstanden baseret på jeres forretningsmæssige retning, og identificerer derefter gabet og hvad der skal til for at lukke det." },
+
+  /* ─── §3 ASSESSMENT — Dimension 1: Technology ─── */
+  "str.a.d1.num":        { sv: "01", da: "01" },
+  "str.a.d1.title":      { sv: "Teknik", da: "Teknologi" },
+  "str.a.d1.subtitle":   { sv: "Vad ni kör, och hur bra det funkar.", da: "Hvad I kører, og hvor godt det kører." },
+  "str.a.d1.body":       { sv: "Systemen, infrastrukturen och säkerhetsställningen som driver er verksamhet idag. Inklusive de delar ingen pratar om — utgående servrar, integrationer som hålls ihop av skript, leverantörsavtal som ingen har omförhandlat på tre år.", da: "Systemerne, infrastrukturen og sikkerhedspositionen, der driver jeres forretning i dag. Inklusive de dele ingen taler om — udgåede servere, integrationer holdt sammen af scripts, leverandøraftaler ingen har genforhandlet i tre år." },
+  "str.a.d1.b1":         { sv: "Infrastruktur och molnställning — vad som körs var, och varför", da: "Infrastruktur og cloud-position — hvad der kører hvor, og hvorfor" },
+  "str.a.d1.b2":         { sv: "Applikationslandskap och teknisk skuld", da: "Applikationslandskab og teknisk gæld" },
+  "str.a.d1.b3":         { sv: "Integrationsarkitektur och dataflöden mellan system", da: "Integrationsarkitektur og datastrømme mellem systemer" },
+  "str.a.d1.b4":         { sv: "Säkerhetsställning och kända sårbarheter", da: "Sikkerhedsposition og kendte sårbarheder" },
+  "str.a.d1.b5":         { sv: "Leverantörsstack, avtal och förnyelseexponering", da: "Leverandørstak, aftaler og fornyelseseksponering" },
+  "str.a.d1.typical":    { sv: "Typiska slutsatser: två till fyra system som ingen granskat på åratal, en leverantörsinlåsning man glömt bort, och en säkerhetslucka som stått på \"det där borde vi fixa\"-listan sedan någon slutade för tre år sedan.", da: "Typiske konklusioner: to til fire systemer ingen har auditeret i årevis, en leverandør-lock-in man havde glemt, og et sikkerhedshul, der har stået på \"det burde vi fikse\"-listen siden nogen stoppede for tre år siden." },
+  "str.a.d1.b6":         { sv: "Utgående system och uppgraderingsvägar", da: "Udgåede systemer og opgraderingsveje" },
+  "str.a.d1.b7":         { sv: "Katastrofåterställning och beredskap för verksamhetskontinuitet", da: "Disaster recovery og forretningskontinuitet" },
+
+  /* ─── §3 ASSESSMENT — Dimension 2: Data & Organisation ─── */
+  "str.a.d2.num":        { sv: "02", da: "02" },
+  "str.a.d2.title":      { sv: "Data & organisation", da: "Data & organisation" },
+  "str.a.d2.subtitle":   { sv: "Hur information rör sig, och var den bor.", da: "Hvordan information bevæger sig, og hvor den bor." },
+  "str.a.d2.body":       { sv: "Var er information faktiskt bor, hur den rör sig mellan system, och om den strukturen fortfarande passar hur er verksamhet fungerar idag. Den svåraste dimensionen att se inifrån, eftersom de som står närmast den också byggde den.", da: "Hvor jeres information faktisk bor, hvordan den bevæger sig mellem systemer, og om den struktur stadig passer til, hvordan jeres forretning fungerer i dag. Den sværeste dimension at se indefra, fordi de der står tættest på den også byggede den." },
+  "str.a.d2.b1":         { sv: "Systems of record — är det tydligt var den kanoniska datan finns?", da: "Systems of record — er det tydeligt, hvor de kanoniske data bor?" },
+  "str.a.d2.b2":         { sv: "Dataflöde och integrationsmönster mellan system", da: "Datastrøm og integrationsmønstre mellem systemer" },
+  "str.a.d2.b3":         { sv: "Duplikation, inkonsekvens och manuell avstämning", da: "Duplikering, inkonsistens og manuel afstemning" },
+  "str.a.d2.b4":         { sv: "Master data-hantering och styrning", da: "Master data management og governance" },
+  "str.a.d2.b5":         { sv: "Process- och datasamstämmighet — matchar strukturen hur arbetet faktiskt utförs?", da: "Proces- og dataafstemning — matcher strukturen, hvordan arbejdet faktisk foregår?" },
+  "str.a.d2.typical":    { sv: "Typiska slutsatser: tre kopior av kundlistan, två systems of record som konkurrerar om samma data, och en rapporteringspipeline som tyst går sönder när någon byter namn på ett fält. Datan är sällan fel. Den är bara inte organiserad för hur verksamheten fungerar nu.", da: "Typiske konklusioner: tre kopier af kundelisten, to systems of record der konkurrerer om de samme data, og en rapporteringspipeline der stille går i stykker, når nogen omdøber et felt. Data er sjældent forkerte. De er bare ikke organiseret til den måde forretningen fungerer på nu." },
+  "str.a.d2.b6":         { sv: "Rapporteringstillförlitlighet och tydlighet kring source-of-truth", da: "Rapporteringspålidelighed og klarhed omkring source-of-truth" },
+  "str.a.d2.b7":         { sv: "Dataägarskap, åtkomst och regelefterlevnad", da: "Dataejerskab, adgang og compliance-position" },
+
+  /* ─── §3 ASSESSMENT — Dimension 3: Team & Capabilities ─── */
+  "str.a.d3.num":        { sv: "03", da: "03" },
+  "str.a.d3.title":      { sv: "Team & kompetens", da: "Team & kompetencer" },
+  "str.a.d3.subtitle":   { sv: "Om teamet kan köra vidare med det ni har, och det ni kommer att behöva framöver.", da: "Om teamet kan køre videre med det I har, og det I kommer til at have brug for fremover." },
+  "str.a.d3.body":       { sv: "Roller och kompetenser — inte prestationsbedömningar. Kan teamet ni har driva nuvarande setup väl? Viktigare: kan det driva det ni är på väg mot? Luckor här tar vanligtvis längre tid att stänga än tekniska luckor, vilket är varför vi lyfter fram dem tidigt.", da: "Roller og kompetencer — ikke præstationsvurderinger. Kan teamet I har køre den nuværende opsætning godt? Vigtigere: kan det køre det I er på vej mod? Huller her tager typisk længere at lukke end tekniske huller, hvilket er grunden til at vi fremhæver dem tidligt." },
+  "str.a.d3.b1":         { sv: "Nuvarande roller, ansvar och rapporteringsstruktur", da: "Nuværende roller, ansvar og rapporteringsstruktur" },
+  "str.a.d3.b2":         { sv: "Kompetenstäckning mot nulägets krav", da: "Kompetencedækning mod krav i nuværende tilstand" },
+  "str.a.d3.b3":         { sv: "Kompetenstäckning mot framtidens krav", da: "Kompetencedækning mod krav i fremtidig tilstand" },
+  "str.a.d3.b4":         { sv: "Underkapacitet, övertilltro till enskilda individer och nyckelpersonsrisk", da: "Underkapacitet, overafhængighed af enkeltpersoner og nøglepersonsrisiko" },
+  "str.a.d3.note":       { sv: "Vi talar om roller och kompetenser, aldrig om individuell prestation. Bedömningsrapporten pekar ut luckor i organisationsstrukturen, inte namn i teamet.", da: "Vi taler om roller og kompetencer, aldrig om individuel præstation. Vurderingsrapporten udpeger huller i organisationsdiagrammet, ikke navne i teamet." },
+  "str.a.d3.b5":         { sv: "Outsourcingbalans — vad som är externt som borde vara internt, och tvärtom", da: "Outsourcing-balance — hvad der er eksternt som burde være internt, og omvendt" },
+  "str.a.d3.typical":    { sv: "Typiska slutsatser: två saknade roller som borde finnas, en roll som är för bred för en person, och en successionsrisk ingen har planerat för. Målbilden kräver vanligtvis en eller två seniora rekryteringar som företaget inte har budgeterat för än.", da: "Typiske konklusioner: to manglende roller, der burde findes, én rolle der er for bred til én person, og en successionsrisiko ingen har planlagt for. Den fremtidige tilstand kræver typisk en eller to seniorrekrutteringer, virksomheden endnu ikke har budgetteret for." },
+  "str.a.d3.b6":         { sv: "Rekryteringsbehov och realistisk tillsättningstid", da: "Rekrutteringsbehov og realistisk tid til besættelse" },
+  "str.a.d3.b7":         { sv: "Utbildning, kompetensutveckling och möjligheter för ledarskapsutveckling", da: "Uddannelse, kompetenceudvikling og muligheder for lederudvikling" },
+
+  /* ─── §3 ASSESSMENT — How we establish target state ─── */
+  "str.a.target.head":   { sv: "Hur vi fastställer \"där ni behöver vara\"", da: "Hvordan vi fastlægger \"hvor I skal være\"" },
+  "str.a.target.lede":   { sv: "\"Där ni behöver vara\" är ingen teoretisk mognadsmodell. Den härleds från tre specifika ingångar:", da: "\"Hvor I skal være\" er ikke en teoretisk modenhedsmodel. Den udledes af tre specifikke input:" },
+  "str.a.t1.num":     { sv: "01", da: "01" },
+  "str.a.t1.title":   { sv: "Er affärstrajektoria", da: "Jeres forretningsmæssige retning" },
+  "str.a.t1.body":    { sv: "Tillväxtplaner, regulatoriska krav, M&A-aktivitet, inträde på nya marknader. Vad verksamheten kommer att kräva av IT om 2–3 år.", da: "Vækstplaner, regulatoriske krav, M&A-aktivitet, indtrædelse på nye markeder. Hvad forretningen vil kræve af IT om 2–3 år." },
+  "str.a.t2.num":     { sv: "02", da: "02" },
+  "str.a.t2.title":   { sv: "Branschriktmärken, selektivt", da: "Branche-benchmarks, selektivt" },
+  "str.a.t2.body":    { sv: "Vad jämförbara företag i ert skede vanligtvis har funnit nödvändigt. Används där det är användbart, ignoreras där det inte är det.", da: "Hvad sammenlignelige virksomheder på jeres stadie typisk har fundet nødvendigt. Bruges hvor det er nyttigt, ignoreres hvor det ikke er." },
+  "str.a.t3.num":     { sv: "03", da: "03" },
+  "str.a.t3.title":   { sv: "Det bedömningen lyfter fram", da: "Det vurderingen fremhæver" },
+  "str.a.t3.body":    { sv: "Utmaningar och risker som bara blir synliga under själva uppdraget — de som ingen flaggade eftersom ingen tagit ett steg tillbaka för att se efter.", da: "Udfordringer og risici der kun bliver synlige under selve opgaven — dem ingen flagede, fordi ingen havde taget et skridt tilbage for at se efter." },
+
+  /* ─── §3 ASSESSMENT — Engagement shape ─── */
+  "str.a.shape.head":    { sv: "Uppdragets form", da: "Opgavens form" },
+  "str.a.shape.lede":    { sv: "Längden beror på komplexitet, inte på en fast mall. Vi scopar efter ett första samtal — nedan är typiska intervall:", da: "Længden afhænger af kompleksitet, ikke af en fast skabelon. Vi scoper efter en første samtale — nedenfor er typiske intervaller:" },
+  "str.a.s1.label":      { sv: "Form 01 · Fokuserad", da: "Form 01 · Fokuseret" },
+  "str.a.s1.duration":   { sv: "3–5 dagar", da: "3–5 dage" },
+  "str.a.s1.body":       { sv: "Företag ~20–50 personer, en enhet, enkelt IT-landskap. Leverans: komprimerad slutrapport, prioriterad lucklista, sammanfattning för ledning.", da: "Virksomheder ~20–50 personer, én lokation, enkelt IT-landskab. Levering: komprimeret konklusionsrapport, prioriteret hulliste, sammenfatning for ledelsen." },
+  "str.a.s2.label":      { sv: "Form 02 · Standard", da: "Form 02 · Standard" },
+  "str.a.s2.duration":   { sv: "1–2 veckor", da: "1–2 uger" },
+  "str.a.s2.body":       { sv: "Företag ~50–200 personer, måttlig komplexitet, vissa reglerade processer. Leverans: full tredimensionsrapport, målbildsprofil, prioriterad Roadmap, styrelseklar presentation.", da: "Virksomheder ~50–200 personer, moderat kompleksitet, nogle regulerede processer. Levering: fuld tredimensionsrapport, måltilstandsprofil, prioriteret Roadmap, bestyrelsesklar præsentation." },
+  "str.a.s3.label":      { sv: "Form 03 · Komplex", da: "Form 03 · Kompleks" },
+  "str.a.s3.duration":   { sv: "3–4 veckor", da: "3–4 uger" },
+  "str.a.s3.body":       { sv: "Företag 200+, flera enheter, reglerade eller flerbolagsmiljöer. Leverans: full tredimensionsrapport, detaljerad gapanalys, investeringsram, ledningsmässiga och operativa leveranser.", da: "Virksomheder 200+, flere lokationer, regulerede eller koncernmiljøer. Levering: fuld tredimensionsrapport, detaljeret gabanalyse, investeringsramme, ledelses- og operationelle leverancer." },
+
+  /* ─── §3 ASSESSMENT — Deliverables ─── */
+  "str.a.deliv.head":    { sv: "Vad ni får med er", da: "Det I får med" },
+  "str.a.deliv.b1":      { sv: "Nulägesbild över alla tre dimensioner", da: "Nuværende tilstand på tværs af alle tre dimensioner" },
+  "str.a.deliv.b2":      { sv: "Målbildsdefinition baserad på er affärstrajektoria", da: "Definition af måltilstand baseret på jeres forretningsmæssige retning" },
+  "str.a.deliv.b3":      { sv: "Gapanalys, prioriterad efter genomslag och genomförbarhet", da: "Gabanalyse, prioriteret efter effekt og gennemførlighed" },
+  "str.a.deliv.b4":      { sv: "Riskregister — vad som är mest exponerat, vad som behöver uppmärksamhet först", da: "Risikoregister — hvad der er mest eksponeret, hvad der kræver opmærksomhed først" },
+  "str.a.deliv.b5":      { sv: "Slutrapport för ledning — skriven för en styrelse", da: "Slutrapport for ledelsen — skrevet for en bestyrelse" },
+  "str.a.deliv.b6":      { sv: "Valfritt: styrelsepresentation levererad av oss, om det är användbart", da: "Valgfrit: bestyrelsespræsentation leveret af os, hvis nyttigt" },
+
+  /* ─── §3 ASSESSMENT — What happens next ─── */
+  "str.a.next.head":     { sv: "Vad som händer sen", da: "Hvad der sker derefter" },
+  "str.a.next.body":     { sv: "Ungefär hälften av våra bedömningskunder tar slutsatserna och genomför internt. Ungefär en tredjedel går vidare till ett Strategi & Roadmap-uppdrag för att planera förändringarna på djupet. En mindre grupp tar in oss direkt som Interim IT-chef för att leverera. Det finns ingen uppförsäljning inbyggd i processen.", da: "Omkring halvdelen af vores vurderingskunder tager konklusionerne og gennemfører internt. Omkring en tredjedel fortsætter i en Strategi & Roadmap-opgave for at planlægge ændringerne i dybden. En mindre gruppe tager os direkte ind som Interim IT-chef for at levere. Der er ingen mersalgspres indbygget i processen." },
+
+  /* ─── FIELD NOTE — assessment ─── */
+  "fn.str.assess":       { sv: "Det svåraste samtalet i en bedömning handlar nästan alltid om teamet, inte tekniken. System kan bytas ut; organisationsstrukturer kan inte, åtminstone inte snabbt. Vi lyfter fram kompetensluckor tidigt i uppdraget — inte vid slutrapporteringen — så att ledningen har tid att tänka innan rapporten landar.", da: "Den sværeste samtale i en vurdering handler næsten altid om teamet, ikke teknologien. Systemer kan udskiftes; organisationsdiagrammer kan ikke, i hvert fald ikke hurtigt. Vi fremhæver kompetencehuller tidligt i opgaven — ikke ved slutafrapporteringen — så ledelsen har tid til at tænke, før rapporten lander." },
 
 };
