@@ -1316,7 +1316,7 @@ window.MSET_TRANSLATIONS = {
 
   /* ─── §3 ASSESSMENT — What happens next ─── */
   "str.a.next.head":     { sv: "Vad som händer sen", da: "Hvad der sker derefter" },
-  "str.a.next.body":     { sv: "Ungefär hälften av våra bedömningskunder tar slutsatserna och genomför internt. Ungefär en tredjedel går vidare till ett Strategi & Roadmap-uppdrag för att planera förändringarna på djupet. En mindre grupp tar in oss direkt som Interim IT-chef för att leverera. Det finns ingen uppförsäljning inbyggd i processen.", da: "Omkring halvdelen af vores vurderingskunder tager konklusionerne og gennemfører internt. Omkring en tredjedel fortsætter i en Strategi & Roadmap-opgave for at planlægge ændringerne i dybden. En mindre gruppe tager os direkte ind som Interim IT-chef for at levere. Der er ingen mersalgspres indbygget i processen." },
+  "str.a.next.body":     { sv: "Ungefär hälften av våra bedömningskunder tar slutsatserna och genomför internt. Ungefär en tredjedel går vidare till ett Strategi & Roadmap-uppdrag för att planera förändringarna på djupet. En mindre grupp tar in oss direkt som Interim IT-chef för att leverera. Det finns ingen merförsäljning inbyggd i processen.", da: "Omkring halvdelen af vores vurderingskunder tager konklusionerne og gennemfører internt. Omkring en tredjedel fortsætter i en Strategi & Roadmap-opgave for at planlægge ændringerne i dybden. En mindre gruppe tager os direkte ind som Interim IT-chef for at levere. Der er ingen mersalgspres indbygget i processen." },
 
   /* ─── FIELD NOTE — assessment ─── */
   "fn.str.assess":       { sv: "Det svåraste samtalet i en bedömning handlar nästan alltid om teamet, inte tekniken. System kan bytas ut; organisationsstrukturer kan inte, åtminstone inte snabbt. Vi lyfter fram kompetensluckor tidigt i uppdraget — inte vid slutrapporteringen — så att ledningen har tid att tänka innan rapporten landar.", da: "Den sværeste samtale i en vurdering handler næsten altid om teamet, ikke teknologien. Systemer kan udskiftes; organisationsdiagrammer kan ikke, i hvert fald ikke hurtigt. Vi fremhæver kompetencehuller tidligt i opgaven — ikke ved slutafrapporteringen — så ledelsen har tid til at tænke, før rapporten lander." },
@@ -1459,5 +1459,40 @@ window.MSET_TRANSLATIONS = {
 
   /* ─── FIELD NOTE — interim ─── */
   "fn.str.interim":       { sv: "\"Permanenta\" IT-chefsrekryteringar tar 6–9 månader i snitt på den nordiska marknaden just nu, ibland längre. Det är det glapp som interimsuppdrag finns för att täcka — inte en månad, inte två. Om ni planerar succession, börja interimssamtalet innan nuvarande chef säger upp sig, inte efter.", da: "\"Permanente\" IT-chef-ansættelser tager 6–9 måneder i gennemsnit på det nordiske marked lige nu, nogle gange længere. Det er det hul, Interim-opgaver eksisterer for at dække — ikke en måned, ikke to. Hvis I planlægger succession, start Interim-samtalen før den nuværende chef siger op, ikke efter." },
+
+  /* ═══════════════════════════════════════════════════════════
+     STRATEGY PAGE — Session 5: §6 How clients actually use this
+     ═══════════════════════════════════════════════════════════ */
+
+  /* ─── §6 HOW USED — header ─── */
+  "str.u.eyebrow":       { sv: "Hur kunder faktiskt använder detta", da: "Hvordan kunder faktisk bruger dette" },
+  "str.u.h2.1":          { sv: "Tre steg.", da: "Tre trin." },
+  "str.u.h2.2":          { sv: "Välj var du börjar.", da: "Vælg hvor du starter." },
+  "str.u.lede":          { sv: "De tre stegen är designade att sekvenseras — Bedömning lyfter fram vad som behöver förändras, Strategi planerar förändringarna, Interim levererar dem. I praktiken gör de flesta kunder inte alla tre. Strukturen finns för att ge dig en tydlig ingång utan att binda dig till en väg du inte har valt ännu.", da: "De tre trin er designet til at blive sekvenseret — Vurdering fremhæver hvad der skal ændres, Strategi planlægger ændringerne, Interim leverer dem. I praksis gør de fleste kunder ikke alle tre. Strukturen findes for at give jer en tydelig indgang uden at binde jer til en vej, I ikke har valgt endnu." },
+
+  /* ─── §6 HOW USED — Path 01 ─── */
+  "str.u.p1.num":        { sv: "Väg 01", da: "Vej 01" },
+  "str.u.p1.title":      { sv: "Endast Bedömning", da: "Kun Vurdering" },
+  "str.u.p1.subtitle":   { sv: "Ungefär hälften av kunderna.", da: "Omkring halvdelen af kunderne." },
+  "str.u.p1.body":       { sv: "En tydlig, oberoende bild av var IT-funktionen står, var den behöver vara, och vad som krävs för att stänga gapet. Vissa kunder tar slutsatserna och genomför internt med sitt befintliga team. Vissa delar rapporten med sin styrelse och återkommer efter sex månader. Vissa lägger den medvetet åt sidan eftersom bedömningen lyft fram större frågor först.", da: "Et tydeligt, uafhængigt billede af hvor IT-funktionen står, hvor den skal være, og hvad der kræves for at lukke gabet. Nogle kunder tager konklusionerne og gennemfører internt med deres eksisterende team. Nogle deler rapporten med deres bestyrelse og vender tilbage efter seks måneder. Nogle lægger den bevidst til side, fordi vurderingen fremhævede større spørgsmål først." },
+
+  /* ─── §6 HOW USED — Path 02 ─── */
+  "str.u.p2.num":        { sv: "Väg 02", da: "Vej 02" },
+  "str.u.p2.title":      { sv: "Bedömning → Strategi", da: "Vurdering → Strategi" },
+  "str.u.p2.subtitle":   { sv: "Ungefär en tredjedel.", da: "Omkring en tredjedel." },
+  "str.u.p2.body":       { sv: "Bedömningen lyfter fram problemets form; strategiuppdraget gör det till en plan med sekvensering, investering och kompetens-Roadmap. Genomförandet stannar internt. Vi har ibland granskat genomförandet vid 6-månaders intervall; det är valfritt och separat.", da: "Vurderingen fremhæver problemets form; strategiopgaven gør det til en plan med rækkefølge, investering og kompetence-Roadmap. Gennemførelsen forbliver intern. Vi har nogle gange gennemgået gennemførelsen i 6-måneders intervaller; det er valgfrit og separat." },
+
+  /* ─── §6 HOW USED — Path 03 ─── */
+  "str.u.p3.num":        { sv: "Väg 03", da: "Vej 03" },
+  "str.u.p3.title":      { sv: "Full sekvens, eller direkt till Interim", da: "Fuld sekvens, eller direkte til Interim" },
+  "str.u.p3.subtitle":   { sv: "Resterande kunder.", da: "De resterende kunder." },
+  "str.u.p3.body":       { sv: "Antingen hela resan — bedömning, strategi, interimsleverans — eller ett direkt uppdrag eftersom företaget redan vet vad det behöver. Dessa är längre relationer, vanligtvis 12+ månader totalt över stegen.", da: "Enten hele rejsen — vurdering, strategi, interim-levering — eller en direkte opgave, fordi virksomheden allerede ved, hvad den har brug for. Dette er længere relationer, typisk 12+ måneder i alt på tværs af trinene." },
+
+  /* ─── §6 HOW USED — Differentiator ─── */
+  "str.u.diff.head":     { sv: "Hur detta skiljer sig", da: "Hvordan dette er anderledes" },
+  "str.u.diff.body":     { sv: "De flesta konsultfirmors uppdragsmodeller är merförsäljningsstegar. Vår är inte det — vi får mer intäkt per kund när de anlitar oss över flera steg, men vi får bättre uppdrag när kunder bara gör de steg de faktiskt behöver. Ibland är det bästa utfallet av en Bedömning en tydlig rapport, ett styrelsesamtal, och inget mer. Det är ett framgångsrikt uppdrag.", da: "De fleste konsulenthusenes opgavemodeller er mersalg-stiger. Vores er ikke — vi får mere omsætning per kunde når de engagerer sig på tværs af trin, men vi får bedre opgaver når kunder kun gør de trin de faktisk har brug for. Nogle gange er det bedste resultat af en Vurdering en tydelig rapport, en bestyrelsessamtale, og intet andet. Det er en succesfuld opgave." },
+
+  /* ─── FIELD NOTE — usage ─── */
+  "fn.str.usage":        { sv: "Konsultbranschens favorittrick är att få slutet på ett uppdrag att kännas som början på ett samtal om nästa. Vi försöker göra motsatsen: slutet på ett uppdrag ska kännas som en överlämning, inte ett handslag. Kunder som kommer tillbaka ett år senare kommer tillbaka för att något nytt dykt upp, inte för att vi planterat fröet.", da: "Konsulentbranchens yndlingstrick er at få slutningen på en opgave til at føles som starten på en samtale om den næste. Vi prøver at gøre det modsatte: slutningen på en opgave skal føles som en overdragelse, ikke et håndtryk. Kunder der kommer tilbage et år senere, kommer tilbage fordi noget nyt er dukket op, ikke fordi vi plantede frøet." },
 
 };
