@@ -1300,7 +1300,7 @@ window.MSET_TRANSLATIONS = {
   "str.a.s1.body":       { sv: "Företag ~20–50 personer, en enhet, enkelt IT-landskap. Leverans: komprimerad slutrapport, prioriterad lucklista, sammanfattning för ledning.", da: "Virksomheder ~20–50 personer, én lokation, enkelt IT-landskab. Levering: komprimeret konklusionsrapport, prioriteret hulliste, sammenfatning for ledelsen." },
   "str.a.s2.label":      { sv: "Form 02 · Standard", da: "Form 02 · Standard" },
   "str.a.s2.duration":   { sv: "1–2 veckor", da: "1–2 uger" },
-  "str.a.s2.body":       { sv: "Företag ~50–200 personer, måttlig komplexitet, vissa reglerade processer. Leverans: full tredimensionsrapport, målbildsprofil, prioriterad Roadmap, styrelseklar presentation.", da: "Virksomheder ~50–200 personer, moderat kompleksitet, nogle regulerede processer. Levering: fuld tredimensionsrapport, måltilstandsprofil, prioriteret Roadmap, bestyrelsesklar præsentation." },
+  "str.a.s2.body":       { sv: "Företag ~50–200 personer, måttlig komplexitet, vissa reglerade processer. Leverans: full tredimensionsrapport, målbildsprofil, prioriterad Roadmap, presentation redo för styrelsen.", da: "Virksomheder ~50–200 personer, moderat kompleksitet, nogle regulerede processer. Levering: fuld tredimensionsrapport, måltilstandsprofil, prioriteret Roadmap, bestyrelsesklar præsentation." },
   "str.a.s3.label":      { sv: "Form 03 · Komplex", da: "Form 03 · Kompleks" },
   "str.a.s3.duration":   { sv: "3–4 veckor", da: "3–4 uger" },
   "str.a.s3.body":       { sv: "Företag 200+, flera enheter, reglerade eller flerbolagsmiljöer. Leverans: full tredimensionsrapport, detaljerad gapanalys, investeringsram, ledningsmässiga och operativa leveranser.", da: "Virksomheder 200+, flere lokationer, regulerede eller koncernmiljøer. Levering: fuld tredimensionsrapport, detaljeret gabanalyse, investeringsramme, ledelses- og operationelle leverancer." },
@@ -1320,5 +1320,78 @@ window.MSET_TRANSLATIONS = {
 
   /* ─── FIELD NOTE — assessment ─── */
   "fn.str.assess":       { sv: "Det svåraste samtalet i en bedömning handlar nästan alltid om teamet, inte tekniken. System kan bytas ut; organisationsstrukturer kan inte, åtminstone inte snabbt. Vi lyfter fram kompetensluckor tidigt i uppdraget — inte vid slutrapporteringen — så att ledningen har tid att tänka innan rapporten landar.", da: "Den sværeste samtale i en vurdering handler næsten altid om teamet, ikke teknologien. Systemer kan udskiftes; organisationsdiagrammer kan ikke, i hvert fald ikke hurtigt. Vi fremhæver kompetencehuller tidligt i opgaven — ikke ved slutafrapporteringen — så ledelsen har tid til at tænke, før rapporten lander." },
+
+  /* ═══════════════════════════════════════════════════════════
+     STRATEGY PAGE — Session 3: §4 Strategy & Roadmap
+     ═══════════════════════════════════════════════════════════ */
+
+  /* ─── §4 STRATEGY — header ─── */
+  "str.s.eyebrow":       { sv: "Steg 02 · IT-strategi & Roadmap", da: "Trin 02 · IT-strategi & Roadmap" },
+  "str.s.h2.1":          { sv: "Planen som överlever", da: "Planen der overlever" },
+  "str.s.h2.2":          { sv: "kontakt med verkligheten.", da: "kontakt med virkeligheden." },
+  "str.s.lede":          { sv: "De flesta IT-strategidokument är presentationer som nickas åt en gång och ställs undan. En användbar strategi är annorlunda: specifik om vad som ändras och när, ärlig om vad det kostar och vem som gör det, och strukturerad så att en ny CFO eller IT-chef kan plocka upp den efter två år och fortfarande genomföra den. Byggd för att överleva den som beställde den.", da: "De fleste IT-strategidokumenter er præsentationer, der nikkes til én gang og stilles væk. En brugbar strategi er anderledes: specifik omkring hvad der ændres og hvornår, ærlig omkring hvad det koster og hvem der gør det, og struktureret så en ny CFO eller IT-chef kan tage over efter to år og stadig gennemføre den. Bygget til at overleve den, der bestilte den." },
+
+  /* ─── §4 STRATEGY — what the strategy covers ─── */
+  "str.s.blocks.head":   { sv: "Vad strategin täcker", da: "Hvad strategien dækker" },
+  "str.s.blocks.lede":   { sv: "Samma disciplin som Bedömningen: tre likvärdiga dimensioner. Själva planen. Personerna som ska leverera den. Investeringsunderlaget som gör den genomförbar.", da: "Samme disciplin som Vurderingen: tre ligestillede dimensioner. Selve planen. Personerne der skal levere den. Investeringsgrundlaget der gør den gennemførlig." },
+
+  /* ─── §4 STRATEGY — Block 1: The Plan ─── */
+  "str.s.b1.num":        { sv: "01", da: "01" },
+  "str.s.b1.title":      { sv: "Planen", da: "Planen" },
+  "str.s.b1.subtitle":   { sv: "Vad som ändras, i vilken ordning, och varför.", da: "Hvad der ændres, i hvilken rækkefølge, og hvorfor." },
+  "str.s.b1.body":       { sv: "Konkret teknisk och arkitektonisk riktning. Inte \"vi borde modernisera vår infrastruktur\" — specifikt vilka system som ändras, vilka som stannar, vad som ersätter vad, och i vilken ordning.", da: "Konkret teknisk og arkitektonisk retning. Ikke \"vi burde modernisere vores infrastruktur\" — specifikt hvilke systemer der ændres, hvilke der bliver, hvad der erstatter hvad, og i hvilken rækkefølge." },
+  "str.s.b1.l1":         { sv: "Target operating model för IT — hur funktionen bör vara strukturerad om 2–3 år", da: "Target operating model for IT — hvordan funktionen bør være struktureret om 2–3 år" },
+  "str.s.b1.l2":         { sv: "System- och applikationsstrategi — vad som stannar, vad som ändras, vad som ersätts, och när", da: "System- og applikationsstrategi — hvad der bliver, hvad der ændres, hvad der erstattes, og hvornår" },
+  "str.s.b1.l3":         { sv: "Datastrategi — informationsarkitektur, master data, integrationsmönster", da: "Datastrategi — informationsarkitektur, master data, integrationsmønstre" },
+  "str.s.b1.l4":         { sv: "Infrastruktur och molnställning — datalagringsplats, katastrofåterställning, nätverkstrategi", da: "Infrastruktur og cloud-position — datalokation, disaster recovery, netværkstilgang" },
+  "str.s.b1.l5":         { sv: "Säkerhets- och regelefterlevnadsbana — var läget behöver vara, när, mot vilket ramverk", da: "Sikkerheds- og compliance-bane — hvor positionen skal være, hvornår, op mod hvilken ramme" },
+  "str.s.b1.l6":         { sv: "Sekvensering och beroenden — vilka förändringar som låser upp andra, vilka som inte kan ske förrän något annat är klart", da: "Rækkefølge og afhængigheder — hvilke ændringer der åbner for andre, hvilke der ikke kan ske før noget andet er færdigt" },
+  "str.s.b1.typical":    { sv: "En riktig Roadmap säger vad du ska göra i Q1, Q2, Q3, och varför. En användbar säger också vad du ska sluta göra — projekten och avtalen som var försvarbara för fem år sedan men inte längre är det.", da: "En rigtig Roadmap fortæller dig, hvad du skal gøre i Q1, Q2, Q3, og hvorfor. En brugbar fortæller også, hvad du skal holde op med — projekterne og aftalerne der var forsvarlige for fem år siden og ikke længere er det." },
+
+  /* ─── §4 STRATEGY — Block 2: The People ─── */
+  "str.s.b2.num":        { sv: "02", da: "02" },
+  "str.s.b2.title":      { sv: "Personerna", da: "Personerne" },
+  "str.s.b2.subtitle":   { sv: "Vem som levererar, och hur de formas för att göra det.", da: "Hvem der leverer, og hvordan de formes til det." },
+  "str.s.b2.body":       { sv: "Varje strategi behöver människor som genomför den. De flesta strategidokument viftar bara bort detta. Vår är uttalad: vilka kompetenser ni behöver, när, om de ska rekryteras, utbildas eller outsourcas, och hur organisationsstrukturen ser ut vid varje steg i planen.", da: "Enhver strategi kræver mennesker til at gennemføre den. De fleste strategidokumenter vinker bare til det. Vores er udtalt: hvilke kompetencer I har brug for, hvornår, om de skal rekrutteres, uddannes eller outsources, og hvordan organisationsstrukturen ser ud på hvert trin i planen." },
+  "str.s.b2.l1":         { sv: "Kompetens-Roadmap — vilka färdigheter och roller som behövs, och när", da: "Kompetence-Roadmap — hvilke færdigheder og roller der er nødvendige, og hvornår" },
+  "str.s.b2.l2":         { sv: "Rekryteringsordning — vilka roller som ska tillsättas först, vilken senioritet, realistisk tillsättningstid", da: "Rekrutteringsrækkefølge — hvilke roller der besættes først, hvilken anciennitet, realistisk tid til besættelse" },
+  "str.s.b2.l3":         { sv: "Utbildning och kompetensutveckling — där intern utveckling stänger luckor snabbare än rekrytering", da: "Uddannelse og kompetenceudvikling — hvor intern udvikling lukker huller hurtigere end rekruttering" },
+  "str.s.b2.l4":         { sv: "Outsourcingstrategi — vad som förblir externt, vad som tas in internt, och varför", da: "Outsourcing-strategi — hvad der bliver eksternt, hvad der kommer ind internt, og hvorfor" },
+  "str.s.b2.l5":         { sv: "Organisationsutveckling — hur IT-funktionen omformas över den fleråriga planen", da: "Organisationsudvikling — hvordan IT-funktionen omformes over den flerårige plan" },
+  "str.s.b2.l6":         { sv: "Ledarskapssuccession — kontinuitetsplanering för kritiska roller", da: "Lederskabssuccession — kontinuitetsplanlægning for kritiske roller" },
+  "str.s.b2.typical":    { sv: "En strategi som kräver fem seniora rekryteringar år ett är antingen fel eller underfinansierad. Vi modellerar en realistisk rekryteringstakt och justerar planens sekvensering därefter.", da: "En strategi der kræver fem seniorrekrutteringer i år ét er enten forkert eller underfinansieret. Vi modellerer en realistisk rekrutteringstakt og justerer planens rækkefølge derefter." },
+
+  /* ─── §4 STRATEGY — Block 3: The Investment ─── */
+  "str.s.b3.num":        { sv: "03", da: "03" },
+  "str.s.b3.title":      { sv: "Investeringen", da: "Investeringen" },
+  "str.s.b3.subtitle":   { sv: "Vad det kostar, över vilken tidslinje, och hur det försvaras.", da: "Hvad det koster, over hvilken tidslinje, og hvordan det forsvares." },
+  "str.s.b3.body":       { sv: "Strategi utan en trovärdig budget är ambition. Vi bygger fleråriga investeringsplaner som översätter Roadmappen till årlig utgift, uppdelad i kategorier som en CFO faktiskt kan arbeta med — och paketerad i ett business case som en styrelse kan godkänna.", da: "Strategi uden et troværdigt budget er ambition. Vi bygger flerårige investeringsplaner, der oversætter Roadmappen til årligt forbrug, opdelt i kategorier en CFO faktisk kan arbejde med — og pakket ind i et business case en bestyrelse kan godkende." },
+  "str.s.b3.l1":         { sv: "Flerårig investeringsplan — CapEx- och OpEx-modellering år för år", da: "Flerårig investeringsplan — CapEx- og OpEx-modellering år for år" },
+  "str.s.b3.l2":         { sv: "Kategoriserad utgift — infrastruktur, licenser, personal, tjänster, projekt", da: "Kategoriseret forbrug — infrastruktur, licenser, personale, tjenester, projekter" },
+  "str.s.b3.l3":         { sv: "Prioriteringsramverk — vad som finansieras först om budgeten skärs ned med 20 %", da: "Prioriteringsramme — hvad der finansieres først hvis budgettet skæres 20 %" },
+  "str.s.b3.l4":         { sv: "Riskregister — genomförandrisker och åtgärdsstrategi", da: "Risikoregister — gennemførelsesrisici og afhjælpningstilgang" },
+  "str.s.b3.l5":         { sv: "Business case-artefakter — material för styrelse- och ledningsgodkännande", da: "Business case-artefakter — materiale til bestyrelses- og ledelsesgodkendelse" },
+  "str.s.b3.l6":         { sv: "Styrningsmodell — hur beslut fattas medan planen genomförs", da: "Governance-model — hvordan beslutninger træffes mens planen gennemføres" },
+  "str.s.b3.typical":    { sv: "Investeringsunderlaget måste fungera på två nivåer: det totala fleråriga åtagandet, och varje enskild årsskiva för sig. Båda ska kunna försvaras i ett styrelserum utan resten av presentationen.", da: "Investeringsgrundlaget skal fungere på to niveauer: det samlede flerårige tilsagn, og hver enkelt årsskive for sig. Begge skal kunne forsvares i et bestyrelsesrum uden resten af præsentationen." },
+
+  /* ─── §4 STRATEGY — Deliverables ─── */
+  "str.s.deliv.head":    { sv: "Vad ni får med er", da: "Det I får med" },
+  "str.s.deliv.b1":      { sv: "Flerårig IT-Roadmap, sekvenserad och beroendekartlagd", da: "Flerårig IT-Roadmap, sekvenseret og afhængighedskortlagt" },
+  "str.s.deliv.b2":      { sv: "Target operating model och organisationsutvecklingsplan", da: "Target operating model og organisationsudviklingsplan" },
+  "str.s.deliv.b3":      { sv: "Data- och systemarkitektur — nuläge och målbild", da: "Data- og systemarkitektur — nuværende og måltilstand" },
+  "str.s.deliv.b4":      { sv: "Flerårig investeringsplan med CapEx/OpEx-uppdelning", da: "Flerårig investeringsplan med CapEx/OpEx-opdeling" },
+  "str.s.deliv.b5":      { sv: "Prioriterat riskregister med åtgärdsstrategi", da: "Prioriteret risikoregister med afhjælpningstilgang" },
+  "str.s.deliv.b6":      { sv: "Business case och presentationsmaterial redo för styrelsen", da: "Business case og præsentationsmateriale klar til bestyrelsen" },
+
+  /* ─── §4 STRATEGY — Standalone or sequenced ─── */
+  "str.s.seq.head":      { sv: "Fristående eller i sekvens", da: "Selvstændigt eller i rækkefølge" },
+  "str.s.seq.body":      { sv: "Om ni har gjort vår Bedömning går Strategi & Roadmap snabbare — vanligtvis 1–2 veckor — eftersom nulägesbilden redan är byggd och överenskommen. Om ni kommer in direkt, eller om ert nuläge redan är väl förstått internt, kan vi börja direkt med strategiarbetet i ett 2–4-veckorsuppdrag. Båda vägarna ger samma slutleveranser.", da: "Hvis I har lavet vores Vurdering, går Strategi & Roadmap hurtigere — typisk 1–2 uger — fordi billedet af den nuværende tilstand allerede er bygget og aftalt. Hvis I starter fra bunden, eller hvis jeres tilstand allerede er godt forstået internt, kan vi starte direkte med strategiarbejdet i en 2–4 ugers opgave. Begge veje giver de samme slutleverancer." },
+
+  /* ─── §4 STRATEGY — What happens next ─── */
+  "str.s.next.head":     { sv: "Vad som händer sen", da: "Hvad der sker derefter" },
+  "str.s.next.body":     { sv: "De flesta kunder genomför Roadmappen internt — det är avsikten. Vissa ber oss stanna som Interim IT-chef för att leverera de första faserna, särskilt när planen är beroende av seniort ledarskap som företaget ännu inte har. Båda vägarna fungerar. Strategin är er oavsett.", da: "De fleste kunder gennemfører Roadmappen internt — det er hensigten. Nogle beder os blive som Interim IT-chef for at levere de første faser, især når planen er afhængig af senior ledelse, virksomheden endnu ikke har. Begge veje virker. Strategien er jeres uanset hvad." },
+
+  /* ─── FIELD NOTE — strategy ─── */
+  "fn.str.strategy":     { sv: "En Roadmap som säger till om saker ni bör sluta göra är värd mer än en som bara lägger till. Varje IT-strategi ärver fem år gamla projekt som överlevt för att ingen ville ha argumentationen. Vi inkluderar slopa-listan uttryckligen. Vissa kunder säger att det är den mest användbara sidan i dokumentet.", da: "En Roadmap, der siger til om de ting I bør holde op med, er mere værd end en der kun lægger til. Enhver IT-strategi arver fem år gamle projekter, der overlevede fordi ingen ville have diskussionen. Vi inkluderer drop-listen eksplicit. Nogle kunder siger, det er den mest brugbare side i dokumentet." },
 
 };
