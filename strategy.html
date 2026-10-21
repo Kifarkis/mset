@@ -2863,6 +2863,43 @@ section.uses .field-note-body {
 
 
 html{overflow-x:clip}
+
+/* ═══ THE FLEET TOP BAR (2026-10-21) — the MSET Sign product page's header, so the logo, the menu
+   and the language pill sit on the same pixels on mset.se, sign.mset.se, the Sign app and MSET ID.
+   Copied from Sign's landing.css (header, .nav, .sb-brand, .langpick, .acct-slot): 58px with the
+   hairline, 22px from each edge, the pill's right edge 22 + 34 + 14 + 16 = 86px from the window
+   edge. IF SIGN'S CHANGE, CHANGE THESE. ═══ */
+nav.site-nav{height:58px;box-sizing:border-box;background:#0A1628;border-bottom:1px solid rgba(255,255,255,.08)}
+nav.site-nav .nav-inner{max-width:none;height:100%;margin:0;padding:0 22px;gap:16px}
+nav.site-nav .sb-brand{display:flex;align-items:center;gap:11px;color:var(--sage-50);text-decoration:none;line-height:1.5}
+nav.site-nav .sb-brand svg{width:35px;height:35px;flex:none}
+nav.site-nav .sb-brand .brand-wm{display:flex;align-items:baseline;gap:9px}
+nav.site-nav .sb-brand .wordmark{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:21px;letter-spacing:-.01em;color:var(--sage-50);line-height:1}
+nav.site-nav .sb-brand .wordmark .dot{display:inline-block;width:.2em;height:.2em;background:var(--emerald-bright);border-radius:50%;vertical-align:.12em;margin-left:.06em}
+nav.site-nav .sb-brand .tag{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42);padding-bottom:1px}
+nav.site-nav .nav-links{gap:30px;margin-left:auto}
+nav.site-nav .nav-links a{color:var(--sage-200);font-size:.93rem;font-weight:400;letter-spacing:0}
+nav.site-nav .nav-links a:hover{color:var(--emerald-bright)}
+nav.site-nav .deep-toggle{color:var(--sage-200)}
+nav.site-nav .nav-links a.nav-cta{display:inline-flex;align-items:center;height:34px;padding:0 16px;font-size:.93rem;font-weight:600;color:var(--ink)!important}
+nav.site-nav .nav-links > li:last-child{margin-left:-14px}
+nav.site-nav .lang-switch{margin-left:0}
+nav.site-nav .lang-pill{gap:7px;height:34px;padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--sage-50);font:600 11px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em}
+nav.site-nav .lang-pill:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.16)}
+nav.site-nav .lang-pill .dot{width:7px;height:7px}
+nav.site-nav .lang-pill .chevron{display:none}
+nav.site-nav .acct-slot{width:34px;height:34px;flex:none;margin-left:14px}
+.mobile-menu{top:58px}
+@media (max-width:960px){
+  nav.site-nav .nav-inner{padding:0 22px}
+  nav.site-nav .acct-slot{display:none}
+}
+/* ═══ SIGN'S CREAM (2026-10-21): the page and its sections in the Sign product page's cream; the
+   sections that were white are the lighter cream. ═══ */
+body{background:#EDEAE2}
+.problem,.uses{background:#EDEAE2}
+/* ═══ ONE FOOTER (2026-10-21): the same colour, hairline and spacing as the Sign product page's. ═══ */
+footer{background:var(--ink-2);border-top:1px solid rgba(255,255,255,.08);padding:48px 0 32px}
 </style>
 </head>
 <body data-lang="en">
@@ -2999,9 +3036,9 @@ html{overflow-x:clip}
 <!-- ═════════ NAV — identical to main site ═════════ -->
 <nav class="site-nav" id="siteNav">
 <div class="nav-inner">
-<a aria-label="MSET — back to main site" data-i18n-aria="aria.main-site" class="nav-logo" href="/">
-<svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
-<span class="wordmark">MSET<span class="dot"></span></span>
+<a aria-label="MSET — back to main site" data-i18n-aria="aria.main-site" class="sb-brand" href="/">
+<svg viewBox="0 0 128 120" fill="none"><path d="M52 62 52 18M52 62 90.1 84M52 62 13.9 84" stroke="#ECE8DB" stroke-width="2" stroke-dasharray="3 4.5" stroke-linecap="round" opacity=".4"/><g stroke="#ECE8DB" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><polygon points="52,18 90.1,40 90.1,84 52,106 13.9,84 13.9,40"/><path d="M52 62 90.1 40M52 62 52 106M52 62 13.9 40"/></g><polygon points="52,40 71,51 52,62 33,51" fill="#F5F3ED"/><polygon points="33,51 52,62 52,84 33,73" fill="#E7E1CE"/><polygon points="52,62 71,51 71,73 52,84" fill="#D6CFB8"/><circle cx="61.5" cy="64.5" r="2.6" fill="#1B4A22"/><g stroke-linejoin="round"><polygon points="108,21 115.8,25.5 108,30 100.2,25.5" fill="#9BD7A4"/><polygon points="100.2,25.5 108,30 108,39 100.2,34.5" fill="#5BA364"/><polygon points="108,30 115.8,25.5 115.8,34.5 108,39" fill="#3B7D44"/></g></svg>
+<span class="brand-wm"><span class="wordmark">MSET<span class="dot"></span></span><span class="tag" aria-hidden="true">&#8203;</span></span>
 </a>
 <ul class="nav-links">
 <li><a data-i18n="nav.gxp" href="/#services">GxP</a></li>
@@ -3072,6 +3109,7 @@ html{overflow-x:clip}
 </div>
 </li>
 </ul>
+<span class="acct-slot" aria-hidden="true"></span>
 <button aria-label="Menu" data-i18n-aria="aria.menu" class="nav-hamburger" id="hamburger">
 <span></span><span></span><span></span>
 </button>
