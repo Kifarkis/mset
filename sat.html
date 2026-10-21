@@ -10,7 +10,7 @@
 <link href="favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/>
 <link href="favicon.ico" rel="alternate icon"/>
-<title>Security Awareness Training — MSET</title>
+<title data-i18n="title.sat">Security Awareness Training — MSET</title>
 <meta content="Security Awareness Training for pharma, biotech and medtech. Phishing simulations, role-based e-learning, GxP-specific modules, compliance reporting. Built by MSET in Skåne." name="description"/>
 <!-- Canonical URL -->
 <link href="https://mset.se/sat" rel="canonical"/>
@@ -1353,6 +1353,8 @@ section:has(.field-note:last-child) {
 }
 /* ═══ END SESSION 2 ═══ */
 
+@media (max-width:560px){.bar-row{grid-template-columns:1fr;gap:.35rem}.bar-outer{overflow:hidden}.bar-inner{font-size:.72rem}.phase-bars{padding:1.4rem 1.1rem}}
+html{overflow-x:clip}
 </style>
 </head>
 <body data-lang="en">
@@ -1502,61 +1504,61 @@ section:has(.field-note:last-child) {
 <!-- ═════════ NAV — identical to main site ═════════ -->
 <nav class="site-nav" id="siteNav">
 <div class="nav-inner">
-<a aria-label="MSET — back to main site" class="nav-logo" href="index.html">
+<a aria-label="MSET — back to main site" data-i18n-aria="aria.main-site" class="nav-logo" href="/">
 <svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
 <span class="wordmark">MSET<span class="dot"></span></span>
 </a>
 <ul class="nav-links">
-<li><a data-i18n="nav.gxp" href="index.html#services">GxP</a></li>
+<li><a data-i18n="nav.gxp" href="/#services">GxP</a></li>
 <li class="has-deep" data-deep="ai">
-<a data-i18n="nav.ai" href="index.html#ai">AI</a>
-<button class="deep-toggle" type="button" aria-label="AI — show more" aria-expanded="false" aria-controls="deep-ai">
+<a data-i18n="nav.ai" href="/#ai">AI</a>
+<button class="deep-toggle" type="button" aria-label="AI — show more" data-i18n-aria="aria.ai-more" aria-expanded="false" aria-controls="deep-ai">
 <svg aria-hidden="true"><use href="#chevron-down"></use></svg>
 </button>
 <div class="deep-card" id="deep-ai" role="menu">
-<a class="deep-row" href="index.html#ai" role="menuitem">
+<a class="deep-row" href="/#ai" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.ai.overview">Overview</span></div>
 <div class="deep-row-desc" data-i18n="nav.ai.desc">The 4 service cards on the homepage.</div>
 </a>
-<a class="deep-row primary" href="ai.html" role="menuitem">
+<a class="deep-row primary" href="/ai" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.ai.deep">Deep dive</span> <span class="arrow">→</span></div>
 <div class="deep-row-desc" data-i18n="nav.ai.deep-desc">Full AI Consulting page — 9 use cases, 3 architecture patterns, 7 governance docs.</div>
 </a>
 </div>
 </li>
 <li class="has-deep" data-deep="security">
-<a data-i18n="nav.security" href="index.html#security">Security</a>
-<button class="deep-toggle" type="button" aria-label="Security — show more" aria-expanded="false" aria-controls="deep-security">
+<a data-i18n="nav.security" href="/#security">Security</a>
+<button class="deep-toggle" type="button" aria-label="Security — show more" data-i18n-aria="aria.sec-more" aria-expanded="false" aria-controls="deep-security">
 <svg aria-hidden="true"><use href="#chevron-down"></use></svg>
 </button>
-<div class="deep-card" id="deep-security" role="menu"><a class="deep-row" href="index.html#security" role="menuitem">
+<div class="deep-card" id="deep-security" role="menu"><a class="deep-row" href="/#security" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.security.overview">Overview</span></div>
 <div class="deep-row-desc" data-i18n="nav.security.desc">The IT security service cards on the homepage.</div>
 </a>
-<a class="deep-row primary" href="sat.html" role="menuitem">
+<a class="deep-row primary" href="/sat" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.security.deep">Deep dive</span> <span class="arrow">→</span></div>
 <div class="deep-row-desc" data-i18n="nav.security.deep-desc">Full Security Awareness Training page — phishing simulations, training programmes.</div>
 </a>
 </div>
 </li>
 <li class="has-deep" data-deep="strategy">
-<a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a>
-<button class="deep-toggle" type="button" aria-label="Strategy — show more" aria-expanded="false" aria-controls="deep-strategy">
+<a data-i18n="nav.strategy" href="/#strategy">Strategy</a>
+<button class="deep-toggle" type="button" aria-label="Strategy — show more" data-i18n-aria="aria.str-more" aria-expanded="false" aria-controls="deep-strategy">
 <svg aria-hidden="true"><use href="#chevron-down"></use></svg>
 </button>
 <div class="deep-card" id="deep-strategy" role="menu">
-<a class="deep-row" href="index.html#strategy" role="menuitem">
+<a class="deep-row" href="/#strategy" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.strategy.overview">Overview</span></div>
 <div class="deep-row-desc" data-i18n="nav.strategy.desc">The IT Strategy card on the homepage.</div>
 </a>
-<a class="deep-row primary" href="strategy.html" role="menuitem">
+<a class="deep-row primary" href="/strategy" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.strategy.deep">Deep dive</span> <span class="arrow">→</span></div>
 <div class="deep-row-desc" data-i18n="nav.strategy.deep-desc">Full Strategy page — three stages (Assessment, Strategy &amp; Roadmap, Interim IT Director).</div>
 </a>
 </div>
 </li>
-<li><a data-i18n="nav.about" href="index.html#about">About</a></li>
-<li><a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a></li>
+<li><a data-i18n="nav.about" href="/#about">About</a></li>
+<li><a class="nav-cta" data-i18n="nav.cta" href="/#contact">Book a call</a></li>
 <li>
 <div class="lang-switch" id="langSwitch">
 <button class="lang-pill" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langPop">
@@ -1575,23 +1577,23 @@ section:has(.field-note:last-child) {
 </div>
 </li>
 </ul>
-<button aria-label="Menu" class="nav-hamburger" id="hamburger">
+<button aria-label="Menu" data-i18n-aria="aria.menu" class="nav-hamburger" id="hamburger">
 <span></span><span></span><span></span>
 </button>
 </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-<a data-i18n="nav.gxp" href="index.html#services">GxP</a>
-<a data-i18n="nav.ai" href="index.html#ai">AI</a>
-<a data-i18n="nav.ai.deep" class="deep-child" href="ai.html">Deep dive: AI Consulting</a>
-<a data-i18n="nav.security" href="index.html#security">Security</a>
-<a data-i18n="nav.security.deep" class="deep-child" href="sat.html">Deep dive: Security Awareness Training</a>
-<a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a>
-<a data-i18n="nav.strategy.deep" class="deep-child" href="strategy.html">Deep dive: Strategy</a>
-<a data-i18n="nav.about" href="index.html#about">About</a>
-<a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a>
+<a data-i18n="nav.gxp" href="/#services">GxP</a>
+<a data-i18n="nav.ai" href="/#ai">AI</a>
+<a data-i18n="nav.ai.deep" class="deep-child" href="/ai">Deep dive: AI Consulting</a>
+<a data-i18n="nav.security" href="/#security">Security</a>
+<a data-i18n="nav.security.deep" class="deep-child" href="/sat">Deep dive: Security Awareness Training</a>
+<a data-i18n="nav.strategy" href="/#strategy">Strategy</a>
+<a data-i18n="nav.strategy.deep" class="deep-child" href="/strategy">Deep dive: Strategy</a>
+<a data-i18n="nav.about" href="/#about">About</a>
+<a class="nav-cta" data-i18n="nav.cta" href="/#contact">Book a call</a>
 
-<div class="lang-switch" role="group" aria-label="Language">
+<div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="aria.language">
 <div class="lang-pop" id="langPopMobile">
 <div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
 <ul>
@@ -1613,7 +1615,7 @@ Security Awareness Training
 <p class="hero-lede" data-i18n="sat.lede">Realistic phishing simulations, role-based e-learning and audit-ready reporting — standard for every company, with optional GxP-specific modules for regulated industries.</p>
 <div class="field-note"><span class="field-note-label">Field note</span><span class="field-note-dash">—</span><span class="field-note-body" data-i18n="fn.sat.hero">Every training vendor promises "behaviour change." What that usually means is completion certificates and a phishing simulation dashboard. Behaviour change is measurable. Certificates are not.</span></div>
 <div class="hero-ctas">
-<a class="btn-primary" data-i18n="sat.cta.pilot" href="index.html#contact?topic=sat">Start a pilot
+<a class="btn-primary" data-i18n="sat.cta.pilot" href="/?topic=sat#contact">Start a pilot
           <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="14"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
 </a>
 <a class="btn-secondary" data-i18n="sat.cta.prog" href="#programme">See the programme</a>
@@ -2044,10 +2046,10 @@ Security Awareness Training
 <h2 class="display"><span data-i18n="sat.close.title.1">Run a pilot.</span> <em data-i18n="sat.close.title.2">Watch the numbers move.</em></h2>
 <p data-i18n="sat.close.body">A baseline in two weeks. A measurable drop in click-rate in eight. An audit-ready evidence pack in twelve.</p>
 <div class="hero-ctas" style="justify-content:center">
-<a class="btn-primary" href="index.html#contact?topic=sat">Start a pilot
+<a class="btn-primary" href="/?topic=sat#contact">Start a pilot
         <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="14"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
 </a>
-<a class="btn-secondary" data-i18n="sat.close.back" href="index.html#security">Back to Security overview</a>
+<a class="btn-secondary" data-i18n="sat.close.back" href="/#security">Back to Security overview</a>
 </div>
 </div>
 </section>
@@ -2066,27 +2068,27 @@ Security Awareness Training
 <div class="footer-col">
 <h4 data-i18n="footer.col1">Services</h4>
 <ul>
-<li><a data-i18n="footer.services.gxp" href="index.html#services">GxP Systems</a></li>
-<li><a data-i18n="footer.services.ai" href="ai.html">AI Consulting</a></li>
-<li><a data-i18n="footer.services.sec" href="index.html#security">IT Security</a></li>
+<li><a data-i18n="footer.services.gxp" href="/#services">GxP Systems</a></li>
+<li><a data-i18n="footer.services.ai" href="/ai">AI Consulting</a></li>
+<li><a data-i18n="footer.services.sec" href="/#security">IT Security</a></li>
 <li><a data-i18n="footer.services.sat" href="#top">Security Awareness Training</a></li>
-<li><a data-i18n="footer.services.strat" href="strategy.html">IT Strategy</a></li>
+<li><a data-i18n="footer.services.strat" href="/strategy">IT Strategy</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h4 data-i18n="footer.col2">Company</h4>
 <ul>
-<li><a data-i18n="footer.about" href="index.html#about">About MSET</a></li>
-<li><a data-i18n="footer.contact" href="index.html#contact">Contact</a></li>
+<li><a data-i18n="footer.about" href="/#about">About MSET</a></li>
+<li><a data-i18n="footer.contact" href="/#contact">Contact</a></li>
 <li><a href="mailto:info@mset.se">info@mset.se</a></li>
-<li><a data-i18n="footer.privacy" href="privacy.html">Privacy policy</a></li>
+<li><a data-i18n="footer.privacy" href="/privacy">Privacy policy</a></li>
 </ul>
 </div>
 </div>
 <div class="footer-bottom">
-<span data-i18n="footer.copyright">© 2026 Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
+<span data-i18n="footer.copyright">© 2026 Design &amp; Animation i Vellinge AB · MSET · Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
 <span data-i18n="footer.rights">All rights reserved.</span>
-<a class="back-link" data-i18n="footer.back-top" href="index.html">
+<a class="back-link" data-i18n="footer.back-top" href="/">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="19" x2="5" y1="12" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         Back to MSET
       </a>
@@ -2096,11 +2098,11 @@ Security Awareness Training
 <!-- Floating footer — slim persistent bar, slides in after scrolling 300px -->
 <div aria-hidden="true" class="floating-footer" id="floatingFooter">
 <div class="ff-inner">
-<a aria-label="Back to MSET home" class="ff-brand" href="index.html">
+<a aria-label="Back to MSET home" data-i18n-aria="aria.back-home" class="ff-brand" href="/">
 <svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
 <span class="wordmark">MSET<span class="dot"></span></span>
 </a>
-<a aria-label="Back to MSET" class="ff-action" href="index.html">
+<a aria-label="Back to MSET" data-i18n-aria="aria.back" class="ff-action" href="/">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="19" x2="5" y1="12" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
       Back to MSET
     </a>
@@ -2108,7 +2110,7 @@ Security Awareness Training
 </div>
 <!-- Privacy notice — shown once until dismissed -->
 <div aria-live="polite" class="privacy-notice" id="privacyNotice" role="status">
-<p><span data-i18n="privacy-notice.body">We store and handle your contact-form details only to reply to you. No tracking cookies, no analytics profiling.</span> <span data-i18n="privacy-notice.see">See our</span> <a data-i18n="privacy-notice.link" href="privacy.html">privacy policy</a> <span data-i18n="privacy-notice.for-full">for the full picture.</span></p>
+<p><span data-i18n="privacy-notice.body">We store and handle your contact-form details only to reply to you. No tracking cookies, no analytics profiling.</span> <span data-i18n="privacy-notice.see">See our</span> <a data-i18n="privacy-notice.link" href="/privacy">privacy policy</a> <span data-i18n="privacy-notice.for-full">for the full picture.</span></p>
 <div class="privacy-notice-actions">
 <button class="privacy-notice-dismiss" data-i18n="privacy-notice.got-it" id="privacyNoticeDismiss" type="button">Got it</button>
 </div>
@@ -2226,6 +2228,11 @@ Security Awareness Training
   function apply(){
     var dict = getDict();
     var lang = document.body.getAttribute('data-lang') || 'en';
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      if (!el.hasAttribute('data-i18n-aria-en')) el.setAttribute('data-i18n-aria-en', el.getAttribute('aria-label') || '');
+      var en = el.getAttribute('data-i18n-aria-en'), e = dict[el.getAttribute('data-i18n-aria')];
+      el.setAttribute('aria-label', (lang !== 'en' && e && e[lang]) ? e[lang] : en);
+    });
     document.querySelectorAll('[data-i18n]').forEach(function(el){
       var key = el.getAttribute('data-i18n');
       if (!el.hasAttribute('data-i18n-en')){

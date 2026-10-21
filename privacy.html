@@ -10,8 +10,8 @@
 <link href="favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/>
 <link href="favicon.ico" rel="alternate icon"/>
-<title data-i18n="privacy.title">Privacy Policy — MSET</title>
-<meta content="How MSET (Kifarkis Nätsäkerhet) collects, uses and protects your personal data. GDPR-compliant privacy policy for our website and client engagements." name="description"/>
+<title data-i18n="privacy.title">Privacy Notice — MSET</title>
+<meta content="How MSET — Design &amp; Animation i Vellinge AB — handles personal data on mset.se, in consulting and in MSET Sign, MSET Trust and MSET ID." name="description"/>
 <link href="https://mset.se/privacy" rel="canonical"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -682,6 +682,13 @@ section:has(.field-note:last-child) {
 }
 /* ═══ END SESSION 2 ═══ */
 
+.policy h2[id],.contact-box{scroll-margin-top:96px}
+.toc{background:var(--sage-100);border-radius:12px;padding:1.1rem 1.4rem;margin:1.5rem 0 2rem}
+.toc-title{font-weight:600;color:var(--ink);margin:0 0 .5rem}
+.toc ol{margin:0;padding-left:0;list-style:none;columns:2;column-gap:2rem}
+.toc li{margin:0 0 .35rem;break-inside:avoid}
+@media (max-width:640px){.toc ol{columns:1}}
+html{overflow-x:clip}
 </style>
 </head>
 <body data-lang="en">
@@ -715,61 +722,61 @@ section:has(.field-note:last-child) {
 </svg>
 <nav class="site-nav" id="siteNav">
 <div class="nav-inner">
-<a aria-label="MSET — back to main site" class="nav-logo" href="index.html">
+<a aria-label="MSET — back to main site" data-i18n-aria="aria.main-site" class="nav-logo" href="/">
 <svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
 <span class="wordmark">MSET<span class="dot"></span></span>
 </a>
 <ul class="nav-links">
-<li><a data-i18n="nav.gxp" href="index.html#services">GxP</a></li>
+<li><a data-i18n="nav.gxp" href="/#services">GxP</a></li>
 <li class="has-deep" data-deep="ai">
-<a data-i18n="nav.ai" href="index.html#ai">AI</a>
-<button class="deep-toggle" type="button" aria-label="AI — show more" aria-expanded="false" aria-controls="deep-ai">
+<a data-i18n="nav.ai" href="/#ai">AI</a>
+<button class="deep-toggle" type="button" aria-label="AI — show more" data-i18n-aria="aria.ai-more" aria-expanded="false" aria-controls="deep-ai">
 <svg aria-hidden="true"><use href="#chevron-down"></use></svg>
 </button>
 <div class="deep-card" id="deep-ai" role="menu">
-<a class="deep-row" href="index.html#ai" role="menuitem">
+<a class="deep-row" href="/#ai" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.ai.overview">Overview</span></div>
 <div class="deep-row-desc" data-i18n="nav.ai.desc">The 4 service cards on the homepage.</div>
 </a>
-<a class="deep-row primary" href="ai.html" role="menuitem">
+<a class="deep-row primary" href="/ai" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.ai.deep">Deep dive</span> <span class="arrow">→</span></div>
 <div class="deep-row-desc" data-i18n="nav.ai.deep-desc">Full AI Consulting page — 9 use cases, 3 architecture patterns, 7 governance docs.</div>
 </a>
 </div>
 </li>
 <li class="has-deep" data-deep="security">
-<a data-i18n="nav.security" href="index.html#security">Security</a>
-<button class="deep-toggle" type="button" aria-label="Security — show more" aria-expanded="false" aria-controls="deep-security">
+<a data-i18n="nav.security" href="/#security">Security</a>
+<button class="deep-toggle" type="button" aria-label="Security — show more" data-i18n-aria="aria.sec-more" aria-expanded="false" aria-controls="deep-security">
 <svg aria-hidden="true"><use href="#chevron-down"></use></svg>
 </button>
-<div class="deep-card" id="deep-security" role="menu"><a class="deep-row" href="index.html#security" role="menuitem">
+<div class="deep-card" id="deep-security" role="menu"><a class="deep-row" href="/#security" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.security.overview">Overview</span></div>
 <div class="deep-row-desc" data-i18n="nav.security.desc">The IT security service cards on the homepage.</div>
 </a>
-<a class="deep-row primary" href="sat.html" role="menuitem">
+<a class="deep-row primary" href="/sat" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.security.deep">Deep dive</span> <span class="arrow">→</span></div>
 <div class="deep-row-desc" data-i18n="nav.security.deep-desc">Full Security Awareness Training page — phishing simulations, training programmes.</div>
 </a>
 </div>
 </li>
 <li class="has-deep" data-deep="strategy">
-<a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a>
-<button class="deep-toggle" type="button" aria-label="Strategy — show more" aria-expanded="false" aria-controls="deep-strategy">
+<a data-i18n="nav.strategy" href="/#strategy">Strategy</a>
+<button class="deep-toggle" type="button" aria-label="Strategy — show more" data-i18n-aria="aria.str-more" aria-expanded="false" aria-controls="deep-strategy">
 <svg aria-hidden="true"><use href="#chevron-down"></use></svg>
 </button>
 <div class="deep-card" id="deep-strategy" role="menu">
-<a class="deep-row" href="index.html#strategy" role="menuitem">
+<a class="deep-row" href="/#strategy" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.strategy.overview">Overview</span></div>
 <div class="deep-row-desc" data-i18n="nav.strategy.desc">The IT Strategy card on the homepage.</div>
 </a>
-<a class="deep-row primary" href="strategy.html" role="menuitem">
+<a class="deep-row primary" href="/strategy" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.strategy.deep">Deep dive</span> <span class="arrow">→</span></div>
 <div class="deep-row-desc" data-i18n="nav.strategy.deep-desc">Full Strategy page — three stages (Assessment, Strategy &amp; Roadmap, Interim IT Director).</div>
 </a>
 </div>
 </li>
-<li><a data-i18n="nav.about" href="index.html#about">About</a></li>
-<li><a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a></li>
+<li><a data-i18n="nav.about" href="/#about">About</a></li>
+<li><a class="nav-cta" data-i18n="nav.cta" href="/#contact">Book a call</a></li>
 <li>
 <div class="lang-switch" id="langSwitch">
 <button class="lang-pill" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langPop">
@@ -788,23 +795,23 @@ section:has(.field-note:last-child) {
 </div>
 </li>
 </ul>
-<button aria-label="Menu" class="nav-hamburger" id="hamburger">
+<button aria-label="Menu" data-i18n-aria="aria.menu" class="nav-hamburger" id="hamburger">
 <span></span><span></span><span></span>
 </button>
 </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-<a data-i18n="nav.gxp" href="index.html#services">GxP</a>
-<a data-i18n="nav.ai" href="index.html#ai">AI</a>
-<a data-i18n="nav.ai.deep" class="deep-child" href="ai.html">Deep dive: AI Consulting</a>
-<a data-i18n="nav.security" href="index.html#security">Security</a>
-<a data-i18n="nav.security.deep" class="deep-child" href="sat.html">Deep dive: Security Awareness Training</a>
-<a data-i18n="nav.strategy" href="index.html#strategy">Strategy</a>
-<a data-i18n="nav.strategy.deep" class="deep-child" href="strategy.html">Deep dive: Strategy</a>
-<a data-i18n="nav.about" href="index.html#about">About</a>
-<a class="nav-cta" data-i18n="nav.cta" href="index.html#contact">Book a call</a>
+<a data-i18n="nav.gxp" href="/#services">GxP</a>
+<a data-i18n="nav.ai" href="/#ai">AI</a>
+<a data-i18n="nav.ai.deep" class="deep-child" href="/ai">Deep dive: AI Consulting</a>
+<a data-i18n="nav.security" href="/#security">Security</a>
+<a data-i18n="nav.security.deep" class="deep-child" href="/sat">Deep dive: Security Awareness Training</a>
+<a data-i18n="nav.strategy" href="/#strategy">Strategy</a>
+<a data-i18n="nav.strategy.deep" class="deep-child" href="/strategy">Deep dive: Strategy</a>
+<a data-i18n="nav.about" href="/#about">About</a>
+<a class="nav-cta" data-i18n="nav.cta" href="/#contact">Book a call</a>
 
-<div class="lang-switch" role="group" aria-label="Language">
+<div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="aria.language">
 <div class="lang-pop" id="langPopMobile">
 <div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
 <ul>
@@ -816,182 +823,151 @@ section:has(.field-note:last-child) {
 </div>
 </div>
 <main class="policy">
-  <div class="courtesy-banner" role="note"><strong data-i18n="privacy.courtesy-banner">Note: The English version of this privacy policy is the binding legal document. The Swedish and Danish translations are provided only as a reader service. In case of any conflicting interpretation, the English text prevails.</strong></div>
-
+  <div class="courtesy-banner" role="note"><strong data-i18n="privacy.courtesy-banner">Note: The English version of this privacy notice is the binding text. The Swedish and Danish translations are provided as a reader service. If they differ, the English text applies.</strong></div>
 <span class="eyebrow" data-i18n="privacy.eyebrow">Legal</span>
-<h1><span data-i18n="privacy.h1.1">Privacy</span> <em data-i18n="privacy.h1.2">Policy</em></h1>
-<p class="updated" data-i18n="privacy.updated">Last updated: 21 April 2026</p>
-<p class="lede" data-i18n="privacy.lede">
-    This policy explains how MSET (operating as Kifarkis Nätsäkerhet) collects, uses, and protects
-    personal data. It applies to our website mset.se, our client engagements, and any
-    other interaction where we process personal information.
-  </p>
-<p data-i18n="privacy.intro">
-    We take data protection seriously — as a consultancy whose work centres on IT security and
-    regulated-industry compliance, we hold ourselves to the same standards we advise our clients on.
-    This policy is written to be readable; if anything is unclear, contact us and we will explain.
-  </p>
-<h2 data-i18n="privacy.s1.h2">1. Who we are</h2>
-<p>
-<strong>Data controller:</strong><br/>
-    Kifarkis Nätsäkerhet<br/>
-    Skåne, Sweden<br/>
-    Email: <a href="mailto:info@mset.se">info@mset.se</a>
-</p>
-<p data-i18n="privacy.s1.trading">
-    We trade under the name MSET. Kifarkis Nätsäkerhet is the legal entity responsible
-    for the processing of your personal data under the EU General Data Protection Regulation (GDPR) and
-    the Swedish Data Protection Act.
-  </p>
-<h2 data-i18n="privacy.s2.h2">2. What personal data we collect</h2>
-<h3 data-i18n="privacy.s2.1.h3">2.1 Contact form submissions</h3>
-<p data-i18n="privacy.s2.1.p1">When you submit the contact form on our website, we collect:</p>
+<h1><span data-i18n="privacy.h1.1">Privacy</span> <em data-i18n="privacy.h1.2">Notice</em></h1>
+<p class="updated" data-i18n="privacy.updated">Last updated: 20 October 2026 · Version 2.0</p>
+<p class="lede" data-i18n="privacy.lede">This notice explains how MSET handles personal data: on this website, in our consulting work, and in the MSET products — MSET Sign, MSET Trust and MSET ID. It is one notice for everything we do, so the rules are in one place.</p>
+<p data-i18n="privacy.intro">We work in IT security and regulated-industry compliance, and we hold ourselves to the standards we advise on. This notice is written to be read. If anything is unclear, ask us and we will explain.</p>
+<nav class="toc" aria-labelledby="toc-title">
+<p class="toc-title" id="toc-title" data-i18n="privacy.toc.title">On this page</p>
+<ol>
+<li><a href="#who" data-i18n="privacy.toc.who">1. Who we are</a></li>
+<li><a href="#website" data-i18n="privacy.toc.website">2. This website and enquiries</a></li>
+<li><a href="#consulting" data-i18n="privacy.toc.consulting">3. Consulting clients</a></li>
+<li><a href="#accounts" data-i18n="privacy.toc.accounts">4. MSET product accounts</a></li>
+<li><a href="#sign" data-i18n="privacy.toc.sign">5. MSET Sign: if you were asked to sign</a></li>
+<li><a href="#trust" data-i18n="privacy.toc.trust">6. MSET Trust: if you asked for a company's documents</a></li>
+<li><a href="#providers" data-i18n="privacy.toc.providers">7. The providers we use</a></li>
+<li><a href="#transfers" data-i18n="privacy.toc.transfers">8. Transfers outside the EU/EEA</a></li>
+<li><a href="#retention" data-i18n="privacy.toc.retention">9. How long we keep data</a></li>
+<li><a href="#rights" data-i18n="privacy.toc.rights">10. Your rights</a></li>
+<li><a href="#security" data-i18n="privacy.toc.security">11. Security</a></li>
+<li><a href="#cookies" data-i18n="privacy.toc.cookies">12. Cookies and browser storage</a></li>
+<li><a href="#children" data-i18n="privacy.toc.children">13. Children</a></li>
+<li><a href="#changes" data-i18n="privacy.toc.changes">14. Changes to this notice</a></li>
+</ol>
+</nav>
+<h2 id="who" data-i18n="privacy.s1.h2">1. Who we are</h2>
+<p data-i18n="privacy.s1.p1">The controller of your personal data is Design &amp; Animation i Vellinge AB, a Swedish limited company, org. no. 556825-4295, Vellinge, Skåne, Sweden.</p>
+<p data-i18n="privacy.s1.p2">We work under the names MSET and Kifarkis Nätsäkerhet. Whichever name you met us under, the company responsible for your personal data is Design &amp; Animation i Vellinge AB.</p>
+<p><span data-i18n="privacy.s1.p3.prefix">Contact us about anything in this notice at</span> <a href="mailto:info@mset.se">info@mset.se</a> <span data-i18n="privacy.s1.p3.suffix">— put “Privacy enquiry” in the subject.</span></p>
+<p data-i18n="privacy.s1.p4">We have not appointed a data protection officer, as the law does not require one of us. Privacy enquiries to the address above reach the person responsible for data protection.</p>
+<p data-i18n="privacy.s1.p5">Two roles, stated up front. For most of what this notice covers, we decide why and how personal data is used, so we are the controller. When a customer uses an MSET product to handle other people's data — documents it sends for signature, visitors to its trust centre — the customer decides, and we act as its processor under a data processing agreement. Sections 5 and 6 say which is which.</p>
+<h2 id="website" data-i18n="privacy.s2.h2">2. This website and enquiries</h2>
+<h3 data-i18n="privacy.s2.h3a">Contact form and email</h3>
+<p data-i18n="privacy.s2.p1">When you use the contact form or write to us, we receive your name, email address, company (optional), the service area you chose and your message. We use them to answer you and, if it leads anywhere, to prepare an offer.</p>
+<p data-i18n="privacy.s2.p2">Legal basis: steps you asked us to take before a contract (Art. 6(1)(b) GDPR), or our legitimate interest in answering enquiries (Art. 6(1)(f)). The form's required fields are what we need to reply; without them we cannot answer.</p>
+<h3 data-i18n="privacy.s2.h3b">Visiting the site</h3>
+<p data-i18n="privacy.s2.p3">The site is hosted on GitHub Pages. Like any web server, GitHub receives your IP address and browser details when you load a page, and may keep them in its own security logs; we have no access to those logs. The site's fonts are loaded from Google Fonts, so Google also receives your IP address when a page loads.</p>
+<p data-i18n="privacy.s2.p4">We use Google Search Console, which shows us aggregated search statistics — not individual visitors. There is no Google Analytics, no advertising pixel and no behavioural tracking on this site.</p>
+<p data-i18n="privacy.s2.p5">Legal basis for serving the site: our legitimate interest in running a secure, working website (Art. 6(1)(f)).</p>
+<h2 id="consulting" data-i18n="privacy.s3.h2">3. Consulting clients</h2>
+<p data-i18n="privacy.s3.p1">When you engage us, we process the contact details of the people we work with at your organisation, the agreement, correspondence, invoices and our working notes. Legal basis: performing our contract with you (Art. 6(1)(b)) and, for accounting records, a legal obligation (Art. 6(1)(c)).</p>
+<p data-i18n="privacy.s3.p2">Where an engagement means handling personal data in your systems — your staff, patients, study participants or customers — you are the controller and we act as your processor under a data processing agreement. We use that data only for the work you asked for.</p>
+<h2 id="accounts" data-i18n="privacy.s4.h2">4. MSET product accounts</h2>
+<p data-i18n="privacy.s4.p1">When your organisation uses MSET Sign or MSET Trust, we hold the account: the organisation's name and details, the people who use it (name, work email, role and an optional job title), how they sign in, their settings, and the subscription and billing state. We also keep the account's activity record — who did what, and when — because customers rely on it as evidence.</p>
+<p data-i18n="privacy.s4.p2">Sign-in runs through MSET ID, our own identity service. Passwords are stored only as one-way hashes and two-factor secrets are encrypted. We record sign-ins and refused attempts to protect accounts from being taken over. If your organisation uses its own sign-in (single sign-on), we receive your identity from it instead of a password.</p>
+<p data-i18n="privacy.s4.p3">Payments are handled by Stripe; we never see or store card numbers. We send service emails you cannot switch off — verification, security notices, subscription changes. We do not run a marketing list.</p>
+<p data-i18n="privacy.s4.p4">AI assistance in MSET Sign is off unless an administrator of your organisation switches it on. When it is on, the text of the document being prepared — never the file itself, and never signers' addresses — is sent to the AI provider your organisation chose, to suggest where fields belong or to draft wording. The provider is named in the product before it is switched on. We do not use your documents or data to train AI models.</p>
+<p data-i18n="privacy.s4.p5">Legal basis: performing the contract with your organisation (Art. 6(1)(b)); our legitimate interest in keeping accounts secure and the service running (Art. 6(1)(f)); and accounting law for billing records (Art. 6(1)(c)).</p>
+<h2 id="sign" data-i18n="privacy.s5.h2">5. MSET Sign: if you were asked to sign</h2>
+<p data-i18n="privacy.s5.p1">An organisation sent you a document through MSET Sign. That organisation decides what the document is, why you were asked and how long it is kept: it is the controller, and we run the service on its instructions as its processor. Its name is in the email and on the signing page. Ask the organisation why you were contacted or to withdraw the document; if you cannot reach it, write to us and we will tell you who it is and pass your request on.</p>
+<h3 data-i18n="privacy.s5.h3a">What is recorded when you sign</h3>
 <ul>
-<li data-i18n="privacy.s2.1.b1">Your first name and last name</li>
-<li data-i18n="privacy.s2.1.b2">Your email address</li>
-<li data-i18n="privacy.s2.1.b3">Your company name (optional)</li>
-<li data-i18n="privacy.s2.1.b4">The service area you are interested in</li>
-<li data-i18n="privacy.s2.1.b5">The content of your message</li>
+<li data-i18n="privacy.s5.b1">Your name and email address as the sender entered them, and any job title you add.</li>
+<li data-i18n="privacy.s5.b2">When the link was sent and opened, and when you signed, approved or declined — with any reason you gave.</li>
+<li data-i18n="privacy.s5.b3">Your IP address at those moments.</li>
+<li data-i18n="privacy.s5.b4">How your identity was checked: by the link alone, a one-time code sent to your mailbox (the code itself is not kept), a sign-in, or an electronic ID where the sender required one.</li>
+<li data-i18n="privacy.s5.b5">Your signature as you drew or typed it, and anything you filled in on the document.</li>
 </ul>
-<p data-i18n="privacy.s2.1.p2">
-    We do not collect any other data through the contact form. We do not require you to create an
-    account, and we do not ask for information beyond what is needed to reply to your enquiry.
-  </p>
-<h3 data-i18n="privacy.s2.2.h3">2.2 Client engagements</h3>
-<p data-i18n="privacy.s2.2.p1">
-    During consulting engagements, we may process personal data belonging to you, your employees, or
-    your clients — depending on the nature of the work. For most engagements, this processing is
-    governed by a separate Data Processing Agreement (DPA) that we sign with you, in
-    which we act as a data processor on your behalf. We only process such data for
-    the purposes defined in that agreement.
-  </p>
-<h3 data-i18n="privacy.s2.3.h3">2.3 Website analytics</h3>
-<p data-i18n="privacy.s2.3.p1">
-    We use Google Search Console to understand how our site performs in search. Search Console
-    does not place cookies on your browser and does not track individual visitors. It reports
-    aggregated search performance to us only.
-  </p>
-<p data-i18n="privacy.s2.3.p2">
-    We do not use Google Analytics, Facebook Pixel, or any other behavioural tracking
-    on this website. No cookies are set for analytics or advertising.
-  </p>
-<h3 data-i18n="privacy.s2.4.h3">2.4 Technical data</h3>
-<p data-i18n="privacy.s2.4.p1">
-    Our web host automatically records standard server logs for security and operational purposes
-    (IP address, browser type, pages visited, timestamp). These logs are retained for a maximum of
-    30 days and are not used to profile visitors.
-  </p>
-<h2 data-i18n="privacy.s3.h2">3. Legal basis for processing</h2>
-<p data-i18n="privacy.s3.p1">Under Article 6 of the GDPR, our processing relies on one of the following legal bases:</p>
-<ul>
-<li data-i18n="privacy.s3.b1">Your consent (Art. 6(1)(a)) — when you voluntarily submit the contact form.</li>
-<li data-i18n="privacy.s3.b2">Performance of a contract (Art. 6(1)(b)) — when processing is necessary to deliver a consulting engagement you have commissioned.</li>
-<li data-i18n="privacy.s3.b3">Legitimate interest (Art. 6(1)(f)) — for server security logs, fraud prevention, and protection of our systems.</li>
-<li data-i18n="privacy.s3.b4">Legal obligation (Art. 6(1)(c)) — where required by Swedish or EU law (for example, accounting and tax records).</li>
-</ul>
-<h2 data-i18n="privacy.s4.h2">4. How we use your data</h2>
-<p data-i18n="privacy.s4.p1">We use personal data only for the purposes for which it was collected. Specifically:</p>
-<ul>
-<li data-i18n="privacy.s4.b1">To respond to enquiries submitted through our contact form</li>
-<li data-i18n="privacy.s4.b2">To deliver consulting services we have agreed to provide</li>
-<li data-i18n="privacy.s4.b3">To invoice clients and meet accounting obligations</li>
-<li data-i18n="privacy.s4.b4">To comply with regulatory and legal requirements applicable to us</li>
-</ul>
-<p data-i18n="privacy.s4.p2">
-    We do not sell personal data. We do not use personal data for
-    marketing purposes unrelated to your original enquiry. We do not enrich your
-    data from third-party sources.
-  </p>
-<h2 data-i18n="privacy.s5.h2">5. Third-party processors</h2>
-<p data-i18n="privacy.s5.p1">We share personal data only with the following processors, and only to the extent strictly necessary:</p>
+<p data-i18n="privacy.s5.p2">These facts are written into the sealed PDF and its audit trail. That is the point of the service: they are what make the signature provable later.</p>
+<h3 data-i18n="privacy.s5.h3b">Electronic ID and identity checks</h3>
+<p data-i18n="privacy.s5.p3">If the sender requires an electronic ID or an identity-document check, you complete it with a separate identity provider, which is responsible for that check under its own privacy notice; the signing page links to it. We receive the result and the name it confirmed — not your identity documents.</p>
+<h3 data-i18n="privacy.s5.h3c">The evidence record, and the limit of erasure</h3>
+<p data-i18n="privacy.s5.p4">When a document is deleted, its content really is destroyed. We keep a minimal evidence record — the document's reference, who signed and when, how they were identified, and a fingerprint of the signed file, with no document content — for three years, so that anyone holding the signed PDF can still have it verified. We keep this record as controller, on our legitimate interest in being able to prove the signatures our service produced (Art. 6(1)(f)), and because it is needed to establish, exercise or defend legal claims. That is why we cannot erase it on request (Art. 17(3)(e)). Everything else about you, we can.</p>
+<p data-i18n="privacy.s5.p5">Being sent a document does not create an account or put you on any list. We do not market to signers.</p>
+<h2 id="trust" data-i18n="privacy.s6.h2">6. MSET Trust: if you asked for a company's documents</h2>
+<p data-i18n="privacy.s6.p1">A company uses MSET Trust to share confidential documents — security reports, certificates — with people who ask for them, usually after a confidentiality undertaking is signed. If you asked for access, that company is the controller of your request and of the record of what you opened; we process it on the company's behalf. The company's own privacy notice is linked on every page of its trust centre, and you should read it first.</p>
+<p data-i18n="privacy.s6.p2">What is processed: your request (name, work email, organisation, role, your reason and any answers to the company's questions); the undertaking you sign, through MSET Sign — section 5 applies, including the evidence record; your access, through single-use links and one-time codes that we hold only in a form that cannot be reversed; and an access log of what you opened, when, and from which IP address and browser. Documents you open carry a watermark that ties the copy to you.</p>
+<p data-i18n="privacy.s6.p3">The company chooses how long the access log is kept, between one and ten years (four if it chooses none). Requests that never led to access are deleted after 90 days. People who only read a trust centre's public page are not tracked: views are counted as one number per day, with no IP address and no cookie.</p>
+<h2 id="providers" data-i18n="privacy.s7.h2">7. The providers we use</h2>
+<p data-i18n="privacy.s7.p1">We use these providers, and only as far as needed. Where a provider acts for us, it does so under a data processing agreement.</p>
 <div class="callout">
-<h3 data-i18n="privacy.s5.formspree.h3" style="margin-top:0">Formspree (contact form handling)</h3>
-<p data-i18n="privacy.s5.formspree.p">
-      Contact form submissions are processed by Formspree Inc. (USA). Formspree stores submissions
-      and forwards them to our email address. Formspree is contractually bound as a data processor
-      under the EU Standard Contractual Clauses. Retention on the Formspree platform is governed by
-      their own policy; we routinely delete submissions from Formspree after we have actioned them.
-    </p>
+<h3 style="margin-top:0">Microsoft — Azure and Microsoft 365</h3>
+<p data-i18n="privacy.s7.ms">Hosts the MSET products and their databases in Azure Sweden Central (EU), and sends their emails. Contracting party: Microsoft AB (Stockholm, Sweden).</p>
 </div>
 <div class="callout">
-<h3 data-i18n="privacy.s5.email.h3" style="margin-top:0">Email provider</h3>
-<p data-i18n="privacy.s5.email.p">
-      Replies to enquiries are sent from our Swedish email provider. Copies of correspondence are
-      stored in our mailbox for as long as the business relationship is active, plus any retention
-      period required by applicable accounting law.
-    </p>
+<h3 style="margin-top:0">Stripe</h3>
+<p data-i18n="privacy.s7.stripe">Subscription payments and card handling for the products. Stripe Payments Europe, Limited (Ireland). Stripe is also an independent controller for fraud prevention and its own legal duties, under its own privacy policy.</p>
 </div>
 <div class="callout">
-<h3 data-i18n="privacy.s5.gsc.h3" style="margin-top:0">Google Search Console</h3>
-<p data-i18n="privacy.s5.gsc.p">
-      Google LLC (USA) provides aggregated search-performance data to us via Search Console. No
-      identifiable personal data about individual site visitors is transferred to us through this
-      service.
-    </p>
+<h3 style="margin-top:0">Formspree</h3>
+<p data-i18n="privacy.s7.formspree">Receives contact-form messages from this website and forwards them to us. Formspree, Inc. (United States). We delete messages from Formspree once they have been answered.</p>
 </div>
-<h2 data-i18n="privacy.s6.h2">6. International transfers</h2>
-<p data-i18n="privacy.s6.p1">
-    Where personal data is transferred outside the European Economic Area (for example, to US-based
-    providers such as Formspree or Google), we rely on the EU Standard Contractual Clauses, adequacy
-    decisions where available, and additional safeguards as required by Chapter V of the GDPR.
-  </p>
-<h2 data-i18n="privacy.s7.h2">7. How long we keep data</h2>
+<div class="callout">
+<h3 style="margin-top:0">GitHub</h3>
+<p data-i18n="privacy.s7.github">Hosts this website. GitHub, Inc. (United States).</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0">Google</h3>
+<p data-i18n="privacy.s7.google">Google Fonts (the fonts of this website) and Google Search Console (aggregated search statistics). Google LLC (United States).</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0" data-i18n="privacy.s7.mail.h3">Our email provider</h3>
+<p data-i18n="privacy.s7.mail">Holds our mailbox, where enquiries and client correspondence are kept.</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0" data-i18n="privacy.s7.named.h3">Identity and AI providers</h3>
+<p data-i18n="privacy.s7.named">Electronic ID and identity-document checks in MSET Sign, and AI assistance, use providers named in the product before the feature is switched on. Identity providers are responsible under their own privacy notices (section 5); AI providers are our sub-processors.</p>
+</div>
+<p data-i18n="privacy.s7.p2">Customers receive the current list of sub-processors with their data processing agreement, and notice before it changes. Timestamps on sealed documents come from an independent timestamp authority, which receives only a fingerprint of the file — no personal data.</p>
+<p data-i18n="privacy.s7.p3">We do not sell personal data, share it with data brokers or use it for advertising.</p>
+<h2 id="transfers" data-i18n="privacy.s8.h2">8. Transfers outside the EU/EEA</h2>
+<p data-i18n="privacy.s8.p1">The MSET products store your data at rest in the EU, in Azure Sweden Central. That is not the same as saying no personal data ever leaves the EEA, and we do not claim it: Microsoft, Stripe, GitHub, Google and Formspree are US companies or have US parents, and limited transfers happen — for support, payment processing, hosting this website and the contact form.</p>
+<p data-i18n="privacy.s8.p2">Where data leaves the EEA, we rely on the EU–US Data Privacy Framework where the recipient is certified under it, and otherwise on the EU Standard Contractual Clauses, together with the further measures Chapter V of the GDPR requires. Ask us for a copy of the safeguards that apply.</p>
+<h2 id="retention" data-i18n="privacy.s9.h2">9. How long we keep data</h2>
 <ul>
-<li data-i18n="privacy.s7.b1">Contact form submissions: up to 12 months after last contact, unless a client relationship has started.</li>
-<li data-i18n="privacy.s7.b2">Client engagement data: for the duration of the engagement plus 7 years (to comply with Swedish accounting legislation), or as specified in the Data Processing Agreement.</li>
-<li data-i18n="privacy.s7.b3">Server logs: 30 days.</li>
-<li data-i18n="privacy.s7.b4">Newsletter or marketing lists: not applicable — we do not operate any.</li>
+<li data-i18n="privacy.s9.b1">Enquiries through the form or by email: up to 12 months after our last contact, unless they lead to an engagement.</li>
+<li data-i18n="privacy.s9.b2">Consulting engagements: for the engagement, then as long as accounting law requires — seven years for invoices and accounting records — or as our data processing agreement with you says.</li>
+<li data-i18n="privacy.s9.b3">MSET product accounts: while the account is open. When a subscription ends, its documents become read-only and are deleted within 90 days; billing records are kept for seven years. An unconfirmed sign-up is deleted after seven days.</li>
+<li data-i18n="privacy.s9.b4">Documents in MSET Sign: the retention period the organisation has chosen, shown in advance on each document. Drafts are deleted 30 days after they were created.</li>
+<li data-i18n="privacy.s9.b5">The MSET Sign evidence record: three years after the document is deleted (section 5).</li>
+<li data-i18n="privacy.s9.b6">MSET Trust: as section 6 describes.</li>
+<li data-i18n="privacy.s9.b7">The products' security logs: 30 days.</li>
+<li data-i18n="privacy.s9.b8">Marketing lists: none — we do not operate any.</li>
 </ul>
-<h2 data-i18n="privacy.s8.h2">8. Your rights under GDPR</h2>
-<p data-i18n="privacy.s8.p1">You have the following rights regarding your personal data:</p>
+<h2 id="rights" data-i18n="privacy.s10.h2">10. Your rights</h2>
+<p data-i18n="privacy.s10.p1">You have the right to:</p>
 <ul>
-<li data-i18n="privacy.s8.b1">Right of access — request a copy of the personal data we hold about you.</li>
-<li data-i18n="privacy.s8.b2">Right to rectification — ask us to correct inaccurate or incomplete data.</li>
-<li data-i18n="privacy.s8.b3">Right to erasure ("right to be forgotten") — ask us to delete your data, subject to legal retention obligations.</li>
-<li data-i18n="privacy.s8.b4">Right to restrict processing — ask us to limit how we use your data.</li>
-<li data-i18n="privacy.s8.b5">Right to data portability — receive your data in a structured, machine-readable format.</li>
-<li data-i18n="privacy.s8.b6">Right to object — object to processing based on legitimate interest.</li>
-<li data-i18n="privacy.s8.b7">Right to withdraw consent — withdraw any consent you have previously given.</li>
-<li><span data-i18n="privacy.s8.b8.prefix">Right to lodge a complaint — complain to the Swedish data protection authority (</span><a href="https://www.imy.se" rel="noopener">Integritetsskyddsmyndigheten</a><span data-i18n="privacy.s8.b8.suffix">) if you believe your rights have been violated.</span></li>
+<li data-i18n="privacy.s10.b1">get a copy of the personal data we hold about you;</li>
+<li data-i18n="privacy.s10.b2">have inaccurate or incomplete data corrected;</li>
+<li data-i18n="privacy.s10.b3">have your data erased, subject to legal retention duties and the evidence record in section 5;</li>
+<li data-i18n="privacy.s10.b4">have the processing restricted;</li>
+<li data-i18n="privacy.s10.b5">receive your data in a structured, machine-readable format;</li>
+<li data-i18n="privacy.s10.b6">object to processing based on our legitimate interest;</li>
+<li data-i18n="privacy.s10.b7">withdraw any consent you have given, at any time.</li>
 </ul>
-<p><span data-i18n="privacy.s8.p2.prefix">To exercise any of these rights, email us at</span> <a href="mailto:info@mset.se">info@mset.se</a>. <span data-i18n="privacy.s8.p2.suffix">We will respond within 30 days. There is no charge for a first request.</span>
-  </p>
-<h2 data-i18n="privacy.s9.h2">9. Data security</h2>
-<p data-i18n="privacy.s9.p1">
-    We take appropriate technical and organisational measures to protect personal data against
-    unauthorised access, accidental loss, alteration, or disclosure. These include encryption in
-    transit (HTTPS), access controls on systems holding personal data, and staff awareness training.
-    Our approach aligns with ISO/IEC 27001 principles.
-  </p>
-<p data-i18n="privacy.s9.p2">
-    If a data breach affects your personal data and presents a risk to your rights, we will notify
-    the Swedish data protection authority within 72 hours, and notify affected individuals
-    without undue delay where the risk is high.
-  </p>
-<h2 data-i18n="privacy.s10.h2">10. Cookies</h2>
-<p data-i18n="privacy.s10.p1">
-    This website does not set tracking cookies. No cookies are used for analytics, advertising, or
-    behavioural profiling. Your browser may retain a small preference value if you use our language
-    switcher or dismiss the privacy notice banner — these are strictly functional and do not
-    identify you.
-  </p>
-<h2 data-i18n="privacy.s11.h2">11. Children's data</h2>
-<p data-i18n="privacy.s11.p1">
-    Our services and website are intended for business use. We do not knowingly collect personal
-    data from children under 16. If you believe a child has submitted data through our website,
-    please contact us and we will delete it.
-  </p>
-<h2 data-i18n="privacy.s12.h2">12. Changes to this policy</h2>
-<p data-i18n="privacy.s12.p1">
-    We may update this policy from time to time. The "Last updated" date at the top reflects the
-    most recent substantive change. For material changes affecting how we process your data, we
-    will notify active clients by email.
-  </p>
-<div class="contact-box">
+<p><span data-i18n="privacy.s10.p2.prefix">To use any of these rights, email</span> <a href="mailto:info@mset.se">info@mset.se</a>. <span data-i18n="privacy.s10.p2.suffix">We reply within 30 days, and a first request is free. If your request concerns data a customer controls (sections 5 and 6), we pass it to that customer and tell you we have done so.</span></p>
+<p><span data-i18n="privacy.s10.p3.prefix">You can complain to the Swedish data protection authority,</span> <a href="https://www.imy.se" rel="noopener">Integritetsskyddsmyndigheten (IMY)</a>, <span data-i18n="privacy.s10.p3.suffix">or to the authority in the EU country where you live or work.</span></p>
+<p data-i18n="privacy.s10.p4">We make no decisions about you by automated means alone that have legal or similarly significant effects.</p>
+<h2 id="security" data-i18n="privacy.s11.h2">11. Security</h2>
+<p data-i18n="privacy.s11.p1">Encryption in transit everywhere and at rest for our databases and documents; hashed passwords and encrypted two-factor secrets; separation between customers; access limited to what each person needs; and logs of privileged access. Our support staff cannot open a customer's documents unless the customer grants access, and every use of that access is recorded. Our approach follows ISO/IEC 27001 principles; we are not certified and do not claim to be.</p>
+<p data-i18n="privacy.s11.p2">If a breach puts personal data at risk, we notify IMY within 72 hours and tell the people affected without undue delay where the risk is high. Where we are a customer's processor, we tell the customer, who decides how to inform its own data subjects.</p>
+<h2 id="cookies" data-i18n="privacy.s12.h2">12. Cookies and browser storage</h2>
+<p data-i18n="privacy.s12.p1">This website sets no cookies. It stores two small preferences in your browser — your language, and that you closed the privacy banner — which never leave your device. The MSET products set a session cookie when you sign in; it is strictly necessary and needs no consent. There are no analytics or advertising cookies anywhere.</p>
+<h2 id="children" data-i18n="privacy.s13.h2">13. Children</h2>
+<p data-i18n="privacy.s13.p1">Our services are for business use. We do not knowingly process the data of children under 16. If you believe a child's data has reached us, contact us and we will delete it.</p>
+<h2 id="changes" data-i18n="privacy.s14.h2">14. Changes to this notice</h2>
+<p data-i18n="privacy.s14.p1">We update this notice when what we do changes. The date at the top shows the latest substantive change, and the log below records what changed. For material changes we email the administrators of product accounts in advance, and our active consulting clients.</p>
+<h3 data-i18n="privacy.s14.h3">Change log</h3>
+<ul>
+<li data-i18n="privacy.s14.b1">20 October 2026 — version 2.0. One notice for MSET: the website, consulting and the MSET products. The controller is stated as Design &amp; Animation i Vellinge AB, with the names MSET and Kifarkis Nätsäkerhet. New sections for product accounts, MSET Sign and MSET Trust; GitHub and Google Fonts named; the legal basis for enquiries changed from consent to pre-contract steps and legitimate interest.</li>
+<li data-i18n="privacy.s14.b2">21 April 2026 — version 1.0, covering the website and consulting.</li>
+</ul>
+<div class="contact-box" id="contact-privacy">
 <h2 data-i18n="privacy.contact.h2">Questions about your data?</h2>
-<p><span data-i18n="privacy.contact.p.prefix">We are happy to explain anything in this policy or help you exercise your rights. Email us at</span> <a href="mailto:info@mset.se">info@mset.se</a> <span data-i18n="privacy.contact.p.suffix">with "Privacy enquiry" in the subject line and
-      we will respond within one business day.
-    </p>
+<p><span data-i18n="privacy.contact.p.prefix">We are happy to explain anything in this notice or help you use your rights. Email us at</span> <a href="mailto:info@mset.se">info@mset.se</a> <span data-i18n="privacy.contact.p.suffix">with “Privacy enquiry” in the subject line and we will reply within one business day.</span></p>
 </div>
 </main>
 <footer>
@@ -1008,27 +984,27 @@ section:has(.field-note:last-child) {
 <div class="footer-col">
 <h4 data-i18n="footer.col1">Services</h4>
 <ul>
-<li><a data-i18n="footer.services.gxp" href="index.html#services">GxP Systems</a></li>
-<li><a data-i18n="footer.services.ai" href="ai.html">AI Consulting</a></li>
-<li><a data-i18n="footer.services.sec" href="index.html#security">IT Security</a></li>
-<li><a data-i18n="footer.services.sat" href="sat.html">Security Awareness Training</a></li>
-<li><a data-i18n="footer.services.strat" href="strategy.html">IT Strategy</a></li>
+<li><a data-i18n="footer.services.gxp" href="/#services">GxP Systems</a></li>
+<li><a data-i18n="footer.services.ai" href="/ai">AI Consulting</a></li>
+<li><a data-i18n="footer.services.sec" href="/#security">IT Security</a></li>
+<li><a data-i18n="footer.services.sat" href="/sat">Security Awareness Training</a></li>
+<li><a data-i18n="footer.services.strat" href="/strategy">IT Strategy</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h4 data-i18n="footer.col2">Company</h4>
 <ul>
-<li><a data-i18n="footer.about" href="index.html#about">About MSET</a></li>
-<li><a data-i18n="footer.contact" href="index.html#contact">Contact</a></li>
+<li><a data-i18n="footer.about" href="/#about">About MSET</a></li>
+<li><a data-i18n="footer.contact" href="/#contact">Contact</a></li>
 <li><a href="mailto:info@mset.se">info@mset.se</a></li>
-<li><a data-i18n="footer.privacy" href="privacy.html">Privacy policy</a></li>
+<li><a data-i18n="footer.privacy" href="/privacy">Privacy policy</a></li>
 </ul>
 </div>
 </div>
 <div class="footer-bottom">
-<span data-i18n="footer.copyright">© 2026 Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
+<span data-i18n="footer.copyright">© 2026 Design &amp; Animation i Vellinge AB · MSET · Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
 <span data-i18n="footer.rights">All rights reserved.</span>
-<a class="back-link" data-i18n="footer.back-top" href="index.html">
+<a class="back-link" data-i18n="footer.back-top" href="/">
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="19" x2="5" y1="12" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         Back to MSET
       </a>
@@ -1062,6 +1038,11 @@ section:has(.field-note:last-child) {
   function apply(){
     var dict = getDict();
     var lang = document.body.getAttribute('data-lang') || 'en';
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      if (!el.hasAttribute('data-i18n-aria-en')) el.setAttribute('data-i18n-aria-en', el.getAttribute('aria-label') || '');
+      var en = el.getAttribute('data-i18n-aria-en'), e = dict[el.getAttribute('data-i18n-aria')];
+      el.setAttribute('aria-label', (lang !== 'en' && e && e[lang]) ? e[lang] : en);
+    });
     document.querySelectorAll('[data-i18n]').forEach(function(el){
       var key = el.getAttribute('data-i18n');
       if (!el.hasAttribute('data-i18n-en')){

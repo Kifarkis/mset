@@ -10,7 +10,7 @@
 <link href="favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/>
 <link href="favicon.ico" rel="alternate icon"/>
-<title>MSET — Säkerhet som en tjänst · Life Science IT &amp; AI Consulting</title>
+<title data-i18n="title.index">MSET — Säkerhet som en tjänst · Life Science IT &amp; AI Consulting</title>
 <meta content="Independent IT consulting for pharma, biotech and medtech — GxP validation, AI governance, cybersecurity, and IT leadership. Based in Skåne, working across the Nordics." name="description"/>
 <!-- Canonical URL -->
 <link href="https://mset.se/" rel="canonical"/>
@@ -45,7 +45,7 @@
   --emerald:#5BA364; --emerald-bright:#7EC389; --emerald-glow:#9BD7A4; --emerald-deep:#3B7D44;
   --seal:#B8934A;
   --danger:#C04040; --warn:#D97B2B;
-  --muted:#6B7F94; --muted-soft:#9AA7B6;
+  --muted:#556a82; --muted-soft:#9AA7B6;
   --line:rgba(10,22,40,.08); --line-strong:rgba(10,22,40,.14);
   --line-dark:rgba(255,255,255,.08); --line-dark-2:rgba(255,255,255,.14);
   --f-display:'Fraunces',Georgia,serif;
@@ -1129,6 +1129,7 @@ footer{
 .reveal-left.visible{opacity:1;transform:translateX(0)}
 .reveal-right{opacity:0;transform:translateX(24px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
 .reveal-right.visible{opacity:1;transform:translateX(0)}
+@media (max-width:960px){.reveal-left,.reveal-right{transform:translateY(16px)}}
 .stagger > *{opacity:0;transform:translateY(16px);transition:opacity .5s var(--ease), transform .5s var(--ease)}
 .stagger.visible > *{opacity:1;transform:translateY(0)}
 .stagger.visible > *:nth-child(1){transition-delay:.05s}
@@ -1157,6 +1158,7 @@ footer{
   .visual{max-width:576px}
 }
 @media (max-width:960px){
+  .about-numbers{grid-template-columns:repeat(2,1fr);gap:1.5rem}
   .nav-hamburger{display:flex}
   .nav-links{display:none}
   .hero-grid{grid-template-columns:1fr;gap:3.5rem}
@@ -1638,6 +1640,7 @@ section:has(.field-note:last-child) {
 }
 /* ═══ END SESSION 2 ═══ */
 
+html{overflow-x:clip}
 </style>
 </head>
 <body data-lang="en">
@@ -1945,7 +1948,7 @@ section:has(.field-note:last-child) {
 ═══════════════════════════════════════════════════════════ -->
 <nav class="site-nav" id="siteNav">
 <div class="nav-inner">
-<a aria-label="MSET — Kifarkis Nätsäkerhet, back to top" class="nav-logo" href="#">
+<a aria-label="MSET — Kifarkis Nätsäkerhet, back to top" data-i18n-aria="aria.logo-top" class="nav-logo" href="#">
 <svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
 <span class="wordmark">MSET<span class="dot"></span></span>
 </a>
@@ -1953,7 +1956,7 @@ section:has(.field-note:last-child) {
 <li><a data-i18n="nav.gxp" href="#services">GxP</a></li>
 <li class="has-deep" data-deep="ai">
 <a data-i18n="nav.ai" href="#ai">AI</a>
-<button class="deep-toggle" type="button" aria-label="AI — show more" aria-expanded="false" aria-controls="deep-ai">
+<button class="deep-toggle" type="button" aria-label="AI — show more" data-i18n-aria="aria.ai-more" aria-expanded="false" aria-controls="deep-ai">
 <svg aria-hidden="true"><use href="#chevron-down"></use></svg>
 </button>
 <div class="deep-card" id="deep-ai" role="menu">
@@ -1961,7 +1964,7 @@ section:has(.field-note:last-child) {
 <div class="deep-row-label"><span data-i18n="nav.ai.overview">Overview</span></div>
 <div class="deep-row-desc" data-i18n="nav.ai.desc">The 4 service cards on the homepage.</div>
 </a>
-<a class="deep-row primary" href="ai.html" role="menuitem">
+<a class="deep-row primary" href="/ai" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.ai.deep">Deep dive</span> <span class="arrow">→</span></div>
 <div class="deep-row-desc" data-i18n="nav.ai.deep-desc">Full AI Consulting page — 9 use cases, 3 architecture patterns, 7 governance docs.</div>
 </a>
@@ -1969,14 +1972,14 @@ section:has(.field-note:last-child) {
 </li>
 <li class="has-deep" data-deep="security">
 <a data-i18n="nav.security" href="#security">Security</a>
-<button class="deep-toggle" type="button" aria-label="Security — show more" aria-expanded="false" aria-controls="deep-security">
+<button class="deep-toggle" type="button" aria-label="Security — show more" data-i18n-aria="aria.sec-more" aria-expanded="false" aria-controls="deep-security">
 <svg aria-hidden="true"><use href="#chevron-down"></use></svg>
 </button>
 <div class="deep-card" id="deep-security" role="menu"><a class="deep-row" href="#security" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.security.overview">Overview</span></div>
 <div class="deep-row-desc" data-i18n="nav.security.desc">The IT security service cards on the homepage.</div>
 </a>
-<a class="deep-row primary" href="sat.html" role="menuitem">
+<a class="deep-row primary" href="/sat" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.security.deep">Deep dive</span> <span class="arrow">→</span></div>
 <div class="deep-row-desc" data-i18n="nav.security.deep-desc">Full Security Awareness Training page — phishing simulations, training programmes.</div>
 </a>
@@ -1984,7 +1987,7 @@ section:has(.field-note:last-child) {
 </li>
 <li class="has-deep" data-deep="strategy">
 <a data-i18n="nav.strategy" href="#strategy">Strategy</a>
-<button class="deep-toggle" type="button" aria-label="Strategy — show more" aria-expanded="false" aria-controls="deep-strategy">
+<button class="deep-toggle" type="button" aria-label="Strategy — show more" data-i18n-aria="aria.str-more" aria-expanded="false" aria-controls="deep-strategy">
 <svg aria-hidden="true"><use href="#chevron-down"></use></svg>
 </button>
 <div class="deep-card" id="deep-strategy" role="menu">
@@ -1992,7 +1995,7 @@ section:has(.field-note:last-child) {
 <div class="deep-row-label"><span data-i18n="nav.strategy.overview">Overview</span></div>
 <div class="deep-row-desc" data-i18n="nav.strategy.desc">The IT Strategy card on the homepage.</div>
 </a>
-<a class="deep-row primary" href="strategy.html" role="menuitem">
+<a class="deep-row primary" href="/strategy" role="menuitem">
 <div class="deep-row-label"><span data-i18n="nav.strategy.deep">Deep dive</span> <span class="arrow">→</span></div>
 <div class="deep-row-desc" data-i18n="nav.strategy.deep-desc">Full Strategy page — three stages (Assessment, Strategy &amp; Roadmap, Interim IT Director).</div>
 </a>
@@ -2018,7 +2021,7 @@ section:has(.field-note:last-child) {
 </div>
 </li>
 </ul>
-<button aria-label="Menu" class="nav-hamburger" id="hamburger">
+<button aria-label="Menu" data-i18n-aria="aria.menu" class="nav-hamburger" id="hamburger">
 <span></span><span></span><span></span>
 </button>
 </div>
@@ -2026,15 +2029,15 @@ section:has(.field-note:last-child) {
 <div class="mobile-menu" id="mobileMenu">
 <a data-i18n="nav.gxp" href="#services">GxP</a>
 <a data-i18n="nav.ai" href="#ai">AI</a>
-<a data-i18n="nav.ai.deep" class="deep-child" href="ai.html">Deep dive: AI Consulting</a>
+<a data-i18n="nav.ai.deep" class="deep-child" href="/ai">Deep dive: AI Consulting</a>
 <a data-i18n="nav.security" href="#security">Security</a>
-<a data-i18n="nav.security.deep" class="deep-child" href="sat.html">Deep dive: Security Awareness Training</a>
+<a data-i18n="nav.security.deep" class="deep-child" href="/sat">Deep dive: Security Awareness Training</a>
 <a data-i18n="nav.strategy" href="#strategy">Strategy</a>
-<a data-i18n="nav.strategy.deep" class="deep-child" href="strategy.html">Deep dive: Strategy</a>
+<a data-i18n="nav.strategy.deep" class="deep-child" href="/strategy">Deep dive: Strategy</a>
 <a data-i18n="nav.about" href="#about">About</a>
 <a class="nav-cta" data-i18n="nav.cta" href="#contact">Book a call</a>
 
-<div class="lang-switch" role="group" aria-label="Language">
+<div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="aria.language">
 <div class="lang-pop" id="langPopMobile">
 <div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
 <ul>
@@ -2226,7 +2229,7 @@ section:has(.field-note:last-child) {
           We understand the validation requirements, the data governance expectations, and the regulatory
           scrutiny that comes with it — and we help you navigate all of it.
         </p>
-<a class="security-deep-link" data-i18n="ai.deep-dive" href="ai.html">
+<a class="security-deep-link" data-i18n="ai.deep-dive" href="/ai">
           Deep dive: AI Consulting services
           <svg height="14" width="14"><use href="#arrow"></use></svg>
 </a>
@@ -2297,7 +2300,7 @@ section:has(.field-note:last-child) {
           combining hands-on phishing simulations with structured Security Awareness Training that
           actually changes behaviour.
         </p>
-<a class="security-deep-link" data-i18n="sec.deep-dive" href="sat.html">
+<a class="security-deep-link" data-i18n="sec.deep-dive" href="/sat">
           Deep dive: Security Awareness Training programme
           <svg height="14" width="14"><use href="#arrow"></use></svg>
 </a>
@@ -2371,7 +2374,7 @@ section:has(.field-note:last-child) {
 <li data-i18n="sec.card2.b4">Quarterly reporting &amp; compliance trail</li>
 <li data-i18n="sec.card2.b5">Annual refresh &amp; attestation programme</li>
 </ul>
-<a class="expand-link" data-i18n="sec.card2.explore" href="sat.html">
+<a class="expand-link" data-i18n="sec.card2.explore" href="/sat">
           Explore the full programme <svg><use href="#arrow"></use></svg>
 </a>
 </div>
@@ -2443,7 +2446,7 @@ section:has(.field-note:last-child) {
           perspective to define what good looks like. MSET provides that outside eye: honest assessment,
           clear priorities, and a practical roadmap to get you there.
         </p>
-<a class="security-deep-link" data-i18n="strat.deep-dive" href="strategy.html">
+<a class="security-deep-link" data-i18n="strat.deep-dive" href="/strategy">
           Deep dive: IT Strategy services
           <svg height="14" width="14"><use href="#arrow"></use></svg>
 </a>
@@ -2569,7 +2572,7 @@ section:has(.field-note:last-child) {
 <h2 class="section-title"><span data-i18n="about.title.1">Independent expertise.</span> <em data-i18n="about.title.2">Real-world results.</em></h2>
 <p class="section-lede" data-i18n="about.p1">
           MSET (Mjukvara som en tjänst) is an independent consultancy based in Skåne, Sweden,
-          operating as Kifarkis Nätsäkerhet. We combine hands-on technical experience with a pragmatic
+          also known as Kifarkis Nätsäkerhet. We combine hands-on technical experience with a pragmatic
           understanding of what it takes to work inside a regulated industry.
         </p>
 <p data-i18n="about.p2" style="color:#445870;line-height:1.65;margin-bottom:0">
@@ -2600,7 +2603,7 @@ section:has(.field-note:last-child) {
 <p class="credential-body" data-i18n="about.cred2.body">Hands-on expertise deploying AI and ML tools in organisations where compliance is non-negotiable.</p>
 </div>
 <div class="credential">
-<h4 class="credential-title" data-i18n="about.cred3.title">Independent &amp; Vendor-Neutral</h4>
+<h4 class="credential-title" data-i18n="about.cred3.title">Independent Advice</h4>
 <p class="credential-body" data-i18n="about.cred3.body">We recommend what's right for your situation — not what earns a commission. Honest advice, practical solutions.</p>
 </div>
 <div class="credential">
@@ -2612,7 +2615,7 @@ section:has(.field-note:last-child) {
 <div class="industries">
 <span class="industries-label" data-i18n="about.work-with.title">Who we work with</span>
 <p class="industries-intro" data-i18n="about.work-with.body">Life-science IT is our home — pharma, biotech, medtech, CRO/CMO, diagnostics, gene therapy. The same principles apply wherever compliance, audit trails, and system validation matter.</p>
-<span class="industries-subhead">We're at our best when you're</span>
+<span class="industries-subhead" data-i18n="about.best-when">We're at our best when you're</span>
 <div class="industry-chips">
 <span class="industry-chip" data-i18n="about.chip.1">Deploying AI under GxP</span>
 <span class="industry-chip" data-i18n="about.chip.2">Scaling without a CIO</span>
@@ -2620,7 +2623,7 @@ section:has(.field-note:last-child) {
 <span class="industry-chip" data-i18n="about.chip.4">Legacy system modernisation</span>
 <span class="industry-chip" data-i18n="about.chip.5">M&amp;A IT integration</span>
 <span class="industry-chip" data-i18n="about.chip.6">Building a security culture</span>
-<span class="industry-chip">NIS2 &amp; ISO 27001 readiness</span>
+<span class="industry-chip" data-i18n="about.chip.10">NIS2 &amp; ISO 27001 readiness</span>
 <span class="industry-chip" data-i18n="about.chip.7">Validating a new GxP system</span>
 <span class="industry-chip" data-i18n="about.chip.8">Cloud migration with compliance</span>
 <span class="industry-chip" data-i18n="about.chip.9">Phishing programme rollout</span>
@@ -2646,7 +2649,7 @@ section:has(.field-note:last-child) {
 <div class="num-card">
 <p class="num-label" data-i18n="about.stat4.label">Independence</p>
 <p class="num-val"><em>100<span class="plus">%</span></em></p>
-<p class="num-caption" data-i18n="about.stat4.body">Vendor-neutral advice. We partner where it serves you.</p>
+<p class="num-caption" data-i18n="about.stat4.body">Independent of any vendor's sales targets. We partner where it serves you.</p>
 </div>
 </div>
 </div>
@@ -2771,8 +2774,8 @@ section:has(.field-note:last-child) {
 <li><a data-i18n="footer.services.gxp" href="#services">GxP Systems</a></li>
 <li><a data-i18n="footer.services.ai" href="#ai">AI Consulting</a></li>
 <li><a data-i18n="footer.services.sec" href="#security">IT Security</a></li>
-<li><a data-i18n="footer.services.sat" href="sat.html">Security Awareness Training</a></li>
-<li><a data-i18n="footer.services.strat" href="strategy.html">IT Strategy</a></li>
+<li><a data-i18n="footer.services.sat" href="/sat">Security Awareness Training</a></li>
+<li><a data-i18n="footer.services.strat" href="/strategy">IT Strategy</a></li>
 </ul>
 </div>
 <div class="footer-col">
@@ -2781,12 +2784,12 @@ section:has(.field-note:last-child) {
 <li><a data-i18n="footer.about" href="#about">About MSET</a></li>
 <li><a data-i18n="footer.contact" href="#contact">Contact</a></li>
 <li><a href="mailto:info@mset.se">info@mset.se</a></li>
-<li><a data-i18n="footer.privacy" href="privacy.html">Privacy policy</a></li>
+<li><a data-i18n="footer.privacy" href="/privacy">Privacy policy</a></li>
 </ul>
 </div>
 </div>
 <div class="footer-bottom">
-<span data-i18n="footer.copyright">© 2026 Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
+<span data-i18n="footer.copyright">© 2026 Design &amp; Animation i Vellinge AB · MSET · Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
 <span data-i18n="footer.rights">All rights reserved.</span>
 </div>
 </div>
@@ -2794,11 +2797,11 @@ section:has(.field-note:last-child) {
 <!-- Floating footer — slim persistent bar, slides in after scrolling 300px -->
 <div aria-hidden="true" class="floating-footer" id="floatingFooter">
 <div class="ff-inner">
-<a aria-label="Back to top" class="ff-brand" href="#">
+<a aria-label="Back to top" data-i18n-aria="aria.back-top" class="ff-brand" href="#">
 <svg aria-hidden="true"><use href="#logo-vault-dark"></use></svg>
 <span class="wordmark">MSET<span class="dot"></span></span>
 </a>
-<a aria-label="Back to top" class="ff-action" data-i18n="floating.cta" href="#">
+<a aria-label="Back to top" data-i18n-aria="aria.back-top" class="ff-action" data-i18n="floating.cta" href="#">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="19" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
       Back to top
     </a>
@@ -2806,7 +2809,7 @@ section:has(.field-note:last-child) {
 </div>
 <!-- Privacy notice — shown once until dismissed, stored in localStorage -->
 <div aria-live="polite" class="privacy-notice" id="privacyNotice" role="status">
-<p><span data-i18n="privacy-notice.body">We store and handle your contact-form details only to reply to you. No tracking cookies, no analytics profiling.</span> <span data-i18n="privacy-notice.see">See our</span> <a data-i18n="privacy-notice.link" href="privacy.html">privacy policy</a> <span data-i18n="privacy-notice.for-full">for the full picture.</span></p>
+<p><span data-i18n="privacy-notice.body">We store and handle your contact-form details only to reply to you. No tracking cookies, no analytics profiling.</span> <span data-i18n="privacy-notice.see">See our</span> <a data-i18n="privacy-notice.link" href="/privacy">privacy policy</a> <span data-i18n="privacy-notice.for-full">for the full picture.</span></p>
 <div class="privacy-notice-actions">
 <button class="privacy-notice-dismiss" data-i18n="privacy-notice.got-it" id="privacyNoticeDismiss" type="button">Got it</button>
 </div>
@@ -3008,6 +3011,11 @@ section:has(.field-note:last-child) {
   function apply(){
     var dict = getDict();
     var lang = document.body.getAttribute('data-lang') || 'en';
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      if (!el.hasAttribute('data-i18n-aria-en')) el.setAttribute('data-i18n-aria-en', el.getAttribute('aria-label') || '');
+      var en = el.getAttribute('data-i18n-aria-en'), e = dict[el.getAttribute('data-i18n-aria')];
+      el.setAttribute('aria-label', (lang !== 'en' && e && e[lang]) ? e[lang] : en);
+    });
     document.querySelectorAll('[data-i18n]').forEach(function(el){
       var key = el.getAttribute('data-i18n');
       // Stash English original on first run
@@ -3234,6 +3242,10 @@ section:has(.field-note:last-child) {
     init();
   }
 })();
+</script>
+<script>
+/* WEB-1: /?topic=ai#contact preselects the service area (links from the deep pages) */
+(function(){try{var t=new URLSearchParams(location.search).get('topic');var m={ai:'AI Strategy & Implementation',sat:'Security Awareness Training',strategy:'IT Strategy & Leadership',gxp:'GxP Systems & Validation'};var s=document.querySelector('#contact select[name=interest]');if(s&&m[t])s.value=m[t];}catch(e){}})();
 </script>
 </body>
 </html>
