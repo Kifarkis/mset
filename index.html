@@ -1,0 +1,3181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%230A1628'/&gt;&lt;path d='M16 7 L24 11.5 L24 20.5 L16 25 L8 20.5 L8 11.5 Z' fill='none' stroke='%237EC389' stroke-width='1.8' stroke-linejoin='round'/&gt;&lt;circle cx='16' cy='17' r='1.4' fill='%237EC389'/&gt;&lt;rect x='15.3' y='17.6' width='1.4' height='2.8' rx='.4' fill='%237EC389'/&gt;&lt;/svg&gt;" rel="icon" type="image/svg+xml"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/>
+<link href="favicon.ico" rel="alternate icon"/>
+<title data-i18n="title.index">MSET — Säkerhet som en tjänst · Life Science IT &amp; AI Consulting</title>
+<meta content="Independent IT consulting for pharma, biotech and medtech — GxP validation, AI governance, cybersecurity, and IT leadership. Based in Skåne, working across the Nordics." name="description"/>
+<link href="https://mset.se/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="https://mset.se/" property="og:url"/>
+<meta content="MSET — Säkerhet som en tjänst" property="og:title"/>
+<meta content="Independent IT consulting for pharma, biotech and medtech. GxP validation, AI governance, cybersecurity, and IT leadership — based in Skåne, working across the Nordics." property="og:description"/>
+<meta content="https://mset.se/og-image.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="MSET — Säkerhet som en tjänst. Life Science IT &amp; AI Consulting." property="og:image:alt"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="MSET" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="MSET — Life Science IT &amp; AI Consulting" name="twitter:title"/>
+<meta content="Independent IT consulting for pharma, biotech and medtech. GxP-validated, AI-governance-ready. Skåne → Nordics." name="twitter:description"/>
+<meta content="https://mset.se/og-image.png" name="twitter:image"/>
+<meta content="MSET — Säkerhet som en tjänst" name="twitter:image:alt"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0A1628; --ink-2:#0F2338; --ink-3:#16304A; --ink-4:#1E3A55; --ink-5:#2A4A6A;
+  --sage-50:#F5F3ED; --sage-100:#ECE8DB; --sage-200:#D9D3BF;
+  --forest:#1B4A22; --forest-2:#0F3414; --forest-light:#2E6E38;
+  --emerald:#5BA364; --emerald-bright:#7EC389; --emerald-glow:#9BD7A4; --emerald-deep:#3B7D44;
+  --seal:#B8934A;
+  --danger:#C04040; --warn:#D97B2B;
+  --muted:#556a82; --muted-soft:#9AA7B6;
+  --line:rgba(10,22,40,.08); --line-strong:rgba(10,22,40,.14);
+  --line-dark:rgba(255,255,255,.08); --line-dark-2:rgba(255,255,255,.14);
+  --f-display:'Fraunces',Georgia,serif;
+  --f-body:'Plus Jakarta Sans',system-ui,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,monospace;
+  --r-sm:8px; --r-md:14px; --r-lg:20px; --r-xl:28px; --r-full:999px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--f-body);background:var(--sage-50);color:var(--ink);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+svg{display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+input,textarea,select{font-family:inherit;font-size:inherit;color:inherit}
+
+.container{max-width:1080px;margin:0 auto;padding:0 2rem}
+.wide{max-width:1280px;margin:0 auto;padding:0 2rem}
+
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--forest);
+  margin-bottom:1rem;display:inline-flex;align-items:center;gap:.5rem;
+}
+.eyebrow.dark{color:var(--emerald-bright)}
+.eyebrow.num{color:var(--muted)}
+
+.section-title{
+  font-family:var(--f-display);font-weight:500;
+  font-size:clamp(1.9rem,3.4vw,2.75rem);
+  line-height:1.07;letter-spacing:-.025em;
+  margin-bottom:1.25rem;color:var(--ink);
+}
+.section-title em{font-style:italic;font-weight:500;color:var(--forest)}
+.dark .section-title{color:#fff}
+.dark .section-title em{color:var(--emerald-bright)}
+
+.section-lede{
+  font-size:1.08rem;line-height:1.65;color:#445870;
+  max-width:640px;margin-bottom:3rem;
+}
+.section-lede + .section-lede{margin-top:-2rem}
+.dark .section-lede{color:rgba(255,255,255,.62)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.85rem 1.5rem;border-radius:var(--r-full);
+  font-weight:600;font-size:.9rem;letter-spacing:-.002em;
+  transition:all .2s var(--ease);cursor:pointer;
+  border:1px solid transparent;font-family:var(--f-body);
+}
+.btn-primary{background:var(--emerald);color:var(--ink)}
+.btn-primary:hover{
+  background:var(--emerald-bright);transform:translateY(-1px);
+  box-shadow:0 12px 24px -8px rgba(91,163,100,.4);
+}
+.btn-ghost{color:var(--ink);border-color:var(--line-strong);background:transparent}
+.btn-ghost:hover{border-color:var(--forest);color:var(--forest)}
+.dark .btn-ghost{color:#fff;border-color:rgba(255,255,255,.22)}
+.dark .btn-ghost:hover{border-color:var(--emerald-bright);color:var(--emerald-bright)}
+.btn-arrow{transition:transform .2s}
+.btn:hover .btn-arrow{transform:translateX(3px)}
+
+nav.site-nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:#0A1628;
+  border-bottom:1px solid var(--line-dark);
+  transition:background .2s;
+}
+nav.site-nav.scrolled{background:#0A1628}
+.nav-inner{
+  max-width:1280px;margin:0 auto;padding:.85rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.nav-logo{display:flex;align-items:center;gap:.75rem}
+.nav-logo .mark{width:44px;height:38px}
+.nav-logo .wordmark{
+  font-family:var(--f-display);font-style:italic;font-weight:500;
+  font-size:1.45rem;line-height:.9;letter-spacing:-.01em;color:var(--sage-50);
+}
+.nav-logo .dot{
+  display:inline-block;width:.22em;height:.22em;
+  background:var(--emerald-bright);border-radius:50%;
+  vertical-align:.14em;margin-left:.08em;
+}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{
+  font-size:.8rem;font-weight:500;
+  color:rgba(255,255,255,.68);letter-spacing:.005em;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--emerald-bright)}
+.nav-cta{
+  padding:.55rem 1.15rem;background:var(--emerald);
+  color:var(--ink)!important;border-radius:var(--r-full);
+  font-weight:600!important;transition:all .2s;
+}
+.nav-cta:hover{background:var(--emerald-bright);transform:translateY(-1px)}
+
+.nav-hamburger{
+  display:none;width:40px;height:40px;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  background:transparent;
+}
+.nav-hamburger span{
+  width:22px;height:2px;background:#fff;border-radius:2px;
+  transition:all .3s ease;
+}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{
+  display:none;position:fixed;top:62px;left:0;right:0;
+  background:rgba(10,22,40,.98);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line-dark);
+  z-index:99;padding:1.25rem 1.5rem;
+  flex-direction:column;
+  max-height:calc(100vh - 62px);
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+  opacity:0;transform:translateY(-8px);
+  transition:opacity .25s ease, transform .25s ease;
+}
+.mobile-menu.open{display:flex;opacity:1;transform:translateY(0)}
+.mobile-menu a{
+  color:rgba(255,255,255,.8);font-size:1rem;font-weight:500;
+  padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);
+}
+.mobile-menu a:last-child{border-bottom:none;margin-top:.5rem}
+.mobile-menu .nav-cta{text-align:center;margin-top:.75rem}
+
+.hero{
+  position:relative;padding:9rem 0 6rem;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(91,163,100,.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 90%, rgba(27,74,34,.14) 0%, transparent 55%),
+    linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+  color:#fff;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size:64px 64px;pointer-events:none;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.hero-inner{max-width:1280px;margin:0 auto;padding:0 2rem;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4.5rem;align-items:center}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.72rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--emerald-bright);
+  padding:.4rem 1rem .4rem .85rem;
+  border:1px solid rgba(126,195,137,.28);
+  background:rgba(126,195,137,.06);
+  border-radius:var(--r-full);margin-bottom:2rem;
+}
+.hero-eyebrow::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--emerald-bright);
+  box-shadow:0 0 0 4px rgba(126,195,137,.16);
+  animation:pulse 2.6s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+
+.hero h1{
+  font-family:var(--f-display);font-weight:500;
+  font-size:clamp(2.2rem,4.6vw,3.9rem);
+  line-height:1.02;letter-spacing:-.028em;
+  color:#fff;margin-bottom:1.25rem;max-width:640px;
+}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--emerald-bright)}
+.hero-promise{
+  font-family:var(--f-display);
+  font-size:clamp(1rem,1.4vw,1.2rem);
+  font-weight:400;color:rgba(255,255,255,.92);
+  margin-bottom:1.5rem;letter-spacing:-.005em;line-height:1.4;
+}
+.hero-promise strong{color:var(--emerald-bright);font-weight:500}
+.hero-lede{
+  font-size:1rem;line-height:1.65;
+  color:rgba(255,255,255,.6);max-width:480px;
+  margin-bottom:2.25rem;font-weight:350;
+}
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-strip{
+  display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
+  padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.08);
+  font-size:.72rem;font-family:var(--f-mono);
+  letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);
+}
+.hero-strip span{display:inline-flex;align-items:center;gap:.5rem}
+.hero-strip span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--emerald-bright)}
+
+.visual{
+  position:relative;width:100%;aspect-ratio:1/1;max-width:520px;margin-left:auto;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(91,163,100,.08) 0%, transparent 70%),
+    rgba(255,255,255,.015);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:var(--r-xl);overflow:hidden;
+  backdrop-filter:blur(10px);
+}
+.visual-label{
+  position:absolute;top:1.25rem;left:1.5rem;
+  display:flex;align-items:center;gap:.55rem;
+  font-family:var(--f-mono);font-size:.68rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.55);z-index:3;
+}
+.visual-label::before{
+  content:'';width:7px;height:7px;border-radius:50%;
+  background:var(--emerald-bright);
+  box-shadow:0 0 10px rgba(126,195,137,.7);
+  animation:pulse 2s ease-in-out infinite;
+}
+.visual-title{
+  position:absolute;top:1.25rem;right:1.5rem;
+  font-family:var(--f-mono);font-size:.66rem;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.35);z-index:3;
+}
+.visual-caption{
+  position:absolute;bottom:1.35rem;left:1.5rem;right:1.5rem;
+  font-size:.78rem;color:rgba(255,255,255,.5);
+  line-height:1.45;z-index:3;
+}
+.visual-caption strong{color:var(--emerald-bright);font-weight:500}
+
+.audit-stream{
+  position:absolute;inset:0;
+  padding:3.75rem 1.5rem 4rem;overflow:hidden;
+  mask-image:linear-gradient(180deg, transparent 0%, black 15%, black 82%, transparent 98%);
+  -webkit-mask-image:linear-gradient(180deg, transparent 0%, black 15%, black 82%, transparent 98%);
+}
+.audit-stream-inner{animation:streamScroll 28s linear infinite;will-change:transform}
+@keyframes streamScroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.audit-row{
+  display:grid;grid-template-columns:54px 1fr auto;gap:.8rem;
+  padding:.55rem 0;font-family:var(--f-mono);
+  font-size:.68rem;line-height:1.3;
+  border-bottom:1px solid rgba(255,255,255,.04);align-items:center;
+}
+.audit-row .time{color:rgba(255,255,255,.32);font-weight:500;letter-spacing:.02em}
+.audit-row .action{
+  color:rgba(255,255,255,.75);font-family:var(--f-body);
+  font-size:.78rem;font-weight:400;
+  display:flex;flex-direction:column;gap:.1rem;min-width:0;
+}
+.audit-row .action .actor{color:var(--emerald-bright);font-family:var(--f-mono);font-size:.66rem;letter-spacing:.01em}
+.audit-row .action .act{color:rgba(255,255,255,.78);text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.audit-row .check{
+  display:inline-flex;align-items:center;gap:.3rem;
+  padding:.12rem .45rem;border-radius:4px;
+  font-size:.58rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  background:rgba(126,195,137,.1);color:var(--emerald-bright);
+  border:1px solid rgba(126,195,137,.2);
+}
+.audit-row .check.warn{background:rgba(229,179,92,.1);color:#E5B35C;border-color:rgba(229,179,92,.25)}
+.audit-row .check.sys{background:rgba(255,255,255,.04);color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.08)}
+.audit-row .check::before{content:'';width:4px;height:4px;border-radius:50%;background:currentColor}
+
+.pillars{padding:7rem 0 6rem;background:var(--sage-50)}
+.pillars-inner{max-width:1080px;margin:0 auto;padding:0 2rem}
+.pillars-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);
+  margin-top:1rem;
+}
+.pillar{
+  padding:2rem 1.5rem;border-right:1px solid var(--line);position:relative;
+  transition:background .2s;cursor:pointer;
+  display:flex;flex-direction:column;
+}
+.pillar:hover{background:var(--sage-100)}
+.pillar:last-child{border-right:none}
+.pillar-num{
+  font-family:var(--f-mono);font-size:.7rem;font-weight:500;
+  color:var(--muted);letter-spacing:.12em;
+  margin-bottom:1.25rem;display:block;
+}
+.pillar-icon{width:44px;height:44px;margin-bottom:1.25rem}
+.pillar-title{
+  font-family:var(--f-display);font-size:1.15rem;font-weight:600;
+  line-height:1.2;margin-bottom:.5rem;
+  letter-spacing:-.01em;color:var(--ink);
+}
+.pillar-body{font-size:.88rem;color:#556a82;line-height:1.55;flex-grow:1}
+.pillar-link{
+  margin-top:1rem;font-size:.78rem;font-weight:600;
+  color:var(--forest);display:inline-flex;align-items:center;gap:.3rem;
+  font-family:var(--f-mono);letter-spacing:.04em;text-transform:uppercase;
+  align-self:flex-start;
+}
+.pillar-link svg{width:11px;height:11px;transition:transform .2s}
+.pillar:hover .pillar-link svg{transform:translateX(3px)}
+
+.service-section{padding:7rem 0;position:relative;overflow:hidden}
+.service-section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.service-section.dark{background:var(--ink);color:#fff}
+.service-section.dark::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(91,163,100,.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 80%, rgba(27,74,34,.1) 0%, transparent 55%);
+  pointer-events:none;
+}
+.service-inner{max-width:1080px;margin:0 auto;padding:0 2rem;position:relative}
+.service-header{
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;
+  align-items:end;margin-bottom:3rem;
+}
+.service-header > div:first-child{max-width:520px}
+.service-header > div:last-child{align-self:end;text-align:right}
+.service-cta{
+  font-family:var(--f-mono);font-size:.72rem;
+  color:var(--muted);letter-spacing:.1em;text-transform:uppercase;
+  padding-bottom:.75rem;border-bottom:1px solid var(--line);
+  display:inline-block;
+}
+.service-section.dark .service-cta{color:rgba(255,255,255,.45);border-bottom-color:var(--line-dark)}
+
+.service-items{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--line);
+  border:1px solid var(--line-strong);
+  border-radius:var(--r-md);overflow:hidden;
+}
+.service-section.dark .service-items{background:var(--line-dark);border-color:var(--line-dark-2)}
+.service-item{
+  padding:2rem 1.75rem;background:var(--sage-50);
+  display:flex;flex-direction:column;gap:1rem;
+  transition:background .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s;
+  position:relative;border:1px solid transparent;
+}
+.service-section.alt .service-item{background:#fff}
+.service-section.dark .service-item{background:var(--ink-2)}
+.service-item:not(.featured):hover{
+  background:var(--sage-100);
+  transform:translateY(-3px);
+  box-shadow:0 10px 24px rgba(10,22,40,.06), 0 1px 3px rgba(10,22,40,.04);
+  border-color:rgba(27,74,34,.12);
+}
+.service-section.alt .service-item:not(.featured):hover{
+  background:var(--sage-50);border-color:rgba(27,74,34,.12);
+}
+.service-section.dark .service-item:not(.featured):hover{
+  background:var(--ink-3);
+  border-color:rgba(126,195,137,.25);
+  box-shadow:0 10px 24px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.service-item.featured{
+  grid-column:span 2;background:var(--ink);color:#fff;
+  padding:2.5rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;
+}
+.service-section.dark .service-item.featured{
+  background:linear-gradient(135deg, var(--forest) 0%, var(--ink-3) 100%);
+}
+.service-item-icon{
+  width:48px;height:48px;border-radius:12px;
+  background:var(--sage-100);
+  color:var(--ink);
+  display:inline-flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-bottom:.5rem;
+  transition:transform .25s var(--ease-spring), background .25s;
+}
+.service-item-icon svg{width:26px;height:26px}
+.service-item:hover .service-item-icon{transform:scale(1.06) rotate(-3deg)}
+
+.service-item.featured .service-item-icon,
+.security-card.featured .service-item-icon{margin-bottom:1rem}
+
+.service-section.alt .service-item-icon{background:var(--sage-100);color:var(--ink)}
+
+.service-section.dark .service-item-icon{
+  background:var(--sage-50);color:var(--ink);
+}
+
+.service-item.featured .service-item-icon{
+  background:var(--sage-50);color:var(--ink);
+}
+
+.security-card.featured .service-item-icon{
+  background:var(--sage-50);color:var(--ink);
+}
+.security-card:not(.featured) .service-item-icon{
+  background:var(--sage-100);color:var(--ink);
+}
+.security-card:hover .service-item-icon{transform:scale(1.06) rotate(-3deg)}
+
+.security-card:has(.partner-badge) .service-item-icon{
+  background:transparent;padding:0;
+  width:48px;height:48px;overflow:hidden;border-radius:12px;
+}
+.security-card:has(.partner-badge) .service-item-icon svg{
+  width:48px;height:48px;
+}
+
+.service-item-title{
+  font-family:var(--f-display);font-size:1.15rem;font-weight:600;
+  letter-spacing:-.01em;line-height:1.2;color:var(--ink);
+}
+.service-section.dark .service-item-title,
+.service-item.featured .service-item-title{color:#fff}
+.service-item-body{font-size:.88rem;line-height:1.55;color:#556a82}
+.service-section.dark .service-item-body,
+.service-item.featured .service-item-body{color:rgba(255,255,255,.65)}
+.service-item-body + .service-item-body{margin-top:-.25rem}
+.service-item-list{list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-top:.5rem}
+.service-item-list li{
+  font-size:.82rem;color:#5a7088;padding-left:1rem;position:relative;
+}
+.service-item-list li::before{content:'→';position:absolute;left:0;color:var(--forest);font-size:.75rem}
+.service-section.dark .service-item-list li{color:rgba(255,255,255,.7)}
+.service-section.dark .service-item-list li::before{color:var(--emerald-bright)}
+.service-item.featured .service-item-list li{color:rgba(255,255,255,.75)}
+.service-item.featured .service-item-list li::before{color:var(--emerald-bright)}
+
+.expand-link{
+  margin-top:.9rem;display:inline-flex;align-items:center;gap:.45rem;
+  font-family:var(--f-mono);font-size:.68rem;font-weight:600;
+  color:var(--forest);letter-spacing:.08em;text-transform:uppercase;
+  padding-top:1rem;border-top:1px solid var(--line);
+  align-self:flex-start;transition:color .2s;
+}
+.expand-link svg{width:11px;height:11px;transition:transform .2s}
+.expand-link:hover{color:var(--emerald-deep)}
+.expand-link:hover svg{transform:translateX(3px)}
+
+.partner-badge{
+  position:absolute;top:-10px;left:16px;z-index:2;
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--f-mono);font-size:.62rem;
+  letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+  padding:.38rem .75rem;border-radius:var(--r-full);
+  background:#fff;color:#ED1C24;
+  border:1.5px solid #ED1C24;
+  box-shadow:0 4px 12px rgba(237,28,36,.18), 0 1px 3px rgba(10,22,40,.06);
+  transition:transform .25s var(--ease-spring), box-shadow .25s;
+}
+.partner-badge::before{
+  content:'✓';font-weight:800;font-size:.72rem;
+  width:13px;height:13px;border-radius:50%;
+  background:#ED1C24;color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;
+  line-height:1;
+}
+.security-card:has(.partner-badge):hover .partner-badge{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 8px 20px rgba(237,28,36,.28), 0 2px 6px rgba(10,22,40,.08);
+}
+
+.interim-visual{
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--r-md);padding:1.5rem;
+  display:flex;flex-direction:column;gap:.25rem;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+}
+.interim-visual-title{
+  font-family:var(--f-mono);font-size:.66rem;
+  color:rgba(255,255,255,.6);letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:.75rem;
+}
+.interim-row{
+  display:grid;grid-template-columns:40px 1fr 82px;
+  gap:.9rem;align-items:center;
+  padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.08);
+  transition:padding-left .25s var(--ease);
+}
+.interim-row:hover{padding-left:.4rem}
+.interim-row:last-child{border-bottom:none;padding-bottom:.5rem}
+.interim-avatar{
+  width:40px;height:40px;border-radius:10px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:rgba(126,195,137,.22);color:#BEEBC8;
+  font-family:var(--f-mono);font-size:.72rem;font-weight:700;
+  letter-spacing:.05em;
+  border:1px solid rgba(126,195,137,.3);
+}
+.interim-role{
+  font-family:var(--f-display);font-size:.95rem;font-weight:600;
+  color:#fff;letter-spacing:-.005em;line-height:1.2;margin-bottom:.15rem;
+}
+.interim-dept{font-size:.76rem;color:rgba(255,255,255,.55)}
+.interim-badge{
+  font-family:var(--f-mono);font-size:.58rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.26rem .6rem;border-radius:4px;
+  display:inline-flex;align-items:center;gap:.3rem;
+  justify-self:end;white-space:nowrap;
+}
+.interim-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor}
+.interim-badge.active{background:rgba(126,195,137,.2);color:#BEEBC8;border:1px solid rgba(126,195,137,.3)}
+.interim-badge.pending{background:rgba(229,179,92,.18);color:#F5CF8A;border:1px solid rgba(229,179,92,.3)}
+
+.roadmap-visual{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.12)}
+.roadmap-phase{display:flex;align-items:center;gap:.9rem;margin-top:.6rem}
+.roadmap-phase-label{
+  font-family:var(--f-mono);font-size:.62rem;font-weight:600;
+  color:rgba(255,255,255,.65);letter-spacing:.08em;text-transform:uppercase;
+  flex-shrink:0;width:64px;
+}
+.roadmap-bar-outer{
+  flex:1;height:22px;background:rgba(255,255,255,.06);
+  border-radius:5px;overflow:hidden;position:relative;
+  border:1px solid rgba(255,255,255,.04);
+}
+.roadmap-bar-inner{
+  height:100%;border-radius:5px;
+  display:flex;align-items:center;padding:0 .7rem;
+  width:0;transition:width 1.2s var(--ease);
+}
+.roadmap-bar-text{
+  font-size:.72rem;font-weight:500;color:rgba(255,255,255,.9);
+  white-space:nowrap;
+}
+
+.security{
+  padding:7rem 0;position:relative;overflow:hidden;
+  background:var(--sage-50);
+}
+.security-inner{max-width:1080px;margin:0 auto;padding:0 2rem;position:relative}
+.security-header{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:start;
+  margin-bottom:4rem;
+}
+.security-header > div:first-child{max-width:560px}
+.security-header .section-lede{font-size:1.02rem;margin-bottom:1.5rem}
+.security-header .section-lede + .section-lede{margin-top:0}
+.security-deep-link{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.7rem 1.2rem;margin-top:.5rem;
+  background:var(--forest);color:#fff;
+  border-radius:var(--r-full);font-size:.88rem;font-weight:600;
+  transition:all .25s var(--ease-spring);
+  box-shadow:0 4px 14px rgba(27,74,34,.2);
+}
+.security-deep-link:hover{
+  background:var(--forest-light);transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(27,74,34,.3);
+}
+.security-deep-link svg{transition:transform .25s}
+.security-deep-link:hover svg{transform:translateX(3px)}
+
+.threat-meter{
+  background:var(--ink);color:#fff;
+  border-radius:var(--r-lg);padding:1.75rem;
+  position:relative;overflow:hidden;
+}
+.threat-meter::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 20%, rgba(192,64,64,.1) 0%, transparent 60%);
+  pointer-events:none;
+}
+.threat-meter > *{position:relative}
+.threat-meter-title{
+  font-family:var(--f-mono);font-size:.66rem;
+  color:rgba(255,255,255,.55);letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:1.15rem;
+  display:flex;align-items:center;gap:.55rem;
+}
+.threat-meter-title::before{
+  content:'';width:7px;height:7px;border-radius:50%;
+  background:var(--danger);
+  box-shadow:0 0 10px rgba(192,64,64,.5);
+  animation:pulse 2s ease-in-out infinite;
+}
+.threat-row{
+  display:grid;grid-template-columns:100px 1fr 34px;
+  gap:.8rem;align-items:center;
+  padding:.55rem 0;
+}
+.threat-label{font-size:.78rem;color:rgba(255,255,255,.78);font-weight:500}
+.threat-bar-wrap{
+  height:7px;background:rgba(255,255,255,.06);
+  border-radius:4px;overflow:hidden;position:relative;
+}
+.threat-bar{
+  height:100%;background:var(--emerald);border-radius:4px;
+  width:0;transition:width 1.4s var(--ease);
+}
+.threat-bar.high{background:linear-gradient(90deg, var(--danger), #D95959)}
+.threat-bar.mid{background:linear-gradient(90deg, var(--warn), #E8A765)}
+.threat-pct{
+  font-family:var(--f-mono);font-size:.72rem;font-weight:600;
+  color:rgba(255,255,255,.85);text-align:right;
+}
+.threat-note{
+  font-size:.72rem;color:rgba(255,255,255,.45);
+  line-height:1.5;margin-top:1.15rem;
+  padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);
+}
+
+.security-cards{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--line);
+  border:1px solid var(--line-strong);
+  border-radius:var(--r-md);overflow:hidden;
+}
+.security-card{
+  padding:2rem 1.75rem;background:#fff;
+  display:flex;flex-direction:column;gap:1rem;
+  transition:background .2s, transform .25s var(--ease), box-shadow .25s var(--ease);
+  position:relative;
+}
+.security-card:not(.featured):hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(10,22,40,.08), 0 2px 6px rgba(10,22,40,.04);
+}
+.security-card:hover{background:var(--sage-50)}
+.security-card-title{
+  font-family:var(--f-display);font-size:1.15rem;font-weight:600;
+  letter-spacing:-.01em;line-height:1.2;color:var(--ink);
+}
+.security-card-body{font-size:.88rem;line-height:1.55;color:#556a82}
+.security-card-list{list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-top:.5rem}
+.security-card-list li{font-size:.82rem;color:#5a7088;padding-left:1rem;position:relative}
+.security-card-list li::before{content:'→';position:absolute;left:0;color:var(--forest);font-size:.75rem}
+
+.security-card.featured{
+  grid-column:span 2;background:var(--ink);color:#fff;
+  padding:2.5rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;
+  position:relative;overflow:hidden;
+}
+.security-card.featured::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 75% 30%, rgba(192,64,64,.08), transparent 60%);
+  pointer-events:none;
+}
+.security-card.featured > *{position:relative}
+.security-card.featured .security-card-title{color:#fff}
+.security-card.featured .security-card-body{color:rgba(255,255,255,.65)}
+.security-card.featured .security-card-list li{color:rgba(255,255,255,.75)}
+.security-card.featured .security-card-list li::before{color:var(--emerald-bright)}
+
+.phishing-demo{
+  background:#fff;border-radius:var(--r-md);
+  overflow:hidden;position:relative;
+  box-shadow:0 24px 48px -12px rgba(0,0,0,.4);
+}
+.phish-bar{
+  background:#F2F2F4;padding:.65rem .85rem;
+  display:flex;align-items:center;gap:.4rem;
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+.phish-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.phish-url{
+  margin-left:.75rem;flex:1;
+  font-family:var(--f-mono);font-size:.68rem;
+  color:#1A1A1A;background:#fff;
+  padding:.3rem .6rem;border-radius:4px;
+  border:1px solid rgba(0,0,0,.1);
+  display:inline-flex;align-items:center;gap:.35rem;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.phish-url .warn{color:var(--danger);font-weight:700}
+.phish-body{padding:1.1rem 1rem;background:#fff;min-height:170px;display:flex;flex-direction:column;gap:.4rem}
+.phish-warning{
+  display:flex;align-items:center;gap:.55rem;
+  background:rgba(192,64,64,.08);
+  border:1px solid rgba(192,64,64,.2);
+  color:var(--danger);
+  padding:.5rem .7rem;border-radius:6px;
+  font-size:.72rem;font-weight:500;line-height:1.4;
+  margin-bottom:.4rem;
+}
+.phish-warning .w-icon{font-weight:700;flex-shrink:0}
+.phish-email-line{height:8px;background:#E8E8EC;border-radius:3px}
+.badge-caught{
+  margin-top:.75rem;display:inline-flex;align-items:center;gap:.3rem;
+  font-family:var(--f-mono);font-size:.62rem;font-weight:700;
+  color:var(--emerald-deep);background:rgba(91,163,100,.12);
+  border:1px solid rgba(91,163,100,.3);
+  padding:.25rem .55rem;border-radius:4px;
+  letter-spacing:.08em;text-transform:uppercase;
+  align-self:flex-start;
+}
+
+.about{padding:7rem 0;background:#fff;border-top:1px solid var(--line)}
+.about-inner{max-width:1080px;margin:0 auto;padding:0 2rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-quote{
+  background:var(--ink);color:#fff;border-radius:var(--r-lg);
+  padding:2.5rem;position:sticky;top:6rem;overflow:hidden;
+  transition:transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.about-quote:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 44px rgba(10,22,40,.22), 0 4px 12px rgba(10,22,40,.1);
+}
+.about-quote::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 20%, rgba(91,163,100,.15), transparent 60%);
+  pointer-events:none;
+  transition:opacity .4s;
+}
+.about-quote:hover::before{opacity:1.3}
+.about-quote > *{position:relative}
+.quote-mark{
+  font-family:var(--f-display);font-size:4.5rem;line-height:.8;
+  color:var(--emerald-bright);margin-bottom:1rem;display:block;
+  animation:quote-pulse 4.5s ease-in-out infinite;
+}
+@keyframes quote-pulse{
+  0%,100%{opacity:1;transform:translateY(0)}
+  50%{opacity:.7;transform:translateY(-4px)}
+}
+.quote-text{
+  font-family:var(--f-display);font-size:1.2rem;font-style:italic;
+  color:rgba(255,255,255,.92);line-height:1.5;margin-bottom:2rem;
+}
+.quote-meta{
+  font-size:.82rem;color:rgba(255,255,255,.5);
+  padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.12);
+}
+.quote-meta strong{color:var(--emerald-bright);display:block;font-size:.92rem;margin-bottom:.2rem}
+.credentials{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:3.5rem}
+.credential{
+  padding:1.1rem 1.25rem;background:var(--sage-50);
+  border-radius:var(--r-md);border-left:3px solid var(--forest);
+  transition:transform .28s var(--ease-spring), box-shadow .28s, border-left-color .28s, background .28s;
+  cursor:default;
+}
+.credential:hover{
+  transform:translateX(5px);
+  box-shadow:0 6px 18px rgba(10,22,40,.06), 0 1px 3px rgba(10,22,40,.04);
+  border-left-color:var(--emerald);
+  background:#fff;
+}
+.credential-title{
+  font-family:var(--f-display);font-size:1rem;font-weight:600;
+  letter-spacing:-.01em;margin-bottom:.3rem;color:var(--ink);
+}
+.credential-body{font-size:.85rem;color:#556a82;line-height:1.55}
+.industries{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
+.industries-label{
+  font-family:var(--f-mono);font-size:.7rem;
+  color:var(--muted);letter-spacing:.12em;text-transform:uppercase;
+  display:block;margin-bottom:.9rem;
+}
+.industries-intro{
+  font-size:.98rem;color:#445870;line-height:1.65;
+  max-width:880px;margin:0 0 1.75rem;
+}
+.industries-subhead{
+  font-family:var(--f-mono);font-size:.68rem;
+  color:var(--emerald-deep);letter-spacing:.14em;text-transform:uppercase;font-weight:500;
+  display:block;margin-bottom:.9rem;
+}
+.industry-chips{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.industry-chip{
+  font-size:.78rem;font-weight:500;
+  padding:.35rem .9rem;border-radius:var(--r-full);
+  background:var(--sage-50);color:var(--forest);
+  border:1px solid rgba(27,74,34,.2);
+  transition:all .25s var(--ease-spring);cursor:default;
+  flex:1 1 auto;text-align:center;
+}
+.industry-chip:hover{background:var(--forest);color:#fff;border-color:var(--forest);transform:translateY(-2px)}
+
+.about-numbers{
+  margin-top:5rem;padding-top:3.5rem;
+  border-top:1px solid var(--line-strong);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;
+  position:relative;
+}
+.about-numbers::before{
+  content:'By the numbers';
+  position:absolute;top:-.65rem;left:50%;transform:translateX(-50%);
+  background:#fff;padding:0 1rem;
+  font-family:var(--f-mono);font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--forest);font-weight:600;
+}
+.num-card{
+  transition:transform .3s var(--ease-spring);
+  padding:.5rem .2rem;
+  cursor:default;
+}
+.num-card:hover{transform:translateY(-4px)}
+.num-label{
+  font-family:var(--f-mono);font-size:.66rem;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;margin-bottom:.7rem;
+}
+.num-val{
+  font-family:var(--f-display);font-style:italic;font-weight:500;
+  font-size:3.2rem;line-height:.95;letter-spacing:-.025em;
+  color:var(--ink);margin-bottom:.7rem;
+}
+.num-val em{color:var(--forest);font-style:italic;font-weight:500}
+.num-val .plus{color:var(--emerald);font-size:.55em;vertical-align:.25em;margin-left:.03em}
+.num-caption{font-size:.82rem;color:#556a82;line-height:1.5;margin:0}
+
+.contact{
+  padding:7rem 0;background:var(--ink);color:#fff;
+  position:relative;overflow:hidden;
+}
+.contact::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(91,163,100,.1) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 85%, rgba(27,74,34,.14) 0%, transparent 60%);
+  pointer-events:none;
+}
+.contact-inner{
+  max-width:1080px;margin:0 auto;padding:0 2rem;
+  position:relative;
+  display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start;
+}
+.contact-info .section-lede{color:rgba(255,255,255,.7)}
+.contact-info .section-title{color:#fff}
+.contact-info .section-title em{color:var(--emerald-bright)}
+.contact-detail{
+  display:flex;align-items:flex-start;gap:1rem;margin-top:1.5rem;
+  transition:transform .25s var(--ease);
+}
+.contact-detail:hover{transform:translateX(3px)}
+.contact-detail-icon{
+  width:42px;height:42px;border-radius:10px;flex-shrink:0;
+  background:rgba(126,195,137,.14);color:var(--emerald-bright);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .3s var(--ease-spring),background .25s;
+}
+.contact-detail:hover .contact-detail-icon{transform:scale(1.08) rotate(-4deg);background:rgba(126,195,137,.26)}
+.contact-detail-label{
+  font-family:var(--f-mono);font-size:.66rem;
+  color:rgba(255,255,255,.5);letter-spacing:.12em;
+  text-transform:uppercase;margin-bottom:.2rem;
+}
+.contact-detail-value{font-size:.95rem;font-weight:500;color:#fff}
+
+.contact-form{
+  background:var(--sage-50);
+  border:1px solid var(--sage-200);
+  border-radius:var(--r-lg);padding:2.25rem;
+  box-shadow:0 20px 50px rgba(0,0,0,.3), 0 4px 12px rgba(0,0,0,.15);
+  position:relative;
+}
+.contact-form::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg, rgba(126,195,137,.05) 0%, transparent 50%);
+  border-radius:var(--r-lg);pointer-events:none;
+}
+.contact-form > *{position:relative}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1rem}
+.form-group label{
+  font-family:var(--f-mono);font-size:.66rem;
+  color:var(--forest);letter-spacing:.1em;
+  text-transform:uppercase;font-weight:600;
+}
+.form-group input,.form-group textarea,.form-group select{
+  padding:.85rem 1rem;border-radius:var(--r-sm);
+  background:#fff;
+  border:1px solid var(--sage-200);
+  color:var(--ink);font-size:.92rem;outline:none;
+  transition:border-color .2s, background .2s, box-shadow .2s;
+  font-family:var(--f-body);appearance:none;
+}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#8a9bad}
+.form-group input:hover,.form-group textarea:hover,.form-group select:hover{
+  border-color:var(--emerald);
+}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{
+  border-color:var(--forest);background:#fff;
+  box-shadow:0 0 0 3px rgba(91,163,100,.15);
+}
+.form-group select{
+  cursor:pointer;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5l3 3 3-3' stroke='%237EC389' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1rem center;background-size:12px;
+  padding-right:2.5rem;
+}
+.form-group select option{background:#fff;color:var(--ink)}
+.form-group textarea{min-height:120px;resize:vertical;font-family:var(--f-body)}
+.form-submit{
+  width:100%;padding:1rem;margin-top:.75rem;
+  background:var(--forest);color:#fff;
+  border-radius:var(--r-full);
+  font-weight:600;font-size:.95rem;
+  transition:all .25s var(--ease);cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  box-shadow:0 4px 12px rgba(27,74,34,.2);
+}
+.form-submit:hover{
+  background:var(--forest-light);
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(27,74,34,.3);
+}
+.form-note{font-size:.75rem;color:var(--muted);margin-top:1rem;line-height:1.5}
+
+.form-submit:disabled{opacity:.7;cursor:wait;transform:none}
+.form-submit.error-state{background:var(--danger)}
+.form-error{
+  margin-top:.9rem;padding:.75rem 1rem;border-radius:var(--r-md);
+  background:rgba(192,64,64,.08);border:1px solid rgba(192,64,64,.25);
+  color:var(--danger);font-size:.85rem;line-height:1.5;
+}
+.form-success{
+  background:linear-gradient(180deg, rgba(126,195,137,.12), rgba(126,195,137,.04));
+  border:1px solid rgba(126,195,137,.4);
+  border-radius:var(--r-lg);
+  padding:2.5rem 2rem;text-align:center;
+  animation:fadeUp .5s var(--ease);
+}
+.form-success svg{margin:0 auto 1rem}
+.form-success h3{
+  font-family:var(--f-display);font-size:1.5rem;font-weight:500;
+  color:var(--sage-50);margin:0 0 .5rem;letter-spacing:-.015em;
+}
+.form-success p{font-size:.95rem;color:rgba(255,255,255,.75);line-height:1.6;margin:0;max-width:380px;margin-inline:auto}
+.form-success a{color:var(--emerald-bright);font-weight:500;border-bottom:1px solid currentColor}
+
+footer{
+  background:var(--ink-2);color:rgba(255,255,255,.55);
+  padding:2.25rem 0 1.5rem;border-top:1px solid var(--line-dark);
+}
+.footer-inner{max-width:1280px;margin:0 auto;padding:0 2rem}
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.5rem;
+  padding-bottom:1.75rem;border-bottom:1px solid var(--line-dark);margin-bottom:1.25rem;
+}
+.footer-brand .nav-logo{margin-bottom:.9rem}
+.footer-brand p{font-size:.82rem;line-height:1.55;color:rgba(255,255,255,.5);max-width:340px;margin:0}
+.footer-brand .tag{
+  font-family:var(--f-mono);font-size:.65rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;margin-top:.6rem;display:block;
+}
+.footer-col h4{
+  font-family:var(--f-mono);font-size:.64rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin:0 0 .75rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin:0;padding:0}
+.footer-col a{font-size:.82rem;color:rgba(255,255,255,.55);transition:color .2s}
+.footer-col a:hover{color:var(--emerald-bright)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;
+  font-size:.72rem;color:rgba(255,255,255,.4);
+}
+.footer-bottom a{color:rgba(255,255,255,.55);transition:color .2s}
+.footer-bottom a:hover{color:var(--emerald-bright)}
+
+.floating-footer{
+  position:fixed;bottom:0;left:0;right:0;z-index:90;
+  background:#0A1628;
+  border-top:1px solid rgba(255,255,255,.08);
+  transform:translateY(100%);
+  transition:transform .35s var(--ease);
+  pointer-events:none;
+}
+.floating-footer.visible{transform:translateY(0);pointer-events:auto}
+.floating-footer.hidden{transform:translateY(100%);pointer-events:none}
+.ff-inner{
+  max-width:1280px;margin:0 auto;padding:.55rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+}
+.ff-brand{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:rgba(255,255,255,.85);transition:color .2s;
+}
+.ff-brand:hover{color:var(--emerald-bright)}
+.ff-brand svg{width:26px;height:22px}
+.ff-brand .wordmark{
+  font-family:var(--f-display);font-style:italic;font-weight:500;
+  font-size:1.05rem;line-height:1;letter-spacing:-.005em;color:inherit;
+}
+.ff-brand .wordmark .dot{
+  display:inline-block;width:.22em;height:.22em;
+  background:var(--emerald-bright);border-radius:50%;
+  vertical-align:.14em;margin-left:.08em;
+}
+.ff-action{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:rgba(255,255,255,.7);font-size:.78rem;font-weight:500;
+  padding:.4rem .8rem;border-radius:var(--r-full);
+  transition:color .2s, background .2s;
+}
+.ff-action:hover{color:var(--emerald-bright);background:rgba(255,255,255,.04)}
+.ff-action svg{width:12px;height:12px}
+
+.privacy-notice{
+  position:fixed;bottom:1rem;left:1rem;right:1rem;z-index:95;
+  max-width:480px;margin-left:auto;
+  background:#0A1628;color:rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.1);border-radius:var(--r-md);
+  padding:1rem 1.15rem;box-shadow:0 10px 40px rgba(0,0,0,.4);
+  font-size:.82rem;line-height:1.55;
+  opacity:0;transform:translateY(20px);pointer-events:none;
+  transition:opacity .35s var(--ease), transform .35s var(--ease);
+}
+.privacy-notice.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.privacy-notice p{margin:0 0 .75rem;color:rgba(255,255,255,.82)}
+.privacy-notice a{color:var(--emerald-bright);border-bottom:1px solid rgba(126,195,137,.4);transition:color .2s}
+.privacy-notice a:hover{color:#fff}
+.privacy-notice-actions{display:flex;gap:.5rem;align-items:center;justify-content:flex-end}
+.privacy-notice-dismiss{
+  padding:.4rem .9rem;background:var(--emerald);color:var(--ink);
+  border-radius:var(--r-full);font-size:.78rem;font-weight:600;
+  cursor:pointer;transition:background .2s;
+}
+.privacy-notice-dismiss:hover{background:var(--emerald-bright)}
+@media (max-width:560px){
+  .privacy-notice{left:.75rem;right:.75rem;bottom:.75rem;padding:.85rem 1rem;font-size:.78rem}
+}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-24px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(24px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+@media (max-width:960px){.reveal-left,.reveal-right{transform:translateY(16px)}}
+.stagger > *{opacity:0;transform:translateY(16px);transition:opacity .5s var(--ease), transform .5s var(--ease)}
+.stagger.visible > *{opacity:1;transform:translateY(0)}
+.stagger.visible > *:nth-child(1){transition-delay:.05s}
+.stagger.visible > *:nth-child(2){transition-delay:.15s}
+.stagger.visible > *:nth-child(3){transition-delay:.25s}
+.stagger.visible > *:nth-child(4){transition-delay:.35s}
+.stagger.visible > *:nth-child(5){transition-delay:.45s}
+.stagger.visible > *:nth-child(6){transition-delay:.55s}
+
+.hero-eyebrow{animation:fadeUp .7s var(--ease) .2s both}
+.hero h1{animation:fadeUp .7s var(--ease) .35s both}
+.hero-promise{animation:fadeUp .7s var(--ease) .5s both}
+.hero-lede{animation:fadeUp .7s var(--ease) .65s both}
+.hero-actions{animation:fadeUp .7s var(--ease) .8s both}
+.hero-strip{animation:fadeUp .7s var(--ease) .95s both}
+.visual{animation:fadeUp .9s var(--ease) .5s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+@media (min-width:1200px){
+  .hero-inner{max-width:1360px}
+  .visual{max-width:576px}
+}
+@media (max-width:960px){
+  .about-numbers{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+  .nav-hamburger{display:flex}
+  .nav-links{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:3.5rem}
+  .visual{margin:0 auto;max-width:440px}
+  .hero{padding:7rem 0 5rem}
+  .pillars-grid{grid-template-columns:repeat(2,1fr)}
+  .pillar:nth-child(2){border-right:none}
+  .pillar:nth-child(1),.pillar:nth-child(2){border-bottom:1px solid var(--line)}
+  .service-header{grid-template-columns:1fr;gap:1.5rem}
+  .service-header > div:last-child{text-align:left}
+  .service-items{grid-template-columns:1fr}
+  .service-item.featured{grid-column:span 1;grid-template-columns:1fr}
+  .security-header{grid-template-columns:1fr;gap:2rem}
+  .security-cards{grid-template-columns:1fr}
+  .security-card.featured{grid-column:span 1;grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .about-quote{position:static}
+  .contact-inner{grid-template-columns:1fr;gap:2.5rem}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}
+  .footer-brand{grid-column:1 / -1}
+}
+@media (max-width:560px){
+  .nav-inner{padding:.75rem 1.25rem}
+  .hero-inner,.pillars-inner,.service-inner,.security-inner,.about-inner,.contact-inner,.footer-inner{padding:0 1.25rem}
+  .hero{padding:6rem 0 4rem}
+  .pillars-grid{grid-template-columns:1fr}
+  .pillar{border-right:none;border-bottom:1px solid var(--line)}
+  .pillar:last-child{border-bottom:none}
+  .form-row{grid-template-columns:1fr}
+  .contact-form{padding:1.5rem}
+  .credentials{grid-template-columns:1fr}
+  .threat-row{grid-template-columns:88px 1fr 30px;gap:.6rem}
+  .threat-label{font-size:.72rem}
+  .form-success{padding:2rem 1.25rem}
+  .form-success h3{font-size:1.3rem}
+}
+@media (max-width:420px){
+  .footer-grid{grid-template-columns:1fr;gap:1.75rem}
+  .footer-brand{grid-column:auto}
+  .footer-bottom{font-size:.7rem;gap:.35rem}
+}
+
+.i18n > [lang]{display:none}
+body[data-lang="en"] .i18n > [lang="en"],
+body[data-lang="sv"] .i18n > [lang="sv"],
+body[data-lang="da"] .i18n > [lang="da"]{display:inline}
+.i18n-block > [lang]{display:none}
+body[data-lang="en"] .i18n-block > [lang="en"],
+body[data-lang="sv"] .i18n-block > [lang="sv"],
+body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
+
+.nav-links{position:relative}
+.nav-links > li{position:relative}
+
+.nav-links .has-deep{
+  display:inline-flex;align-items:center;gap:.25rem;
+  padding:.35rem 0;margin:-.35rem 0;
+  cursor:default;
+}
+.nav-links .has-deep > a{padding:.1rem 0}
+.deep-toggle{
+  width:18px;height:18px;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.5);border-radius:3px;padding:0;
+  margin-left:-.1rem;background:transparent;border:none;cursor:pointer;
+  transition:color .2s var(--ease,cubic-bezier(.16,1,.3,1)),transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-toggle:hover,.deep-toggle:focus-visible{color:var(--emerald-bright);outline:none}
+.deep-toggle svg{
+  width:10px;height:10px;
+  transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.has-deep.open .deep-toggle{color:var(--emerald-bright)}
+.has-deep.open .deep-toggle svg{transform:rotate(180deg)}
+
+.deep-card{
+  position:absolute;top:calc(100% + .85rem);left:50%;
+  transform:translateX(-50%) translateY(-8px);
+  width:340px;background:#fff;
+  border:1px solid rgba(10,22,40,.1);border-radius:12px;
+  box-shadow:0 10px 24px rgba(10,22,40,.12),0 2px 6px rgba(10,22,40,.06);
+  padding:.5rem;opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .22s var(--ease,cubic-bezier(.16,1,.3,1)),transform .28s var(--ease,cubic-bezier(.16,1,.3,1)),visibility .22s;
+  z-index:101;
+}
+.deep-card::before{
+  content:"";position:absolute;top:0;left:24px;right:24px;height:2px;
+  background:linear-gradient(90deg,transparent 0%,var(--emerald) 20%,var(--emerald-bright) 50%,var(--emerald) 80%,transparent 100%);
+  border-radius:0 0 2px 2px;
+}
+.deep-card::after{
+  content:"";position:absolute;top:-7px;left:50%;
+  transform:translateX(-50%) rotate(45deg);
+  width:12px;height:12px;background:#fff;
+  border-left:1px solid rgba(10,22,40,.1);border-top:1px solid rgba(10,22,40,.1);
+}
+.has-deep.open .deep-card{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateX(-50%) translateY(0);
+}
+
+.deep-row{
+  display:block;padding:.85rem 1rem;border-radius:8px;
+  transition:background .18s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-row + .deep-row{margin-top:.2rem}
+.deep-row:hover,.deep-row:focus-visible{background:var(--sage-50);outline:none}
+.deep-row-label{
+  font-family:var(--f-display,'Fraunces',Georgia,serif);font-style:italic;
+  font-size:1rem;font-weight:500;color:var(--ink);
+  display:flex;align-items:center;gap:.4rem;margin-bottom:.18rem;
+}
+.deep-row-label .arrow{
+  display:inline-block;font-size:.85em;color:var(--emerald);
+  transition:transform .2s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-row:hover .deep-row-label .arrow{transform:translateX(3px)}
+.deep-row-desc{
+  font-family:var(--f-body,'Plus Jakarta Sans',sans-serif);
+  font-size:.76rem;line-height:1.45;color:var(--muted);font-style:normal;
+}
+.deep-row.primary .deep-row-label::before{
+  content:"";width:5px;height:5px;border-radius:50%;
+  background:var(--emerald);display:inline-block;flex-shrink:0;
+}
+
+.lang-switch{position:relative;margin-left:.5rem;display:inline-flex;align-items:center}
+.lang-pill{
+  display:inline-flex;align-items:center;gap:.35rem;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:999px;padding:.35rem .72rem .35rem .8rem;
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.85);cursor:pointer;
+  transition:all .2s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-pill:hover,.lang-pill:focus-visible{
+  background:rgba(255,255,255,.1);border-color:rgba(126,195,137,.3);
+  color:#fff;outline:none;
+}
+.lang-pill .chevron{
+  width:8px;height:8px;opacity:.7;
+  transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-switch.open .lang-pill .chevron{transform:rotate(180deg)}
+.lang-pill .dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--emerald-bright);display:inline-block;
+}
+
+.lang-pop{
+  position:absolute;top:calc(100% + .75rem);right:0;
+  min-width:220px;background:#fff;
+  border:1px solid rgba(10,22,40,.1);border-radius:12px;
+  box-shadow:0 10px 24px rgba(10,22,40,.12),0 2px 6px rgba(10,22,40,.06);
+  padding:1.2rem 1.3rem 1.1rem;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateY(-6px) scale(.97);transform-origin:top right;
+  transition:opacity .22s var(--ease,cubic-bezier(.16,1,.3,1)),transform .28s var(--ease,cubic-bezier(.16,1,.3,1)),visibility .22s;
+  z-index:101;
+}
+.lang-pop::after{
+  content:"";position:absolute;top:-7px;right:18px;
+  width:12px;height:12px;background:#fff;transform:rotate(45deg);
+  border-left:1px solid rgba(10,22,40,.1);border-top:1px solid rgba(10,22,40,.1);
+}
+.lang-switch.open .lang-pop{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateY(0) scale(1);
+}
+.lang-pop-label{
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.55rem;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;
+}
+.lang-pop ul{display:flex;flex-direction:column;gap:.1rem;list-style:none;padding:0;margin:0}
+.lang-pop button{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  width:100%;padding:.55rem .6rem;border-radius:6px;text-align:left;
+  background:transparent;border:none;cursor:pointer;font:inherit;
+  transition:background .18s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-pop button:hover,.lang-pop button:focus-visible{background:var(--sage-50);outline:none}
+.lang-pop .native{
+  font-family:var(--f-display,'Fraunces',Georgia,serif);font-style:italic;
+  font-size:1.15rem;font-weight:400;color:var(--ink);letter-spacing:-.005em;
+}
+.lang-pop .code{
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.62rem;font-weight:600;letter-spacing:.14em;
+  color:var(--muted);text-transform:uppercase;
+}
+.lang-pop button[aria-pressed="true"] .native{color:var(--forest)}
+.lang-pop button[aria-pressed="true"] .native::after{
+  content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--emerald);margin-left:.5rem;vertical-align:middle;
+}
+.lang-pop button[aria-pressed="true"] .code{color:var(--forest)}
+
+@media (max-width:980px){
+  .lang-switch{display:none}
+  .mobile-menu .lang-switch{display:block;margin-top:1rem;position:static}
+  .mobile-menu .lang-pop{
+    position:static;opacity:1;visibility:visible;pointer-events:auto;
+    transform:none;box-shadow:none;padding:1rem 0 0;
+    background:transparent;border:none;border-top:1px solid rgba(255,255,255,.08);
+  }
+  .mobile-menu .lang-pop::after{display:none}
+  .mobile-menu .lang-pop .native{color:rgba(255,255,255,.85)}
+  .mobile-menu .lang-pop .code{color:rgba(255,255,255,.5)}
+  .mobile-menu .lang-pop-label{color:rgba(255,255,255,.45)}
+  .mobile-menu .lang-pop button:hover{background:rgba(255,255,255,.05)}
+  .mobile-menu .lang-pop button[aria-pressed="true"] .native{color:var(--emerald-glow)}
+  .mobile-menu .lang-pop button[aria-pressed="true"] .code{color:var(--emerald-bright)}
+  .mobile-menu .deep-child{
+    padding-left:1.2rem;font-size:.88rem;color:rgba(255,255,255,.6);
+    border-bottom:1px solid rgba(255,255,255,.04)!important;
+  }
+  .mobile-menu .deep-child::before{content:"→ ";color:var(--emerald-bright)}
+}
+
+
+body {
+  font-feature-settings: "onum" 1, "liga" 1, "kern" 1;
+}
+h1, h2, h3, h4,
+.stat, .stat-num, .big-number,
+.kpi-value, .reel, .scare-num,
+.threat-pct, .threat-bar,
+.phase-dur, .eng-duration, .eng-num, .gov-num,
+.m-stat-num {
+  font-feature-settings: "lnum" 1, "liga" 1, "kern" 1;
+}
+.eyebrow, .mono, .scare-label, .scare-meta,
+.nav-links .lang-pill, .lang-pop .code,
+.dash-title, .chart-title, .kpi-label,
+.eng-duration, .arch-label {
+  font-feature-settings: "lnum" 1;
+}
+
+abbr {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+  letter-spacing: .05em;
+  text-decoration: none;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero .eyebrow::before,
+.rollout .eyebrow::before,
+.scare-strip .eyebrow::before,
+.dark-section .eyebrow::before,
+.problem .eyebrow::before,
+.final-cta .eyebrow::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364'/></svg>");
+}
+
+.section-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .9rem;
+  padding: .45rem 1.2rem;
+  background: rgba(245,243,237,.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 999px;
+  box-shadow: 0 0 6px rgba(10,22,40,.1), 0 0 0 1px rgba(10,22,40,.04);
+  position: relative;
+  z-index: 2;
+}
+.section-mark-wrap {
+  position: relative;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+}
+.section-mark-wrap .section-mark {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.section-mark::before,
+.section-mark::after {
+  content: "";
+  width: 56px;
+  max-width: 56px;
+  flex: 0 0 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(27,74,34,.3), rgba(27,74,34,.42));
+}
+.section-mark::after {
+  background: linear-gradient(90deg, rgba(27,74,34,.42), rgba(27,74,34,.3), transparent);
+}
+.section-mark .mark {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22' opacity='.55'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.section-mark-wrap.dark .section-mark::before,
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), rgba(255,255,255,.14));
+}
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, rgba(255,255,255,.14), rgba(255,255,255,.08), transparent);
+}
+.section-mark-wrap.dark .section-mark .mark {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364' opacity='.55'/></svg>");
+}
+
+.use-list li::before,
+.eng-deliverables li::before,
+.comp-list li::before,
+.report-meta li::before {
+  content: "—" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1rem !important;
+  height: auto !important;
+  color: var(--emerald) !important;
+  font-weight: 500 !important;
+  font-family: var(--font-body, inherit) !important;
+  border: none !important;
+  background: transparent !important;
+  transform: none !important;
+}
+.use-list li,
+.eng-deliverables li,
+.comp-list li,
+.report-meta li {
+  padding-left: 1.3rem !important;
+}
+
+.final-cta::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 300px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 62'><g fill='none' stroke='%23F5F3ED' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'><path d='M34,2 L58,16 L34,30 L10,16 Z'/><path d='M34,30 L58,16 L58,44 L34,58 Z'/><path d='M34,30 L10,16 L10,44 L34,58 Z'/></g><path d='M34,16 L46,23 L34,30 L22,23 Z' fill='%23F5F3ED'/><path d='M34,30 L22,23 L22,37 L34,44 Z' fill='%23C9C3B1'/><path d='M34,30 L46,23 L46,37 L34,44 Z' fill='%23A8A290'/><circle cx='40' cy='29' fill='%231B4A22' r='1.2'/><path d='M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z' fill='%239BD7A4'/><path d='M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z' fill='%237EC389'/><path d='M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z' fill='%233B7D44'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .05;
+  pointer-events: none;
+  z-index: 1;
+}
+.final-cta-inner {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 760px) {
+  .final-cta::after {
+    width: 240px;
+    height: 210px;
+    right: -80px;
+    opacity: .04;
+  }
+}
+
+
+.field-note {
+  margin: 1.8rem 0;
+  padding: 0 0 0 1.2rem;
+  border-left: 1.5px solid var(--emerald);
+  max-width: 680px;
+}
+.field-note + .hero-ctas {
+  margin-top: 2.4rem;
+}
+section:has(.field-note:last-child) {
+  padding-bottom: 3rem;
+}
+.field-note-label {
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-right: .35rem;
+  display: inline;
+}
+.field-note-dash {
+  color: var(--emerald);
+  font-weight: 500;
+  margin: 0 .25rem 0 .1rem;
+  display: inline;
+}
+.field-note-body {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .97rem;
+  line-height: 1.55;
+  color: var(--ink);
+  display: inline;
+}
+.rollout .field-note,
+.final-cta .field-note,
+.scare-strip .field-note {
+  border-left-color: var(--emerald-bright);
+}
+.rollout .field-note-label,
+.final-cta .field-note-label,
+.scare-strip .field-note-label {
+  color: var(--emerald-bright);
+}
+.rollout .field-note-dash,
+.final-cta .field-note-dash,
+.scare-strip .field-note-dash {
+  color: var(--emerald-bright);
+}
+.rollout .field-note-body,
+.final-cta .field-note-body,
+.scare-strip .field-note-body {
+  color: rgba(245,243,237,.85);
+}
+
+html{overflow-x:clip}
+
+nav.site-nav{height:58px;box-sizing:border-box;background:#0A1628;border-bottom:1px solid rgba(255,255,255,.08)}
+nav.site-nav .nav-inner{max-width:none;height:100%;margin:0;padding:0 22px;gap:16px}
+nav.site-nav .sb-brand{display:flex;align-items:center;gap:11px;color:var(--sage-50);text-decoration:none;line-height:1.5}
+nav.site-nav .sb-brand svg{width:35px;height:35px;flex:none}
+nav.site-nav .sb-brand .brand-wm{display:flex;align-items:baseline;gap:9px}
+nav.site-nav .sb-brand .wordmark{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:21px;letter-spacing:-.01em;color:var(--sage-50);line-height:1}
+nav.site-nav .sb-brand .wordmark .dot{display:inline-block;width:.2em;height:.2em;background:var(--emerald-bright);border-radius:50%;vertical-align:.12em;margin-left:.06em}
+nav.site-nav .sb-brand .tag{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42);padding-bottom:1px}
+nav.site-nav .nav-links{gap:30px;margin-left:auto}
+nav.site-nav .nav-links a{color:var(--sage-200);font-size:.93rem;font-weight:400;letter-spacing:0}
+nav.site-nav .nav-links a:hover{color:var(--emerald-bright)}
+nav.site-nav .deep-toggle{color:var(--sage-200)}
+nav.site-nav .nav-links a.nav-cta{display:inline-flex;align-items:center;height:34px;padding:0 16px;font-size:.93rem;font-weight:600;color:var(--ink)!important}
+nav.site-nav .nav-links > li:last-child{margin-left:-14px}
+nav.site-nav .lang-switch{margin-left:0}
+nav.site-nav .lang-pill{gap:7px;height:34px;padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--sage-50);font:600 11px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em}
+nav.site-nav .lang-pill:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.16)}
+nav.site-nav .lang-pill .dot{width:7px;height:7px}
+nav.site-nav .lang-pill .chevron{display:none}
+nav.site-nav .acct-slot{width:34px;height:34px;flex:none;margin-left:14px}
+.mobile-menu{top:58px}
+@media (max-width:960px){
+  nav.site-nav .nav-inner{padding:0 22px}
+  nav.site-nav .acct-slot{display:none}
+}
+body{background:#EDEAE2}
+.pillars,.security{background:#EDEAE2}
+.service-section.alt,.about{background:#F5F3ED}
+footer{background:var(--ink-2);border-top:1px solid rgba(255,255,255,.08);padding:48px 0 32px}
+</style>
+<style id="nav-2026-10">
+nav.site-nav .nav-inner{position:relative}
+nav.site-nav .nav-links > li:last-child{margin-left:0}
+nav.site-nav .nav-actions{margin:0 0 0 auto;display:flex;align-items:center;gap:14px;list-style:none;padding:0}
+nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;height:34px;padding:0 16px;font-size:.93rem;font-weight:600;color:var(--ink)!important;text-decoration:none}
+@media (min-width:1180px){nav.site-nav .nav-links{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);margin:0!important}}
+@media (max-width:960px){nav.site-nav .nav-actions{display:none}}
+.deep-card.deep-wide{width:380px}
+.soon{display:inline-block;margin-left:6px;font:600 9.5px/1.7 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;background:#E3EEE4;color:#1B4A22;border-radius:999px;padding:0 8px;vertical-align:1px}
+</style>
+<style id="form-2026-10">
+.form-row{align-items:end}
+.form-row>.form-group{margin-bottom:0}
+.pq-box{border:1px solid rgba(10,22,40,.12);border-radius:14px;padding:16px 16px 4px;margin:0 0 1rem;background:rgba(91,163,100,.06)}
+.pq-box .form-row{margin-bottom:1rem}
+.pq-h{font:600 10.5px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase;color:#3B7D44;margin:0 0 12px}
+.pq-lbl{font-family:var(--f-mono);font-size:.66rem;color:var(--forest);letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.pq-chips{display:flex;flex-wrap:wrap;gap:8px}
+.pq-chip{position:relative;display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;border:1px solid rgba(10,22,40,.16);font-size:.85rem;font-weight:500;color:#36433d;background:#fff;cursor:pointer}
+.pq-chip input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.form-group label.pq-chip{font-family:var(--f-body);font-size:.85rem;text-transform:none;letter-spacing:0;font-weight:500;color:#36433d}
+.pq-chip.on,.form-group label.pq-chip.on{border-color:#3B7D44;background:#E3EEE4;color:#1B4A22;font-weight:600}
+.pq-chip:focus-within{box-shadow:0 0 0 3px rgba(91,163,100,.3)}
+.pq-gloss{font-size:.78rem;line-height:1.5;color:#526477;margin:-6px 0 1rem}
+.pq-gloss b{color:#1B4A22;font-weight:600}
+.pq-gloss a{color:#3B7D44;font-weight:600}
+</style>
+</head>
+<body data-lang="en">
+<svg aria-hidden="true" height="0" style="position:absolute" width="0">
+<defs>
+<symbol id="logo-vault" viewbox="0 0 72 62">
+<g fill="none" opacity=".3" stroke="#0A1628" stroke-dasharray="1.2 1.4" stroke-width=".5">
+<line x1="34" x2="34" y1="2" y2="30"></line>
+<line x1="58" x2="34" y1="44" y2="30"></line>
+<line x1="10" x2="34" y1="44" y2="30"></line>
+</g>
+<g fill="none" stroke="#0A1628" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+<path d="M34,2 L58,16 L34,30 L10,16 Z"></path>
+<path d="M34,30 L58,16 L58,44 L34,58 Z"></path>
+<path d="M34,30 L10,16 L10,44 L34,58 Z"></path>
+</g>
+<path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#2A4A6A"></path>
+<path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#16304A"></path>
+<path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#0A1628"></path>
+<circle cx="40" cy="29" fill="#7EC389" r="1.2"></circle>
+<rect fill="#7EC389" height="2.5" rx=".3" width="1" x="39.5" y="29.5"></rect>
+<path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"></path>
+<path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"></path>
+<path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"></path>
+<line opacity=".6" stroke="#7EC389" stroke-dasharray=".8 .8" stroke-width=".6" x1="58.7" x2="58" y1="12" y2="16"></line>
+</symbol>
+<symbol id="logo-vault-dark" viewbox="0 0 72 62">
+<g fill="none" opacity=".25" stroke="#F5F3ED" stroke-dasharray="1.2 1.4" stroke-width=".5">
+<line x1="34" x2="34" y1="2" y2="30"></line>
+<line x1="58" x2="34" y1="44" y2="30"></line>
+<line x1="10" x2="34" y1="44" y2="30"></line>
+</g>
+<g fill="none" stroke="#F5F3ED" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+<path d="M34,2 L58,16 L34,30 L10,16 Z"></path>
+<path d="M34,30 L58,16 L58,44 L34,58 Z"></path>
+<path d="M34,30 L10,16 L10,44 L34,58 Z"></path>
+</g>
+<path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#F5F3ED"></path>
+<path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#C9C3B1"></path>
+<path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#A8A290"></path>
+<circle cx="40" cy="29" fill="#1B4A22" r="1.2"></circle>
+<rect fill="#1B4A22" height="2.5" rx=".3" width="1" x="39.5" y="29.5"></rect>
+<path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"></path>
+<path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"></path>
+<path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"></path>
+<line opacity=".7" stroke="#9BD7A4" stroke-dasharray=".8 .8" stroke-width=".6" x1="58.7" x2="58" y1="12" y2="16"></line>
+</symbol>
+<symbol id="icon-gxp" viewbox="0 0 48 48">
+<path d="M7 9h26l6 6v22a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V9z" fill="#F5F3ED" stroke="#0A1628" stroke-width="1.6"></path>
+<path d="M33 9v6h6" fill="none" stroke="#0A1628" stroke-linejoin="round" stroke-width="1.6"></path>
+<path d="M11 18 C 13 16, 15 20, 17 18 S 21 16, 23 19 S 27 18, 29 17" fill="none" stroke="#0A1628" stroke-linecap="round" stroke-width="1.3"></path>
+<g transform="translate(11 25)">
+<rect fill="#1B4A22" height="4.5" rx="1" width="9" x="0" y="0"></rect>
+<text fill="#7EC389" font-family="'JetBrains Mono',monospace" font-size="3.2" font-weight="700" text-anchor="middle" x="4.5" y="3.5">IQ</text>
+</g>
+<g transform="translate(22 25)">
+<rect fill="#1B4A22" height="4.5" rx="1" width="9" x="0" y="0"></rect>
+<text fill="#7EC389" font-family="'JetBrains Mono',monospace" font-size="3.2" font-weight="700" text-anchor="middle" x="4.5" y="3.5">OQ</text>
+</g>
+<g transform="translate(11 32)">
+<rect fill="#1B4A22" height="4.5" rx="1" width="9" x="0" y="0"></rect>
+<text fill="#7EC389" font-family="'JetBrains Mono',monospace" font-size="3.2" font-weight="700" text-anchor="middle" x="4.5" y="3.5">PQ</text>
+</g>
+<g transform="translate(33 34) rotate(-14)">
+<circle fill="#1B4A22" r="8.5" stroke="#7EC389" stroke-width="1.2"></circle>
+<circle fill="none" r="6.3" stroke="#7EC389" stroke-dasharray="1.2 1" stroke-width=".6"></circle>
+<path d="M-3.2 -.2 L-1 2.2 L3.2 -3" fill="none" stroke="#7EC389" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path>
+</g>
+</symbol>
+<symbol id="icon-ai" viewbox="0 0 48 48">
+<circle cx="7" cy="12" fill="none" r="2.5" stroke="#0A1628" stroke-width="1.4"></circle>
+<circle cx="7" cy="24" fill="none" r="2.5" stroke="#0A1628" stroke-width="1.4"></circle>
+<circle cx="7" cy="36" fill="none" r="2.5" stroke="#0A1628" stroke-width="1.4"></circle>
+<circle cx="20" cy="17" fill="#0A1628" r="3"></circle>
+<circle cx="20" cy="31" fill="#0A1628" r="3"></circle>
+<path d="M9 12 L17 17 M9 24 L17 17 M9 24 L17 31 M9 36 L17 31" opacity=".4" stroke="#0A1628" stroke-width="1"></path>
+<path d="M22 17 L30 22 M22 31 L30 26" opacity=".6" stroke="#0A1628" stroke-width="1"></path>
+<g transform="translate(32 24)">
+<rect fill="none" height="16" rx="1" stroke="#1B4A22" stroke-width="1.6" width="6" x="-3" y="-8"></rect>
+<line stroke="#1B4A22" stroke-linecap="round" stroke-width="1.3" x1="-1.5" x2="1.5" y1="-5" y2="-5"></line>
+<line stroke="#7EC389" stroke-linecap="round" stroke-width="1.3" x1="-1.5" x2="1.5" y1="-1" y2="-1"></line>
+<line stroke="#1B4A22" stroke-linecap="round" stroke-width="1.3" x1="-1.5" x2="1.5" y1="3" y2="3"></line>
+<path d="M-2 -10 Q 0 -12, 2 -10 L 2 -8 L -2 -8 Z" fill="#1B4A22"></path>
+</g>
+<path d="M38 24 L43 24 M41 22 L43 24 L41 26" fill="none" stroke="#1B4A22" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+<circle cx="41" cy="12" fill="#1B4A22" r="4.5"></circle>
+<path d="M39 12 l1.4 1.4 L43 10.5" fill="none" stroke="#7EC389" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</symbol>
+<symbol id="icon-sec" viewbox="0 0 48 48">
+<path d="M24 5l15 5v11c0 10-6 17-15 20-9-3-15-10-15-20V10l15-5z" fill="#F5F3ED" stroke="#0A1628" stroke-linejoin="round" stroke-width="1.6"></path>
+<path d="M24 9l11 4v9c0 7-4 12-11 14-7-2-11-7-11-14v-9l11-4z" fill="none" opacity=".35" stroke="#0A1628" stroke-width=".9"></path>
+<circle cx="24" cy="22" fill="none" opacity=".55" r="8.5" stroke="#0A1628" stroke-width=".9"></circle>
+<circle cx="24" cy="22" fill="none" r="5.5" stroke="#1B4A22" stroke-dasharray="1.5 1.4" stroke-width="1"></circle>
+<g transform="translate(24 22)">
+<rect fill="#1B4A22" height="5" rx=".8" width="6" x="-3" y="-2.5"></rect>
+<line stroke="#7EC389" stroke-width=".5" x1="-2" x2="2" y1="-1" y2="-1"></line>
+<line stroke="#7EC389" stroke-width=".5" x1="-2" x2="2" y1="0" y2="0"></line>
+<line stroke="#7EC389" stroke-width=".5" x1="-2" x2="2" y1="1" y2="1"></line>
+</g>
+<g transform="translate(36 11)">
+<circle fill="#1B4A22" r="4.5"></circle>
+<path d="M-2 0 L-.7 1.3 L2 -1.5" fill="none" stroke="#7EC389" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</g>
+</symbol>
+<symbol id="icon-strat" viewbox="0 0 48 48">
+<rect fill="#F5F3ED" height="34" rx="3" stroke="#0A1628" stroke-width="1.6" width="38" x="5" y="7"></rect>
+<path d="M7 30 Q 15 24, 24 27 T 41 25" fill="none" opacity=".4" stroke="#0A1628" stroke-width=".7"></path>
+<path d="M7 24 Q 16 18, 24 21 T 41 19" fill="none" opacity=".4" stroke="#0A1628" stroke-width=".7"></path>
+<path d="M9 18 Q 18 13, 26 15 T 40 13" fill="none" opacity=".35" stroke="#0A1628" stroke-width=".7"></path>
+<path d="M13 12 Q 22 10, 28 12" fill="none" opacity=".3" stroke="#0A1628" stroke-width=".7"></path>
+<path d="M10 37 Q 16 28, 22 30 Q 28 32, 30 26 Q 32 20, 37 14" fill="none" stroke="#1B4A22" stroke-dasharray="2 2" stroke-linecap="round" stroke-width="1.7"></path>
+<circle cx="10" cy="37" fill="#0A1628" r="2.2"></circle>
+<circle cx="22" cy="30" fill="#0A1628" r="1.8"></circle>
+<circle cx="30" cy="26" fill="#0A1628" r="1.8"></circle>
+<g transform="translate(37 14)">
+<circle fill="#1B4A22" r="2.3"></circle>
+<line stroke="#1B4A22" stroke-width="1.4" x1="0" x2="0" y1="-2" y2="-12"></line>
+<path d="M0 -12 L 8 -10 L 0 -8 Z" fill="#7EC389"></path>
+</g>
+<g transform="translate(40 38)">
+<circle fill="none" r="3" stroke="#0A1628" stroke-width=".8"></circle>
+<path d="M0 -2.3 L.8 0 L0 2.3 L-.8 0 Z" fill="#0A1628"></path>
+<text fill="#0A1628" font-family="'JetBrains Mono',monospace" font-size="2.6" font-weight="700" text-anchor="middle" x="0" y=".7">N</text>
+</g>
+</symbol>
+<symbol id="sc-csv" viewbox="0 0 24 24">
+<path d="M5 3h9l4 4v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.4"></path>
+<path d="M14 3v4h4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.4"></path>
+<path d="M6 10.5c.8-.6 1.6.6 2.4 0s1.6-.6 2.4 0 1.6.6 2.4 0" fill="none" opacity=".6" stroke="currentColor" stroke-linecap="round" stroke-width="1"></path>
+<rect fill="#1B4A22" height="3" rx=".6" width="5.5" x="5.5" y="14"></rect>
+<text fill="#7EC389" font-family="'JetBrains Mono',monospace" font-size="2.2" font-weight="700" text-anchor="middle" x="8.25" y="16.3">IQ</text>
+<rect fill="#1B4A22" height="3" rx=".6" width="5.5" x="5.5" y="18"></rect>
+<text fill="#7EC389" font-family="'JetBrains Mono',monospace" font-size="2.2" font-weight="700" text-anchor="middle" x="8.25" y="20.3">PQ</text>
+<circle cx="16" cy="17" fill="#7EC389" r="2.8"></circle>
+<path d="M14.8 17l.8.8 1.7-2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+</symbol>
+<symbol id="sc-part11" viewbox="0 0 24 24">
+<path d="M4 3h10l4 4v13a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.4"></path>
+<path d="M14 3v4h4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.4"></path>
+<path d="M5 11.5c1-.8 2 .8 3 0s2-.8 3 0 2 .8 3 0" fill="none" stroke="#1B4A22" stroke-linecap="round" stroke-width="1.1"></path>
+<path d="M5 14.5 L12 14.5" opacity=".4" stroke="currentColor" stroke-linecap="round" stroke-width=".9"></path>
+<path d="M5 16.5 L10 16.5" opacity=".4" stroke="currentColor" stroke-linecap="round" stroke-width=".9"></path>
+<circle cx="17" cy="18" fill="#1B4A22" r="4"></circle>
+<circle cx="17" cy="18" fill="none" r="2.8" stroke="#7EC389" stroke-width=".5"></circle>
+<line stroke="#7EC389" stroke-linecap="round" stroke-width=".9" x1="17" x2="17" y1="18" y2="16.2"></line>
+<line stroke="#7EC389" stroke-linecap="round" stroke-width=".9" x1="17" x2="18.4" y1="18" y2="18"></line>
+</symbol>
+<symbol id="sc-eqms" viewbox="0 0 24 24">
+<path d="M12 3l8 4-8 4-8-4 8-4z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.4"></path>
+<path d="M4 11l8 4 8-4" fill="none" opacity=".65" stroke="currentColor" stroke-linejoin="round" stroke-width="1.4"></path>
+<path d="M4 15l8 4 8-4" fill="none" opacity=".35" stroke="currentColor" stroke-linejoin="round" stroke-width="1.4"></path>
+<circle cx="17.5" cy="6.5" fill="#1B4A22" r="3"></circle>
+<path d="M16 6.5l1 1 2-2.3" fill="none" stroke="#7EC389" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"></path>
+</symbol>
+<symbol id="sc-lifecycle" viewbox="0 0 24 24">
+<path d="M20 12a8 8 0 0 1-13.5 5.7M4 12a8 8 0 0 1 13.5-5.7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.4"></path>
+<path d="M20 6v4h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"></path>
+<path d="M4 18v-4h4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"></path>
+<rect fill="#1B4A22" height="4" rx=".6" width="6" x="9" y="10"></rect>
+<text fill="#7EC389" font-family="'JetBrains Mono',monospace" font-size="2.6" font-weight="700" text-anchor="middle" x="12" y="13">v2</text>
+</symbol>
+<symbol id="sc-ai-strategy" viewbox="0 0 24 24">
+<circle cx="11" cy="12" fill="none" r="8.5" stroke="currentColor" stroke-width="1.4"></circle>
+<path d="M11 5.5l2.2 5.3L18.5 13 13.2 14.8 11 19.5 8.8 14.8 3.5 13 8.8 10.8 11 5.5z" fill="currentColor" opacity=".15"></path>
+<path d="M11 7l2 5-5-2z" fill="currentColor"></path>
+<circle cx="11" cy="12" fill="#F5F3ED" r="1.3" stroke="currentColor" stroke-width=".8"></circle>
+<circle cx="19.5" cy="5" fill="#1B4A22" r="2.5"></circle>
+<circle cx="19.5" cy="5" fill="#7EC389" r="1"></circle>
+</symbol>
+<symbol id="sc-ai-validated" viewbox="0 0 24 24">
+<circle cx="4" cy="7" fill="none" r="1.8" stroke="currentColor" stroke-width="1.3"></circle>
+<circle cx="4" cy="17" fill="none" r="1.8" stroke="currentColor" stroke-width="1.3"></circle>
+<path d="M5.8 7.5 L10 11 M5.8 16.5 L10 13" opacity=".5" stroke="currentColor" stroke-width="1"></path>
+<rect fill="currentColor" height="6" rx="1" width="6" x="9.5" y="9"></rect>
+<path d="M15.5 12 L19 12" stroke="currentColor" stroke-linecap="round" stroke-width="1.2"></path>
+<circle cx="20.5" cy="12" fill="#1B4A22" r="3"></circle>
+<path d="M19 12l1.1 1.2 2-2.2" fill="none" stroke="#7EC389" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path>
+</symbol>
+<symbol id="sc-ai-usecase" viewbox="0 0 24 24">
+<path d="M5 3h9l4 4v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.4"></path>
+<path d="M14 3v4h4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.4"></path>
+<path d="M6 12h8M6 14.5h6M6 17h7" opacity=".45" stroke="currentColor" stroke-linecap="round" stroke-width="1"></path>
+<rect fill="#1B4A22" height="4.5" rx="1" width="7" x="13" y="9.5"></rect>
+<text fill="#7EC389" font-family="'JetBrains Mono',monospace" font-size="2.8" font-weight="700" text-anchor="middle" x="16.5" y="12.9">AI</text>
+<circle cx="19.5" cy="8" fill="#7EC389" r="1.2"></circle>
+<path d="M19.5 6.5v3M18 8h3" stroke="#1B4A22" stroke-linecap="round" stroke-width=".7"></path>
+</symbol>
+<symbol id="sc-ai-governance" viewbox="0 0 24 24">
+<rect fill="none" height="14" rx="1" stroke="currentColor" stroke-width="1.4" width="8" x="8" y="5"></rect>
+<line opacity=".5" stroke="currentColor" stroke-linecap="round" stroke-width=".9" x1="9.5" x2="14.5" y1="8" y2="8"></line>
+<line stroke="#1B4A22" stroke-linecap="round" stroke-width="1.1" x1="9.5" x2="14.5" y1="11" y2="11"></line>
+<line opacity=".5" stroke="currentColor" stroke-linecap="round" stroke-width=".9" x1="9.5" x2="14.5" y1="14" y2="14"></line>
+<line opacity=".5" stroke="currentColor" stroke-linecap="round" stroke-width=".9" x1="9.5" x2="14.5" y1="17" y2="17"></line>
+<path d="M9 3.5 Q 12 2, 15 3.5 L15 5 L9 5 Z" fill="#1B4A22"></path>
+<path d="M2 12h5m-2-2l2 2-2 2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path>
+<path d="M17 12h5m-2-2l2 2-2 2" fill="none" stroke="#1B4A22" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path>
+<circle cx="20.5" cy="5.5" fill="#1B4A22" r="2.2"></circle>
+<path d="M19.5 5.5l.7.8 1.4-1.6" fill="none" stroke="#7EC389" stroke-linecap="round" stroke-linejoin="round" stroke-width=".9"></path>
+</symbol>
+<symbol id="sc-interim" viewbox="0 0 24 24">
+<rect fill="none" height="16" rx="2" stroke="currentColor" stroke-width="1.4" width="18" x="3" y="4"></rect>
+<circle cx="12" cy="10.5" fill="currentColor" r="2.3"></circle>
+<path d="M7.5 18c.5-2.5 2.3-4 4.5-4s4 1.5 4.5 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.4"></path>
+<circle cx="18.5" cy="6" fill="#1B4A22" r="2.5"></circle>
+<path d="M17 6l1 1 2-2.2" fill="none" stroke="#7EC389" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+</symbol>
+<symbol id="sc-assessment" viewbox="0 0 24 24">
+<path d="M4 9l6-3 6 3-6 3-6-3z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.2"></path>
+<path d="M4 13l6 3 6-3" fill="none" opacity=".5" stroke="currentColor" stroke-linejoin="round" stroke-width="1.2"></path>
+<circle cx="15.5" cy="14" fill="none" r="4.5" stroke="#1B4A22" stroke-width="1.5"></circle>
+<line stroke="#1B4A22" stroke-linecap="round" stroke-width="1.8" x1="18.7" x2="21" y1="17.2" y2="19.5"></line>
+<circle cx="15.5" cy="14" fill="#7EC389" opacity=".8" r="2.2"></circle>
+</symbol>
+<symbol id="sc-roadmap" viewbox="0 0 24 24">
+<path d="M3 14 Q 7 11, 11 13 T 19 11" fill="none" opacity=".4" stroke="currentColor" stroke-width="1"></path>
+<path d="M3 18 Q 7 15, 11 17 T 19 15" fill="none" opacity=".4" stroke="currentColor" stroke-width="1"></path>
+<path d="M5 21 Q 9 14, 13 17 Q 17 20, 19 6" fill="none" stroke="#1B4A22" stroke-dasharray="2 1.6" stroke-linecap="round" stroke-width="1.5"></path>
+<circle cx="5" cy="21" fill="currentColor" r="1.5"></circle>
+<circle cx="13" cy="17" fill="currentColor" r="1.3"></circle>
+<g transform="translate(19 6)">
+<circle fill="#1B4A22" r="1.8"></circle>
+<line stroke="#1B4A22" stroke-width="1.2" x1="0" x2="0" y1="-1.5" y2="-7"></line>
+<path d="M0 -7 L 5 -5.5 L 0 -4 Z" fill="#7EC389"></path>
+</g>
+</symbol>
+<symbol id="sc-phishing" viewbox="0 0 24 24">
+<rect fill="none" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4" width="14" x="3" y="9"></rect>
+<path d="M3 10l7 5 7-5" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.2"></path>
+<path d="M16 3 L16 8 Q 16 11, 13 11 Q 10 11, 10 8" fill="none" stroke="#C04040" stroke-linecap="round" stroke-width="1.6"></path>
+<circle cx="16" cy="3" fill="#C04040" r="1.1"></circle>
+<circle cx="18" cy="17" fill="#C04040" r="2.5"></circle>
+<text fill="#fff" font-family="'JetBrains Mono',monospace" font-size="3" font-weight="700" text-anchor="middle" x="18" y="18.2">!</text>
+</symbol>
+<symbol id="sc-sat" viewbox="0 0 24 24">
+<path d="M12 4 L21 8 L12 12 L3 8 Z" fill="currentColor"></path>
+<path d="M6 9.8 L6 13 Q 6 15.5, 12 15.5 Q 18 15.5, 18 13 L 18 9.8" fill="none" stroke="currentColor" stroke-width="1.4"></path>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1.2" x1="21" x2="21" y1="8" y2="12"></line>
+<circle cx="21" cy="12.5" fill="currentColor" r="1"></circle>
+<path d="M12 17l6 2v1c0 2-2.5 3.5-6 4-3.5-.5-6-2-6-4v-1l6-2z" fill="#1B4A22"></path>
+<path d="M10 20.5l1.3 1.3 2.7-3" fill="none" stroke="#7EC389" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path>
+</symbol>
+<symbol id="sc-policy" viewbox="0 0 24 24">
+<rect fill="none" height="17" rx="1.5" stroke="currentColor" stroke-width="1.4" width="14" x="4" y="4"></rect>
+<rect fill="currentColor" height="3.5" rx=".8" width="6" x="8" y="2.5"></rect>
+<path d="M7 10l1.2 1.2L10.5 9" fill="none" stroke="#1B4A22" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path>
+<line opacity=".5" stroke="currentColor" stroke-linecap="round" stroke-width=".9" x1="12" x2="16" y1="10.5" y2="10.5"></line>
+<path d="M7 14l1.2 1.2L10.5 13" fill="none" stroke="#1B4A22" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path>
+<line opacity=".5" stroke="currentColor" stroke-linecap="round" stroke-width=".9" x1="12" x2="16" y1="14.5" y2="14.5"></line>
+<rect fill="#1B4A22" height="4.5" rx="1" width="7" x="14" y="17"></rect>
+<text fill="#7EC389" font-family="'JetBrains Mono',monospace" font-size="2.6" font-weight="700" text-anchor="middle" x="17.5" y="20.3">ISO</text>
+</symbol>
+<symbol id="sc-access" viewbox="0 0 24 24">
+<rect fill="none" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4" width="13" x="3" y="7"></rect>
+<circle cx="6.5" cy="10.5" fill="currentColor" r="1.3"></circle>
+<path d="M4.5 14.5c.3-1 1-1.5 2-1.5s1.7.5 2 1.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1"></path>
+<line opacity=".5" stroke="currentColor" stroke-linecap="round" stroke-width=".9" x1="10" x2="14.5" y1="10" y2="10"></line>
+<line opacity=".5" stroke="currentColor" stroke-linecap="round" stroke-width=".9" x1="10" x2="13" y1="12" y2="12"></line>
+<circle cx="18.5" cy="14" fill="none" r="3" stroke="#1B4A22" stroke-width="1.5"></circle>
+<path d="M20.5 15.5 L23 18 L21.5 19.5 L19.5 17.5" fill="none" stroke="#1B4A22" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<circle cx="18.5" cy="14" fill="#7EC389" r="1"></circle>
+</symbol>
+<symbol id="sc-acronis" viewbox="0 0 24 24">
+<path d="M12 2 L 20 5 L 20 12 C 20 17.5, 16.5 20.8, 12 22 C 7.5 20.8, 4 17.5, 4 12 L 4 5 Z" fill="#ED1C24"></path>
+<path d="M12 3 L 19 5.7 L 19 12 C 19 16.9, 16 19.9, 12 21 C 8 19.9, 5 16.9, 5 12 L 5 5.7 Z" fill="none" opacity=".4" stroke="#fff" stroke-width=".6"></path>
+<path d="M8.5 17 L 12 7.5 L 15.5 17" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1"></path>
+<path d="M10.3 13.8 L 13.7 13.8" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.1"></path>
+</symbol>
+<symbol id="arrow" viewbox="0 0 14 14">
+<path d="M3 7h8m0 0L7.5 3.5M11 7 7.5 10.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</symbol>
+<symbol id="chevron-down" viewBox="0 0 10 10">
+<path d="M1.5 3.5 L5 7 L8.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+</defs>
+</svg>
+<nav class="site-nav" id="siteNav">
+<div class="nav-inner">
+<a aria-label="MSET — Kifarkis Nätsäkerhet, back to top" data-i18n-aria="aria.logo-top" class="sb-brand" href="#">
+<svg viewBox="0 0 128 120" fill="none"><path d="M52 62 52 18M52 62 90.1 84M52 62 13.9 84" stroke="#ECE8DB" stroke-width="2" stroke-dasharray="3 4.5" stroke-linecap="round" opacity=".4"/><g stroke="#ECE8DB" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><polygon points="52,18 90.1,40 90.1,84 52,106 13.9,84 13.9,40"/><path d="M52 62 90.1 40M52 62 52 106M52 62 13.9 40"/></g><polygon points="52,40 71,51 52,62 33,51" fill="#F5F3ED"/><polygon points="33,51 52,62 52,84 33,73" fill="#E7E1CE"/><polygon points="52,62 71,51 71,73 52,84" fill="#D6CFB8"/><circle cx="61.5" cy="64.5" r="2.6" fill="#1B4A22"/><g stroke-linejoin="round"><polygon points="108,21 115.8,25.5 108,30 100.2,25.5" fill="#9BD7A4"/><polygon points="100.2,25.5 108,30 108,39 100.2,34.5" fill="#5BA364"/><polygon points="108,30 115.8,25.5 115.8,34.5 108,39" fill="#3B7D44"/></g></svg>
+<span class="brand-wm"><span class="wordmark">MSET<span class="dot"></span></span><span class="tag" aria-hidden="true">&#8203;</span></span>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav.gxp" href="#services">GxP</a></li>
+<li class="has-deep" data-deep="ai">
+<a data-i18n="nav.ai" href="#ai">AI</a>
+<button class="deep-toggle" type="button" aria-label="AI — show more" data-i18n-aria="aria.ai-more" aria-expanded="false" aria-controls="deep-ai">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-ai" role="menu">
+<a class="deep-row" href="#ai" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.ai.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.ai.desc">The 4 service cards on the homepage.</div>
+</a>
+<a class="deep-row primary" href="/ai" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.ai.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.ai.deep-desc">Full AI Consulting page — 9 use cases, 3 architecture patterns, 7 governance docs.</div>
+</a>
+</div>
+</li>
+<li class="has-deep" data-deep="security">
+<a data-i18n="nav.security" href="#security">Security</a>
+<button class="deep-toggle" type="button" aria-label="Security — show more" data-i18n-aria="aria.sec-more" aria-expanded="false" aria-controls="deep-security">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-security" role="menu"><a class="deep-row" href="#security" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.security.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.security.desc">The IT security service cards on the homepage.</div>
+</a>
+<a class="deep-row primary" href="/sat" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.security.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.security.deep-desc">Full Security Awareness Training page — phishing simulations, training programmes.</div>
+</a>
+</div>
+</li>
+<li class="has-deep" data-deep="strategy">
+<a data-i18n="nav.strategy" href="#strategy">Strategy</a>
+<button class="deep-toggle" type="button" aria-label="Strategy — show more" data-i18n-aria="aria.str-more" aria-expanded="false" aria-controls="deep-strategy">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-strategy" role="menu">
+<a class="deep-row" href="#strategy" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.strategy.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.strategy.desc">The IT Strategy card on the homepage.</div>
+</a>
+<a class="deep-row primary" href="/strategy" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.strategy.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.strategy.deep-desc">Full Strategy page — three stages (Assessment, Strategy &amp; Roadmap, Interim IT Director).</div>
+</a>
+</div>
+</li>
+<li class="has-deep" data-deep="products">
+<a data-i18n="nav.products" href="/products">Products</a>
+<button class="deep-toggle" type="button" aria-label="Products — show more" data-i18n-aria="aria.prod-more" aria-expanded="false" aria-controls="deep-products">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card deep-wide" id="deep-products" role="menu">
+<a class="deep-row" href="/products#sign" role="menuitem">
+<div class="deep-row-label"><span>MSET Sign</span> <span class="soon" data-i18n="nav.soon">Coming soon</span></div>
+<div class="deep-row-desc" data-i18n="nav.products.sign-desc">Electronic signatures for regulated work - SES, eID and 21 CFR Part 11.</div>
+</a>
+<a class="deep-row" href="/products#trust" role="menuitem">
+<div class="deep-row-label"><span>MSET Trust</span> <span class="soon" data-i18n="nav.soon">Coming soon</span></div>
+<div class="deep-row-desc" data-i18n="nav.products.trust-desc">A trust centre: your compliance status on the web, easy access for auditors.</div>
+</a>
+<a class="deep-row" href="/products#transcribe" role="menuitem">
+<div class="deep-row-label"><span>MSET Transcribe</span> <span class="soon" data-i18n="nav.soon">Coming soon</span></div>
+<div class="deep-row-desc" data-i18n="nav.products.transcribe-desc">Meeting transcription, with summaries and actions to share.</div>
+</a>
+<a class="deep-row primary" href="/products" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.products.all">All products</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.products.all-desc">What each product does, and when it is released.</div>
+</a>
+</div>
+</li>
+<li><a data-i18n="nav.about" href="#about">About</a></li>
+</ul>
+<ul class="nav-actions">
+<li><a class="nav-cta" data-i18n="nav.cta" href="#contact">Book a call</a></li>
+<li>
+<div class="lang-switch" id="langSwitch">
+<button class="lang-pill" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langPop">
+<span class="dot" aria-hidden="true"></span>
+<span class="current-code">EN</span>
+<svg class="chevron" aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="lang-pop" id="langPop" role="menu">
+<div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
+<ul>
+<li><button type="button" data-lang="en" aria-pressed="true" role="menuitemradio"><span class="native">English</span><span class="code">EN</span></button></li>
+<li><button type="button" data-lang="sv" aria-pressed="false" role="menuitemradio"><span class="native">Svenska</span><span class="code">SV</span></button></li>
+<li><button type="button" data-lang="da" aria-pressed="false" role="menuitemradio"><span class="native">Dansk</span><span class="code">DA</span></button></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<span class="acct-slot" aria-hidden="true"></span>
+<button aria-label="Menu" data-i18n-aria="aria.menu" class="nav-hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+<a data-i18n="nav.gxp" href="#services">GxP</a>
+<a data-i18n="nav.ai" href="#ai">AI</a>
+<a data-i18n="nav.ai.deep" class="deep-child" href="/ai">Deep dive: AI Consulting</a>
+<a data-i18n="nav.security" href="#security">Security</a>
+<a data-i18n="nav.security.deep" class="deep-child" href="/sat">Deep dive: Security Awareness Training</a>
+<a data-i18n="nav.strategy" href="#strategy">Strategy</a>
+<a data-i18n="nav.strategy.deep" class="deep-child" href="/strategy">Deep dive: Strategy</a>
+<a data-i18n="nav.products" href="/products">Products</a>
+<a data-i18n="nav.about" href="#about">About</a>
+<a class="nav-cta" data-i18n="nav.cta" href="#contact">Book a call</a>
+
+<div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="aria.language">
+<div class="lang-pop" id="langPopMobile">
+<div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
+<ul>
+<li><button type="button" data-lang="en" aria-pressed="true"><span class="native">English</span><span class="code">EN</span></button></li>
+<li><button type="button" data-lang="sv" aria-pressed="false"><span class="native">Svenska</span><span class="code">SV</span></button></li>
+<li><button type="button" data-lang="da" aria-pressed="false"><span class="native">Dansk</span><span class="code">DA</span></button></li>
+</ul>
+</div>
+</div>
+</div>
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-grid">
+<div>
+<div class="hero-eyebrow" data-i18n="hero.eyebrow">Life Science · GxP · AI</div>
+<h1><span data-i18n="hero.h1.line1">We speak both</span><br/><em data-i18n="hero.h1.line2">GxP and GPT.</em></h1>
+<p class="hero-promise"><strong data-i18n="hero.promise.1">Validated systems.</strong> <strong data-i18n="hero.promise.2">Deployed AI.</strong> <strong data-i18n="hero.promise.3">Fewer audit findings.</strong></p>
+<p class="hero-lede" data-i18n="hero.lede">
+          Independent IT consulting for pharma, biotech and medtech — based in Skåne, working across the Nordics.
+        </p>
+<div class="hero-actions">
+<a class="btn btn-primary" data-i18n="hero.cta.services" href="#services">
+            See our services
+            <svg class="btn-arrow" height="14" width="14"><use href="#arrow"></use></svg>
+</a>
+<a class="btn btn-ghost" data-i18n="hero.cta.intro" href="#contact" style="color:#fff;border-color:rgba(255,255,255,.22)">Book a 30-min intro</a>
+</div>
+<div class="hero-strip">
+<span>21 CFR Part 11</span>
+<span>EU Annex 11</span>
+<span>GAMP 5</span>
+<span>ISO 13485</span>
+</div>
+</div>
+<div class="visual">
+<div class="visual-label">Live system</div>
+<div class="visual-title">audit trail · gxp-prod-01</div>
+<div class="audit-stream">
+<div class="audit-stream-inner">
+<div class="audit-row"><span class="time">09:47:21</span><span class="action"><span class="actor">@anna.lindqvist</span><span class="act">Batch record BR-2389 created</span></span><span class="check">Part 11</span></div>
+<div class="audit-row"><span class="time">09:47:28</span><span class="action"><span class="actor">system</span><span class="act">E-signature captured</span></span><span class="check sys">signed</span></div>
+<div class="audit-row"><span class="time">09:48:14</span><span class="action"><span class="actor">@peter.svensson</span><span class="act">IQ protocol approved</span></span><span class="check">GAMP 5</span></div>
+<div class="audit-row"><span class="time">09:49:02</span><span class="action"><span class="actor">ml-model v2.1</span><span class="act">Prediction · conf. 0.973</span></span><span class="check">logged</span></div>
+<div class="audit-row"><span class="time">09:49:47</span><span class="action"><span class="actor">system</span><span class="act">Access review — 12 users</span></span><span class="check">verified</span></div>
+<div class="audit-row"><span class="time">09:50:33</span><span class="action"><span class="actor">@anna.lindqvist</span><span class="act">Deviation DV-0047 raised</span></span><span class="check warn">review</span></div>
+<div class="audit-row"><span class="time">09:51:18</span><span class="action"><span class="actor">@qa.reviewer</span><span class="act">DV-0047 · root cause logged</span></span><span class="check">closed</span></div>
+<div class="audit-row"><span class="time">09:52:02</span><span class="action"><span class="actor">system</span><span class="act">Backup complete · 241 GB</span></span><span class="check">Acronis</span></div>
+<div class="audit-row"><span class="time">09:53:15</span><span class="action"><span class="actor">@maria.berg</span><span class="act">PQ run 03 · pass</span></span><span class="check">PQ</span></div>
+<div class="audit-row"><span class="time">09:47:21</span><span class="action"><span class="actor">@anna.lindqvist</span><span class="act">Batch record BR-2389 created</span></span><span class="check">Part 11</span></div>
+<div class="audit-row"><span class="time">09:47:28</span><span class="action"><span class="actor">system</span><span class="act">E-signature captured</span></span><span class="check sys">signed</span></div>
+<div class="audit-row"><span class="time">09:48:14</span><span class="action"><span class="actor">@peter.svensson</span><span class="act">IQ protocol approved</span></span><span class="check">GAMP 5</span></div>
+<div class="audit-row"><span class="time">09:49:02</span><span class="action"><span class="actor">ml-model v2.1</span><span class="act">Prediction · conf. 0.973</span></span><span class="check">logged</span></div>
+<div class="audit-row"><span class="time">09:49:47</span><span class="action"><span class="actor">system</span><span class="act">Access review — 12 users</span></span><span class="check">verified</span></div>
+<div class="audit-row"><span class="time">09:50:33</span><span class="action"><span class="actor">@anna.lindqvist</span><span class="act">Deviation DV-0047 raised</span></span><span class="check warn">review</span></div>
+<div class="audit-row"><span class="time">09:51:18</span><span class="action"><span class="actor">@qa.reviewer</span><span class="act">DV-0047 · root cause logged</span></span><span class="check">closed</span></div>
+<div class="audit-row"><span class="time">09:52:02</span><span class="action"><span class="actor">system</span><span class="act">Backup complete · 241 GB</span></span><span class="check">Acronis</span></div>
+<div class="audit-row"><span class="time">09:53:15</span><span class="action"><span class="actor">@maria.berg</span><span class="act">PQ run 03 · pass</span></span><span class="check">PQ</span></div>
+</div>
+</div>
+<div class="visual-caption">Every action. <strong>Timestamped. Signed. Traceable.</strong></div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+<section class="pillars">
+<div class="pillars-inner">
+<span class="eyebrow reveal" data-i18n="pillars.eyebrow">What we do</span>
+<h2 class="section-title reveal"><span data-i18n="pillars.title.1">The IT partner for life-science teams that</span> <em data-i18n="pillars.title.2">can't afford to get it wrong.</em></h2>
+<p class="section-lede reveal" data-i18n="pillars.intro">
+      MSET sits at the intersection of regulated IT and emerging technology. We validate systems.
+      We deploy AI with the audit trail regulators expect. We run IT through inspections.
+      We don't sell software — we design what you need and help you run it.
+    </p>
+<div class="pillars-grid stagger">
+<a class="pillar" href="#services">
+<span class="pillar-num" data-i18n="pillar.gxp.num">01 / Validation</span>
+<svg class="pillar-icon"><use href="#icon-gxp"></use></svg>
+<h3 class="pillar-title" data-i18n="pillar.gxp.title">GxP Systems</h3>
+<p class="pillar-body" data-i18n="pillar.gxp.body">Computer system validation, qualification, eQMS rollouts, and ongoing compliance. Built on GAMP 5.</p>
+<span class="pillar-link">See services <svg><use href="#arrow"></use></svg></span>
+</a>
+<a class="pillar" href="#ai">
+<span class="pillar-num" data-i18n="pillar.ai.num">02 / AI</span>
+<svg class="pillar-icon"><use href="#icon-ai"></use></svg>
+<h3 class="pillar-title" data-i18n="pillar.ai.title">AI in Regulated Life Science</h3>
+<p class="pillar-body" data-i18n="pillar.ai.body">Strategy, validation and governance for AI and ML — built to hold up under inspection.</p>
+<span class="pillar-link">See services <svg><use href="#arrow"></use></svg></span>
+</a>
+<a class="pillar" href="#security">
+<span class="pillar-num" data-i18n="pillar.sec.num">03 / Security</span>
+<svg class="pillar-icon"><use href="#icon-sec"></use></svg>
+<h3 class="pillar-title" data-i18n="pillar.sec.title">IT Security &amp; Awareness</h3>
+<p class="pillar-body" data-i18n="pillar.sec.body">Security awareness training, phishing simulation, access control, and backup — the human and technical layers together.</p>
+<span class="pillar-link">See services <svg><use href="#arrow"></use></svg></span>
+</a>
+<a class="pillar" href="#strategy">
+<span class="pillar-num" data-i18n="pillar.strat.num">04 / Leadership</span>
+<svg class="pillar-icon"><use href="#icon-strat"></use></svg>
+<h3 class="pillar-title" data-i18n="pillar.strat.title">IT Strategy &amp; Leadership</h3>
+<p class="pillar-body" data-i18n="pillar.strat.body">Interim IT Director, independent assessments, and multi-year IT roadmaps for regulated environments.</p>
+<span class="pillar-link">See services <svg><use href="#arrow"></use></svg></span>
+</a>
+</div>
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+<section class="service-section alt" id="services">
+<div class="service-inner">
+<div class="service-header">
+<div class="reveal-left">
+<span class="eyebrow num" data-i18n="gxp.eyebrow">01 / GxP Systems</span>
+<h2 class="section-title"><span data-i18n="gxp.title.1">Validated systems that</span> <em data-i18n="gxp.title.2">pass inspection.</em></h2>
+<p class="section-lede" data-i18n="gxp.intro">
+          Every regulated IT system you run eventually meets an auditor. We design, implement, and document
+          systems so that meeting is uneventful — with rigorous computer system validation built on
+          GAMP 5, 21 CFR Part 11, and EU Annex 11.
+        </p>
+</div>
+<div class="reveal-right">
+<a class="service-cta" data-i18n="gxp.cta" href="#contact">Discuss a validation project →</a>
+</div>
+</div>
+<div class="service-items stagger">
+<div class="service-item">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-csv"></use></svg></div>
+<h3 class="service-item-title" data-i18n="gxp.card1.title">Computer System Validation (CSV / CSA)</h3>
+<p class="service-item-body" data-i18n="gxp.card1.body">End-to-end validation for GxP systems — user requirements through to performance qualification, using risk-based approaches that satisfy regulators without over-engineering.</p>
+<ul class="service-item-list">
+<li data-i18n="gxp.card1.b1">URS · FS · DS · IQ · OQ · PQ</li>
+<li data-i18n="gxp.card1.b2">Risk assessments (ICH Q9)</li>
+<li data-i18n="gxp.card1.b3">Traceability matrix management</li>
+</ul>
+</div>
+<div class="service-item">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-part11"></use></svg></div>
+<h3 class="service-item-title" data-i18n="gxp.card2.title">21 CFR Part 11 &amp; Annex 11</h3>
+<p class="service-item-body" data-i18n="gxp.card2.body">Electronic records and electronic signatures, done properly. Audit trails, access controls, and data integrity across the ALCOA+ framework.</p>
+<ul class="service-item-list">
+<li data-i18n="gxp.card2.b1">E-signature implementation</li>
+<li data-i18n="gxp.card2.b2">Audit trail review procedures</li>
+<li data-i18n="gxp.card2.b3">Data integrity controls (ALCOA+)</li>
+</ul>
+</div>
+<div class="service-item">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-eqms"></use></svg></div>
+<h3 class="service-item-title" data-i18n="gxp.card3.title">Quality Management Systems (eQMS)</h3>
+<p class="service-item-body" data-i18n="gxp.card3.body">Selection, configuration, and rollout of electronic quality systems — deviations, CAPAs, change control, training, and document lifecycle in one validated platform.</p>
+<ul class="service-item-list">
+<li data-i18n="gxp.card3.b1">Vendor selection &amp; evaluation</li>
+<li data-i18n="gxp.card3.b2">Migration from paper / legacy systems</li>
+<li data-i18n="gxp.card3.b3">eQMS validation &amp; go-live</li>
+</ul>
+</div>
+<div class="service-item">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-lifecycle"></use></svg></div>
+<h3 class="service-item-title" data-i18n="gxp.card4.title">System Lifecycle Management</h3>
+<p class="service-item-body" data-i18n="gxp.card4.body">Periodic review, change control, and decommissioning. Validated systems don't stay validated by themselves — they need maintenance built into operational reality.</p>
+<ul class="service-item-list">
+<li data-i18n="gxp.card4.b1">Periodic review procedures</li>
+<li data-i18n="gxp.card4.b2">Change control frameworks</li>
+<li data-i18n="gxp.card4.b3">Decommissioning &amp; data archival</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+<section class="service-section dark" id="ai">
+<div class="service-inner">
+<div class="service-header">
+<div class="reveal-left">
+<span class="eyebrow dark" data-i18n="ai.eyebrow">02 / AI Consulting</span>
+<h2 class="section-title"><span data-i18n="ai.title.1">AI that works in</span> <em data-i18n="ai.title.2">regulated</em> <span data-i18n="ai.title.3">environments.</span></h2>
+<p class="section-lede" data-i18n="ai.intro">
+          Deploying AI in a life-science company is fundamentally different from any other industry.
+          We understand the validation requirements, the data governance expectations, and the regulatory
+          scrutiny that comes with it — and we help you navigate all of it.
+        </p>
+<a class="security-deep-link" data-i18n="ai.deep-dive" href="/ai">
+          Deep dive: AI Consulting services
+          <svg height="14" width="14"><use href="#arrow"></use></svg>
+</a>
+</div>
+<div class="reveal-right">
+<a class="service-cta" data-i18n="ai.cta" href="#contact">Start an AI conversation →</a>
+</div>
+</div>
+<div class="service-items stagger">
+<div class="service-item">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-ai-strategy"></use></svg></div>
+<h3 class="service-item-title" data-i18n="ai.card1.title">AI Strategy &amp; Roadmapping</h3>
+<p class="service-item-body" data-i18n="ai.card1.body">Pragmatic AI strategies tailored to your regulatory context, data maturity, and organisational readiness.</p>
+<ul class="service-item-list">
+<li data-i18n="ai.card1.b1">Use-case discovery &amp; prioritisation</li>
+<li data-i18n="ai.card1.b2">Data &amp; readiness assessment</li>
+<li data-i18n="ai.card1.b3">Phased, regulator-aware roadmap</li>
+</ul>
+</div>
+<div class="service-item">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-ai-validated"></use></svg></div>
+<h3 class="service-item-title" data-i18n="ai.card2.title">Validated AI Implementation</h3>
+<p class="service-item-body" data-i18n="ai.card2.body">AI and ML systems implemented with the rigour of GxP — covering model validation, explainability, and audit readiness.</p>
+<ul class="service-item-list">
+<li data-i18n="ai.card2.b1">Model validation protocols (IQ / OQ / PQ adapted for ML)</li>
+<li data-i18n="ai.card2.b2">Model lineage &amp; audit trail design</li>
+<li data-i18n="ai.card2.b3">Performance monitoring &amp; drift detection</li>
+</ul>
+</div>
+<div class="service-item">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-ai-usecase"></use></svg></div>
+<h3 class="service-item-title" data-i18n="ai.card3.title">Regulatory &amp; Quality AI Use Cases</h3>
+<p class="service-item-body" data-i18n="ai.card3.body">From AI-assisted document review and deviation analysis to intelligent batch release — practical applications with compliance built in.</p>
+<ul class="service-item-list">
+<li data-i18n="ai.card3.b1">AI-assisted deviation analysis</li>
+<li data-i18n="ai.card3.b2">Batch record review automation</li>
+<li data-i18n="ai.card3.b3">Regulatory document intelligence</li>
+</ul>
+</div>
+<div class="service-item">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-ai-governance"></use></svg></div>
+<h3 class="service-item-title" data-i18n="ai.card4.title">AI Governance &amp; Change Management</h3>
+<p class="service-item-body" data-i18n="ai.card4.body">Frameworks for responsible AI adoption — ensuring your teams, processes, and regulators are all aligned.</p>
+<ul class="service-item-list">
+<li data-i18n="ai.card4.b1">AI governance policy &amp; committee setup</li>
+<li data-i18n="ai.card4.b2">Change management for AI-enabled workflows</li>
+<li data-i18n="ai.card4.b3">Continuous-learning system controls</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+<section class="security" id="security">
+<div class="security-inner">
+<div class="security-header">
+<div class="reveal-left">
+<span class="eyebrow num" data-i18n="sec.eyebrow">03 / IT Security &amp; Awareness</span>
+<h2 class="section-title"><span data-i18n="sec.title.1">Your biggest security risk is</span> <em data-i18n="sec.title.2">human.</em></h2>
+<p class="section-lede">
+<span data-i18n="sec.intro.1">Over 90% of successful cyberattacks begin with a phishing email. Firewalls and antivirus software cannot protect against an employee who clicks the wrong link — but</span> <strong data-i18n="sec.intro.2">training and testing can</strong>.
+        </p>
+<p class="section-lede" data-i18n="sec.intro.3">
+          MSET helps life-science and regulated organisations build a culture of security awareness —
+          combining hands-on phishing simulations with structured Security Awareness Training that
+          actually changes behaviour.
+        </p>
+<a class="security-deep-link" data-i18n="sec.deep-dive" href="/sat">
+          Deep dive: Security Awareness Training programme
+          <svg height="14" width="14"><use href="#arrow"></use></svg>
+</a>
+</div>
+<div class="threat-meter reveal-right" id="threatMeter">
+<div class="threat-meter-title" data-i18n="sec.attack-title">Top attack vectors — regulated industries</div>
+<div class="threat-row"><span class="threat-label" data-i18n="sec.attack.phishing">Phishing email</span><div class="threat-bar-wrap"><div class="threat-bar high" data-pct="91"></div></div><span class="threat-pct">91%</span></div>
+<div class="threat-row"><span class="threat-label" data-i18n="sec.attack.creds">Credential theft</span><div class="threat-bar-wrap"><div class="threat-bar high" data-pct="74"></div></div><span class="threat-pct">74%</span></div>
+<div class="threat-row"><span class="threat-label" data-i18n="sec.attack.social">Social engineering</span><div class="threat-bar-wrap"><div class="threat-bar mid" data-pct="62"></div></div><span class="threat-pct">62%</span></div>
+<div class="threat-row"><span class="threat-label" data-i18n="sec.attack.insider">Insider threat</span><div class="threat-bar-wrap"><div class="threat-bar mid" data-pct="38"></div></div><span class="threat-pct">38%</span></div>
+<div class="threat-row"><span class="threat-label" data-i18n="sec.attack.ransom">Ransomware</span><div class="threat-bar-wrap"><div class="threat-bar" data-pct="27"></div></div><span class="threat-pct">27%</span></div>
+<p class="threat-note" data-i18n="sec.attack.context">Regulated sectors including pharma and medtech are among the most targeted globally — high-value IP and patient data are prime targets. <span data-i18n="sec.attack.sources" style="display:block;margin-top:.5rem;opacity:.75">Sources: Verizon DBIR 2024 · IBM X-Force Threat Intelligence Index · ENISA Threat Landscape</span></p>
+</div>
+</div>
+<div class="security-cards stagger">
+<div class="security-card featured">
+<div>
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-phishing"></use></svg></div>
+<h3 class="security-card-title" data-i18n="sec.card1.title">Phishing Simulation &amp; Testing</h3>
+<p class="security-card-body" data-i18n="sec.card1.body">
+            We run realistic, controlled phishing campaigns against your organisation — measuring who clicks,
+            who reports, and who is most at risk. Results feed directly into targeted training.
+          </p>
+<ul class="security-card-list">
+<li data-i18n="sec.card1.b1">Realistic phishing templates (industry-tailored)</li>
+<li data-i18n="sec.card1.b2">Spear-phishing scenarios targeting specific roles</li>
+<li data-i18n="sec.card1.b3">SMS / vishing (voice phishing) simulations</li>
+<li data-i18n="sec.card1.b4">Click-through and credential-entry tracking</li>
+<li data-i18n="sec.card1.b5">Instant teachable moment for users who click</li>
+<li data-i18n="sec.card1.b6">Per-user and per-department reporting</li>
+<li data-i18n="sec.card1.b7">Repeat-testing cadence to measure improvement</li>
+</ul>
+</div>
+<div class="phishing-demo">
+<div class="phish-bar">
+<div class="phish-dot" style="background:#FF5F57"></div>
+<div class="phish-dot" style="background:#FEBC2E"></div>
+<div class="phish-dot" style="background:#28C840"></div>
+<div class="phish-url">
+<span class="warn">⚠</span>
+              secur1ty-update.pharma-it-portal.com
+            </div>
+</div>
+<div class="phish-body">
+<div class="phish-warning">
+<span class="w-icon">⚠</span>
+<span data-i18n="sec.card1.sim-msg">This link was part of a controlled MSET phishing test. Your click has been logged.</span>
+</div>
+<div class="phish-email-line" style="width:100%"></div>
+<div class="phish-email-line" style="width:85%"></div>
+<div class="phish-email-line" style="width:60%"></div>
+<div class="phish-email-line" style="width:40%;margin-top:.75rem"></div>
+<span class="badge-caught" data-i18n="sec.card1.sim-done">✓ Simulation complete</span>
+</div>
+</div>
+</div>
+<div class="security-card">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-sat"></use></svg></div>
+<h3 class="security-card-title" data-i18n="sec.card2.title">Security Awareness Training</h3>
+<p class="security-card-body" data-i18n="sec.card2.body">
+          Your people are your perimeter. Our role-based SAT programme turns employees from the weakest link
+          into your first line of defence — with curriculum tailored to life-science and regulated work,
+          and evidence your auditors will actually accept.
+        </p>
+<ul class="security-card-list">
+<li data-i18n="sec.card2.b1">Role-based e-learning (quality, IT, lab, exec)</li>
+<li data-i18n="sec.card2.b2">GxP-specific modules — data integrity, CSV, Annex 11</li>
+<li data-i18n="sec.card2.b3">Framework-aligned evidence (ISO 27001, NIS2)</li>
+<li data-i18n="sec.card2.b4">Quarterly reporting &amp; compliance trail</li>
+<li data-i18n="sec.card2.b5">Annual refresh &amp; attestation programme</li>
+</ul>
+<a class="expand-link" data-i18n="sec.card2.explore" href="/sat">
+          Explore the full programme <svg><use href="#arrow"></use></svg>
+</a>
+</div>
+<div class="security-card">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-policy"></use></svg></div>
+<h3 class="security-card-title" data-i18n="sec.card3.title">Security Policy &amp; Risk Assessment</h3>
+<p class="security-card-body" data-i18n="sec.card3.body">
+          Develop and maintain IT security policies that satisfy both regulatory requirements and practical
+          operational needs — aligned with ISO 27001, NIS2, and sector-specific expectations.
+        </p>
+<ul class="security-card-list">
+<li data-i18n="sec.card3.b1">IT security policy development</li>
+<li data-i18n="sec.card3.b2">Risk assessment &amp; gap analysis</li>
+<li data-i18n="sec.card3.b3">NIS2 &amp; ISO 27001 readiness</li>
+<li data-i18n="sec.card3.b4">Incident response planning</li>
+<li data-i18n="sec.card3.b5">Supplier &amp; third-party risk review</li>
+</ul>
+</div>
+<div class="security-card">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-access"></use></svg></div>
+<h3 class="security-card-title" data-i18n="sec.card4.title">Access Control &amp; Identity Management</h3>
+<p class="security-card-body" data-i18n="sec.card4.body">
+          The right people in the right systems — and no-one else. Especially critical in GxP environments
+          where access to validated systems must be documented and controlled.
+        </p>
+<ul class="security-card-list">
+<li data-i18n="sec.card4.b1">Role-based access control (RBAC)</li>
+<li data-i18n="sec.card4.b2">MFA implementation &amp; management</li>
+<li data-i18n="sec.card4.b3">Privileged access reviews</li>
+<li data-i18n="sec.card4.b4">21 CFR Part 11 access audit trails</li>
+<li data-i18n="sec.card4.b5">Joiners / movers / leavers process</li>
+</ul>
+</div>
+<div class="security-card">
+<span class="partner-badge" data-i18n="sec.acronis.badge">Acronis Official Partner</span>
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-acronis"></use></svg></div>
+<h3 class="security-card-title" data-i18n="sec.acronis.title">Acronis Cyber Protect</h3>
+<p class="security-card-body" data-i18n="sec.acronis.body">
+          We deploy and manage Acronis Cyber Protect — an integrated solution combining backup,
+          ransomware protection, and endpoint security. Your data stays safe even when attackers get through.
+        </p>
+<ul class="security-card-list">
+<li data-i18n="sec.acronis.b1">Automated backup — servers &amp; workstations</li>
+<li data-i18n="sec.acronis.b2">AI-powered ransomware detection &amp; rollback</li>
+<li data-i18n="sec.acronis.b3">Instant recovery · minimal operational downtime</li>
+<li data-i18n="sec.acronis.b4">Offsite &amp; cloud backup (geographically redundant)</li>
+<li data-i18n="sec.acronis.b5">Backup integrity verification &amp; audit trail</li>
+<li data-i18n="sec.acronis.b6">Aligned with GxP data-integrity requirements</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+<section class="service-section dark" id="strategy">
+<div class="service-inner">
+<div class="service-header">
+<div class="reveal-left">
+<span class="eyebrow dark" data-i18n="strat.eyebrow">04 / IT Strategy &amp; Leadership</span>
+<h2 class="section-title"><span data-i18n="strat.title.1">From where you are to</span> <em data-i18n="strat.title.2">where you need to be.</em></h2>
+<p class="section-lede" data-i18n="strat.intro">
+          Many organisations know their IT needs work — but lack the internal resource or independent
+          perspective to define what good looks like. MSET provides that outside eye: objective assessment,
+          clear priorities, and a practical roadmap to get you there.
+        </p>
+<a class="security-deep-link" data-i18n="strat.deep-dive" href="/strategy">
+          Deep dive: IT Strategy services
+          <svg height="14" width="14"><use href="#arrow"></use></svg>
+</a>
+</div>
+<div class="reveal-right">
+<a class="service-cta" data-i18n="strat.cta" href="#contact">Book an intro call →</a>
+</div>
+</div>
+<div class="service-items stagger">
+<div class="service-item featured">
+<div>
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-interim"></use></svg></div>
+<h3 class="service-item-title" data-i18n="strat.card1.title">Interim IT Director</h3>
+<p class="service-item-body" data-i18n="strat.card1.body1">When you need senior IT leadership now — during a transition, a growth phase, a restructuring, or simply a gap between permanent hires — MSET steps in as your Interim IT Director. Experienced, vendor-neutral, and immediately effective.</p>
+<p class="service-item-body" data-i18n="strat.card1.body2">Available part-time or full-time, embedded with your leadership team, accountable for outcomes.</p>
+<ul class="service-item-list">
+<li data-i18n="strat.card1.b1">Strategic IT leadership during transitions &amp; gaps</li>
+<li data-i18n="strat.card1.b2">IT budget ownership &amp; vendor negotiations</li>
+<li data-i18n="strat.card1.b3">Board-level reporting &amp; stakeholder management</li>
+<li data-i18n="strat.card1.b4">Team leadership &amp; capability building</li>
+<li data-i18n="strat.card1.b5">Regulatory &amp; compliance accountability</li>
+<li data-i18n="strat.card1.b6">Handover to permanent hire when ready</li>
+</ul>
+</div>
+<div class="interim-visual" id="interimVisual">
+<p class="interim-visual-title" data-i18n="strat.card1.engage">Active engagements</p>
+<div class="interim-row">
+<div class="interim-avatar">IT</div>
+<div>
+<p class="interim-role">Interim IT Director</p>
+<p class="interim-dept" data-i18n="strat.card1.ls">Life Science — Nordic</p>
+</div>
+<span class="interim-badge active" data-i18n="strat.card1.active">Active</span>
+</div>
+<div class="interim-row">
+<div class="interim-avatar">QT</div>
+<div>
+<p class="interim-role" data-i18n="strat.card1.steer">IT Steering — Quality &amp; Tech</p>
+<p class="interim-dept" data-i18n="strat.card1.medtech">Medtech Group — Sweden</p>
+</div>
+<span class="interim-badge active">Active</span>
+</div>
+<div class="interim-row">
+<div class="interim-avatar">IT</div>
+<div>
+<p class="interim-role">Interim IT Director</p>
+<p class="interim-dept" data-i18n="strat.card1.cro">CRO Partner — Europe</p>
+</div>
+<span class="interim-badge pending" data-i18n="strat.card1.upcoming">Upcoming</span>
+</div>
+<div class="roadmap-visual">
+<p class="interim-visual-title" data-i18n="strat.card1.struct" style="margin-top:0;margin-bottom:.5rem">Typical engagement structure</p>
+<div class="roadmap-phase">
+<span class="roadmap-phase-label" data-i18n="strat.card1.w1">Week 1–2</span>
+<div class="roadmap-bar-outer">
+<div class="roadmap-bar-inner" data-w="100" style="background:#1D4B7A;">
+<span class="roadmap-bar-text" data-i18n="strat.card1.w1-d" style="color:rgba(255,255,255,.85)">Discovery &amp; assessment</span>
+</div>
+</div>
+</div>
+<div class="roadmap-phase">
+<span class="roadmap-phase-label" data-i18n="strat.card1.m1">Month 1</span>
+<div class="roadmap-bar-outer">
+<div class="roadmap-bar-inner" data-w="100" style="background:#3A7A42;">
+<span class="roadmap-bar-text" data-i18n="strat.card1.m1-d">Quick wins &amp; stabilisation</span>
+</div>
+</div>
+</div>
+<div class="roadmap-phase">
+<span class="roadmap-phase-label" data-i18n="strat.card1.ongoing">Ongoing</span>
+<div class="roadmap-bar-outer">
+<div class="roadmap-bar-inner" data-w="100" style="background:#5BA364;">
+<span class="roadmap-bar-text" data-i18n="strat.card1.ongoing-d">Strategic delivery</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="service-item">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-assessment"></use></svg></div>
+<h3 class="service-item-title" data-i18n="strat.card2.title">Independent IT Assessment</h3>
+<p class="service-item-body" data-i18n="strat.card2.body">An objective, outside-in review of your entire IT landscape — infrastructure, security posture, systems, processes, and team. No vendor agenda. No internal politics. Just a clear picture of where you stand and what needs attention.</p>
+<ul class="service-item-list">
+<li data-i18n="strat.card2.b1">Current-state IT inventory &amp; audit</li>
+<li data-i18n="strat.card2.b2">Security &amp; compliance gap analysis</li>
+<li data-i18n="strat.card2.b3">System landscape review (fit-for-purpose?)</li>
+<li data-i18n="strat.card2.b4">Vendor &amp; contract review</li>
+<li data-i18n="strat.card2.b5">Risk identification &amp; prioritisation</li>
+<li data-i18n="strat.card2.b6">Peer benchmarking against industry standards</li>
+<li data-i18n="strat.card2.b7">Executive-ready findings report</li>
+</ul>
+</div>
+<div class="service-item">
+<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-roadmap"></use></svg></div>
+<h3 class="service-item-title" data-i18n="strat.card3.title">IT Strategy &amp; Roadmap</h3>
+<p class="service-item-body" data-i18n="strat.card3.body">Translate your business goals into a concrete, prioritised IT strategy with a multi-year roadmap — covering systems, infrastructure, security, compliance, and capabilities. Built to survive contact with reality.</p>
+<ul class="service-item-list">
+<li data-i18n="strat.card3.b1">Business &amp; IT goal alignment workshops</li>
+<li data-i18n="strat.card3.b2">Multi-year IT investment roadmap</li>
+<li data-i18n="strat.card3.b3">Build vs buy vs outsource analysis</li>
+<li data-i18n="strat.card3.b4">Cloud &amp; infrastructure strategy</li>
+<li data-i18n="strat.card3.b5">Digital maturity assessment &amp; targets</li>
+<li data-i18n="strat.card3.b6">Regulatory &amp; GxP compliance trajectory</li>
+<li data-i18n="strat.card3.b7">Board-level presentation &amp; business case support</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+<section class="about" id="about">
+<div class="about-inner">
+<div class="about-grid">
+<div class="reveal-left">
+<span class="eyebrow" data-i18n="about.eyebrow">About MSET</span>
+<h2 class="section-title"><span data-i18n="about.title.1">Independent expertise.</span> <em data-i18n="about.title.2">Real-world results.</em></h2>
+<p class="section-lede" data-i18n="about.p1">
+          MSET (Mjukvara som en tjänst) is an independent consultancy based in Skåne, Sweden,
+          also known as Kifarkis Nätsäkerhet. We combine hands-on technical experience with a pragmatic
+          understanding of what it takes to work inside a regulated industry.
+        </p>
+<p data-i18n="about.p2" style="color:#445870;line-height:1.65;margin-bottom:0">
+          We work directly with quality, IT, and operations teams to deliver solutions that hold up
+          under regulatory scrutiny — and serve the people using them every day.
+        </p>
+</div>
+<div class="reveal-right">
+<div class="about-quote">
+<span class="quote-mark">"</span>
+<p class="quote-text" data-i18n="about.quote">Technology in life science should enable better science — faster, safer, and fully compliant. That's the standard we hold ourselves to on every engagement.</p>
+<div class="quote-meta">
+<strong>MSET</strong>
+            <span data-i18n="about.tag.1">Life Science IT &amp; AI</span><br/>
+            <span data-i18n="about.tag.2">Kifarkis Nätsäkerhet · Skåne, Sweden</span>
+          </div>
+</div>
+</div>
+</div>
+<div class="credentials stagger">
+<div class="credential">
+<h4 class="credential-title" data-i18n="about.cred1.title">GxP &amp; Regulated Environments</h4>
+<p class="credential-body" data-i18n="about.cred1.body">Deep, practical experience with GMP, GCP, and GLP environments across pharmaceutical, biotech, and medtech organisations.</p>
+</div>
+<div class="credential">
+<h4 class="credential-title" data-i18n="about.cred2.title">AI &amp; Emerging Technology</h4>
+<p class="credential-body" data-i18n="about.cred2.body">Hands-on expertise deploying AI and ML tools in organisations where compliance is non-negotiable.</p>
+</div>
+<div class="credential">
+<h4 class="credential-title" data-i18n="about.cred3.title">Independent Advice</h4>
+<p class="credential-body" data-i18n="about.cred3.body">We recommend what's right for your situation — not what earns a commission. Independent advice, practical solutions.</p>
+</div>
+<div class="credential">
+<h4 class="credential-title" data-i18n="about.cred4.title">Local Presence, Nordic Reach</h4>
+<p class="credential-body" data-i18n="about.cred4.body">Headquartered in southern Sweden, working with clients across the Nordics and wider Europe.</p>
+</div>
+</div>
+<div class="industries">
+<span class="industries-label" data-i18n="about.work-with.title">Who we work with</span>
+<p class="industries-intro" data-i18n="about.work-with.body">Life-science IT is our home — pharma, biotech, medtech, CRO/CMO, diagnostics, gene therapy. The same principles apply wherever compliance, audit trails, and system validation matter.</p>
+<span class="industries-subhead" data-i18n="about.best-when">We're at our best when you're</span>
+<div class="industry-chips">
+<span class="industry-chip" data-i18n="about.chip.1">Deploying AI under GxP</span>
+<span class="industry-chip" data-i18n="about.chip.2">Scaling without a CIO</span>
+<span class="industry-chip" data-i18n="about.chip.3">Audit prep &amp; readiness</span>
+<span class="industry-chip" data-i18n="about.chip.4">Legacy system modernisation</span>
+<span class="industry-chip" data-i18n="about.chip.5">M&amp;A IT integration</span>
+<span class="industry-chip" data-i18n="about.chip.6">Building a security culture</span>
+<span class="industry-chip" data-i18n="about.chip.10">NIS2 &amp; ISO 27001 readiness</span>
+<span class="industry-chip" data-i18n="about.chip.7">Validating a new GxP system</span>
+<span class="industry-chip" data-i18n="about.chip.8">Cloud migration with compliance</span>
+<span class="industry-chip" data-i18n="about.chip.9">Phishing programme rollout</span>
+</div>
+</div>
+<div class="about-numbers stagger">
+<div class="num-card">
+<p class="num-label" data-i18n="about.stat1.label">Experience</p>
+<p class="num-val"><em>15<span class="plus">+</span></em></p>
+<p class="num-caption" data-i18n="about.stat1.body">Years in regulated IT &amp; life-science consulting.</p>
+</div>
+<div class="num-card">
+<p class="num-label" data-i18n="about.stat2.label">Industries</p>
+<p class="num-val"><em>6</em></p>
+<p class="num-caption" data-i18n="about.stat2.body">Pharma, biotech, medtech, CRO/CMO, diagnostics, gene therapy.</p>
+</div>
+<div class="num-card">
+<p class="num-label" data-i18n="about.stat3.label">Frameworks</p>
+<p class="num-val"><em>8<span class="plus">+</span></em></p>
+<p class="num-caption" data-i18n="about.stat3.body">GAMP 5 · Part 11 · Annex 11 · ISO 27001 · NIS2 · ISO 14971 · GMP · GCP.</p>
+</div>
+<div class="num-card">
+<p class="num-label" data-i18n="about.stat4.label">Independence</p>
+<p class="num-val"><em>100<span class="plus">%</span></em></p>
+<p class="num-caption" data-i18n="about.stat4.body">Independent of any vendor's sales targets. We partner where it serves you.</p>
+</div>
+</div>
+</div>
+</section>
+<div class="section-mark-wrap"><div class="section-mark"><div class="mark"></div></div></div>
+<section class="contact" id="contact">
+<div class="contact-inner">
+<div class="contact-info reveal-left">
+<span class="eyebrow dark" data-i18n="contact.eyebrow">Get in touch</span>
+<h2 class="section-title"><span data-i18n="contact.title.1">Let's talk about your</span> <em data-i18n="contact.title.2">next project.</em></h2>
+<p class="section-lede" data-i18n="contact.intro">
+        Whether you're planning a system validation, exploring AI possibilities, need an interim IT leader,
+        or want an expert second opinion — we'd love to hear from you.
+      </p>
+<div class="contact-detail">
+<div class="contact-detail-icon">
+<svg fill="none" height="20" width="20"><path d="M10 2a6 6 0 0 0-6 6c0 5 6 10 6 10s6-5 6-10a6 6 0 0 0-6-6z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><circle cx="10" cy="8" fill="currentColor" r="2"></circle></svg>
+</div>
+<div>
+<p class="contact-detail-label" data-i18n="contact.loc.label">Location</p>
+<p class="contact-detail-value" data-i18n="contact.loc.value">Skåne, Sweden</p>
+</div>
+</div>
+<div class="contact-detail">
+<div class="contact-detail-icon">
+<svg fill="none" height="20" width="20"><rect height="12" rx="2" stroke="currentColor" stroke-width="1.5" width="16" x="2" y="4"></rect><path d="M2 6l8 5 8-5" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<div>
+<p class="contact-detail-label" data-i18n="contact.email.label">Email</p>
+<p class="contact-detail-value">info@mset.se</p>
+</div>
+</div>
+<div class="contact-detail">
+<div class="contact-detail-icon">
+<svg fill="none" height="20" width="20"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"></circle><path d="M2 10h16M10 2a12 12 0 0 1 0 16M10 2a12 12 0 0 0 0 16" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+</div>
+<div>
+<p class="contact-detail-label" data-i18n="contact.web.label">Web</p>
+<p class="contact-detail-value">www.mset.se</p>
+</div>
+</div>
+</div>
+<form action="https://formspree.io/f/xwvalvkj" class="contact-form reveal-right" id="contactForm" method="POST">
+<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none">
+<div class="form-row">
+<div class="form-group">
+<label data-i18n="form.first-name" for="fname">First name</label>
+<input data-i18n-placeholder="form.ph.first" id="fname" name="first_name" placeholder="Your first name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label data-i18n="form.last-name" for="lname">Last name</label>
+<input data-i18n-placeholder="form.ph.last" id="lname" name="last_name" placeholder="Your last name" required="" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label data-i18n="form.email" for="email">Email address</label>
+<input data-i18n-placeholder="form.ph.email" id="email" name="email" placeholder="you@company.se" required="" type="email"/>
+</div>
+<div class="form-group">
+<label data-i18n="form.company" for="company">Company</label>
+<input data-i18n-placeholder="form.ph.company" id="company" name="company" placeholder="Optional" type="text"/>
+</div>
+<div class="form-group">
+<label data-i18n="form.interest" for="topic">I'm interested in</label>
+<select id="topic" name="interest" required="">
+<option data-i18n="form.select" value="">Select a subject...</option>
+<optgroup label="Consulting" data-i18n-label="form.grp.consulting">
+<option data-i18n="form.opt.gxp" value="GxP Systems &amp; Validation">GxP Systems &amp; Validation</option>
+<option data-i18n="form.opt.ai" value="AI Strategy &amp; Implementation">AI Strategy &amp; Implementation</option>
+<option data-i18n="form.opt.sec" value="IT Security">IT Security</option>
+<option data-i18n="form.opt.sat" value="Security Awareness Training">Security Awareness Training</option>
+<option data-i18n="form.opt.net" value="Network &amp; WiFi">Network &amp; WiFi</option>
+<option data-i18n="form.opt.strat" value="IT Strategy &amp; Leadership">IT Strategy &amp; Leadership</option>
+<option data-i18n="form.opt.interim" value="Interim IT Director">Interim IT Director</option>
+<option data-i18n="form.opt.assess" value="Independent IT Assessment">Independent IT Assessment</option>
+<option data-i18n="form.opt.other" value="Something else">Something else</option>
+</optgroup>
+<optgroup label="Products - early access" data-i18n-label="form.grp.products">
+<option data-i18n="form.opt.sign" value="MSET Sign">MSET Sign - electronic signatures</option>
+<option data-i18n="form.opt.trust" value="MSET Trust">MSET Trust - trust centre</option>
+<option data-i18n="form.opt.transcribe" value="MSET Transcribe">MSET Transcribe - meeting transcription</option>
+</optgroup>
+</select>
+</div>
+<div id="pqMount" aria-live="polite">
+</div>
+<div class="form-group">
+<label data-i18n="form.message" for="message">Your message</label>
+<textarea data-i18n-placeholder="form.ph.message" id="message" name="message" placeholder="Tell us a little about your project or challenge..." required=""></textarea>
+</div>
+<button class="form-submit" data-i18n="form.send" type="submit">
+        Send message
+        <svg height="14" width="14"><use href="#arrow"></use></svg>
+</button>
+<p class="form-note" data-i18n="form.notice">
+        We reply within one business day. Your details are used only to respond to your enquiry.
+      </p>
+</form>
+<div class="form-success" hidden="" id="formSuccess">
+<svg aria-hidden="true" height="48" viewbox="0 0 32 32" width="48">
+<circle cx="16" cy="16" fill="none" r="14" stroke="#7EC389" stroke-width="2"></circle>
+<path d="M10 16.5 L14 20.5 L22 12" fill="none" stroke="#7EC389" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+<h3 data-i18n="form.success.title">Message received.</h3>
+<p>Thanks — we'll reply within one business day. If it's urgent, email <a href="mailto:info@mset.se">info@mset.se</a>.</p>
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand">
+<div aria-label="MSET — Kifarkis Nätsäkerhet" class="nav-logo" role="img">
+<svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
+<span class="wordmark">MSET<span class="dot"></span></span>
+</div>
+<p data-i18n="footer.brand.body">Life-science IT &amp; AI consulting. Independent, regulated-industry-native, based in Skåne.</p>
+<span class="tag" data-i18n="footer.tag">Säkerhet som en tjänst</span>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.col1">Services</h4>
+<ul>
+<li><a data-i18n="footer.services.gxp" href="#services">GxP Systems</a></li>
+<li><a data-i18n="footer.services.ai" href="#ai">AI Consulting</a></li>
+<li><a data-i18n="footer.services.sec" href="#security">IT Security</a></li>
+<li><a data-i18n="footer.services.sat" href="/sat">Security Awareness Training</a></li>
+<li><a data-i18n="footer.services.strat" href="/strategy">IT Strategy</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.col2">Company</h4>
+<ul>
+<li><a data-i18n="footer.about" href="#about">About MSET</a></li>
+<li><a data-i18n="nav.products" href="/products">Products</a></li>
+<li><a data-i18n="footer.contact" href="#contact">Contact</a></li>
+<li><a href="mailto:info@mset.se">info@mset.se</a></li>
+<li><a data-i18n="footer.privacy" href="/privacy">Privacy policy</a></li>
+<li><a data-i18n="footer.dpa" href="/dpa">Data processing agreement</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span data-i18n="footer.copyright">© 2026 Design &amp; Animation i Vellinge AB · MSET · Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
+<span data-i18n="footer.rights">All rights reserved.</span>
+</div>
+</div>
+</footer>
+<div aria-hidden="true" class="floating-footer" id="floatingFooter">
+<div class="ff-inner">
+<a aria-label="Back to top" data-i18n-aria="aria.back-top" class="ff-brand" href="#">
+<svg aria-hidden="true"><use href="#logo-vault-dark"></use></svg>
+<span class="wordmark">MSET<span class="dot"></span></span>
+</a>
+<a aria-label="Back to top" data-i18n-aria="aria.back-top" class="ff-action" data-i18n="floating.cta" href="#">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="19" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+      Back to top
+    </a>
+</div>
+</div>
+<div aria-live="polite" class="privacy-notice" id="privacyNotice" role="status">
+<p><span data-i18n="privacy-notice.body">We store and handle your contact-form details only to reply to you. No tracking cookies, no analytics profiling.</span> <span data-i18n="privacy-notice.see">See our</span> <a data-i18n="privacy-notice.link" href="/privacy">privacy policy</a> <span data-i18n="privacy-notice.for-full">for the full picture.</span></p>
+<div class="privacy-notice-actions">
+<button class="privacy-notice-dismiss" data-i18n="privacy-notice.got-it" id="privacyNoticeDismiss" type="button">Got it</button>
+</div>
+</div>
+<script>
+(function(){
+  var nav = document.getElementById('siteNav');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive:true });
+
+  var burger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if(burger && mobileMenu){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var href = this.getAttribute('href');
+      if(href === '#' || href === '') return;
+      var target = document.querySelector(href);
+      if(target){
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  var opts = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, opts);
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger').forEach(function(el){
+    obs.observe(el);
+  });
+
+  var threatMeter = document.getElementById('threatMeter');
+  if(threatMeter){
+    var threatObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.querySelectorAll('.threat-bar').forEach(function(bar){
+            var pct = bar.getAttribute('data-pct');
+            setTimeout(function(){ bar.style.width = pct + '%'; }, 150);
+          });
+          threatObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    threatObs.observe(threatMeter);
+  }
+
+  var interim = document.getElementById('interimVisual');
+  if(interim){
+    var interimObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.querySelectorAll('.roadmap-bar-inner').forEach(function(bar, i){
+            var w = bar.getAttribute('data-w');
+            setTimeout(function(){ bar.style.width = w + '%'; }, 150 + (i * 200));
+          });
+          interimObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    interimObs.observe(interim);
+  }
+
+  var floatingFooter = document.getElementById('floatingFooter');
+  var realFooter = document.querySelector('footer');
+  if(floatingFooter){
+    var footerInView = false;
+    if(realFooter && 'IntersectionObserver' in window){
+      var ffIo = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ footerInView = e.isIntersecting; updateFloatingFooter(); });
+      }, { rootMargin: '0px 0px 0px 0px', threshold: 0 });
+      ffIo.observe(realFooter);
+    }
+    function updateFloatingFooter(){
+      var scrolledEnough = window.scrollY > 300;
+      if(scrolledEnough && !footerInView){
+        floatingFooter.classList.add('visible');
+        floatingFooter.classList.remove('hidden');
+        floatingFooter.setAttribute('aria-hidden','false');
+      } else {
+        floatingFooter.classList.remove('visible');
+        floatingFooter.classList.add('hidden');
+        floatingFooter.setAttribute('aria-hidden','true');
+      }
+    }
+    window.addEventListener('scroll', updateFloatingFooter, { passive:true });
+    updateFloatingFooter();
+  }
+
+  var form = document.getElementById('contactForm');
+  var successEl = document.getElementById('formSuccess');
+  if(form && successEl && window.fetch){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var submitBtn = form.querySelector('.form-submit');
+      var originalLabel = submitBtn.innerHTML;
+
+      var prevError = form.querySelector('.form-error');
+      if(prevError) prevError.remove();
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending…';
+      submitBtn.classList.remove('error-state');
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if(res.ok){
+          form.hidden = true;
+          successEl.hidden = false;
+          successEl.scrollIntoView({ behavior:'smooth', block:'center' });
+        } else {
+          res.json().then(function(data){
+            var msg = (data && data.errors && data.errors.map(function(e){return e.message}).join(', ')) ||
+                      'Something went wrong. Please try again, or email info@mset.se directly.';
+            showError(msg);
+          }).catch(function(){
+            showError('Something went wrong. Please try again, or email info@mset.se directly.');
+          });
+        }
+      }).catch(function(){
+        showError('Network error. Please try again, or email info@mset.se directly.');
+      });
+
+      function showError(msg){
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalLabel;
+        submitBtn.classList.add('error-state');
+        var err = document.createElement('div');
+        err.className = 'form-error';
+        err.textContent = msg;
+        form.appendChild(err);
+      }
+    });
+  }
+  var privacyNotice = document.getElementById('privacyNotice');
+  var privacyDismiss = document.getElementById('privacyNoticeDismiss');
+  if(privacyNotice && privacyDismiss){
+    var DISMISS_KEY = 'mset_privacy_notice_dismissed';
+    try {
+      if(!localStorage.getItem(DISMISS_KEY)){
+        setTimeout(function(){ privacyNotice.classList.add('visible'); }, 1500);
+      }
+    } catch(e){
+      setTimeout(function(){ privacyNotice.classList.add('visible'); }, 1500);
+    }
+    privacyDismiss.addEventListener('click', function(){
+      privacyNotice.classList.remove('visible');
+      try { localStorage.setItem(DISMISS_KEY, '1'); } catch(e){}
+    });
+  }
+})();
+</script>
+
+<script src="translations.js"></script>
+<script>
+(function(){
+var D={"GxP Systems & Validation": {"rows": [[{"en": "System type", "sv": "Systemtyp", "da": "Systemtype"}, [{"en": "eQMS / QMS", "sv": "eQMS / QMS", "da": "eQMS / QMS"}, {"en": "LIMS", "sv": "LIMS", "da": "LIMS"}, {"en": "ERP / MES", "sv": "ERP / MES", "da": "ERP / MES"}, {"en": "Document management", "sv": "Dokumenthantering", "da": "Dokumenthåndtering"}, {"en": "Microsoft 365 / SharePoint", "sv": "Microsoft 365 / SharePoint", "da": "Microsoft 365 / SharePoint"}, {"en": "Other", "sv": "Annat", "da": "Andet"}]], [{"en": "Timeline", "sv": "Tidsplan", "da": "Tidsplan"}, [{"en": "As soon as possible", "sv": "Så snart som möjligt", "da": "Så hurtigt som muligt"}, {"en": "Within 3 months", "sv": "Inom 3 månader", "da": "Inden for 3 måneder"}, {"en": "Within 6 months", "sv": "Inom 6 månader", "da": "Inden for 6 måneder"}, {"en": "Just exploring", "sv": "Vi undersöker bara", "da": "Vi undersøger bare"}]]], "chipsLabel": {"en": "What can we help with? (pick any)", "sv": "Vad kan vi hjälpa till med? (välj flera)", "da": "Hvad kan vi hjælpe med? (vælg flere)"}, "chips": [{"en": "Validation (CSV / CSA)", "sv": "Validering (CSV / CSA)", "da": "Validering (CSV / CSA)"}, {"en": "Annex 11 / 21 CFR Part 11", "sv": "Annex 11 / 21 CFR Part 11", "da": "Annex 11 / 21 CFR Part 11"}, {"en": "Data integrity (ALCOA+)", "sv": "Dataintegritet (ALCOA+)", "da": "Dataintegritet (ALCOA+)"}, {"en": "Supplier assessment", "sv": "Leverantörsbedömning", "da": "Leverandørvurdering"}, {"en": "Cloud & SaaS validation", "sv": "Validering av moln och SaaS", "da": "Validering af cloud og SaaS"}, {"en": "Inspection readiness", "sv": "Inspektionsberedskap", "da": "Inspektionsparathed"}, {"en": "Remediation after a finding", "sv": "Åtgärder efter en anmärkning", "da": "Afhjælpning efter et fund"}, {"en": "SOPs & periodic review", "sv": "SOP:er och periodisk granskning", "da": "SOP'er og periodisk gennemgang"}]}, "AI Strategy & Implementation": {"rows": [[{"en": "Organisation size", "sv": "Organisationens storlek", "da": "Organisationens størrelse"}, [{"en": "1 - 10 people", "sv": "1–10 personer", "da": "1–10 personer"}, {"en": "11 - 50", "sv": "11–50", "da": "11–50"}, {"en": "51 - 250", "sv": "51–250", "da": "51–250"}, {"en": "More than 250", "sv": "Fler än 250", "da": "Flere end 250"}]], [{"en": "Timeline", "sv": "Tidsplan", "da": "Tidsplan"}, [{"en": "As soon as possible", "sv": "Så snart som möjligt", "da": "Så hurtigt som muligt"}, {"en": "Within 3 months", "sv": "Inom 3 månader", "da": "Inden for 3 måneder"}, {"en": "Within 6 months", "sv": "Inom 6 månader", "da": "Inden for 6 måneder"}, {"en": "Just exploring", "sv": "Vi undersöker bara", "da": "Vi undersøger bare"}]]], "chipsLabel": {"en": "What can we help with? (pick any)", "sv": "Vad kan vi hjälpa till med? (välj flera)", "da": "Hvad kan vi hjælpe med? (vælg flere)"}, "chips": [{"en": "AI strategy & roadmap", "sv": "AI-strategi och Roadmap", "da": "AI-strategi og Roadmap"}, {"en": "Microsoft Copilot rollout", "sv": "Införande av Microsoft Copilot", "da": "Udrulning af Microsoft Copilot"}, {"en": "AI policy & EU AI Act", "sv": "AI-policy och EU:s AI-förordning", "da": "AI-politik og EU's AI-forordning"}, {"en": "Use cases & proof of concept", "sv": "Användningsfall och proof of concept", "da": "Use cases og proof of concept"}, {"en": "AI in a GxP setting", "sv": "AI i en GxP-miljö", "da": "AI i et GxP-miljø"}, {"en": "Staff training", "sv": "Utbildning av personal", "da": "Uddannelse af medarbejdere"}]}, "IT Security": {"rows": [[{"en": "Organisation size", "sv": "Organisationens storlek", "da": "Organisationens størrelse"}, [{"en": "1 - 10 people", "sv": "1–10 personer", "da": "1–10 personer"}, {"en": "11 - 50", "sv": "11–50", "da": "11–50"}, {"en": "51 - 250", "sv": "51–250", "da": "51–250"}, {"en": "More than 250", "sv": "Fler än 250", "da": "Flere end 250"}]], [{"en": "Timeline", "sv": "Tidsplan", "da": "Tidsplan"}, [{"en": "As soon as possible", "sv": "Så snart som möjligt", "da": "Så hurtigt som muligt"}, {"en": "Within 3 months", "sv": "Inom 3 månader", "da": "Inden for 3 måneder"}, {"en": "Within 6 months", "sv": "Inom 6 månader", "da": "Inden for 6 måneder"}, {"en": "Just exploring", "sv": "Vi undersöker bara", "da": "Vi undersøger bare"}]]], "chipsLabel": {"en": "What can we help with? (pick any)", "sv": "Vad kan vi hjälpa till med? (välj flera)", "da": "Hvad kan vi hjælpe med? (vælg flere)"}, "chips": [{"en": "Security assessment", "sv": "Säkerhetsbedömning", "da": "Sikkerhedsvurdering"}, {"en": "NIS2 readiness", "sv": "NIS2-beredskap", "da": "NIS2-parathed"}, {"en": "Microsoft 365 / Entra hardening", "sv": "Härdning av Microsoft 365 / Entra", "da": "Hærdning af Microsoft 365 / Entra"}, {"en": "ISO 27001", "sv": "ISO 27001", "da": "ISO 27001"}, {"en": "Incident response plan", "sv": "Incidenthanteringsplan", "da": "Beredskabsplan for hændelser"}, {"en": "Backup & recovery", "sv": "Backup och återställning", "da": "Backup og gendannelse"}, {"en": "Policies", "sv": "Policyer", "da": "Politikker"}]}, "Security Awareness Training": {"rows": [[{"en": "People to train", "sv": "Antal att utbilda", "da": "Antal der skal trænes"}, [{"en": "1 - 25", "sv": "1–25", "da": "1–25"}, {"en": "26 - 100", "sv": "26–100", "da": "26–100"}, {"en": "101 - 500", "sv": "101–500", "da": "101–500"}, {"en": "More than 500", "sv": "Fler än 500", "da": "Flere end 500"}]], [{"en": "Timeline", "sv": "Tidsplan", "da": "Tidsplan"}, [{"en": "As soon as possible", "sv": "Så snart som möjligt", "da": "Så hurtigt som muligt"}, {"en": "Within 3 months", "sv": "Inom 3 månader", "da": "Inden for 3 måneder"}, {"en": "Within 6 months", "sv": "Inom 6 månader", "da": "Inden for 6 måneder"}, {"en": "Just exploring", "sv": "Vi undersöker bara", "da": "Vi undersøger bare"}]]], "chipsLabel": {"en": "What can we help with? (pick any)", "sv": "Vad kan vi hjälpa till med? (välj flera)", "da": "Hvad kan vi hjælpe med? (vælg flere)"}, "chips": [{"en": "Phishing simulation", "sv": "Phishingsimulering", "da": "Phishing-simulering"}, {"en": "Staff sessions", "sv": "Utbildningstillfällen för personal", "da": "Sessioner for medarbejdere"}, {"en": "Management briefing", "sv": "Genomgång för ledningen", "da": "Briefing af ledelsen"}, {"en": "Ongoing programme", "sv": "Löpande program", "da": "Løbende program"}, {"en": "New-starter training", "sv": "Utbildning för nyanställda", "da": "Træning af nyansatte"}]}, "Network & WiFi": {"rows": [[{"en": "Sites", "sv": "Platser", "da": "Lokationer"}, [{"en": "One site", "sv": "En plats", "da": "Én lokation"}, {"en": "2 - 5 sites", "sv": "2–5 platser", "da": "2–5 lokationer"}, {"en": "More than 5", "sv": "Fler än 5", "da": "Flere end 5"}]], [{"en": "Timeline", "sv": "Tidsplan", "da": "Tidsplan"}, [{"en": "As soon as possible", "sv": "Så snart som möjligt", "da": "Så hurtigt som muligt"}, {"en": "Within 3 months", "sv": "Inom 3 månader", "da": "Inden for 3 måneder"}, {"en": "Within 6 months", "sv": "Inom 6 månader", "da": "Inden for 6 måneder"}, {"en": "Just exploring", "sv": "Vi undersöker bara", "da": "Vi undersøger bare"}]]], "chipsLabel": {"en": "What can we help with? (pick any)", "sv": "Vad kan vi hjälpa till med? (välj flera)", "da": "Hvad kan vi hjælpe med? (vælg flere)"}, "chips": [{"en": "New office or site", "sv": "Nytt kontor eller ny plats", "da": "Nyt kontor eller ny lokation"}, {"en": "WiFi coverage problems", "sv": "Problem med WiFi-täckning", "da": "Problemer med WiFi-dækning"}, {"en": "Segmentation & security", "sv": "Segmentering och säkerhet", "da": "Segmentering og sikkerhed"}, {"en": "Guest network", "sv": "Gästnätverk", "da": "Gæstenetværk"}, {"en": "Firewall", "sv": "Brandvägg", "da": "Firewall"}, {"en": "Ongoing support", "sv": "Löpande support", "da": "Løbende support"}]}, "IT Strategy & Leadership": {"rows": [[{"en": "Organisation size", "sv": "Organisationens storlek", "da": "Organisationens størrelse"}, [{"en": "1 - 10 people", "sv": "1–10 personer", "da": "1–10 personer"}, {"en": "11 - 50", "sv": "11–50", "da": "11–50"}, {"en": "51 - 250", "sv": "51–250", "da": "51–250"}, {"en": "More than 250", "sv": "Fler än 250", "da": "Flere end 250"}]], [{"en": "Timeline", "sv": "Tidsplan", "da": "Tidsplan"}, [{"en": "As soon as possible", "sv": "Så snart som möjligt", "da": "Så hurtigt som muligt"}, {"en": "Within 3 months", "sv": "Inom 3 månader", "da": "Inden for 3 måneder"}, {"en": "Within 6 months", "sv": "Inom 6 månader", "da": "Inden for 6 måneder"}, {"en": "Just exploring", "sv": "Vi undersöker bara", "da": "Vi undersøger bare"}]]], "chipsLabel": {"en": "What can we help with? (pick any)", "sv": "Vad kan vi hjälpa till med? (välj flera)", "da": "Hvad kan vi hjælpe med? (vælg flere)"}, "chips": [{"en": "IT strategy & roadmap", "sv": "IT-strategi och Roadmap", "da": "IT-strategi og Roadmap"}, {"en": "Budget & cost review", "sv": "Budget- och kostnadsgenomgång", "da": "Gennemgang af budget og omkostninger"}, {"en": "Supplier & contract review", "sv": "Genomgång av leverantörer och avtal", "da": "Gennemgang af leverandører og kontrakter"}, {"en": "Move to cloud", "sv": "Flytt till molnet", "da": "Flytning til cloud"}, {"en": "IT organisation", "sv": "IT-organisation", "da": "IT-organisation"}, {"en": "Board reporting", "sv": "Rapportering till styrelsen", "da": "Rapportering til bestyrelsen"}]}, "Interim IT Director": {"rows": [[{"en": "Length", "sv": "Längd", "da": "Varighed"}, [{"en": "1 - 3 months", "sv": "1–3 månader", "da": "1–3 måneder"}, {"en": "3 - 6 months", "sv": "3–6 månader", "da": "3–6 måneder"}, {"en": "More than 6 months", "sv": "Mer än 6 månader", "da": "Mere end 6 måneder"}, {"en": "Not sure yet", "sv": "Inte säkert än", "da": "Ikke sikkert endnu"}]], [{"en": "Start", "sv": "Start", "da": "Start"}, [{"en": "As soon as possible", "sv": "Så snart som möjligt", "da": "Så hurtigt som muligt"}, {"en": "Within a month", "sv": "Inom en månad", "da": "Inden for en måned"}, {"en": "Within 3 months", "sv": "Inom 3 månader", "da": "Inden for 3 måneder"}]]], "chipsLabel": {"en": "What can we help with? (pick any)", "sv": "Vad kan vi hjälpa till med? (välj flera)", "da": "Hvad kan vi hjælpe med? (vælg flere)"}, "chips": [{"en": "Covering a vacancy", "sv": "Täcka en vakans", "da": "Dække en ledig stilling"}, {"en": "Leading a change project", "sv": "Leda ett förändringsprojekt", "da": "Lede et forandringsprojekt"}, {"en": "Building an IT function", "sv": "Bygga upp en IT-funktion", "da": "Opbygge en IT-funktion"}, {"en": "Stabilising after an incident", "sv": "Stabilisera efter en incident", "da": "Stabilisere efter en hændelse"}]}, "Independent IT Assessment": {"rows": [[{"en": "Organisation size", "sv": "Organisationens storlek", "da": "Organisationens størrelse"}, [{"en": "1 - 10 people", "sv": "1–10 personer", "da": "1–10 personer"}, {"en": "11 - 50", "sv": "11–50", "da": "11–50"}, {"en": "51 - 250", "sv": "51–250", "da": "51–250"}, {"en": "More than 250", "sv": "Fler än 250", "da": "Flere end 250"}]], [{"en": "Timeline", "sv": "Tidsplan", "da": "Tidsplan"}, [{"en": "As soon as possible", "sv": "Så snart som möjligt", "da": "Så hurtigt som muligt"}, {"en": "Within 3 months", "sv": "Inom 3 månader", "da": "Inden for 3 måneder"}, {"en": "Within 6 months", "sv": "Inom 6 månader", "da": "Inden for 6 måneder"}, {"en": "Just exploring", "sv": "Vi undersöker bara", "da": "Vi undersøger bare"}]]], "chipsLabel": {"en": "What can we help with? (pick any)", "sv": "Vad kan vi hjälpa till med? (välj flera)", "da": "Hvad kan vi hjælpe med? (vælg flere)"}, "chips": [{"en": "Full IT health check", "sv": "Fullständig IT-hälsokontroll", "da": "Fuldt IT-sundhedstjek"}, {"en": "Due diligence before an acquisition", "sv": "Due diligence inför ett förvärv", "da": "Due diligence før et opkøb"}, {"en": "Supplier / MSP review", "sv": "Granskning av leverantör / MSP", "da": "Gennemgang af leverandør / MSP"}, {"en": "Security posture", "sv": "Säkerhetsläge", "da": "Sikkerhedsniveau"}, {"en": "Second opinion on a project", "sv": "Ett andra utlåtande om ett projekt", "da": "En second opinion på et projekt"}]}, "MSET Sign": {"rows": [[{"en": "People sending documents", "sv": "Personer som skickar dokument", "da": "Personer der sender dokumenter"}, [{"en": "Just me", "sv": "Bara jag", "da": "Kun mig"}, {"en": "2 - 10", "sv": "2–10", "da": "2–10"}, {"en": "11 - 50", "sv": "11–50", "da": "11–50"}, {"en": "More than 50", "sv": "Fler än 50", "da": "Flere end 50"}]], [{"en": "When would you start?", "sv": "När skulle ni börja?", "da": "Hvornår ville I starte?"}, [{"en": "As soon as it is released", "sv": "Så snart den släpps", "da": "Så snart den udkommer"}, {"en": "Within 6 months", "sv": "Inom 6 månader", "da": "Inden for 6 måneder"}, {"en": "Just curious for now", "sv": "Bara nyfiken just nu", "da": "Bare nysgerrig lige nu"}]]], "chipsLabel": {"en": "What do you need? (pick any)", "sv": "Vad behöver ni? (välj flera)", "da": "Hvad har I brug for? (vælg flere)"}, "chips": [{"en": "SES", "sv": "SES", "da": "SES"}, {"en": "eID", "sv": "eID", "da": "eID"}, {"en": "QES", "sv": "QES", "da": "QES"}, {"en": "21 CFR Part 11", "sv": "21 CFR Part 11", "da": "21 CFR Part 11"}, {"en": "Templates", "sv": "Mallar", "da": "Skabeloner"}, {"en": "SharePoint / Microsoft 365", "sv": "SharePoint / Microsoft 365", "da": "SharePoint / Microsoft 365"}, {"en": "API", "sv": "API", "da": "API"}], "gloss": {"en": "<b>SES</b> simple electronic signature · <b>eID</b> the signer is verified with an electronic ID · <b>QES</b> qualified electronic signature, the highest EU level. <a href=\"https://sign.mset.app/#eidas\" target=\"_blank\" rel=\"noopener\">What the levels mean</a>", "sv": "<b>SES</b> enkel elektronisk underskrift · <b>eID</b> undertecknaren verifieras med e-legitimation · <b>QES</b> kvalificerad elektronisk underskrift, den högsta nivån i EU. <a href=\"https://sign.mset.app/#eidas\" target=\"_blank\" rel=\"noopener\">Vad nivåerna betyder</a>", "da": "<b>SES</b> simpel elektronisk signatur · <b>eID</b> underskriveren bekræftes med elektronisk ID · <b>QES</b> kvalificeret elektronisk signatur, det højeste niveau i EU. <a href=\"https://sign.mset.app/#eidas\" target=\"_blank\" rel=\"noopener\">Hvad niveauerne betyder</a>"}, "now": [{"en": "What do you use today?", "sv": "Vad använder ni i dag?", "da": "Hvad bruger I i dag?"}, {"en": "e.g. DocuSign, Scrive, paper", "sv": "t.ex. DocuSign, Scrive, papper", "da": "f.eks. DocuSign, Scrive, papir"}]}, "MSET Trust": {"rows": [[{"en": "Who asks for your documents?", "sv": "Vem ber om era dokument?", "da": "Hvem beder om jeres dokumenter?"}, [{"en": "Customers", "sv": "Kunder", "da": "Kunder"}, {"en": "Auditors and inspectors", "sv": "Revisorer och inspektörer", "da": "Auditorer og inspektører"}, {"en": "Both", "sv": "Båda", "da": "Begge"}]], [{"en": "When would you start?", "sv": "När skulle ni börja?", "da": "Hvornår ville I starte?"}, [{"en": "As soon as it is released", "sv": "Så snart den släpps", "da": "Så snart den udkommer"}, {"en": "Within 6 months", "sv": "Inom 6 månader", "da": "Inden for 6 måneder"}, {"en": "Just curious for now", "sv": "Bara nyfiken just nu", "da": "Bare nysgerrig lige nu"}]]], "chipsLabel": {"en": "What do you need? (pick any)", "sv": "Vad behöver ni? (välj flera)", "da": "Hvad har I brug for? (vælg flere)"}, "chips": [{"en": "Show our compliance status on the web", "sv": "Visa vår regelefterlevnad på webben", "da": "Vis vores compliance-status på nettet"}, {"en": "Easy access for auditors", "sv": "Enkel åtkomst för revisorer", "da": "Nem adgang for auditorer"}, {"en": "Share documents under NDA", "sv": "Dela dokument under sekretessavtal", "da": "Del dokumenter under fortrolighedsaftale"}, {"en": "Answer security questionnaires", "sv": "Besvara säkerhetsfrågeformulär", "da": "Besvare sikkerhedsspørgeskemaer"}, {"en": "Policies & certificates in one place", "sv": "Policyer och certifikat på ett ställe", "da": "Politikker og certifikater ét sted"}], "now": [{"en": "How do you share them today?", "sv": "Hur delar ni dem i dag?", "da": "Hvordan deler I dem i dag?"}, {"en": "e.g. email, SharePoint, a data room", "sv": "t.ex. e-post, SharePoint, ett datarum", "da": "f.eks. e-mail, SharePoint, et datarum"}]}, "MSET Transcribe": {"rows": [[{"en": "People in meetings", "sv": "Antal personer i möten", "da": "Antal personer i møder"}, [{"en": "Just me", "sv": "Bara jag", "da": "Kun mig"}, {"en": "2 - 10", "sv": "2–10", "da": "2–10"}, {"en": "11 - 50", "sv": "11–50", "da": "11–50"}, {"en": "More than 50", "sv": "Fler än 50", "da": "Flere end 50"}]], [{"en": "When would you start?", "sv": "När skulle ni börja?", "da": "Hvornår ville I starte?"}, [{"en": "As soon as it is released", "sv": "Så snart den släpps", "da": "Så snart den udkommer"}, {"en": "Within 6 months", "sv": "Inom 6 månader", "da": "Inden for 6 måneder"}, {"en": "Just curious for now", "sv": "Bara nyfiken just nu", "da": "Bare nysgerrig lige nu"}]]], "chips2": [{"en": "Where do your meetings happen? (pick any)", "sv": "Var hålls era möten? (välj flera)", "da": "Hvor holdes jeres møder? (vælg flere)"}, [{"en": "Microsoft Teams", "sv": "Microsoft Teams", "da": "Microsoft Teams"}, {"en": "Zoom", "sv": "Zoom", "da": "Zoom"}, {"en": "Google Meet", "sv": "Google Meet", "da": "Google Meet"}, {"en": "In person", "sv": "På plats", "da": "Fysisk"}, {"en": "Phone calls", "sv": "Telefonsamtal", "da": "Telefonopkald"}, {"en": "Other", "sv": "Annat", "da": "Andet"}]], "chipsLabel": {"en": "What do you need? (pick any)", "sv": "Vad behöver ni? (välj flera)", "da": "Hvad har I brug for? (vælg flere)"}, "chips": [{"en": "Transcripts", "sv": "Transkriptioner", "da": "Transskriptioner"}, {"en": "Summaries and actions", "sv": "Sammanfattningar och åtgärder", "da": "Resuméer og handlingspunkter"}, {"en": "Share with attendees", "sv": "Dela med deltagarna", "da": "Del med deltagerne"}, {"en": "Speaker names", "sv": "Talarnas namn", "da": "Talernes navne"}]}}, SEL={"en": "Select...", "sv": "Välj...", "da": "Vælg..."}, ABOUT={"en": "About", "sv": "Om", "da": "Om"};
+function L(){return document.body.getAttribute('data-lang')||'en';}
+function tr(t){return (t&&(t[L()]||t.en))||'';}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');}
+function chips(name,label,list,keep){
+  return '<div class="form-group"><span class="pq-lbl">'+esc(tr(label))+'</span><div class="pq-chips" role="group" aria-label="'+esc(tr(label))+'">'+list.map(function(c){
+    var on=keep.indexOf(name+'|'+c.en)>=0;
+    return '<label class="pq-chip'+(on?' on':'')+'"><input type="checkbox" name="'+name+'[]" value="'+esc(c.en)+'"'+(on?' checked':'')+'>'+esc(tr(c))+'</label>';}).join('')+'</div></div>';
+}
+function render(){
+  var m=document.getElementById('pqMount'); if(!m) return;
+  var v=document.getElementById('topic').value, d=D[v];
+  var keep=[].slice.call(m.querySelectorAll('input:checked')).map(function(i){return i.name.replace('[]','')+'|'+i.value;});
+  var vals={}; [].slice.call(m.querySelectorAll('select,input[type=text]')).forEach(function(e){vals[e.name]=e.value;});
+  if(!d){m.innerHTML='';return;}
+  var h='<div class="pq-box"><div class="pq-h">'+esc(tr(ABOUT))+' '+esc(v)+'</div><div class="form-row">';
+  d.rows.forEach(function(r,i){var id='pq'+i, n=slug(r[0].en);
+    h+='<div class="form-group"><label for="'+id+'">'+esc(tr(r[0]))+'</label><select id="'+id+'" name="'+n+'"><option value="">'+esc(tr(SEL))+'</option>'+r[1].map(function(o){return '<option value="'+esc(o.en)+'"'+(vals[n]===o.en?' selected':'')+'>'+esc(tr(o))+'</option>';}).join('')+'</select></div>';});
+  h+='</div>';
+  if(d.chips2) h+=chips('meetings',d.chips2[0],d.chips2[1],keep);
+  h+=chips('needs',d.chipsLabel,d.chips,keep);
+  if(d.gloss) h+='<p class="pq-gloss">'+tr(d.gloss)+'</p>';
+  if(d.now) h+='<div class="form-group"><label for="pqNow">'+esc(tr(d.now[0]))+'</label><input id="pqNow" name="current_tool" type="text" maxlength="200" value="'+esc(vals.current_tool||'')+'" placeholder="'+esc(tr(d.now[1]))+'"></div>';
+  m.innerHTML=h+'</div>';
+}
+function optgroups(){
+  var dict=window.MSET_TRANSLATIONS||{}, l=L();
+  [].slice.call(document.querySelectorAll('optgroup[data-i18n-label]')).forEach(function(g){
+    if(!g.hasAttribute('data-label-en')) g.setAttribute('data-label-en',g.label);
+    var e=dict[g.getAttribute('data-i18n-label')]; g.label=(l!=='en'&&e&&e[l])?e[l]:g.getAttribute('data-label-en');
+  });
+}
+document.addEventListener('change',function(e){
+  if(e.target.id==='topic') render();
+  var c=e.target.closest&&e.target.closest('.pq-chip'); if(c) c.classList.toggle('on',e.target.checked);
+});
+new MutationObserver(function(ms){ms.forEach(function(m){if(m.attributeName==='data-lang'){render();optgroups();}});}).observe(document.body,{attributes:true});
+render(); optgroups();
+})();
+</script>
+
+<script>
+(function(){
+  function getDict(){ return window.MSET_TRANSLATIONS || {}; }
+  function apply(){
+    var dict = getDict();
+    var lang = document.body.getAttribute('data-lang') || 'en';
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      if (!el.hasAttribute('data-i18n-aria-en')) el.setAttribute('data-i18n-aria-en', el.getAttribute('aria-label') || '');
+      var en = el.getAttribute('data-i18n-aria-en'), e = dict[el.getAttribute('data-i18n-aria')];
+      el.setAttribute('aria-label', (lang !== 'en' && e && e[lang]) ? e[lang] : en);
+    });
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if (!el.hasAttribute('data-i18n-en')){
+        var orig = Array.prototype.filter.call(el.childNodes, function(n){
+          return n.nodeType === 3;
+        }).map(function(n){ return n.nodeValue; }).join('').trim();
+        if (!orig) orig = el.textContent.trim();
+        el.setAttribute('data-i18n-en', orig);
+      }
+      if (lang === 'en'){
+        var target = el.getAttribute('data-i18n-en');
+        var replaced = false;
+        for (var i=0; i<el.childNodes.length; i++){
+          var n = el.childNodes[i];
+          if (n.nodeType === 3 && n.nodeValue.trim()){
+            n.nodeValue = (replaced ? '' : target);
+            replaced = true;
+          }
+        }
+        if (!replaced){ el.textContent = target; }
+        return;
+      }
+      var entry = dict[key];
+      if (!entry || !entry[lang]) return;
+      var replaced = false;
+      for (var i=0; i<el.childNodes.length; i++){
+        var n = el.childNodes[i];
+        if (n.nodeType === 3 && n.nodeValue.trim()){
+          n.nodeValue = (replaced ? '' : entry[lang]);
+          replaced = true;
+        }
+      }
+      if (!replaced){ el.textContent = entry[lang]; }
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-placeholder');
+      if (!el.hasAttribute('data-i18n-placeholder-en')){
+        el.setAttribute('data-i18n-placeholder-en', el.getAttribute('placeholder') || '');
+      }
+      if (lang === 'en'){
+        el.setAttribute('placeholder', el.getAttribute('data-i18n-placeholder-en'));
+        return;
+      }
+      var entry = dict[key];
+      if (!entry || !entry[lang]) return;
+      el.setAttribute('placeholder', entry[lang]);
+    });
+  }
+  var mo = new MutationObserver(function(muts){
+    muts.forEach(function(m){
+      if (m.attributeName === 'data-lang') apply();
+    });
+  });
+  mo.observe(document.body, { attributes: true });
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', apply);
+  } else {
+    apply();
+  }
+})();
+</script>
+
+<script>
+(function(){
+  var SUPPORTED = ['en','sv','da'];
+  var STORAGE_KEY = 'mset_lang';
+  var OPEN_DELAY = 140;
+  var CLOSE_DELAY = 320;
+  var supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  function getInitialLang(){
+    try {
+      var hash = window.location.hash.replace('#','');
+      if (SUPPORTED.indexOf(hash) !== -1) return hash;
+      var params = new URLSearchParams(window.location.search);
+      var q = params.get('lang');
+      if (q && SUPPORTED.indexOf(q) !== -1) return q;
+    } catch(e){}
+    try {
+      var stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
+    } catch(e){}
+    try {
+      var nav = (navigator.language || 'en').slice(0,2).toLowerCase();
+      if (SUPPORTED.indexOf(nav) !== -1) return nav;
+    } catch(e){}
+    return 'en';
+  }
+
+  function setLang(lang){
+    if (SUPPORTED.indexOf(lang) === -1) lang = 'en';
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch(e){}
+    document.querySelectorAll('.lang-pop button[data-lang]').forEach(function(b){
+      b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false');
+    });
+    document.querySelectorAll('.current-code').forEach(function(el){
+      el.textContent = lang.toUpperCase();
+    });
+    if (typeof window.__msetApplyI18n === 'function') window.__msetApplyI18n();
+  }
+
+  var deepItems = document.querySelectorAll('.nav-links .has-deep');
+  var openTimers = new WeakMap();
+  var closeTimers = new WeakMap();
+
+  function openDeep(item){
+    clearTimeout(closeTimers.get(item));
+    deepItems.forEach(function(other){
+      if (other !== item && other.classList.contains('open')) closeDeep(other);
+    });
+    closeLangPop();
+    item.classList.add('open');
+    var btn = item.querySelector('.deep-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  }
+  function closeDeep(item){
+    clearTimeout(openTimers.get(item));
+    item.classList.remove('open');
+    var btn = item.querySelector('.deep-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  }
+  function closeAllDeeps(){ deepItems.forEach(closeDeep); }
+
+  deepItems.forEach(function(item){
+    var toggle = item.querySelector('.deep-toggle');
+    if (supportsHover){
+      item.addEventListener('mouseenter', function(){
+        clearTimeout(closeTimers.get(item));
+        openTimers.set(item, setTimeout(function(){ openDeep(item); }, OPEN_DELAY));
+      });
+      item.addEventListener('mouseleave', function(){
+        clearTimeout(openTimers.get(item));
+        closeTimers.set(item, setTimeout(function(){ closeDeep(item); }, CLOSE_DELAY));
+      });
+    }
+    if (toggle){
+      toggle.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        if (item.classList.contains('open')) closeDeep(item);
+        else openDeep(item);
+      });
+    }
+  });
+
+  var langSwitchDesktop = document.querySelector('.nav-links .lang-switch');
+  var langPill = langSwitchDesktop ? langSwitchDesktop.querySelector('.lang-pill') : null;
+  var langOpenTimer, langCloseTimer;
+
+  function openLangPop(){
+    clearTimeout(langCloseTimer);
+    if (!langSwitchDesktop) return;
+    closeAllDeeps();
+    langSwitchDesktop.classList.add('open');
+    if (langPill) langPill.setAttribute('aria-expanded', 'true');
+  }
+  function closeLangPop(){
+    clearTimeout(langOpenTimer);
+    document.querySelectorAll('.nav-links .lang-switch').forEach(function(ls){
+      ls.classList.remove('open');
+    });
+    if (langPill) langPill.setAttribute('aria-expanded', 'false');
+  }
+
+  if (supportsHover && langSwitchDesktop){
+    langSwitchDesktop.addEventListener('mouseenter', function(){
+      clearTimeout(langCloseTimer);
+      langOpenTimer = setTimeout(openLangPop, OPEN_DELAY);
+    });
+    langSwitchDesktop.addEventListener('mouseleave', function(){
+      clearTimeout(langOpenTimer);
+      langCloseTimer = setTimeout(closeLangPop, CLOSE_DELAY);
+    });
+  }
+  if (langPill){
+    langPill.addEventListener('click', function(e){
+      e.stopPropagation();
+      if (langSwitchDesktop.classList.contains('open')) closeLangPop();
+      else openLangPop();
+    });
+  }
+
+  document.querySelectorAll('.lang-pop button[data-lang]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      setLang(btn.dataset.lang);
+      closeLangPop();
+    });
+  });
+
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.has-deep') && !e.target.closest('.lang-switch')){
+      closeAllDeeps();
+      closeLangPop();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ closeAllDeeps(); closeLangPop(); }
+  });
+
+  function init(){ setLang(getInitialLang()); }
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+<script>
+(function(){try{var t=new URLSearchParams(location.search).get('topic');var m={ai:'AI Strategy & Implementation',sat:'Security Awareness Training',strategy:'IT Strategy & Leadership',gxp:'GxP Systems & Validation'};var s=document.querySelector('#contact select[name=interest]');if(s&&m[t])s.value=m[t];}catch(e){}})();
+</script>
+</body>
+</html>

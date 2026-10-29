@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%230A1628'/&gt;&lt;path d='M16 7 L24 11.5 L24 20.5 L16 25 L8 20.5 L8 11.5 Z' fill='none' stroke='%237EC389' stroke-width='1.8' stroke-linejoin='round'/&gt;&lt;circle cx='16' cy='17' r='1.4' fill='%237EC389'/&gt;&lt;rect x='15.3' y='17.6' width='1.4' height='2.8' rx='.4' fill='%237EC389'/&gt;&lt;/svg&gt;" rel="icon" type="image/svg+xml"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/>
+<link href="favicon.ico" rel="alternate icon"/>
+<title data-i18n="privacy.title">Privacy Notice — MSET</title>
+<meta content="How MSET — Design &amp; Animation i Vellinge AB — handles personal data on mset.se, in consulting and in MSET Sign, MSET Trust and MSET ID." name="description"/>
+<link href="https://mset.se/privacy" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+
+:root{
+  --ink:#0A1628; --ink-2:#0F2338; --ink-3:#16304A; --ink-4:#1E3A55; --ink-5:#2A4A6A;
+  --sage-50:#F5F3ED; --sage-100:#ECE8DB; --sage-200:#D9D3BF;
+  --forest:#1B4A22; --forest-2:#0F3414; --forest-light:#2E6E38;
+  --emerald:#5BA364; --emerald-bright:#7EC389; --emerald-glow:#9BD7A4; --emerald-deep:#3B7D44;
+  --muted:#556a82; --muted-2:#6a7f96;
+  --danger:#C04040; --warn:#D97B2B;
+  --border:rgba(10,22,40,.09); --border-2:rgba(10,22,40,.14);
+  --shadow-sm:0 1px 2px rgba(10,22,40,.04), 0 2px 8px rgba(10,22,40,.04);
+  --shadow-md:0 4px 16px rgba(10,22,40,.06), 0 12px 32px rgba(10,22,40,.05);
+  --shadow-lg:0 10px 40px rgba(10,22,40,.10), 0 30px 60px rgba(10,22,40,.08);
+  --font-display:"Fraunces", Georgia, serif;
+  --font-body:"Plus Jakarta Sans", -apple-system, system-ui, sans-serif;
+  --font-mono:"JetBrains Mono", ui-monospace, monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:var(--sage-50);
+  color:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none}
+
+.wordmark{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.45rem;line-height:.9;letter-spacing:-.01em;color:var(--sage-50);
+}
+
+.site-nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:#0A1628;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  transition:background .2s;
+}
+.site-nav.scrolled{background:#0A1628}
+.nav-inner{
+  max-width:1280px;margin:0 auto;padding:.85rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.nav-logo{display:flex;align-items:center;gap:.75rem}
+.nav-logo .mark{width:44px;height:38px}
+.nav-logo .wordmark{
+  font-family:var(--font-display);font-style:italic;font-weight:500;
+  font-size:1.45rem;line-height:.9;letter-spacing:-.01em;color:var(--sage-50);
+}
+.nav-logo .dot{
+  display:inline-block;width:.22em;height:.22em;
+  background:var(--emerald-bright);border-radius:50%;
+  vertical-align:.14em;margin-left:.08em;
+}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
+.nav-links a{
+  font-size:.8rem;font-weight:500;
+  color:rgba(255,255,255,.68);letter-spacing:.005em;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--emerald-bright)}
+.nav-cta{
+  padding:.55rem 1.15rem;background:var(--emerald);
+  color:var(--ink)!important;border-radius:999px;
+  font-weight:600!important;transition:all .2s;
+  font-size:.85rem;
+}
+.nav-cta:hover{background:var(--emerald-bright);transform:translateY(-1px)}
+
+.nav-hamburger{
+  display:none;width:40px;height:40px;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  background:transparent;
+}
+.nav-hamburger span{
+  width:22px;height:2px;background:#fff;border-radius:2px;
+  transition:all .3s ease;
+}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{
+  display:none;position:fixed;top:62px;left:0;right:0;
+  background:rgba(10,22,40,.98);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  z-index:99;padding:1.25rem 1.5rem;
+  flex-direction:column;
+  max-height:calc(100vh - 62px);
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+  opacity:0;transform:translateY(-8px);
+  transition:opacity .25s ease, transform .25s ease;
+}
+.mobile-menu.open{display:flex;opacity:1;transform:translateY(0)}
+.mobile-menu a{
+  color:rgba(255,255,255,.8);font-size:1rem;font-weight:500;
+  padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);
+}
+.mobile-menu a:last-child{border-bottom:none;margin-top:.5rem}
+.mobile-menu .nav-cta{text-align:center;margin-top:.75rem}
+
+.policy{
+  max-width:780px;margin:0 auto;padding:7rem 2rem 6rem;
+}
+.policy a{color:var(--forest);border-bottom:1px solid rgba(27,74,34,.25);transition:color .2s,border-color .2s}
+.policy a:hover{color:var(--emerald);border-bottom-color:var(--emerald)}
+.eyebrow{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--forest);font-weight:500;
+  margin:0 0 1rem;display:block;
+}
+.policy h1{
+  font-family:var(--font-display);font-weight:500;font-size:clamp(2.2rem,4.5vw,3.4rem);
+  line-height:1.05;letter-spacing:-.025em;color:var(--ink);margin:0 0 1rem;
+}
+.policy h1 em{font-style:italic;color:var(--forest)}
+.updated{
+  color:var(--muted);font-size:.88rem;margin:0 0 3rem;
+  padding-bottom:1.5rem;border-bottom:1px solid var(--border);
+}
+.policy h2{
+  font-family:var(--font-display);font-weight:500;font-size:1.55rem;
+  letter-spacing:-.015em;color:var(--ink);margin:2.75rem 0 .75rem;
+}
+.policy h3{
+  font-family:var(--font-body);font-weight:600;font-size:1.05rem;
+  color:var(--ink);margin:1.5rem 0 .5rem;
+}
+.policy p{color:#2d3d52;margin:0 0 1rem;font-size:1rem}
+.policy ul{padding-left:1.2rem;margin:0 0 1rem}
+.policy li{margin-bottom:.4rem;color:#2d3d52}
+.policy strong{color:var(--ink);font-weight:600}
+.lede{font-size:1.08rem;color:#445870;margin-bottom:2rem}
+.callout{
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  padding:1.25rem 1.4rem;margin:1.5rem 0;
+}
+.callout p:last-child{margin-bottom:0}
+.contact-box{
+  background:var(--ink);color:var(--sage-50);padding:2rem;border-radius:14px;margin:2.5rem 0;
+}
+.contact-box h2{color:var(--sage-50);margin-top:0}
+.contact-box p{color:rgba(245,243,237,.8)}
+.contact-box a{color:var(--emerald-bright);border-bottom:1px solid rgba(126,195,137,.4)}
+.contact-box a:hover{color:#fff;border-color:#fff}
+
+footer{
+  background:var(--ink-2);color:rgba(255,255,255,.55);
+  padding:2.25rem 0 1.5rem;border-top:1px solid rgba(255,255,255,.06);
+}
+.footer-inner{max-width:1280px;margin:0 auto;padding:0 2rem}
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.5rem;
+  padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:1.25rem;
+}
+.footer-brand .nav-logo{margin-bottom:.9rem}
+.footer-brand p{font-size:.82rem;line-height:1.55;color:rgba(255,255,255,.5);max-width:340px;margin:0}
+.footer-brand .tag{
+  font-family:var(--font-mono);font-size:.65rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;margin-top:.6rem;display:block;
+}
+.footer-col h4{
+  font-family:var(--font-mono);font-size:.64rem;color:var(--emerald-bright);
+  letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin:0 0 .75rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin:0;padding:0}
+.footer-col a{font-size:.82rem;color:rgba(255,255,255,.55);transition:color .2s}
+.footer-col a:hover{color:var(--emerald-bright)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;
+  font-size:.72rem;color:rgba(255,255,255,.4);
+}
+.footer-bottom a{color:rgba(255,255,255,.55);transition:color .2s}
+.footer-bottom a:hover{color:var(--emerald-bright)}
+.footer-bottom .back-link{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:rgba(255,255,255,.65);font-weight:500;
+}
+.footer-bottom .back-link:hover{color:var(--emerald-bright)}
+.footer-bottom .back-link svg{width:11px;height:11px}
+
+@media (max-width:980px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}
+  .footer-brand{grid-column:1 / -1}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:.75rem}
+  .nav-hamburger{display:flex}
+  .nav-links{display:none}
+  .nav-inner{padding:.75rem 1.25rem}
+}
+@media (max-width:600px){
+  .policy{padding:6rem 1.25rem 4rem}
+  .footer-grid{grid-template-columns:1fr;gap:1.75rem}
+  .footer-brand{grid-column:auto}
+  .footer-bottom{font-size:.7rem}
+}
+
+.i18n > [lang]{display:none}
+body[data-lang="en"] .i18n > [lang="en"],
+body[data-lang="sv"] .i18n > [lang="sv"],
+body[data-lang="da"] .i18n > [lang="da"]{display:inline}
+.i18n-block > [lang]{display:none}
+body[data-lang="en"] .i18n-block > [lang="en"],
+body[data-lang="sv"] .i18n-block > [lang="sv"],
+body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
+
+.nav-links{position:relative}
+.nav-links > li{position:relative}
+
+.nav-links .has-deep{
+  display:inline-flex;align-items:center;gap:.25rem;
+  padding:.35rem 0;margin:-.35rem 0;
+  cursor:default;
+}
+.nav-links .has-deep > a{padding:.1rem 0}
+.deep-toggle{
+  width:18px;height:18px;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.5);border-radius:3px;padding:0;
+  margin-left:-.1rem;background:transparent;border:none;cursor:pointer;
+  transition:color .2s var(--ease,cubic-bezier(.16,1,.3,1)),transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-toggle:hover,.deep-toggle:focus-visible{color:var(--emerald-bright);outline:none}
+.deep-toggle svg{
+  width:10px;height:10px;
+  transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.has-deep.open .deep-toggle{color:var(--emerald-bright)}
+.has-deep.open .deep-toggle svg{transform:rotate(180deg)}
+
+.deep-card{
+  position:absolute;top:calc(100% + .85rem);left:50%;
+  transform:translateX(-50%) translateY(-8px);
+  width:340px;background:#fff;
+  border:1px solid rgba(10,22,40,.1);border-radius:12px;
+  box-shadow:0 10px 24px rgba(10,22,40,.12),0 2px 6px rgba(10,22,40,.06);
+  padding:.5rem;opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .22s var(--ease,cubic-bezier(.16,1,.3,1)),transform .28s var(--ease,cubic-bezier(.16,1,.3,1)),visibility .22s;
+  z-index:101;
+}
+.deep-card::before{
+  content:"";position:absolute;top:0;left:24px;right:24px;height:2px;
+  background:linear-gradient(90deg,transparent 0%,var(--emerald) 20%,var(--emerald-bright) 50%,var(--emerald) 80%,transparent 100%);
+  border-radius:0 0 2px 2px;
+}
+.deep-card::after{
+  content:"";position:absolute;top:-7px;left:50%;
+  transform:translateX(-50%) rotate(45deg);
+  width:12px;height:12px;background:#fff;
+  border-left:1px solid rgba(10,22,40,.1);border-top:1px solid rgba(10,22,40,.1);
+}
+.has-deep.open .deep-card{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateX(-50%) translateY(0);
+}
+
+.deep-row{
+  display:block;padding:.85rem 1rem;border-radius:8px;
+  transition:background .18s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-row + .deep-row{margin-top:.2rem}
+.deep-row:hover,.deep-row:focus-visible{background:var(--sage-50);outline:none}
+.deep-row-label{
+  font-family:var(--f-display,'Fraunces',Georgia,serif);font-style:italic;
+  font-size:1rem;font-weight:500;color:var(--ink);
+  display:flex;align-items:center;gap:.4rem;margin-bottom:.18rem;
+}
+.deep-row-label .arrow{
+  display:inline-block;font-size:.85em;color:var(--emerald);
+  transition:transform .2s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.deep-row:hover .deep-row-label .arrow{transform:translateX(3px)}
+.deep-row-desc{
+  font-family:var(--f-body,'Plus Jakarta Sans',sans-serif);
+  font-size:.76rem;line-height:1.45;color:var(--muted);font-style:normal;
+}
+.deep-row.primary .deep-row-label::before{
+  content:"";width:5px;height:5px;border-radius:50%;
+  background:var(--emerald);display:inline-block;flex-shrink:0;
+}
+
+.lang-switch{position:relative;margin-left:.5rem;display:inline-flex;align-items:center}
+.lang-pill{
+  display:inline-flex;align-items:center;gap:.35rem;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:999px;padding:.35rem .72rem .35rem .8rem;
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.85);cursor:pointer;
+  transition:all .2s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-pill:hover,.lang-pill:focus-visible{
+  background:rgba(255,255,255,.1);border-color:rgba(126,195,137,.3);
+  color:#fff;outline:none;
+}
+.lang-pill .chevron{
+  width:8px;height:8px;opacity:.7;
+  transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-switch.open .lang-pill .chevron{transform:rotate(180deg)}
+.lang-pill .dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--emerald-bright);display:inline-block;
+}
+
+.lang-pop{
+  position:absolute;top:calc(100% + .75rem);right:0;
+  min-width:220px;background:#fff;
+  border:1px solid rgba(10,22,40,.1);border-radius:12px;
+  box-shadow:0 10px 24px rgba(10,22,40,.12),0 2px 6px rgba(10,22,40,.06);
+  padding:1.2rem 1.3rem 1.1rem;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateY(-6px) scale(.97);transform-origin:top right;
+  transition:opacity .22s var(--ease,cubic-bezier(.16,1,.3,1)),transform .28s var(--ease,cubic-bezier(.16,1,.3,1)),visibility .22s;
+  z-index:101;
+}
+.lang-pop::after{
+  content:"";position:absolute;top:-7px;right:18px;
+  width:12px;height:12px;background:#fff;transform:rotate(45deg);
+  border-left:1px solid rgba(10,22,40,.1);border-top:1px solid rgba(10,22,40,.1);
+}
+.lang-switch.open .lang-pop{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateY(0) scale(1);
+}
+.lang-pop-label{
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.55rem;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;
+}
+.lang-pop ul{display:flex;flex-direction:column;gap:.1rem;list-style:none;padding:0;margin:0}
+.lang-pop button{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  width:100%;padding:.55rem .6rem;border-radius:6px;text-align:left;
+  background:transparent;border:none;cursor:pointer;font:inherit;
+  transition:background .18s var(--ease,cubic-bezier(.16,1,.3,1));
+}
+.lang-pop button:hover,.lang-pop button:focus-visible{background:var(--sage-50);outline:none}
+.lang-pop .native{
+  font-family:var(--f-display,'Fraunces',Georgia,serif);font-style:italic;
+  font-size:1.15rem;font-weight:400;color:var(--ink);letter-spacing:-.005em;
+}
+.lang-pop .code{
+  font-family:var(--f-mono,'JetBrains Mono',ui-monospace,monospace);
+  font-size:.62rem;font-weight:600;letter-spacing:.14em;
+  color:var(--muted);text-transform:uppercase;
+}
+.lang-pop button[aria-pressed="true"] .native{color:var(--forest)}
+.lang-pop button[aria-pressed="true"] .native::after{
+  content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--emerald);margin-left:.5rem;vertical-align:middle;
+}
+.lang-pop button[aria-pressed="true"] .code{color:var(--forest)}
+
+@media (max-width:980px){
+  .lang-switch{display:none}
+  .mobile-menu .lang-switch{display:block;margin-top:1rem;position:static}
+  .mobile-menu .lang-pop{
+    position:static;opacity:1;visibility:visible;pointer-events:auto;
+    transform:none;box-shadow:none;padding:1rem 0 0;
+    background:transparent;border:none;border-top:1px solid rgba(255,255,255,.08);
+  }
+  .mobile-menu .lang-pop::after{display:none}
+  .mobile-menu .lang-pop .native{color:rgba(255,255,255,.85)}
+  .mobile-menu .lang-pop .code{color:rgba(255,255,255,.5)}
+  .mobile-menu .lang-pop-label{color:rgba(255,255,255,.45)}
+  .mobile-menu .lang-pop button:hover{background:rgba(255,255,255,.05)}
+  .mobile-menu .lang-pop button[aria-pressed="true"] .native{color:var(--emerald-glow)}
+  .mobile-menu .lang-pop button[aria-pressed="true"] .code{color:var(--emerald-bright)}
+  .mobile-menu .deep-child{
+    padding-left:1.2rem;font-size:.88rem;color:rgba(255,255,255,.6);
+    border-bottom:1px solid rgba(255,255,255,.04)!important;
+  }
+  .mobile-menu .deep-child::before{content:"→ ";color:var(--emerald-bright)}
+}
+
+
+.courtesy-banner{
+  display:none;
+  margin:1.5rem 0 2rem;
+  padding:1rem 1.25rem;
+  background:rgba(217,123,43,.08);
+  border-left:3px solid var(--warn);
+  border-radius:6px;
+  font-size:.85rem;line-height:1.55;
+  color:var(--muted);
+}
+body[data-lang="sv"] .courtesy-banner,
+body[data-lang="da"] .courtesy-banner{display:block}
+
+
+body {
+  font-feature-settings: "onum" 1, "liga" 1, "kern" 1;
+}
+h1, h2, h3, h4,
+.stat, .stat-num, .big-number,
+.kpi-value, .reel, .scare-num,
+.threat-pct, .threat-bar,
+.phase-dur, .eng-duration, .eng-num, .gov-num,
+.m-stat-num {
+  font-feature-settings: "lnum" 1, "liga" 1, "kern" 1;
+}
+.eyebrow, .mono, .scare-label, .scare-meta,
+.nav-links .lang-pill, .lang-pop .code,
+.dash-title, .chart-title, .kpi-label,
+.eng-duration, .arch-label {
+  font-feature-settings: "lnum" 1;
+}
+
+abbr {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+  letter-spacing: .05em;
+  text-decoration: none;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero .eyebrow::before,
+.rollout .eyebrow::before,
+.scare-strip .eyebrow::before,
+.dark-section .eyebrow::before,
+.problem .eyebrow::before,
+.final-cta .eyebrow::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364'/></svg>");
+}
+
+.section-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .9rem;
+  padding: .45rem 1.2rem;
+  background: rgba(245,243,237,.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 999px;
+  box-shadow: 0 0 6px rgba(10,22,40,.1), 0 0 0 1px rgba(10,22,40,.04);
+  position: relative;
+  z-index: 2;
+}
+.section-mark-wrap {
+  position: relative;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+}
+.section-mark-wrap .section-mark {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.section-mark::before,
+.section-mark::after {
+  content: "";
+  width: 56px;
+  max-width: 56px;
+  flex: 0 0 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(27,74,34,.3), rgba(27,74,34,.42));
+}
+.section-mark::after {
+  background: linear-gradient(90deg, rgba(27,74,34,.42), rgba(27,74,34,.3), transparent);
+}
+.section-mark .mark {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%235BA364' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%233B7D44' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%231B4A22' opacity='.55'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.section-mark-wrap.dark .section-mark::before,
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), rgba(255,255,255,.14));
+}
+.section-mark-wrap.dark .section-mark::after {
+  background: linear-gradient(90deg, rgba(255,255,255,.14), rgba(255,255,255,.08), transparent);
+}
+.section-mark-wrap.dark .section-mark .mark {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z' fill='%237EC389' opacity='.55'/><path d='M6 0.5 L11.5 6 L6 6 Z' fill='%239BD7A4' opacity='.55'/><path d='M6 6 L11.5 6 L6 11.5 Z' fill='%235BA364' opacity='.55'/></svg>");
+}
+
+.use-list li::before,
+.eng-deliverables li::before,
+.comp-list li::before,
+.report-meta li::before {
+  content: "—" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1rem !important;
+  height: auto !important;
+  color: var(--emerald) !important;
+  font-weight: 500 !important;
+  font-family: var(--font-body, inherit) !important;
+  border: none !important;
+  background: transparent !important;
+  transform: none !important;
+}
+.use-list li,
+.eng-deliverables li,
+.comp-list li,
+.report-meta li {
+  padding-left: 1.3rem !important;
+}
+
+.final-cta::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 300px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 62'><g fill='none' stroke='%23F5F3ED' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'><path d='M34,2 L58,16 L34,30 L10,16 Z'/><path d='M34,30 L58,16 L58,44 L34,58 Z'/><path d='M34,30 L10,16 L10,44 L34,58 Z'/></g><path d='M34,16 L46,23 L34,30 L22,23 Z' fill='%23F5F3ED'/><path d='M34,30 L22,23 L22,37 L34,44 Z' fill='%23C9C3B1'/><path d='M34,30 L46,23 L46,37 L34,44 Z' fill='%23A8A290'/><circle cx='40' cy='29' fill='%231B4A22' r='1.2'/><path d='M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z' fill='%239BD7A4'/><path d='M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z' fill='%237EC389'/><path d='M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z' fill='%233B7D44'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .05;
+  pointer-events: none;
+  z-index: 1;
+}
+.final-cta-inner {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 760px) {
+  .final-cta::after {
+    width: 240px;
+    height: 210px;
+    right: -80px;
+    opacity: .04;
+  }
+}
+
+
+.field-note {
+  margin: 1.8rem 0;
+  padding: 0 0 0 1.2rem;
+  border-left: 1.5px solid var(--emerald);
+  max-width: 680px;
+}
+.field-note + .hero-ctas {
+  margin-top: 2.4rem;
+}
+section:has(.field-note:last-child) {
+  padding-bottom: 3rem;
+}
+.field-note-label {
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-right: .35rem;
+  display: inline;
+}
+.field-note-dash {
+  color: var(--emerald);
+  font-weight: 500;
+  margin: 0 .25rem 0 .1rem;
+  display: inline;
+}
+.field-note-body {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .97rem;
+  line-height: 1.55;
+  color: var(--ink);
+  display: inline;
+}
+.rollout .field-note,
+.final-cta .field-note,
+.scare-strip .field-note {
+  border-left-color: var(--emerald-bright);
+}
+.rollout .field-note-label,
+.final-cta .field-note-label,
+.scare-strip .field-note-label {
+  color: var(--emerald-bright);
+}
+.rollout .field-note-dash,
+.final-cta .field-note-dash,
+.scare-strip .field-note-dash {
+  color: var(--emerald-bright);
+}
+.rollout .field-note-body,
+.final-cta .field-note-body,
+.scare-strip .field-note-body {
+  color: rgba(245,243,237,.85);
+}
+
+.policy h2[id],.contact-box{scroll-margin-top:96px}
+.toc{background:var(--sage-100);border-radius:12px;padding:1.1rem 1.4rem;margin:1.5rem 0 2rem}
+.toc-title{font-weight:600;color:var(--ink);margin:0 0 .5rem}
+.toc ol{margin:0;padding-left:0;list-style:none;columns:2;column-gap:2rem}
+.toc li{margin:0 0 .35rem;break-inside:avoid}
+@media (max-width:640px){.toc ol{columns:1}}
+html{overflow-x:clip}
+
+nav.site-nav{height:58px;box-sizing:border-box;background:#0A1628;border-bottom:1px solid rgba(255,255,255,.08)}
+nav.site-nav .nav-inner{max-width:none;height:100%;margin:0;padding:0 22px;gap:16px}
+nav.site-nav .sb-brand{display:flex;align-items:center;gap:11px;color:var(--sage-50);text-decoration:none;line-height:1.5}
+nav.site-nav .sb-brand svg{width:35px;height:35px;flex:none}
+nav.site-nav .sb-brand .brand-wm{display:flex;align-items:baseline;gap:9px}
+nav.site-nav .sb-brand .wordmark{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:21px;letter-spacing:-.01em;color:var(--sage-50);line-height:1}
+nav.site-nav .sb-brand .wordmark .dot{display:inline-block;width:.2em;height:.2em;background:var(--emerald-bright);border-radius:50%;vertical-align:.12em;margin-left:.06em}
+nav.site-nav .sb-brand .tag{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42);padding-bottom:1px}
+nav.site-nav .nav-links{gap:30px;margin-left:auto}
+nav.site-nav .nav-links a{color:var(--sage-200);font-size:.93rem;font-weight:400;letter-spacing:0}
+nav.site-nav .nav-links a:hover{color:var(--emerald-bright)}
+nav.site-nav .deep-toggle{color:var(--sage-200)}
+nav.site-nav .nav-links a.nav-cta{display:inline-flex;align-items:center;height:34px;padding:0 16px;font-size:.93rem;font-weight:600;color:var(--ink)!important}
+nav.site-nav .nav-links > li:last-child{margin-left:-14px}
+nav.site-nav .lang-switch{margin-left:0}
+nav.site-nav .lang-pill{gap:7px;height:34px;padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--sage-50);font:600 11px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em}
+nav.site-nav .lang-pill:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.16)}
+nav.site-nav .lang-pill .dot{width:7px;height:7px}
+nav.site-nav .lang-pill .chevron{display:none}
+nav.site-nav .acct-slot{width:34px;height:34px;flex:none;margin-left:14px}
+.mobile-menu{top:58px}
+@media (max-width:960px){
+  nav.site-nav .nav-inner{padding:0 22px}
+  nav.site-nav .acct-slot{display:none}
+}
+body{background:#EDEAE2}
+footer{background:var(--ink-2);border-top:1px solid rgba(255,255,255,.08);padding:48px 0 32px}
+</style>
+<style id="nav-2026-10">
+nav.site-nav .nav-inner{position:relative}
+nav.site-nav .nav-links > li:last-child{margin-left:0}
+nav.site-nav .nav-actions{margin:0 0 0 auto;display:flex;align-items:center;gap:14px;list-style:none;padding:0}
+nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;height:34px;padding:0 16px;font-size:.93rem;font-weight:600;color:var(--ink)!important;text-decoration:none}
+@media (min-width:1180px){nav.site-nav .nav-links{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);margin:0!important}}
+@media (max-width:980px){nav.site-nav .nav-actions{display:none}}
+.deep-card.deep-wide{width:380px}
+.soon{display:inline-block;margin-left:6px;font:600 9.5px/1.7 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;background:#E3EEE4;color:#1B4A22;border-radius:999px;padding:0 8px;vertical-align:1px}
+</style>
+</head>
+<body data-lang="en">
+<svg aria-hidden="true" height="0" style="position:absolute" width="0">
+<defs>
+<symbol id="logo-vault-dark" viewbox="0 0 72 62">
+<g fill="none" opacity=".25" stroke="#F5F3ED" stroke-dasharray="1.2 1.4" stroke-width=".5">
+<line x1="34" x2="34" y1="2" y2="30"></line>
+<line x1="58" x2="34" y1="44" y2="30"></line>
+<line x1="10" x2="34" y1="44" y2="30"></line>
+</g>
+<g fill="none" stroke="#F5F3ED" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+<path d="M34,2 L58,16 L34,30 L10,16 Z"></path>
+<path d="M34,30 L58,16 L58,44 L34,58 Z"></path>
+<path d="M34,30 L10,16 L10,44 L34,58 Z"></path>
+</g>
+<path d="M34,16 L46,23 L34,30 L22,23 Z" fill="#F5F3ED"></path>
+<path d="M34,30 L22,23 L22,37 L34,44 Z" fill="#C9C3B1"></path>
+<path d="M34,30 L46,23 L46,37 L34,44 Z" fill="#A8A290"></path>
+<circle cx="40" cy="29" fill="#1B4A22" r="1.2"></circle>
+<rect fill="#1B4A22" height="2.5" rx=".3" width="1" x="39.5" y="29.5"></rect>
+<path d="M63,6 L67.3,8.5 L63,11 L58.7,8.5 Z" fill="#9BD7A4"></path>
+<path d="M63,11 L58.7,8.5 L58.7,13.5 L63,16 Z" fill="#7EC389"></path>
+<path d="M63,11 L67.3,8.5 L67.3,13.5 L63,16 Z" fill="#3B7D44"></path>
+<line opacity=".7" stroke="#9BD7A4" stroke-dasharray=".8 .8" stroke-width=".6" x1="58.7" x2="58" y1="12" y2="16"></line>
+</symbol>
+<symbol id="chevron-down" viewBox="0 0 10 10">
+<path d="M1.5 3.5 L5 7 L8.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+</defs>
+</svg>
+<nav class="site-nav" id="siteNav">
+<div class="nav-inner">
+<a aria-label="MSET — back to main site" data-i18n-aria="aria.main-site" class="sb-brand" href="/">
+<svg viewBox="0 0 128 120" fill="none"><path d="M52 62 52 18M52 62 90.1 84M52 62 13.9 84" stroke="#ECE8DB" stroke-width="2" stroke-dasharray="3 4.5" stroke-linecap="round" opacity=".4"/><g stroke="#ECE8DB" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><polygon points="52,18 90.1,40 90.1,84 52,106 13.9,84 13.9,40"/><path d="M52 62 90.1 40M52 62 52 106M52 62 13.9 40"/></g><polygon points="52,40 71,51 52,62 33,51" fill="#F5F3ED"/><polygon points="33,51 52,62 52,84 33,73" fill="#E7E1CE"/><polygon points="52,62 71,51 71,73 52,84" fill="#D6CFB8"/><circle cx="61.5" cy="64.5" r="2.6" fill="#1B4A22"/><g stroke-linejoin="round"><polygon points="108,21 115.8,25.5 108,30 100.2,25.5" fill="#9BD7A4"/><polygon points="100.2,25.5 108,30 108,39 100.2,34.5" fill="#5BA364"/><polygon points="108,30 115.8,25.5 115.8,34.5 108,39" fill="#3B7D44"/></g></svg>
+<span class="brand-wm"><span class="wordmark">MSET<span class="dot"></span></span><span class="tag" aria-hidden="true">&#8203;</span></span>
+</a>
+<ul class="nav-links">
+<li><a data-i18n="nav.gxp" href="/#services">GxP</a></li>
+<li class="has-deep" data-deep="ai">
+<a data-i18n="nav.ai" href="/#ai">AI</a>
+<button class="deep-toggle" type="button" aria-label="AI — show more" data-i18n-aria="aria.ai-more" aria-expanded="false" aria-controls="deep-ai">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-ai" role="menu">
+<a class="deep-row" href="/#ai" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.ai.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.ai.desc">The 4 service cards on the homepage.</div>
+</a>
+<a class="deep-row primary" href="/ai" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.ai.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.ai.deep-desc">Full AI Consulting page — 9 use cases, 3 architecture patterns, 7 governance docs.</div>
+</a>
+</div>
+</li>
+<li class="has-deep" data-deep="security">
+<a data-i18n="nav.security" href="/#security">Security</a>
+<button class="deep-toggle" type="button" aria-label="Security — show more" data-i18n-aria="aria.sec-more" aria-expanded="false" aria-controls="deep-security">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-security" role="menu"><a class="deep-row" href="/#security" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.security.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.security.desc">The IT security service cards on the homepage.</div>
+</a>
+<a class="deep-row primary" href="/sat" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.security.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.security.deep-desc">Full Security Awareness Training page — phishing simulations, training programmes.</div>
+</a>
+</div>
+</li>
+<li class="has-deep" data-deep="strategy">
+<a data-i18n="nav.strategy" href="/#strategy">Strategy</a>
+<button class="deep-toggle" type="button" aria-label="Strategy — show more" data-i18n-aria="aria.str-more" aria-expanded="false" aria-controls="deep-strategy">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card" id="deep-strategy" role="menu">
+<a class="deep-row" href="/#strategy" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.strategy.overview">Overview</span></div>
+<div class="deep-row-desc" data-i18n="nav.strategy.desc">The IT Strategy card on the homepage.</div>
+</a>
+<a class="deep-row primary" href="/strategy" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.strategy.deep">Deep dive</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.strategy.deep-desc">Full Strategy page — three stages (Assessment, Strategy &amp; Roadmap, Interim IT Director).</div>
+</a>
+</div>
+</li>
+<li class="has-deep" data-deep="products">
+<a data-i18n="nav.products" href="/products">Products</a>
+<button class="deep-toggle" type="button" aria-label="Products — show more" data-i18n-aria="aria.prod-more" aria-expanded="false" aria-controls="deep-products">
+<svg aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="deep-card deep-wide" id="deep-products" role="menu">
+<a class="deep-row" href="/products#sign" role="menuitem">
+<div class="deep-row-label"><span>MSET Sign</span> <span class="soon" data-i18n="nav.soon">Coming soon</span></div>
+<div class="deep-row-desc" data-i18n="nav.products.sign-desc">Electronic signatures for regulated work - SES, eID and 21 CFR Part 11.</div>
+</a>
+<a class="deep-row" href="/products#trust" role="menuitem">
+<div class="deep-row-label"><span>MSET Trust</span> <span class="soon" data-i18n="nav.soon">Coming soon</span></div>
+<div class="deep-row-desc" data-i18n="nav.products.trust-desc">A trust centre: your compliance status on the web, easy access for auditors.</div>
+</a>
+<a class="deep-row" href="/products#transcribe" role="menuitem">
+<div class="deep-row-label"><span>MSET Transcribe</span> <span class="soon" data-i18n="nav.soon">Coming soon</span></div>
+<div class="deep-row-desc" data-i18n="nav.products.transcribe-desc">Meeting transcription, with summaries and actions to share.</div>
+</a>
+<a class="deep-row primary" href="/products" role="menuitem">
+<div class="deep-row-label"><span data-i18n="nav.products.all">All products</span> <span class="arrow">→</span></div>
+<div class="deep-row-desc" data-i18n="nav.products.all-desc">What each product does, and when it is released.</div>
+</a>
+</div>
+</li>
+<li><a data-i18n="nav.about" href="/#about">About</a></li>
+</ul>
+<ul class="nav-actions">
+<li><a class="nav-cta" data-i18n="nav.cta" href="/#contact">Book a call</a></li>
+<li>
+<div class="lang-switch" id="langSwitch">
+<button class="lang-pill" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langPop">
+<span class="dot" aria-hidden="true"></span>
+<span class="current-code">EN</span>
+<svg class="chevron" aria-hidden="true"><use href="#chevron-down"></use></svg>
+</button>
+<div class="lang-pop" id="langPop" role="menu">
+<div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
+<ul>
+<li><button type="button" data-lang="en" aria-pressed="true" role="menuitemradio"><span class="native">English</span><span class="code">EN</span></button></li>
+<li><button type="button" data-lang="sv" aria-pressed="false" role="menuitemradio"><span class="native">Svenska</span><span class="code">SV</span></button></li>
+<li><button type="button" data-lang="da" aria-pressed="false" role="menuitemradio"><span class="native">Dansk</span><span class="code">DA</span></button></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<span class="acct-slot" aria-hidden="true"></span>
+<button aria-label="Menu" data-i18n-aria="aria.menu" class="nav-hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+<a data-i18n="nav.gxp" href="/#services">GxP</a>
+<a data-i18n="nav.ai" href="/#ai">AI</a>
+<a data-i18n="nav.ai.deep" class="deep-child" href="/ai">Deep dive: AI Consulting</a>
+<a data-i18n="nav.security" href="/#security">Security</a>
+<a data-i18n="nav.security.deep" class="deep-child" href="/sat">Deep dive: Security Awareness Training</a>
+<a data-i18n="nav.strategy" href="/#strategy">Strategy</a>
+<a data-i18n="nav.strategy.deep" class="deep-child" href="/strategy">Deep dive: Strategy</a>
+<a data-i18n="nav.products" href="/products">Products</a>
+<a data-i18n="nav.about" href="/#about">About</a>
+<a class="nav-cta" data-i18n="nav.cta" href="/#contact">Book a call</a>
+
+<div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="aria.language">
+<div class="lang-pop" id="langPopMobile">
+<div class="lang-pop-label" data-i18n="nav.lang-label">Language</div>
+<ul>
+<li><button type="button" data-lang="en" aria-pressed="true"><span class="native">English</span><span class="code">EN</span></button></li>
+<li><button type="button" data-lang="sv" aria-pressed="false"><span class="native">Svenska</span><span class="code">SV</span></button></li>
+<li><button type="button" data-lang="da" aria-pressed="false"><span class="native">Dansk</span><span class="code">DA</span></button></li>
+</ul>
+</div>
+</div>
+</div>
+<main class="policy">
+  <div class="courtesy-banner" role="note"><strong data-i18n="privacy.courtesy-banner">Note: The English version of this privacy notice is the binding text. The Swedish and Danish translations are provided as a reader service. If they differ, the English text applies.</strong></div>
+<span class="eyebrow" data-i18n="privacy.eyebrow">Legal</span>
+<h1><span data-i18n="privacy.h1.1">Privacy</span> <em data-i18n="privacy.h1.2">Notice</em></h1>
+<p class="updated" data-i18n="privacy.updated">Last updated: 27 October 2026 · Version 2.5</p>
+<p class="lede" data-i18n="privacy.lede">This notice explains how MSET handles personal data: on this website, in our consulting work, and in the MSET products — MSET Sign, MSET Trust and MSET ID. It is one notice for everything we do, so the rules are in one place.</p>
+<p data-i18n="privacy.intro">We work in IT security and regulated-industry compliance, and we hold ourselves to the standards we advise on. This notice is written to be read. If anything is unclear, ask us and we will explain.</p>
+<nav class="toc" aria-labelledby="toc-title">
+<p class="toc-title" id="toc-title" data-i18n="privacy.toc.title">On this page</p>
+<ol>
+<li><a href="#who" data-i18n="privacy.toc.who">1. Who we are</a></li>
+<li><a href="#website" data-i18n="privacy.toc.website">2. This website and enquiries</a></li>
+<li><a href="#consulting" data-i18n="privacy.toc.consulting">3. Consulting clients</a></li>
+<li><a href="#accounts" data-i18n="privacy.toc.accounts">4. MSET product accounts</a></li>
+<li><a href="#sign" data-i18n="privacy.toc.sign">5. MSET Sign: if you were asked to sign</a></li>
+<li><a href="#trust" data-i18n="privacy.toc.trust">6. MSET Trust: if you asked for a company's documents</a></li>
+<li><a href="#transcribe" data-i18n="privacy.toc.transcribe">7. MSET Transcribe: meetings you record, and meetings you were in</a></li>
+<li><a href="#providers" data-i18n="privacy.toc.providers">8. The providers we use</a></li>
+<li><a href="#transfers" data-i18n="privacy.toc.transfers">9. Transfers outside the EU/EEA</a></li>
+<li><a href="#retention" data-i18n="privacy.toc.retention">10. How long we keep data</a></li>
+<li><a href="#rights" data-i18n="privacy.toc.rights">11. Your rights</a></li>
+<li><a href="#security" data-i18n="privacy.toc.security">12. Security</a></li>
+<li><a href="#cookies" data-i18n="privacy.toc.cookies">13. Cookies and browser storage</a></li>
+<li><a href="#children" data-i18n="privacy.toc.children">14. Children</a></li>
+<li><a href="#changes" data-i18n="privacy.toc.changes">15. Changes to this notice</a></li>
+</ol>
+</nav>
+<h2 id="who" data-i18n="privacy.s1.h2">1. Who we are</h2>
+<p data-i18n="privacy.s1.p1">The controller of your personal data is Design &amp; Animation i Vellinge AB, a Swedish limited company, org. no. 556825-4295, Vellinge, Skåne, Sweden.</p>
+<p data-i18n="privacy.s1.p2">We work under the names MSET and Kifarkis Nätsäkerhet. Whichever name you met us under, the company responsible for your personal data is Design &amp; Animation i Vellinge AB.</p>
+<p><span data-i18n="privacy.s1.p3.prefix">Contact us about anything in this notice at</span> <a href="mailto:info@mset.se">info@mset.se</a> <span data-i18n="privacy.s1.p3.suffix">— put “Privacy enquiry” in the subject.</span></p>
+<p data-i18n="privacy.s1.p4">We have not appointed a data protection officer, as the law does not require one of us. Privacy enquiries to the address above reach the person responsible for data protection.</p>
+<p data-i18n="privacy.s1.p5">Two roles, stated up front. For most of what this notice covers, we decide why and how personal data is used, so we are the controller. When a customer uses an MSET product to handle other people's data — documents it sends for signature, visitors to its trust centre, meetings it records — the customer decides, and we act as its processor under a data processing agreement. Sections 5 to 7 say which is which.</p>
+<h2 id="website" data-i18n="privacy.s2.h2">2. This website and enquiries</h2>
+<h3 data-i18n="privacy.s2.h3a">Contact form and email</h3>
+<p data-i18n="privacy.s2.p1">When you use the contact form on this website or on the MSET Sign, MSET Trust or MSET Transcribe product page, or write to us, we receive your name, email address, company (optional) and your message, and on this website also the service area you chose. We use them to answer you and, if it leads anywhere, to prepare an offer.</p>
+<p data-i18n="privacy.s2.p2">Legal basis: steps you asked us to take before a contract (Art. 6(1)(b) GDPR), or our legitimate interest in answering enquiries (Art. 6(1)(f)). The form's required fields are what we need to reply; without them we cannot answer.</p>
+<h3 data-i18n="privacy.s2.h3b">Visiting the site</h3>
+<p data-i18n="privacy.s2.p3">The site is hosted on GitHub Pages. Like any web server, GitHub receives your IP address and browser details when you load a page, and may keep them in its own security logs; we have no access to those logs. The site's fonts are loaded from Google Fonts, so Google also receives your IP address when a page loads.</p>
+<p data-i18n="privacy.s2.p4">We use Google Search Console, which shows us aggregated search statistics — not individual visitors. There is no Google Analytics, no advertising pixel and no behavioural tracking on this site.</p>
+<p data-i18n="privacy.s2.p5">Legal basis for serving the site: our legitimate interest in running a secure, working website (Art. 6(1)(f)).</p>
+<h2 id="consulting" data-i18n="privacy.s3.h2">3. Consulting clients</h2>
+<p data-i18n="privacy.s3.p1">When you engage us, we process the contact details of the people we work with at your organisation, the agreement, correspondence, invoices and our working notes. Legal basis: performing our contract with you (Art. 6(1)(b)) and, for accounting records, a legal obligation (Art. 6(1)(c)).</p>
+<p data-i18n="privacy.s3.p2">Where an engagement means handling personal data in your systems — your staff, patients, study participants or customers — you are the controller and we act as your processor under a data processing agreement. We use that data only for the work you asked for.</p>
+<h2 id="accounts" data-i18n="privacy.s4.h2">4. MSET product accounts</h2>
+<p data-i18n="privacy.s4.p1">When your organisation uses MSET Sign, MSET Trust or MSET Transcribe, we hold the account: the organisation's name and details, the people who use it (name, work email, role and an optional job title), how they sign in, their settings, and the subscription and billing state. We also keep the account's activity record — who did what, and when — because customers rely on it as evidence.</p>
+<p data-i18n="privacy.s4.p2">Sign-in runs through MSET ID, our own identity service. Passwords are stored only as one-way hashes and two-factor secrets are encrypted. We record sign-ins and refused attempts to protect accounts from being taken over. If your organisation uses its own sign-in (single sign-on), we receive your identity from it instead of a password.</p>
+<p data-i18n="privacy.s4.p3">Payments are handled by Stripe; we never see or store card numbers. We send service emails you cannot switch off — verification, security notices, subscription changes. We do not run a marketing list.</p>
+<p data-i18n="privacy.s4.p4">AI assistance in MSET Sign is off unless an administrator of your organisation switches it on. When it is on, the text of the document being prepared — never the file itself, and never signers' addresses — is sent to the AI provider your organisation chose, to suggest where fields belong or to draft wording. The provider is named in the product before it is switched on. We do not use your documents or data to train AI models.</p>
+<p data-i18n="privacy.s4.p5">Legal basis: performing the contract with your organisation (Art. 6(1)(b)); our legitimate interest in keeping accounts secure and the service running (Art. 6(1)(f)); and accounting law for billing records (Art. 6(1)(c)).</p>
+<h2 id="sign" data-i18n="privacy.s5.h2">5. MSET Sign: if you were asked to sign</h2>
+<p data-i18n="privacy.s5.p1">An organisation sent you a document through MSET Sign. That organisation decides what the document is, why you were asked and how long it is kept: it is the controller, and we run the service on its instructions as its processor. Its name is in the email and on the signing page. Ask the organisation why you were contacted or to withdraw the document; if you cannot reach it, write to us and we will tell you who it is and pass your request on.</p>
+<h3 data-i18n="privacy.s5.h3a">What is recorded when you sign</h3>
+<ul>
+<li data-i18n="privacy.s5.b1">Your name and email address as the sender entered them, and any job title you add.</li>
+<li data-i18n="privacy.s5.b2">When the link was sent and opened, and when you signed, approved or declined — with any reason you gave.</li>
+<li data-i18n="privacy.s5.b3">Your IP address at those moments.</li>
+<li data-i18n="privacy.s5.b4">How your identity was checked: by the link alone, a one-time code sent to your mailbox (the code itself is not kept), a sign-in, or an electronic ID where the sender required one.</li>
+<li data-i18n="privacy.s5.b5">Your signature as you drew or typed it, and anything you filled in on the document.</li>
+</ul>
+<p data-i18n="privacy.s5.p2">These facts are written into the sealed PDF and its audit trail. That is the point of the service: they are what make the signature provable later.</p>
+<h3 data-i18n="privacy.s5.h3b">Electronic ID and identity checks</h3>
+<p data-i18n="privacy.s5.p3">If the sender requires an electronic ID or an identity-document check, you complete it with a separate identity provider, which is responsible for that check under its own privacy notice; the signing page links to it. From an electronic ID we keep the provider's signed confirmation as evidence of who signed: your name, your date of birth and, when your electronic ID includes one, your national identity number. It is kept with the signing record and deleted with it. From an identity-document check we receive the result and the name it confirmed — not your identity documents.</p>
+<h3 data-i18n="privacy.s5.h3c">The evidence record, and the limit of erasure</h3>
+<p data-i18n="privacy.s5.p4">When a document is deleted, its content really is destroyed. We keep a minimal evidence record — the document's reference, who signed and when, how they were identified, and a fingerprint of the signed file, with no document content — for three years, so that anyone holding the signed PDF can still have it verified. We keep this record as controller, on our legitimate interest in being able to prove the signatures our service produced (Art. 6(1)(f)), and because it is needed to establish, exercise or defend legal claims. That is why we cannot erase it on request (Art. 17(3)(e)). Everything else about you, we can.</p>
+<p data-i18n="privacy.s5.p5">Being sent a document does not create an account or put you on any list. We do not market to signers.</p>
+<h2 id="trust" data-i18n="privacy.s6.h2">6. MSET Trust: if you asked for a company's documents</h2>
+<p data-i18n="privacy.s6.p1">A company uses MSET Trust to share confidential documents — security reports, certificates — with people who ask for them, usually after a confidentiality undertaking is signed. If you asked for access, that company is the controller of your request and of the record of what you opened; we process it on the company's behalf. The company's own privacy notice is linked on every page of its trust centre, and you should read it first.</p>
+<p data-i18n="privacy.s6.p2">What is processed: your request (name, work email, organisation, role, your reason and any answers to the company's questions); the undertaking you sign, through MSET Sign — section 5 applies, including the evidence record; your access, through single-use links and one-time codes that we hold only in a form that cannot be reversed; and an access log of what you opened, when, and from which IP address and browser. Documents you open carry a watermark that ties the copy to you.</p>
+<p data-i18n="privacy.s6.ai">Questions you ask a trust centre. If the company has switched on answers written by AI, a question you type on its trust centre is sent, with the parts of its public page that match it, to the AI provider the company chose — Microsoft (Azure OpenAI, in the EU) or Anthropic (in the United States) — which writes the answer. We do not store the question or who asked it; we count that a question was answered. The providers do not use it to train their models.</p>
+<p data-i18n="privacy.s6.p3">The company chooses how long the access log is kept, between one and ten years (four if it chooses none). Requests that never led to access are deleted after 90 days. People who only read a trust centre's public page are not tracked: views are counted as one number per day, with no IP address and no cookie. The access log is not erased on request during its period: it is kept to establish or defend legal claims about who saw what (GDPR Art. 17(3)(e); its basis is legitimate interest, Art. 6(1)(f)).</p>
+<p data-i18n="privacy.s6.p4">If the trust centre is MSET's own, MSET is the controller and everything in this section applies to us directly.</p>
+<p data-i18n="privacy.s6.p5">AI assistants. Where the trust centre allows it, you may let an AI assistant read a pack under your own access — with a key, or by signing it in with your email and a one-time code. We keep the assistant's name, and its key and tokens only in a form that cannot be reversed. What it does is logged as yours, and what it downloads carries your watermark.</p>
+<p data-i18n="privacy.s6.p6">Mail while you have access. Without subscribing, people with live access receive a reminder a week before their access ends, a message when a document they opened has a new version, and the trust centre's change notices while their access lasts (our legitimate interest, and the company's, in keeping the people it shares documents with up to date: Art. 6(1)(f)).</p>
+<h2 id="transcribe" data-i18n="privacy.tr.h2">7. MSET Transcribe: meetings you record, and meetings you were in</h2>
+<p data-i18n="privacy.tr.p1">An organisation uses MSET Transcribe to turn recordings of its meetings into transcripts, briefs and action items. The organisation decides what is recorded and why: it is the controller of its meetings, and we process them on its behalf under a data processing agreement. Your account with us is covered by section 4. Every brief says that it was written by AI, by which provider, and whether a person has reviewed it.</p>
+<p data-i18n="privacy.tr.p2">What is processed. The audio a person records in the browser, uploads, or imports from their own Plaud account or their own Microsoft Teams meetings; the transcript, with the speakers separated and the names the person gives them; the brief and action items; the names and terms kept per client to improve the transcription; and the addresses a person saves for sending a brief to a client. Alongside, the organisation's activity log records who shared a meeting with whom, who opened it, exports, deliveries and admin actions — by person, never by meeting title. Usage is counted per person (meetings, minutes, cost), without titles.</p>
+<p data-i18n="privacy.tr.p3">If you were in a recorded meeting. The organisation that recorded it is the controller. Your voice and what you said are in its transcript. We do not create an account for you or contact you. Ask that organisation about the recording; if you cannot reach it, write to us and we will pass your request on.</p>
+<p data-i18n="privacy.tr.p4">Where meetings are kept. In each person's own OneDrive, in an app folder MSET Transcribe can reach and nothing else, inside the organisation's own Microsoft 365 — or, if the organisation chooses, in one SharePoint site of its own. We keep no copy of meetings on our own storage; audio is held only while it is being processed. How long meetings are kept is decided by the organisation's Microsoft 365 retention settings, and the organisation's Microsoft administrators can reach those files as they can any file in its tenant.</p>
+<p data-i18n="privacy.tr.p5">Who can read a meeting. The person who recorded it, and colleagues they choose to share it with, read-only, until they stop sharing. An organisation's admins see usage and the activity log, not meetings. For a legal need an admin can ask to read one person's meetings: a second admin decides, access is read-only for 72 hours, and the person is told, with the reason. MSET staff have no access to meetings in the product; access to the infrastructure is restricted and audited.</p>
+<p data-i18n="privacy.tr.p6">Training. Recordings and transcripts are not used to train AI models, ours or our providers'.</p>
+<p data-i18n="privacy.tr.p7">Plaud. A person who imports from Plaud connects their own Plaud account. Plaud keeps recordings in the United States under its own terms; the organisation's admin can switch Plaud import off.</p>
+<h2 id="providers" data-i18n="privacy.s7.h2">8. The providers we use</h2>
+<p data-i18n="privacy.s7.p1">We use these providers, and only as far as needed. Where a provider acts for us, it does so under a data processing agreement.</p>
+<div class="callout">
+<h3 style="margin-top:0">Microsoft — Azure and Microsoft 365</h3>
+<p data-i18n="privacy.s7.ms">Hosts the MSET products and their databases in Azure Sweden Central (EU), and sends their emails. Contracting party: Microsoft AB (Stockholm, Sweden). For MSET Transcribe, Azure OpenAI in the EU writes the briefs unless the organisation has chosen Anthropic, and each person's OneDrive, Teams and mail are in the customer's own Microsoft 365, under the customer's agreement with Microsoft. Azure OpenAI in the EU also writes the answers on a trust centre, if its owner chooses it.</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0">Stripe</h3>
+<p data-i18n="privacy.s7.stripe">Subscription payments and card handling for the products. Stripe Payments Europe, Limited (Ireland). Stripe is also an independent controller for fraud prevention and its own legal duties, under its own privacy policy.</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0">Anthropic</h3>
+<p data-i18n="privacy.s7.anthropic">Only where it has been chosen: in MSET Transcribe, by an organisation's administrator, it writes briefs, translations and answers from a meeting's transcript; on a trust centre, if its owner chooses it, it writes the answers. Neither is used to train AI models. Anthropic PBC (United States).</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0">AssemblyAI</h3>
+<p data-i18n="privacy.s7.assemblyai">Speech-to-text for MSET Transcribe, through its EU endpoint. AssemblyAI, Inc. (United States).</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0">Formspree</h3>
+<p data-i18n="privacy.s7.formspree">Receives contact-form messages from this website and from the MSET Sign, MSET Trust and MSET Transcribe product pages and forwards them to us. Formspree, Inc. (United States). We delete messages from Formspree once they have been answered.</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0">GitHub</h3>
+<p data-i18n="privacy.s7.github">Hosts this website. GitHub, Inc. (United States).</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0">Google</h3>
+<p data-i18n="privacy.s7.google">Google Fonts (the fonts of this website) and Google Search Console (aggregated search statistics). Google LLC (United States).</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0">Plaud</h3>
+<p data-i18n="privacy.s7.plaud">Recordings a person imports into MSET Transcribe from their own Plaud account, which Plaud holds in the United States under its own terms (section 7).</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0" data-i18n="privacy.s7.mail.h3">Our email provider</h3>
+<p data-i18n="privacy.s7.mail">Holds our mailbox, where enquiries and client correspondence are kept.</p>
+</div>
+<div class="callout">
+<h3 style="margin-top:0" data-i18n="privacy.s7.named.h3">Identity and AI providers</h3>
+<p data-i18n="privacy.s7.named">Electronic ID and identity-document checks in MSET Sign, and AI assistance, use providers named in the product before the feature is switched on. Identity providers are responsible under their own privacy notices (section 5); AI providers are our sub-processors.</p>
+</div>
+<p data-i18n="privacy.s7.p2">Customers receive the current list of sub-processors with their data processing agreement, and notice before it changes. Timestamps on sealed documents come from an independent timestamp authority, which receives only a fingerprint of the file — no personal data.</p>
+<p data-i18n="privacy.s7.p3">We do not sell personal data, share it with data brokers or use it for advertising.</p>
+<h2 id="transfers" data-i18n="privacy.s8.h2">9. Transfers outside the EU/EEA</h2>
+<p data-i18n="privacy.s8.p1">The MSET products store your data at rest in the EU, in Azure Sweden Central. That is not the same as saying no personal data ever leaves the EEA, and we do not claim it: Microsoft, Stripe, GitHub, Google, Formspree, AssemblyAI and Anthropic are US companies or have US parents, and limited transfers happen — for support, payment processing, hosting this website and the contact form. AssemblyAI processes MSET Transcribe's audio on its EU endpoint; Anthropic, only where it has been chosen, processes transcripts and trust-centre questions in the United States. Plaud, which a person may connect to MSET Transcribe themselves, keeps recordings in the United States.</p>
+<p data-i18n="privacy.s8.p2">Where data leaves the EEA, we rely on the EU–US Data Privacy Framework where the recipient is certified under it, and otherwise on the EU Standard Contractual Clauses, together with the further measures Chapter V of the GDPR requires. Ask us for a copy of the safeguards that apply.</p>
+<h2 id="retention" data-i18n="privacy.s9.h2">10. How long we keep data</h2>
+<ul>
+<li data-i18n="privacy.s9.b1">Enquiries through the form or by email: up to 12 months after our last contact, unless they lead to an engagement.</li>
+<li data-i18n="privacy.s9.b2">Consulting engagements: for the engagement, then as long as accounting law requires — seven years for invoices and accounting records — or as our data processing agreement with you says.</li>
+<li data-i18n="privacy.s9.b3">MSET product accounts: while the account is open. When a subscription ends, its documents become read-only and are deleted within 90 days; billing records are kept for seven years. An unconfirmed sign-up is deleted after seven days.</li>
+<li data-i18n="privacy.s9.b4">Documents in MSET Sign: the retention period the organisation has chosen, shown in advance on each document. Drafts are deleted 30 days after they were created.</li>
+<li data-i18n="privacy.s9.b5">The MSET Sign evidence record: three years after the document is deleted; for a 21 CFR Part 11 document, never less than five years from completion (section 5).</li>
+<li data-i18n="privacy.s9.b6">MSET Trust: the access log as section 6 describes; granted requests and grants until the access ended longer ago than the log period; visitor sessions 12 hours, their records cleared 30 days after; an AI assistant's keys and tokens no longer than the access, cleared 30 days after; queued mail — the message is destroyed once delivered, the delivery record kept 30 days; change-notice subscriptions until you unsubscribe; console sessions 8 hours, their record 90 days after.</li>
+<li data-i18n="privacy.s9.b9">MSET Transcribe: meetings in the organisation's own Microsoft 365, for as long as its retention settings keep them (section 7); the activity log while the organisation has a subscription and for 90 days after it ends, then deleted (a record that a file existed, without its content or name, is kept three years); usage counts while the organisation's account is open.</li>
+<li data-i18n="privacy.s9.b7">The products' security logs: up to 30 days.</li>
+<li data-i18n="privacy.s9.b8">Marketing lists: none — we do not operate any.</li>
+</ul>
+<h2 id="rights" data-i18n="privacy.s10.h2">11. Your rights</h2>
+<p data-i18n="privacy.s10.p1">You have the right to:</p>
+<ul>
+<li data-i18n="privacy.s10.b1">get a copy of the personal data we hold about you;</li>
+<li data-i18n="privacy.s10.b2">have inaccurate or incomplete data corrected;</li>
+<li data-i18n="privacy.s10.b3">have your data erased, subject to legal retention duties, the evidence record in section 5 and a trust centre's access log during its period (section 6);</li>
+<li data-i18n="privacy.s10.b4">have the processing restricted;</li>
+<li data-i18n="privacy.s10.b5">receive your data in a structured, machine-readable format;</li>
+<li data-i18n="privacy.s10.b6">object to processing based on our legitimate interest;</li>
+<li data-i18n="privacy.s10.b7">withdraw any consent you have given, at any time.</li>
+</ul>
+<p><span data-i18n="privacy.s10.p2.prefix">To use any of these rights, email</span> <a href="mailto:info@mset.se">info@mset.se</a>. <span data-i18n="privacy.s10.p2.suffix">We reply within 30 days, and a first request is free. If your request concerns data a customer controls (sections 5 to 7), we pass it to that customer and tell you we have done so.</span></p>
+<p><span data-i18n="privacy.s10.p3.prefix">You can complain to the Swedish data protection authority,</span> <a href="https://www.imy.se" rel="noopener">Integritetsskyddsmyndigheten (IMY)</a>, <span data-i18n="privacy.s10.p3.suffix">or to the authority in the EU country where you live or work.</span></p>
+<p data-i18n="privacy.s10.p4">We make no decisions about you by automated means alone that have legal or similarly significant effects.</p>
+<h2 id="security" data-i18n="privacy.s11.h2">12. Security</h2>
+<p data-i18n="privacy.s11.p1">Encryption in transit everywhere and at rest for our databases and documents; hashed passwords and encrypted two-factor secrets; separation between customers; access limited to what each person needs; and logs of privileged access. Our support staff cannot open a customer's documents unless the customer grants access, and every use of that access is recorded. Our approach follows ISO/IEC 27001 principles; we are not certified and do not claim to be.</p>
+<p data-i18n="privacy.s11.p2">If a breach puts personal data at risk, we notify IMY within 72 hours and tell the people affected without undue delay where the risk is high. Where we are a customer's processor, we tell the customer, who decides how to inform its own data subjects.</p>
+<h2 id="cookies" data-i18n="privacy.s12.h2">13. Cookies and browser storage</h2>
+<p data-i18n="privacy.s12.p1">This website sets no cookies. It stores two small preferences in your browser — your language, and that you closed the privacy banner — which never leave your device. The MSET products set only strictly necessary session and preference cookies — to keep you signed in, or to remember your language in a console. All are HttpOnly and Secure, none is shared with anyone, and none needs consent. There are no analytics or advertising cookies anywhere.</p>
+<h2 id="children" data-i18n="privacy.s13.h2">14. Children</h2>
+<p data-i18n="privacy.s13.p1">Our services are for business use. We do not knowingly process the data of children under 16. If you believe a child's data has reached us, contact us and we will delete it.</p>
+<h2 id="changes" data-i18n="privacy.s14.h2">15. Changes to this notice</h2>
+<p data-i18n="privacy.s14.p1">We update this notice when what we do changes. The date at the top shows the latest substantive change, and the log below records what changed. For material changes we email the administrators of product accounts in advance, and our active consulting clients.</p>
+<h3 data-i18n="privacy.s14.h3">Change log</h3>
+<ul>
+<li data-i18n="privacy.s14.b7">27 October 2026 — version 2.5. What we keep from an electronic ID, and that it is deleted with the signing record (section 5). How long a 21 CFR Part 11 evidence record is kept (section 10). MSET Transcribe's activity log is deleted 90 days after a subscription ends (section 10). Our data processing agreement, one for every MSET product, is published at mset.se/dpa.</li>
+<li data-i18n="privacy.s14.b6">23 October 2026 — version 2.4. A section for MSET Transcribe (section 7, the sections after it renumbered): meetings recorded and meetings attended, where meetings are kept, who can read them, training and Plaud. Its product page's contact form named under Formspree; Anthropic (optional), AssemblyAI, Plaud and Microsoft's part in MSET Transcribe named under providers and transfers; its retention added. MSET Trust's answers written by AI named in section 6 and under Microsoft and Anthropic.</li>
+<li data-i18n="privacy.s14.b5">22 October 2026 — version 2.3. The contact form on the MSET Trust product page is named: it too goes through Formspree.</li>
+<li data-i18n="privacy.s14.b4">22 October 2026 — version 2.2. The contact form on the MSET Sign product page is named: like the form here, it goes through Formspree.</li>
+<li data-i18n="privacy.s14.b3">21 October 2026 — version 2.1. MSET Trust in more detail: MSET's own trust centre, AI assistants, mail during access, retention of each kind of record, the access log and the right to erasure, and the products' cookies. Microsoft AB named as the contracting party.</li>
+<li data-i18n="privacy.s14.b1">20 October 2026 — version 2.0. One notice for MSET: the website, consulting and the MSET products. The controller is stated as Design &amp; Animation i Vellinge AB, with the names MSET and Kifarkis Nätsäkerhet. New sections for product accounts, MSET Sign and MSET Trust; GitHub and Google Fonts named; the legal basis for enquiries changed from consent to pre-contract steps and legitimate interest.</li>
+<li data-i18n="privacy.s14.b2">21 April 2026 — version 1.0, covering the website and consulting.</li>
+</ul>
+<div class="contact-box" id="contact-privacy">
+<h2 data-i18n="privacy.contact.h2">Questions about your data?</h2>
+<p><span data-i18n="privacy.contact.p.prefix">We are happy to explain anything in this notice or help you use your rights. Email us at</span> <a href="mailto:info@mset.se">info@mset.se</a> <span data-i18n="privacy.contact.p.suffix">with “Privacy enquiry” in the subject line and we will reply within one business day.</span></p>
+</div>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand">
+<div aria-label="MSET — Kifarkis Nätsäkerhet" class="nav-logo" role="img">
+<svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
+<span class="wordmark">MSET<span class="dot"></span></span>
+</div>
+<p data-i18n="footer.brand.body">Life-science IT &amp; AI consulting. Independent, regulated-industry-native, based in Skåne.</p>
+<span class="tag" data-i18n="footer.tag">Säkerhet som en tjänst</span>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.col1">Services</h4>
+<ul>
+<li><a data-i18n="footer.services.gxp" href="/#services">GxP Systems</a></li>
+<li><a data-i18n="footer.services.ai" href="/ai">AI Consulting</a></li>
+<li><a data-i18n="footer.services.sec" href="/#security">IT Security</a></li>
+<li><a data-i18n="footer.services.sat" href="/sat">Security Awareness Training</a></li>
+<li><a data-i18n="footer.services.strat" href="/strategy">IT Strategy</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer.col2">Company</h4>
+<ul>
+<li><a data-i18n="footer.about" href="/#about">About MSET</a></li>
+<li><a data-i18n="nav.products" href="/products">Products</a></li>
+<li><a data-i18n="footer.contact" href="/#contact">Contact</a></li>
+<li><a href="mailto:info@mset.se">info@mset.se</a></li>
+<li><a data-i18n="footer.privacy" href="/privacy">Privacy policy</a></li>
+<li><a data-i18n="footer.dpa" href="/dpa">Data processing agreement</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span data-i18n="footer.copyright">© 2026 Design &amp; Animation i Vellinge AB · MSET · Kifarkis Nätsäkerhet · Skåne, Sweden.</span>
+<span data-i18n="footer.rights">All rights reserved.</span>
+<a class="back-link" data-i18n="footer.back-top" href="/">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="19" x2="5" y1="12" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to MSET
+      </a>
+</div>
+</div>
+</footer>
+<script>
+(function(){
+  var nav = document.getElementById('siteNav');
+  if(nav){
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 60) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    }, { passive:true });
+  }
+  var burger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if(burger && mobileMenu){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+  }
+})();
+</script>
+
+<script src="translations.js"></script>
+<script>
+(function(){
+  function getDict(){ return window.MSET_TRANSLATIONS || {}; }
+  function apply(){
+    var dict = getDict();
+    var lang = document.body.getAttribute('data-lang') || 'en';
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      if (!el.hasAttribute('data-i18n-aria-en')) el.setAttribute('data-i18n-aria-en', el.getAttribute('aria-label') || '');
+      var en = el.getAttribute('data-i18n-aria-en'), e = dict[el.getAttribute('data-i18n-aria')];
+      el.setAttribute('aria-label', (lang !== 'en' && e && e[lang]) ? e[lang] : en);
+    });
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if (!el.hasAttribute('data-i18n-en')){
+        var orig = Array.prototype.filter.call(el.childNodes, function(n){
+          return n.nodeType === 3;
+        }).map(function(n){ return n.nodeValue; }).join('').trim();
+        if (!orig) orig = el.textContent.trim();
+        el.setAttribute('data-i18n-en', orig);
+      }
+      if (lang === 'en'){
+        var target = el.getAttribute('data-i18n-en');
+        var replaced = false;
+        for (var i=0; i<el.childNodes.length; i++){
+          var n = el.childNodes[i];
+          if (n.nodeType === 3 && n.nodeValue.trim()){
+            n.nodeValue = (replaced ? '' : target);
+            replaced = true;
+          }
+        }
+        if (!replaced){ el.textContent = target; }
+        return;
+      }
+      var entry = dict[key];
+      if (!entry || !entry[lang]) return;
+      var replaced = false;
+      for (var i=0; i<el.childNodes.length; i++){
+        var n = el.childNodes[i];
+        if (n.nodeType === 3 && n.nodeValue.trim()){
+          n.nodeValue = (replaced ? '' : entry[lang]);
+          replaced = true;
+        }
+      }
+      if (!replaced){ el.textContent = entry[lang]; }
+    });
+  }
+  var mo = new MutationObserver(function(muts){
+    muts.forEach(function(m){ if (m.attributeName === 'data-lang') apply(); });
+  });
+  mo.observe(document.body, { attributes: true });
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', apply);
+  } else { apply(); }
+})();
+</script>
+
+<script>
+(function(){
+  var SUPPORTED = ['en','sv','da'];
+  var STORAGE_KEY = 'mset_lang';
+  var OPEN_DELAY = 140;
+  var CLOSE_DELAY = 320;
+  var supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  function getInitialLang(){
+    try {
+      var hash = window.location.hash.replace('#','');
+      if (SUPPORTED.indexOf(hash) !== -1) return hash;
+      var params = new URLSearchParams(window.location.search);
+      var q = params.get('lang');
+      if (q && SUPPORTED.indexOf(q) !== -1) return q;
+    } catch(e){}
+    try {
+      var stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
+    } catch(e){}
+    try {
+      var nav = (navigator.language || 'en').slice(0,2).toLowerCase();
+      if (SUPPORTED.indexOf(nav) !== -1) return nav;
+    } catch(e){}
+    return 'en';
+  }
+
+  function setLang(lang){
+    if (SUPPORTED.indexOf(lang) === -1) lang = 'en';
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch(e){}
+    document.querySelectorAll('.lang-pop button[data-lang]').forEach(function(b){
+      b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false');
+    });
+    document.querySelectorAll('.current-code').forEach(function(el){
+      el.textContent = lang.toUpperCase();
+    });
+    if (typeof window.__msetApplyI18n === 'function') window.__msetApplyI18n();
+  }
+
+  var deepItems = document.querySelectorAll('.nav-links .has-deep');
+  var openTimers = new WeakMap();
+  var closeTimers = new WeakMap();
+
+  function openDeep(item){
+    clearTimeout(closeTimers.get(item));
+    deepItems.forEach(function(other){
+      if (other !== item && other.classList.contains('open')) closeDeep(other);
+    });
+    closeLangPop();
+    item.classList.add('open');
+    var btn = item.querySelector('.deep-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  }
+  function closeDeep(item){
+    clearTimeout(openTimers.get(item));
+    item.classList.remove('open');
+    var btn = item.querySelector('.deep-toggle');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  }
+  function closeAllDeeps(){ deepItems.forEach(closeDeep); }
+
+  deepItems.forEach(function(item){
+    var toggle = item.querySelector('.deep-toggle');
+    if (supportsHover){
+      item.addEventListener('mouseenter', function(){
+        clearTimeout(closeTimers.get(item));
+        openTimers.set(item, setTimeout(function(){ openDeep(item); }, OPEN_DELAY));
+      });
+      item.addEventListener('mouseleave', function(){
+        clearTimeout(openTimers.get(item));
+        closeTimers.set(item, setTimeout(function(){ closeDeep(item); }, CLOSE_DELAY));
+      });
+    }
+    if (toggle){
+      toggle.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        if (item.classList.contains('open')) closeDeep(item);
+        else openDeep(item);
+      });
+    }
+  });
+
+  var langSwitchDesktop = document.querySelector('.nav-links .lang-switch');
+  var langPill = langSwitchDesktop ? langSwitchDesktop.querySelector('.lang-pill') : null;
+  var langOpenTimer, langCloseTimer;
+
+  function openLangPop(){
+    clearTimeout(langCloseTimer);
+    if (!langSwitchDesktop) return;
+    closeAllDeeps();
+    langSwitchDesktop.classList.add('open');
+    if (langPill) langPill.setAttribute('aria-expanded', 'true');
+  }
+  function closeLangPop(){
+    clearTimeout(langOpenTimer);
+    document.querySelectorAll('.nav-links .lang-switch').forEach(function(ls){
+      ls.classList.remove('open');
+    });
+    if (langPill) langPill.setAttribute('aria-expanded', 'false');
+  }
+
+  if (supportsHover && langSwitchDesktop){
+    langSwitchDesktop.addEventListener('mouseenter', function(){
+      clearTimeout(langCloseTimer);
+      langOpenTimer = setTimeout(openLangPop, OPEN_DELAY);
+    });
+    langSwitchDesktop.addEventListener('mouseleave', function(){
+      clearTimeout(langOpenTimer);
+      langCloseTimer = setTimeout(closeLangPop, CLOSE_DELAY);
+    });
+  }
+  if (langPill){
+    langPill.addEventListener('click', function(e){
+      e.stopPropagation();
+      if (langSwitchDesktop.classList.contains('open')) closeLangPop();
+      else openLangPop();
+    });
+  }
+
+  document.querySelectorAll('.lang-pop button[data-lang]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      setLang(btn.dataset.lang);
+      closeLangPop();
+    });
+  });
+
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.has-deep') && !e.target.closest('.lang-switch')){
+      closeAllDeeps();
+      closeLangPop();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ closeAllDeeps(); closeLangPop(); }
+  });
+
+  function init(){ setLang(getInitialLang()); }
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>
