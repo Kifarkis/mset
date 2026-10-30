@@ -853,7 +853,7 @@ nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;heigh
 <div class="courtesy-banner" role="note"><strong data-i18n="dpa.lang-note">This agreement is published in English, the language it is entered into in.</strong></div>
 <span class="eyebrow" data-i18n="privacy.eyebrow">Legal</span>
 <h1>Data processing <em>agreement</em></h1>
-<p class="updated">Draft 1.2 · 28 October 2026 · not yet in force - the effective date is published here when it is set</p>
+<p class="updated">Draft 1.4 · 30 October 2026 · not yet in force - the effective date is published here when it is set</p>
 <p class="lede">One data processing agreement for every MSET product - MSET Sign, MSET Trust and MSET Transcribe. A common body applies to all of them; an annex per product says exactly what that product processes and how long it keeps it.</p>
 <nav class="toc" aria-labelledby="toc-title">
 <p class="toc-title" id="toc-title" data-i18n="privacy.toc.title">On this page</p>
@@ -1848,6 +1848,8 @@ the log; people named in your documents or on your public page (unknown to us).<
 <li><strong>Release control:</strong> a document reaches nobody until an administrator releases it; the release is
   bound to the file's SHA-256 and lapses if the file changes. A document is public only if it is
   marked public <strong>and</strong> released.</li>
+<li><strong>Who receives each document:</strong> a document can be given only to the people whose access opens
+  its document set; a document in a set is not listed on your public page.</li>
 <li><strong>No third-party scripts, analytics or trackers;</strong> only session and preference cookies, none
   shared; a strict Content Security Policy with no script at all. Logos are rebuilt from their image
   data before they are stored.</li>
@@ -1919,7 +1921,9 @@ then downloadable only. <strong>Ninety days after your term ends we delete your 
 our storage</strong> (the activity log, shares, the policy and your people's connections), unless you renew.
 <strong>We keep, as controller, a record that each deleted file existed</strong> (its size, a fingerprint and
 dates; no content and no names) for three years, to show that the deletion took place. <strong>Your
-meetings are not ours to delete:</strong> they stay in your Microsoft 365 as your retention settings decide.</p>
+meetings are not ours to delete:</strong> they stay in your Microsoft 365 as your retention settings decide.
+<strong>When your organisation's MSET account is closed,</strong> everything we keep is deleted at once, except
+the activity log, which is kept 90 days more and then deleted.</p>
 <hr />
 <h3 id="c-annex-r-i">Annex R-I — Details of the processing</h3>
 
@@ -1961,6 +1965,10 @@ your people transcribe.</p>
 <td>While your organisation's MSET account is open</td>
 </tr>
 <tr>
+<td>Everything above that we keep, when your organisation's MSET account is closed</td>
+<td>Deleted at once, except the activity log: kept 90 days more, then deleted</td>
+</tr>
+<tr>
 <td>A person's own backup</td>
 <td>On our server only until they download it, at most 30 minutes; or, uploaded to restore from, only while it is restored</td>
 </tr>
@@ -1976,15 +1984,13 @@ your people transcribe.</p>
 <li><strong>Each meeting has one owner:</strong> a request reaches only the library of the person signed in, and
   tests check, for every feature, that one person's meetings never reach another's.</li>
 <li><strong>Sign-in through MSET ID</strong>; an organisation is admitted only while it has a plan.</li>
-<li><strong>Encryption</strong> in transit and at rest; each person's Microsoft and Plaud connections encrypted with
-  keys held in a managed key vault; the service signs in to Microsoft with a certificate and asks only for
-  the permissions a feature needs.</li>
+<li><strong>Encryption</strong> in transit and at rest; each person's Microsoft and Plaud connections encrypted, with
+  keys held in a managed key vault; access to Microsoft 365 only as far as a feature needs.</li>
 <li><strong>An activity log</strong> per organisation, by person; an action that must be logged does not happen
   without its record.</li>
 <li><strong>Emergency access</strong> only as clause R5 says.</li>
 <li><strong>No titles or names in our logs or in addresses; no third-party scripts, analytics or trackers.</strong></li>
-<li><strong>Change control:</strong> every release passes an automated test suite, including tests that remove each
-  security guard and require a test to notice.</li>
+<li><strong>Change control:</strong> every release passes an automated test suite before it ships.</li>
 <li><strong>An information security management system</strong> run according to ISO/IEC 27001:2022 (clause 7).</li>
 </ul>
 <h3 id="c-annex-r-iii">Annex R-III — Sub-processors</h3>
