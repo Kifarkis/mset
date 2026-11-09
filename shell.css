@@ -132,6 +132,9 @@
 .fs-foot-bottom nav{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem}
 .fs-foot-bottom p{margin:0}
 
+body:has(> footer.fs-foot){min-height:100vh;min-height:100dvh}
+body:has(> footer.fs-foot)>footer.fs-foot{position:sticky;top:100vh}
+
 @media (max-width:960px){
   .fs-contact-inner{grid-template-columns:1fr;gap:2.5rem}
   .fs-foot-grid{grid-template-columns:repeat(3,1fr);gap:2rem 1.5rem}
