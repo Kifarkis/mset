@@ -129,7 +129,8 @@
 .fs-foot a[aria-current="page"]{color:#fff}
 .fs-foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;
   font-size:.72rem;line-height:1.5;color:rgba(255,255,255,.55)}
-.fs-foot-bottom nav{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem}
+.fs-foot-bottom nav{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem}
+.fs-foot-bottom nav a{display:inline-flex;align-items:center;min-height:24px}
 .fs-foot-bottom p{margin:0}
 
 body:has(> footer.fs-foot){min-height:100vh;min-height:100dvh}
