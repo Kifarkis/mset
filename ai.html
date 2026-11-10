@@ -727,10 +727,10 @@ section{padding:6rem 2rem;position:relative}
   background:#0A1628;
   border-top:1px solid rgba(255,255,255,.08);
   transform:translateY(100%);
-  transition:transform .35s ease;
-  pointer-events:none;
+  transition:transform .35s ease,visibility 0s linear .35s;
+  pointer-events:none;visibility:hidden;
 }
-.floating-footer.visible{transform:translateY(0);pointer-events:auto}
+.floating-footer.visible{transform:translateY(0);pointer-events:auto;visibility:visible;transition:transform .35s ease}
 .floating-footer.hidden{transform:translateY(100%);pointer-events:none}
 .ff-inner{
   max-width:1280px;margin:0 auto;padding:.55rem 2rem;
@@ -772,7 +772,7 @@ section{padding:6rem 2rem;position:relative}
 }
 .privacy-notice.visible{opacity:1;transform:translateY(0);pointer-events:auto}
 .privacy-notice p{margin:0 0 .75rem;color:rgba(255,255,255,.82)}
-.privacy-notice a{color:var(--emerald-bright)}
+.privacy-notice a{color:var(--emerald-bright);text-decoration:underline;text-underline-offset:2px}
 .privacy-notice-actions{display:flex;gap:.5rem;align-items:center;justify-content:flex-end}
 .privacy-notice-dismiss{
   padding:.4rem .9rem;background:var(--emerald);color:var(--ink);
@@ -1225,7 +1225,7 @@ section{padding:6rem 2rem;position:relative}
   font-weight:700;
   letter-spacing:.16em;
   text-transform:uppercase;
-  color:var(--danger);
+  color:#EC8080;
   display:inline-flex;
   align-items:center;
   gap:.5rem;
@@ -1288,7 +1288,7 @@ section{padding:6rem 2rem;position:relative}
   font-weight:600;
   letter-spacing:.08em;
   text-transform:uppercase;
-  color:rgba(245,243,237,.45);
+  color:rgba(245,243,237,.64);
   margin-top:auto;
   padding-top:.4rem;
   border-top:1px solid rgba(245,243,237,.08);
@@ -1889,14 +1889,16 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
   cursor:default;
 }
 .nav-links .has-deep > a{padding:.1rem 0}
+.nav-links .has-deep[data-deep="ai"] > a{display:inline-block;min-width:24px;text-align:right;margin-left:-10px}
 .deep-toggle{
-  width:18px;height:18px;
+  width:24px;height:24px;
   display:inline-flex;align-items:center;justify-content:center;
   color:rgba(255,255,255,.5);border-radius:3px;padding:0;
-  margin-left:-.1rem;background:transparent;border:none;cursor:pointer;
+  margin:-3px -3px -3px -4px;background:transparent;border:none;cursor:pointer;
   transition:color .2s var(--ease,cubic-bezier(.16,1,.3,1)),transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
 }
 .deep-toggle:hover,.deep-toggle:focus-visible{color:var(--emerald-bright);outline:none}
+.deep-toggle:focus-visible{outline:2px solid var(--emerald-bright);outline-offset:1px}
 .deep-toggle svg{
   width:10px;height:10px;
   transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));
@@ -2039,7 +2041,7 @@ body[data-lang="da"] .i18n-block > [lang="da"]{display:block}
   .mobile-menu .lang-pop::after{display:none}
   .mobile-menu .lang-pop .native{color:rgba(255,255,255,.85)}
   .mobile-menu .lang-pop .code{color:rgba(255,255,255,.5)}
-  .mobile-menu .lang-pop-label{color:rgba(255,255,255,.45)}
+  .mobile-menu .lang-pop-label{color:rgba(255,255,255,.62)}
   .mobile-menu .lang-pop button:hover{background:rgba(255,255,255,.05)}
   .mobile-menu .lang-pop button[aria-pressed="true"] .native{color:var(--emerald-glow)}
   .mobile-menu .lang-pop button[aria-pressed="true"] .code{color:var(--emerald-bright)}
@@ -3223,16 +3225,16 @@ nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;heigh
 </div>
 </div>
 </footer>
-<div aria-hidden="true" class="floating-footer" id="floatingFooter">
+<div aria-hidden="true" inert class="floating-footer" id="floatingFooter">
 <div class="ff-inner">
 <a aria-label="Back to MSET home" data-i18n-aria="aria.back-home" class="ff-brand" href="/">
 <svg aria-hidden="true" class="mark"><use href="#logo-vault-dark"></use></svg>
 <span class="wordmark">MSET<span class="dot"></span></span>
 </a>
-<a aria-label="Back to MSET" data-i18n-aria="aria.back" class="ff-action" href="/">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="19" x2="5" y1="12" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-      Back to MSET
-    </a>
+<a class="ff-action" href="/">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><line x1="19" x2="5" y1="12" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+<span data-i18n="aria.back">Back to MSET</span>
+</a>
 </div>
 </div>
 <div aria-live="polite" class="privacy-notice" id="privacyNotice" role="status">
@@ -3284,10 +3286,12 @@ nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;heigh
       floatingFooter.classList.add('visible');
       floatingFooter.classList.remove('hidden');
       floatingFooter.setAttribute('aria-hidden','false');
+      floatingFooter.removeAttribute('inert');
     } else {
       floatingFooter.classList.remove('visible');
       floatingFooter.classList.add('hidden');
       floatingFooter.setAttribute('aria-hidden','true');
+      floatingFooter.setAttribute('inert','');
     }
   }
   window.addEventListener('scroll', update, { passive:true });

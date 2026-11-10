@@ -1043,6 +1043,7 @@ window.MSET_TRANSLATIONS = {
   "aria.str-more": { sv: "Strategi — visa mer", da: "Strategi — vis mere" },
   "aria.menu": { sv: "Meny", da: "Menu" },
   "aria.back-top": { sv: "Till toppen", da: "Til toppen" },
+  "aria.brand-top": { sv: "MSET, till toppen", da: "MSET, til toppen" },
   "aria.language": { sv: "Språk", da: "Sprog" },
   "aria.logo-top": { sv: "MSET — Kifarkis Nätsäkerhet, till toppen", da: "MSET — Kifarkis Nätsäkerhet, til toppen" },
   "aria.back-home": { sv: "Tillbaka till MSET:s startsida", da: "Tilbage til MSET's forside" },
