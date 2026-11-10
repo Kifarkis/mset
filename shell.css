@@ -46,7 +46,7 @@
   text-transform:uppercase;font-weight:600}
 :is(.fs-contact,.fs-foot) .fs-group input,:is(.fs-contact,.fs-foot) .fs-group textarea,:is(.fs-contact,.fs-foot) .fs-group select{width:100%;padding:.7rem 1rem;border-radius:8px;background:#fff;
   border:1px solid var(--fs-cream-2);color:var(--fs-ink);font:400 .92rem/1.4 var(--fs-body);outline:none;
-  appearance:none;-webkit-appearance:none;transition:border-color .2s,box-shadow .2s;margin:0}
+  appearance:none;-webkit-appearance:none;transition:border-color .2s,box-shadow .2s;margin:0;height:auto}
 :is(.fs-contact,.fs-foot) .fs-group input::placeholder,:is(.fs-contact,.fs-foot) .fs-group textarea::placeholder{color:#8a9bad}
 :is(.fs-contact,.fs-foot) .fs-group input:hover,:is(.fs-contact,.fs-foot) .fs-group textarea:hover,:is(.fs-contact,.fs-foot) .fs-group select:hover{border-color:var(--fs-emerald)}
 :is(.fs-contact,.fs-foot) .fs-group input:focus,:is(.fs-contact,.fs-foot) .fs-group textarea:focus,:is(.fs-contact,.fs-foot) .fs-group select:focus{border-color:var(--fs-forest);

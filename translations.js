@@ -473,7 +473,6 @@ window.MSET_TRANSLATIONS = {
   "sec.card4.b4":        { sv: "21 CFR Part 11 audit trails för åtkomst", da: "21 CFR Part 11 audit trails for adgang" },
   "sec.card4.b5":        { sv: "Process för nyanställd / flytt / avgång", da: "Proces for tiltrædelse / flytning / fratrædelse" },
 
-  "sec.acronis.badge":   { sv: "Acronis officiell partner", da: "Acronis officiel partner" },
   "sec.acronis.title":   { sv: "Acronis Cyber Protect",   da: "Acronis Cyber Protect" },
   "sec.acronis.body":    { sv: "Vi driftsätter och hanterar Acronis Cyber Protect — en integrerad lösning som kombinerar backup, ransomware-skydd och endpoint-säkerhet. Er data förblir säker även när angripare tar sig in.",
                            da: "Vi implementerer og administrerer Acronis Cyber Protect — en integreret løsning, der kombinerer backup, ransomware-beskyttelse og endpoint-sikkerhed. Jeres data forbliver sikre, selv når angribere kommer igennem." },

@@ -445,11 +445,11 @@ nav.site-nav.scrolled{background:#0A1628}
 }
 .security-card:hover .service-item-icon{transform:scale(1.06) rotate(-3deg)}
 
-.security-card:has(.partner-badge) .service-item-icon{
-  background:transparent;padding:0;
+.security-card .service-item-icon.partner-mark{
+  background:#fff;padding:0;border:1px solid rgba(0,32,77,.16);
   width:48px;height:48px;overflow:hidden;border-radius:12px;
 }
-.security-card:has(.partner-badge) .service-item-icon svg{
+.security-card .service-item-icon.partner-mark svg{
   width:48px;height:48px;
 }
 
@@ -483,29 +483,6 @@ nav.site-nav.scrolled{background:#0A1628}
 .expand-link svg{width:11px;height:11px;transition:transform .2s}
 .expand-link:hover{color:var(--emerald-deep)}
 .expand-link:hover svg{transform:translateX(3px)}
-
-.partner-badge{
-  position:absolute;top:-10px;left:16px;z-index:2;
-  display:inline-flex;align-items:center;gap:.4rem;
-  font-family:var(--f-mono);font-size:.62rem;
-  letter-spacing:.12em;text-transform:uppercase;font-weight:700;
-  padding:.38rem .75rem;border-radius:var(--r-full);
-  background:#fff;color:#D9141C;
-  border:1.5px solid #ED1C24;
-  box-shadow:0 4px 12px rgba(237,28,36,.18), 0 1px 3px rgba(10,22,40,.06);
-  transition:transform .25s var(--ease-spring), box-shadow .25s;
-}
-.partner-badge::before{
-  content:'✓';font-weight:800;font-size:.72rem;
-  width:13px;height:13px;border-radius:50%;
-  background:#ED1C24;color:#fff;
-  display:inline-flex;align-items:center;justify-content:center;
-  line-height:1;
-}
-.security-card:has(.partner-badge):hover .partner-badge{
-  transform:translateY(-2px) scale(1.03);
-  box-shadow:0 8px 20px rgba(237,28,36,.28), 0 2px 6px rgba(10,22,40,.08);
-}
 
 .interim-visual{
   background:rgba(255,255,255,.055);
@@ -1764,11 +1741,8 @@ nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;heigh
 <path d="M20.5 15.5 L23 18 L21.5 19.5 L19.5 17.5" fill="none" stroke="#1B4A22" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 <circle cx="18.5" cy="14" fill="#7EC389" r="1"></circle>
 </symbol>
-<symbol id="sc-acronis" viewbox="0 0 24 24">
-<path d="M12 2 L 20 5 L 20 12 C 20 17.5, 16.5 20.8, 12 22 C 7.5 20.8, 4 17.5, 4 12 L 4 5 Z" fill="#ED1C24"></path>
-<path d="M12 3 L 19 5.7 L 19 12 C 19 16.9, 16 19.9, 12 21 C 8 19.9, 5 16.9, 5 12 L 5 5.7 Z" fill="none" opacity=".4" stroke="#fff" stroke-width=".6"></path>
-<path d="M8.5 17 L 12 7.5 L 15.5 17" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1"></path>
-<path d="M10.3 13.8 L 13.7 13.8" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.1"></path>
+<symbol id="sc-acronis" viewbox="0 0 1000 1001.7">
+<path d="M452.1,199.8h95.7l251.7,602.7h-92.2L664,692.6h-327l-44.3,109.9h-92.2L452.1,199.8z M633.8,617.3l-28.4-69.2H394.5L367,617.3H633.8z M578,477.2l-16-39c-25.7-63.8-47.9-117-62-156.9c-13.3,39.9-35.5,93.1-61.1,156.9l-16,39H578z" fill="#00204D"></path>
 </symbol>
 <symbol id="arrow" viewbox="0 0 14 14">
 <path d="M3 7h8m0 0L7.5 3.5M11 7 7.5 10.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
@@ -2252,8 +2226,7 @@ nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;heigh
 </ul>
 </div>
 <div class="security-card">
-<span class="partner-badge" data-i18n="sec.acronis.badge">Acronis Official Partner</span>
-<div class="service-item-icon"><svg height="26" width="26"><use href="#sc-acronis"></use></svg></div>
+<div class="service-item-icon partner-mark"><svg height="26" width="26" role="img" aria-label="Acronis"><use href="#sc-acronis"></use></svg></div>
 <h3 class="security-card-title" data-i18n="sec.acronis.title">Acronis Cyber Protect</h3>
 <p class="security-card-body" data-i18n="sec.acronis.body">
           We deploy and manage Acronis Cyber Protect — an integrated solution combining backup,
