@@ -1897,7 +1897,7 @@ body>#products{flex:1 0 auto}
 <div class="service-item-icon"><svg height="26" width="26"><use href="#sc-part11"></use></svg></div>
 <h2 class="service-item-title">MSET Sign</h2>
 <p class="service-item-body" data-i18n="prod.sign.body">Electronic signatures for regulated work. Signers sign by email link, PIN or electronic ID, and every completed document is sealed, timestamped and carries its audit trail.</p>
-<ul class="service-item-list"><li data-i18n="prod.sign.l1">SES, and AdES with BankID, Freja or MitID, today; QES coming</li><li data-i18n="prod.sign.l4">Nordic eID included – no identity licence per provider</li><li data-i18n="prod.sign.l2">21 CFR Part 11 signatures</li><li data-i18n="prod.sign.l3">Sealed, tamper-evident PDFs</li></ul>
+<ul class="service-item-list"><li data-i18n="prod.sign.l1">SES, AdES with BankID, Freja or MitID, and QES</li><li data-i18n="prod.sign.l4">Nordic eID included, more European eIDs coming – no identity licence per provider</li><li data-i18n="prod.sign.l2">21 CFR Part 11 signatures</li><li data-i18n="prod.sign.l3">Sealed, tamper-evident PDFs</li></ul>
 <a class="prod-more" data-i18n="prod.sign.more" data-goatcounter-click="to-sign-app" data-goatcounter-title="To MSET Sign" href="https://sign.mset.app/#eidas" target="_blank" rel="noopener">What SES, AdES and QES mean →</a>
 </div>
 <div class="service-item" id="trust">
@@ -2285,7 +2285,7 @@ body>#products{flex:1 0 auto}
     }
   });
 
-  var langSwitchDesktop = document.querySelector('.nav-links .lang-switch');
+  var langSwitchDesktop = document.querySelector('#langSwitch');
   var langPill = langSwitchDesktop ? langSwitchDesktop.querySelector('.lang-pill') : null;
   var langOpenTimer, langCloseTimer;
 
@@ -2298,7 +2298,7 @@ body>#products{flex:1 0 auto}
   }
   function closeLangPop(){
     clearTimeout(langOpenTimer);
-    document.querySelectorAll('.nav-links .lang-switch').forEach(function(ls){
+    document.querySelectorAll('#langSwitch').forEach(function(ls){
       ls.classList.remove('open');
     });
     if (langPill) langPill.setAttribute('aria-expanded', 'false');

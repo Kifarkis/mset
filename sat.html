@@ -2310,7 +2310,7 @@ Security Awareness Training
     }
   });
 
-  var langSwitchDesktop = document.querySelector('.nav-links .lang-switch');
+  var langSwitchDesktop = document.querySelector('#langSwitch');
   var langPill = langSwitchDesktop ? langSwitchDesktop.querySelector('.lang-pill') : null;
   var langOpenTimer, langCloseTimer;
 
@@ -2323,7 +2323,7 @@ Security Awareness Training
   }
   function closeLangPop(){
     clearTimeout(langOpenTimer);
-    document.querySelectorAll('.nav-links .lang-switch').forEach(function(ls){
+    document.querySelectorAll('#langSwitch').forEach(function(ls){
       ls.classList.remove('open');
     });
     if (langPill) langPill.setAttribute('aria-expanded', 'false');

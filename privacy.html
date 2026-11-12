@@ -1206,7 +1206,7 @@ nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;heigh
     }
   });
 
-  var langSwitchDesktop = document.querySelector('.nav-links .lang-switch');
+  var langSwitchDesktop = document.querySelector('#langSwitch');
   var langPill = langSwitchDesktop ? langSwitchDesktop.querySelector('.lang-pill') : null;
   var langOpenTimer, langCloseTimer;
 
@@ -1219,7 +1219,7 @@ nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;heigh
   }
   function closeLangPop(){
     clearTimeout(langOpenTimer);
-    document.querySelectorAll('.nav-links .lang-switch').forEach(function(ls){
+    document.querySelectorAll('#langSwitch').forEach(function(ls){
       ls.classList.remove('open');
     });
     if (langPill) langPill.setAttribute('aria-expanded', 'false');
