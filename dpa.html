@@ -766,8 +766,8 @@ nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;heigh
 </button>
 <div class="deep-card deep-wide" id="deep-products" role="menu">
 <a class="deep-row" data-goatcounter-click="to-products-sign" data-goatcounter-title="To the sign product" href="/products#sign" role="menuitem">
-<div class="deep-row-label"><span>MSET Sign</span> <span class="soon" data-i18n="nav.soon">Coming soon</span></div>
-<div class="deep-row-desc" data-i18n="nav.products.sign-desc">Electronic signatures for regulated work - SES, eID and 21 CFR Part 11.</div>
+<div class="deep-row-label"><span>MSET Sign</span></div>
+<div class="deep-row-desc" data-i18n="nav.products.sign-desc">Electronic signatures for regulated work - SES, eID, QES and 21 CFR Part 11.</div>
 </a>
 <a class="deep-row" data-goatcounter-click="to-products-trust" data-goatcounter-title="To the trust product" href="/products#trust" role="menuitem">
 <div class="deep-row-label"><span>MSET Trust</span> <span class="soon" data-i18n="nav.soon">Coming soon</span></div>
@@ -838,7 +838,7 @@ nav.site-nav .nav-actions a.nav-cta{display:inline-flex;align-items:center;heigh
 <div class="courtesy-banner" role="note"><strong data-i18n="dpa.lang-note">This agreement is published in English, the language it is entered into in.</strong></div>
 <span class="eyebrow" data-i18n="privacy.eyebrow">Legal</span>
 <h1>Data processing <em>agreement</em></h1>
-<p class="updated">Draft 1.8 · 10 November 2026 · not yet in force - the effective date is published here when it is set</p>
+<p class="updated">Draft 1.9 · 24 November 2026 · not yet in force - the effective date is published here when it is set</p>
 <p class="lede">One data processing agreement for every MSET product - MSET Sign, MSET Trust and MSET Transcribe. A common body applies to all of them; an annex per product says exactly what that product processes and how long it keeps it.</p>
 <nav class="toc" aria-labelledby="toc-title">
 <p class="toc-title" id="toc-title" data-i18n="privacy.toc.title">On this page</p>
@@ -1173,7 +1173,9 @@ This is the one place where our role changes after your instruction ends, and cl
 <h4>S1.3 Identity providers act under their own terms</h4>
 
 <p>Where you require it, a signer verifies their identity with an <strong>eID through a contracted eID
-broker</strong>, or with an <strong>ID document check</strong> at an identity verification provider (clause S7). Each
+broker</strong>, with an <strong>ID document check</strong> at an identity verification provider, or, for a qualified
+signature, at a <strong>qualified trust service provider</strong> that identifies the signer and issues their
+qualified certificate (clause S7). Each
 provider handles the signer's verification <strong>on its own pages, under its own terms and privacy
 notice</strong>, and is responsible for it. They are named in Annex S-III for transparency. We receive only
 what Annex S-I lists.</p>
@@ -1192,15 +1194,17 @@ what Annex S-I lists.</p>
 
 <p><strong>Subject matter and nature:</strong> receiving your documents; distributing them for signature and
 approval; authenticating signers by control of the email address the link was sent to, an optional
-one-time PIN to the same mailbox, a sign-in through MSET ID, or, where you require it, an eID or an
-ID document check; recording the signing events; applying an electronic seal and, where a trusted
-timestamp authority can be reached, an RFC 3161 timestamp; producing the sealed PDF with its signing
+one-time PIN to the same mailbox, a sign-in through MSET ID, or, where you require it, an eID, an
+ID document check or a qualified signature at a qualified trust service provider; recording the
+signing events; applying an electronic seal with an RFC 3161 timestamp; producing the sealed PDF with its signing
 certificate and audit trail; storing and returning the result; and deleting it on schedule.</p>
 <p><strong>The signature levels, stated plainly.</strong> By default the signatures are <strong>simple electronic
 signatures</strong> under Article 3(10) of eIDAS. An eID or ID document check strengthens the evidence of
-who signed. It does not, on its own, make a signature an advanced or a qualified electronic
-signature, and we do not describe it as one. <strong>Qualified signatures (QES) are coming</strong>; this annex
-will be updated, with notice under clause 8.3, before they are offered.</p>
+who signed. On its own it does not make a signature advanced or qualified. <strong>Where the eID also
+confirms the documents themselves</strong>, the signature is an advanced electronic signature, and MSET Sign
+says on each document which level applies. <strong>Where you require a qualified electronic signature</strong>
+(Article 3(12)), the signer signs with a qualified certificate issued by a qualified trust service provider
+on the EU trusted list, and the signature carries a qualified timestamp.</p>
 <p><strong>Purpose:</strong> electronic signature, sealing, and the production and preservation of evidence that a
 document was signed.</p>
 <p><strong>Duration.</strong> For as long as you use MSET Sign, plus the retention tail. The tail is <strong>two different
@@ -1354,14 +1358,19 @@ language. <strong>If this is not acceptable for a particular use, do not use MSE
 <h3 id="c-s7">S7. Identity checks</h3>
 
 <ul>
-<li><strong>eID:</strong> Swedish BankID, MitID (including MitID Erhverv) and Norwegian BankID, through the eID
+<li><strong>eID:</strong> Swedish BankID, MitID (including MitID Erhverv), Norwegian BankID, the Finnish bank ID and
+  UK OneID, through the eID
   broker named in Annex S-III, where your plan includes it and you require it. <strong>The verified name
   is what the signature carries</strong>; if it differs from the name you gave, the signer confirms it and
   you are told. The broker's answer is verified against its published keys before it is kept.</li>
 <li><strong>ID document check:</strong> for signers without one of those eIDs, the signer photographs an identity
   document and themselves at the provider named in Annex S-III. A check in progress is held for at
   most two days; what is kept of a completed one is in clause S3.2.</li>
-<li>Both are part of the evidence record (clause S4) and are deleted with it.</li>
+<li><strong>Qualified signature:</strong> where you require it, the signer is identified by, and signs at, the qualified
+  trust service provider named in Annex S-III, under its own terms, which issues the qualified certificate in
+  the signer's name. The signature and its certificate become part of the signed document; we keep no
+  identity document.</li>
+<li>All of these are part of the evidence record (clause S4) and are deleted with it.</li>
 </ul>
 <h3 id="c-s8">S8. Services you connect</h3>
 

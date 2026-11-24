@@ -43,6 +43,14 @@ render(); optgroups();
 (function(){
   var form = document.getElementById('contactForm');
   var successEl = document.getElementById('formSuccess');
+  var SENDING = {"en": "Sending…", "sv": "Skickar…", "da": "Sender…"};
+  var FAILED = {"en": "Something went wrong. Please try again, or email info@mset.se directly.",
+                "sv": "Något gick fel. Försök igen, eller mejla info@mset.se direkt.",
+                "da": "Noget gik galt. Prøv igen, eller skriv direkte til info@mset.se."};
+  var OFFLINE = {"en": "Network error. Please try again, or email info@mset.se directly.",
+                 "sv": "Nätverksfel. Försök igen, eller mejla info@mset.se direkt.",
+                 "da": "Netværksfejl. Prøv igen, eller skriv direkte til info@mset.se."};
+  function say(t){ return t[document.body.getAttribute('data-lang')] || t.en; }
   if(form && successEl && window.fetch){
     form.addEventListener('submit', function(e){
       e.preventDefault();
@@ -52,7 +60,7 @@ render(); optgroups();
       if(prevError) prevError.remove();
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Sending…';
+      submitBtn.textContent = say(SENDING);
       submitBtn.classList.remove('fs-error-state');
 
       fetch(form.action, {
@@ -67,15 +75,14 @@ render(); optgroups();
           successEl.scrollIntoView({ behavior:'smooth', block:'center' });
         } else {
           res.json().then(function(data){
-            var msg = (data && data.errors && data.errors.map(function(e){return e.message}).join(', ')) ||
-                      'Something went wrong. Please try again, or email info@mset.se directly.';
-            showError(msg);
+            var own = (data && data.errors && data.errors.map(function(e){return e.message}).join(', ')) || '';
+            showError(own && (document.body.getAttribute('data-lang') || 'en') === 'en' ? own : say(FAILED));
           }).catch(function(){
-            showError('Something went wrong. Please try again, or email info@mset.se directly.');
+            showError(say(FAILED));
           });
         }
       }).catch(function(){
-        showError('Network error. Please try again, or email info@mset.se directly.');
+        showError(say(OFFLINE));
       });
 
       function showError(msg){
