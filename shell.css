@@ -120,7 +120,7 @@
 :is(.fs-contact,.fs-foot) .fs-brand .fs-wm{display:flex;align-items:baseline;gap:9px}
 :is(.fs-contact,.fs-foot) .fs-brand .fs-word{font-family:var(--fs-display);font-style:italic;font-weight:500;font-size:21px;letter-spacing:-.01em;line-height:1}
 :is(.fs-contact,.fs-foot) .fs-brand .fs-dot{display:inline-block;width:.2em;height:.2em;background:var(--fs-emerald-bright);border-radius:50%;vertical-align:.12em;margin-left:.06em}
-:is(.fs-contact,.fs-foot) .fs-brand .fs-prod{font-family:var(--fs-mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)}
+:is(.fs-contact,.fs-foot) .fs-brand .fs-prod{font-family:var(--fs-mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 :is(.fs-contact,.fs-foot) .fs-foot-brand p{font-size:.82rem;line-height:1.55;color:rgba(255,255,255,.5);max-width:340px;margin:0}
 :is(.fs-contact,.fs-foot) .fs-tag{display:block;font-family:var(--fs-mono);font-size:.65rem;color:var(--fs-emerald-bright);letter-spacing:.14em;
   text-transform:uppercase;margin-top:.6rem}
